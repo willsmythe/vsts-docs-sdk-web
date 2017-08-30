@@ -1,0 +1,383 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device.Client
+    name: Client
+    fullName: Client
+    children:
+      - azure-iot-device.Client.abandon
+      - azure-iot-device.Client.constructor
+      - azure-iot-device.Client.close
+      - azure-iot-device.Client.complete
+      - azure-iot-device.Client.fromConnectionString
+      - azure-iot-device.Client.fromSharedAccessSignature
+      - azure-iot-device.Client.getTwin
+      - azure-iot-device.Client.onDeviceMethod
+      - azure-iot-device.Client.open
+      - azure-iot-device.Client.reject
+      - azure-iot-device.Client.sendEvent
+      - azure-iot-device.Client.sendEventBatch
+      - azure-iot-device.Client.setOptions
+      - azure-iot-device.Client.setTransportOptions
+      - azure-iot-device.Client.updateSharedAccessSignature
+      - azure-iot-device.Client.uploadToBlob
+    langs:
+      - js
+    type: Class
+    summary: |-
+      Creates an IoT Hub device client. Normally, consumers will
+                       call the factory method,
+                       {@link module:azure-iot-device.Client.fromConnectionString|fromConnectionString},
+                       to create an IoT Hub device client.
+  - uid: azure-iot-device.Client.abandon
+    name: 'abandon(message, abandonCallback)'
+    children: []
+    langs:
+      - js
+    summary: >
+      The `abandon` method directs the transport to settle the message passed as
+      argument as 'abandoned'.
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: The message to settle.
+        - id: abandonCallback
+          type:
+            - function
+          description: |
+            The callback to call when the message is abandoned.
+      content: function undefined
+    type: Function
+  - uid: azure-iot-device.Client.constructor
+    name: 'Client(transport, connStr, blobUploadClient)'
+    children: []
+    langs:
+      - js
+    summary: ''
+    syntax:
+      parameters:
+        - id: transport
+          type:
+            - Transport
+          description: ''
+        - id: connStr
+          type:
+            - string
+          description: ''
+        - id: blobUploadClient
+          type:
+            - BlobUploadClient
+          description: ''
+      content: new undefined
+    type: Constructor
+  - uid: azure-iot-device.Client.close
+    name: close(closeCallback)
+    children: []
+    langs:
+      - js
+    summary: >
+      The `close` method directs the transport to close the current connection
+      to the IoT Hub instance
+    syntax:
+      parameters:
+        - id: closeCallback
+          type:
+            - function
+          description: |
+            The callback to be invoked when the connection has been closed.
+      content: function undefined
+    type: Function
+  - uid: azure-iot-device.Client.complete
+    name: 'complete(message, completeCallback)'
+    children: []
+    langs:
+      - js
+    summary: >
+      The `complete` method directs the transport to settle the message passed
+      as argument as 'completed'.
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: The message to settle.
+        - id: completeCallback
+          type:
+            - function
+          description: |
+            The callback to call when the message is completed.
+      content: function undefined
+    type: Function
+  - uid: azure-iot-device.Client.fromConnectionString
+    name: 'fromConnectionString(connStr, transportCtor)'
+    children: []
+    langs:
+      - js
+    summary: |
+      Creates an IoT Hub device client from the given
+                         connection string using the given transport type.
+    syntax:
+      parameters:
+        - id: connStr
+          type:
+            - string
+          description: |-
+            A connection string which encapsulates "device
+                                             connect" permissions on an IoT hub.
+        - id: transportCtor
+          type:
+            - any
+          description: ''
+      content: function undefined
+    type: Function
+  - uid: azure-iot-device.Client.fromSharedAccessSignature
+    name: 'fromSharedAccessSignature(sharedAccessSignature, transportCtor)'
+    children: []
+    langs:
+      - js
+    summary: |
+      Creates an IoT Hub device client from the given
+                         shared access signature using the given transport type.
+    syntax:
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: |-
+            A shared access signature which encapsulates "device
+                                             connect" permissions on an IoT hub.
+        - id: transportCtor
+          type:
+            - any
+          description: ''
+      content: function undefined
+    type: Function
+  - uid: azure-iot-device.Client.getTwin
+    name: 'getTwin(done, twin)'
+    children: []
+    langs:
+      - js
+    summary: >
+      The `getTwin` method creates a Twin object and establishes a connection
+      with the Twin service.
+    syntax:
+      parameters:
+        - id: done
+          type:
+            - function
+          description: |+
+            The callback to call when the connection is established.
+
+        - id: twin
+          type:
+            - Twin
+          description: ''
+      content: function undefined
+    type: Function
+  - uid: azure-iot-device.Client.onDeviceMethod
+    name: 'onDeviceMethod(methodName, callback)'
+    children: []
+    langs:
+      - js
+    summary: |
+      Registers the `callback` to be invoked when a
+                         cloud-to-device method call is received by the client
+                         for the given `methodName`.
+    syntax:
+      parameters:
+        - id: methodName
+          type:
+            - string
+          description: |-
+            The name of the method for which the callback
+                                           is to be registered.
+        - id: callback
+          type:
+            - function
+          description: |
+            The callback to be invoked when the C2D method
+                                           call is received.
+      content: function undefined
+    type: Function
+  - uid: azure-iot-device.Client.open
+    name: open(openCallback)
+    children: []
+    langs:
+      - js
+    summary: |
+      Call the transport layer CONNECT function if the
+                         transport layer implements it
+    syntax:
+      parameters:
+        - id: openCallback
+          type:
+            - function
+          description: |
+            The callback to be invoked when `open`
+                                            completes execution.
+      content: function undefined
+    type: Function
+  - uid: azure-iot-device.Client.reject
+    name: 'reject(message, rejectCallback)'
+    children: []
+    langs:
+      - js
+    summary: >
+      The `reject` method directs the transport to settle the message passed as
+      argument as 'rejected'.
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: The message to settle.
+        - id: rejectCallback
+          type:
+            - function
+          description: |
+            The callback to call when the message is rejected.
+      content: function undefined
+    type: Function
+  - uid: azure-iot-device.Client.sendEvent
+    name: 'sendEvent(message, sendEventCallback)'
+    children: []
+    langs:
+      - js
+    summary: |
+      The [sendEvent]{@linkcode Client#sendEvent} method sends an event message
+                         to the IoT Hub as the device indicated by the connection string passed
+                         via the constructor.
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - Message
+          description: |-
+            The [message]{@linkcode module:common/message.Message}
+                                                 to be sent.
+        - id: sendEventCallback
+          type:
+            - function
+          description: |-
+            The callback to be invoked when `sendEvent`
+                                                 completes execution.
+      content: function undefined
+    type: Function
+  - uid: azure-iot-device.Client.sendEventBatch
+    name: 'sendEventBatch(messages, sendEventBatchCallback)'
+    children: []
+    langs:
+      - js
+    summary: |
+      The [sendEventBatch]{@linkcode Client#sendEventBatch} method sends a list
+                         of event messages to the IoT Hub as the device indicated by the connection
+                         string passed via the constructor.
+    syntax:
+      parameters:
+        - id: messages
+          type:
+            - function
+          description: |-
+            Array of [Message]{@linkcode module:common/message.Message}
+                                                           objects to be sent as a batch.
+        - id: sendEventBatchCallback
+          type:
+            - function
+          description: |
+            The callback to be invoked when
+                                                           `sendEventBatch` completes execution.
+      content: function undefined
+    type: Function
+  - uid: azure-iot-device.Client.setOptions
+    name: 'setOptions(options, done)'
+    children: []
+    langs:
+      - js
+    summary: |
+      The `setOptions` method let the user configure the client.
+    syntax:
+      parameters:
+        - id: options
+          type:
+            - any
+          description: The options structure
+        - id: done
+          type:
+            - function
+          description: |
+            The callback that shall be called when setOptions is finished.
+      content: function undefined
+    type: Function
+  - uid: azure-iot-device.Client.setTransportOptions
+    name: 'setTransportOptions(options, done)'
+    children: []
+    langs:
+      - js
+    summary: >
+      The `setTransportOptions` method configures transport-specific options for
+      the client and its underlying transport object.
+    syntax:
+      parameters:
+        - id: options
+          type:
+            - any
+          description: The options that shall be set (see transports documentation).
+        - id: done
+          type:
+            - function
+          description: >
+            The callback that shall be invoked with either an error or a result
+            object.
+      content: function undefined
+    type: Function
+  - uid: azure-iot-device.Client.updateSharedAccessSignature
+    name: 'updateSharedAccessSignature(sharedAccessSignature, updateSasCallback)'
+    children: []
+    langs:
+      - js
+    summary: >
+      Updates the Shared Access Signature token used by the transport to
+      authenticate with the IoT Hub service.
+    syntax:
+      parameters:
+        - id: sharedAccessSignature
+          type:
+            - string
+          description: The new SAS token to use.
+        - id: updateSasCallback
+          type:
+            - function
+          description: ''
+      content: function undefined
+    type: Function
+  - uid: azure-iot-device.Client.uploadToBlob
+    name: 'uploadToBlob(blobName, stream, streamLength, done)'
+    children: []
+    langs:
+      - js
+    summary: |
+      The `uploadToBlob` method uploads a stream to a blob.
+    syntax:
+      parameters:
+        - id: blobName
+          type:
+            - string
+          description: >-
+            The name to use for the blob that will be created with the content
+            of the stream.
+        - id: stream
+          type:
+            - Stream
+          description: The data to that should be uploaded to the blob.
+        - id: streamLength
+          type:
+            - number
+          description: The size of the data to that should be uploaded to the blob.
+        - id: done
+          type:
+            - function
+          description: |
+            The callback to call when the upload is complete.
+      content: function undefined
+    type: Function

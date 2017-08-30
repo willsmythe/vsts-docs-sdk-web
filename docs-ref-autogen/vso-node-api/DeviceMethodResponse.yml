@@ -1,0 +1,69 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device.DeviceMethodResponse
+    name: DeviceMethodResponse
+    fullName: DeviceMethodResponse
+    children:
+      - azure-iot-device.DeviceMethodResponse.constructor
+      - azure-iot-device.DeviceMethodResponse.send
+    langs:
+      - js
+    type: Class
+    summary: |-
+      `DeviceMethodResponse` provides functionality that allows
+                       a device method implementation to construct and send a
+                       response back to the service for a device method call. An
+                       instance of this class is passed as the second parameter
+                       to the callback registered via the
+                       {@link module:azure-iot-device.Client#onDeviceMethod} method.
+                       method.
+  - uid: azure-iot-device.DeviceMethodResponse.constructor
+    name: 'DeviceMethodResponse(requestId, transport)'
+    children: []
+    langs:
+      - js
+    summary: ''
+    syntax:
+      parameters:
+        - id: requestId
+          type:
+            - string
+          description: ''
+        - id: transport
+          type:
+            - Transport
+          description: ''
+      content: new undefined
+    type: Constructor
+  - uid: azure-iot-device.DeviceMethodResponse.send
+    name: 'send(status, payload, done)'
+    children: []
+    langs:
+      - js
+    summary: |
+      Sends the device method's response back to the service via
+                         the underlying transport object using the status parameter
+                         as the status of the method call.
+    syntax:
+      parameters:
+        - id: status
+          type:
+            - number
+          description: |-
+            A numeric status code to be sent back to the
+                                           service.
+        - id: payload
+          type:
+            - any
+          description: The payload of the method response.
+        - id: done
+          type:
+            - function
+          description: |
+            A callback function which will be
+                                           called once the response has been sent back to
+                                           the service. An error object is passed as an
+                                           argument to the function in case an error
+                                           occurs.
+      content: function undefined
+    type: Function

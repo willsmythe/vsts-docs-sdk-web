@@ -1,0 +1,63 @@
+### YamlMime:UniversalReference
+items:
+  - uid: azure-iot-device.BlobUploadResult
+    name: BlobUploadResult
+    fullName: BlobUploadResult
+    children:
+      - azure-iot-device.BlobUploadResult.constructor
+      - azure-iot-device.BlobUploadResult.fromAzureStorageCallbackArgs
+    langs:
+      - js
+    type: Class
+    summary: >
+      Result object used by the {@link
+      module:azure-iot-device.blobUpload.BlobUploader} class to describe a
+      successful upload to a blob.
+  - uid: azure-iot-device.BlobUploadResult.constructor
+    name: 'BlobUploadResult(isSuccess, statusCode, statusDescription)'
+    children: []
+    langs:
+      - js
+    summary: ''
+    syntax:
+      parameters:
+        - id: isSuccess
+          type:
+            - boolean
+          description: ''
+        - id: statusCode
+          type:
+            - number
+          description: ''
+        - id: statusDescription
+          type:
+            - string
+          description: ''
+      content: new undefined
+    type: Constructor
+  - uid: azure-iot-device.BlobUploadResult.fromAzureStorageCallbackArgs
+    name: 'fromAzureStorageCallbackArgs(err, body, response)'
+    children: []
+    langs:
+      - js
+    summary: >
+      The `fromAzureStorageCallbackArgs` static method creates a new
+      BlobUploadResult instance from the arguments passed to the callback of the
+      azure storage upload method.
+    syntax:
+      parameters:
+        - id: err
+          type:
+            - Error
+          description: The error object that is passed to the callback.
+        - id: body
+          type:
+            - any
+          description: The body of the HTTP response.
+        - id: response
+          type:
+            - function
+          description: |
+            The HTTP response object.
+      content: function undefined
+    type: Function

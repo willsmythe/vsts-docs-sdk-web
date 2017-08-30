@@ -3,15 +3,26 @@
     "content": [
       {
         "files": [
-          "**/*.md"
+          "**/*.md",
+          "**/*.yml"
         ],
+        "src": "docs-ref-conceptual",
+        "dest": "vsts",
         "exclude": [
           "**/obj/**",
-          "**/includes/**",
-          "README.md",
-          "LICENSE",
-          "LICENSE-CODE",
-          "ThirdPartyNotices"
+          "**/includes/**"
+        ]
+      },
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "src": "docs-ref-autogen",
+        "dest": "api",
+        "exclude": [
+          "**/*..yml",
+          "*/toc.yml"
         ]
       }
     ],
@@ -19,8 +30,11 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.svg"
         ],
+        "src": "docs-ref-conceptual",
+        "dest": "azure",
         "exclude": [
           "**/obj/**",
           "**/includes/**"
@@ -30,7 +44,11 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {},
-    "fileMetadata": {},
+    "fileMetadata": {
+      "ms.topic": {
+        "docs-ref-autogen/**": "reference"
+      }
+    },
     "template": [],
     "dest": "vsts-docs-sdk-node"
   }
