@@ -1,0 +1,344 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vso-node-api.ChatApi
+    name: ChatApi
+    fullName: ChatApi
+    children:
+      - vso-node-api.ChatApi.constructor
+      - vso-node-api.ChatApi.createChatRoom
+      - vso-node-api.ChatApi.deleteChatRoom
+      - vso-node-api.ChatApi.deleteMessage
+      - vso-node-api.ChatApi.getAllChatRoomMessages
+      - vso-node-api.ChatApi.getAllChatRoomUsers
+      - vso-node-api.ChatApi.getAllRooms
+      - vso-node-api.ChatApi.getChatRoomById
+      - vso-node-api.ChatApi.getChatRoomMessageById
+      - vso-node-api.ChatApi.getChatRoomUserById
+      - vso-node-api.ChatApi.joinRoom
+      - vso-node-api.ChatApi.leaveRoom
+      - vso-node-api.ChatApi.sendMessageToRoom
+      - vso-node-api.ChatApi.updateChatMessage
+      - vso-node-api.ChatApi.updateChatRoom
+    langs:
+      - typeScript
+    type: Class
+    summary: ''
+  - uid: vso-node-api.ChatApi.constructor
+    name: 'ChatApi(baseUrl: string, handlers: function, options?: IRequestOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: baseUrl
+          type:
+            - string
+          description: ''
+        - id: handlers
+          type:
+            - function
+          description: ''
+        - id: options
+          type:
+            - IRequestOptions
+          description: ''
+          optional: true
+      content: >-
+        new ChatApi(baseUrl: string, handlers: function, options?:
+        IRequestOptions)
+      return:
+        type:
+          - vso-node-api.ChatApi
+    type: constructor
+  - uid: vso-node-api.ChatApi.createChatRoom
+    name: 'createChatRoom(roomUpdate: RoomData)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomUpdate
+          type:
+            - RoomData
+          description: |
+            Information to create the room
+      content: 'function createChatRoom(roomUpdate: RoomData)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ChatApi.deleteChatRoom
+    name: 'deleteChatRoom(roomId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: |
+            Id of the room
+      content: 'function deleteChatRoom(roomId: number)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ChatApi.deleteMessage
+    name: 'deleteMessage(roomId: number, messageId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+        - id: messageId
+          type:
+            - number
+          description: |
+            Id of the message to delete
+      content: 'function deleteMessage(roomId: number, messageId: number)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ChatApi.getAllChatRoomMessages
+    name: 'getAllChatRoomMessages(roomId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: |
+            Id of the room
+      content: 'function getAllChatRoomMessages(roomId: number)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ChatApi.getAllChatRoomUsers
+    name: 'getAllChatRoomUsers(roomId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: |
+            Id of the room
+      content: 'function getAllChatRoomUsers(roomId: number)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ChatApi.getAllRooms
+    name: getAllRooms()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getAllRooms()
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ChatApi.getChatRoomById
+    name: 'getChatRoomById(roomId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: |
+            Id of the room to retrieve
+      content: 'function getChatRoomById(roomId: number)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ChatApi.getChatRoomMessageById
+    name: 'getChatRoomMessageById(roomId: number, messageId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+        - id: messageId
+          type:
+            - number
+          description: |
+            Id of the message to retrieve
+      content: 'function getChatRoomMessageById(roomId: number, messageId: number)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ChatApi.getChatRoomUserById
+    name: 'getChatRoomUserById(roomId: number, userId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+        - id: userId
+          type:
+            - string
+          description: |
+            TfId of the user
+      content: 'function getChatRoomUserById(roomId: number, userId: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ChatApi.joinRoom
+    name: 'joinRoom(userUpdate: UserData, roomId: number, userId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: userUpdate
+          type:
+            - UserData
+          description: user model information
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+        - id: userId
+          type:
+            - string
+          description: |
+            TfId of the user
+      content: 'function joinRoom(userUpdate: UserData, roomId: number, userId: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ChatApi.leaveRoom
+    name: 'leaveRoom(roomId: number, userId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+        - id: userId
+          type:
+            - string
+          description: |
+            TfId of the user
+      content: 'function leaveRoom(roomId: number, userId: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ChatApi.sendMessageToRoom
+    name: 'sendMessageToRoom(messageUpdate: MessageData, roomId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: messageUpdate
+          type:
+            - MessageData
+          description: Content of the message to post
+        - id: roomId
+          type:
+            - number
+          description: |
+            Id of the room
+      content: 'function sendMessageToRoom(messageUpdate: MessageData, roomId: number)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ChatApi.updateChatMessage
+    name: >-
+      updateChatMessage(messageUpdate: MessageData, roomId: number, messageId:
+      number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: messageUpdate
+          type:
+            - MessageData
+          description: New message content
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+        - id: messageId
+          type:
+            - number
+          description: |
+            Id of the message
+      content: >-
+        function updateChatMessage(messageUpdate: MessageData, roomId: number,
+        messageId: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ChatApi.updateChatRoom
+    name: 'updateChatRoom(roomUpdate: RoomData, roomId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomUpdate
+          type:
+            - RoomData
+          description: Room information
+        - id: roomId
+          type:
+            - number
+          description: |
+            Id of the room to update
+      content: 'function updateChatRoom(roomUpdate: RoomData, roomId: number)'
+      return:
+        type:
+          - Promise
+    type: method

@@ -1,0 +1,1791 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vso-node-api.WorkItemTrackingApi
+    name: WorkItemTrackingApi
+    fullName: WorkItemTrackingApi
+    children:
+      - vso-node-api.WorkItemTrackingApi.createAttachment
+      - vso-node-api.WorkItemTrackingApi.createOrUpdateClassificationNode
+      - vso-node-api.WorkItemTrackingApi.createQuery
+      - vso-node-api.WorkItemTrackingApi.createTemplate
+      - vso-node-api.WorkItemTrackingApi.createWorkItem
+      - vso-node-api.WorkItemTrackingApi.deleteClassificationNode
+      - vso-node-api.WorkItemTrackingApi.deleteField
+      - vso-node-api.WorkItemTrackingApi.deleteQuery
+      - vso-node-api.WorkItemTrackingApi.deleteTemplate
+      - vso-node-api.WorkItemTrackingApi.deleteWorkItem
+      - vso-node-api.WorkItemTrackingApi.destroyWorkItem
+      - vso-node-api.WorkItemTrackingApi.evaluateRulesOnField
+      - vso-node-api.WorkItemTrackingApi.exportWorkItemTypeDefinition
+      - vso-node-api.WorkItemTrackingApi.getAccountMyWorkData
+      - vso-node-api.WorkItemTrackingApi.getAttachmentContent
+      - vso-node-api.WorkItemTrackingApi.getAttachmentZip
+      - vso-node-api.WorkItemTrackingApi.getClassificationNode
+      - vso-node-api.WorkItemTrackingApi.getComment
+      - vso-node-api.WorkItemTrackingApi.getComments
+      - vso-node-api.WorkItemTrackingApi.getDeletedWorkItem
+      - vso-node-api.WorkItemTrackingApi.getDeletedWorkItemReferences
+      - vso-node-api.WorkItemTrackingApi.getDeletedWorkItems
+      - vso-node-api.WorkItemTrackingApi.getDependentFields
+      - vso-node-api.WorkItemTrackingApi.getField
+      - vso-node-api.WorkItemTrackingApi.getFields
+      - vso-node-api.WorkItemTrackingApi.getQueries
+      - vso-node-api.WorkItemTrackingApi.getQuery
+      - vso-node-api.WorkItemTrackingApi.getRecentActivityData
+      - vso-node-api.WorkItemTrackingApi.getRelationType
+      - vso-node-api.WorkItemTrackingApi.getRelationTypes
+      - vso-node-api.WorkItemTrackingApi.getReportingLinks
+      - vso-node-api.WorkItemTrackingApi.getRevision
+      - vso-node-api.WorkItemTrackingApi.getRevisions
+      - vso-node-api.WorkItemTrackingApi.getRootNodes
+      - vso-node-api.WorkItemTrackingApi.getTemplate
+      - vso-node-api.WorkItemTrackingApi.getTemplates
+      - vso-node-api.WorkItemTrackingApi.getUpdate
+      - vso-node-api.WorkItemTrackingApi.getUpdates
+      - vso-node-api.WorkItemTrackingApi.getWorkItem
+      - vso-node-api.WorkItemTrackingApi.getWorkItems
+      - vso-node-api.WorkItemTrackingApi.getWorkItemStateColors
+      - vso-node-api.WorkItemTrackingApi.getWorkItemTemplate
+      - vso-node-api.WorkItemTrackingApi.getWorkItemType
+      - vso-node-api.WorkItemTrackingApi.getWorkItemTypeCategories
+      - vso-node-api.WorkItemTrackingApi.getWorkItemTypeCategory
+      - vso-node-api.WorkItemTrackingApi.getWorkItemTypeColors
+      - vso-node-api.WorkItemTrackingApi.getWorkItemTypes
+      - vso-node-api.WorkItemTrackingApi.getWorkItemTypeStates
+      - vso-node-api.WorkItemTrackingApi.queryById
+      - vso-node-api.WorkItemTrackingApi.queryByWiql
+      - vso-node-api.WorkItemTrackingApi.readReportingRevisionsGet
+      - vso-node-api.WorkItemTrackingApi.readReportingRevisionsPost
+      - vso-node-api.WorkItemTrackingApi.replaceTemplate
+      - vso-node-api.WorkItemTrackingApi.restoreWorkItem
+      - vso-node-api.WorkItemTrackingApi.updateClassificationNode
+      - vso-node-api.WorkItemTrackingApi.updateQuery
+      - vso-node-api.WorkItemTrackingApi.updateWorkItem
+      - vso-node-api.WorkItemTrackingApi.updateWorkItemTypeDefinition
+      - vso-node-api.WorkItemTrackingApi.constructor
+    langs:
+      - typeScript
+    type: Class
+    summary: ''
+  - uid: vso-node-api.WorkItemTrackingApi.createAttachment
+    name: >-
+      createAttachment(customHeaders: any, contentStream: ReadableStream,
+      fileName?: string, uploadType?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: customHeaders
+          type:
+            - any
+          description: ''
+        - id: contentStream
+          type:
+            - ReadableStream
+          description: Content to upload
+        - id: fileName
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: uploadType
+          type:
+            - string
+          description: |+
+
+          optional: true
+      content: >-
+        function createAttachment(customHeaders: any, contentStream:
+        ReadableStream, fileName?: string, uploadType?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.createOrUpdateClassificationNode
+    name: >-
+      createOrUpdateClassificationNode(postedNode: WorkItemClassificationNode,
+      project: string, structureGroup: function, path?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: postedNode
+          type:
+            - WorkItemClassificationNode
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: structureGroup
+          type:
+            - function
+          description: ''
+        - id: path
+          type:
+            - string
+          description: |+
+
+          optional: true
+      content: >-
+        function createOrUpdateClassificationNode(postedNode:
+        WorkItemClassificationNode, project: string, structureGroup: function,
+        path?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.createQuery
+    name: >-
+      createQuery(postedQuery: QueryHierarchyItem, project: string, query:
+      string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: postedQuery
+          type:
+            - QueryHierarchyItem
+          description: The query to create.
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: query
+          type:
+            - string
+          description: |
+            The parent path for the query to create.
+      content: >-
+        function createQuery(postedQuery: QueryHierarchyItem, project: string,
+        query: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.createTemplate
+    name: 'createTemplate(template: WorkItemTemplate, teamContext: TeamContext)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: template
+          type:
+            - WorkItemTemplate
+          description: Template contents
+        - id: teamContext
+          type:
+            - TeamContext
+          description: |
+            The team context for the operation
+      content: >-
+        function createTemplate(template: WorkItemTemplate, teamContext:
+        TeamContext)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.createWorkItem
+    name: >-
+      createWorkItem(customHeaders: any, document: JsonPatchDocument, project:
+      string, type: string, validateOnly?: boolean, bypassRules?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: customHeaders
+          type:
+            - any
+          description: ''
+        - id: document
+          type:
+            - JsonPatchDocument
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: type
+          type:
+            - string
+          description: ''
+        - id: validateOnly
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: bypassRules
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function createWorkItem(customHeaders: any, document: JsonPatchDocument,
+        project: string, type: string, validateOnly?: boolean, bypassRules?:
+        boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.deleteClassificationNode
+    name: >-
+      deleteClassificationNode(project: string, structureGroup: function, path?:
+      string, reclassifyId?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: structureGroup
+          type:
+            - function
+          description: ''
+        - id: path
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: reclassifyId
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: >-
+        function deleteClassificationNode(project: string, structureGroup:
+        function, path?: string, reclassifyId?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.deleteField
+    name: 'deleteField(fieldNameOrRefName: string, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: fieldNameOrRefName
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: 'function deleteField(fieldNameOrRefName: string, project?: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.deleteQuery
+    name: 'deleteQuery(project: string, query: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: query
+          type:
+            - string
+          description: |+
+
+      content: 'function deleteQuery(project: string, query: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.deleteTemplate
+    name: 'deleteTemplate(teamContext: TeamContext, templateId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: teamContext
+          type:
+            - TeamContext
+          description: The team context for the operation
+        - id: templateId
+          type:
+            - string
+          description: |
+            Template id
+      content: 'function deleteTemplate(teamContext: TeamContext, templateId: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.deleteWorkItem
+    name: 'deleteWorkItem(id: number, destroy?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - number
+          description: ''
+        - id: destroy
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: 'function deleteWorkItem(id: number, destroy?: boolean)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.destroyWorkItem
+    name: 'destroyWorkItem(id: number, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: 'function destroyWorkItem(id: number, project?: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.evaluateRulesOnField
+    name: 'evaluateRulesOnField(ruleEngineInput: FieldsToEvaluate)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: ruleEngineInput
+          type:
+            - FieldsToEvaluate
+          description: |+
+
+      content: 'function evaluateRulesOnField(ruleEngineInput: FieldsToEvaluate)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.exportWorkItemTypeDefinition
+    name: >-
+      exportWorkItemTypeDefinition(project?: string, type?: string,
+      exportGlobalLists?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: type
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: exportGlobalLists
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function exportWorkItemTypeDefinition(project?: string, type?: string,
+        exportGlobalLists?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getAccountMyWorkData
+    name: 'getAccountMyWorkData(queryOption?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: queryOption
+          type:
+            - function
+          description: |+
+
+          optional: true
+      content: 'function getAccountMyWorkData(queryOption?: function)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getAttachmentContent
+    name: 'getAttachmentContent(id: string, fileName?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - string
+          description: ''
+        - id: fileName
+          type:
+            - string
+          description: |+
+
+          optional: true
+      content: 'function getAttachmentContent(id: string, fileName?: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getAttachmentZip
+    name: 'getAttachmentZip(id: string, fileName?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - string
+          description: ''
+        - id: fileName
+          type:
+            - string
+          description: |+
+
+          optional: true
+      content: 'function getAttachmentZip(id: string, fileName?: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getClassificationNode
+    name: >-
+      getClassificationNode(project: string, structureGroup: function, path?:
+      string, depth?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: structureGroup
+          type:
+            - function
+          description: ''
+        - id: path
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: depth
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: >-
+        function getClassificationNode(project: string, structureGroup:
+        function, path?: string, depth?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getComment
+    name: 'getComment(id: number, revision: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - number
+          description: ''
+        - id: revision
+          type:
+            - number
+          description: |+
+
+      content: 'function getComment(id: number, revision: number)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getComments
+    name: >-
+      getComments(id: number, fromRevision?: number, top?: number, order?:
+      function)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - number
+          description: Work item id
+        - id: fromRevision
+          type:
+            - number
+          description: Revision from which comments are to be fetched
+          optional: true
+        - id: top
+          type:
+            - number
+          description: The number of comments to return
+          optional: true
+        - id: order
+          type:
+            - function
+          description: |
+            Ascending or descending by revision id
+          optional: true
+      content: >-
+        function getComments(id: number, fromRevision?: number, top?: number,
+        order?: function)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getDeletedWorkItem
+    name: 'getDeletedWorkItem(id: number, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: 'function getDeletedWorkItem(id: number, project?: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getDeletedWorkItemReferences
+    name: 'getDeletedWorkItemReferences(project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: 'function getDeletedWorkItemReferences(project?: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getDeletedWorkItems
+    name: 'getDeletedWorkItems(ids: function, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: ids
+          type:
+            - function
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: 'function getDeletedWorkItems(ids: function, project?: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getDependentFields
+    name: 'getDependentFields(project: string, type: string, field: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: type
+          type:
+            - string
+          description: ''
+        - id: field
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function getDependentFields(project: string, type: string, field:
+        string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getField
+    name: 'getField(fieldNameOrRefName: string, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: fieldNameOrRefName
+          type:
+            - string
+          description: Field simple name or reference name
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: 'function getField(fieldNameOrRefName: string, project?: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getFields
+    name: 'getFields(project?: string, expand?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: expand
+          type:
+            - function
+          description: >
+            Use ExtensionFields to include extension fields, otherwise exclude
+            them. Unless the feature flag for this parameter is enabled,
+            extension fields are always included.
+          optional: true
+      content: 'function getFields(project?: string, expand?: function)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getQueries
+    name: >-
+      getQueries(project: string, expand?: function, depth?: number,
+      includeDeleted?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: expand
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: depth
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: includeDeleted
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function getQueries(project: string, expand?: function, depth?: number,
+        includeDeleted?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getQuery
+    name: >-
+      getQuery(project: string, query: string, expand?: function, depth?:
+      number, includeDeleted?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: expand
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: depth
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: includeDeleted
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function getQuery(project: string, query: string, expand?: function,
+        depth?: number, includeDeleted?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getRecentActivityData
+    name: getRecentActivityData()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getRecentActivityData()
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getRelationType
+    name: 'getRelationType(relation: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: relation
+          type:
+            - string
+          description: |+
+
+      content: 'function getRelationType(relation: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getRelationTypes
+    name: getRelationTypes()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getRelationTypes()
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getReportingLinks
+    name: >-
+      getReportingLinks(project?: string, types?: function, continuationToken?:
+      string, startDateTime?: Date)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: types
+          type:
+            - function
+          description: >-
+            A list of types to filter the results to specific work item types.
+            Omit this parameter to get work item links of all work item types.
+          optional: true
+        - id: continuationToken
+          type:
+            - string
+          description: >-
+            Specifies the continuationToken to start the batch from. Omit this
+            parameter to get the first batch of links.
+          optional: true
+        - id: startDateTime
+          type:
+            - Date
+          description: >
+            Date/time to use as a starting point for link changes. Only link
+            changes that occurred after that date/time will be returned. Cannot
+            be used in conjunction with 'watermark' parameter.
+          optional: true
+      content: >-
+        function getReportingLinks(project?: string, types?: function,
+        continuationToken?: string, startDateTime?: Date)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getRevision
+    name: 'getRevision(id: number, revisionNumber: number, expand?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - number
+          description: ''
+        - id: revisionNumber
+          type:
+            - number
+          description: ''
+        - id: expand
+          type:
+            - function
+          description: |+
+
+          optional: true
+      content: >-
+        function getRevision(id: number, revisionNumber: number, expand?:
+        function)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getRevisions
+    name: 'getRevisions(id: number, top?: number, skip?: number, expand?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - number
+          description: ''
+        - id: top
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: expand
+          type:
+            - function
+          description: |+
+
+          optional: true
+      content: >-
+        function getRevisions(id: number, top?: number, skip?: number, expand?:
+        function)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getRootNodes
+    name: 'getRootNodes(project: string, depth?: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: depth
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: 'function getRootNodes(project: string, depth?: number)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getTemplate
+    name: 'getTemplate(teamContext: TeamContext, templateId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: teamContext
+          type:
+            - TeamContext
+          description: The team context for the operation
+        - id: templateId
+          type:
+            - string
+          description: |
+            Template Id
+      content: 'function getTemplate(teamContext: TeamContext, templateId: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getTemplates
+    name: 'getTemplates(teamContext: TeamContext, workitemtypename?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: teamContext
+          type:
+            - TeamContext
+          description: The team context for the operation
+        - id: workitemtypename
+          type:
+            - string
+          description: |
+            Optional, When specified returns templates for given Work item type.
+          optional: true
+      content: >-
+        function getTemplates(teamContext: TeamContext, workitemtypename?:
+        string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getUpdate
+    name: 'getUpdate(id: number, updateNumber: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - number
+          description: ''
+        - id: updateNumber
+          type:
+            - number
+          description: |+
+
+      content: 'function getUpdate(id: number, updateNumber: number)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getUpdates
+    name: 'getUpdates(id: number, top?: number, skip?: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - number
+          description: ''
+        - id: top
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: 'function getUpdates(id: number, top?: number, skip?: number)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getWorkItem
+    name: 'getWorkItem(id: number, fields?: function, asOf?: Date, expand?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - number
+          description: ''
+        - id: fields
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: asOf
+          type:
+            - Date
+          description: ''
+          optional: true
+        - id: expand
+          type:
+            - function
+          description: |+
+
+          optional: true
+      content: >-
+        function getWorkItem(id: number, fields?: function, asOf?: Date,
+        expand?: function)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getWorkItems
+    name: >-
+      getWorkItems(ids: function, fields?: function, asOf?: Date, expand?:
+      function, errorPolicy?: function)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: ids
+          type:
+            - function
+          description: ''
+        - id: fields
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: asOf
+          type:
+            - Date
+          description: ''
+          optional: true
+        - id: expand
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: errorPolicy
+          type:
+            - function
+          description: |+
+
+          optional: true
+      content: >-
+        function getWorkItems(ids: function, fields?: function, asOf?: Date,
+        expand?: function, errorPolicy?: function)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getWorkItemStateColors
+    name: 'getWorkItemStateColors(projectNames: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: projectNames
+          type:
+            - function
+          description: |+
+
+      content: 'function getWorkItemStateColors(projectNames: function)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getWorkItemTemplate
+    name: >-
+      getWorkItemTemplate(project: string, type: string, fields?: string, asOf?:
+      Date, expand?: function)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: type
+          type:
+            - string
+          description: ''
+        - id: fields
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: asOf
+          type:
+            - Date
+          description: ''
+          optional: true
+        - id: expand
+          type:
+            - function
+          description: |+
+
+          optional: true
+      content: >-
+        function getWorkItemTemplate(project: string, type: string, fields?:
+        string, asOf?: Date, expand?: function)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getWorkItemType
+    name: 'getWorkItemType(project: string, type: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: type
+          type:
+            - string
+          description: |+
+
+      content: 'function getWorkItemType(project: string, type: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getWorkItemTypeCategories
+    name: 'getWorkItemTypeCategories(project: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+      content: 'function getWorkItemTypeCategories(project: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getWorkItemTypeCategory
+    name: 'getWorkItemTypeCategory(project: string, category: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: category
+          type:
+            - string
+          description: |+
+
+      content: 'function getWorkItemTypeCategory(project: string, category: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getWorkItemTypeColors
+    name: 'getWorkItemTypeColors(projectNames: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: projectNames
+          type:
+            - function
+          description: |+
+
+      content: 'function getWorkItemTypeColors(projectNames: function)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getWorkItemTypes
+    name: 'getWorkItemTypes(project: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+      content: 'function getWorkItemTypes(project: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.getWorkItemTypeStates
+    name: 'getWorkItemTypeStates(project: string, type: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: type
+          type:
+            - string
+          description: |+
+
+      content: 'function getWorkItemTypeStates(project: string, type: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.queryById
+    name: 'queryById(id: string, teamContext?: TeamContext, timePrecision?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - string
+          description: The query id.
+        - id: teamContext
+          type:
+            - TeamContext
+          description: The team context for the operation
+          optional: true
+        - id: timePrecision
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function queryById(id: string, teamContext?: TeamContext,
+        timePrecision?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.queryByWiql
+    name: >-
+      queryByWiql(wiql: Wiql, teamContext?: TeamContext, timePrecision?:
+      boolean, top?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: wiql
+          type:
+            - Wiql
+          description: The query containing the wiql.
+        - id: teamContext
+          type:
+            - TeamContext
+          description: The team context for the operation
+          optional: true
+        - id: timePrecision
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: top
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: >-
+        function queryByWiql(wiql: Wiql, teamContext?: TeamContext,
+        timePrecision?: boolean, top?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.readReportingRevisionsGet
+    name: >-
+      readReportingRevisionsGet(project?: string, fields?: function, types?:
+      function, continuationToken?: string, startDateTime?: Date,
+      includeIdentityRef?: boolean, includeDeleted?: boolean, includeTagRef?:
+      boolean, includeLatestOnly?: boolean, expand?: function,
+      includeDiscussionChangesOnly?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: fields
+          type:
+            - function
+          description: >-
+            A list of fields to return in work item revisions. Omit this
+            parameter to get all reportable fields.
+          optional: true
+        - id: types
+          type:
+            - function
+          description: >-
+            A list of types to filter the results to specific work item types.
+            Omit this parameter to get work item revisions of all work item
+            types.
+          optional: true
+        - id: continuationToken
+          type:
+            - string
+          description: >-
+            Specifies the watermark to start the batch from. Omit this parameter
+            to get the first batch of revisions.
+          optional: true
+        - id: startDateTime
+          type:
+            - Date
+          description: >-
+            Date/time to use as a starting point for revisions, all revisions
+            will occur after this date/time. Cannot be used in conjunction with
+            'watermark' parameter.
+          optional: true
+        - id: includeIdentityRef
+          type:
+            - boolean
+          description: >-
+            Return an identity reference instead of a string value for identity
+            fields.
+          optional: true
+        - id: includeDeleted
+          type:
+            - boolean
+          description: Specify if the deleted item should be returned.
+          optional: true
+        - id: includeTagRef
+          type:
+            - boolean
+          description: Specify if the tag objects should be returned for System.Tags field.
+          optional: true
+        - id: includeLatestOnly
+          type:
+            - boolean
+          description: >-
+            Return only the latest revisions of work items, skipping all
+            historical revisions
+          optional: true
+        - id: expand
+          type:
+            - function
+          description: >-
+            Return all the fields in work item revisions, including long text
+            fields which are not returned by default
+          optional: true
+        - id: includeDiscussionChangesOnly
+          type:
+            - boolean
+          description: >
+            Return only the those revisions of work items, where only history
+            field was changed
+          optional: true
+      content: >-
+        function readReportingRevisionsGet(project?: string, fields?: function,
+        types?: function, continuationToken?: string, startDateTime?: Date,
+        includeIdentityRef?: boolean, includeDeleted?: boolean, includeTagRef?:
+        boolean, includeLatestOnly?: boolean, expand?: function,
+        includeDiscussionChangesOnly?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.readReportingRevisionsPost
+    name: >-
+      readReportingRevisionsPost(filter: ReportingWorkItemRevisionsFilter,
+      project?: string, continuationToken?: string, startDateTime?: Date,
+      expand?: function)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: filter
+          type:
+            - ReportingWorkItemRevisionsFilter
+          description: >-
+            An object that contains request settings: field filter, type filter,
+            identity format
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: continuationToken
+          type:
+            - string
+          description: >-
+            Specifies the watermark to start the batch from. Omit this parameter
+            to get the first batch of revisions.
+          optional: true
+        - id: startDateTime
+          type:
+            - Date
+          description: >-
+            Date/time to use as a starting point for revisions, all revisions
+            will occur after this date/time. Cannot be used in conjunction with
+            'watermark' parameter.
+          optional: true
+        - id: expand
+          type:
+            - function
+          description: |+
+
+          optional: true
+      content: >-
+        function readReportingRevisionsPost(filter:
+        ReportingWorkItemRevisionsFilter, project?: string, continuationToken?:
+        string, startDateTime?: Date, expand?: function)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.replaceTemplate
+    name: >-
+      replaceTemplate(templateContent: WorkItemTemplate, teamContext:
+      TeamContext, templateId: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: templateContent
+          type:
+            - WorkItemTemplate
+          description: Template contents to replace with
+        - id: teamContext
+          type:
+            - TeamContext
+          description: The team context for the operation
+        - id: templateId
+          type:
+            - string
+          description: |
+            Template id
+      content: >-
+        function replaceTemplate(templateContent: WorkItemTemplate, teamContext:
+        TeamContext, templateId: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.restoreWorkItem
+    name: >-
+      restoreWorkItem(payload: WorkItemDeleteUpdate, id: number, project?:
+      string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: payload
+          type:
+            - WorkItemDeleteUpdate
+          description: ''
+        - id: id
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function restoreWorkItem(payload: WorkItemDeleteUpdate, id: number,
+        project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.updateClassificationNode
+    name: >-
+      updateClassificationNode(postedNode: WorkItemClassificationNode, project:
+      string, structureGroup: function, path?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: postedNode
+          type:
+            - WorkItemClassificationNode
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: structureGroup
+          type:
+            - function
+          description: ''
+        - id: path
+          type:
+            - string
+          description: |+
+
+          optional: true
+      content: >-
+        function updateClassificationNode(postedNode:
+        WorkItemClassificationNode, project: string, structureGroup: function,
+        path?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.updateQuery
+    name: >-
+      updateQuery(queryUpdate: QueryHierarchyItem, project: string, query:
+      string, undeleteDescendants?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: queryUpdate
+          type:
+            - QueryHierarchyItem
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: query
+          type:
+            - string
+          description: ''
+        - id: undeleteDescendants
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function updateQuery(queryUpdate: QueryHierarchyItem, project: string,
+        query: string, undeleteDescendants?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.updateWorkItem
+    name: >-
+      updateWorkItem(customHeaders: any, document: JsonPatchDocument, id:
+      number, validateOnly?: boolean, bypassRules?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: customHeaders
+          type:
+            - any
+          description: ''
+        - id: document
+          type:
+            - JsonPatchDocument
+          description: ''
+        - id: id
+          type:
+            - number
+          description: ''
+        - id: validateOnly
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: bypassRules
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function updateWorkItem(customHeaders: any, document: JsonPatchDocument,
+        id: number, validateOnly?: boolean, bypassRules?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.updateWorkItemTypeDefinition
+    name: >-
+      updateWorkItemTypeDefinition(updateModel: WorkItemTypeTemplateUpdateModel,
+      project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: updateModel
+          type:
+            - WorkItemTypeTemplateUpdateModel
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function updateWorkItemTypeDefinition(updateModel:
+        WorkItemTypeTemplateUpdateModel, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.WorkItemTrackingApi.constructor
+    name: >-
+      WorkItemTrackingApi(baseUrl: string, handlers: function, options?:
+      IRequestOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: baseUrl
+          type:
+            - string
+          description: ''
+        - id: handlers
+          type:
+            - function
+          description: ''
+        - id: options
+          type:
+            - IRequestOptions
+          description: ''
+          optional: true
+      content: >-
+        new WorkItemTrackingApi(baseUrl: string, handlers: function, options?:
+        IRequestOptions)
+      return:
+        type:
+          - vso-node-api.WorkItemTrackingApi
+    type: constructor

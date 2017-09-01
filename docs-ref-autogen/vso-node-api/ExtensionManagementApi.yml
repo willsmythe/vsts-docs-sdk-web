@@ -1,0 +1,807 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vso-node-api.ExtensionManagementApi
+    name: ExtensionManagementApi
+    fullName: ExtensionManagementApi
+    children:
+      - vso-node-api.ExtensionManagementApi.createDocumentByName
+      - vso-node-api.ExtensionManagementApi.deleteDocumentByName
+      - vso-node-api.ExtensionManagementApi.deleteRequest
+      - vso-node-api.ExtensionManagementApi.constructor
+      - vso-node-api.ExtensionManagementApi.getAcquisitionOptions
+      - vso-node-api.ExtensionManagementApi.getDocumentByName
+      - vso-node-api.ExtensionManagementApi.getDocumentsByName
+      - vso-node-api.ExtensionManagementApi.getInstalledExtensionByName
+      - vso-node-api.ExtensionManagementApi.getInstalledExtensions
+      - vso-node-api.ExtensionManagementApi.getPolicies
+      - vso-node-api.ExtensionManagementApi.getRequests
+      - vso-node-api.ExtensionManagementApi.getStates
+      - vso-node-api.ExtensionManagementApi.getToken
+      - vso-node-api.ExtensionManagementApi.installExtensionByName
+      - vso-node-api.ExtensionManagementApi.queryCollectionsByName
+      - vso-node-api.ExtensionManagementApi.queryExtensions
+      - vso-node-api.ExtensionManagementApi.registerAuthorization
+      - vso-node-api.ExtensionManagementApi.requestAcquisition
+      - vso-node-api.ExtensionManagementApi.requestExtension
+      - vso-node-api.ExtensionManagementApi.resolveAllRequests
+      - vso-node-api.ExtensionManagementApi.resolveRequest
+      - vso-node-api.ExtensionManagementApi.setDocumentByName
+      - vso-node-api.ExtensionManagementApi.uninstallExtensionByName
+      - vso-node-api.ExtensionManagementApi.updateDocumentByName
+      - vso-node-api.ExtensionManagementApi.updateInstalledExtension
+    langs:
+      - typeScript
+    type: Class
+    summary: ''
+  - uid: vso-node-api.ExtensionManagementApi.createDocumentByName
+    name: >-
+      createDocumentByName(doc: any, publisherName: string, extensionName:
+      string, scopeType: string, scopeValue: string, collectionName: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: doc
+          type:
+            - any
+          description: ''
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: scopeType
+          type:
+            - string
+          description: ''
+        - id: scopeValue
+          type:
+            - string
+          description: ''
+        - id: collectionName
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function createDocumentByName(doc: any, publisherName: string,
+        extensionName: string, scopeType: string, scopeValue: string,
+        collectionName: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.deleteDocumentByName
+    name: >-
+      deleteDocumentByName(publisherName: string, extensionName: string,
+      scopeType: string, scopeValue: string, collectionName: string, documentId:
+      string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: scopeType
+          type:
+            - string
+          description: ''
+        - id: scopeValue
+          type:
+            - string
+          description: ''
+        - id: collectionName
+          type:
+            - string
+          description: ''
+        - id: documentId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function deleteDocumentByName(publisherName: string, extensionName:
+        string, scopeType: string, scopeValue: string, collectionName: string,
+        documentId: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.deleteRequest
+    name: 'deleteRequest(publisherName: string, extensionName: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: |+
+
+      content: 'function deleteRequest(publisherName: string, extensionName: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.constructor
+    name: >-
+      ExtensionManagementApi(baseUrl: string, handlers: function, options?:
+      IRequestOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: baseUrl
+          type:
+            - string
+          description: ''
+        - id: handlers
+          type:
+            - function
+          description: ''
+        - id: options
+          type:
+            - IRequestOptions
+          description: ''
+          optional: true
+      content: >-
+        new ExtensionManagementApi(baseUrl: string, handlers: function,
+        options?: IRequestOptions)
+      return:
+        type:
+          - vso-node-api.ExtensionManagementApi
+    type: constructor
+  - uid: vso-node-api.ExtensionManagementApi.getAcquisitionOptions
+    name: >-
+      getAcquisitionOptions(itemId: string, testCommerce?: boolean,
+      isFreeOrTrialInstall?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: itemId
+          type:
+            - string
+          description: ''
+        - id: testCommerce
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: isFreeOrTrialInstall
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function getAcquisitionOptions(itemId: string, testCommerce?: boolean,
+        isFreeOrTrialInstall?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.getDocumentByName
+    name: >-
+      getDocumentByName(publisherName: string, extensionName: string, scopeType:
+      string, scopeValue: string, collectionName: string, documentId: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: scopeType
+          type:
+            - string
+          description: ''
+        - id: scopeValue
+          type:
+            - string
+          description: ''
+        - id: collectionName
+          type:
+            - string
+          description: ''
+        - id: documentId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function getDocumentByName(publisherName: string, extensionName: string,
+        scopeType: string, scopeValue: string, collectionName: string,
+        documentId: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.getDocumentsByName
+    name: >-
+      getDocumentsByName(publisherName: string, extensionName: string,
+      scopeType: string, scopeValue: string, collectionName: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: scopeType
+          type:
+            - string
+          description: ''
+        - id: scopeValue
+          type:
+            - string
+          description: ''
+        - id: collectionName
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function getDocumentsByName(publisherName: string, extensionName:
+        string, scopeType: string, scopeValue: string, collectionName: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.getInstalledExtensionByName
+    name: >-
+      getInstalledExtensionByName(publisherName: string, extensionName: string,
+      assetTypes?: function)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: assetTypes
+          type:
+            - function
+          description: |+
+
+          optional: true
+      content: >-
+        function getInstalledExtensionByName(publisherName: string,
+        extensionName: string, assetTypes?: function)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.getInstalledExtensions
+    name: >-
+      getInstalledExtensions(includeDisabledExtensions?: boolean,
+      includeErrors?: boolean, assetTypes?: function,
+      includeInstallationIssues?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: includeDisabledExtensions
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: includeErrors
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: assetTypes
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: includeInstallationIssues
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function getInstalledExtensions(includeDisabledExtensions?: boolean,
+        includeErrors?: boolean, assetTypes?: function,
+        includeInstallationIssues?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.getPolicies
+    name: 'getPolicies(userId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: userId
+          type:
+            - string
+          description: |+
+
+      content: 'function getPolicies(userId: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.getRequests
+    name: getRequests()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getRequests()
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.getStates
+    name: >-
+      getStates(includeDisabled?: boolean, includeErrors?: boolean,
+      includeInstallationIssues?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: includeDisabled
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: includeErrors
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: includeInstallationIssues
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function getStates(includeDisabled?: boolean, includeErrors?: boolean,
+        includeInstallationIssues?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.getToken
+    name: getToken()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getToken()
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.installExtensionByName
+    name: >-
+      installExtensionByName(publisherName: string, extensionName: string,
+      version?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: version
+          type:
+            - string
+          description: |+
+
+          optional: true
+      content: >-
+        function installExtensionByName(publisherName: string, extensionName:
+        string, version?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.queryCollectionsByName
+    name: >-
+      queryCollectionsByName(collectionQuery: ExtensionDataCollectionQuery,
+      publisherName: string, extensionName: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: collectionQuery
+          type:
+            - ExtensionDataCollectionQuery
+          description: ''
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function queryCollectionsByName(collectionQuery:
+        ExtensionDataCollectionQuery, publisherName: string, extensionName:
+        string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.queryExtensions
+    name: 'queryExtensions(query: InstalledExtensionQuery)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: query
+          type:
+            - InstalledExtensionQuery
+          description: |+
+
+      content: 'function queryExtensions(query: InstalledExtensionQuery)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.registerAuthorization
+    name: >-
+      registerAuthorization(publisherName: string, extensionName: string,
+      registrationId: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: registrationId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function registerAuthorization(publisherName: string, extensionName:
+        string, registrationId: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.requestAcquisition
+    name: 'requestAcquisition(acquisitionRequest: ExtensionAcquisitionRequest)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: acquisitionRequest
+          type:
+            - ExtensionAcquisitionRequest
+          description: |+
+
+      content: >-
+        function requestAcquisition(acquisitionRequest:
+        ExtensionAcquisitionRequest)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.requestExtension
+    name: >-
+      requestExtension(publisherName: string, extensionName: string,
+      requestMessage: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: requestMessage
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function requestExtension(publisherName: string, extensionName: string,
+        requestMessage: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.resolveAllRequests
+    name: >-
+      resolveAllRequests(rejectMessage: string, publisherName: string,
+      extensionName: string, state: function)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: rejectMessage
+          type:
+            - string
+          description: ''
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: state
+          type:
+            - function
+          description: |+
+
+      content: >-
+        function resolveAllRequests(rejectMessage: string, publisherName:
+        string, extensionName: string, state: function)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.resolveRequest
+    name: >-
+      resolveRequest(rejectMessage: string, publisherName: string,
+      extensionName: string, requesterId: string, state: function)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: rejectMessage
+          type:
+            - string
+          description: ''
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: requesterId
+          type:
+            - string
+          description: ''
+        - id: state
+          type:
+            - function
+          description: |+
+
+      content: >-
+        function resolveRequest(rejectMessage: string, publisherName: string,
+        extensionName: string, requesterId: string, state: function)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.setDocumentByName
+    name: >-
+      setDocumentByName(doc: any, publisherName: string, extensionName: string,
+      scopeType: string, scopeValue: string, collectionName: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: doc
+          type:
+            - any
+          description: ''
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: scopeType
+          type:
+            - string
+          description: ''
+        - id: scopeValue
+          type:
+            - string
+          description: ''
+        - id: collectionName
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function setDocumentByName(doc: any, publisherName: string,
+        extensionName: string, scopeType: string, scopeValue: string,
+        collectionName: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.uninstallExtensionByName
+    name: >-
+      uninstallExtensionByName(publisherName: string, extensionName: string,
+      reason?: string, reasonCode?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: reason
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: reasonCode
+          type:
+            - string
+          description: |+
+
+          optional: true
+      content: >-
+        function uninstallExtensionByName(publisherName: string, extensionName:
+        string, reason?: string, reasonCode?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.updateDocumentByName
+    name: >-
+      updateDocumentByName(doc: any, publisherName: string, extensionName:
+      string, scopeType: string, scopeValue: string, collectionName: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: doc
+          type:
+            - any
+          description: ''
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: scopeType
+          type:
+            - string
+          description: ''
+        - id: scopeValue
+          type:
+            - string
+          description: ''
+        - id: collectionName
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function updateDocumentByName(doc: any, publisherName: string,
+        extensionName: string, scopeType: string, scopeValue: string,
+        collectionName: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ExtensionManagementApi.updateInstalledExtension
+    name: 'updateInstalledExtension(extension: InstalledExtension)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: extension
+          type:
+            - InstalledExtension
+          description: |+
+
+      content: 'function updateInstalledExtension(extension: InstalledExtension)'
+      return:
+        type:
+          - Promise
+    type: method

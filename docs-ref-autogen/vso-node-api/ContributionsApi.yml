@@ -1,0 +1,145 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vso-node-api.ContributionsApi
+    name: ContributionsApi
+    fullName: ContributionsApi
+    children:
+      - vso-node-api.ContributionsApi.constructor
+      - vso-node-api.ContributionsApi.getInstalledExtensionByName
+      - vso-node-api.ContributionsApi.getInstalledExtensions
+      - vso-node-api.ContributionsApi.queryContributionNodes
+      - vso-node-api.ContributionsApi.queryDataProviders
+    langs:
+      - typeScript
+    type: Class
+    summary: ''
+  - uid: vso-node-api.ContributionsApi.constructor
+    name: >-
+      ContributionsApi(baseUrl: string, handlers: function, options?:
+      IRequestOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: baseUrl
+          type:
+            - string
+          description: ''
+        - id: handlers
+          type:
+            - function
+          description: ''
+        - id: options
+          type:
+            - IRequestOptions
+          description: ''
+          optional: true
+      content: >-
+        new ContributionsApi(baseUrl: string, handlers: function, options?:
+        IRequestOptions)
+      return:
+        type:
+          - vso-node-api.ContributionsApi
+    type: constructor
+  - uid: vso-node-api.ContributionsApi.getInstalledExtensionByName
+    name: >-
+      getInstalledExtensionByName(publisherName: string, extensionName: string,
+      assetTypes?: function)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: assetTypes
+          type:
+            - function
+          description: |+
+
+          optional: true
+      content: >-
+        function getInstalledExtensionByName(publisherName: string,
+        extensionName: string, assetTypes?: function)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ContributionsApi.getInstalledExtensions
+    name: >-
+      getInstalledExtensions(contributionIds?: function, includeDisabledApps?:
+      boolean, assetTypes?: function)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: contributionIds
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: includeDisabledApps
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: assetTypes
+          type:
+            - function
+          description: |+
+
+          optional: true
+      content: >-
+        function getInstalledExtensions(contributionIds?: function,
+        includeDisabledApps?: boolean, assetTypes?: function)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ContributionsApi.queryContributionNodes
+    name: 'queryContributionNodes(query: ContributionNodeQuery)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: query
+          type:
+            - ContributionNodeQuery
+          description: |+
+
+      content: 'function queryContributionNodes(query: ContributionNodeQuery)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.ContributionsApi.queryDataProviders
+    name: 'queryDataProviders(query: DataProviderQuery)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: query
+          type:
+            - DataProviderQuery
+          description: |+
+
+      content: 'function queryDataProviders(query: DataProviderQuery)'
+      return:
+        type:
+          - Promise
+    type: method

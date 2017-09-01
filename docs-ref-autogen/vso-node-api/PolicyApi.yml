@@ -1,0 +1,369 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vso-node-api.PolicyApi
+    name: PolicyApi
+    fullName: PolicyApi
+    children:
+      - vso-node-api.PolicyApi.createPolicyConfiguration
+      - vso-node-api.PolicyApi.deletePolicyConfiguration
+      - vso-node-api.PolicyApi.getPolicyConfiguration
+      - vso-node-api.PolicyApi.getPolicyConfigurationRevision
+      - vso-node-api.PolicyApi.getPolicyConfigurationRevisions
+      - vso-node-api.PolicyApi.getPolicyConfigurations
+      - vso-node-api.PolicyApi.getPolicyEvaluation
+      - vso-node-api.PolicyApi.getPolicyEvaluations
+      - vso-node-api.PolicyApi.getPolicyType
+      - vso-node-api.PolicyApi.getPolicyTypes
+      - vso-node-api.PolicyApi.constructor
+      - vso-node-api.PolicyApi.requeuePolicyEvaluation
+      - vso-node-api.PolicyApi.updatePolicyConfiguration
+    langs:
+      - typeScript
+    type: Class
+    summary: ''
+  - uid: vso-node-api.PolicyApi.createPolicyConfiguration
+    name: >-
+      createPolicyConfiguration(configuration: PolicyConfiguration, project:
+      string, configurationId?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: configuration
+          type:
+            - PolicyConfiguration
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: configurationId
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: >-
+        function createPolicyConfiguration(configuration: PolicyConfiguration,
+        project: string, configurationId?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.PolicyApi.deletePolicyConfiguration
+    name: 'deletePolicyConfiguration(project: string, configurationId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: configurationId
+          type:
+            - number
+          description: |+
+
+      content: >-
+        function deletePolicyConfiguration(project: string, configurationId:
+        number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.PolicyApi.getPolicyConfiguration
+    name: 'getPolicyConfiguration(project: string, configurationId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: configurationId
+          type:
+            - number
+          description: |+
+
+      content: >-
+        function getPolicyConfiguration(project: string, configurationId:
+        number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.PolicyApi.getPolicyConfigurationRevision
+    name: >-
+      getPolicyConfigurationRevision(project: string, configurationId: number,
+      revisionId: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: configurationId
+          type:
+            - number
+          description: ''
+        - id: revisionId
+          type:
+            - number
+          description: |+
+
+      content: >-
+        function getPolicyConfigurationRevision(project: string,
+        configurationId: number, revisionId: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.PolicyApi.getPolicyConfigurationRevisions
+    name: >-
+      getPolicyConfigurationRevisions(project: string, configurationId: number,
+      top?: number, skip?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: configurationId
+          type:
+            - number
+          description: ''
+        - id: top
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: >-
+        function getPolicyConfigurationRevisions(project: string,
+        configurationId: number, top?: number, skip?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.PolicyApi.getPolicyConfigurations
+    name: 'getPolicyConfigurations(project: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+      content: 'function getPolicyConfigurations(project: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.PolicyApi.getPolicyEvaluation
+    name: 'getPolicyEvaluation(project: string, evaluationId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: evaluationId
+          type:
+            - string
+          description: |+
+
+      content: 'function getPolicyEvaluation(project: string, evaluationId: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.PolicyApi.getPolicyEvaluations
+    name: >-
+      getPolicyEvaluations(project: string, artifactId: string,
+      includeNotApplicable?: boolean, top?: number, skip?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: artifactId
+          type:
+            - string
+          description: ''
+        - id: includeNotApplicable
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: top
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: >-
+        function getPolicyEvaluations(project: string, artifactId: string,
+        includeNotApplicable?: boolean, top?: number, skip?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.PolicyApi.getPolicyType
+    name: 'getPolicyType(project: string, typeId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: typeId
+          type:
+            - string
+          description: |+
+
+      content: 'function getPolicyType(project: string, typeId: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.PolicyApi.getPolicyTypes
+    name: 'getPolicyTypes(project: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+      content: 'function getPolicyTypes(project: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.PolicyApi.constructor
+    name: 'PolicyApi(baseUrl: string, handlers: function, options?: IRequestOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: baseUrl
+          type:
+            - string
+          description: ''
+        - id: handlers
+          type:
+            - function
+          description: ''
+        - id: options
+          type:
+            - IRequestOptions
+          description: ''
+          optional: true
+      content: >-
+        new PolicyApi(baseUrl: string, handlers: function, options?:
+        IRequestOptions)
+      return:
+        type:
+          - vso-node-api.PolicyApi
+    type: constructor
+  - uid: vso-node-api.PolicyApi.requeuePolicyEvaluation
+    name: 'requeuePolicyEvaluation(project: string, evaluationId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: evaluationId
+          type:
+            - string
+          description: |+
+
+      content: 'function requeuePolicyEvaluation(project: string, evaluationId: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.PolicyApi.updatePolicyConfiguration
+    name: >-
+      updatePolicyConfiguration(configuration: PolicyConfiguration, project:
+      string, configurationId: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: configuration
+          type:
+            - PolicyConfiguration
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: configurationId
+          type:
+            - number
+          description: |+
+
+      content: >-
+        function updatePolicyConfiguration(configuration: PolicyConfiguration,
+        project: string, configurationId: number)
+      return:
+        type:
+          - Promise
+    type: method

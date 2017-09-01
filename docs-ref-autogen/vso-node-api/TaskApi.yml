@@ -1,0 +1,795 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vso-node-api.TaskApi
+    name: TaskApi
+    fullName: TaskApi
+    children:
+      - vso-node-api.TaskApi.appendLogContent
+      - vso-node-api.TaskApi.appendTimelineRecordFeed
+      - vso-node-api.TaskApi.createAttachment
+      - vso-node-api.TaskApi.createLog
+      - vso-node-api.TaskApi.createTimeline
+      - vso-node-api.TaskApi.deleteTimeline
+      - vso-node-api.TaskApi.getAttachment
+      - vso-node-api.TaskApi.getAttachmentContent
+      - vso-node-api.TaskApi.getAttachments
+      - vso-node-api.TaskApi.getLog
+      - vso-node-api.TaskApi.getLogs
+      - vso-node-api.TaskApi.getPlan
+      - vso-node-api.TaskApi.getPlanAttachments
+      - vso-node-api.TaskApi.getQueuedPlanGroups
+      - vso-node-api.TaskApi.getRecords
+      - vso-node-api.TaskApi.getTimeline
+      - vso-node-api.TaskApi.getTimelines
+      - vso-node-api.TaskApi.constructor
+      - vso-node-api.TaskApi.updateRecords
+    langs:
+      - typeScript
+    type: Class
+    summary: ''
+  - uid: vso-node-api.TaskApi.appendLogContent
+    name: >-
+      appendLogContent(customHeaders: any, contentStream: ReadableStream,
+      scopeIdentifier: string, hubName: string, planId: string, logId: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: customHeaders
+          type:
+            - any
+          description: ''
+        - id: contentStream
+          type:
+            - ReadableStream
+          description: Content to upload
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: ''
+        - id: logId
+          type:
+            - number
+          description: |+
+
+      content: >-
+        function appendLogContent(customHeaders: any, contentStream:
+        ReadableStream, scopeIdentifier: string, hubName: string, planId:
+        string, logId: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.appendTimelineRecordFeed
+    name: >-
+      appendTimelineRecordFeed(lines: VssJsonCollectionWrapperV,
+      scopeIdentifier: string, hubName: string, planId: string, timelineId:
+      string, recordId: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: lines
+          type:
+            - VssJsonCollectionWrapperV
+          description: ''
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: ''
+        - id: timelineId
+          type:
+            - string
+          description: ''
+        - id: recordId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function appendTimelineRecordFeed(lines: VssJsonCollectionWrapperV,
+        scopeIdentifier: string, hubName: string, planId: string, timelineId:
+        string, recordId: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.createAttachment
+    name: >-
+      createAttachment(customHeaders: any, contentStream: ReadableStream,
+      scopeIdentifier: string, hubName: string, planId: string, timelineId:
+      string, recordId: string, type: string, name: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: customHeaders
+          type:
+            - any
+          description: ''
+        - id: contentStream
+          type:
+            - ReadableStream
+          description: Content to upload
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: ''
+        - id: timelineId
+          type:
+            - string
+          description: ''
+        - id: recordId
+          type:
+            - string
+          description: ''
+        - id: type
+          type:
+            - string
+          description: ''
+        - id: name
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function createAttachment(customHeaders: any, contentStream:
+        ReadableStream, scopeIdentifier: string, hubName: string, planId:
+        string, timelineId: string, recordId: string, type: string, name:
+        string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.createLog
+    name: >-
+      createLog(log: TaskLog, scopeIdentifier: string, hubName: string, planId:
+      string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: log
+          type:
+            - TaskLog
+          description: ''
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function createLog(log: TaskLog, scopeIdentifier: string, hubName:
+        string, planId: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.createTimeline
+    name: >-
+      createTimeline(timeline: Timeline, scopeIdentifier: string, hubName:
+      string, planId: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: timeline
+          type:
+            - Timeline
+          description: ''
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function createTimeline(timeline: Timeline, scopeIdentifier: string,
+        hubName: string, planId: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.deleteTimeline
+    name: >-
+      deleteTimeline(scopeIdentifier: string, hubName: string, planId: string,
+      timelineId: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: ''
+        - id: timelineId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function deleteTimeline(scopeIdentifier: string, hubName: string,
+        planId: string, timelineId: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.getAttachment
+    name: >-
+      getAttachment(scopeIdentifier: string, hubName: string, planId: string,
+      timelineId: string, recordId: string, type: string, name: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: ''
+        - id: timelineId
+          type:
+            - string
+          description: ''
+        - id: recordId
+          type:
+            - string
+          description: ''
+        - id: type
+          type:
+            - string
+          description: ''
+        - id: name
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function getAttachment(scopeIdentifier: string, hubName: string, planId:
+        string, timelineId: string, recordId: string, type: string, name:
+        string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.getAttachmentContent
+    name: >-
+      getAttachmentContent(scopeIdentifier: string, hubName: string, planId:
+      string, timelineId: string, recordId: string, type: string, name: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: ''
+        - id: timelineId
+          type:
+            - string
+          description: ''
+        - id: recordId
+          type:
+            - string
+          description: ''
+        - id: type
+          type:
+            - string
+          description: ''
+        - id: name
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function getAttachmentContent(scopeIdentifier: string, hubName: string,
+        planId: string, timelineId: string, recordId: string, type: string,
+        name: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.getAttachments
+    name: >-
+      getAttachments(scopeIdentifier: string, hubName: string, planId: string,
+      timelineId: string, recordId: string, type: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: ''
+        - id: timelineId
+          type:
+            - string
+          description: ''
+        - id: recordId
+          type:
+            - string
+          description: ''
+        - id: type
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function getAttachments(scopeIdentifier: string, hubName: string,
+        planId: string, timelineId: string, recordId: string, type: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.getLog
+    name: >-
+      getLog(scopeIdentifier: string, hubName: string, planId: string, logId:
+      number, startLine?: number, endLine?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: ''
+        - id: logId
+          type:
+            - number
+          description: ''
+        - id: startLine
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: endLine
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: >-
+        function getLog(scopeIdentifier: string, hubName: string, planId:
+        string, logId: number, startLine?: number, endLine?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.getLogs
+    name: 'getLogs(scopeIdentifier: string, hubName: string, planId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function getLogs(scopeIdentifier: string, hubName: string, planId:
+        string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.getPlan
+    name: 'getPlan(scopeIdentifier: string, hubName: string, planId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function getPlan(scopeIdentifier: string, hubName: string, planId:
+        string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.getPlanAttachments
+    name: >-
+      getPlanAttachments(scopeIdentifier: string, hubName: string, planId:
+      string, type: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: ''
+        - id: type
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function getPlanAttachments(scopeIdentifier: string, hubName: string,
+        planId: string, type: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.getQueuedPlanGroups
+    name: >-
+      getQueuedPlanGroups(scopeIdentifier: string, hubName: string,
+      statusFilter?: function, count?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: statusFilter
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: count
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: >-
+        function getQueuedPlanGroups(scopeIdentifier: string, hubName: string,
+        statusFilter?: function, count?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.getRecords
+    name: >-
+      getRecords(scopeIdentifier: string, hubName: string, planId: string,
+      timelineId: string, changeId?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: ''
+        - id: timelineId
+          type:
+            - string
+          description: ''
+        - id: changeId
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: >-
+        function getRecords(scopeIdentifier: string, hubName: string, planId:
+        string, timelineId: string, changeId?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.getTimeline
+    name: >-
+      getTimeline(scopeIdentifier: string, hubName: string, planId: string,
+      timelineId: string, changeId?: number, includeRecords?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: ''
+        - id: timelineId
+          type:
+            - string
+          description: ''
+        - id: changeId
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: includeRecords
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function getTimeline(scopeIdentifier: string, hubName: string, planId:
+        string, timelineId: string, changeId?: number, includeRecords?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.getTimelines
+    name: 'getTimelines(scopeIdentifier: string, hubName: string, planId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function getTimelines(scopeIdentifier: string, hubName: string, planId:
+        string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.TaskApi.constructor
+    name: 'TaskApi(baseUrl: string, handlers: function, options?: IRequestOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: baseUrl
+          type:
+            - string
+          description: ''
+        - id: handlers
+          type:
+            - function
+          description: ''
+        - id: options
+          type:
+            - IRequestOptions
+          description: ''
+          optional: true
+      content: >-
+        new TaskApi(baseUrl: string, handlers: function, options?:
+        IRequestOptions)
+      return:
+        type:
+          - vso-node-api.TaskApi
+    type: constructor
+  - uid: vso-node-api.TaskApi.updateRecords
+    name: >-
+      updateRecords(records: VssJsonCollectionWrapperV, scopeIdentifier: string,
+      hubName: string, planId: string, timelineId: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: records
+          type:
+            - VssJsonCollectionWrapperV
+          description: ''
+        - id: scopeIdentifier
+          type:
+            - string
+          description: The project GUID to scope the request
+        - id: hubName
+          type:
+            - string
+          description: >-
+            The name of the server hub: "build" for the Build server or "rm" for
+            the Release Management server
+        - id: planId
+          type:
+            - string
+          description: ''
+        - id: timelineId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function updateRecords(records: VssJsonCollectionWrapperV,
+        scopeIdentifier: string, hubName: string, planId: string, timelineId:
+        string)
+      return:
+        type:
+          - Promise
+    type: method

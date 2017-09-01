@@ -1,0 +1,3622 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vso-node-api.GitApi
+    name: GitApi
+    fullName: GitApi
+    children:
+      - vso-node-api.GitApi.createAnnotatedTag
+      - vso-node-api.GitApi.createAttachment
+      - vso-node-api.GitApi.createCherryPick
+      - vso-node-api.GitApi.createComment
+      - vso-node-api.GitApi.createCommitStatus
+      - vso-node-api.GitApi.createFavorite
+      - vso-node-api.GitApi.createImportRequest
+      - vso-node-api.GitApi.createPullRequest
+      - vso-node-api.GitApi.createPullRequestIterationStatus
+      - vso-node-api.GitApi.createPullRequestReviewer
+      - vso-node-api.GitApi.createPullRequestReviewers
+      - vso-node-api.GitApi.createPullRequestStatus
+      - vso-node-api.GitApi.createPush
+      - vso-node-api.GitApi.createRefLockRequest
+      - vso-node-api.GitApi.createRepository
+      - vso-node-api.GitApi.createRevert
+      - vso-node-api.GitApi.createThread
+      - vso-node-api.GitApi.deleteAttachment
+      - vso-node-api.GitApi.deleteComment
+      - vso-node-api.GitApi.deletePullRequestReviewer
+      - vso-node-api.GitApi.deleteRefFavorite
+      - vso-node-api.GitApi.deleteRepository
+      - vso-node-api.GitApi.getAnnotatedTag
+      - vso-node-api.GitApi.getAttachmentContent
+      - vso-node-api.GitApi.getAttachments
+      - vso-node-api.GitApi.getAttachmentZip
+      - vso-node-api.GitApi.getBlob
+      - vso-node-api.GitApi.getBlobContent
+      - vso-node-api.GitApi.getBlobsZip
+      - vso-node-api.GitApi.getBlobZip
+      - vso-node-api.GitApi.getBranch
+      - vso-node-api.GitApi.getBranches
+      - vso-node-api.GitApi.getBranchStatsBatch
+      - vso-node-api.GitApi.getChanges
+      - vso-node-api.GitApi.getCherryPick
+      - vso-node-api.GitApi.getCherryPickForRefName
+      - vso-node-api.GitApi.getComment
+      - vso-node-api.GitApi.getComments
+      - vso-node-api.GitApi.getCommit
+      - vso-node-api.GitApi.getCommits
+      - vso-node-api.GitApi.getCommitsBatch
+      - vso-node-api.GitApi.getDeletedRepositories
+      - vso-node-api.GitApi.getImportRequest
+      - vso-node-api.GitApi.getItem
+      - vso-node-api.GitApi.getItemContent
+      - vso-node-api.GitApi.getItems
+      - vso-node-api.GitApi.getItemsBatch
+      - vso-node-api.GitApi.getItemText
+      - vso-node-api.GitApi.getItemZip
+      - vso-node-api.GitApi.getPullRequest
+      - vso-node-api.GitApi.getPullRequestById
+      - vso-node-api.GitApi.getPullRequestCommits
+      - vso-node-api.GitApi.getPullRequestConflict
+      - vso-node-api.GitApi.getPullRequestConflicts
+      - vso-node-api.GitApi.getPullRequestIteration
+      - vso-node-api.GitApi.getPullRequestIterationChanges
+      - vso-node-api.GitApi.getPullRequestIterationCommits
+      - vso-node-api.GitApi.getPullRequestIterations
+      - vso-node-api.GitApi.getPullRequestIterationStatus
+      - vso-node-api.GitApi.getPullRequestIterationStatuses
+      - vso-node-api.GitApi.getPullRequestQuery
+      - vso-node-api.GitApi.getPullRequestReviewer
+      - vso-node-api.GitApi.getPullRequestReviewers
+      - vso-node-api.GitApi.getPullRequests
+      - vso-node-api.GitApi.getPullRequestsByProject
+      - vso-node-api.GitApi.getPullRequestStatus
+      - vso-node-api.GitApi.getPullRequestStatuses
+      - vso-node-api.GitApi.getPullRequestThread
+      - vso-node-api.GitApi.getPullRequestWorkItems
+      - vso-node-api.GitApi.getPush
+      - vso-node-api.GitApi.getPushCommits
+      - vso-node-api.GitApi.getPushes
+      - vso-node-api.GitApi.getRefFavorite
+      - vso-node-api.GitApi.getRefFavorites
+      - vso-node-api.GitApi.getRefs
+      - vso-node-api.GitApi.getRepositories
+      - vso-node-api.GitApi.getRepository
+      - vso-node-api.GitApi.getRevert
+      - vso-node-api.GitApi.getRevertForRefName
+      - vso-node-api.GitApi.getStatuses
+      - vso-node-api.GitApi.getSuggestions
+      - vso-node-api.GitApi.getThreads
+      - vso-node-api.GitApi.getTree
+      - vso-node-api.GitApi.getTreeZip
+      - vso-node-api.GitApi.constructor
+      - vso-node-api.GitApi.queryImportRequests
+      - vso-node-api.GitApi.sharePullRequest
+      - vso-node-api.GitApi.updateComment
+      - vso-node-api.GitApi.updateImportRequest
+      - vso-node-api.GitApi.updatePullRequest
+      - vso-node-api.GitApi.updatePullRequestConflict
+      - vso-node-api.GitApi.updateRef
+      - vso-node-api.GitApi.updateRefs
+      - vso-node-api.GitApi.updateRepository
+      - vso-node-api.GitApi.updateThread
+    langs:
+      - typeScript
+    type: Class
+    summary: ''
+  - uid: vso-node-api.GitApi.createAnnotatedTag
+    name: >-
+      createAnnotatedTag(tagObject: GitAnnotatedTag, project: string,
+      repositoryId: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: tagObject
+          type:
+            - GitAnnotatedTag
+          description: Object containing details of tag to be created
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: repositoryId
+          type:
+            - string
+          description: |
+            Friendly name or guid of repository
+      content: >-
+        function createAnnotatedTag(tagObject: GitAnnotatedTag, project: string,
+        repositoryId: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createAttachment
+    name: >-
+      createAttachment(customHeaders: any, contentStream: ReadableStream,
+      fileName: string, repositoryId: string, pullRequestId: number, project?:
+      string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: customHeaders
+          type:
+            - any
+          description: ''
+        - id: contentStream
+          type:
+            - ReadableStream
+          description: Content to upload
+        - id: fileName
+          type:
+            - string
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function createAttachment(customHeaders: any, contentStream:
+        ReadableStream, fileName: string, repositoryId: string, pullRequestId:
+        number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createCherryPick
+    name: >-
+      createCherryPick(cherryPickToCreate: GitAsyncRefOperationParameters,
+      project: string, repositoryId: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: cherryPickToCreate
+          type:
+            - GitAsyncRefOperationParameters
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: repositoryId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function createCherryPick(cherryPickToCreate:
+        GitAsyncRefOperationParameters, project: string, repositoryId: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createComment
+    name: >-
+      createComment(comment: Comment, repositoryId: string, pullRequestId:
+      number, threadId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: comment
+          type:
+            - Comment
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: threadId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function createComment(comment: Comment, repositoryId: string,
+        pullRequestId: number, threadId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createCommitStatus
+    name: >-
+      createCommitStatus(gitCommitStatusToCreate: GitStatus, commitId: string,
+      repositoryId: string, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: gitCommitStatusToCreate
+          type:
+            - GitStatus
+          description: ''
+        - id: commitId
+          type:
+            - string
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function createCommitStatus(gitCommitStatusToCreate: GitStatus,
+        commitId: string, repositoryId: string, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createFavorite
+    name: 'createFavorite(favorite: GitRefFavorite, project: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: favorite
+          type:
+            - GitRefFavorite
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+      content: 'function createFavorite(favorite: GitRefFavorite, project: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createImportRequest
+    name: >-
+      createImportRequest(importRequest: GitImportRequest, project: string,
+      repositoryId: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: importRequest
+          type:
+            - GitImportRequest
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: repositoryId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function createImportRequest(importRequest: GitImportRequest, project:
+        string, repositoryId: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createPullRequest
+    name: >-
+      createPullRequest(gitPullRequestToCreate: GitPullRequest, repositoryId:
+      string, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: gitPullRequestToCreate
+          type:
+            - GitPullRequest
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function createPullRequest(gitPullRequestToCreate: GitPullRequest,
+        repositoryId: string, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createPullRequestIterationStatus
+    name: >-
+      createPullRequestIterationStatus(status: GitPullRequestStatus,
+      repositoryId: string, pullRequestId: number, iterationId: number,
+      project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: status
+          type:
+            - GitPullRequestStatus
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: iterationId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function createPullRequestIterationStatus(status: GitPullRequestStatus,
+        repositoryId: string, pullRequestId: number, iterationId: number,
+        project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createPullRequestReviewer
+    name: >-
+      createPullRequestReviewer(reviewer: IdentityRefWithVote, repositoryId:
+      string, pullRequestId: number, reviewerId: string, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: reviewer
+          type:
+            - IdentityRefWithVote
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: reviewerId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function createPullRequestReviewer(reviewer: IdentityRefWithVote,
+        repositoryId: string, pullRequestId: number, reviewerId: string,
+        project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createPullRequestReviewers
+    name: >-
+      createPullRequestReviewers(reviewers: function, repositoryId: string,
+      pullRequestId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: reviewers
+          type:
+            - function
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function createPullRequestReviewers(reviewers: function, repositoryId:
+        string, pullRequestId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createPullRequestStatus
+    name: >-
+      createPullRequestStatus(status: GitPullRequestStatus, repositoryId:
+      string, pullRequestId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: status
+          type:
+            - GitPullRequestStatus
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function createPullRequestStatus(status: GitPullRequestStatus,
+        repositoryId: string, pullRequestId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createPush
+    name: 'createPush(push: GitPush, repositoryId: string, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: push
+          type:
+            - GitPush
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: >-
+            The id or friendly name of the repository. To use the friendly name,
+            a project-scoped route must be used.
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function createPush(push: GitPush, repositoryId: string, project?:
+        string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createRefLockRequest
+    name: >-
+      createRefLockRequest(refLockRequest: GitRefLockRequest, project: string,
+      repositoryId: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: refLockRequest
+          type:
+            - GitRefLockRequest
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: repositoryId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function createRefLockRequest(refLockRequest: GitRefLockRequest,
+        project: string, repositoryId: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createRepository
+    name: 'createRepository(gitRepositoryToCreate: GitRepository, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: gitRepositoryToCreate
+          type:
+            - GitRepository
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function createRepository(gitRepositoryToCreate: GitRepository,
+        project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createRevert
+    name: >-
+      createRevert(revertToCreate: GitAsyncRefOperationParameters, project:
+      string, repositoryId: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: revertToCreate
+          type:
+            - GitAsyncRefOperationParameters
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: repositoryId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function createRevert(revertToCreate: GitAsyncRefOperationParameters,
+        project: string, repositoryId: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.createThread
+    name: >-
+      createThread(commentThread: GitPullRequestCommentThread, repositoryId:
+      string, pullRequestId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: commentThread
+          type:
+            - GitPullRequestCommentThread
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function createThread(commentThread: GitPullRequestCommentThread,
+        repositoryId: string, pullRequestId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.deleteAttachment
+    name: >-
+      deleteAttachment(fileName: string, repositoryId: string, pullRequestId:
+      number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: fileName
+          type:
+            - string
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function deleteAttachment(fileName: string, repositoryId: string,
+        pullRequestId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.deleteComment
+    name: >-
+      deleteComment(repositoryId: string, pullRequestId: number, threadId:
+      number, commentId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: threadId
+          type:
+            - number
+          description: ''
+        - id: commentId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function deleteComment(repositoryId: string, pullRequestId: number,
+        threadId: number, commentId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.deletePullRequestReviewer
+    name: >-
+      deletePullRequestReviewer(repositoryId: string, pullRequestId: number,
+      reviewerId: string, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: reviewerId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function deletePullRequestReviewer(repositoryId: string, pullRequestId:
+        number, reviewerId: string, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.deleteRefFavorite
+    name: 'deleteRefFavorite(project: string, favoriteId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: favoriteId
+          type:
+            - number
+          description: |+
+
+      content: 'function deleteRefFavorite(project: string, favoriteId: number)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.deleteRepository
+    name: 'deleteRepository(repositoryId: string, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: 'function deleteRepository(repositoryId: string, project?: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getAnnotatedTag
+    name: 'getAnnotatedTag(project: string, repositoryId: string, objectId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: objectId
+          type:
+            - string
+          description: |
+            Sha1 of annotated tag to be returned
+      content: >-
+        function getAnnotatedTag(project: string, repositoryId: string,
+        objectId: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getAttachmentContent
+    name: >-
+      getAttachmentContent(fileName: string, repositoryId: string,
+      pullRequestId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: fileName
+          type:
+            - string
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getAttachmentContent(fileName: string, repositoryId: string,
+        pullRequestId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getAttachments
+    name: >-
+      getAttachments(repositoryId: string, pullRequestId: number, project?:
+      string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getAttachments(repositoryId: string, pullRequestId: number,
+        project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getAttachmentZip
+    name: >-
+      getAttachmentZip(fileName: string, repositoryId: string, pullRequestId:
+      number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: fileName
+          type:
+            - string
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getAttachmentZip(fileName: string, repositoryId: string,
+        pullRequestId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getBlob
+    name: >-
+      getBlob(repositoryId: string, sha1: string, project?: string, download?:
+      boolean, fileName?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: sha1
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: download
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: fileName
+          type:
+            - string
+          description: |+
+
+          optional: true
+      content: >-
+        function getBlob(repositoryId: string, sha1: string, project?: string,
+        download?: boolean, fileName?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getBlobContent
+    name: >-
+      getBlobContent(repositoryId: string, sha1: string, project?: string,
+      download?: boolean, fileName?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: sha1
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: download
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: fileName
+          type:
+            - string
+          description: |+
+
+          optional: true
+      content: >-
+        function getBlobContent(repositoryId: string, sha1: string, project?:
+        string, download?: boolean, fileName?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getBlobsZip
+    name: >-
+      getBlobsZip(blobIds: function, repositoryId: string, project?: string,
+      filename?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: blobIds
+          type:
+            - function
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: filename
+          type:
+            - string
+          description: |+
+
+          optional: true
+      content: >-
+        function getBlobsZip(blobIds: function, repositoryId: string, project?:
+        string, filename?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getBlobZip
+    name: >-
+      getBlobZip(repositoryId: string, sha1: string, project?: string,
+      download?: boolean, fileName?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: sha1
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: download
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: fileName
+          type:
+            - string
+          description: |+
+
+          optional: true
+      content: >-
+        function getBlobZip(repositoryId: string, sha1: string, project?:
+        string, download?: boolean, fileName?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getBranch
+    name: >-
+      getBranch(repositoryId: string, name: string, project?: string,
+      baseVersionDescriptor?: GitVersionDescriptor)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: Friendly name or guid of repository
+        - id: name
+          type:
+            - string
+          description: Name of the branch
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: baseVersionDescriptor
+          type:
+            - GitVersionDescriptor
+          description: |+
+
+          optional: true
+      content: >-
+        function getBranch(repositoryId: string, name: string, project?: string,
+        baseVersionDescriptor?: GitVersionDescriptor)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getBranches
+    name: >-
+      getBranches(repositoryId: string, project?: string,
+      baseVersionDescriptor?: GitVersionDescriptor)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: Friendly name or guid of repository
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: baseVersionDescriptor
+          type:
+            - GitVersionDescriptor
+          description: |+
+
+          optional: true
+      content: >-
+        function getBranches(repositoryId: string, project?: string,
+        baseVersionDescriptor?: GitVersionDescriptor)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getBranchStatsBatch
+    name: >-
+      getBranchStatsBatch(searchCriteria: GitQueryBranchStatsCriteria,
+      repositoryId: string, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: searchCriteria
+          type:
+            - GitQueryBranchStatsCriteria
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: Friendly name or guid of repository
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getBranchStatsBatch(searchCriteria:
+        GitQueryBranchStatsCriteria, repositoryId: string, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getChanges
+    name: >-
+      getChanges(commitId: string, repositoryId: string, project?: string, top?:
+      number, skip?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: commitId
+          type:
+            - string
+          description: The id of the commit.
+        - id: repositoryId
+          type:
+            - string
+          description: >-
+            The id or friendly name of the repository. To use the friendly name,
+            projectId must also be specified.
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: top
+          type:
+            - number
+          description: The maximum number of changes to return.
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: |
+            The number of changes to skip.
+          optional: true
+      content: >-
+        function getChanges(commitId: string, repositoryId: string, project?:
+        string, top?: number, skip?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getCherryPick
+    name: 'getCherryPick(project: string, cherryPickId: number, repositoryId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: cherryPickId
+          type:
+            - number
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function getCherryPick(project: string, cherryPickId: number,
+        repositoryId: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getCherryPickForRefName
+    name: >-
+      getCherryPickForRefName(project: string, repositoryId: string, refName:
+      string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: refName
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function getCherryPickForRefName(project: string, repositoryId: string,
+        refName: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getComment
+    name: >-
+      getComment(repositoryId: string, pullRequestId: number, threadId: number,
+      commentId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: threadId
+          type:
+            - number
+          description: ''
+        - id: commentId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getComment(repositoryId: string, pullRequestId: number,
+        threadId: number, commentId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getComments
+    name: >-
+      getComments(repositoryId: string, pullRequestId: number, threadId: number,
+      project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: threadId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getComments(repositoryId: string, pullRequestId: number,
+        threadId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getCommit
+    name: >-
+      getCommit(commitId: string, repositoryId: string, project?: string,
+      changeCount?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: commitId
+          type:
+            - string
+          description: The id of the commit.
+        - id: repositoryId
+          type:
+            - string
+          description: >-
+            The id or friendly name of the repository. To use the friendly name,
+            projectId must also be specified.
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: changeCount
+          type:
+            - number
+          description: |
+            The number of changes to include in the result.
+          optional: true
+      content: >-
+        function getCommit(commitId: string, repositoryId: string, project?:
+        string, changeCount?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getCommits
+    name: >-
+      getCommits(repositoryId: string, searchCriteria: GitQueryCommitsCriteria,
+      project?: string, skip?: number, top?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: >-
+            The id or friendly name of the repository. To use the friendly name,
+            projectId must also be specified.
+        - id: searchCriteria
+          type:
+            - GitQueryCommitsCriteria
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: top
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: >-
+        function getCommits(repositoryId: string, searchCriteria:
+        GitQueryCommitsCriteria, project?: string, skip?: number, top?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getCommitsBatch
+    name: >-
+      getCommitsBatch(searchCriteria: GitQueryCommitsCriteria, repositoryId:
+      string, project?: string, skip?: number, top?: number, includeStatuses?:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: searchCriteria
+          type:
+            - GitQueryCommitsCriteria
+          description: Search options
+        - id: repositoryId
+          type:
+            - string
+          description: >-
+            The id or friendly name of the repository. To use the friendly name,
+            projectId must also be specified.
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: top
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: includeStatuses
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function getCommitsBatch(searchCriteria: GitQueryCommitsCriteria,
+        repositoryId: string, project?: string, skip?: number, top?: number,
+        includeStatuses?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getDeletedRepositories
+    name: 'getDeletedRepositories(project: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+      content: 'function getDeletedRepositories(project: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getImportRequest
+    name: >-
+      getImportRequest(project: string, repositoryId: string, importRequestId:
+      number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: importRequestId
+          type:
+            - number
+          description: |+
+
+      content: >-
+        function getImportRequest(project: string, repositoryId: string,
+        importRequestId: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getItem
+    name: >-
+      getItem(repositoryId: string, path: string, project?: string, scopePath?:
+      string, recursionLevel?: function, includeContentMetadata?: boolean,
+      latestProcessedChange?: boolean, download?: boolean, versionDescriptor?:
+      GitVersionDescriptor)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: path
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: scopePath
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: recursionLevel
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: includeContentMetadata
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: latestProcessedChange
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: download
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: versionDescriptor
+          type:
+            - GitVersionDescriptor
+          description: |+
+
+          optional: true
+      content: >-
+        function getItem(repositoryId: string, path: string, project?: string,
+        scopePath?: string, recursionLevel?: function, includeContentMetadata?:
+        boolean, latestProcessedChange?: boolean, download?: boolean,
+        versionDescriptor?: GitVersionDescriptor)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getItemContent
+    name: >-
+      getItemContent(repositoryId: string, path: string, project?: string,
+      scopePath?: string, recursionLevel?: function, includeContentMetadata?:
+      boolean, latestProcessedChange?: boolean, download?: boolean,
+      versionDescriptor?: GitVersionDescriptor)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: path
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: scopePath
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: recursionLevel
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: includeContentMetadata
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: latestProcessedChange
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: download
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: versionDescriptor
+          type:
+            - GitVersionDescriptor
+          description: |+
+
+          optional: true
+      content: >-
+        function getItemContent(repositoryId: string, path: string, project?:
+        string, scopePath?: string, recursionLevel?: function,
+        includeContentMetadata?: boolean, latestProcessedChange?: boolean,
+        download?: boolean, versionDescriptor?: GitVersionDescriptor)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getItems
+    name: >-
+      getItems(repositoryId: string, project?: string, scopePath?: string,
+      recursionLevel?: function, includeContentMetadata?: boolean,
+      latestProcessedChange?: boolean, download?: boolean, includeLinks?:
+      boolean, versionDescriptor?: GitVersionDescriptor)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: scopePath
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: recursionLevel
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: includeContentMetadata
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: latestProcessedChange
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: download
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: includeLinks
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: versionDescriptor
+          type:
+            - GitVersionDescriptor
+          description: |+
+
+          optional: true
+      content: >-
+        function getItems(repositoryId: string, project?: string, scopePath?:
+        string, recursionLevel?: function, includeContentMetadata?: boolean,
+        latestProcessedChange?: boolean, download?: boolean, includeLinks?:
+        boolean, versionDescriptor?: GitVersionDescriptor)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getItemsBatch
+    name: >-
+      getItemsBatch(requestData: GitItemRequestData, repositoryId: string,
+      project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: requestData
+          type:
+            - GitItemRequestData
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getItemsBatch(requestData: GitItemRequestData, repositoryId:
+        string, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getItemText
+    name: >-
+      getItemText(repositoryId: string, path: string, project?: string,
+      scopePath?: string, recursionLevel?: function, includeContentMetadata?:
+      boolean, latestProcessedChange?: boolean, download?: boolean,
+      versionDescriptor?: GitVersionDescriptor)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: path
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: scopePath
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: recursionLevel
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: includeContentMetadata
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: latestProcessedChange
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: download
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: versionDescriptor
+          type:
+            - GitVersionDescriptor
+          description: |+
+
+          optional: true
+      content: >-
+        function getItemText(repositoryId: string, path: string, project?:
+        string, scopePath?: string, recursionLevel?: function,
+        includeContentMetadata?: boolean, latestProcessedChange?: boolean,
+        download?: boolean, versionDescriptor?: GitVersionDescriptor)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getItemZip
+    name: >-
+      getItemZip(repositoryId: string, path: string, project?: string,
+      scopePath?: string, recursionLevel?: function, includeContentMetadata?:
+      boolean, latestProcessedChange?: boolean, download?: boolean,
+      versionDescriptor?: GitVersionDescriptor)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: path
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: scopePath
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: recursionLevel
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: includeContentMetadata
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: latestProcessedChange
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: download
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: versionDescriptor
+          type:
+            - GitVersionDescriptor
+          description: |+
+
+          optional: true
+      content: >-
+        function getItemZip(repositoryId: string, path: string, project?:
+        string, scopePath?: string, recursionLevel?: function,
+        includeContentMetadata?: boolean, latestProcessedChange?: boolean,
+        download?: boolean, versionDescriptor?: GitVersionDescriptor)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequest
+    name: >-
+      getPullRequest(repositoryId: string, pullRequestId: number, project?:
+      string, maxCommentLength?: number, skip?: number, top?: number,
+      includeCommits?: boolean, includeWorkItemRefs?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: maxCommentLength
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: top
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: includeCommits
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: includeWorkItemRefs
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function getPullRequest(repositoryId: string, pullRequestId: number,
+        project?: string, maxCommentLength?: number, skip?: number, top?:
+        number, includeCommits?: boolean, includeWorkItemRefs?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestById
+    name: 'getPullRequestById(pullRequestId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: pullRequestId
+          type:
+            - number
+          description: |
+            the Id of the pull request
+      content: 'function getPullRequestById(pullRequestId: number)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestCommits
+    name: >-
+      getPullRequestCommits(repositoryId: string, pullRequestId: number,
+      project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getPullRequestCommits(repositoryId: string, pullRequestId:
+        number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestConflict
+    name: >-
+      getPullRequestConflict(repositoryId: string, pullRequestId: number,
+      conflictId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: conflictId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getPullRequestConflict(repositoryId: string, pullRequestId:
+        number, conflictId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestConflicts
+    name: >-
+      getPullRequestConflicts(repositoryId: string, pullRequestId: number,
+      project?: string, skip?: number, top?: number, includeObsolete?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: top
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: includeObsolete
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function getPullRequestConflicts(repositoryId: string, pullRequestId:
+        number, project?: string, skip?: number, top?: number, includeObsolete?:
+        boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestIteration
+    name: >-
+      getPullRequestIteration(repositoryId: string, pullRequestId: number,
+      iterationId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: iterationId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getPullRequestIteration(repositoryId: string, pullRequestId:
+        number, iterationId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestIterationChanges
+    name: >-
+      getPullRequestIterationChanges(repositoryId: string, pullRequestId:
+      number, iterationId: number, project?: string, top?: number, skip?:
+      number, compareTo?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: iterationId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: top
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: compareTo
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: >-
+        function getPullRequestIterationChanges(repositoryId: string,
+        pullRequestId: number, iterationId: number, project?: string, top?:
+        number, skip?: number, compareTo?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestIterationCommits
+    name: >-
+      getPullRequestIterationCommits(repositoryId: string, pullRequestId:
+      number, iterationId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: iterationId
+          type:
+            - number
+          description: Iteration to retrieve commits for
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getPullRequestIterationCommits(repositoryId: string,
+        pullRequestId: number, iterationId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestIterations
+    name: >-
+      getPullRequestIterations(repositoryId: string, pullRequestId: number,
+      project?: string, includeCommits?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: includeCommits
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function getPullRequestIterations(repositoryId: string, pullRequestId:
+        number, project?: string, includeCommits?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestIterationStatus
+    name: >-
+      getPullRequestIterationStatus(repositoryId: string, pullRequestId: number,
+      iterationId: number, statusId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: iterationId
+          type:
+            - number
+          description: ''
+        - id: statusId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getPullRequestIterationStatus(repositoryId: string,
+        pullRequestId: number, iterationId: number, statusId: number, project?:
+        string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestIterationStatuses
+    name: >-
+      getPullRequestIterationStatuses(repositoryId: string, pullRequestId:
+      number, iterationId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: iterationId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getPullRequestIterationStatuses(repositoryId: string,
+        pullRequestId: number, iterationId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestQuery
+    name: >-
+      getPullRequestQuery(queries: GitPullRequestQuery, repositoryId: string,
+      project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: queries
+          type:
+            - GitPullRequestQuery
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getPullRequestQuery(queries: GitPullRequestQuery, repositoryId:
+        string, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestReviewer
+    name: >-
+      getPullRequestReviewer(repositoryId: string, pullRequestId: number,
+      reviewerId: string, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: reviewerId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getPullRequestReviewer(repositoryId: string, pullRequestId:
+        number, reviewerId: string, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestReviewers
+    name: >-
+      getPullRequestReviewers(repositoryId: string, pullRequestId: number,
+      project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getPullRequestReviewers(repositoryId: string, pullRequestId:
+        number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequests
+    name: >-
+      getPullRequests(repositoryId: string, searchCriteria:
+      GitPullRequestSearchCriteria, project?: string, maxCommentLength?: number,
+      skip?: number, top?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: searchCriteria
+          type:
+            - GitPullRequestSearchCriteria
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: maxCommentLength
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: top
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: >-
+        function getPullRequests(repositoryId: string, searchCriteria:
+        GitPullRequestSearchCriteria, project?: string, maxCommentLength?:
+        number, skip?: number, top?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestsByProject
+    name: >-
+      getPullRequestsByProject(project: string, searchCriteria:
+      GitPullRequestSearchCriteria, maxCommentLength?: number, skip?: number,
+      top?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: searchCriteria
+          type:
+            - GitPullRequestSearchCriteria
+          description: ''
+        - id: maxCommentLength
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: top
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: >-
+        function getPullRequestsByProject(project: string, searchCriteria:
+        GitPullRequestSearchCriteria, maxCommentLength?: number, skip?: number,
+        top?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestStatus
+    name: >-
+      getPullRequestStatus(repositoryId: string, pullRequestId: number,
+      statusId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: statusId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getPullRequestStatus(repositoryId: string, pullRequestId:
+        number, statusId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestStatuses
+    name: >-
+      getPullRequestStatuses(repositoryId: string, pullRequestId: number,
+      project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getPullRequestStatuses(repositoryId: string, pullRequestId:
+        number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestThread
+    name: >-
+      getPullRequestThread(repositoryId: string, pullRequestId: number,
+      threadId: number, project?: string, iteration?: number, baseIteration?:
+      number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: threadId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: iteration
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: baseIteration
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: >-
+        function getPullRequestThread(repositoryId: string, pullRequestId:
+        number, threadId: number, project?: string, iteration?: number,
+        baseIteration?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPullRequestWorkItems
+    name: >-
+      getPullRequestWorkItems(repositoryId: string, pullRequestId: number,
+      project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function getPullRequestWorkItems(repositoryId: string, pullRequestId:
+        number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPush
+    name: >-
+      getPush(repositoryId: string, pushId: number, project?: string,
+      includeCommits?: number, includeRefUpdates?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: >-
+            The id or friendly name of the repository. To use the friendly name,
+            projectId must also be specified.
+        - id: pushId
+          type:
+            - number
+          description: The id of the push.
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: includeCommits
+          type:
+            - number
+          description: The number of commits to include in the result.
+          optional: true
+        - id: includeRefUpdates
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function getPush(repositoryId: string, pushId: number, project?: string,
+        includeCommits?: number, includeRefUpdates?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPushCommits
+    name: >-
+      getPushCommits(repositoryId: string, pushId: number, project?: string,
+      top?: number, skip?: number, includeLinks?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: >-
+            The id or friendly name of the repository. To use the friendly name,
+            projectId must also be specified.
+        - id: pushId
+          type:
+            - number
+          description: The id of the push.
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: top
+          type:
+            - number
+          description: The maximum number of commits to return ("get the top x commits").
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: The number of commits to skip.
+          optional: true
+        - id: includeLinks
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function getPushCommits(repositoryId: string, pushId: number, project?:
+        string, top?: number, skip?: number, includeLinks?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getPushes
+    name: >-
+      getPushes(repositoryId: string, project?: string, skip?: number, top?:
+      number, searchCriteria?: GitPushSearchCriteria)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: >-
+            The id or friendly name of the repository. To use the friendly name,
+            projectId must also be specified.
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: top
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: searchCriteria
+          type:
+            - GitPushSearchCriteria
+          description: |+
+
+          optional: true
+      content: >-
+        function getPushes(repositoryId: string, project?: string, skip?:
+        number, top?: number, searchCriteria?: GitPushSearchCriteria)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getRefFavorite
+    name: 'getRefFavorite(project: string, favoriteId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: favoriteId
+          type:
+            - number
+          description: |+
+
+      content: 'function getRefFavorite(project: string, favoriteId: number)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getRefFavorites
+    name: >-
+      getRefFavorites(project: string, repositoryId?: string, identityId?:
+      string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: repositoryId
+          type:
+            - string
+          description: The id of the repository.
+          optional: true
+        - id: identityId
+          type:
+            - string
+          description: >
+            The id of the identity whose favorites are to be retrieved. If null,
+            the requesting identity is used.
+          optional: true
+      content: >-
+        function getRefFavorites(project: string, repositoryId?: string,
+        identityId?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getRefs
+    name: >-
+      getRefs(repositoryId: string, project?: string, filter?: string,
+      includeLinks?: boolean, latestStatusesOnly?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: >-
+            The id or friendly name of the repository. To use the friendly name,
+            projectId must also be specified.
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: filter
+          type:
+            - string
+          description: '[optional] A filter to apply to the refs.'
+          optional: true
+        - id: includeLinks
+          type:
+            - boolean
+          description: >-
+            [optional] Specifies if referenceLinks should be included in the
+            result. default is false.
+          optional: true
+        - id: latestStatusesOnly
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function getRefs(repositoryId: string, project?: string, filter?:
+        string, includeLinks?: boolean, latestStatusesOnly?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getRepositories
+    name: >-
+      getRepositories(project?: string, includeLinks?: boolean, includeAllUrls?:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: includeLinks
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: includeAllUrls
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function getRepositories(project?: string, includeLinks?: boolean,
+        includeAllUrls?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getRepository
+    name: 'getRepository(repositoryId: string, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: 'function getRepository(repositoryId: string, project?: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getRevert
+    name: 'getRevert(project: string, revertId: number, repositoryId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: revertId
+          type:
+            - number
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function getRevert(project: string, revertId: number, repositoryId:
+        string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getRevertForRefName
+    name: >-
+      getRevertForRefName(project: string, repositoryId: string, refName:
+      string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: refName
+          type:
+            - string
+          description: |+
+
+      content: >-
+        function getRevertForRefName(project: string, repositoryId: string,
+        refName: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getStatuses
+    name: >-
+      getStatuses(commitId: string, repositoryId: string, project?: string,
+      top?: number, skip?: number, latestOnly?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: commitId
+          type:
+            - string
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: top
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: latestOnly
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function getStatuses(commitId: string, repositoryId: string, project?:
+        string, top?: number, skip?: number, latestOnly?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getSuggestions
+    name: 'getSuggestions(repositoryId: string, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: 'function getSuggestions(repositoryId: string, project?: string)'
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getThreads
+    name: >-
+      getThreads(repositoryId: string, pullRequestId: number, project?: string,
+      iteration?: number, baseIteration?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: iteration
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: baseIteration
+          type:
+            - number
+          description: |+
+
+          optional: true
+      content: >-
+        function getThreads(repositoryId: string, pullRequestId: number,
+        project?: string, iteration?: number, baseIteration?: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getTree
+    name: >-
+      getTree(repositoryId: string, sha1: string, project?: string, projectId?:
+      string, recursive?: boolean, fileName?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: sha1
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: projectId
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: recursive
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: fileName
+          type:
+            - string
+          description: |+
+
+          optional: true
+      content: >-
+        function getTree(repositoryId: string, sha1: string, project?: string,
+        projectId?: string, recursive?: boolean, fileName?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.getTreeZip
+    name: >-
+      getTreeZip(repositoryId: string, sha1: string, project?: string,
+      projectId?: string, recursive?: boolean, fileName?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: sha1
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: projectId
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: recursive
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: fileName
+          type:
+            - string
+          description: |+
+
+          optional: true
+      content: >-
+        function getTreeZip(repositoryId: string, sha1: string, project?:
+        string, projectId?: string, recursive?: boolean, fileName?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.constructor
+    name: 'GitApi(baseUrl: string, handlers: function, options?: IRequestOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: baseUrl
+          type:
+            - string
+          description: ''
+        - id: handlers
+          type:
+            - function
+          description: ''
+        - id: options
+          type:
+            - IRequestOptions
+          description: ''
+          optional: true
+      content: >-
+        new GitApi(baseUrl: string, handlers: function, options?:
+        IRequestOptions)
+      return:
+        type:
+          - vso-node-api.GitApi
+    type: constructor
+  - uid: vso-node-api.GitApi.queryImportRequests
+    name: >-
+      queryImportRequests(project: string, repositoryId: string,
+      includeAbandoned?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: includeAbandoned
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function queryImportRequests(project: string, repositoryId: string,
+        includeAbandoned?: boolean)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.sharePullRequest
+    name: >-
+      sharePullRequest(userMessage: ShareNotificationContext, repositoryId:
+      string, pullRequestId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: userMessage
+          type:
+            - ShareNotificationContext
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function sharePullRequest(userMessage: ShareNotificationContext,
+        repositoryId: string, pullRequestId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.updateComment
+    name: >-
+      updateComment(comment: Comment, repositoryId: string, pullRequestId:
+      number, threadId: number, commentId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: comment
+          type:
+            - Comment
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: threadId
+          type:
+            - number
+          description: ''
+        - id: commentId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function updateComment(comment: Comment, repositoryId: string,
+        pullRequestId: number, threadId: number, commentId: number, project?:
+        string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.updateImportRequest
+    name: >-
+      updateImportRequest(importRequestToUpdate: GitImportRequest, project:
+      string, repositoryId: string, importRequestId: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: importRequestToUpdate
+          type:
+            - GitImportRequest
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: importRequestId
+          type:
+            - number
+          description: |+
+
+      content: >-
+        function updateImportRequest(importRequestToUpdate: GitImportRequest,
+        project: string, repositoryId: string, importRequestId: number)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.updatePullRequest
+    name: >-
+      updatePullRequest(gitPullRequestToUpdate: GitPullRequest, repositoryId:
+      string, pullRequestId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: gitPullRequestToUpdate
+          type:
+            - GitPullRequest
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function updatePullRequest(gitPullRequestToUpdate: GitPullRequest,
+        repositoryId: string, pullRequestId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.updatePullRequestConflict
+    name: >-
+      updatePullRequestConflict(conflict: GitConflict, repositoryId: string,
+      pullRequestId: number, conflictId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: conflict
+          type:
+            - GitConflict
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: conflictId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function updatePullRequestConflict(conflict: GitConflict, repositoryId:
+        string, pullRequestId: number, conflictId: number, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.updateRef
+    name: >-
+      updateRef(newRefInfo: GitRefUpdate, repositoryId: string, filter: string,
+      project?: string, projectId?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: newRefInfo
+          type:
+            - GitRefUpdate
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: filter
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: projectId
+          type:
+            - string
+          description: |+
+
+          optional: true
+      content: >-
+        function updateRef(newRefInfo: GitRefUpdate, repositoryId: string,
+        filter: string, project?: string, projectId?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.updateRefs
+    name: >-
+      updateRefs(refUpdates: function, repositoryId: string, project?: string,
+      projectId?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: refUpdates
+          type:
+            - function
+          description: List of ref updates to attempt to perform
+        - id: repositoryId
+          type:
+            - string
+          description: >-
+            The id or friendly name of the repository. To use the friendly name,
+            projectId must also be specified.
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: projectId
+          type:
+            - string
+          description: |
+            The id of the project.
+          optional: true
+      content: >-
+        function updateRefs(refUpdates: function, repositoryId: string,
+        project?: string, projectId?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.updateRepository
+    name: >-
+      updateRepository(newRepositoryInfo: GitRepository, repositoryId: string,
+      project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: newRepositoryInfo
+          type:
+            - GitRepository
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function updateRepository(newRepositoryInfo: GitRepository,
+        repositoryId: string, project?: string)
+      return:
+        type:
+          - Promise
+    type: method
+  - uid: vso-node-api.GitApi.updateThread
+    name: >-
+      updateThread(commentThread: GitPullRequestCommentThread, repositoryId:
+      string, pullRequestId: number, threadId: number, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: commentThread
+          type:
+            - GitPullRequestCommentThread
+          description: ''
+        - id: repositoryId
+          type:
+            - string
+          description: ''
+        - id: pullRequestId
+          type:
+            - number
+          description: ''
+        - id: threadId
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: |
+            Project ID or project name
+          optional: true
+      content: >-
+        function updateThread(commentThread: GitPullRequestCommentThread,
+        repositoryId: string, pullRequestId: number, threadId: number, project?:
+        string)
+      return:
+        type:
+          - Promise
+    type: method
