@@ -1,0 +1,486 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1
+    name: DashboardHttpClient2_1
+    fullName: DashboardHttpClient2_1
+    children:
+      - vss-web-extension-sdk.DashboardHttpClient2_1.createDashboard
+      - vss-web-extension-sdk.DashboardHttpClient2_1.createWidget
+      - vss-web-extension-sdk.DashboardHttpClient2_1.constructor
+      - vss-web-extension-sdk.DashboardHttpClient2_1.deleteDashboard
+      - vss-web-extension-sdk.DashboardHttpClient2_1.getDashboard
+      - vss-web-extension-sdk.DashboardHttpClient2_1.getDashboardGroup
+      - vss-web-extension-sdk.DashboardHttpClient2_1.getWidget
+      - vss-web-extension-sdk.DashboardHttpClient2_1.getWidgetMetadata
+      - vss-web-extension-sdk.DashboardHttpClient2_1.getWidgetTypes
+      - vss-web-extension-sdk.DashboardHttpClient2_1.replaceDashboard
+      - vss-web-extension-sdk.DashboardHttpClient2_1.replaceDashboardGroup
+      - vss-web-extension-sdk.DashboardHttpClient2_1.updateWidget
+      - vss-web-extension-sdk.DashboardHttpClient2_1._beginGetLocation
+      - vss-web-extension-sdk.DashboardHttpClient2_1._beginRequest
+      - vss-web-extension-sdk.DashboardHttpClient2_1._beginRequestWithAjaxResult
+      - vss-web-extension-sdk.DashboardHttpClient2_1._issueAjaxRequest
+      - vss-web-extension-sdk.DashboardHttpClient2_1._setInitializationPromise
+    langs:
+      - typeScript
+    type: Class
+    summary: ''
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1.createDashboard
+    name: >-
+      createDashboard(entry: DashboardGroupEntry, groupId: string, project?:
+      string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: entry
+          type:
+            - DashboardGroupEntry
+          description: ''
+        - id: groupId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+      content: >-
+        function createDashboard(entry: DashboardGroupEntry, groupId: string,
+        project?: string)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1.createWidget
+    name: >-
+      createWidget(widget: Widget, groupId: string, dashboardId: string,
+      project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: widget
+          type:
+            - Widget
+          description: ''
+        - id: groupId
+          type:
+            - string
+          description: ''
+        - id: dashboardId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+      content: >-
+        function createWidget(widget: Widget, groupId: string, dashboardId:
+        string, project?: string)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1.constructor
+    name: >-
+      DashboardHttpClient2_1(rootRequestPath: string, options?:
+      IVssHttpClientOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: rootRequestPath
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - IVssHttpClientOptions
+          description: ''
+          optional: true
+      content: >-
+        new DashboardHttpClient2_1(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
+      return:
+        type:
+          - DashboardHttpClient2_1
+    type: constructor
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1.deleteDashboard
+    name: 'deleteDashboard(groupId: string, dashboardId: string, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: groupId
+          type:
+            - string
+          description: ''
+        - id: dashboardId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+      content: >-
+        function deleteDashboard(groupId: string, dashboardId: string, project?:
+        string)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1.getDashboard
+    name: 'getDashboard(groupId: string, dashboardId: string, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: groupId
+          type:
+            - string
+          description: ''
+        - id: dashboardId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+      content: >-
+        function getDashboard(groupId: string, dashboardId: string, project?:
+        string)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1.getDashboardGroup
+    name: 'getDashboardGroup(groupId: string, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: groupId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+      content: 'function getDashboardGroup(groupId: string, project?: string)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1.getWidget
+    name: >-
+      getWidget(groupId: string, dashboardId: string, widgetId: string,
+      project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: groupId
+          type:
+            - string
+          description: ''
+        - id: dashboardId
+          type:
+            - string
+          description: ''
+        - id: widgetId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+      content: >-
+        function getWidget(groupId: string, dashboardId: string, widgetId:
+        string, project?: string)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1.getWidgetMetadata
+    name: 'getWidgetMetadata(contributionId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: contributionId
+          type:
+            - string
+          description: ''
+      content: 'function getWidgetMetadata(contributionId: string)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1.getWidgetTypes
+    name: 'getWidgetTypes(scope: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: scope
+          type:
+            - function
+          description: ''
+      content: 'function getWidgetTypes(scope: function)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1.replaceDashboard
+    name: >-
+      replaceDashboard(dashboard: Dashboard, groupId: string, dashboardId:
+      string, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: dashboard
+          type:
+            - Dashboard
+          description: ''
+        - id: groupId
+          type:
+            - string
+          description: ''
+        - id: dashboardId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+      content: >-
+        function replaceDashboard(dashboard: Dashboard, groupId: string,
+        dashboardId: string, project?: string)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1.replaceDashboardGroup
+    name: >-
+      replaceDashboardGroup(group: DashboardGroup, groupId: string, project?:
+      string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: group
+          type:
+            - DashboardGroup
+          description: ''
+        - id: groupId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+      content: >-
+        function replaceDashboardGroup(group: DashboardGroup, groupId: string,
+        project?: string)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1.updateWidget
+    name: >-
+      updateWidget(widget: Widget, groupId: string, dashboardId: string,
+      widgetId: string, project?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: widget
+          type:
+            - Widget
+          description: ''
+        - id: groupId
+          type:
+            - string
+          description: ''
+        - id: dashboardId
+          type:
+            - string
+          description: ''
+        - id: widgetId
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+      content: >-
+        function updateWidget(widget: Widget, groupId: string, dashboardId:
+        string, widgetId: string, project?: string)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1._beginGetLocation
+    name: '_beginGetLocation(area: string, locationId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: area
+          type:
+            - string
+          description: resource area name
+        - id: locationId
+          type:
+            - string
+          description: |
+            Guid of the location to get
+      content: 'function _beginGetLocation(area: string, locationId: string)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1._beginRequest
+    name: >-
+      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: requestParams
+          type:
+            - VssApiResourceRequestParams
+          description: request options
+        - id: useAjaxResult
+          type:
+            - boolean
+          description: >-
+            If true, textStatus and jqXHR are added to the success callback. In
+            this case, spread (instead of then) needs to be used
+          optional: true
+      content: >-
+        function _beginRequest(requestParams: VssApiResourceRequestParams,
+        useAjaxResult?: boolean)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1._beginRequestWithAjaxResult
+    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: requestParams
+          type:
+            - VssApiResourceRequestParams
+          description: request options
+      content: >-
+        function _beginRequestWithAjaxResult(requestParams:
+        VssApiResourceRequestParams)
+      return:
+        type:
+          - Q.Promise
+    type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1._issueAjaxRequest
+    name: >-
+      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
+      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: requestUrl
+          type:
+            - string
+          description: Url to send the request to
+        - id: ajaxOptions
+          type:
+            - JQueryAjaxSettings
+          description: jQuery.ajax options
+        - id: useAjaxResult
+          type:
+            - boolean
+          description: >
+            If true, textStatus and jqXHR are added to the success callback. In
+            this case, spread (instead of then) needs to be used.
+          optional: true
+        - id: vssRequestOptions
+          type:
+            - IVssAjaxOptions
+          description: ''
+          optional: true
+      content: >-
+        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
+        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
+        IVssAjaxOptions)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient2_1._setInitializationPromise
+    name: '_setInitializationPromise(promise: IPromise)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: promise
+          type:
+            - IPromise
+          description: ''
+      content: 'function _setInitializationPromise(promise: IPromise)'
+    type: method

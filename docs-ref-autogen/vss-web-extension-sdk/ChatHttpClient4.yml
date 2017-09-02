@@ -1,0 +1,453 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.ChatHttpClient4
+    name: ChatHttpClient4
+    fullName: ChatHttpClient4
+    children:
+      - vss-web-extension-sdk.ChatHttpClient4.constructor
+      - vss-web-extension-sdk.ChatHttpClient4.createChatRoom
+      - vss-web-extension-sdk.ChatHttpClient4.deleteChatRoom
+      - vss-web-extension-sdk.ChatHttpClient4.deleteMessage
+      - vss-web-extension-sdk.ChatHttpClient4.getAllChatRoomMessages
+      - vss-web-extension-sdk.ChatHttpClient4.getAllChatRoomUsers
+      - vss-web-extension-sdk.ChatHttpClient4.getAllRooms
+      - vss-web-extension-sdk.ChatHttpClient4.getChatRoomById
+      - vss-web-extension-sdk.ChatHttpClient4.getChatRoomMessageById
+      - vss-web-extension-sdk.ChatHttpClient4.getChatRoomUserById
+      - vss-web-extension-sdk.ChatHttpClient4.joinRoom
+      - vss-web-extension-sdk.ChatHttpClient4.leaveRoom
+      - vss-web-extension-sdk.ChatHttpClient4.sendMessageToRoom
+      - vss-web-extension-sdk.ChatHttpClient4.updateChatMessage
+      - vss-web-extension-sdk.ChatHttpClient4.updateChatRoom
+      - vss-web-extension-sdk.ChatHttpClient4._beginGetLocation
+      - vss-web-extension-sdk.ChatHttpClient4._beginRequest
+      - vss-web-extension-sdk.ChatHttpClient4._beginRequestWithAjaxResult
+      - vss-web-extension-sdk.ChatHttpClient4._issueAjaxRequest
+      - vss-web-extension-sdk.ChatHttpClient4._setInitializationPromise
+    langs:
+      - typeScript
+    type: Class
+    summary: ''
+  - uid: vss-web-extension-sdk.ChatHttpClient4.constructor
+    name: 'ChatHttpClient4(rootRequestPath: string, options?: IVssHttpClientOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: rootRequestPath
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - IVssHttpClientOptions
+          description: ''
+          optional: true
+      content: >-
+        new ChatHttpClient4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
+      return:
+        type:
+          - ChatHttpClient4
+    type: constructor
+  - uid: vss-web-extension-sdk.ChatHttpClient4.createChatRoom
+    name: 'createChatRoom(roomUpdate: RoomData)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomUpdate
+          type:
+            - RoomData
+          description: Information to create the room
+      content: 'function createChatRoom(roomUpdate: RoomData)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4.deleteChatRoom
+    name: 'deleteChatRoom(roomId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+      content: 'function deleteChatRoom(roomId: number)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4.deleteMessage
+    name: 'deleteMessage(roomId: number, messageId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+        - id: messageId
+          type:
+            - number
+          description: Id of the message to delete
+      content: 'function deleteMessage(roomId: number, messageId: number)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4.getAllChatRoomMessages
+    name: 'getAllChatRoomMessages(roomId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+      content: 'function getAllChatRoomMessages(roomId: number)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4.getAllChatRoomUsers
+    name: 'getAllChatRoomUsers(roomId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+      content: 'function getAllChatRoomUsers(roomId: number)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4.getAllRooms
+    name: getAllRooms()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getAllRooms()
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4.getChatRoomById
+    name: 'getChatRoomById(roomId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: Id of the room to retrieve
+      content: 'function getChatRoomById(roomId: number)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4.getChatRoomMessageById
+    name: 'getChatRoomMessageById(roomId: number, messageId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+        - id: messageId
+          type:
+            - number
+          description: Id of the message to retrieve
+      content: 'function getChatRoomMessageById(roomId: number, messageId: number)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4.getChatRoomUserById
+    name: 'getChatRoomUserById(roomId: number, userId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+        - id: userId
+          type:
+            - string
+          description: TfId of the user
+      content: 'function getChatRoomUserById(roomId: number, userId: string)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4.joinRoom
+    name: 'joinRoom(userUpdate: UserData, roomId: number, userId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: userUpdate
+          type:
+            - UserData
+          description: user model information
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+        - id: userId
+          type:
+            - string
+          description: TfId of the user
+      content: 'function joinRoom(userUpdate: UserData, roomId: number, userId: string)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4.leaveRoom
+    name: 'leaveRoom(roomId: number, userId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+        - id: userId
+          type:
+            - string
+          description: TfId of the user
+      content: 'function leaveRoom(roomId: number, userId: string)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4.sendMessageToRoom
+    name: 'sendMessageToRoom(messageUpdate: MessageData, roomId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: messageUpdate
+          type:
+            - MessageData
+          description: Content of the message to post
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+      content: 'function sendMessageToRoom(messageUpdate: MessageData, roomId: number)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4.updateChatMessage
+    name: >-
+      updateChatMessage(messageUpdate: MessageData, roomId: number, messageId:
+      number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: messageUpdate
+          type:
+            - MessageData
+          description: New message content
+        - id: roomId
+          type:
+            - number
+          description: Id of the room
+        - id: messageId
+          type:
+            - number
+          description: Id of the message
+      content: >-
+        function updateChatMessage(messageUpdate: MessageData, roomId: number,
+        messageId: number)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4.updateChatRoom
+    name: 'updateChatRoom(roomUpdate: RoomData, roomId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: roomUpdate
+          type:
+            - RoomData
+          description: Room information
+        - id: roomId
+          type:
+            - number
+          description: Id of the room to update
+      content: 'function updateChatRoom(roomUpdate: RoomData, roomId: number)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4._beginGetLocation
+    name: '_beginGetLocation(area: string, locationId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: area
+          type:
+            - string
+          description: resource area name
+        - id: locationId
+          type:
+            - string
+          description: |
+            Guid of the location to get
+      content: 'function _beginGetLocation(area: string, locationId: string)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4._beginRequest
+    name: >-
+      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: requestParams
+          type:
+            - VssApiResourceRequestParams
+          description: request options
+        - id: useAjaxResult
+          type:
+            - boolean
+          description: >-
+            If true, textStatus and jqXHR are added to the success callback. In
+            this case, spread (instead of then) needs to be used
+          optional: true
+      content: >-
+        function _beginRequest(requestParams: VssApiResourceRequestParams,
+        useAjaxResult?: boolean)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4._beginRequestWithAjaxResult
+    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: requestParams
+          type:
+            - VssApiResourceRequestParams
+          description: request options
+      content: >-
+        function _beginRequestWithAjaxResult(requestParams:
+        VssApiResourceRequestParams)
+      return:
+        type:
+          - Q.Promise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4._issueAjaxRequest
+    name: >-
+      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
+      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: requestUrl
+          type:
+            - string
+          description: Url to send the request to
+        - id: ajaxOptions
+          type:
+            - JQueryAjaxSettings
+          description: jQuery.ajax options
+        - id: useAjaxResult
+          type:
+            - boolean
+          description: >
+            If true, textStatus and jqXHR are added to the success callback. In
+            this case, spread (instead of then) needs to be used.
+          optional: true
+        - id: vssRequestOptions
+          type:
+            - IVssAjaxOptions
+          description: ''
+          optional: true
+      content: >-
+        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
+        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
+        IVssAjaxOptions)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient4._setInitializationPromise
+    name: '_setInitializationPromise(promise: IPromise)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: promise
+          type:
+            - IPromise
+          description: ''
+      content: 'function _setInitializationPromise(promise: IPromise)'
+    type: method

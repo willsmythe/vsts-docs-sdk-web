@@ -1,0 +1,299 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TestHttpClient2_1
+    name: TestHttpClient2_1
+    fullName: TestHttpClient2_1
+    children:
+      - vss-web-extension-sdk.TestHttpClient2_1.publishCodeSignatures
+      - vss-web-extension-sdk.TestHttpClient2_1.publishTestImpactBuildData
+      - vss-web-extension-sdk.TestHttpClient2_1.queryBuildType
+      - vss-web-extension-sdk.TestHttpClient2_1.queryCodeChanges
+      - vss-web-extension-sdk.TestHttpClient2_1.queryImpactedTests
+      - vss-web-extension-sdk.TestHttpClient2_1.constructor
+      - vss-web-extension-sdk.TestHttpClient2_1._beginGetLocation
+      - vss-web-extension-sdk.TestHttpClient2_1._beginRequest
+      - vss-web-extension-sdk.TestHttpClient2_1._beginRequestWithAjaxResult
+      - vss-web-extension-sdk.TestHttpClient2_1._issueAjaxRequest
+      - vss-web-extension-sdk.TestHttpClient2_1._setInitializationPromise
+    langs:
+      - typeScript
+    type: Class
+    summary: ''
+  - uid: vss-web-extension-sdk.TestHttpClient2_1.publishCodeSignatures
+    name: 'publishCodeSignatures(results: TestResultSignaturesInfo, project: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: results
+          type:
+            - TestResultSignaturesInfo
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+      content: >-
+        function publishCodeSignatures(results: TestResultSignaturesInfo,
+        project: string)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TestHttpClient2_1.publishTestImpactBuildData
+    name: >-
+      publishTestImpactBuildData(testImapctBuildData: TestImpactBuildData,
+      project: string, definitionRunInfo: DefinitionRunInfo)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: testImapctBuildData
+          type:
+            - TestImpactBuildData
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: definitionRunInfo
+          type:
+            - DefinitionRunInfo
+          description: ''
+      content: >-
+        function publishTestImpactBuildData(testImapctBuildData:
+        TestImpactBuildData, project: string, definitionRunInfo:
+        DefinitionRunInfo)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TestHttpClient2_1.queryBuildType
+    name: 'queryBuildType(project: string, buildId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: buildId
+          type:
+            - number
+          description: ''
+      content: 'function queryBuildType(project: string, buildId: number)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TestHttpClient2_1.queryCodeChanges
+    name: 'queryCodeChanges(project: string, definitionRunInfo: DefinitionRunInfo)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: definitionRunInfo
+          type:
+            - DefinitionRunInfo
+          description: ''
+      content: >-
+        function queryCodeChanges(project: string, definitionRunInfo:
+        DefinitionRunInfo)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TestHttpClient2_1.queryImpactedTests
+    name: >-
+      queryImpactedTests(project: string, definitionRunInfo: DefinitionRunInfo,
+      currentTestRunId: number, typesToInclude?: function)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: definitionRunInfo
+          type:
+            - DefinitionRunInfo
+          description: ''
+        - id: currentTestRunId
+          type:
+            - number
+          description: ''
+        - id: typesToInclude
+          type:
+            - function
+          description: ''
+          optional: true
+      content: >-
+        function queryImpactedTests(project: string, definitionRunInfo:
+        DefinitionRunInfo, currentTestRunId: number, typesToInclude?: function)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TestHttpClient2_1.constructor
+    name: >-
+      TestHttpClient2_1(rootRequestPath: string, options?:
+      IVssHttpClientOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: rootRequestPath
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - IVssHttpClientOptions
+          description: ''
+          optional: true
+      content: >-
+        new TestHttpClient2_1(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
+      return:
+        type:
+          - TestHttpClient2_1
+    type: constructor
+  - uid: vss-web-extension-sdk.TestHttpClient2_1._beginGetLocation
+    name: '_beginGetLocation(area: string, locationId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: area
+          type:
+            - string
+          description: resource area name
+        - id: locationId
+          type:
+            - string
+          description: |
+            Guid of the location to get
+      content: 'function _beginGetLocation(area: string, locationId: string)'
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TestHttpClient2_1._beginRequest
+    name: >-
+      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: requestParams
+          type:
+            - VssApiResourceRequestParams
+          description: request options
+        - id: useAjaxResult
+          type:
+            - boolean
+          description: >-
+            If true, textStatus and jqXHR are added to the success callback. In
+            this case, spread (instead of then) needs to be used
+          optional: true
+      content: >-
+        function _beginRequest(requestParams: VssApiResourceRequestParams,
+        useAjaxResult?: boolean)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TestHttpClient2_1._beginRequestWithAjaxResult
+    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: requestParams
+          type:
+            - VssApiResourceRequestParams
+          description: request options
+      content: >-
+        function _beginRequestWithAjaxResult(requestParams:
+        VssApiResourceRequestParams)
+      return:
+        type:
+          - Q.Promise
+    type: method
+  - uid: vss-web-extension-sdk.TestHttpClient2_1._issueAjaxRequest
+    name: >-
+      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
+      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: requestUrl
+          type:
+            - string
+          description: Url to send the request to
+        - id: ajaxOptions
+          type:
+            - JQueryAjaxSettings
+          description: jQuery.ajax options
+        - id: useAjaxResult
+          type:
+            - boolean
+          description: >
+            If true, textStatus and jqXHR are added to the success callback. In
+            this case, spread (instead of then) needs to be used.
+          optional: true
+        - id: vssRequestOptions
+          type:
+            - IVssAjaxOptions
+          description: ''
+          optional: true
+      content: >-
+        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
+        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
+        IVssAjaxOptions)
+      return:
+        type:
+          - IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TestHttpClient2_1._setInitializationPromise
+    name: '_setInitializationPromise(promise: IPromise)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: promise
+          type:
+            - IPromise
+          description: ''
+      content: 'function _setInitializationPromise(promise: IPromise)'
+    type: method
