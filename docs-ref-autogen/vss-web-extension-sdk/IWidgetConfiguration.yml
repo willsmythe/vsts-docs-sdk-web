@@ -20,6 +20,7 @@ items:
     type: property
     summary: Listen to message from host
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -37,6 +38,7 @@ items:
        @returns object wrapped in a promise that encapsulates the success of this operation.
                 If load fails, returns error message via WidgetStatusHelper.Failure(errorMessage).
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -59,6 +61,7 @@ items:
       WidgetHelpers.WidgetConfigurationSave.Invalid() to notify the host to stop
       save.
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -72,6 +75,7 @@ items:
       (Optional) Called by the host when the configuration is ready to be saved
       (when the user clicks the save button on the configuration panel)
     syntax:
+      content: ''
       return:
         type:
           - union

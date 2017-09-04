@@ -31,6 +31,7 @@ items:
       scope. Only members of this group can change the contents of this scope or
       assign other users permissions to access this scope.
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -45,6 +46,7 @@ items:
       system is running. This field will uniquely identify the same graph
       subject across both Accounts and Organizations.
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -58,6 +60,7 @@ items:
       This is the non-unique display name of the graph subject. To change this
       field, you must alter its value in the source provider.
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -69,6 +72,7 @@ items:
     type: property
     summary: 'When true, this scope is also a securing host for one or more scopes.'
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -80,6 +84,7 @@ items:
     type: property
     summary: 'The type of source provider for the origin identifier (ex:AD, AAD, MSA)'
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -95,6 +100,7 @@ items:
       change for a user because the user is not backed by a different provider
       and has a different unique id in the new provider.
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -108,6 +114,7 @@ items:
       The subject descriptor for the closest account or organization in the
       ancestor tree of this scope.
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -119,6 +126,7 @@ items:
     type: property
     summary: The type of this scope. Typically ServiceHost or TeamProject.
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -132,6 +140,7 @@ items:
       The subject descriptor for the containing organization in the ancestor
       tree of this scope.
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -145,6 +154,7 @@ items:
       This field identifies the type of the graph subject (ex: Group, Scope,
       User).
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -156,6 +166,7 @@ items:
     type: property
     summary: This url is the full route to the source resource of this graph subject.
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -170,6 +181,7 @@ items:
       subject. These links may be invoked to obtain additional relationships or
       more detailed information about this graph subject.
     syntax:
+      content: ''
       return:
         type:
           - any

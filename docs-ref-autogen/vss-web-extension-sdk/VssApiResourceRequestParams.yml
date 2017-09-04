@@ -34,6 +34,7 @@ items:
       The api version string to send in the request (e.g. "1.0" or
       "2.0-preview.2")
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -45,6 +46,7 @@ items:
     type: property
     summary: Name of the area for the resource
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -56,6 +58,7 @@ items:
     type: property
     summary: Allows the caller to specify custom request headers.
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -73,6 +76,7 @@ items:
 
       into a JSON string unless isRawData is set to true).
     syntax:
+      content: ''
       return:
         type:
           - any
@@ -84,6 +88,7 @@ items:
     type: property
     summary: HTTP verb (GET by default if not specified)
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -102,6 +107,7 @@ items:
 
       header equivalents (e.g. application/zip).
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -120,6 +126,7 @@ items:
 
       an HTML5 File object.
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -138,6 +145,7 @@ items:
 
       This is required to ensure any S2S calls work.
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -158,6 +166,7 @@ items:
       parameters to add to the query string of the url (not included in the post
       body).
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IDictionaryStringTo
@@ -173,6 +182,7 @@ items:
 
       for the provided 'data' object using VSS serialization settings.
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.ContractMetadata
@@ -186,6 +196,7 @@ items:
       Name of the resource to use in route template replacements. Only used if
       routeTemplate is provided.
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -201,6 +212,7 @@ items:
 
       a regular array.
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -216,6 +228,7 @@ items:
 
       for the response object using VSS serialization settings.
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.ContractMetadata
@@ -231,6 +244,7 @@ items:
 
       is used to lookup the template via an OPTIONS request.
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -242,6 +256,7 @@ items:
     type: property
     summary: Dictionary of route template replacement values
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -253,6 +268,7 @@ items:
     type: property
     summary: Request timeout in milliseconds. The default is 5 minutes.
     syntax:
+      content: ''
       return:
         type:
           - number

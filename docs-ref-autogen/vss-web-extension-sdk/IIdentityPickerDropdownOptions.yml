@@ -44,6 +44,7 @@ items:
       Specify the base element, and the relative alignment of the element and
       base
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IControlAlignmentOptions
@@ -57,6 +58,7 @@ items:
       The source of the request - please update the Common Identity Picker wiki
       with your consumer GUID
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -68,6 +70,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -84,6 +87,7 @@ items:
         dialogs as well, in order to work with Fabric's dialog model.
         If this is not specified, JQueryUI's default is to append the dialog element to the <body> element.
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -97,6 +101,7 @@ items:
       Event callback options (making sure the events from the correct instance
       of the dropdown are listened to)
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IIdentityPickerDropdownEventOptions
@@ -110,6 +115,7 @@ items:
       Details about the control's current environment that might help an
       IEntityOperationsExtension in modifying requests.
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IExtensionData
@@ -124,6 +130,7 @@ items:
       An element that will receive focus when the contact card for an item in
       the dropdown is closed
     syntax:
+      content: ''
       return:
         type:
           - JQuery
@@ -143,6 +150,7 @@ items:
               Null scope means no filtering will take place on entities, whereas empty scope means no entities would be returned.
               So an empty FilterByScope will result in no search being issued.
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -156,6 +164,7 @@ items:
       The httpClient that should be used instead of the
       CommonIdentityPickerHttpClient
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.AbstractIdentityPickerHttpClient
@@ -167,6 +176,7 @@ items:
     type: property
     summary: type of identities - one or more of User or Group
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IEntityType
@@ -178,6 +188,7 @@ items:
     type: property
     summary: whether to preload (e.g. the MRU identities) on control creation.
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -189,6 +200,7 @@ items:
     type: property
     summary: The maximum results that need to be fetched
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -202,6 +214,7 @@ items:
       DEPRECATED: the minimum length of the prefix to start searching the
       directories - in the absence of an MRU - default 3
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -213,6 +226,7 @@ items:
     type: property
     summary: The minimum results that need to be fetched
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -224,6 +238,7 @@ items:
     type: property
     summary: what action should execute when identity dropdown is hidden
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -237,6 +252,7 @@ items:
       what action (usually in parent) should execute when an item in this
       dropdown is selected
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -248,6 +264,7 @@ items:
     type: property
     summary: 'scope - one or more of AAD, IMS, Source, AD, WMD'
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IOperationScope
@@ -259,6 +276,7 @@ items:
     type: property
     summary: restrict displayed identities in dropdown
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -273,6 +291,7 @@ items:
       otherwise have been displayed and rearranges or adds to them prior to
       returning the new list
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -286,6 +305,7 @@ items:
       whether to display the contact card icon for each identity in the
       dropdown. Default false.
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -299,6 +319,7 @@ items:
       whether to display the MRU with the search button or just search
       directories directly. Default false.
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -312,6 +333,7 @@ items:
       the size of the control elements (Medium - most elements are 24px, Large -
       32px). Default: Large
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -326,6 +348,7 @@ items:
       additional icons and
         text information suitable for small screens.
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -341,6 +364,7 @@ items:
         For internal use only, this is specifically for the mobile work item form where we want to show the picker in a
         full screen view and the behavior may change over time.
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -354,6 +378,7 @@ items:
       the width of the dropdown control. Default is max(positioningElement
       width, 300px)
     syntax:
+      content: ''
       return:
         type:
           - number

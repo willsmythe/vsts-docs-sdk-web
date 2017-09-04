@@ -50,6 +50,7 @@ items:
       custom value for the aria-label attribute of the input element.
         Defaults to the placeholder value if not set (see option placeholderText for details)
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -61,6 +62,7 @@ items:
     type: property
     summary: Callbacks supported by the search control
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.ISearchControlCallbackOptions
@@ -74,6 +76,7 @@ items:
       The source of the request - please update the Common Identity Picker wiki
       with your consumer GUID
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -90,6 +93,7 @@ items:
         dialogs as well, in order to work with Fabric's dialog model.
         If this is not specified, JQueryUI's default is to append the dialog element to the <body> element.
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -103,6 +107,7 @@ items:
       the size of the dropdown control elements (Medium - most elements are
       24px, Large - 32px). Default: Large
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -116,6 +121,7 @@ items:
       the width of the dropdown control. Default is max(positioningElement
       width, 300px)
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -127,6 +133,7 @@ items:
     type: property
     summary: a custom id for the input element
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -141,6 +148,7 @@ items:
       (the place holder value).
         Defaults to false, which is to include.
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -154,6 +162,7 @@ items:
       Details about the control's current environment that might help an
       IEntityOperationsExtension in modifying requests.
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IExtensionData
@@ -169,6 +178,7 @@ items:
         This is specifically for the mobile work item form where we want to show the picker in a full screen view
         and we do not want the dropdown to close.
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -188,6 +198,7 @@ items:
               Null scope means no filtering will take place on entities, whereas empty scope means no entities would be returned.
               So an empty FilterByScope will result in no search being issued.
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -201,6 +212,7 @@ items:
       whether for a single-select control a click on the resolved item
       highlights the text (true) or opens the contact card (false - default)
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -214,6 +226,7 @@ items:
       The httpClient that should be used instead of the
       CommonIdentityPickerHttpClient
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.AbstractIdentityPickerHttpClient
@@ -225,6 +238,7 @@ items:
     type: property
     summary: type of identities - one or more of User or Group
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IEntityType
@@ -241,6 +255,7 @@ items:
         alternatively the input can be a semi-colon separated sequence of unique identifiers (such as sign-in addresses or aliases).
         We also support the format "DisplayName <UniqueIdentifier>" (see the option showTemporaryDisplayName for details)
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -252,6 +267,7 @@ items:
     type: property
     summary: whether to preload (e.g. the MRU identities) on control creation.
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -263,6 +279,7 @@ items:
     type: property
     summary: The maximum results that need to be fetched
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -276,6 +293,7 @@ items:
       DEPRECATED: the minimum length of the prefix to start searching the
       directories - in the absence of an MRU - default 3
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -287,6 +305,7 @@ items:
     type: property
     summary: The minimum results that need to be fetched
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -298,6 +317,7 @@ items:
     type: property
     summary: whether the search and dropdown controls should handle multiple identities
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -309,6 +329,7 @@ items:
     type: property
     summary: 'scope - one or more of AAD, IMS, Source, AD, WMD'
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IOperationScope
@@ -320,6 +341,7 @@ items:
     type: property
     summary: restrict displayed identities in dropdown
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -333,6 +355,7 @@ items:
       custom value for the placeholder attribute of the input element.
         Defaults to "Search {identity type(s)}", where {identity type(s)} can be "users", "groups" or "users and groups".
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -346,6 +369,7 @@ items:
       whether to display the contact card icon for each identity in the dropdown
       and for resolved identities. Default false.
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -360,6 +384,7 @@ items:
       search directories directly.
         Default false.
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -374,6 +399,7 @@ items:
       on click or not. Default false. Setting this will also enable the MRU on
       the dropdown.
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -389,6 +415,7 @@ items:
       <UniqueIdentifier>",
         whether to show the DisplayName until the UniqueIdentifier gets resolved to an IEntity. Default false
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -402,6 +429,7 @@ items:
       the size of the search control elements (Small - most elements are 16px in
       height, Medium - 24px, Large - 32px). Default: Medium
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -416,6 +444,7 @@ items:
       additional icons and
         text information suitable for small screens.
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -431,6 +460,7 @@ items:
         For internal use only, this is specifically for the mobile work item form where we want to show the picker in a
         full screen view and the behavior may change over time.
     syntax:
+      content: ''
       return:
         type:
           - boolean
@@ -442,6 +472,7 @@ items:
     type: property
     summary: an IEntity to be displayed by default instead of the empty input element
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IEntity

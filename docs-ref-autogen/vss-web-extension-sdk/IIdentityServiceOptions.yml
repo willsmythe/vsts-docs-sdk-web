@@ -25,6 +25,7 @@ items:
       Details about the control's current environment that might help an
       IEntityOperationsExtension in modifying requests.
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IExtensionData
@@ -44,6 +45,7 @@ items:
               Null scope means no filtering will take place on entities, whereas empty scope means no entities would be returned.
               So an empty FilterByScope will result in no search being issued.
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -57,6 +59,7 @@ items:
       The httpClient that should be used instead of the
       CommonIdentityPickerHttpClient
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.AbstractIdentityPickerHttpClient
@@ -68,6 +71,7 @@ items:
     type: property
     summary: type of identities - one or more of User or Group
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IEntityType
@@ -79,6 +83,7 @@ items:
     type: property
     summary: The maximum results that need to be fetched
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -90,6 +95,7 @@ items:
     type: property
     summary: The minimum results that need to be fetched
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -101,6 +107,7 @@ items:
     type: property
     summary: 'scope - one or more of AAD, IMS, Source, AD, WMD'
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IOperationScope

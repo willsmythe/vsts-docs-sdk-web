@@ -35,6 +35,7 @@ items:
     type: property
     summary: A base element which shall be used as reference for positioning the dialog
     syntax:
+      content: ''
       return:
         type:
           - JQuery
@@ -48,6 +49,7 @@ items:
       An optional container of the anchor to be considered. Passing an iframe
       allows for positioning over an anchor in an other frame.
     syntax:
+      content: ''
       return:
         type:
           - JQuery
@@ -61,6 +63,7 @@ items:
       Defined by JQueryUI.DialogOptions -- optional JQuery selector string for
       element to append dialog to, instead of DOM root
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -74,6 +77,7 @@ items:
       The source of the request - please update the Common Identity Picker wiki
       with your consumer GUID
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -87,6 +91,7 @@ items:
       Details about the control's current environment that might help an
       IEntityOperationsExtension in modifying requests.
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IExtensionData
@@ -101,6 +106,7 @@ items:
       An element that will receive focus when the contact card is closed. If
       unset, the focus will go to the previously active element
     syntax:
+      content: ''
       return:
         type:
           - JQuery
@@ -120,6 +126,7 @@ items:
               Null scope means no filtering will take place on entities, whereas empty scope means no entities would be returned.
               So an empty FilterByScope will result in no search being issued.
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -133,6 +140,7 @@ items:
       The httpClient that should be used instead of the
       CommonIdentityPickerHttpClient
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.AbstractIdentityPickerHttpClient
@@ -146,6 +154,7 @@ items:
       an identity to initialize with (and to avoid a call to the identity picker
       service API)
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IEntity
@@ -157,6 +166,7 @@ items:
     type: property
     summary: type of identities - one or more of User or Group
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IEntityType
@@ -168,6 +178,7 @@ items:
     type: property
     summary: The left positioning offset of the dialog
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -179,6 +190,7 @@ items:
     type: property
     summary: The maximum results that need to be fetched
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -190,6 +202,7 @@ items:
     type: property
     summary: The minimum results that need to be fetched
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -201,6 +214,7 @@ items:
     type: property
     summary: 'scope - one or more of AAD, IMS, Source, AD, WMD'
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IOperationScope
@@ -212,6 +226,7 @@ items:
     type: property
     summary: The top positioning offset of the dialog
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -226,6 +241,7 @@ items:
       IdCardDialog - signInAddress or entityId for users and entityId for other
       kinds of entities
     syntax:
+      content: ''
       return:
         type:
           - string

@@ -32,6 +32,7 @@ items:
       The source of the request - please update the Common Identity Picker wiki
       with your consumer GUID
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -48,6 +49,7 @@ items:
         dialogs as well, in order to work with Fabric's dialog model.
         If this is not specified, JQueryUI's default is to append the dialog element to the <body> element.
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -59,6 +61,7 @@ items:
     type: property
     summary: Determines what is shown in the control
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -72,6 +75,7 @@ items:
       Details about the control's current environment that might help an
       IEntityOperationsExtension in modifying requests.
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IExtensionData
@@ -83,6 +87,7 @@ items:
     type: property
     summary: the string to be shown before the IEntity gets resolved
     syntax:
+      content: ''
       return:
         type:
           - string
@@ -102,6 +107,7 @@ items:
               Null scope means no filtering will take place on entities, whereas empty scope means no entities would be returned.
               So an empty FilterByScope will result in no search being issued.
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -115,6 +121,7 @@ items:
       The httpClient that should be used instead of the
       CommonIdentityPickerHttpClient
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.AbstractIdentityPickerHttpClient
@@ -126,6 +133,7 @@ items:
     type: property
     summary: type of identities - one or more of User or Group
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IEntityType
@@ -140,6 +148,7 @@ items:
       its identifiers (such as entityId, localId etc.) have to be valid;
         alternatively the input can be a unique identifier (such as a sign-in address or alias)
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -151,6 +160,7 @@ items:
     type: property
     summary: The maximum results that need to be fetched
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -162,6 +172,7 @@ items:
     type: property
     summary: The minimum results that need to be fetched
     syntax:
+      content: ''
       return:
         type:
           - number
@@ -173,6 +184,7 @@ items:
     type: property
     summary: 'scope - one or more of AAD, IMS, Source, AD, WMD'
     syntax:
+      content: ''
       return:
         type:
           - vss-web-extension-sdk.IOperationScope
@@ -186,6 +198,7 @@ items:
       the size of the control elements (Small - most elements are 16px in
       height, Medium - 24px, Large - 32px). Default: Medium
     syntax:
+      content: ''
       return:
         type:
           - union
@@ -197,6 +210,7 @@ items:
     type: property
     summary: 'Turn off the hover effect. Default: false'
     syntax:
+      content: ''
       return:
         type:
           - boolean
