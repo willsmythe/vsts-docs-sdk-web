@@ -4,25 +4,33 @@ items:
     name: VersionControlChangeType
     fullName: VersionControlChangeType
     children:
+      - vss-web-extension-sdk.VersionControlChangeType.None
       - vss-web-extension-sdk.VersionControlChangeType.Add
-      - vss-web-extension-sdk.VersionControlChangeType.All
-      - vss-web-extension-sdk.VersionControlChangeType.Branch
-      - vss-web-extension-sdk.VersionControlChangeType.Delete
       - vss-web-extension-sdk.VersionControlChangeType.Edit
       - vss-web-extension-sdk.VersionControlChangeType.Encoding
-      - vss-web-extension-sdk.VersionControlChangeType.Lock
-      - vss-web-extension-sdk.VersionControlChangeType.Merge
-      - vss-web-extension-sdk.VersionControlChangeType.None
-      - vss-web-extension-sdk.VersionControlChangeType.Property
       - vss-web-extension-sdk.VersionControlChangeType.Rename
+      - vss-web-extension-sdk.VersionControlChangeType.Delete
+      - vss-web-extension-sdk.VersionControlChangeType.Undelete
+      - vss-web-extension-sdk.VersionControlChangeType.Branch
+      - vss-web-extension-sdk.VersionControlChangeType.Merge
+      - vss-web-extension-sdk.VersionControlChangeType.Lock
       - vss-web-extension-sdk.VersionControlChangeType.Rollback
       - vss-web-extension-sdk.VersionControlChangeType.SourceRename
       - vss-web-extension-sdk.VersionControlChangeType.TargetRename
-      - vss-web-extension-sdk.VersionControlChangeType.Undelete
+      - vss-web-extension-sdk.VersionControlChangeType.Property
+      - vss-web-extension-sdk.VersionControlChangeType.All
     langs:
       - typeScript
     type: enum
     summary: ''
+  - uid: vss-web-extension-sdk.VersionControlChangeType.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 0
   - uid: vss-web-extension-sdk.VersionControlChangeType.Add
     name: Add
     children: []
@@ -31,30 +39,6 @@ items:
     summary: ''
     type: field
     numericValue: 1
-  - uid: vss-web-extension-sdk.VersionControlChangeType.All
-    name: All
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 8191
-  - uid: vss-web-extension-sdk.VersionControlChangeType.Branch
-    name: Branch
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 64
-  - uid: vss-web-extension-sdk.VersionControlChangeType.Delete
-    name: Delete
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 16
   - uid: vss-web-extension-sdk.VersionControlChangeType.Edit
     name: Edit
     children: []
@@ -71,38 +55,6 @@ items:
     summary: ''
     type: field
     numericValue: 4
-  - uid: vss-web-extension-sdk.VersionControlChangeType.Lock
-    name: Lock
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 256
-  - uid: vss-web-extension-sdk.VersionControlChangeType.Merge
-    name: Merge
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 128
-  - uid: vss-web-extension-sdk.VersionControlChangeType.None
-    name: None
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 0
-  - uid: vss-web-extension-sdk.VersionControlChangeType.Property
-    name: Property
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 4096
   - uid: vss-web-extension-sdk.VersionControlChangeType.Rename
     name: Rename
     children: []
@@ -111,6 +63,46 @@ items:
     summary: ''
     type: field
     numericValue: 8
+  - uid: vss-web-extension-sdk.VersionControlChangeType.Delete
+    name: Delete
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 16
+  - uid: vss-web-extension-sdk.VersionControlChangeType.Undelete
+    name: Undelete
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 32
+  - uid: vss-web-extension-sdk.VersionControlChangeType.Branch
+    name: Branch
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 64
+  - uid: vss-web-extension-sdk.VersionControlChangeType.Merge
+    name: Merge
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 128
+  - uid: vss-web-extension-sdk.VersionControlChangeType.Lock
+    name: Lock
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 256
   - uid: vss-web-extension-sdk.VersionControlChangeType.Rollback
     name: Rollback
     children: []
@@ -135,11 +127,19 @@ items:
     summary: ''
     type: field
     numericValue: 2048
-  - uid: vss-web-extension-sdk.VersionControlChangeType.Undelete
-    name: Undelete
+  - uid: vss-web-extension-sdk.VersionControlChangeType.Property
+    name: Property
     children: []
     langs:
       - typeScript
     summary: ''
     type: field
-    numericValue: 32
+    numericValue: 4096
+  - uid: vss-web-extension-sdk.VersionControlChangeType.All
+    name: All
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 8191

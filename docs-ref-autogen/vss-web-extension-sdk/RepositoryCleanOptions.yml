@@ -4,25 +4,14 @@ items:
     name: RepositoryCleanOptions
     fullName: RepositoryCleanOptions
     children:
-      - vss-web-extension-sdk.RepositoryCleanOptions.AllBuildDir
       - vss-web-extension-sdk.RepositoryCleanOptions.Source
       - vss-web-extension-sdk.RepositoryCleanOptions.SourceAndOutputDir
       - vss-web-extension-sdk.RepositoryCleanOptions.SourceDir
+      - vss-web-extension-sdk.RepositoryCleanOptions.AllBuildDir
     langs:
       - typeScript
     type: enum
     summary: ''
-  - uid: vss-web-extension-sdk.RepositoryCleanOptions.AllBuildDir
-    name: AllBuildDir
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Re-create $(agnet.buildDirectory) which contains
-      $(build.sourcesDirectory), $(build.binariesDirectory) and any folders that
-      left from previous build.
-    type: field
-    numericValue: 3
   - uid: vss-web-extension-sdk.RepositoryCleanOptions.Source
     name: Source
     children: []
@@ -47,3 +36,14 @@ items:
     summary: Re-create $(build.sourcesDirectory)
     type: field
     numericValue: 2
+  - uid: vss-web-extension-sdk.RepositoryCleanOptions.AllBuildDir
+    name: AllBuildDir
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Re-create $(agnet.buildDirectory) which contains
+      $(build.sourcesDirectory), $(build.binariesDirectory) and any folders that
+      left from previous build.
+    type: field
+    numericValue: 3

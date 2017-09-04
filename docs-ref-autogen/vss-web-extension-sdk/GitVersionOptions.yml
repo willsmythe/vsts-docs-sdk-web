@@ -4,21 +4,13 @@ items:
     name: GitVersionOptions
     fullName: GitVersionOptions
     children:
-      - vss-web-extension-sdk.GitVersionOptions.FirstParent
       - vss-web-extension-sdk.GitVersionOptions.None
       - vss-web-extension-sdk.GitVersionOptions.PreviousChange
+      - vss-web-extension-sdk.GitVersionOptions.FirstParent
     langs:
       - typeScript
     type: enum
     summary: Accepted types of version options
-  - uid: vss-web-extension-sdk.GitVersionOptions.FirstParent
-    name: FirstParent
-    children: []
-    langs:
-      - typeScript
-    summary: First parent of commit (HEAD^)
-    type: field
-    numericValue: 2
   - uid: vss-web-extension-sdk.GitVersionOptions.None
     name: None
     children: []
@@ -35,3 +27,11 @@ items:
     summary: Commit that changed item prior to the current version
     type: field
     numericValue: 1
+  - uid: vss-web-extension-sdk.GitVersionOptions.FirstParent
+    name: FirstParent
+    children: []
+    langs:
+      - typeScript
+    summary: First parent of commit (HEAD^)
+    type: field
+    numericValue: 2

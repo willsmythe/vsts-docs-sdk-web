@@ -4,21 +4,13 @@ items:
     name: TimelineCriteriaStatusCode
     fullName: TimelineCriteriaStatusCode
     children:
-      - vss-web-extension-sdk.TimelineCriteriaStatusCode.InvalidFilterClause
       - vss-web-extension-sdk.TimelineCriteriaStatusCode.OK
+      - vss-web-extension-sdk.TimelineCriteriaStatusCode.InvalidFilterClause
       - vss-web-extension-sdk.TimelineCriteriaStatusCode.Unknown
     langs:
       - typeScript
     type: enum
     summary: ''
-  - uid: vss-web-extension-sdk.TimelineCriteriaStatusCode.InvalidFilterClause
-    name: InvalidFilterClause
-    children: []
-    langs:
-      - typeScript
-    summary: One of the filter clause is invalid.
-    type: field
-    numericValue: 1
   - uid: vss-web-extension-sdk.TimelineCriteriaStatusCode.OK
     name: OK
     children: []
@@ -27,6 +19,14 @@ items:
     summary: No error - filter is good.
     type: field
     numericValue: 0
+  - uid: vss-web-extension-sdk.TimelineCriteriaStatusCode.InvalidFilterClause
+    name: InvalidFilterClause
+    children: []
+    langs:
+      - typeScript
+    summary: One of the filter clause is invalid.
+    type: field
+    numericValue: 1
   - uid: vss-web-extension-sdk.TimelineCriteriaStatusCode.Unknown
     name: Unknown
     children: []

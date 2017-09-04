@@ -4,9 +4,9 @@ items:
     name: PublisherQueryFlags
     fullName: PublisherQueryFlags
     children:
-      - vss-web-extension-sdk.PublisherQueryFlags.IncludeEmailAddress
-      - vss-web-extension-sdk.PublisherQueryFlags.IncludeExtensions
       - vss-web-extension-sdk.PublisherQueryFlags.None
+      - vss-web-extension-sdk.PublisherQueryFlags.IncludeExtensions
+      - vss-web-extension-sdk.PublisherQueryFlags.IncludeEmailAddress
     langs:
       - typeScript
     type: enum
@@ -14,16 +14,14 @@ items:
       Set of flags used to define the attributes requested when a publisher is
       returned. Some API's allow the caller to specify the level of detail
       needed.
-  - uid: vss-web-extension-sdk.PublisherQueryFlags.IncludeEmailAddress
-    name: IncludeEmailAddress
+  - uid: vss-web-extension-sdk.PublisherQueryFlags.None
+    name: None
     children: []
     langs:
       - typeScript
-    summary: >-
-      Is used to include email address of all the users who are marked as owners
-      for the publisher
+    summary: None is used to retrieve only the basic publisher details.
     type: field
-    numericValue: 2
+    numericValue: 0
   - uid: vss-web-extension-sdk.PublisherQueryFlags.IncludeExtensions
     name: IncludeExtensions
     children: []
@@ -34,11 +32,13 @@ items:
       published by the requested publisher.
     type: field
     numericValue: 1
-  - uid: vss-web-extension-sdk.PublisherQueryFlags.None
-    name: None
+  - uid: vss-web-extension-sdk.PublisherQueryFlags.IncludeEmailAddress
+    name: IncludeEmailAddress
     children: []
     langs:
       - typeScript
-    summary: None is used to retrieve only the basic publisher details.
+    summary: >-
+      Is used to include email address of all the users who are marked as owners
+      for the publisher
     type: field
-    numericValue: 0
+    numericValue: 2

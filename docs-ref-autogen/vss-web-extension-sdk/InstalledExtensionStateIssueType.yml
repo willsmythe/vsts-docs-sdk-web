@@ -4,22 +4,12 @@ items:
     name: InstalledExtensionStateIssueType
     fullName: InstalledExtensionStateIssueType
     children:
-      - vss-web-extension-sdk.InstalledExtensionStateIssueType.Error
       - vss-web-extension-sdk.InstalledExtensionStateIssueType.Warning
+      - vss-web-extension-sdk.InstalledExtensionStateIssueType.Error
     langs:
       - typeScript
     type: enum
     summary: 'Installation issue type (Warning, Error)'
-  - uid: vss-web-extension-sdk.InstalledExtensionStateIssueType.Error
-    name: Error
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Represents an installation error, for example an explicit demand not
-      supported
-    type: field
-    numericValue: 1
   - uid: vss-web-extension-sdk.InstalledExtensionStateIssueType.Warning
     name: Warning
     children: []
@@ -30,3 +20,13 @@ items:
       supported
     type: field
     numericValue: 0
+  - uid: vss-web-extension-sdk.InstalledExtensionStateIssueType.Error
+    name: Error
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Represents an installation error, for example an explicit demand not
+      supported
+    type: field
+    numericValue: 1

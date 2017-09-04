@@ -4,13 +4,21 @@ items:
     name: ReviewFilterOptions
     fullName: ReviewFilterOptions
     children:
+      - vss-web-extension-sdk.ReviewFilterOptions.None
       - vss-web-extension-sdk.ReviewFilterOptions.FilterEmptyReviews
       - vss-web-extension-sdk.ReviewFilterOptions.FilterEmptyUserNames
-      - vss-web-extension-sdk.ReviewFilterOptions.None
     langs:
       - typeScript
     type: enum
     summary: Options to GetReviews query
+  - uid: vss-web-extension-sdk.ReviewFilterOptions.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: 'No filtering, all reviews are returned (default option)'
+    type: field
+    numericValue: 0
   - uid: vss-web-extension-sdk.ReviewFilterOptions.FilterEmptyReviews
     name: FilterEmptyReviews
     children: []
@@ -27,11 +35,3 @@ items:
     summary: Filter out review items with empty usernames
     type: field
     numericValue: 2
-  - uid: vss-web-extension-sdk.ReviewFilterOptions.None
-    name: None
-    children: []
-    langs:
-      - typeScript
-    summary: 'No filtering, all reviews are returned (default option)'
-    type: field
-    numericValue: 0

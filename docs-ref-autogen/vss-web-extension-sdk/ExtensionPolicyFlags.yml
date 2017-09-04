@@ -4,35 +4,19 @@ items:
     name: ExtensionPolicyFlags
     fullName: ExtensionPolicyFlags
     children:
-      - vss-web-extension-sdk.ExtensionPolicyFlags.All
-      - vss-web-extension-sdk.ExtensionPolicyFlags.FirstParty
       - vss-web-extension-sdk.ExtensionPolicyFlags.None
-      - vss-web-extension-sdk.ExtensionPolicyFlags.Preview
       - vss-web-extension-sdk.ExtensionPolicyFlags.Private
       - vss-web-extension-sdk.ExtensionPolicyFlags.Public
+      - vss-web-extension-sdk.ExtensionPolicyFlags.Preview
       - vss-web-extension-sdk.ExtensionPolicyFlags.Released
+      - vss-web-extension-sdk.ExtensionPolicyFlags.FirstParty
+      - vss-web-extension-sdk.ExtensionPolicyFlags.All
     langs:
       - typeScript
     type: enum
     summary: >-
       Set of flags that can be associated with a given permission over an
       extension
-  - uid: vss-web-extension-sdk.ExtensionPolicyFlags.All
-    name: All
-    children: []
-    langs:
-      - typeScript
-    summary: Mask that defines all permissions
-    type: field
-    numericValue: 31
-  - uid: vss-web-extension-sdk.ExtensionPolicyFlags.FirstParty
-    name: FirstParty
-    children: []
-    langs:
-      - typeScript
-    summary: Permission in 1st party extensions
-    type: field
-    numericValue: 16
   - uid: vss-web-extension-sdk.ExtensionPolicyFlags.None
     name: None
     children: []
@@ -41,14 +25,6 @@ items:
     summary: No permission
     type: field
     numericValue: 0
-  - uid: vss-web-extension-sdk.ExtensionPolicyFlags.Preview
-    name: Preview
-    children: []
-    langs:
-      - typeScript
-    summary: Premission in extensions that are in preview
-    type: field
-    numericValue: 4
   - uid: vss-web-extension-sdk.ExtensionPolicyFlags.Private
     name: Private
     children: []
@@ -65,6 +41,14 @@ items:
     summary: Permission on public extensions
     type: field
     numericValue: 2
+  - uid: vss-web-extension-sdk.ExtensionPolicyFlags.Preview
+    name: Preview
+    children: []
+    langs:
+      - typeScript
+    summary: Premission in extensions that are in preview
+    type: field
+    numericValue: 4
   - uid: vss-web-extension-sdk.ExtensionPolicyFlags.Released
     name: Released
     children: []
@@ -73,3 +57,19 @@ items:
     summary: Premission in relased extensions
     type: field
     numericValue: 8
+  - uid: vss-web-extension-sdk.ExtensionPolicyFlags.FirstParty
+    name: FirstParty
+    children: []
+    langs:
+      - typeScript
+    summary: Permission in 1st party extensions
+    type: field
+    numericValue: 16
+  - uid: vss-web-extension-sdk.ExtensionPolicyFlags.All
+    name: All
+    children: []
+    langs:
+      - typeScript
+    summary: Mask that defines all permissions
+    type: field
+    numericValue: 31

@@ -4,31 +4,15 @@ items:
     name: QueuePriority
     fullName: QueuePriority
     children:
-      - vss-web-extension-sdk.QueuePriority.AboveNormal
-      - vss-web-extension-sdk.QueuePriority.BelowNormal
       - vss-web-extension-sdk.QueuePriority.High
-      - vss-web-extension-sdk.QueuePriority.Low
+      - vss-web-extension-sdk.QueuePriority.AboveNormal
       - vss-web-extension-sdk.QueuePriority.Normal
+      - vss-web-extension-sdk.QueuePriority.BelowNormal
+      - vss-web-extension-sdk.QueuePriority.Low
     langs:
       - typeScript
     type: enum
     summary: ''
-  - uid: vss-web-extension-sdk.QueuePriority.AboveNormal
-    name: AboveNormal
-    children: []
-    langs:
-      - typeScript
-    summary: Above normal priority.
-    type: field
-    numericValue: 2
-  - uid: vss-web-extension-sdk.QueuePriority.BelowNormal
-    name: BelowNormal
-    children: []
-    langs:
-      - typeScript
-    summary: Below normal priority.
-    type: field
-    numericValue: 4
   - uid: vss-web-extension-sdk.QueuePriority.High
     name: High
     children: []
@@ -37,14 +21,14 @@ items:
     summary: High priority.
     type: field
     numericValue: 1
-  - uid: vss-web-extension-sdk.QueuePriority.Low
-    name: Low
+  - uid: vss-web-extension-sdk.QueuePriority.AboveNormal
+    name: AboveNormal
     children: []
     langs:
       - typeScript
-    summary: Low priority.
+    summary: Above normal priority.
     type: field
-    numericValue: 5
+    numericValue: 2
   - uid: vss-web-extension-sdk.QueuePriority.Normal
     name: Normal
     children: []
@@ -53,3 +37,19 @@ items:
     summary: Normal priority.
     type: field
     numericValue: 3
+  - uid: vss-web-extension-sdk.QueuePriority.BelowNormal
+    name: BelowNormal
+    children: []
+    langs:
+      - typeScript
+    summary: Below normal priority.
+    type: field
+    numericValue: 4
+  - uid: vss-web-extension-sdk.QueuePriority.Low
+    name: Low
+    children: []
+    langs:
+      - typeScript
+    summary: Low priority.
+    type: field
+    numericValue: 5

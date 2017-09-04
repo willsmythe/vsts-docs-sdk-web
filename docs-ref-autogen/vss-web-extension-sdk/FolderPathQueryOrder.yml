@@ -4,13 +4,21 @@ items:
     name: FolderPathQueryOrder
     fullName: FolderPathQueryOrder
     children:
+      - vss-web-extension-sdk.FolderPathQueryOrder.None
       - vss-web-extension-sdk.FolderPathQueryOrder.Ascending
       - vss-web-extension-sdk.FolderPathQueryOrder.Descending
-      - vss-web-extension-sdk.FolderPathQueryOrder.None
     langs:
       - typeScript
     type: enum
     summary: ''
+  - uid: vss-web-extension-sdk.FolderPathQueryOrder.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: No order
+    type: field
+    numericValue: 0
   - uid: vss-web-extension-sdk.FolderPathQueryOrder.Ascending
     name: Ascending
     children: []
@@ -27,11 +35,3 @@ items:
     summary: Order by folder name and path descending.
     type: field
     numericValue: 2
-  - uid: vss-web-extension-sdk.FolderPathQueryOrder.None
-    name: None
-    children: []
-    langs:
-      - typeScript
-    summary: No order
-    type: field
-    numericValue: 0

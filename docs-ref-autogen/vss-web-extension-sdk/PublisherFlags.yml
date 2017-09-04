@@ -4,15 +4,23 @@ items:
     name: PublisherFlags
     fullName: PublisherFlags
     children:
-      - vss-web-extension-sdk.PublisherFlags.Disabled
       - vss-web-extension-sdk.PublisherFlags.None
+      - vss-web-extension-sdk.PublisherFlags.Disabled
+      - vss-web-extension-sdk.PublisherFlags.Verified
       - vss-web-extension-sdk.PublisherFlags.ServiceFlags
       - vss-web-extension-sdk.PublisherFlags.UnChanged
-      - vss-web-extension-sdk.PublisherFlags.Verified
     langs:
       - typeScript
     type: enum
     summary: ''
+  - uid: vss-web-extension-sdk.PublisherFlags.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: No flags exist for this publisher.
+    type: field
+    numericValue: 0
   - uid: vss-web-extension-sdk.PublisherFlags.Disabled
     name: Disabled
     children: []
@@ -25,14 +33,18 @@ items:
       be supplied by the Extension Developers.
     type: field
     numericValue: 1
-  - uid: vss-web-extension-sdk.PublisherFlags.None
-    name: None
+  - uid: vss-web-extension-sdk.PublisherFlags.Verified
+    name: Verified
     children: []
     langs:
       - typeScript
-    summary: No flags exist for this publisher.
+    summary: >-
+      A verified publisher is one that Microsoft has done some review of and
+      ensured the publisher meets a set of requirements. The requirements to
+      become a verified publisher are not listed here.  They can be found in
+      public documentation (TBD).
     type: field
-    numericValue: 0
+    numericValue: 2
   - uid: vss-web-extension-sdk.PublisherFlags.ServiceFlags
     name: ServiceFlags
     children: []
@@ -53,15 +65,3 @@ items:
       flags havent changed during update calls.
     type: field
     numericValue: 1073741824
-  - uid: vss-web-extension-sdk.PublisherFlags.Verified
-    name: Verified
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      A verified publisher is one that Microsoft has done some review of and
-      ensured the publisher meets a set of requirements. The requirements to
-      become a verified publisher are not listed here.  They can be found in
-      public documentation (TBD).
-    type: field
-    numericValue: 2

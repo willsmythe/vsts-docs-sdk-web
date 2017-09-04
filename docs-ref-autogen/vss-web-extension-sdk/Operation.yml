@@ -4,61 +4,72 @@ items:
     name: Operation
     fullName: Operation
     children:
-      - vss-web-extension-sdk.Operation.Add
-      - vss-web-extension-sdk.Operation.Copy
-      - vss-web-extension-sdk.Operation.Move
-      - vss-web-extension-sdk.Operation.Remove
-      - vss-web-extension-sdk.Operation.Replace
-      - vss-web-extension-sdk.Operation.Test
+      - vss-web-extension-sdk.Operation.id
+      - vss-web-extension-sdk.Operation.resultMessage
+      - vss-web-extension-sdk.Operation.status
+      - vss-web-extension-sdk.Operation.url
+      - vss-web-extension-sdk.Operation._links
     langs:
       - typeScript
-    type: enum
-    summary: ''
-  - uid: vss-web-extension-sdk.Operation.Add
-    name: Add
+    type: interface
+    summary: Represents an async operation and its progress or result information.
+  - uid: vss-web-extension-sdk.Operation.id
+    name: id
+    fullName: id
     children: []
     langs:
       - typeScript
-    summary: ''
-    type: field
-    numericValue: 0
-  - uid: vss-web-extension-sdk.Operation.Copy
-    name: Copy
+    type: property
+    summary: The identifier for this operation.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Operation.resultMessage
+    name: resultMessage
+    fullName: resultMessage
     children: []
     langs:
       - typeScript
-    summary: ''
-    type: field
-    numericValue: 4
-  - uid: vss-web-extension-sdk.Operation.Move
-    name: Move
+    type: property
+    summary: The result message which is generally not set.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Operation.status
+    name: status
+    fullName: status
     children: []
     langs:
       - typeScript
-    summary: ''
-    type: field
-    numericValue: 3
-  - uid: vss-web-extension-sdk.Operation.Remove
-    name: Remove
+    type: property
+    summary: The current status of the operation.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.Operation.url
+    name: url
+    fullName: url
     children: []
     langs:
       - typeScript
-    summary: ''
-    type: field
-    numericValue: 1
-  - uid: vss-web-extension-sdk.Operation.Replace
-    name: Replace
+    type: property
+    summary: Url to get the full object.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Operation._links
+    name: _links
+    fullName: _links
     children: []
     langs:
       - typeScript
-    summary: ''
-    type: field
-    numericValue: 2
-  - uid: vss-web-extension-sdk.Operation.Test
-    name: Test
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 5
+    type: property
+    summary: The links to other objects related to this object.
+    syntax:
+      return:
+        type:
+          - any

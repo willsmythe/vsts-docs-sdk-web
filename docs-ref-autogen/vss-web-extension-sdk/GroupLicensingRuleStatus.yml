@@ -4,21 +4,13 @@ items:
     name: GroupLicensingRuleStatus
     fullName: GroupLicensingRuleStatus
     children:
-      - vss-web-extension-sdk.GroupLicensingRuleStatus.Applied
       - vss-web-extension-sdk.GroupLicensingRuleStatus.ApplyPending
+      - vss-web-extension-sdk.GroupLicensingRuleStatus.Applied
       - vss-web-extension-sdk.GroupLicensingRuleStatus.UnableToApply
     langs:
       - typeScript
     type: enum
     summary: ''
-  - uid: vss-web-extension-sdk.GroupLicensingRuleStatus.Applied
-    name: Applied
-    children: []
-    langs:
-      - typeScript
-    summary: Rule is applied
-    type: field
-    numericValue: 1
   - uid: vss-web-extension-sdk.GroupLicensingRuleStatus.ApplyPending
     name: ApplyPending
     children: []
@@ -27,6 +19,14 @@ items:
     summary: 'Rule is created or updated, but apply is pending'
     type: field
     numericValue: 0
+  - uid: vss-web-extension-sdk.GroupLicensingRuleStatus.Applied
+    name: Applied
+    children: []
+    langs:
+      - typeScript
+    summary: Rule is applied
+    type: field
+    numericValue: 1
   - uid: vss-web-extension-sdk.GroupLicensingRuleStatus.UnableToApply
     name: UnableToApply
     children: []

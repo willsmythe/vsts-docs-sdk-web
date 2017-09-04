@@ -4,29 +4,53 @@ items:
     name: ContributionPropertyType
     fullName: ContributionPropertyType
     children:
-      - vss-web-extension-sdk.ContributionPropertyType.Array
+      - vss-web-extension-sdk.ContributionPropertyType.Unknown
+      - vss-web-extension-sdk.ContributionPropertyType.String
+      - vss-web-extension-sdk.ContributionPropertyType.Uri
+      - vss-web-extension-sdk.ContributionPropertyType.Guid
       - vss-web-extension-sdk.ContributionPropertyType.Boolean
+      - vss-web-extension-sdk.ContributionPropertyType.Integer
+      - vss-web-extension-sdk.ContributionPropertyType.Double
       - vss-web-extension-sdk.ContributionPropertyType.DateTime
       - vss-web-extension-sdk.ContributionPropertyType.Dictionary
-      - vss-web-extension-sdk.ContributionPropertyType.Double
-      - vss-web-extension-sdk.ContributionPropertyType.Guid
-      - vss-web-extension-sdk.ContributionPropertyType.Integer
+      - vss-web-extension-sdk.ContributionPropertyType.Array
       - vss-web-extension-sdk.ContributionPropertyType.Object
-      - vss-web-extension-sdk.ContributionPropertyType.String
-      - vss-web-extension-sdk.ContributionPropertyType.Unknown
-      - vss-web-extension-sdk.ContributionPropertyType.Uri
     langs:
       - typeScript
     type: enum
     summary: The type of value used for a property
-  - uid: vss-web-extension-sdk.ContributionPropertyType.Array
-    name: Array
+  - uid: vss-web-extension-sdk.ContributionPropertyType.Unknown
+    name: Unknown
     children: []
     langs:
       - typeScript
-    summary: Value is an array
+    summary: Contribution type is unknown (value may be anything)
     type: field
-    numericValue: 256
+    numericValue: 0
+  - uid: vss-web-extension-sdk.ContributionPropertyType.String
+    name: String
+    children: []
+    langs:
+      - typeScript
+    summary: Value is a string
+    type: field
+    numericValue: 1
+  - uid: vss-web-extension-sdk.ContributionPropertyType.Uri
+    name: Uri
+    children: []
+    langs:
+      - typeScript
+    summary: Value is a Uri
+    type: field
+    numericValue: 2
+  - uid: vss-web-extension-sdk.ContributionPropertyType.Guid
+    name: Guid
+    children: []
+    langs:
+      - typeScript
+    summary: Value is a GUID
+    type: field
+    numericValue: 4
   - uid: vss-web-extension-sdk.ContributionPropertyType.Boolean
     name: Boolean
     children: []
@@ -35,6 +59,22 @@ items:
     summary: Value is True or False
     type: field
     numericValue: 8
+  - uid: vss-web-extension-sdk.ContributionPropertyType.Integer
+    name: Integer
+    children: []
+    langs:
+      - typeScript
+    summary: Value is an integer
+    type: field
+    numericValue: 16
+  - uid: vss-web-extension-sdk.ContributionPropertyType.Double
+    name: Double
+    children: []
+    langs:
+      - typeScript
+    summary: Value is a double
+    type: field
+    numericValue: 32
   - uid: vss-web-extension-sdk.ContributionPropertyType.DateTime
     name: DateTime
     children: []
@@ -51,30 +91,14 @@ items:
     summary: Value is a generic Dictionary/JObject/property bag
     type: field
     numericValue: 128
-  - uid: vss-web-extension-sdk.ContributionPropertyType.Double
-    name: Double
+  - uid: vss-web-extension-sdk.ContributionPropertyType.Array
+    name: Array
     children: []
     langs:
       - typeScript
-    summary: Value is a double
+    summary: Value is an array
     type: field
-    numericValue: 32
-  - uid: vss-web-extension-sdk.ContributionPropertyType.Guid
-    name: Guid
-    children: []
-    langs:
-      - typeScript
-    summary: Value is a GUID
-    type: field
-    numericValue: 4
-  - uid: vss-web-extension-sdk.ContributionPropertyType.Integer
-    name: Integer
-    children: []
-    langs:
-      - typeScript
-    summary: Value is an integer
-    type: field
-    numericValue: 16
+    numericValue: 256
   - uid: vss-web-extension-sdk.ContributionPropertyType.Object
     name: Object
     children: []
@@ -83,27 +107,3 @@ items:
     summary: Value is an arbitrary/custom object
     type: field
     numericValue: 512
-  - uid: vss-web-extension-sdk.ContributionPropertyType.String
-    name: String
-    children: []
-    langs:
-      - typeScript
-    summary: Value is a string
-    type: field
-    numericValue: 1
-  - uid: vss-web-extension-sdk.ContributionPropertyType.Unknown
-    name: Unknown
-    children: []
-    langs:
-      - typeScript
-    summary: Contribution type is unknown (value may be anything)
-    type: field
-    numericValue: 0
-  - uid: vss-web-extension-sdk.ContributionPropertyType.Uri
-    name: Uri
-    children: []
-    langs:
-      - typeScript
-    summary: Value is a Uri
-    type: field
-    numericValue: 2

@@ -4,14 +4,25 @@ items:
     name: GitRefUpdateMode
     fullName: GitRefUpdateMode
     children:
-      - vss-web-extension-sdk.GitRefUpdateMode.AllOrNone
       - vss-web-extension-sdk.GitRefUpdateMode.BestEffort
+      - vss-web-extension-sdk.GitRefUpdateMode.AllOrNone
     langs:
       - typeScript
     type: enum
     summary: >-
       Enumerates the modes under which ref updates can be written to their
       repositories.
+  - uid: vss-web-extension-sdk.GitRefUpdateMode.BestEffort
+    name: BestEffort
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates the Git protocol model where any refs that can be updated will
+      be updated, but any failures will not prevent other updates from
+      succeeding.
+    type: field
+    numericValue: 0
   - uid: vss-web-extension-sdk.GitRefUpdateMode.AllOrNone
     name: AllOrNone
     children: []
@@ -24,14 +35,3 @@ items:
       will fail.
     type: field
     numericValue: 1
-  - uid: vss-web-extension-sdk.GitRefUpdateMode.BestEffort
-    name: BestEffort
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Indicates the Git protocol model where any refs that can be updated will
-      be updated, but any failures will not prevent other updates from
-      succeeding.
-    type: field
-    numericValue: 0

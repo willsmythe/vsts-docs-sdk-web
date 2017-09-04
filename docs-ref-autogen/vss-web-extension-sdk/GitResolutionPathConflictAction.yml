@@ -4,28 +4,27 @@ items:
     name: GitResolutionPathConflictAction
     fullName: GitResolutionPathConflictAction
     children:
-      - >-
-        vss-web-extension-sdk.GitResolutionPathConflictAction.KeepSourceDeleteTarget
+      - vss-web-extension-sdk.GitResolutionPathConflictAction.Undecided
       - >-
         vss-web-extension-sdk.GitResolutionPathConflictAction.KeepSourceRenameTarget
       - >-
-        vss-web-extension-sdk.GitResolutionPathConflictAction.KeepTargetDeleteSource
+        vss-web-extension-sdk.GitResolutionPathConflictAction.KeepSourceDeleteTarget
       - >-
         vss-web-extension-sdk.GitResolutionPathConflictAction.KeepTargetRenameSource
-      - vss-web-extension-sdk.GitResolutionPathConflictAction.Undecided
+      - >-
+        vss-web-extension-sdk.GitResolutionPathConflictAction.KeepTargetDeleteSource
     langs:
       - typeScript
     type: enum
     summary: ''
-  - uid: >-
-      vss-web-extension-sdk.GitResolutionPathConflictAction.KeepSourceDeleteTarget
-    name: KeepSourceDeleteTarget
+  - uid: vss-web-extension-sdk.GitResolutionPathConflictAction.Undecided
+    name: Undecided
     children: []
     langs:
       - typeScript
     summary: ''
     type: field
-    numericValue: 2
+    numericValue: 0
   - uid: >-
       vss-web-extension-sdk.GitResolutionPathConflictAction.KeepSourceRenameTarget
     name: KeepSourceRenameTarget
@@ -36,14 +35,14 @@ items:
     type: field
     numericValue: 1
   - uid: >-
-      vss-web-extension-sdk.GitResolutionPathConflictAction.KeepTargetDeleteSource
-    name: KeepTargetDeleteSource
+      vss-web-extension-sdk.GitResolutionPathConflictAction.KeepSourceDeleteTarget
+    name: KeepSourceDeleteTarget
     children: []
     langs:
       - typeScript
     summary: ''
     type: field
-    numericValue: 4
+    numericValue: 2
   - uid: >-
       vss-web-extension-sdk.GitResolutionPathConflictAction.KeepTargetRenameSource
     name: KeepTargetRenameSource
@@ -53,11 +52,12 @@ items:
     summary: ''
     type: field
     numericValue: 3
-  - uid: vss-web-extension-sdk.GitResolutionPathConflictAction.Undecided
-    name: Undecided
+  - uid: >-
+      vss-web-extension-sdk.GitResolutionPathConflictAction.KeepTargetDeleteSource
+    name: KeepTargetDeleteSource
     children: []
     langs:
       - typeScript
     summary: ''
     type: field
-    numericValue: 0
+    numericValue: 4

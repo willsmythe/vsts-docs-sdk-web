@@ -4,15 +4,31 @@ items:
     name: ContextHostType
     fullName: ContextHostType
     children:
-      - vss-web-extension-sdk.ContextHostType.Application
+      - vss-web-extension-sdk.ContextHostType.Unknown
       - vss-web-extension-sdk.ContextHostType.Deployment
+      - vss-web-extension-sdk.ContextHostType.Application
       - vss-web-extension-sdk.ContextHostType.Organization
       - vss-web-extension-sdk.ContextHostType.ProjectCollection
-      - vss-web-extension-sdk.ContextHostType.Unknown
     langs:
       - typeScript
     type: enum
     summary: ''
+  - uid: vss-web-extension-sdk.ContextHostType.Unknown
+    name: Unknown
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 0
+  - uid: vss-web-extension-sdk.ContextHostType.Deployment
+    name: Deployment
+    children: []
+    langs:
+      - typeScript
+    summary: The Deployment Host
+    type: field
+    numericValue: 1
   - uid: vss-web-extension-sdk.ContextHostType.Application
     name: Application
     children: []
@@ -23,14 +39,6 @@ items:
       instead.
     type: field
     numericValue: 2
-  - uid: vss-web-extension-sdk.ContextHostType.Deployment
-    name: Deployment
-    children: []
-    langs:
-      - typeScript
-    summary: The Deployment Host
-    type: field
-    numericValue: 1
   - uid: vss-web-extension-sdk.ContextHostType.Organization
     name: Organization
     children: []
@@ -47,11 +55,3 @@ items:
     summary: The Project Collection
     type: field
     numericValue: 4
-  - uid: vss-web-extension-sdk.ContextHostType.Unknown
-    name: Unknown
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 0

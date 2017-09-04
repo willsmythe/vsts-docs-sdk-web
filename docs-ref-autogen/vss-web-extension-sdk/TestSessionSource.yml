@@ -4,41 +4,17 @@ items:
     name: TestSessionSource
     fullName: TestSessionSource
     children:
-      - vss-web-extension-sdk.TestSessionSource.FeedbackDesktop
-      - vss-web-extension-sdk.TestSessionSource.FeedbackWeb
-      - vss-web-extension-sdk.TestSessionSource.SessionInsightsForAll
       - vss-web-extension-sdk.TestSessionSource.Unknown
       - vss-web-extension-sdk.TestSessionSource.XTDesktop
-      - vss-web-extension-sdk.TestSessionSource.XTDesktop2
+      - vss-web-extension-sdk.TestSessionSource.FeedbackDesktop
       - vss-web-extension-sdk.TestSessionSource.XTWeb
+      - vss-web-extension-sdk.TestSessionSource.FeedbackWeb
+      - vss-web-extension-sdk.TestSessionSource.XTDesktop2
+      - vss-web-extension-sdk.TestSessionSource.SessionInsightsForAll
     langs:
       - typeScript
     type: enum
     summary: Represents the state of the test session.
-  - uid: vss-web-extension-sdk.TestSessionSource.FeedbackDesktop
-    name: FeedbackDesktop
-    children: []
-    langs:
-      - typeScript
-    summary: The session was created from feedback client.
-    type: field
-    numericValue: 2
-  - uid: vss-web-extension-sdk.TestSessionSource.FeedbackWeb
-    name: FeedbackWeb
-    children: []
-    langs:
-      - typeScript
-    summary: The session was created from browser extension.
-    type: field
-    numericValue: 4
-  - uid: vss-web-extension-sdk.TestSessionSource.SessionInsightsForAll
-    name: SessionInsightsForAll
-    children: []
-    langs:
-      - typeScript
-    summary: To show sessions from all supported sources.
-    type: field
-    numericValue: 6
   - uid: vss-web-extension-sdk.TestSessionSource.Unknown
     name: Unknown
     children: []
@@ -57,6 +33,30 @@ items:
       tool.
     type: field
     numericValue: 1
+  - uid: vss-web-extension-sdk.TestSessionSource.FeedbackDesktop
+    name: FeedbackDesktop
+    children: []
+    langs:
+      - typeScript
+    summary: The session was created from feedback client.
+    type: field
+    numericValue: 2
+  - uid: vss-web-extension-sdk.TestSessionSource.XTWeb
+    name: XTWeb
+    children: []
+    langs:
+      - typeScript
+    summary: The session was created from browser extension.
+    type: field
+    numericValue: 3
+  - uid: vss-web-extension-sdk.TestSessionSource.FeedbackWeb
+    name: FeedbackWeb
+    children: []
+    langs:
+      - typeScript
+    summary: The session was created from browser extension.
+    type: field
+    numericValue: 4
   - uid: vss-web-extension-sdk.TestSessionSource.XTDesktop2
     name: XTDesktop2
     children: []
@@ -67,11 +67,11 @@ items:
       exploratory desktop tool.
     type: field
     numericValue: 5
-  - uid: vss-web-extension-sdk.TestSessionSource.XTWeb
-    name: XTWeb
+  - uid: vss-web-extension-sdk.TestSessionSource.SessionInsightsForAll
+    name: SessionInsightsForAll
     children: []
     langs:
       - typeScript
-    summary: The session was created from browser extension.
+    summary: To show sessions from all supported sources.
     type: field
-    numericValue: 3
+    numericValue: 6

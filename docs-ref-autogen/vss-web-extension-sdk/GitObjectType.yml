@@ -5,13 +5,13 @@ items:
     fullName: GitObjectType
     children:
       - vss-web-extension-sdk.GitObjectType.Bad
-      - vss-web-extension-sdk.GitObjectType.Blob
       - vss-web-extension-sdk.GitObjectType.Commit
+      - vss-web-extension-sdk.GitObjectType.Tree
+      - vss-web-extension-sdk.GitObjectType.Blob
+      - vss-web-extension-sdk.GitObjectType.Tag
       - vss-web-extension-sdk.GitObjectType.Ext2
       - vss-web-extension-sdk.GitObjectType.OfsDelta
       - vss-web-extension-sdk.GitObjectType.RefDelta
-      - vss-web-extension-sdk.GitObjectType.Tag
-      - vss-web-extension-sdk.GitObjectType.Tree
     langs:
       - typeScript
     type: enum
@@ -24,14 +24,6 @@ items:
     summary: ''
     type: field
     numericValue: 0
-  - uid: vss-web-extension-sdk.GitObjectType.Blob
-    name: Blob
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 3
   - uid: vss-web-extension-sdk.GitObjectType.Commit
     name: Commit
     children: []
@@ -40,6 +32,30 @@ items:
     summary: ''
     type: field
     numericValue: 1
+  - uid: vss-web-extension-sdk.GitObjectType.Tree
+    name: Tree
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 2
+  - uid: vss-web-extension-sdk.GitObjectType.Blob
+    name: Blob
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 3
+  - uid: vss-web-extension-sdk.GitObjectType.Tag
+    name: Tag
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 4
   - uid: vss-web-extension-sdk.GitObjectType.Ext2
     name: Ext2
     children: []
@@ -64,19 +80,3 @@ items:
     summary: ''
     type: field
     numericValue: 7
-  - uid: vss-web-extension-sdk.GitObjectType.Tag
-    name: Tag
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 4
-  - uid: vss-web-extension-sdk.GitObjectType.Tree
-    name: Tree
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 2

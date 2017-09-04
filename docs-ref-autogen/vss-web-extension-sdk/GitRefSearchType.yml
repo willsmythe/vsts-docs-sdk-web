@@ -4,21 +4,13 @@ items:
     name: GitRefSearchType
     fullName: GitRefSearchType
     children:
-      - vss-web-extension-sdk.GitRefSearchType.Contains
       - vss-web-extension-sdk.GitRefSearchType.Exact
       - vss-web-extension-sdk.GitRefSearchType.StartsWith
+      - vss-web-extension-sdk.GitRefSearchType.Contains
     langs:
       - typeScript
     type: enum
     summary: Search type on ref name
-  - uid: vss-web-extension-sdk.GitRefSearchType.Contains
-    name: Contains
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 2
   - uid: vss-web-extension-sdk.GitRefSearchType.Exact
     name: Exact
     children: []
@@ -35,3 +27,11 @@ items:
     summary: ''
     type: field
     numericValue: 1
+  - uid: vss-web-extension-sdk.GitRefSearchType.Contains
+    name: Contains
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 2

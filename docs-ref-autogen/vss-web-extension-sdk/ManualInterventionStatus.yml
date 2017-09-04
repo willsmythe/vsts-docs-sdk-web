@@ -4,31 +4,23 @@ items:
     name: ManualInterventionStatus
     fullName: ManualInterventionStatus
     children:
-      - vss-web-extension-sdk.ManualInterventionStatus.Approved
-      - vss-web-extension-sdk.ManualInterventionStatus.Canceled
+      - vss-web-extension-sdk.ManualInterventionStatus.Unknown
       - vss-web-extension-sdk.ManualInterventionStatus.Pending
       - vss-web-extension-sdk.ManualInterventionStatus.Rejected
-      - vss-web-extension-sdk.ManualInterventionStatus.Unknown
+      - vss-web-extension-sdk.ManualInterventionStatus.Approved
+      - vss-web-extension-sdk.ManualInterventionStatus.Canceled
     langs:
       - typeScript
     type: enum
     summary: ''
-  - uid: vss-web-extension-sdk.ManualInterventionStatus.Approved
-    name: Approved
+  - uid: vss-web-extension-sdk.ManualInterventionStatus.Unknown
+    name: Unknown
     children: []
     langs:
       - typeScript
     summary: ''
     type: field
-    numericValue: 4
-  - uid: vss-web-extension-sdk.ManualInterventionStatus.Canceled
-    name: Canceled
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 8
+    numericValue: 0
   - uid: vss-web-extension-sdk.ManualInterventionStatus.Pending
     name: Pending
     children: []
@@ -45,11 +37,19 @@ items:
     summary: ''
     type: field
     numericValue: 2
-  - uid: vss-web-extension-sdk.ManualInterventionStatus.Unknown
-    name: Unknown
+  - uid: vss-web-extension-sdk.ManualInterventionStatus.Approved
+    name: Approved
     children: []
     langs:
       - typeScript
     summary: ''
     type: field
-    numericValue: 0
+    numericValue: 4
+  - uid: vss-web-extension-sdk.ManualInterventionStatus.Canceled
+    name: Canceled
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 8

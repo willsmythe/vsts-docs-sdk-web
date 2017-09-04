@@ -4,25 +4,25 @@ items:
     name: GitResolutionError
     fullName: GitResolutionError
     children:
-      - vss-web-extension-sdk.GitResolutionError.InvalidPath
-      - vss-web-extension-sdk.GitResolutionError.MergeContentNotFound
       - vss-web-extension-sdk.GitResolutionError.None
-      - vss-web-extension-sdk.GitResolutionError.OtherError
+      - vss-web-extension-sdk.GitResolutionError.MergeContentNotFound
       - vss-web-extension-sdk.GitResolutionError.PathInUse
+      - vss-web-extension-sdk.GitResolutionError.InvalidPath
       - vss-web-extension-sdk.GitResolutionError.UnknownAction
       - vss-web-extension-sdk.GitResolutionError.UnknownMergeType
+      - vss-web-extension-sdk.GitResolutionError.OtherError
     langs:
       - typeScript
     type: enum
     summary: The type of a merge conflict.
-  - uid: vss-web-extension-sdk.GitResolutionError.InvalidPath
-    name: InvalidPath
+  - uid: vss-web-extension-sdk.GitResolutionError.None
+    name: None
     children: []
     langs:
       - typeScript
     summary: No error
     type: field
-    numericValue: 3
+    numericValue: 0
   - uid: vss-web-extension-sdk.GitResolutionError.MergeContentNotFound
     name: MergeContentNotFound
     children: []
@@ -33,22 +33,6 @@ items:
       in repo during application
     type: field
     numericValue: 1
-  - uid: vss-web-extension-sdk.GitResolutionError.None
-    name: None
-    children: []
-    langs:
-      - typeScript
-    summary: No error
-    type: field
-    numericValue: 0
-  - uid: vss-web-extension-sdk.GitResolutionError.OtherError
-    name: OtherError
-    children: []
-    langs:
-      - typeScript
-    summary: Any error for which a more specific code doesn't apply
-    type: field
-    numericValue: 255
   - uid: vss-web-extension-sdk.GitResolutionError.PathInUse
     name: PathInUse
     children: []
@@ -59,6 +43,14 @@ items:
       was already in use
     type: field
     numericValue: 2
+  - uid: vss-web-extension-sdk.GitResolutionError.InvalidPath
+    name: InvalidPath
+    children: []
+    langs:
+      - typeScript
+    summary: No error
+    type: field
+    numericValue: 3
   - uid: vss-web-extension-sdk.GitResolutionError.UnknownAction
     name: UnknownAction
     children: []
@@ -75,3 +67,11 @@ items:
     summary: GitResolutionMergeType was set to an unrecognized value
     type: field
     numericValue: 5
+  - uid: vss-web-extension-sdk.GitResolutionError.OtherError
+    name: OtherError
+    children: []
+    langs:
+      - typeScript
+    summary: Any error for which a more specific code doesn't apply
+    type: field
+    numericValue: 255

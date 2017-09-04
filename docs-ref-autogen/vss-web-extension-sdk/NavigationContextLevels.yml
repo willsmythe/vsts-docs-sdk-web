@@ -4,14 +4,14 @@ items:
     name: NavigationContextLevels
     fullName: NavigationContextLevels
     children:
-      - vss-web-extension-sdk.NavigationContextLevels.All
-      - vss-web-extension-sdk.NavigationContextLevels.Application
-      - vss-web-extension-sdk.NavigationContextLevels.ApplicationAll
-      - vss-web-extension-sdk.NavigationContextLevels.Collection
-      - vss-web-extension-sdk.NavigationContextLevels.Deployment
       - vss-web-extension-sdk.NavigationContextLevels.None
+      - vss-web-extension-sdk.NavigationContextLevels.Deployment
+      - vss-web-extension-sdk.NavigationContextLevels.Application
+      - vss-web-extension-sdk.NavigationContextLevels.Collection
       - vss-web-extension-sdk.NavigationContextLevels.Project
       - vss-web-extension-sdk.NavigationContextLevels.Team
+      - vss-web-extension-sdk.NavigationContextLevels.ApplicationAll
+      - vss-web-extension-sdk.NavigationContextLevels.All
     langs:
       - typeScript
     type: enum
@@ -21,14 +21,22 @@ items:
       http://server:port[/{collection}[/{project}[/{team}]]][/_admin]/_{controller}/{action}
       The tokens {collection}, {project} and {team} are navigation level tokens
       whereas _admin segment is a switch to show admin areas of the site.
-  - uid: vss-web-extension-sdk.NavigationContextLevels.All
-    name: All
+  - uid: vss-web-extension-sdk.NavigationContextLevels.None
+    name: None
     children: []
     langs:
       - typeScript
-    summary: Sugar for all levels
+    summary: ''
     type: field
-    numericValue: 31
+    numericValue: 0
+  - uid: vss-web-extension-sdk.NavigationContextLevels.Deployment
+    name: Deployment
+    children: []
+    langs:
+      - typeScript
+    summary: Root level in Azure.
+    type: field
+    numericValue: 1
   - uid: vss-web-extension-sdk.NavigationContextLevels.Application
     name: Application
     children: []
@@ -39,14 +47,6 @@ items:
       tokens have information
     type: field
     numericValue: 2
-  - uid: vss-web-extension-sdk.NavigationContextLevels.ApplicationAll
-    name: ApplicationAll
-    children: []
-    langs:
-      - typeScript
-    summary: Sugar for all application levels.
-    type: field
-    numericValue: 30
   - uid: vss-web-extension-sdk.NavigationContextLevels.Collection
     name: Collection
     children: []
@@ -55,22 +55,6 @@ items:
     summary: 'Flag to show {collection} token has information.'
     type: field
     numericValue: 4
-  - uid: vss-web-extension-sdk.NavigationContextLevels.Deployment
-    name: Deployment
-    children: []
-    langs:
-      - typeScript
-    summary: Root level in Azure.
-    type: field
-    numericValue: 1
-  - uid: vss-web-extension-sdk.NavigationContextLevels.None
-    name: None
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 0
   - uid: vss-web-extension-sdk.NavigationContextLevels.Project
     name: Project
     children: []
@@ -87,3 +71,19 @@ items:
     summary: 'Flag to show {team} token has information.'
     type: field
     numericValue: 16
+  - uid: vss-web-extension-sdk.NavigationContextLevels.ApplicationAll
+    name: ApplicationAll
+    children: []
+    langs:
+      - typeScript
+    summary: Sugar for all application levels.
+    type: field
+    numericValue: 30
+  - uid: vss-web-extension-sdk.NavigationContextLevels.All
+    name: All
+    children: []
+    langs:
+      - typeScript
+    summary: Sugar for all levels
+    type: field
+    numericValue: 31

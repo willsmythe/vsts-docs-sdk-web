@@ -5,16 +5,56 @@ items:
     fullName: CommonMethods3To4
     children:
       - vss-web-extension-sdk.CommonMethods3To4.authTokenManager
+      - vss-web-extension-sdk.CommonMethods3To4.cancelOfferSubscription
+      - vss-web-extension-sdk.CommonMethods3To4.changeSubscriptionAccount
+      - vss-web-extension-sdk.CommonMethods3To4.commercePackageApiVersion
       - vss-web-extension-sdk.CommonMethods3To4.constructor
-      - vss-web-extension-sdk.CommonMethods3To4.entriesApiVersion
-      - vss-web-extension-sdk.CommonMethods3To4.entriesApiVersion_cd006711
+      - vss-web-extension-sdk.CommonMethods3To4.connectedServerApiVersion
+      - vss-web-extension-sdk.CommonMethods3To4.createConnectedServer
+      - vss-web-extension-sdk.CommonMethods3To4.createOfferMeterDefinition
+      - vss-web-extension-sdk.CommonMethods3To4.createOfferSubscription
+      - vss-web-extension-sdk.CommonMethods3To4.decreaseResourceQuantity
+      - >-
+        vss-web-extension-sdk.CommonMethods3To4.enableTrialOfferSubscriptionExtension
+      - >-
+        vss-web-extension-sdk.CommonMethods3To4.enableTrialOrPreviewOfferSubscription
       - vss-web-extension-sdk.CommonMethods3To4.forceOptionsCallForAutoNegotiate
-      - vss-web-extension-sdk.CommonMethods3To4.getEntries
-      - vss-web-extension-sdk.CommonMethods3To4.getEntriesForScope
-      - vss-web-extension-sdk.CommonMethods3To4.removeEntries
-      - vss-web-extension-sdk.CommonMethods3To4.removeEntriesForScope
-      - vss-web-extension-sdk.CommonMethods3To4.setEntries
-      - vss-web-extension-sdk.CommonMethods3To4.setEntriesForScope
+      - vss-web-extension-sdk.CommonMethods3To4.getAccountRegions
+      - vss-web-extension-sdk.CommonMethods3To4.getAccounts
+      - vss-web-extension-sdk.CommonMethods3To4.getAccountsByIdentity
+      - vss-web-extension-sdk.CommonMethods3To4.getAccountsByIdentityForOfferId
+      - vss-web-extension-sdk.CommonMethods3To4.getAllOfferSubscriptionsForUser
+      - vss-web-extension-sdk.CommonMethods3To4.getAzureSubscriptionForPurchase
+      - vss-web-extension-sdk.CommonMethods3To4.getAzureSubscriptionForUser
+      - vss-web-extension-sdk.CommonMethods3To4.getAzureSubscriptions
+      - vss-web-extension-sdk.CommonMethods3To4.getCommercePackage
+      - vss-web-extension-sdk.CommonMethods3To4.getOfferMeter
+      - vss-web-extension-sdk.CommonMethods3To4.getOfferMeterPrice
+      - vss-web-extension-sdk.CommonMethods3To4.getOfferMeters
+      - vss-web-extension-sdk.CommonMethods3To4.getOfferSubscription
+      - >-
+        vss-web-extension-sdk.CommonMethods3To4.getOfferSubscriptionForRenewalGroup
+      - vss-web-extension-sdk.CommonMethods3To4.getOfferSubscriptions
+      - >-
+        vss-web-extension-sdk.CommonMethods3To4.getOfferSubscriptionsForGalleryItem
+      - vss-web-extension-sdk.CommonMethods3To4.getPurchasableOfferMeter
+      - vss-web-extension-sdk.CommonMethods3To4.getResourceStatus
+      - vss-web-extension-sdk.CommonMethods3To4.getResourceStatusByResourceName
+      - vss-web-extension-sdk.CommonMethods3To4.getSubscriptionAccount
+      - vss-web-extension-sdk.CommonMethods3To4.getUsage
+      - vss-web-extension-sdk.CommonMethods3To4.linkAccount
+      - vss-web-extension-sdk.CommonMethods3To4.metersApiVersion
+      - vss-web-extension-sdk.CommonMethods3To4.offerMeterApiVersion
+      - vss-web-extension-sdk.CommonMethods3To4.offerMeterPriceApiVersion
+      - vss-web-extension-sdk.CommonMethods3To4.offerSubscriptionApiVersion
+      - vss-web-extension-sdk.CommonMethods3To4.regionsApiVersion
+      - vss-web-extension-sdk.CommonMethods3To4.reportUsage
+      - vss-web-extension-sdk.CommonMethods3To4.serviceInstanceId
+      - vss-web-extension-sdk.CommonMethods3To4.subscriptionApiVersion
+      - vss-web-extension-sdk.CommonMethods3To4.unlinkAccount
+      - vss-web-extension-sdk.CommonMethods3To4.updateMeter
+      - vss-web-extension-sdk.CommonMethods3To4.updateOfferSubscription
+      - vss-web-extension-sdk.CommonMethods3To4.usageEventsApiVersion
       - vss-web-extension-sdk.CommonMethods3To4._beginGetLocation
       - vss-web-extension-sdk.CommonMethods3To4._beginRequest
       - vss-web-extension-sdk.CommonMethods3To4._beginRequestWithAjaxResult
@@ -37,6 +77,82 @@ items:
       return:
         type:
           - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.CommonMethods3To4.cancelOfferSubscription
+    name: >-
+      cancelOfferSubscription(offerSubscription: OfferSubscription,
+      cancelReason: string, billingTarget?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API]'
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.OfferSubscription
+          type:
+            - OfferSubscription
+          description: ''
+        - id: cancelReason
+          type:
+            - string
+          description: ''
+        - id: billingTarget
+          type:
+            - string
+          description: ''
+          optional: true
+      content: >-
+        function cancelOfferSubscription(offerSubscription: OfferSubscription,
+        cancelReason: string, billingTarget?: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.changeSubscriptionAccount
+    name: >-
+      changeSubscriptionAccount(subscriptionId: string, providerNamespaceId:
+      function, accountId: string, hydrate?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API] Swaps the subscriptions for an account'
+    syntax:
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: The subscription identifier.
+        - id: providerNamespaceId
+          type:
+            - function
+          description: The provider namespace identifier.
+        - id: accountId
+          type:
+            - string
+          description: The account identifier.
+        - id: hydrate
+          type:
+            - boolean
+          description: Whether or not the hydrate the account into ARM.
+          optional: true
+      content: >-
+        function changeSubscriptionAccount(subscriptionId: string,
+        providerNamespaceId: function, accountId: string, hydrate?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.commercePackageApiVersion
+    name: commercePackageApiVersion
+    fullName: commercePackageApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.CommonMethods3To4.constructor
     name: >-
       CommonMethods3To4(rootRequestPath: string, options?:
@@ -63,9 +179,9 @@ items:
         type:
           - vss-web-extension-sdk.CommonMethods3To4
     type: constructor
-  - uid: vss-web-extension-sdk.CommonMethods3To4.entriesApiVersion
-    name: entriesApiVersion
-    fullName: entriesApiVersion
+  - uid: vss-web-extension-sdk.CommonMethods3To4.connectedServerApiVersion
+    name: connectedServerApiVersion
+    fullName: connectedServerApiVersion
     children: []
     langs:
       - typeScript
@@ -75,18 +191,176 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.CommonMethods3To4.entriesApiVersion_cd006711
-    name: entriesApiVersion_cd006711
-    fullName: entriesApiVersion_cd006711
+  - uid: vss-web-extension-sdk.CommonMethods3To4.createConnectedServer
+    name: 'createConnectedServer(connectedServer: ConnectedServer)'
     children: []
     langs:
       - typeScript
-    type: property
-    summary: ''
+    summary: '[Preview API]'
     syntax:
+      parameters:
+        - id: vss-web-extension-sdk.ConnectedServer
+          type:
+            - ConnectedServer
+          description: ''
+      content: 'function createConnectedServer(connectedServer: ConnectedServer)'
       return:
         type:
-          - string
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.createOfferMeterDefinition
+    name: 'createOfferMeterDefinition(offerConfig: OfferMeter)'
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API]'
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.OfferMeter
+          type:
+            - OfferMeter
+          description: ''
+      content: 'function createOfferMeterDefinition(offerConfig: OfferMeter)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.createOfferSubscription
+    name: >-
+      createOfferSubscription(offerSubscription: OfferSubscription, offerCode?:
+      string, tenantId?: string, objectId?: string, billingTarget?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API]'
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.OfferSubscription
+          type:
+            - OfferSubscription
+          description: ''
+        - id: offerCode
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: tenantId
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: objectId
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: billingTarget
+          type:
+            - string
+          description: ''
+          optional: true
+      content: >-
+        function createOfferSubscription(offerSubscription: OfferSubscription,
+        offerCode?: string, tenantId?: string, objectId?: string,
+        billingTarget?: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.decreaseResourceQuantity
+    name: >-
+      decreaseResourceQuantity(offerMeterName: string, renewalGroup: function,
+      quantity: number, shouldBeImmediate: boolean, azureSubscriptionId: string)
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API]'
+    syntax:
+      parameters:
+        - id: offerMeterName
+          type:
+            - string
+          description: ''
+        - id: renewalGroup
+          type:
+            - function
+          description: ''
+        - id: quantity
+          type:
+            - number
+          description: ''
+        - id: shouldBeImmediate
+          type:
+            - boolean
+          description: ''
+        - id: azureSubscriptionId
+          type:
+            - string
+          description: ''
+      content: >-
+        function decreaseResourceQuantity(offerMeterName: string, renewalGroup:
+        function, quantity: number, shouldBeImmediate: boolean,
+        azureSubscriptionId: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.CommonMethods3To4.enableTrialOfferSubscriptionExtension
+    name: >-
+      enableTrialOfferSubscriptionExtension(offerMeterName: string,
+      renewalGroup: function, endDate: Date)
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API]'
+    syntax:
+      parameters:
+        - id: offerMeterName
+          type:
+            - string
+          description: ''
+        - id: renewalGroup
+          type:
+            - function
+          description: ''
+        - id: endDate
+          type:
+            - Date
+          description: ''
+      content: >-
+        function enableTrialOfferSubscriptionExtension(offerMeterName: string,
+        renewalGroup: function, endDate: Date)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.CommonMethods3To4.enableTrialOrPreviewOfferSubscription
+    name: >-
+      enableTrialOrPreviewOfferSubscription(offerMeterName: string,
+      renewalGroup: function)
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API] Creates the trial or preview offer subscription.'
+    syntax:
+      parameters:
+        - id: offerMeterName
+          type:
+            - string
+          description: Name of the offer meter.
+        - id: renewalGroup
+          type:
+            - function
+          description: The renewal group.
+      content: >-
+        function enableTrialOrPreviewOfferSubscription(offerMeterName: string,
+        renewalGroup: function)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
   - uid: vss-web-extension-sdk.CommonMethods3To4.forceOptionsCallForAutoNegotiate
     name: forceOptionsCallForAutoNegotiate
     fullName: forceOptionsCallForAutoNegotiate
@@ -99,184 +373,826 @@ items:
       return:
         type:
           - boolean
-  - uid: vss-web-extension-sdk.CommonMethods3To4.getEntries
-    name: 'getEntries(userScope: string, key?: string)'
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getAccountRegions
+    name: getAccountRegions()
     children: []
     langs:
       - typeScript
-    summary: '[Preview API] Get all setting entries for the given user/all-users scope'
+    summary: '[Preview API]'
     syntax:
-      parameters:
-        - id: userScope
-          type:
-            - string
-          description: >-
-            User-Scope at which to get the value. Should be "me" for the current
-            user or "host" for all users.
-        - id: key
-          type:
-            - string
-          description: Optional key under which to filter all the entries
-          optional: true
-      content: 'function getEntries(userScope: string, key?: string)'
+      parameters: []
+      content: function getAccountRegions()
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.CommonMethods3To4.getEntriesForScope
-    name: >-
-      getEntriesForScope(userScope: string, scopeName: string, scopeValue:
-      string, key?: string)
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getAccounts
+    name: 'getAccounts(subscriptionId: string, providerNamespaceId: function)'
     children: []
     langs:
       - typeScript
-    summary: '[Preview API] Get all setting entries for the given named scope'
+    summary: '[Preview API] Gets the accounts by subscription.'
     syntax:
       parameters:
-        - id: userScope
+        - id: subscriptionId
           type:
             - string
-          description: >-
-            User-Scope at which to get the value. Should be "me" for the current
-            user or "host" for all users.
-        - id: scopeName
+          description: The subscription identifier.
+        - id: providerNamespaceId
           type:
-            - string
-          description: Scope at which to get the setting for (e.g. "project" or "team")
-        - id: scopeValue
-          type:
-            - string
-          description: Value of the scope (e.g. the project or team id)
-        - id: key
-          type:
-            - string
-          description: Optional key under which to filter all the entries
-          optional: true
+            - function
+          description: The provider namespace identifier.
       content: >-
-        function getEntriesForScope(userScope: string, scopeName: string,
-        scopeValue: string, key?: string)
+        function getAccounts(subscriptionId: string, providerNamespaceId:
+        function)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.CommonMethods3To4.removeEntries
-    name: 'removeEntries(userScope: string, key: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: '[Preview API] Remove the entry or entries under the specified path'
-    syntax:
-      parameters:
-        - id: userScope
-          type:
-            - string
-          description: >-
-            User-Scope at which to remove the value. Should be "me" for the
-            current user or "host" for all users.
-        - id: key
-          type:
-            - string
-          description: Root key of the entry or entries to remove
-      content: 'function removeEntries(userScope: string, key: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: vss-web-extension-sdk.CommonMethods3To4.removeEntriesForScope
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getAccountsByIdentity
     name: >-
-      removeEntriesForScope(userScope: string, scopeName: string, scopeValue:
-      string, key: string)
+      getAccountsByIdentity(providerNamespaceId: function, memberId: string,
+      queryOnlyOwnerAccounts: boolean, inlcudeDisabledAccounts: boolean,
+      includeMSAAccounts: boolean, serviceOwners: function)
     children: []
     langs:
       - typeScript
-    summary: '[Preview API] Remove the entry or entries under the specified path'
+    summary: '[Preview API] Gets the accounts owned by identity.'
     syntax:
       parameters:
-        - id: userScope
+        - id: providerNamespaceId
+          type:
+            - function
+          description: The provider namespace identifier.
+        - id: memberId
           type:
             - string
-          description: >-
-            User-Scope at which to remove the value. Should be "me" for the
-            current user or "host" for all users.
-        - id: scopeName
+          description: The owner identifier.
+        - id: queryOnlyOwnerAccounts
           type:
-            - string
-          description: Scope at which to get the setting for (e.g. "project" or "team")
-        - id: scopeValue
+            - boolean
+          description: 'if set to true [query only owner accounts].'
+        - id: inlcudeDisabledAccounts
           type:
-            - string
-          description: Value of the scope (e.g. the project or team id)
-        - id: key
+            - boolean
+          description: 'if set to true [inlcude disabled accounts].'
+        - id: includeMSAAccounts
           type:
-            - string
-          description: Root key of the entry or entries to remove
+            - boolean
+          description: ''
+        - id: serviceOwners
+          type:
+            - function
+          description: ''
       content: >-
-        function removeEntriesForScope(userScope: string, scopeName: string,
-        scopeValue: string, key: string)
+        function getAccountsByIdentity(providerNamespaceId: function, memberId:
+        string, queryOnlyOwnerAccounts: boolean, inlcudeDisabledAccounts:
+        boolean, includeMSAAccounts: boolean, serviceOwners: function)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.CommonMethods3To4.setEntries
-    name: 'setEntries(entries: function, userScope: string)'
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getAccountsByIdentityForOfferId
+    name: >-
+      getAccountsByIdentityForOfferId(providerNamespaceId: function, memberId:
+      string, queryOnlyOwnerAccounts: boolean, inlcudeDisabledAccounts: boolean,
+      includeMSAAccounts: boolean, serviceOwners: function, galleryId: string,
+      addUnlinkedSubscription?: boolean, queryAccountsByUpn?: boolean)
     children: []
     langs:
       - typeScript
     summary: >-
-      [Preview API] Set the specified setting entry values for the given
-      user/all-users scope
+      [Preview API] Get accounts and associated subscriptions by identity and
+      offer id
     syntax:
       parameters:
-        - id: entries
+        - id: providerNamespaceId
           type:
             - function
-          description: The entries to set
-        - id: userScope
+          description: account provider namespace id
+        - id: memberId
           type:
             - string
-          description: >-
-            User-Scope at which to set the values. Should be "me" for the
-            current user or "host" for all users.
-      content: 'function setEntries(entries: function, userScope: string)'
+          description: owner identifier
+        - id: queryOnlyOwnerAccounts
+          type:
+            - boolean
+          description: 'if set to true [query only owner accounts].'
+        - id: inlcudeDisabledAccounts
+          type:
+            - boolean
+          description: 'if set to true [inlcude disabled accounts].'
+        - id: includeMSAAccounts
+          type:
+            - boolean
+          description: 'if set to true [inlcude MSA accounts].'
+        - id: serviceOwners
+          type:
+            - function
+          description: ''
+        - id: galleryId
+          type:
+            - string
+          description: gallery id of resource
+        - id: addUnlinkedSubscription
+          type:
+            - boolean
+          description: 'if set to true [inlcude azure subscriptions own by user].'
+          optional: true
+        - id: queryAccountsByUpn
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: >-
+        function getAccountsByIdentityForOfferId(providerNamespaceId: function,
+        memberId: string, queryOnlyOwnerAccounts: boolean,
+        inlcudeDisabledAccounts: boolean, includeMSAAccounts: boolean,
+        serviceOwners: function, galleryId: string, addUnlinkedSubscription?:
+        boolean, queryAccountsByUpn?: boolean)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.CommonMethods3To4.setEntriesForScope
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getAllOfferSubscriptionsForUser
     name: >-
-      setEntriesForScope(entries: function, userScope: string, scopeName:
-      string, scopeValue: string)
+      getAllOfferSubscriptionsForUser(validateAzuresubscription: boolean,
+      nextBillingPeriod: boolean)
     children: []
     langs:
       - typeScript
-    summary: '[Preview API] Set the specified entries for the given named scope'
+    summary: >-
+      [Preview API] Get all offer subscriptions for user for valid azure
+      subscriptions. This may be span across multiple accounts
     syntax:
       parameters:
-        - id: entries
+        - id: validateAzuresubscription
           type:
-            - function
-          description: The entries to set
-        - id: userScope
+            - boolean
+          description: ''
+        - id: nextBillingPeriod
           type:
-            - string
-          description: >-
-            User-Scope at which to set the values. Should be "me" for the
-            current user or "host" for all users.
-        - id: scopeName
-          type:
-            - string
-          description: Scope at which to set the settings on (e.g. "project" or "team")
-        - id: scopeValue
-          type:
-            - string
-          description: Value of the scope (e.g. the project or team id)
+            - boolean
+          description: True to return next billing cycle committed quantity
       content: >-
-        function setEntriesForScope(entries: function, userScope: string,
-        scopeName: string, scopeValue: string)
+        function getAllOfferSubscriptionsForUser(validateAzuresubscription:
+        boolean, nextBillingPeriod: boolean)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getAzureSubscriptionForPurchase
+    name: >-
+      getAzureSubscriptionForPurchase(subscriptionId: string, galleryItemId:
+      string, accountId?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      [Preview API] Validates specified azure subscription for purchase. Rules
+      such as msdn subscription, spending limit checks, etc are performed by
+      this method.
+    syntax:
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: Azure Subscription Id
+        - id: galleryItemId
+          type:
+            - string
+          description: Fully qualified gallery id
+        - id: accountId
+          type:
+            - string
+          description: Collection id
+          optional: true
+      content: >-
+        function getAzureSubscriptionForPurchase(subscriptionId: string,
+        galleryItemId: string, accountId?: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getAzureSubscriptionForUser
+    name: >-
+      getAzureSubscriptionForUser(subscriptionId?: string, queryAcrossTenants?:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API] Returns azure subscriptions across tenants.'
+    syntax:
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: Azure subscription id
+          optional: true
+        - id: queryAcrossTenants
+          type:
+            - boolean
+          description: >-
+            Query across multiple tenants if the logged in user is member of
+            multiple tenants
+          optional: true
+      content: >-
+        function getAzureSubscriptionForUser(subscriptionId?: string,
+        queryAcrossTenants?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getAzureSubscriptions
+    name: >-
+      getAzureSubscriptions(subscriptionIds: function, providerNamespaceId:
+      function)
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API] Get a list of Azure Subscriptions.'
+    syntax:
+      parameters:
+        - id: subscriptionIds
+          type:
+            - function
+          description: List of Subscriptions.
+        - id: providerNamespaceId
+          type:
+            - function
+          description: Namespace id.
+      content: >-
+        function getAzureSubscriptions(subscriptionIds: function,
+        providerNamespaceId: function)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getCommercePackage
+    name: 'getCommercePackage(version?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API]'
+    syntax:
+      parameters:
+        - id: version
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'function getCommercePackage(version?: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getOfferMeter
+    name: 'getOfferMeter(resourceName: string, resourceNameResolveMethod: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      [Preview API] Returns resource information like status, committed
+      quantity, included quantity, reset date, etc.
+    syntax:
+      parameters:
+        - id: resourceName
+          type:
+            - string
+          description: ''
+        - id: resourceNameResolveMethod
+          type:
+            - string
+          description: Method of how to retrieve the resource
+      content: >-
+        function getOfferMeter(resourceName: string, resourceNameResolveMethod:
+        string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getOfferMeterPrice
+    name: 'getOfferMeterPrice(galleryId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      [Preview API] Returns an enumerable of instances of price for the
+      specified offer meter in each region available
+    syntax:
+      parameters:
+        - id: galleryId
+          type:
+            - string
+          description: 'The name of the meter, e.g ms.testmanager-web'
+      content: 'function getOfferMeterPrice(galleryId: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getOfferMeters
+    name: getOfferMeters()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      [Preview API] Returns resource information like status, committed
+      quantity, included quantity, reset date, etc. about all available
+      resources
+    syntax:
+      parameters: []
+      content: function getOfferMeters()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getOfferSubscription
+    name: 'getOfferSubscription(galleryId: string, nextBillingPeriod?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      [Preview API] Returns resource information like status, committed
+      quantity, included quantity, reset date, etc.
+    syntax:
+      parameters:
+        - id: galleryId
+          type:
+            - string
+          description: Name of the resource
+        - id: nextBillingPeriod
+          type:
+            - boolean
+          description: True to return next billing cycle committed quantity
+          optional: true
+      content: >-
+        function getOfferSubscription(galleryId: string, nextBillingPeriod?:
+        boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.CommonMethods3To4.getOfferSubscriptionForRenewalGroup
+    name: >-
+      getOfferSubscriptionForRenewalGroup(galleryId: string, renewalGroup:
+      function, nextBillingPeriod?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      [Preview API] Returns resource information like status, committed
+      quantity, included quantity, reset date, etc.
+    syntax:
+      parameters:
+        - id: galleryId
+          type:
+            - string
+          description: Name of the resource
+        - id: renewalGroup
+          type:
+            - function
+          description: The renewal group.
+        - id: nextBillingPeriod
+          type:
+            - boolean
+          description: True to return next billing cycle committed quantity
+          optional: true
+      content: >-
+        function getOfferSubscriptionForRenewalGroup(galleryId: string,
+        renewalGroup: function, nextBillingPeriod?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getOfferSubscriptions
+    name: 'getOfferSubscriptions(nextBillingPeriod?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      [Preview API] Returns resource information like status, committed
+      quantity, included quantity, reset date, etc.
+    syntax:
+      parameters:
+        - id: nextBillingPeriod
+          type:
+            - boolean
+          description: True to return next billing cycle committed quantity
+          optional: true
+      content: 'function getOfferSubscriptions(nextBillingPeriod?: boolean)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.CommonMethods3To4.getOfferSubscriptionsForGalleryItem
+    name: >-
+      getOfferSubscriptionsForGalleryItem(galleryItemId: string,
+      azureSubscriptionId: string, nextBillingPeriod?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      [Preview API] Get all offer subscriptions for user for valid azure
+      subscriptions. This may be span across multiple accounts
+    syntax:
+      parameters:
+        - id: galleryItemId
+          type:
+            - string
+          description: ''
+        - id: azureSubscriptionId
+          type:
+            - string
+          description: ''
+        - id: nextBillingPeriod
+          type:
+            - boolean
+          description: True to return next billing cycle committed quantity
+          optional: true
+      content: >-
+        function getOfferSubscriptionsForGalleryItem(galleryItemId: string,
+        azureSubscriptionId: string, nextBillingPeriod?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getPurchasableOfferMeter
+    name: >-
+      getPurchasableOfferMeter(resourceName: string, resourceNameResolveMethod:
+      string, subscriptionId: string, includeMeterPricing: boolean, offerCode?:
+      string, tenantId?: string, objectId?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      [Preview API] Returns resource information like status, committed
+      quantity, included quantity, reset date, etc.
+    syntax:
+      parameters:
+        - id: resourceName
+          type:
+            - string
+          description: ''
+        - id: resourceNameResolveMethod
+          type:
+            - string
+          description: ''
+        - id: subscriptionId
+          type:
+            - string
+          description: ''
+        - id: includeMeterPricing
+          type:
+            - boolean
+          description: ''
+        - id: offerCode
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: tenantId
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: objectId
+          type:
+            - string
+          description: ''
+          optional: true
+      content: >-
+        function getPurchasableOfferMeter(resourceName: string,
+        resourceNameResolveMethod: string, subscriptionId: string,
+        includeMeterPricing: boolean, offerCode?: string, tenantId?: string,
+        objectId?: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getResourceStatus
+    name: 'getResourceStatus(nextBillingPeriod?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      [Preview API] Returns resource information like status, committed
+      quantity, included quantity, reset date, etc.
+    syntax:
+      parameters:
+        - id: nextBillingPeriod
+          type:
+            - boolean
+          description: True to return next billing cycle committed quantity
+          optional: true
+      content: 'function getResourceStatus(nextBillingPeriod?: boolean)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getResourceStatusByResourceName
+    name: >-
+      getResourceStatusByResourceName(resourceName: function,
+      nextBillingPeriod?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      [Preview API] Returns resource information like status, committed
+      quantity, included quantity, reset date, etc.
+    syntax:
+      parameters:
+        - id: resourceName
+          type:
+            - function
+          description: Name of the resource
+        - id: nextBillingPeriod
+          type:
+            - boolean
+          description: True to return next billing cycle committed quantity
+          optional: true
+      content: >-
+        function getResourceStatusByResourceName(resourceName: function,
+        nextBillingPeriod?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getSubscriptionAccount
+    name: 'getSubscriptionAccount(providerNamespaceId: function, accountId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      [Preview API] Retrieves the subscription id associated to an account or
+      null if no subscription is associated.
+    syntax:
+      parameters:
+        - id: providerNamespaceId
+          type:
+            - function
+          description: ''
+        - id: accountId
+          type:
+            - string
+          description: ''
+      content: >-
+        function getSubscriptionAccount(providerNamespaceId: function,
+        accountId: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.getUsage
+    name: 'getUsage(startTime: Date, endTime: Date, timeSpan: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      [Preview API] Returns the aggregate resource usage over the specified time
+      range WARNING: The return value of this method is significantly different
+      than the post method on this controller. This is an aggregation of usage
+      events over time rather than individual usage event(s).
+    syntax:
+      parameters:
+        - id: startTime
+          type:
+            - Date
+          description: 'Start of the the time range to retrieve, inclusive'
+        - id: endTime
+          type:
+            - Date
+          description: 'End of the time range to retrieve, exclusive'
+        - id: timeSpan
+          type:
+            - any
+          description: >-
+            Interval of the time to retrieve, should be in a multiple of hour or
+            day
+      content: 'function getUsage(startTime: Date, endTime: Date, timeSpan: any)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.linkAccount
+    name: >-
+      linkAccount(subscriptionId: string, providerNamespaceId: function,
+      accountId: string, ownerId: string, hydrate?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API] Links the account to a subscription.'
+    syntax:
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: The subscription identifier.
+        - id: providerNamespaceId
+          type:
+            - function
+          description: The provider namespace identifier.
+        - id: accountId
+          type:
+            - string
+          description: The account identifier.
+        - id: ownerId
+          type:
+            - string
+          description: The account owner identifier.
+        - id: hydrate
+          type:
+            - boolean
+          description: Whether or not the hydrate the account into ARM.
+          optional: true
+      content: >-
+        function linkAccount(subscriptionId: string, providerNamespaceId:
+        function, accountId: string, ownerId: string, hydrate?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.metersApiVersion
+    name: metersApiVersion
+    fullName: metersApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CommonMethods3To4.offerMeterApiVersion
+    name: offerMeterApiVersion
+    fullName: offerMeterApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CommonMethods3To4.offerMeterPriceApiVersion
+    name: offerMeterPriceApiVersion
+    fullName: offerMeterPriceApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CommonMethods3To4.offerSubscriptionApiVersion
+    name: offerSubscriptionApiVersion
+    fullName: offerSubscriptionApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CommonMethods3To4.regionsApiVersion
+    name: regionsApiVersion
+    fullName: regionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CommonMethods3To4.reportUsage
+    name: 'reportUsage(usageEvent: UsageEvent)'
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API] Saves usage entry of a resource.'
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.UsageEvent
+          type:
+            - UsageEvent
+          description: Detailed usage event
+      content: 'function reportUsage(usageEvent: UsageEvent)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.serviceInstanceId
+    name: serviceInstanceId
+    fullName: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CommonMethods3To4.subscriptionApiVersion
+    name: subscriptionApiVersion
+    fullName: subscriptionApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CommonMethods3To4.unlinkAccount
+    name: >-
+      unlinkAccount(subscriptionId: string, providerNamespaceId: function,
+      accountId: string, ownerId: string)
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API] Unlinks an account from the subscription.'
+    syntax:
+      parameters:
+        - id: subscriptionId
+          type:
+            - string
+          description: The subscription identifier.
+        - id: providerNamespaceId
+          type:
+            - function
+          description: The provider namespace identifier.
+        - id: accountId
+          type:
+            - string
+          description: The account identifier.
+        - id: ownerId
+          type:
+            - string
+          description: The account owner identifier.
+      content: >-
+        function unlinkAccount(subscriptionId: string, providerNamespaceId:
+        function, accountId: string, ownerId: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.updateMeter
+    name: 'updateMeter(meter: SubscriptionResource)'
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API] Sets the maximum and included quantities for a resource'
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.SubscriptionResource
+          type:
+            - SubscriptionResource
+          description: ''
+      content: 'function updateMeter(meter: SubscriptionResource)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.updateOfferSubscription
+    name: 'updateOfferSubscription(offerSubscription: OfferSubscription)'
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API] Sets the maximum and included quantities for a resource'
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.OfferSubscription
+          type:
+            - OfferSubscription
+          description: ''
+      content: 'function updateOfferSubscription(offerSubscription: OfferSubscription)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods3To4.usageEventsApiVersion
+    name: usageEventsApiVersion
+    fullName: usageEventsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.CommonMethods3To4._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []

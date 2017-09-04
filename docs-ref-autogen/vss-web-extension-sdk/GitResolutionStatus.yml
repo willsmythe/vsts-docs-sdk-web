@@ -4,13 +4,21 @@ items:
     name: GitResolutionStatus
     fullName: GitResolutionStatus
     children:
+      - vss-web-extension-sdk.GitResolutionStatus.Unresolved
       - vss-web-extension-sdk.GitResolutionStatus.PartiallyResolved
       - vss-web-extension-sdk.GitResolutionStatus.Resolved
-      - vss-web-extension-sdk.GitResolutionStatus.Unresolved
     langs:
       - typeScript
     type: enum
     summary: Resolution status of a conflict.
+  - uid: vss-web-extension-sdk.GitResolutionStatus.Unresolved
+    name: Unresolved
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 0
   - uid: vss-web-extension-sdk.GitResolutionStatus.PartiallyResolved
     name: PartiallyResolved
     children: []
@@ -27,11 +35,3 @@ items:
     summary: ''
     type: field
     numericValue: 2
-  - uid: vss-web-extension-sdk.GitResolutionStatus.Unresolved
-    name: Unresolved
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 0

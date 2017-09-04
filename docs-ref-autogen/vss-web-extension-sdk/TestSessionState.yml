@@ -4,16 +4,48 @@ items:
     name: TestSessionState
     fullName: TestSessionState
     children:
+      - vss-web-extension-sdk.TestSessionState.Unspecified
+      - vss-web-extension-sdk.TestSessionState.NotStarted
+      - vss-web-extension-sdk.TestSessionState.InProgress
+      - vss-web-extension-sdk.TestSessionState.Paused
       - vss-web-extension-sdk.TestSessionState.Completed
       - vss-web-extension-sdk.TestSessionState.Declined
-      - vss-web-extension-sdk.TestSessionState.InProgress
-      - vss-web-extension-sdk.TestSessionState.NotStarted
-      - vss-web-extension-sdk.TestSessionState.Paused
-      - vss-web-extension-sdk.TestSessionState.Unspecified
     langs:
       - typeScript
     type: enum
     summary: Represents the state of the test session.
+  - uid: vss-web-extension-sdk.TestSessionState.Unspecified
+    name: Unspecified
+    children: []
+    langs:
+      - typeScript
+    summary: Only used during an update to preserve the existing value.
+    type: field
+    numericValue: 0
+  - uid: vss-web-extension-sdk.TestSessionState.NotStarted
+    name: NotStarted
+    children: []
+    langs:
+      - typeScript
+    summary: The session is still being created.
+    type: field
+    numericValue: 1
+  - uid: vss-web-extension-sdk.TestSessionState.InProgress
+    name: InProgress
+    children: []
+    langs:
+      - typeScript
+    summary: The session is running.
+    type: field
+    numericValue: 2
+  - uid: vss-web-extension-sdk.TestSessionState.Paused
+    name: Paused
+    children: []
+    langs:
+      - typeScript
+    summary: The session has paused.
+    type: field
+    numericValue: 3
   - uid: vss-web-extension-sdk.TestSessionState.Completed
     name: Completed
     children: []
@@ -30,35 +62,3 @@ items:
     summary: This is required for Feedback session which are declined
     type: field
     numericValue: 5
-  - uid: vss-web-extension-sdk.TestSessionState.InProgress
-    name: InProgress
-    children: []
-    langs:
-      - typeScript
-    summary: The session is running.
-    type: field
-    numericValue: 2
-  - uid: vss-web-extension-sdk.TestSessionState.NotStarted
-    name: NotStarted
-    children: []
-    langs:
-      - typeScript
-    summary: The session is still being created.
-    type: field
-    numericValue: 1
-  - uid: vss-web-extension-sdk.TestSessionState.Paused
-    name: Paused
-    children: []
-    langs:
-      - typeScript
-    summary: The session has paused.
-    type: field
-    numericValue: 3
-  - uid: vss-web-extension-sdk.TestSessionState.Unspecified
-    name: Unspecified
-    children: []
-    langs:
-      - typeScript
-    summary: Only used during an update to preserve the existing value.
-    type: field
-    numericValue: 0

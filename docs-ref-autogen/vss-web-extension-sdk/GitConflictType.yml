@@ -4,16 +4,16 @@ items:
     name: GitConflictType
     fullName: GitConflictType
     children:
+      - vss-web-extension-sdk.GitConflictType.None
       - vss-web-extension-sdk.GitConflictType.AddAdd
       - vss-web-extension-sdk.GitConflictType.AddRename
       - vss-web-extension-sdk.GitConflictType.DeleteEdit
       - vss-web-extension-sdk.GitConflictType.DeleteRename
-      - vss-web-extension-sdk.GitConflictType.DirectoryChild
       - vss-web-extension-sdk.GitConflictType.DirectoryFile
+      - vss-web-extension-sdk.GitConflictType.DirectoryChild
       - vss-web-extension-sdk.GitConflictType.EditDelete
       - vss-web-extension-sdk.GitConflictType.EditEdit
       - vss-web-extension-sdk.GitConflictType.FileDirectory
-      - vss-web-extension-sdk.GitConflictType.None
       - vss-web-extension-sdk.GitConflictType.Rename1to2
       - vss-web-extension-sdk.GitConflictType.Rename2to1
       - vss-web-extension-sdk.GitConflictType.RenameAdd
@@ -23,6 +23,14 @@ items:
       - typeScript
     type: enum
     summary: The type of a merge conflict.
+  - uid: vss-web-extension-sdk.GitConflictType.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: No conflict
+    type: field
+    numericValue: 0
   - uid: vss-web-extension-sdk.GitConflictType.AddAdd
     name: AddAdd
     children: []
@@ -55,14 +63,6 @@ items:
     summary: Deleted on source and renamed on target
     type: field
     numericValue: 4
-  - uid: vss-web-extension-sdk.GitConflictType.DirectoryChild
-    name: DirectoryChild
-    children: []
-    langs:
-      - typeScript
-    summary: Children of directory which has DirectoryFile or FileDirectory conflict
-    type: field
-    numericValue: 6
   - uid: vss-web-extension-sdk.GitConflictType.DirectoryFile
     name: DirectoryFile
     children: []
@@ -71,6 +71,14 @@ items:
     summary: Path is a directory on source and a file on target
     type: field
     numericValue: 5
+  - uid: vss-web-extension-sdk.GitConflictType.DirectoryChild
+    name: DirectoryChild
+    children: []
+    langs:
+      - typeScript
+    summary: Children of directory which has DirectoryFile or FileDirectory conflict
+    type: field
+    numericValue: 6
   - uid: vss-web-extension-sdk.GitConflictType.EditDelete
     name: EditDelete
     children: []
@@ -95,14 +103,6 @@ items:
     summary: Path is a file on source and a directory on target
     type: field
     numericValue: 9
-  - uid: vss-web-extension-sdk.GitConflictType.None
-    name: None
-    children: []
-    langs:
-      - typeScript
-    summary: No conflict
-    type: field
-    numericValue: 0
   - uid: vss-web-extension-sdk.GitConflictType.Rename1to2
     name: Rename1to2
     children: []

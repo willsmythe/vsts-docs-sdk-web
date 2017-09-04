@@ -12,22 +12,21 @@ items:
       - vss-web-extension-sdk.TimelineRecord.id
       - vss-web-extension-sdk.TimelineRecord.issues
       - vss-web-extension-sdk.TimelineRecord.lastModified
-      - vss-web-extension-sdk.TimelineRecord.location
       - vss-web-extension-sdk.TimelineRecord.log
       - vss-web-extension-sdk.TimelineRecord.name
       - vss-web-extension-sdk.TimelineRecord.order
       - vss-web-extension-sdk.TimelineRecord.parentId
       - vss-web-extension-sdk.TimelineRecord.percentComplete
-      - vss-web-extension-sdk.TimelineRecord.refName
       - vss-web-extension-sdk.TimelineRecord.result
       - vss-web-extension-sdk.TimelineRecord.resultCode
       - vss-web-extension-sdk.TimelineRecord.startTime
       - vss-web-extension-sdk.TimelineRecord.state
       - vss-web-extension-sdk.TimelineRecord.task
       - vss-web-extension-sdk.TimelineRecord.type
-      - vss-web-extension-sdk.TimelineRecord.variables
+      - vss-web-extension-sdk.TimelineRecord.url
       - vss-web-extension-sdk.TimelineRecord.warningCount
       - vss-web-extension-sdk.TimelineRecord.workerName
+      - vss-web-extension-sdk.TimelineRecord._links
     langs:
       - typeScript
     type: interface
@@ -128,18 +127,6 @@ items:
       return:
         type:
           - Date
-  - uid: vss-web-extension-sdk.TimelineRecord.location
-    name: location
-    fullName: location
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TimelineRecord.log
     name: log
     fullName: log
@@ -151,7 +138,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TaskLogReference
+          - vss-web-extension-sdk.BuildLogReference
   - uid: vss-web-extension-sdk.TimelineRecord.name
     name: name
     fullName: name
@@ -200,18 +187,6 @@ items:
       return:
         type:
           - number
-  - uid: vss-web-extension-sdk.TimelineRecord.refName
-    name: refName
-    fullName: refName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TimelineRecord.result
     name: result
     fullName: result
@@ -284,9 +259,9 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TimelineRecord.variables
-    name: variables
-    fullName: variables
+  - uid: vss-web-extension-sdk.TimelineRecord.url
+    name: url
+    fullName: url
     children: []
     langs:
       - typeScript
@@ -295,7 +270,7 @@ items:
     syntax:
       return:
         type:
-          - union
+          - string
   - uid: vss-web-extension-sdk.TimelineRecord.warningCount
     name: warningCount
     fullName: warningCount
@@ -320,3 +295,15 @@ items:
       return:
         type:
           - string
+  - uid: vss-web-extension-sdk.TimelineRecord._links
+    name: _links
+    fullName: _links
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any

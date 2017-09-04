@@ -5,8 +5,8 @@ items:
     fullName: GitVersionType
     children:
       - vss-web-extension-sdk.GitVersionType.Branch
-      - vss-web-extension-sdk.GitVersionType.Commit
       - vss-web-extension-sdk.GitVersionType.Tag
+      - vss-web-extension-sdk.GitVersionType.Commit
     langs:
       - typeScript
     type: enum
@@ -19,14 +19,6 @@ items:
     summary: Interpret the version as a branch name
     type: field
     numericValue: 0
-  - uid: vss-web-extension-sdk.GitVersionType.Commit
-    name: Commit
-    children: []
-    langs:
-      - typeScript
-    summary: Interpret the version as a commit ID (SHA1)
-    type: field
-    numericValue: 2
   - uid: vss-web-extension-sdk.GitVersionType.Tag
     name: Tag
     children: []
@@ -35,3 +27,11 @@ items:
     summary: Interpret the version as a tag name
     type: field
     numericValue: 1
+  - uid: vss-web-extension-sdk.GitVersionType.Commit
+    name: Commit
+    children: []
+    langs:
+      - typeScript
+    summary: Interpret the version as a commit ID (SHA1)
+    type: field
+    numericValue: 2

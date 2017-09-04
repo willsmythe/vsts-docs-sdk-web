@@ -8,10 +8,7 @@ items:
       - vss-web-extension-sdk.SqlDbType.Binary
       - vss-web-extension-sdk.SqlDbType.Bit
       - vss-web-extension-sdk.SqlDbType.Char
-      - vss-web-extension-sdk.SqlDbType.Date
       - vss-web-extension-sdk.SqlDbType.DateTime
-      - vss-web-extension-sdk.SqlDbType.DateTime2
-      - vss-web-extension-sdk.SqlDbType.DateTimeOffset
       - vss-web-extension-sdk.SqlDbType.Decimal
       - vss-web-extension-sdk.SqlDbType.Float
       - vss-web-extension-sdk.SqlDbType.Image
@@ -21,20 +18,23 @@ items:
       - vss-web-extension-sdk.SqlDbType.NText
       - vss-web-extension-sdk.SqlDbType.NVarChar
       - vss-web-extension-sdk.SqlDbType.Real
+      - vss-web-extension-sdk.SqlDbType.UniqueIdentifier
       - vss-web-extension-sdk.SqlDbType.SmallDateTime
       - vss-web-extension-sdk.SqlDbType.SmallInt
       - vss-web-extension-sdk.SqlDbType.SmallMoney
-      - vss-web-extension-sdk.SqlDbType.Structured
       - vss-web-extension-sdk.SqlDbType.Text
-      - vss-web-extension-sdk.SqlDbType.Time
       - vss-web-extension-sdk.SqlDbType.Timestamp
       - vss-web-extension-sdk.SqlDbType.TinyInt
-      - vss-web-extension-sdk.SqlDbType.Udt
-      - vss-web-extension-sdk.SqlDbType.UniqueIdentifier
       - vss-web-extension-sdk.SqlDbType.VarBinary
       - vss-web-extension-sdk.SqlDbType.VarChar
       - vss-web-extension-sdk.SqlDbType.Variant
       - vss-web-extension-sdk.SqlDbType.Xml
+      - vss-web-extension-sdk.SqlDbType.Udt
+      - vss-web-extension-sdk.SqlDbType.Structured
+      - vss-web-extension-sdk.SqlDbType.Date
+      - vss-web-extension-sdk.SqlDbType.Time
+      - vss-web-extension-sdk.SqlDbType.DateTime2
+      - vss-web-extension-sdk.SqlDbType.DateTimeOffset
     langs:
       - typeScript
     type: enum
@@ -77,16 +77,6 @@ items:
       and 8,000 characters.
     type: field
     numericValue: 3
-  - uid: vss-web-extension-sdk.SqlDbType.Date
-    name: Date
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Date data ranging in value from January 1,1 AD through December 31, 9999
-      AD.
-    type: field
-    numericValue: 31
   - uid: vss-web-extension-sdk.SqlDbType.DateTime
     name: DateTime
     children: []
@@ -97,29 +87,6 @@ items:
       December 31, 9999 to an accuracy of 3.33 milliseconds.
     type: field
     numericValue: 4
-  - uid: vss-web-extension-sdk.SqlDbType.DateTime2
-    name: DateTime2
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Date and time data. Date value range is from January 1,1 AD through
-      December 31, 9999 AD. Time value range is 00:00:00 through
-      23:59:59.9999999 with an accuracy of 100 nanoseconds.
-    type: field
-    numericValue: 33
-  - uid: vss-web-extension-sdk.SqlDbType.DateTimeOffset
-    name: DateTimeOffset
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Date and time data with time zone awareness. Date value range is from
-      January 1,1 AD through December 31, 9999 AD. Time value range is 00:00:00
-      through 23:59:59.9999999 with an accuracy of 100 nanoseconds. Time zone
-      value range is -14:00 through +14:00.
-    type: field
-    numericValue: 34
   - uid: vss-web-extension-sdk.SqlDbType.Decimal
     name: Decimal
     children: []
@@ -212,6 +179,14 @@ items:
       3.40E +38.
     type: field
     numericValue: 13
+  - uid: vss-web-extension-sdk.SqlDbType.UniqueIdentifier
+    name: UniqueIdentifier
+    children: []
+    langs:
+      - typeScript
+    summary: Guid. A globally unique identifier (or GUID).
+    type: field
+    numericValue: 14
   - uid: vss-web-extension-sdk.SqlDbType.SmallDateTime
     name: SmallDateTime
     children: []
@@ -240,16 +215,6 @@ items:
       an accuracy to a ten-thousandth of a currency unit.
     type: field
     numericValue: 17
-  - uid: vss-web-extension-sdk.SqlDbType.Structured
-    name: Structured
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      A special data type for specifying structured data contained in
-      table-valued parameters.
-    type: field
-    numericValue: 30
   - uid: vss-web-extension-sdk.SqlDbType.Text
     name: Text
     children: []
@@ -260,17 +225,6 @@ items:
       of 2 31 -1 (or 2,147,483,647) characters.
     type: field
     numericValue: 18
-  - uid: vss-web-extension-sdk.SqlDbType.Time
-    name: Time
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Time data based on a 24-hour clock. Time value range is 00:00:00 through
-      23:59:59.9999999 with an accuracy of 100 nanoseconds. Corresponds to a SQL
-      Server time value.
-    type: field
-    numericValue: 32
   - uid: vss-web-extension-sdk.SqlDbType.Timestamp
     name: Timestamp
     children: []
@@ -291,22 +245,6 @@ items:
     summary: Byte. An 8-bit unsigned integer.
     type: field
     numericValue: 20
-  - uid: vss-web-extension-sdk.SqlDbType.Udt
-    name: Udt
-    children: []
-    langs:
-      - typeScript
-    summary: A SQL Server user-defined type (UDT).
-    type: field
-    numericValue: 29
-  - uid: vss-web-extension-sdk.SqlDbType.UniqueIdentifier
-    name: UniqueIdentifier
-    children: []
-    langs:
-      - typeScript
-    summary: Guid. A globally unique identifier (or GUID).
-    type: field
-    numericValue: 14
   - uid: vss-web-extension-sdk.SqlDbType.VarBinary
     name: VarBinary
     children: []
@@ -353,3 +291,65 @@ items:
       by calling the System.Data.SqlTypes.SqlXml.CreateReader method.
     type: field
     numericValue: 25
+  - uid: vss-web-extension-sdk.SqlDbType.Udt
+    name: Udt
+    children: []
+    langs:
+      - typeScript
+    summary: A SQL Server user-defined type (UDT).
+    type: field
+    numericValue: 29
+  - uid: vss-web-extension-sdk.SqlDbType.Structured
+    name: Structured
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      A special data type for specifying structured data contained in
+      table-valued parameters.
+    type: field
+    numericValue: 30
+  - uid: vss-web-extension-sdk.SqlDbType.Date
+    name: Date
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Date data ranging in value from January 1,1 AD through December 31, 9999
+      AD.
+    type: field
+    numericValue: 31
+  - uid: vss-web-extension-sdk.SqlDbType.Time
+    name: Time
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Time data based on a 24-hour clock. Time value range is 00:00:00 through
+      23:59:59.9999999 with an accuracy of 100 nanoseconds. Corresponds to a SQL
+      Server time value.
+    type: field
+    numericValue: 32
+  - uid: vss-web-extension-sdk.SqlDbType.DateTime2
+    name: DateTime2
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Date and time data. Date value range is from January 1,1 AD through
+      December 31, 9999 AD. Time value range is 00:00:00 through
+      23:59:59.9999999 with an accuracy of 100 nanoseconds.
+    type: field
+    numericValue: 33
+  - uid: vss-web-extension-sdk.SqlDbType.DateTimeOffset
+    name: DateTimeOffset
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Date and time data with time zone awareness. Date value range is from
+      January 1,1 AD through December 31, 9999 AD. Time value range is 00:00:00
+      through 23:59:59.9999999 with an accuracy of 100 nanoseconds. Time zone
+      value range is -14:00 through +14:00.
+    type: field
+    numericValue: 34

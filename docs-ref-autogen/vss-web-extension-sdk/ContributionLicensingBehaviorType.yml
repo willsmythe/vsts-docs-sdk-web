@@ -4,23 +4,13 @@ items:
     name: ContributionLicensingBehaviorType
     fullName: ContributionLicensingBehaviorType
     children:
-      - vss-web-extension-sdk.ContributionLicensingBehaviorType.AlwaysInclude
       - vss-web-extension-sdk.ContributionLicensingBehaviorType.OnlyIfLicensed
       - vss-web-extension-sdk.ContributionLicensingBehaviorType.OnlyIfUnlicensed
+      - vss-web-extension-sdk.ContributionLicensingBehaviorType.AlwaysInclude
     langs:
       - typeScript
     type: enum
     summary: Represents different ways of including contributions based on licensing
-  - uid: vss-web-extension-sdk.ContributionLicensingBehaviorType.AlwaysInclude
-    name: AlwaysInclude
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Always include the contribution regardless of whether or not the user is
-      licensed for the extension
-    type: field
-    numericValue: 2
   - uid: vss-web-extension-sdk.ContributionLicensingBehaviorType.OnlyIfLicensed
     name: OnlyIfLicensed
     children: []
@@ -41,3 +31,13 @@ items:
       extension
     type: field
     numericValue: 1
+  - uid: vss-web-extension-sdk.ContributionLicensingBehaviorType.AlwaysInclude
+    name: AlwaysInclude
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Always include the contribution regardless of whether or not the user is
+      licensed for the extension
+    type: field
+    numericValue: 2

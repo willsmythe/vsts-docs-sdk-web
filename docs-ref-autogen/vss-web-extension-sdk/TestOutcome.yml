@@ -4,54 +4,52 @@ items:
     name: TestOutcome
     fullName: TestOutcome
     children:
-      - vss-web-extension-sdk.TestOutcome.Aborted
-      - vss-web-extension-sdk.TestOutcome.Blocked
-      - vss-web-extension-sdk.TestOutcome.Error
+      - vss-web-extension-sdk.TestOutcome.Unspecified
+      - vss-web-extension-sdk.TestOutcome.None
+      - vss-web-extension-sdk.TestOutcome.Passed
       - vss-web-extension-sdk.TestOutcome.Failed
       - vss-web-extension-sdk.TestOutcome.Inconclusive
-      - vss-web-extension-sdk.TestOutcome.InProgress
-      - vss-web-extension-sdk.TestOutcome.MaxValue
-      - vss-web-extension-sdk.TestOutcome.None
-      - vss-web-extension-sdk.TestOutcome.NotApplicable
-      - vss-web-extension-sdk.TestOutcome.NotExecuted
-      - vss-web-extension-sdk.TestOutcome.NotImpacted
-      - vss-web-extension-sdk.TestOutcome.Passed
-      - vss-web-extension-sdk.TestOutcome.Paused
       - vss-web-extension-sdk.TestOutcome.Timeout
-      - vss-web-extension-sdk.TestOutcome.Unspecified
+      - vss-web-extension-sdk.TestOutcome.Aborted
+      - vss-web-extension-sdk.TestOutcome.Blocked
+      - vss-web-extension-sdk.TestOutcome.NotExecuted
       - vss-web-extension-sdk.TestOutcome.Warning
+      - vss-web-extension-sdk.TestOutcome.Error
+      - vss-web-extension-sdk.TestOutcome.NotApplicable
+      - vss-web-extension-sdk.TestOutcome.Paused
+      - vss-web-extension-sdk.TestOutcome.InProgress
+      - vss-web-extension-sdk.TestOutcome.NotImpacted
+      - vss-web-extension-sdk.TestOutcome.MaxValue
     langs:
       - typeScript
     type: enum
     summary: ''
-  - uid: vss-web-extension-sdk.TestOutcome.Aborted
-    name: Aborted
+  - uid: vss-web-extension-sdk.TestOutcome.Unspecified
+    name: Unspecified
+    children: []
+    langs:
+      - typeScript
+    summary: Only used during an update to preserve the existing value.
+    type: field
+    numericValue: 0
+  - uid: vss-web-extension-sdk.TestOutcome.None
+    name: None
     children: []
     langs:
       - typeScript
     summary: >-
-      Test was aborted. This was not caused by a user gesture, but rather by a
-      framework decision.
+      Test has not been completed, or the test type does not report
+      pass/failure.
     type: field
-    numericValue: 6
-  - uid: vss-web-extension-sdk.TestOutcome.Blocked
-    name: Blocked
+    numericValue: 1
+  - uid: vss-web-extension-sdk.TestOutcome.Passed
+    name: Passed
     children: []
     langs:
       - typeScript
-    summary: >-
-      Test had it chance for been executed but was not, as
-      ITestElement.IsRunnable == false.
+    summary: Test was executed w/o any issues.
     type: field
-    numericValue: 7
-  - uid: vss-web-extension-sdk.TestOutcome.Error
-    name: Error
-    children: []
-    langs:
-      - typeScript
-    summary: There was a system error while we were trying to execute a test.
-    type: field
-    numericValue: 10
+    numericValue: 2
   - uid: vss-web-extension-sdk.TestOutcome.Failed
     name: Failed
     children: []
@@ -72,40 +70,34 @@ items:
       for aborted tests...
     type: field
     numericValue: 4
-  - uid: vss-web-extension-sdk.TestOutcome.InProgress
-    name: InProgress
+  - uid: vss-web-extension-sdk.TestOutcome.Timeout
+    name: Timeout
     children: []
     langs:
       - typeScript
-    summary: Test is currently executing. Added this for TCM charts
+    summary: The test timed out
     type: field
-    numericValue: 13
-  - uid: vss-web-extension-sdk.TestOutcome.MaxValue
-    name: MaxValue
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 14
-  - uid: vss-web-extension-sdk.TestOutcome.None
-    name: None
+    numericValue: 5
+  - uid: vss-web-extension-sdk.TestOutcome.Aborted
+    name: Aborted
     children: []
     langs:
       - typeScript
     summary: >-
-      Test has not been completed, or the test type does not report
-      pass/failure.
+      Test was aborted. This was not caused by a user gesture, but rather by a
+      framework decision.
     type: field
-    numericValue: 1
-  - uid: vss-web-extension-sdk.TestOutcome.NotApplicable
-    name: NotApplicable
+    numericValue: 6
+  - uid: vss-web-extension-sdk.TestOutcome.Blocked
+    name: Blocked
     children: []
     langs:
       - typeScript
-    summary: Test is Not Applicable for execution.
+    summary: >-
+      Test had it chance for been executed but was not, as
+      ITestElement.IsRunnable == false.
     type: field
-    numericValue: 11
+    numericValue: 7
   - uid: vss-web-extension-sdk.TestOutcome.NotExecuted
     name: NotExecuted
     children: []
@@ -116,46 +108,6 @@ items:
       stop button.
     type: field
     numericValue: 8
-  - uid: vss-web-extension-sdk.TestOutcome.NotImpacted
-    name: NotImpacted
-    children: []
-    langs:
-      - typeScript
-    summary: Test is not impacted. Added fot TIA.
-    type: field
-    numericValue: 14
-  - uid: vss-web-extension-sdk.TestOutcome.Passed
-    name: Passed
-    children: []
-    langs:
-      - typeScript
-    summary: Test was executed w/o any issues.
-    type: field
-    numericValue: 2
-  - uid: vss-web-extension-sdk.TestOutcome.Paused
-    name: Paused
-    children: []
-    langs:
-      - typeScript
-    summary: Test is paused.
-    type: field
-    numericValue: 12
-  - uid: vss-web-extension-sdk.TestOutcome.Timeout
-    name: Timeout
-    children: []
-    langs:
-      - typeScript
-    summary: The test timed out
-    type: field
-    numericValue: 5
-  - uid: vss-web-extension-sdk.TestOutcome.Unspecified
-    name: Unspecified
-    children: []
-    langs:
-      - typeScript
-    summary: Only used during an update to preserve the existing value.
-    type: field
-    numericValue: 0
   - uid: vss-web-extension-sdk.TestOutcome.Warning
     name: Warning
     children: []
@@ -164,3 +116,51 @@ items:
     summary: To be used by Run level results. This is not a failure.
     type: field
     numericValue: 9
+  - uid: vss-web-extension-sdk.TestOutcome.Error
+    name: Error
+    children: []
+    langs:
+      - typeScript
+    summary: There was a system error while we were trying to execute a test.
+    type: field
+    numericValue: 10
+  - uid: vss-web-extension-sdk.TestOutcome.NotApplicable
+    name: NotApplicable
+    children: []
+    langs:
+      - typeScript
+    summary: Test is Not Applicable for execution.
+    type: field
+    numericValue: 11
+  - uid: vss-web-extension-sdk.TestOutcome.Paused
+    name: Paused
+    children: []
+    langs:
+      - typeScript
+    summary: Test is paused.
+    type: field
+    numericValue: 12
+  - uid: vss-web-extension-sdk.TestOutcome.InProgress
+    name: InProgress
+    children: []
+    langs:
+      - typeScript
+    summary: Test is currently executing. Added this for TCM charts
+    type: field
+    numericValue: 13
+  - uid: vss-web-extension-sdk.TestOutcome.NotImpacted
+    name: NotImpacted
+    children: []
+    langs:
+      - typeScript
+    summary: Test is not impacted. Added fot TIA.
+    type: field
+    numericValue: 14
+  - uid: vss-web-extension-sdk.TestOutcome.MaxValue
+    name: MaxValue
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 14

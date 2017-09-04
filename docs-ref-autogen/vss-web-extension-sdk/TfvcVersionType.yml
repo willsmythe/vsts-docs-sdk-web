@@ -4,26 +4,26 @@ items:
     name: TfvcVersionType
     fullName: TfvcVersionType
     children:
-      - vss-web-extension-sdk.TfvcVersionType.Change
+      - vss-web-extension-sdk.TfvcVersionType.None
       - vss-web-extension-sdk.TfvcVersionType.Changeset
+      - vss-web-extension-sdk.TfvcVersionType.Shelveset
+      - vss-web-extension-sdk.TfvcVersionType.Change
       - vss-web-extension-sdk.TfvcVersionType.Date
       - vss-web-extension-sdk.TfvcVersionType.Latest
-      - vss-web-extension-sdk.TfvcVersionType.MergeSource
-      - vss-web-extension-sdk.TfvcVersionType.None
-      - vss-web-extension-sdk.TfvcVersionType.Shelveset
       - vss-web-extension-sdk.TfvcVersionType.Tip
+      - vss-web-extension-sdk.TfvcVersionType.MergeSource
     langs:
       - typeScript
     type: enum
     summary: ''
-  - uid: vss-web-extension-sdk.TfvcVersionType.Change
-    name: Change
+  - uid: vss-web-extension-sdk.TfvcVersionType.None
+    name: None
     children: []
     langs:
       - typeScript
     summary: ''
     type: field
-    numericValue: 3
+    numericValue: 0
   - uid: vss-web-extension-sdk.TfvcVersionType.Changeset
     name: Changeset
     children: []
@@ -32,6 +32,22 @@ items:
     summary: ''
     type: field
     numericValue: 1
+  - uid: vss-web-extension-sdk.TfvcVersionType.Shelveset
+    name: Shelveset
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 2
+  - uid: vss-web-extension-sdk.TfvcVersionType.Change
+    name: Change
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 3
   - uid: vss-web-extension-sdk.TfvcVersionType.Date
     name: Date
     children: []
@@ -48,30 +64,6 @@ items:
     summary: ''
     type: field
     numericValue: 5
-  - uid: vss-web-extension-sdk.TfvcVersionType.MergeSource
-    name: MergeSource
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 7
-  - uid: vss-web-extension-sdk.TfvcVersionType.None
-    name: None
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 0
-  - uid: vss-web-extension-sdk.TfvcVersionType.Shelveset
-    name: Shelveset
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 2
   - uid: vss-web-extension-sdk.TfvcVersionType.Tip
     name: Tip
     children: []
@@ -80,3 +72,11 @@ items:
     summary: ''
     type: field
     numericValue: 6
+  - uid: vss-web-extension-sdk.TfvcVersionType.MergeSource
+    name: MergeSource
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 7

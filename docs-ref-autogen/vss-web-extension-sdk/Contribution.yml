@@ -37,7 +37,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Description of the contribution/type
     syntax:
       return:
         type:
@@ -49,7 +49,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Fully qualified identifier of the contribution/type
     syntax:
       return:
         type:
@@ -113,7 +113,12 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      VisibleTo can be used to restrict whom can reference a given
+      contribution/type. This value should be a list of publishers or extensions
+      access is restricted too.  Examples: "ms" - Means only the "ms" publisher
+      can reference this. "ms.vss-web" - Means only the "vss-web" extension from
+      the "ms" publisher can reference this.
     syntax:
       return:
         type:

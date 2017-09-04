@@ -4,20 +4,12 @@ items:
     name: ServiceHostStatus
     fullName: ServiceHostStatus
     children:
-      - vss-web-extension-sdk.ServiceHostStatus.Offline
       - vss-web-extension-sdk.ServiceHostStatus.Online
+      - vss-web-extension-sdk.ServiceHostStatus.Offline
     langs:
       - typeScript
     type: enum
     summary: ''
-  - uid: vss-web-extension-sdk.ServiceHostStatus.Offline
-    name: Offline
-    children: []
-    langs:
-      - typeScript
-    summary: The service host is currently disconnected and not accepting commands.
-    type: field
-    numericValue: 2
   - uid: vss-web-extension-sdk.ServiceHostStatus.Online
     name: Online
     children: []
@@ -26,3 +18,11 @@ items:
     summary: The service host is currently connected and accepting commands.
     type: field
     numericValue: 1
+  - uid: vss-web-extension-sdk.ServiceHostStatus.Offline
+    name: Offline
+    children: []
+    langs:
+      - typeScript
+    summary: The service host is currently disconnected and not accepting commands.
+    type: field
+    numericValue: 2

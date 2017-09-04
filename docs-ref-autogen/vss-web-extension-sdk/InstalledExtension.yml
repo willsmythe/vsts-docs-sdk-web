@@ -36,7 +36,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Uri used as base for other relative uri's defined in extension
     syntax:
       return:
         type:
@@ -48,7 +48,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of contributions made by this extension
     syntax:
       return:
         type:
@@ -60,7 +60,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of contribution types defined by this extension
     syntax:
       return:
         type:
@@ -72,7 +72,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of explicit demands required by this extension
     syntax:
       return:
         type:
@@ -84,7 +84,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Collection of endpoints that get called when particular extension events
+      occur
     syntax:
       return:
         type:
@@ -122,7 +124,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      Secondary location that can be used as base for other relative uri's
+      defined in extension
     syntax:
       return:
         type:
@@ -170,7 +174,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Language Culture Name set by the Gallery
     syntax:
       return:
         type:
@@ -197,7 +201,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: How this extension behaves with respect to licensing
     syntax:
       return:
         type:
@@ -209,11 +213,11 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: Version of the extension manifest format/content
     syntax:
       return:
         type:
-          - any
+          - number
   - uid: vss-web-extension-sdk.InstalledExtension.publisherId
     name: publisherId
     fullName: publisherId
@@ -259,7 +263,7 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: List of all oauth scopes required by this extension
     syntax:
       return:
         type:
@@ -271,7 +275,9 @@ items:
     langs:
       - typeScript
     type: property
-    summary: ''
+    summary: >-
+      The ServiceInstanceType(Guid) of the VSTS service that must be available
+      to an account in order for the extension to be installed
     syntax:
       return:
         type:

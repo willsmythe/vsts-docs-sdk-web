@@ -5,8 +5,8 @@ items:
     fullName: ContainerItemType
     children:
       - vss-web-extension-sdk.ContainerItemType.Any
-      - vss-web-extension-sdk.ContainerItemType.File
       - vss-web-extension-sdk.ContainerItemType.Folder
+      - vss-web-extension-sdk.ContainerItemType.File
     langs:
       - typeScript
     type: enum
@@ -19,14 +19,6 @@ items:
     summary: Any item type.
     type: field
     numericValue: 0
-  - uid: vss-web-extension-sdk.ContainerItemType.File
-    name: File
-    children: []
-    langs:
-      - typeScript
-    summary: Item is a file which is stored in the file service.
-    type: field
-    numericValue: 2
   - uid: vss-web-extension-sdk.ContainerItemType.Folder
     name: Folder
     children: []
@@ -35,3 +27,11 @@ items:
     summary: Item is a folder which can have child items.
     type: field
     numericValue: 1
+  - uid: vss-web-extension-sdk.ContainerItemType.File
+    name: File
+    children: []
+    langs:
+      - typeScript
+    summary: Item is a file which is stored in the file service.
+    type: field
+    numericValue: 2

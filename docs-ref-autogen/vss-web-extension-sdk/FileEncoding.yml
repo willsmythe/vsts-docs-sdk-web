@@ -4,34 +4,18 @@ items:
     name: FileEncoding
     fullName: FileEncoding
     children:
-      - vss-web-extension-sdk.FileEncoding.ASCII
-      - vss-web-extension-sdk.FileEncoding.Binary
       - vss-web-extension-sdk.FileEncoding.Unknown
-      - vss-web-extension-sdk.FileEncoding.UTF16_BE
-      - vss-web-extension-sdk.FileEncoding.UTF16_LE
+      - vss-web-extension-sdk.FileEncoding.Binary
+      - vss-web-extension-sdk.FileEncoding.ASCII
+      - vss-web-extension-sdk.FileEncoding.UTF8
       - vss-web-extension-sdk.FileEncoding.UTF32_BE
       - vss-web-extension-sdk.FileEncoding.UTF32_LE
-      - vss-web-extension-sdk.FileEncoding.UTF8
+      - vss-web-extension-sdk.FileEncoding.UTF16_BE
+      - vss-web-extension-sdk.FileEncoding.UTF16_LE
     langs:
       - typeScript
     type: enum
     summary: File encoding values.
-  - uid: vss-web-extension-sdk.FileEncoding.ASCII
-    name: ASCII
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 2
-  - uid: vss-web-extension-sdk.FileEncoding.Binary
-    name: Binary
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 1
   - uid: vss-web-extension-sdk.FileEncoding.Unknown
     name: Unknown
     children: []
@@ -40,22 +24,30 @@ items:
     summary: ''
     type: field
     numericValue: 0
-  - uid: vss-web-extension-sdk.FileEncoding.UTF16_BE
-    name: UTF16_BE
+  - uid: vss-web-extension-sdk.FileEncoding.Binary
+    name: Binary
     children: []
     langs:
       - typeScript
     summary: ''
     type: field
-    numericValue: 6
-  - uid: vss-web-extension-sdk.FileEncoding.UTF16_LE
-    name: UTF16_LE
+    numericValue: 1
+  - uid: vss-web-extension-sdk.FileEncoding.ASCII
+    name: ASCII
     children: []
     langs:
       - typeScript
     summary: ''
     type: field
-    numericValue: 7
+    numericValue: 2
+  - uid: vss-web-extension-sdk.FileEncoding.UTF8
+    name: UTF8
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 3
   - uid: vss-web-extension-sdk.FileEncoding.UTF32_BE
     name: UTF32_BE
     children: []
@@ -72,11 +64,19 @@ items:
     summary: ''
     type: field
     numericValue: 5
-  - uid: vss-web-extension-sdk.FileEncoding.UTF8
-    name: UTF8
+  - uid: vss-web-extension-sdk.FileEncoding.UTF16_BE
+    name: UTF16_BE
     children: []
     langs:
       - typeScript
     summary: ''
     type: field
-    numericValue: 3
+    numericValue: 6
+  - uid: vss-web-extension-sdk.FileEncoding.UTF16_LE
+    name: UTF16_LE
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 7

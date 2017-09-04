@@ -4,18 +4,34 @@ items:
     name: ExtensionAssignmentStatus
     fullName: ExtensionAssignmentStatus
     children:
+      - vss-web-extension-sdk.ExtensionAssignmentStatus.NotEligible
+      - vss-web-extension-sdk.ExtensionAssignmentStatus.NotAssigned
       - vss-web-extension-sdk.ExtensionAssignmentStatus.AccountAssignment
       - vss-web-extension-sdk.ExtensionAssignmentStatus.BundleAssignment
       - vss-web-extension-sdk.ExtensionAssignmentStatus.ImplicitAssignment
-      - vss-web-extension-sdk.ExtensionAssignmentStatus.NotAssigned
-      - vss-web-extension-sdk.ExtensionAssignmentStatus.NotEligible
       - vss-web-extension-sdk.ExtensionAssignmentStatus.PendingValidation
-      - vss-web-extension-sdk.ExtensionAssignmentStatus.RoamingAccountAssignment
       - vss-web-extension-sdk.ExtensionAssignmentStatus.TrialAssignment
+      - vss-web-extension-sdk.ExtensionAssignmentStatus.RoamingAccountAssignment
     langs:
       - typeScript
     type: enum
     summary: ''
+  - uid: vss-web-extension-sdk.ExtensionAssignmentStatus.NotEligible
+    name: NotEligible
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 0
+  - uid: vss-web-extension-sdk.ExtensionAssignmentStatus.NotAssigned
+    name: NotAssigned
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 1
   - uid: vss-web-extension-sdk.ExtensionAssignmentStatus.AccountAssignment
     name: AccountAssignment
     children: []
@@ -40,22 +56,6 @@ items:
     summary: ''
     type: field
     numericValue: 4
-  - uid: vss-web-extension-sdk.ExtensionAssignmentStatus.NotAssigned
-    name: NotAssigned
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 1
-  - uid: vss-web-extension-sdk.ExtensionAssignmentStatus.NotEligible
-    name: NotEligible
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 0
   - uid: vss-web-extension-sdk.ExtensionAssignmentStatus.PendingValidation
     name: PendingValidation
     children: []
@@ -64,14 +64,6 @@ items:
     summary: ''
     type: field
     numericValue: 5
-  - uid: vss-web-extension-sdk.ExtensionAssignmentStatus.RoamingAccountAssignment
-    name: RoamingAccountAssignment
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 7
   - uid: vss-web-extension-sdk.ExtensionAssignmentStatus.TrialAssignment
     name: TrialAssignment
     children: []
@@ -80,3 +72,11 @@ items:
     summary: ''
     type: field
     numericValue: 6
+  - uid: vss-web-extension-sdk.ExtensionAssignmentStatus.RoamingAccountAssignment
+    name: RoamingAccountAssignment
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 7

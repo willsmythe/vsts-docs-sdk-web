@@ -5,9 +5,9 @@ items:
     fullName: TabSavingStatus
     children:
       - vss-web-extension-sdk.TabSavingStatus.INVALID_USER_INPUT
-      - vss-web-extension-sdk.TabSavingStatus.NO_CHANGE
       - vss-web-extension-sdk.TabSavingStatus.SERVER_SAVING_ERROR
       - vss-web-extension-sdk.TabSavingStatus.SUCCEEDED
+      - vss-web-extension-sdk.TabSavingStatus.NO_CHANGE
     langs:
       - typeScript
     type: enum
@@ -20,14 +20,6 @@ items:
     summary: 'user input in invalid, no server saving is issued.'
     type: field
     numericValue: 0
-  - uid: vss-web-extension-sdk.TabSavingStatus.NO_CHANGE
-    name: NO_CHANGE
-    children: []
-    langs:
-      - typeScript
-    summary: 'dirty flag is clean, no server saving is issued.'
-    type: field
-    numericValue: 3
   - uid: vss-web-extension-sdk.TabSavingStatus.SERVER_SAVING_ERROR
     name: SERVER_SAVING_ERROR
     children: []
@@ -44,3 +36,11 @@ items:
     summary: server saving succeeded
     type: field
     numericValue: 2
+  - uid: vss-web-extension-sdk.TabSavingStatus.NO_CHANGE
+    name: NO_CHANGE
+    children: []
+    langs:
+      - typeScript
+    summary: 'dirty flag is clean, no server saving is issued.'
+    type: field
+    numericValue: 3

@@ -4,15 +4,31 @@ items:
     name: VisualStudioOnlineServiceLevel
     fullName: VisualStudioOnlineServiceLevel
     children:
+      - vss-web-extension-sdk.VisualStudioOnlineServiceLevel.None
+      - vss-web-extension-sdk.VisualStudioOnlineServiceLevel.Express
       - vss-web-extension-sdk.VisualStudioOnlineServiceLevel.Advanced
       - vss-web-extension-sdk.VisualStudioOnlineServiceLevel.AdvancedPlus
-      - vss-web-extension-sdk.VisualStudioOnlineServiceLevel.Express
-      - vss-web-extension-sdk.VisualStudioOnlineServiceLevel.None
       - vss-web-extension-sdk.VisualStudioOnlineServiceLevel.Stakeholder
     langs:
       - typeScript
     type: enum
     summary: ''
+  - uid: vss-web-extension-sdk.VisualStudioOnlineServiceLevel.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: No service rights. The user cannot access the account
+    type: field
+    numericValue: 0
+  - uid: vss-web-extension-sdk.VisualStudioOnlineServiceLevel.Express
+    name: Express
+    children: []
+    langs:
+      - typeScript
+    summary: Default or minimum service level
+    type: field
+    numericValue: 1
   - uid: vss-web-extension-sdk.VisualStudioOnlineServiceLevel.Advanced
     name: Advanced
     children: []
@@ -31,22 +47,6 @@ items:
     summary: Only available to a specific set of MSDN Subscribers
     type: field
     numericValue: 3
-  - uid: vss-web-extension-sdk.VisualStudioOnlineServiceLevel.Express
-    name: Express
-    children: []
-    langs:
-      - typeScript
-    summary: Default or minimum service level
-    type: field
-    numericValue: 1
-  - uid: vss-web-extension-sdk.VisualStudioOnlineServiceLevel.None
-    name: None
-    children: []
-    langs:
-      - typeScript
-    summary: No service rights. The user cannot access the account
-    type: field
-    numericValue: 0
   - uid: vss-web-extension-sdk.VisualStudioOnlineServiceLevel.Stakeholder
     name: Stakeholder
     children: []

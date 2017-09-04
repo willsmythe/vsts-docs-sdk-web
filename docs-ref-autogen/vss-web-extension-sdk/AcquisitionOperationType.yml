@@ -4,24 +4,16 @@ items:
     name: AcquisitionOperationType
     fullName: AcquisitionOperationType
     children:
-      - vss-web-extension-sdk.AcquisitionOperationType.Buy
       - vss-web-extension-sdk.AcquisitionOperationType.Get
       - vss-web-extension-sdk.AcquisitionOperationType.Install
-      - vss-web-extension-sdk.AcquisitionOperationType.None
-      - vss-web-extension-sdk.AcquisitionOperationType.Request
+      - vss-web-extension-sdk.AcquisitionOperationType.Buy
       - vss-web-extension-sdk.AcquisitionOperationType.Try
+      - vss-web-extension-sdk.AcquisitionOperationType.Request
+      - vss-web-extension-sdk.AcquisitionOperationType.None
     langs:
       - typeScript
     type: enum
     summary: Set of different types of operations that can be requested.
-  - uid: vss-web-extension-sdk.AcquisitionOperationType.Buy
-    name: Buy
-    children: []
-    langs:
-      - typeScript
-    summary: Buy licenses for this extension and install into the host provided
-    type: field
-    numericValue: 2
   - uid: vss-web-extension-sdk.AcquisitionOperationType.Get
     name: Get
     children: []
@@ -38,22 +30,14 @@ items:
     summary: Install this extension into the host provided
     type: field
     numericValue: 1
-  - uid: vss-web-extension-sdk.AcquisitionOperationType.None
-    name: None
+  - uid: vss-web-extension-sdk.AcquisitionOperationType.Buy
+    name: Buy
     children: []
     langs:
       - typeScript
-    summary: No action found
+    summary: Buy licenses for this extension and install into the host provided
     type: field
-    numericValue: 5
-  - uid: vss-web-extension-sdk.AcquisitionOperationType.Request
-    name: Request
-    children: []
-    langs:
-      - typeScript
-    summary: Not yet used
-    type: field
-    numericValue: 4
+    numericValue: 2
   - uid: vss-web-extension-sdk.AcquisitionOperationType.Try
     name: Try
     children: []
@@ -62,3 +46,19 @@ items:
     summary: Not yet used
     type: field
     numericValue: 3
+  - uid: vss-web-extension-sdk.AcquisitionOperationType.Request
+    name: Request
+    children: []
+    langs:
+      - typeScript
+    summary: Not yet used
+    type: field
+    numericValue: 4
+  - uid: vss-web-extension-sdk.AcquisitionOperationType.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: No action found
+    type: field
+    numericValue: 5

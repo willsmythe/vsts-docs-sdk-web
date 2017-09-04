@@ -4,15 +4,42 @@ items:
     name: AadLoginPromptOption
     fullName: AadLoginPromptOption
     children:
+      - vss-web-extension-sdk.AadLoginPromptOption.NoOption
+      - vss-web-extension-sdk.AadLoginPromptOption.Login
+      - vss-web-extension-sdk.AadLoginPromptOption.SelectAccount
       - vss-web-extension-sdk.AadLoginPromptOption.FreshLogin
       - vss-web-extension-sdk.AadLoginPromptOption.FreshLoginWithMfa
-      - vss-web-extension-sdk.AadLoginPromptOption.Login
-      - vss-web-extension-sdk.AadLoginPromptOption.NoOption
-      - vss-web-extension-sdk.AadLoginPromptOption.SelectAccount
     langs:
       - typeScript
     type: enum
     summary: ''
+  - uid: vss-web-extension-sdk.AadLoginPromptOption.NoOption
+    name: NoOption
+    children: []
+    langs:
+      - typeScript
+    summary: Do not provide a prompt option
+    type: field
+    numericValue: 0
+  - uid: vss-web-extension-sdk.AadLoginPromptOption.Login
+    name: Login
+    children: []
+    langs:
+      - typeScript
+    summary: Force the user to login again.
+    type: field
+    numericValue: 1
+  - uid: vss-web-extension-sdk.AadLoginPromptOption.SelectAccount
+    name: SelectAccount
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Force the user to select which account they are logging in with instead of
+      automatically picking the user up from the session state. NOTE: This does
+      not work for switching bewtween the variants of a dual-homed user.
+    type: field
+    numericValue: 2
   - uid: vss-web-extension-sdk.AadLoginPromptOption.FreshLogin
     name: FreshLogin
     children: []
@@ -35,30 +62,3 @@ items:
       instead of Login, if MFA is required.
     type: field
     numericValue: 4
-  - uid: vss-web-extension-sdk.AadLoginPromptOption.Login
-    name: Login
-    children: []
-    langs:
-      - typeScript
-    summary: Force the user to login again.
-    type: field
-    numericValue: 1
-  - uid: vss-web-extension-sdk.AadLoginPromptOption.NoOption
-    name: NoOption
-    children: []
-    langs:
-      - typeScript
-    summary: Do not provide a prompt option
-    type: field
-    numericValue: 0
-  - uid: vss-web-extension-sdk.AadLoginPromptOption.SelectAccount
-    name: SelectAccount
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Force the user to select which account they are logging in with instead of
-      automatically picking the user up from the session state. NOTE: This does
-      not work for switching bewtween the variants of a dual-homed user.
-    type: field
-    numericValue: 2

@@ -6,8 +6,8 @@ items:
     children:
       - vss-web-extension-sdk.ThrottledDelegateOptions.Default
       - vss-web-extension-sdk.ThrottledDelegateOptions.Immediate
-      - vss-web-extension-sdk.ThrottledDelegateOptions.NeverResetTimer
       - vss-web-extension-sdk.ThrottledDelegateOptions.QueueNext
+      - vss-web-extension-sdk.ThrottledDelegateOptions.NeverResetTimer
     langs:
       - typeScript
     type: enum
@@ -36,6 +36,19 @@ items:
       at most every n milliseconds thereafter
     type: field
     numericValue: 1
+  - uid: vss-web-extension-sdk.ThrottledDelegateOptions.QueueNext
+    name: QueueNext
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      If Immediate is set, this determines if a call that is made during the
+      cooldown
+
+      period will be ignored or queued up to be executed when the cooldown is
+      done.
+    type: field
+    numericValue: 2
   - uid: vss-web-extension-sdk.ThrottledDelegateOptions.NeverResetTimer
     name: NeverResetTimer
     children: []
@@ -54,16 +67,3 @@ items:
       fast enough.
     type: field
     numericValue: 4
-  - uid: vss-web-extension-sdk.ThrottledDelegateOptions.QueueNext
-    name: QueueNext
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      If Immediate is set, this determines if a call that is made during the
-      cooldown
-
-      period will be ignored or queued up to be executed when the cooldown is
-      done.
-    type: field
-    numericValue: 2

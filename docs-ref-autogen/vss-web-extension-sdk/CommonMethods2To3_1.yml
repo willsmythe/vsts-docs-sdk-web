@@ -5,17 +5,17 @@ items:
     fullName: CommonMethods2To3_1
     children:
       - vss-web-extension-sdk.CommonMethods2To3_1.authTokenManager
+      - vss-web-extension-sdk.CommonMethods2To3_1.changeApiVersion
       - vss-web-extension-sdk.CommonMethods2To3_1.constructor
-      - vss-web-extension-sdk.CommonMethods2To3_1.connectionDataApiVersion
-      - vss-web-extension-sdk.CommonMethods2To3_1.deleteServiceDefinition
       - >-
         vss-web-extension-sdk.CommonMethods2To3_1.forceOptionsCallForAutoNegotiate
-      - vss-web-extension-sdk.CommonMethods2To3_1.getConnectionData
-      - vss-web-extension-sdk.CommonMethods2To3_1.getServiceDefinition
-      - vss-web-extension-sdk.CommonMethods2To3_1.getServiceDefinitions
-      - vss-web-extension-sdk.CommonMethods2To3_1.serviceDefinitionsApiVersion
+      - vss-web-extension-sdk.CommonMethods2To3_1.impactApiVersion
+      - vss-web-extension-sdk.CommonMethods2To3_1.publishCodeSignatures
+      - vss-web-extension-sdk.CommonMethods2To3_1.publishTestImpactBuildData
+      - vss-web-extension-sdk.CommonMethods2To3_1.queryBuildType
+      - vss-web-extension-sdk.CommonMethods2To3_1.queryCodeChanges
+      - vss-web-extension-sdk.CommonMethods2To3_1.queryImpactedTests
       - vss-web-extension-sdk.CommonMethods2To3_1.serviceInstanceId
-      - vss-web-extension-sdk.CommonMethods2To3_1.updateServiceDefinitions
       - vss-web-extension-sdk.CommonMethods2To3_1._beginGetLocation
       - vss-web-extension-sdk.CommonMethods2To3_1._beginRequest
       - vss-web-extension-sdk.CommonMethods2To3_1._beginRequestWithAjaxResult
@@ -38,6 +38,18 @@ items:
       return:
         type:
           - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.CommonMethods2To3_1.changeApiVersion
+    name: changeApiVersion
+    fullName: changeApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.CommonMethods2To3_1.constructor
     name: >-
       CommonMethods2To3_1(rootRequestPath: string, options?:
@@ -64,41 +76,6 @@ items:
         type:
           - vss-web-extension-sdk.CommonMethods2To3_1
     type: constructor
-  - uid: vss-web-extension-sdk.CommonMethods2To3_1.connectionDataApiVersion
-    name: connectionDataApiVersion
-    fullName: connectionDataApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.CommonMethods2To3_1.deleteServiceDefinition
-    name: 'deleteServiceDefinition(serviceType: string, identifier: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: '[Preview API]'
-    syntax:
-      parameters:
-        - id: serviceType
-          type:
-            - string
-          description: ''
-        - id: identifier
-          type:
-            - string
-          description: ''
-      content: >-
-        function deleteServiceDefinition(serviceType: string, identifier:
-        string)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
   - uid: vss-web-extension-sdk.CommonMethods2To3_1.forceOptionsCallForAutoNegotiate
     name: forceOptionsCallForAutoNegotiate
     fullName: forceOptionsCallForAutoNegotiate
@@ -111,91 +88,9 @@ items:
       return:
         type:
           - boolean
-  - uid: vss-web-extension-sdk.CommonMethods2To3_1.getConnectionData
-    name: >-
-      getConnectionData(connectOptions?: function, lastChangeId?: number,
-      lastChangeId64?: number)
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      [Preview API] This was copied and adapted from
-      TeamFoundationConnectionService.Connect()
-    syntax:
-      parameters:
-        - id: connectOptions
-          type:
-            - function
-          description: ''
-          optional: true
-        - id: lastChangeId
-          type:
-            - number
-          description: Obsolete 32-bit LastChangeId
-          optional: true
-        - id: lastChangeId64
-          type:
-            - number
-          description: Non-truncated 64-bit LastChangeId
-          optional: true
-      content: >-
-        function getConnectionData(connectOptions?: function, lastChangeId?:
-        number, lastChangeId64?: number)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: vss-web-extension-sdk.CommonMethods2To3_1.getServiceDefinition
-    name: >-
-      getServiceDefinition(serviceType: string, identifier: string,
-      allowFaultIn?: boolean)
-    children: []
-    langs:
-      - typeScript
-    summary: '[Preview API]'
-    syntax:
-      parameters:
-        - id: serviceType
-          type:
-            - string
-          description: ''
-        - id: identifier
-          type:
-            - string
-          description: ''
-        - id: allowFaultIn
-          type:
-            - boolean
-          description: ''
-          optional: true
-      content: >-
-        function getServiceDefinition(serviceType: string, identifier: string,
-        allowFaultIn?: boolean)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: vss-web-extension-sdk.CommonMethods2To3_1.getServiceDefinitions
-    name: 'getServiceDefinitions(serviceType?: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: '[Preview API]'
-    syntax:
-      parameters:
-        - id: serviceType
-          type:
-            - string
-          description: ''
-          optional: true
-      content: 'function getServiceDefinitions(serviceType?: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: vss-web-extension-sdk.CommonMethods2To3_1.serviceDefinitionsApiVersion
-    name: serviceDefinitionsApiVersion
-    fullName: serviceDefinitionsApiVersion
+  - uid: vss-web-extension-sdk.CommonMethods2To3_1.impactApiVersion
+    name: impactApiVersion
+    fullName: impactApiVersion
     children: []
     langs:
       - typeScript
@@ -205,6 +100,137 @@ items:
       return:
         type:
           - string
+  - uid: vss-web-extension-sdk.CommonMethods2To3_1.publishCodeSignatures
+    name: 'publishCodeSignatures(results: TestResultSignaturesInfo, project: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API]'
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.TestResultSignaturesInfo
+          type:
+            - TestResultSignaturesInfo
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+      content: >-
+        function publishCodeSignatures(results: TestResultSignaturesInfo,
+        project: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods2To3_1.publishTestImpactBuildData
+    name: >-
+      publishTestImpactBuildData(testImapctBuildData: TestImpactBuildData,
+      project: string, definitionRunInfo: DefinitionRunInfo)
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API]'
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.TestImpactBuildData
+          type:
+            - TestImpactBuildData
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: vss-web-extension-sdk.DefinitionRunInfo
+          type:
+            - DefinitionRunInfo
+          description: ''
+      content: >-
+        function publishTestImpactBuildData(testImapctBuildData:
+        TestImpactBuildData, project: string, definitionRunInfo:
+        DefinitionRunInfo)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods2To3_1.queryBuildType
+    name: 'queryBuildType(project: string, buildId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API]'
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: buildId
+          type:
+            - number
+          description: ''
+      content: 'function queryBuildType(project: string, buildId: number)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods2To3_1.queryCodeChanges
+    name: 'queryCodeChanges(project: string, definitionRunInfo: DefinitionRunInfo)'
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API]'
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: vss-web-extension-sdk.DefinitionRunInfo
+          type:
+            - DefinitionRunInfo
+          description: ''
+      content: >-
+        function queryCodeChanges(project: string, definitionRunInfo:
+        DefinitionRunInfo)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.CommonMethods2To3_1.queryImpactedTests
+    name: >-
+      queryImpactedTests(project: string, definitionRunInfo: DefinitionRunInfo,
+      currentTestRunId: number, typesToInclude?: function)
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API]'
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+        - id: vss-web-extension-sdk.DefinitionRunInfo
+          type:
+            - DefinitionRunInfo
+          description: ''
+        - id: currentTestRunId
+          type:
+            - number
+          description: ''
+        - id: typesToInclude
+          type:
+            - function
+          description: ''
+          optional: true
+      content: >-
+        function queryImpactedTests(project: string, definitionRunInfo:
+        DefinitionRunInfo, currentTestRunId: number, typesToInclude?: function)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
   - uid: vss-web-extension-sdk.CommonMethods2To3_1.serviceInstanceId
     name: serviceInstanceId
     fullName: serviceInstanceId
@@ -217,25 +243,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.CommonMethods2To3_1.updateServiceDefinitions
-    name: 'updateServiceDefinitions(serviceDefinitions: VssJsonCollectionWrapperV)'
-    children: []
-    langs:
-      - typeScript
-    summary: '[Preview API]'
-    syntax:
-      parameters:
-        - id: vss-web-extension-sdk.VssJsonCollectionWrapperV
-          type:
-            - VssJsonCollectionWrapperV
-          description: ''
-      content: >-
-        function updateServiceDefinitions(serviceDefinitions:
-        VssJsonCollectionWrapperV)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
   - uid: vss-web-extension-sdk.CommonMethods2To3_1._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []

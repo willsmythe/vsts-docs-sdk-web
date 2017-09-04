@@ -4,61 +4,21 @@ items:
     name: TestRunSubstate
     fullName: TestRunSubstate
     children:
-      - vss-web-extension-sdk.TestRunSubstate.AbortedBySystem
-      - vss-web-extension-sdk.TestRunSubstate.Analyzed
-      - vss-web-extension-sdk.TestRunSubstate.CanceledByUser
-      - vss-web-extension-sdk.TestRunSubstate.CancellationInProgress
-      - vss-web-extension-sdk.TestRunSubstate.CreatingEnvironment
       - vss-web-extension-sdk.TestRunSubstate.None
-      - vss-web-extension-sdk.TestRunSubstate.PendingAnalysis
+      - vss-web-extension-sdk.TestRunSubstate.CreatingEnvironment
       - vss-web-extension-sdk.TestRunSubstate.RunningTests
+      - vss-web-extension-sdk.TestRunSubstate.CanceledByUser
+      - vss-web-extension-sdk.TestRunSubstate.AbortedBySystem
       - vss-web-extension-sdk.TestRunSubstate.TimedOut
+      - vss-web-extension-sdk.TestRunSubstate.PendingAnalysis
+      - vss-web-extension-sdk.TestRunSubstate.Analyzed
+      - vss-web-extension-sdk.TestRunSubstate.CancellationInProgress
     langs:
       - typeScript
     type: enum
     summary: >-
       The types of sub states for test run. It gives the user more info about
       the test run beyond the high level test run state
-  - uid: vss-web-extension-sdk.TestRunSubstate.AbortedBySystem
-    name: AbortedBySystem
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 4
-  - uid: vss-web-extension-sdk.TestRunSubstate.Analyzed
-    name: Analyzed
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 7
-  - uid: vss-web-extension-sdk.TestRunSubstate.CanceledByUser
-    name: CanceledByUser
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 3
-  - uid: vss-web-extension-sdk.TestRunSubstate.CancellationInProgress
-    name: CancellationInProgress
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 8
-  - uid: vss-web-extension-sdk.TestRunSubstate.CreatingEnvironment
-    name: CreatingEnvironment
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    type: field
-    numericValue: 1
   - uid: vss-web-extension-sdk.TestRunSubstate.None
     name: None
     children: []
@@ -67,14 +27,14 @@ items:
     summary: ''
     type: field
     numericValue: 0
-  - uid: vss-web-extension-sdk.TestRunSubstate.PendingAnalysis
-    name: PendingAnalysis
+  - uid: vss-web-extension-sdk.TestRunSubstate.CreatingEnvironment
+    name: CreatingEnvironment
     children: []
     langs:
       - typeScript
     summary: ''
     type: field
-    numericValue: 6
+    numericValue: 1
   - uid: vss-web-extension-sdk.TestRunSubstate.RunningTests
     name: RunningTests
     children: []
@@ -83,6 +43,22 @@ items:
     summary: ''
     type: field
     numericValue: 2
+  - uid: vss-web-extension-sdk.TestRunSubstate.CanceledByUser
+    name: CanceledByUser
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 3
+  - uid: vss-web-extension-sdk.TestRunSubstate.AbortedBySystem
+    name: AbortedBySystem
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 4
   - uid: vss-web-extension-sdk.TestRunSubstate.TimedOut
     name: TimedOut
     children: []
@@ -91,3 +67,27 @@ items:
     summary: ''
     type: field
     numericValue: 5
+  - uid: vss-web-extension-sdk.TestRunSubstate.PendingAnalysis
+    name: PendingAnalysis
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 6
+  - uid: vss-web-extension-sdk.TestRunSubstate.Analyzed
+    name: Analyzed
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 7
+  - uid: vss-web-extension-sdk.TestRunSubstate.CancellationInProgress
+    name: CancellationInProgress
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 8

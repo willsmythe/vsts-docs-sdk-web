@@ -4,16 +4,40 @@ items:
     name: InputDataType
     fullName: InputDataType
     children:
+      - vss-web-extension-sdk.InputDataType.None
+      - vss-web-extension-sdk.InputDataType.String
+      - vss-web-extension-sdk.InputDataType.Number
       - vss-web-extension-sdk.InputDataType.Boolean
       - vss-web-extension-sdk.InputDataType.Guid
-      - vss-web-extension-sdk.InputDataType.None
-      - vss-web-extension-sdk.InputDataType.Number
-      - vss-web-extension-sdk.InputDataType.String
       - vss-web-extension-sdk.InputDataType.Uri
     langs:
       - typeScript
     type: enum
     summary: Enumerates data types that are supported as subscription input values.
+  - uid: vss-web-extension-sdk.InputDataType.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: No data type is specified.
+    type: field
+    numericValue: 0
+  - uid: vss-web-extension-sdk.InputDataType.String
+    name: String
+    children: []
+    langs:
+      - typeScript
+    summary: Represents a textual value.
+    type: field
+    numericValue: 10
+  - uid: vss-web-extension-sdk.InputDataType.Number
+    name: Number
+    children: []
+    langs:
+      - typeScript
+    summary: Represents a numberic value.
+    type: field
+    numericValue: 20
   - uid: vss-web-extension-sdk.InputDataType.Boolean
     name: Boolean
     children: []
@@ -30,30 +54,6 @@ items:
     summary: Represents a Guid.
     type: field
     numericValue: 40
-  - uid: vss-web-extension-sdk.InputDataType.None
-    name: None
-    children: []
-    langs:
-      - typeScript
-    summary: No data type is specified.
-    type: field
-    numericValue: 0
-  - uid: vss-web-extension-sdk.InputDataType.Number
-    name: Number
-    children: []
-    langs:
-      - typeScript
-    summary: Represents a numberic value.
-    type: field
-    numericValue: 20
-  - uid: vss-web-extension-sdk.InputDataType.String
-    name: String
-    children: []
-    langs:
-      - typeScript
-    summary: Represents a textual value.
-    type: field
-    numericValue: 10
   - uid: vss-web-extension-sdk.InputDataType.Uri
     name: Uri
     children: []

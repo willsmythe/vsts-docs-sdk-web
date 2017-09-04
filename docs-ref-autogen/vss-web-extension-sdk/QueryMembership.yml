@@ -4,15 +4,23 @@ items:
     name: QueryMembership
     fullName: QueryMembership
     children:
+      - vss-web-extension-sdk.QueryMembership.None
       - vss-web-extension-sdk.QueryMembership.Direct
       - vss-web-extension-sdk.QueryMembership.Expanded
-      - vss-web-extension-sdk.QueryMembership.ExpandedDown
       - vss-web-extension-sdk.QueryMembership.ExpandedUp
-      - vss-web-extension-sdk.QueryMembership.None
+      - vss-web-extension-sdk.QueryMembership.ExpandedDown
     langs:
       - typeScript
     type: enum
     summary: ''
+  - uid: vss-web-extension-sdk.QueryMembership.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: Query will not return any membership data
+    type: field
+    numericValue: 0
   - uid: vss-web-extension-sdk.QueryMembership.Direct
     name: Direct
     children: []
@@ -29,14 +37,6 @@ items:
     summary: Query will return expanded membership data
     type: field
     numericValue: 2
-  - uid: vss-web-extension-sdk.QueryMembership.ExpandedDown
-    name: ExpandedDown
-    children: []
-    langs:
-      - typeScript
-    summary: Query will return expanded down membership data (children only)
-    type: field
-    numericValue: 4
   - uid: vss-web-extension-sdk.QueryMembership.ExpandedUp
     name: ExpandedUp
     children: []
@@ -45,11 +45,11 @@ items:
     summary: Query will return expanded up membership data (parents only)
     type: field
     numericValue: 3
-  - uid: vss-web-extension-sdk.QueryMembership.None
-    name: None
+  - uid: vss-web-extension-sdk.QueryMembership.ExpandedDown
+    name: ExpandedDown
     children: []
     langs:
       - typeScript
-    summary: Query will not return any membership data
+    summary: Query will return expanded down membership data (children only)
     type: field
-    numericValue: 0
+    numericValue: 4

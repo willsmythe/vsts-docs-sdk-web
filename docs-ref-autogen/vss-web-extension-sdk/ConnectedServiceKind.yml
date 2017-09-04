@@ -4,14 +4,22 @@ items:
     name: ConnectedServiceKind
     fullName: ConnectedServiceKind
     children:
+      - vss-web-extension-sdk.ConnectedServiceKind.Custom
       - vss-web-extension-sdk.ConnectedServiceKind.AzureSubscription
       - vss-web-extension-sdk.ConnectedServiceKind.Chef
-      - vss-web-extension-sdk.ConnectedServiceKind.Custom
       - vss-web-extension-sdk.ConnectedServiceKind.Generic
     langs:
       - typeScript
     type: enum
     summary: ''
+  - uid: vss-web-extension-sdk.ConnectedServiceKind.Custom
+    name: Custom
+    children: []
+    langs:
+      - typeScript
+    summary: Custom or unknown service
+    type: field
+    numericValue: 0
   - uid: vss-web-extension-sdk.ConnectedServiceKind.AzureSubscription
     name: AzureSubscription
     children: []
@@ -28,14 +36,6 @@ items:
     summary: Chef Connection
     type: field
     numericValue: 2
-  - uid: vss-web-extension-sdk.ConnectedServiceKind.Custom
-    name: Custom
-    children: []
-    langs:
-      - typeScript
-    summary: Custom or unknown service
-    type: field
-    numericValue: 0
   - uid: vss-web-extension-sdk.ConnectedServiceKind.Generic
     name: Generic
     children: []

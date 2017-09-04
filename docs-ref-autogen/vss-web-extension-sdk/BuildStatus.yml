@@ -4,49 +4,17 @@ items:
     name: BuildStatus
     fullName: BuildStatus
     children:
-      - vss-web-extension-sdk.BuildStatus.All
-      - vss-web-extension-sdk.BuildStatus.Cancelling
-      - vss-web-extension-sdk.BuildStatus.Completed
-      - vss-web-extension-sdk.BuildStatus.InProgress
       - vss-web-extension-sdk.BuildStatus.None
-      - vss-web-extension-sdk.BuildStatus.NotStarted
+      - vss-web-extension-sdk.BuildStatus.InProgress
+      - vss-web-extension-sdk.BuildStatus.Completed
+      - vss-web-extension-sdk.BuildStatus.Cancelling
       - vss-web-extension-sdk.BuildStatus.Postponed
+      - vss-web-extension-sdk.BuildStatus.NotStarted
+      - vss-web-extension-sdk.BuildStatus.All
     langs:
       - typeScript
     type: enum
     summary: ''
-  - uid: vss-web-extension-sdk.BuildStatus.All
-    name: All
-    children: []
-    langs:
-      - typeScript
-    summary: All status.
-    type: field
-    numericValue: 47
-  - uid: vss-web-extension-sdk.BuildStatus.Cancelling
-    name: Cancelling
-    children: []
-    langs:
-      - typeScript
-    summary: The build is cancelling
-    type: field
-    numericValue: 4
-  - uid: vss-web-extension-sdk.BuildStatus.Completed
-    name: Completed
-    children: []
-    langs:
-      - typeScript
-    summary: The build has completed.
-    type: field
-    numericValue: 2
-  - uid: vss-web-extension-sdk.BuildStatus.InProgress
-    name: InProgress
-    children: []
-    langs:
-      - typeScript
-    summary: The build is currently in progress.
-    type: field
-    numericValue: 1
   - uid: vss-web-extension-sdk.BuildStatus.None
     name: None
     children: []
@@ -55,14 +23,30 @@ items:
     summary: No status.
     type: field
     numericValue: 0
-  - uid: vss-web-extension-sdk.BuildStatus.NotStarted
-    name: NotStarted
+  - uid: vss-web-extension-sdk.BuildStatus.InProgress
+    name: InProgress
     children: []
     langs:
       - typeScript
-    summary: The build has not yet started.
+    summary: The build is currently in progress.
     type: field
-    numericValue: 32
+    numericValue: 1
+  - uid: vss-web-extension-sdk.BuildStatus.Completed
+    name: Completed
+    children: []
+    langs:
+      - typeScript
+    summary: The build has completed.
+    type: field
+    numericValue: 2
+  - uid: vss-web-extension-sdk.BuildStatus.Cancelling
+    name: Cancelling
+    children: []
+    langs:
+      - typeScript
+    summary: The build is cancelling
+    type: field
+    numericValue: 4
   - uid: vss-web-extension-sdk.BuildStatus.Postponed
     name: Postponed
     children: []
@@ -71,3 +55,19 @@ items:
     summary: The build is inactive in the queue.
     type: field
     numericValue: 8
+  - uid: vss-web-extension-sdk.BuildStatus.NotStarted
+    name: NotStarted
+    children: []
+    langs:
+      - typeScript
+    summary: The build has not yet started.
+    type: field
+    numericValue: 32
+  - uid: vss-web-extension-sdk.BuildStatus.All
+    name: All
+    children: []
+    langs:
+      - typeScript
+    summary: All status.
+    type: field
+    numericValue: 47

@@ -4,15 +4,39 @@ items:
     name: ConnectOptions
     fullName: ConnectOptions
     children:
-      - vss-web-extension-sdk.ConnectOptions.IncludeInheritedDefinitionsOnly
-      - vss-web-extension-sdk.ConnectOptions.IncludeLastUserAccess
-      - vss-web-extension-sdk.ConnectOptions.IncludeNonInheritedDefinitionsOnly
-      - vss-web-extension-sdk.ConnectOptions.IncludeServices
       - vss-web-extension-sdk.ConnectOptions.None
+      - vss-web-extension-sdk.ConnectOptions.IncludeServices
+      - vss-web-extension-sdk.ConnectOptions.IncludeLastUserAccess
+      - vss-web-extension-sdk.ConnectOptions.IncludeInheritedDefinitionsOnly
+      - vss-web-extension-sdk.ConnectOptions.IncludeNonInheritedDefinitionsOnly
     langs:
       - typeScript
     type: enum
     summary: Enumeration of the options that can be passed in on Connect.
+  - uid: vss-web-extension-sdk.ConnectOptions.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: Retrieve no optional data.
+    type: field
+    numericValue: 0
+  - uid: vss-web-extension-sdk.ConnectOptions.IncludeServices
+    name: IncludeServices
+    children: []
+    langs:
+      - typeScript
+    summary: Includes information about AccessMappings and ServiceDefinitions.
+    type: field
+    numericValue: 1
+  - uid: vss-web-extension-sdk.ConnectOptions.IncludeLastUserAccess
+    name: IncludeLastUserAccess
+    children: []
+    langs:
+      - typeScript
+    summary: Includes the last user access for this host.
+    type: field
+    numericValue: 2
   - uid: vss-web-extension-sdk.ConnectOptions.IncludeInheritedDefinitionsOnly
     name: IncludeInheritedDefinitionsOnly
     children: []
@@ -23,14 +47,6 @@ items:
       inherited definitions.
     type: field
     numericValue: 4
-  - uid: vss-web-extension-sdk.ConnectOptions.IncludeLastUserAccess
-    name: IncludeLastUserAccess
-    children: []
-    langs:
-      - typeScript
-    summary: Includes the last user access for this host.
-    type: field
-    numericValue: 2
   - uid: vss-web-extension-sdk.ConnectOptions.IncludeNonInheritedDefinitionsOnly
     name: IncludeNonInheritedDefinitionsOnly
     children: []
@@ -41,19 +57,3 @@ items:
       non-deployment host.
     type: field
     numericValue: 8
-  - uid: vss-web-extension-sdk.ConnectOptions.IncludeServices
-    name: IncludeServices
-    children: []
-    langs:
-      - typeScript
-    summary: Includes information about AccessMappings and ServiceDefinitions.
-    type: field
-    numericValue: 1
-  - uid: vss-web-extension-sdk.ConnectOptions.None
-    name: None
-    children: []
-    langs:
-      - typeScript
-    summary: Retrieve no optional data.
-    type: field
-    numericValue: 0
