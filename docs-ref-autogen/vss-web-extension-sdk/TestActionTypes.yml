@@ -3,8 +3,32 @@ items:
   - uid: vss-web-extension-sdk.TestActionTypes
     name: TestActionTypes
     fullName: TestActionTypes
+    children:
+      - vss-web-extension-sdk.TestActionTypes.SharedSteps
+      - vss-web-extension-sdk.TestActionTypes.Step
+    langs:
+      - typeScript
+    type: class
+    summary: Supported action type
+  - uid: vss-web-extension-sdk.TestActionTypes.SharedSteps
+    name: SharedSteps
     children: []
     langs:
       - typeScript
-    type: Class
+    type: property
     summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TestActionTypes.Step
+    name: Step
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string

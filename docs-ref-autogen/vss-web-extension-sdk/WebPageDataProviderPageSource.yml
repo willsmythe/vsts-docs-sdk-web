@@ -1,0 +1,110 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.WebPageDataProviderPageSource
+    name: WebPageDataProviderPageSource
+    fullName: WebPageDataProviderPageSource
+    children:
+      - vss-web-extension-sdk.WebPageDataProviderPageSource.contributionPaths
+      - vss-web-extension-sdk.WebPageDataProviderPageSource.diagnostics
+      - vss-web-extension-sdk.WebPageDataProviderPageSource.navigation
+      - vss-web-extension-sdk.WebPageDataProviderPageSource.project
+      - vss-web-extension-sdk.WebPageDataProviderPageSource.selectedHubGroupId
+      - vss-web-extension-sdk.WebPageDataProviderPageSource.selectedHubId
+      - vss-web-extension-sdk.WebPageDataProviderPageSource.team
+      - vss-web-extension-sdk.WebPageDataProviderPageSource.url
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Contextual data for web-page-related data providers about the originating
+      (host/source) page
+  - uid: vss-web-extension-sdk.WebPageDataProviderPageSource.contributionPaths
+    name: contributionPaths
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      List of paths contributed by the host which are available to 3rd party
+      extension developers through VSS.SDK
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.WebPageDataProviderPageSource.diagnostics
+    name: diagnostics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Diagnostics context (debug mode, activity id, etc.) of the source page'
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.DiagnosticsContext
+  - uid: vss-web-extension-sdk.WebPageDataProviderPageSource.navigation
+    name: navigation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The navigation context for the host page that is loading the data provider
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.NavigationContext
+  - uid: vss-web-extension-sdk.WebPageDataProviderPageSource.project
+    name: project
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The project context for the host page that is loading the data provider
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ContextIdentifier
+  - uid: vss-web-extension-sdk.WebPageDataProviderPageSource.selectedHubGroupId
+    name: selectedHubGroupId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Currently selected hubgroup id
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.WebPageDataProviderPageSource.selectedHubId
+    name: selectedHubId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Currently selected hub id
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.WebPageDataProviderPageSource.team
+    name: team
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The team context for the host page that is loading the data provider
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ContextIdentifier
+  - uid: vss-web-extension-sdk.WebPageDataProviderPageSource.url
+    name: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The url of the host page that is loading the data provider
+    syntax:
+      return:
+        type:
+          - string

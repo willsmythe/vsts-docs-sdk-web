@@ -7,18 +7,22 @@ items:
       - vss-web-extension-sdk.TestBaseHelper.create
     langs:
       - typeScript
-    type: Class
-    summary: ''
+    type: class
+    summary: Test base helper class
   - uid: vss-web-extension-sdk.TestBaseHelper.create
     name: create()
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: |-
+      It will create a testbase object, which we could link as test case
+      using this object we can create teststeps and generate teststep xml
+      in end we can save alla actions into jsonpatchdocument object
+      finally we can maek a create/update worktiem call using that json
     syntax:
       parameters: []
       content: function create()
       return:
         type:
-          - ITestBase
+          - vss-web-extension-sdk.ITestBase
     type: method

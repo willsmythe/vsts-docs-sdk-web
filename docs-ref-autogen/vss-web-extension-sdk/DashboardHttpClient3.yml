@@ -4,11 +4,15 @@ items:
     name: DashboardHttpClient3
     fullName: DashboardHttpClient3
     children:
+      - vss-web-extension-sdk.DashboardHttpClient3.authTokenManager
       - vss-web-extension-sdk.DashboardHttpClient3.createDashboard
       - vss-web-extension-sdk.DashboardHttpClient3.createWidget
       - vss-web-extension-sdk.DashboardHttpClient3.constructor
+      - vss-web-extension-sdk.DashboardHttpClient3.dashboardsApiVersion
       - vss-web-extension-sdk.DashboardHttpClient3.deleteDashboard
       - vss-web-extension-sdk.DashboardHttpClient3.deleteWidget
+      - >-
+        vss-web-extension-sdk.DashboardHttpClient3.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.DashboardHttpClient3.getDashboard
       - vss-web-extension-sdk.DashboardHttpClient3.getDashboards
       - vss-web-extension-sdk.DashboardHttpClient3.getWidget
@@ -21,35 +25,49 @@ items:
       - vss-web-extension-sdk.DashboardHttpClient3.replaceWidgets
       - vss-web-extension-sdk.DashboardHttpClient3.updateWidget
       - vss-web-extension-sdk.DashboardHttpClient3.updateWidgets
+      - vss-web-extension-sdk.DashboardHttpClient3.widgetsApiVersion
+      - vss-web-extension-sdk.DashboardHttpClient3.widgetTypesApiVersion
       - vss-web-extension-sdk.DashboardHttpClient3._beginGetLocation
       - vss-web-extension-sdk.DashboardHttpClient3._beginRequest
       - vss-web-extension-sdk.DashboardHttpClient3._beginRequestWithAjaxResult
       - vss-web-extension-sdk.DashboardHttpClient3._issueAjaxRequest
+      - vss-web-extension-sdk.DashboardHttpClient3._rootRequestPath
       - vss-web-extension-sdk.DashboardHttpClient3._setInitializationPromise
     langs:
       - typeScript
-    type: Class
+    type: class
     summary: ''
+  - uid: vss-web-extension-sdk.DashboardHttpClient3.authTokenManager
+    name: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
   - uid: vss-web-extension-sdk.DashboardHttpClient3.createDashboard
     name: 'createDashboard(dashboard: Dashboard, teamContext: TeamContext)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
-        - id: dashboard
+        - id: vss-web-extension-sdk.Dashboard
           type:
             - Dashboard
           description: ''
-        - id: teamContext
+        - id: vss-web-extension-sdk.TeamContext
           type:
             - TeamContext
           description: The team context for the operation
       content: 'function createDashboard(dashboard: Dashboard, teamContext: TeamContext)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3.createWidget
     name: >-
@@ -58,14 +76,14 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
-        - id: widget
+        - id: vss-web-extension-sdk.Widget
           type:
             - Widget
           description: ''
-        - id: teamContext
+        - id: vss-web-extension-sdk.TeamContext
           type:
             - TeamContext
           description: The team context for the operation
@@ -78,7 +96,7 @@ items:
         dashboardId: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3.constructor
     name: >-
@@ -94,7 +112,7 @@ items:
           type:
             - string
           description: ''
-        - id: options
+        - id: vss-web-extension-sdk.IVssHttpClientOptions
           type:
             - IVssHttpClientOptions
           description: ''
@@ -104,17 +122,28 @@ items:
         IVssHttpClientOptions)
       return:
         type:
-          - DashboardHttpClient3
+          - vss-web-extension-sdk.DashboardHttpClient3
     type: constructor
+  - uid: vss-web-extension-sdk.DashboardHttpClient3.dashboardsApiVersion
+    name: dashboardsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.DashboardHttpClient3.deleteDashboard
     name: 'deleteDashboard(teamContext: TeamContext, dashboardId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
-        - id: teamContext
+        - id: vss-web-extension-sdk.TeamContext
           type:
             - TeamContext
           description: The team context for the operation
@@ -125,7 +154,7 @@ items:
       content: 'function deleteDashboard(teamContext: TeamContext, dashboardId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3.deleteWidget
     name: >-
@@ -134,10 +163,10 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
-        - id: teamContext
+        - id: vss-web-extension-sdk.TeamContext
           type:
             - TeamContext
           description: The team context for the operation
@@ -154,17 +183,29 @@ items:
         widgetId: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: >-
+      vss-web-extension-sdk.DashboardHttpClient3.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.DashboardHttpClient3.getDashboard
     name: 'getDashboard(teamContext: TeamContext, dashboardId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
-        - id: teamContext
+        - id: vss-web-extension-sdk.TeamContext
           type:
             - TeamContext
           description: The team context for the operation
@@ -175,34 +216,34 @@ items:
       content: 'function getDashboard(teamContext: TeamContext, dashboardId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3.getDashboards
     name: 'getDashboards(teamContext: TeamContext)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
-        - id: teamContext
+        - id: vss-web-extension-sdk.TeamContext
           type:
             - TeamContext
           description: The team context for the operation
       content: 'function getDashboards(teamContext: TeamContext)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3.getWidget
     name: 'getWidget(teamContext: TeamContext, dashboardId: string, widgetId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
-        - id: teamContext
+        - id: vss-web-extension-sdk.TeamContext
           type:
             - TeamContext
           description: The team context for the operation
@@ -219,14 +260,14 @@ items:
         widgetId: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3.getWidgetMetadata
     name: 'getWidgetMetadata(contributionId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
         - id: contributionId
@@ -236,17 +277,17 @@ items:
       content: 'function getWidgetMetadata(contributionId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3.getWidgets
     name: 'getWidgets(teamContext: TeamContext, dashboardId: string, eTag?: String)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
-        - id: teamContext
+        - id: vss-web-extension-sdk.TeamContext
           type:
             - TeamContext
           description: The team context for the operation
@@ -264,14 +305,14 @@ items:
         eTag?: String)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3.getWidgetTypes
     name: 'getWidgetTypes(scope: function)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Returns available widgets in alphabetical order.'
     syntax:
       parameters:
         - id: scope
@@ -281,7 +322,7 @@ items:
       content: 'function getWidgetTypes(scope: function)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3.replaceDashboard
     name: >-
@@ -290,14 +331,14 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
-        - id: dashboard
+        - id: vss-web-extension-sdk.Dashboard
           type:
             - Dashboard
           description: ''
-        - id: teamContext
+        - id: vss-web-extension-sdk.TeamContext
           type:
             - TeamContext
           description: The team context for the operation
@@ -310,21 +351,21 @@ items:
         TeamContext, dashboardId: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3.replaceDashboards
     name: 'replaceDashboards(group: DashboardGroup, teamContext: TeamContext)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
-        - id: group
+        - id: vss-web-extension-sdk.DashboardGroup
           type:
             - DashboardGroup
           description: ''
-        - id: teamContext
+        - id: vss-web-extension-sdk.TeamContext
           type:
             - TeamContext
           description: The team context for the operation
@@ -333,7 +374,7 @@ items:
         TeamContext)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3.replaceWidget
     name: >-
@@ -342,14 +383,14 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
-        - id: widget
+        - id: vss-web-extension-sdk.Widget
           type:
             - Widget
           description: ''
-        - id: teamContext
+        - id: vss-web-extension-sdk.TeamContext
           type:
             - TeamContext
           description: The team context for the operation
@@ -366,7 +407,7 @@ items:
         dashboardId: string, widgetId: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3.replaceWidgets
     name: >-
@@ -375,14 +416,14 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
         - id: widgets
           type:
             - function
           description: ''
-        - id: teamContext
+        - id: vss-web-extension-sdk.TeamContext
           type:
             - TeamContext
           description: The team context for the operation
@@ -400,7 +441,7 @@ items:
         dashboardId: string, eTag?: String)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3.updateWidget
     name: >-
@@ -409,14 +450,14 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
-        - id: widget
+        - id: vss-web-extension-sdk.Widget
           type:
             - Widget
           description: ''
-        - id: teamContext
+        - id: vss-web-extension-sdk.TeamContext
           type:
             - TeamContext
           description: The team context for the operation
@@ -433,7 +474,7 @@ items:
         dashboardId: string, widgetId: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3.updateWidgets
     name: >-
@@ -442,14 +483,14 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
         - id: widgets
           type:
             - function
           description: ''
-        - id: teamContext
+        - id: vss-web-extension-sdk.TeamContext
           type:
             - TeamContext
           description: The team context for the operation
@@ -467,14 +508,38 @@ items:
         dashboardId: string, eTag?: String)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient3.widgetsApiVersion
+    name: widgetsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.DashboardHttpClient3.widgetTypesApiVersion
+    name: widgetTypesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.DashboardHttpClient3._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Gets information about an API resource location (route template, supported
+      versions, etc.)
     syntax:
       parameters:
         - id: area
@@ -489,7 +554,7 @@ items:
       content: 'function _beginGetLocation(area: string, locationId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3._beginRequest
     name: >-
@@ -498,10 +563,10 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: requestParams
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
           type:
             - VssApiResourceRequestParams
           description: request options
@@ -517,17 +582,19 @@ items:
         useAjaxResult?: boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.DashboardHttpClient3._beginRequestWithAjaxResult
     name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Issue a request to a VSS REST endpoint and makes sure the result contains
+      jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: requestParams
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
           type:
             - VssApiResourceRequestParams
           description: request options
@@ -545,7 +612,11 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Issue an AJAX request. This is a wrapper around jquery's ajax method that
+      handles VSS authentication
+
+      and triggers events that can be listened to by other modules.
     syntax:
       parameters:
         - id: requestUrl
@@ -563,7 +634,7 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vssRequestOptions
+        - id: vss-web-extension-sdk.IVssAjaxOptions
           type:
             - IVssAjaxOptions
           description: ''
@@ -574,17 +645,32 @@ items:
         IVssAjaxOptions)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.DashboardHttpClient3._rootRequestPath
+    name: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.DashboardHttpClient3._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Sets a promise that is waited on before any requests are issued. Can be
+      used to asynchronously
+
+      set the request url and auth token manager.
     syntax:
       parameters:
-        - id: promise
+        - id: vss-web-extension-sdk.IPromise
           type:
             - IPromise
           description: ''

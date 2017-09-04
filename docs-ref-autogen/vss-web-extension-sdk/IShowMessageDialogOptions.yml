@@ -1,0 +1,128 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IShowMessageDialogOptions
+    name: IShowMessageDialogOptions
+    fullName: IShowMessageDialogOptions
+    children:
+      - vss-web-extension-sdk.IShowMessageDialogOptions.beforeClose
+      - vss-web-extension-sdk.IShowMessageDialogOptions.buttons
+      - vss-web-extension-sdk.IShowMessageDialogOptions.escapeButton
+      - vss-web-extension-sdk.IShowMessageDialogOptions.height
+      - vss-web-extension-sdk.IShowMessageDialogOptions.noFocusOnClose
+      - >-
+        vss-web-extension-sdk.IShowMessageDialogOptions.requiredTypedConfirmation
+      - vss-web-extension-sdk.IShowMessageDialogOptions.title
+      - vss-web-extension-sdk.IShowMessageDialogOptions.useBowtieStyle
+      - vss-web-extension-sdk.IShowMessageDialogOptions.width
+    langs:
+      - typeScript
+    type: interface
+    summary: Mirrored in VSS.SDK.Interfaces as IOpenMessageDialogOptions.
+  - uid: vss-web-extension-sdk.IShowMessageDialogOptions.beforeClose
+    name: beforeClose
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Optional delegate that can be called when a dialog button is clicked. This
+      can be used to get a value from UI in the dialog before it is removed from
+      the DOM.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IShowMessageDialogOptions.buttons
+    name: buttons
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Array of buttons to show. Default is [Button.Ok, Button.Cancel]'
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IShowMessageDialogOptions.escapeButton
+    name: escapeButton
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Button to use when the user presses the Esc key. Default is the last
+      button.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IMessageDialogButton
+  - uid: vss-web-extension-sdk.IShowMessageDialogOptions.height
+    name: height
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Height of dialog in px.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.IShowMessageDialogOptions.noFocusOnClose
+    name: noFocusOnClose
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Option to override default focus setting (which sets focus to the next
+      dialog when the current dialog is closed).
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IShowMessageDialogOptions.requiredTypedConfirmation
+    name: requiredTypedConfirmation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If this is set, the user will be presented with a text box. Non-rejecting
+      buttons will be disabled until the user types in this string.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IShowMessageDialogOptions.title
+    name: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Text for the title bar of the dialog.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IShowMessageDialogOptions.useBowtieStyle
+    name: useBowtieStyle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Use Bowtie styling. Default is true.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IShowMessageDialogOptions.width
+    name: width
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Width of dialog in px.
+    syntax:
+      return:
+        type:
+          - number

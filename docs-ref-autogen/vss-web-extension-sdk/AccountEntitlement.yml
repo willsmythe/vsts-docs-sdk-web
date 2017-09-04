@@ -1,0 +1,118 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.AccountEntitlement
+    name: AccountEntitlement
+    fullName: AccountEntitlement
+    children:
+      - vss-web-extension-sdk.AccountEntitlement.accountId
+      - vss-web-extension-sdk.AccountEntitlement.assignmentDate
+      - vss-web-extension-sdk.AccountEntitlement.assignmentSource
+      - vss-web-extension-sdk.AccountEntitlement.lastAccessedDate
+      - vss-web-extension-sdk.AccountEntitlement.license
+      - vss-web-extension-sdk.AccountEntitlement.rights
+      - vss-web-extension-sdk.AccountEntitlement.status
+      - vss-web-extension-sdk.AccountEntitlement.user
+      - vss-web-extension-sdk.AccountEntitlement.userId
+    langs:
+      - typeScript
+    type: interface
+    summary: Represents a license granted to a user in an account
+  - uid: vss-web-extension-sdk.AccountEntitlement.accountId
+    name: accountId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets or sets the id of the account to which the license belongs
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.AccountEntitlement.assignmentDate
+    name: assignmentDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets or sets the date the license was assigned
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.AccountEntitlement.assignmentSource
+    name: assignmentSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Assignment Source
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.AccountEntitlement.lastAccessedDate
+    name: lastAccessedDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets or sets the date of the user last sign-in to this account
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.AccountEntitlement.license
+    name: license
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.License
+  - uid: vss-web-extension-sdk.AccountEntitlement.rights
+    name: rights
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The computed rights of this user in the account.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.AccountRights
+  - uid: vss-web-extension-sdk.AccountEntitlement.status
+    name: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The status of the user in the account
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.AccountEntitlement.user
+    name: user
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Identity information of the user to which the license belongs
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IdentityRef
+  - uid: vss-web-extension-sdk.AccountEntitlement.userId
+    name: userId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets the id of the user to which the license belongs
+    syntax:
+      return:
+        type:
+          - string

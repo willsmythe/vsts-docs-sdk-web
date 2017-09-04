@@ -1,0 +1,50 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.WikiRepository
+    name: WikiRepository
+    fullName: WikiRepository
+    children:
+      - vss-web-extension-sdk.WikiRepository.headCommit
+      - vss-web-extension-sdk.WikiRepository.id
+      - vss-web-extension-sdk.WikiRepository.repository
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Defines a wiki repository which encapsulates the git repository backing
+      the wiki.
+  - uid: vss-web-extension-sdk.WikiRepository.headCommit
+    name: headCommit
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The head commit associated with the git repository backing up the wiki.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.WikiRepository.id
+    name: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The ID of the wiki which is same as the ID of the Git repository that it
+      is backed by.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.WikiRepository.repository
+    name: repository
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The git repository that backs up the wiki.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.GitRepository

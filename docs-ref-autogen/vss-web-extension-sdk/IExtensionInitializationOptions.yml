@@ -1,0 +1,104 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IExtensionInitializationOptions
+    name: IExtensionInitializationOptions
+    fullName: IExtensionInitializationOptions
+    children:
+      - >-
+        vss-web-extension-sdk.IExtensionInitializationOptions.explicitNotifyLoaded
+      - >-
+        vss-web-extension-sdk.IExtensionInitializationOptions.extensionReusedCallback
+      - vss-web-extension-sdk.IExtensionInitializationOptions.moduleLoaderConfig
+      - vss-web-extension-sdk.IExtensionInitializationOptions.usePlatformScripts
+      - vss-web-extension-sdk.IExtensionInitializationOptions.usePlatformStyles
+    langs:
+      - typeScript
+    type: interface
+    summary: Options for the extension's initialization method
+  - uid: vss-web-extension-sdk.IExtensionInitializationOptions.explicitNotifyLoaded
+    name: explicitNotifyLoaded
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Set to true if the extension will explicitly call notifyLoadSucceeded or
+      notifyLoadFailed
+
+      itself to indicate that the extension is done loading (stops UI loading
+      indicator in the host).
+
+      If false (the default) the extension is considered ready as soon as init
+      is called.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.IExtensionInitializationOptions.extensionReusedCallback
+    name: extensionReusedCallback
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Optional callback method that gets invoked when this extension frame is
+      reused by another contribution
+
+      which shares the same URI of the contribution that originally caused this
+      extension frame to be loaded.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IExtensionInitializationOptions.moduleLoaderConfig
+    name: moduleLoaderConfig
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Extension-specific AMD module loader configuration. This configuration
+      will be merged with the VSTS-specific configuration.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ModuleLoaderConfiguration
+  - uid: vss-web-extension-sdk.IExtensionInitializationOptions.usePlatformScripts
+    name: usePlatformScripts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Set to true if the extension is going to consume any VSS script libraries.
+
+      For example, controls, REST clients, services, etc.
+
+      This pulls in the script loader and configuration data from the host frame
+      so that
+
+      'require' statements can be used to load VSTS modules. A call to
+      VSS.require will
+
+      effectively turn this option on, even if not specified in the VSS.init
+      handshake.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IExtensionInitializationOptions.usePlatformStyles
+    name: usePlatformStyles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Set to true if the extension desires to use VSS platform CSS styles. If
+      not explicitly set,
+
+      the default value is the value of 'usePlatformScripts'.
+    syntax:
+      return:
+        type:
+          - boolean

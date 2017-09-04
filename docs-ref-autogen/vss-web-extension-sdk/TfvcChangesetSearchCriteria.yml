@@ -1,0 +1,110 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TfvcChangesetSearchCriteria
+    name: TfvcChangesetSearchCriteria
+    fullName: TfvcChangesetSearchCriteria
+    children:
+      - vss-web-extension-sdk.TfvcChangesetSearchCriteria.author
+      - vss-web-extension-sdk.TfvcChangesetSearchCriteria.followRenames
+      - vss-web-extension-sdk.TfvcChangesetSearchCriteria.fromDate
+      - vss-web-extension-sdk.TfvcChangesetSearchCriteria.fromId
+      - vss-web-extension-sdk.TfvcChangesetSearchCriteria.includeLinks
+      - vss-web-extension-sdk.TfvcChangesetSearchCriteria.itemPath
+      - vss-web-extension-sdk.TfvcChangesetSearchCriteria.toDate
+      - vss-web-extension-sdk.TfvcChangesetSearchCriteria.toId
+    langs:
+      - typeScript
+    type: interface
+    summary: Criteria used in a search for change lists
+  - uid: vss-web-extension-sdk.TfvcChangesetSearchCriteria.author
+    name: author
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Alias or display name of user who made the changes
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcChangesetSearchCriteria.followRenames
+    name: followRenames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether or not to follow renames for the given item being queried
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.TfvcChangesetSearchCriteria.fromDate
+    name: fromDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If provided, only include changesets created after this date (string)
+      Think of a better name for this.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcChangesetSearchCriteria.fromId
+    name: fromId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'If provided, only include changesets after this changesetID'
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.TfvcChangesetSearchCriteria.includeLinks
+    name: includeLinks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether to include the _links field on the shallow references
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.TfvcChangesetSearchCriteria.itemPath
+    name: itemPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Path of item to search under
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcChangesetSearchCriteria.toDate
+    name: toDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If provided, only include changesets created before this date (string)
+      Think of a better name for this.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcChangesetSearchCriteria.toId
+    name: toId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'If provided, a version descriptor for the latest change list to include'
+    syntax:
+      return:
+        type:
+          - number

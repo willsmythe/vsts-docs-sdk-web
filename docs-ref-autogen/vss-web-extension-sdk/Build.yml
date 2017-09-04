@@ -1,0 +1,516 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.Build
+    name: Build
+    fullName: Build
+    children:
+      - vss-web-extension-sdk.Build.buildNumber
+      - vss-web-extension-sdk.Build.buildNumberRevision
+      - vss-web-extension-sdk.Build.controller
+      - vss-web-extension-sdk.Build.definition
+      - vss-web-extension-sdk.Build.deleted
+      - vss-web-extension-sdk.Build.deletedBy
+      - vss-web-extension-sdk.Build.deletedDate
+      - vss-web-extension-sdk.Build.deletedReason
+      - vss-web-extension-sdk.Build.demands
+      - vss-web-extension-sdk.Build.finishTime
+      - vss-web-extension-sdk.Build.id
+      - vss-web-extension-sdk.Build.keepForever
+      - vss-web-extension-sdk.Build.lastChangedBy
+      - vss-web-extension-sdk.Build.lastChangedDate
+      - vss-web-extension-sdk.Build.logs
+      - vss-web-extension-sdk.Build.orchestrationPlan
+      - vss-web-extension-sdk.Build.parameters
+      - vss-web-extension-sdk.Build.plans
+      - vss-web-extension-sdk.Build.priority
+      - vss-web-extension-sdk.Build.project
+      - vss-web-extension-sdk.Build.properties
+      - vss-web-extension-sdk.Build.quality
+      - vss-web-extension-sdk.Build.queue
+      - vss-web-extension-sdk.Build.queueOptions
+      - vss-web-extension-sdk.Build.queuePosition
+      - vss-web-extension-sdk.Build.queueTime
+      - vss-web-extension-sdk.Build.reason
+      - vss-web-extension-sdk.Build.repository
+      - vss-web-extension-sdk.Build.requestedBy
+      - vss-web-extension-sdk.Build.requestedFor
+      - vss-web-extension-sdk.Build.result
+      - vss-web-extension-sdk.Build.retainedByRelease
+      - vss-web-extension-sdk.Build.sourceBranch
+      - vss-web-extension-sdk.Build.sourceVersion
+      - vss-web-extension-sdk.Build.startTime
+      - vss-web-extension-sdk.Build.status
+      - vss-web-extension-sdk.Build.tags
+      - vss-web-extension-sdk.Build.triggerInfo
+      - vss-web-extension-sdk.Build.uri
+      - vss-web-extension-sdk.Build.url
+      - vss-web-extension-sdk.Build.validationResults
+      - vss-web-extension-sdk.Build._links
+    langs:
+      - typeScript
+    type: interface
+    summary: Data representation of a build
+  - uid: vss-web-extension-sdk.Build.buildNumber
+    name: buildNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Build number/name of the build
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Build.buildNumberRevision
+    name: buildNumberRevision
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Build number revision
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.Build.controller
+    name: controller
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The build controller. This should only be set if the definition type is
+      Xaml.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.BuildController
+  - uid: vss-web-extension-sdk.Build.definition
+    name: definition
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The definition associated with the build
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.DefinitionReference
+  - uid: vss-web-extension-sdk.Build.deleted
+    name: deleted
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indicates whether the build has been deleted.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.Build.deletedBy
+    name: deletedBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Process or person that deleted the build
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IdentityRef
+  - uid: vss-web-extension-sdk.Build.deletedDate
+    name: deletedDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Date the build was deleted
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.Build.deletedReason
+    name: deletedReason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Description of how the build was deleted
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Build.demands
+    name: demands
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Demands
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.Build.finishTime
+    name: finishTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Time that the build was completed
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.Build.id
+    name: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Id of the build
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.Build.keepForever
+    name: keepForever
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.Build.lastChangedBy
+    name: lastChangedBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Process or person that last changed the build
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IdentityRef
+  - uid: vss-web-extension-sdk.Build.lastChangedDate
+    name: lastChangedDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Date the build was last changed
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.Build.logs
+    name: logs
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Log location of the build
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.BuildLogReference
+  - uid: vss-web-extension-sdk.Build.orchestrationPlan
+    name: orchestrationPlan
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Orchestration plan for the build
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.TaskOrchestrationPlanReference
+  - uid: vss-web-extension-sdk.Build.parameters
+    name: parameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Parameters for the build
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Build.plans
+    name: plans
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Orchestration plans associated with the build (build, cleanup)'
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.Build.priority
+    name: priority
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The build's priority
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.Build.project
+    name: project
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The team project
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.TeamProjectReference
+  - uid: vss-web-extension-sdk.Build.properties
+    name: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.Build.quality
+    name: quality
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Quality of the xaml build (good, bad, etc.)'
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Build.queue
+    name: queue
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The queue. This should only be set if the definition type is Build.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.AgentPoolQueue
+  - uid: vss-web-extension-sdk.Build.queueOptions
+    name: queueOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Queue option of the build.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.Build.queuePosition
+    name: queuePosition
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The current position of the build in the queue
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.Build.queueTime
+    name: queueTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Time that the build was queued
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.Build.reason
+    name: reason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Reason that the build was created
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.Build.repository
+    name: repository
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The repository
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.BuildRepository
+  - uid: vss-web-extension-sdk.Build.requestedBy
+    name: requestedBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The identity that queued the build
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IdentityRef
+  - uid: vss-web-extension-sdk.Build.requestedFor
+    name: requestedFor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The identity on whose behalf the build was queued
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IdentityRef
+  - uid: vss-web-extension-sdk.Build.result
+    name: result
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The build result
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.Build.retainedByRelease
+    name: retainedByRelease
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specifies if Build should be retained by Release
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.Build.sourceBranch
+    name: sourceBranch
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Source branch
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Build.sourceVersion
+    name: sourceVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Source version
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Build.startTime
+    name: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Time that the build was started
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.Build.status
+    name: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Status of the build
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.Build.tags
+    name: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.Build.triggerInfo
+    name: triggerInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Sourceprovider-specific information about what triggered the build
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.Build.uri
+    name: uri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uri of the build
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Build.url
+    name: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: REST url of the build
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Build.validationResults
+    name: validationResults
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.Build._links
+    name: _links
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any

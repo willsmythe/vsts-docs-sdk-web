@@ -8,16 +8,27 @@ items:
       - vss-web-extension-sdk.BuildHttpClient4.addBuildTags
       - vss-web-extension-sdk.BuildHttpClient4.addDefinitionTag
       - vss-web-extension-sdk.BuildHttpClient4.addDefinitionTags
+      - vss-web-extension-sdk.BuildHttpClient4.artifactsApiVersion
+      - vss-web-extension-sdk.BuildHttpClient4.authTokenManager
+      - vss-web-extension-sdk.BuildHttpClient4.badgeApiVersion
+      - vss-web-extension-sdk.BuildHttpClient4.buildbadgeApiVersion
       - vss-web-extension-sdk.BuildHttpClient4.constructor
+      - vss-web-extension-sdk.BuildHttpClient4.buildsApiVersion
+      - vss-web-extension-sdk.BuildHttpClient4.changesApiVersion
+      - vss-web-extension-sdk.BuildHttpClient4.changesApiVersion_54572c7b
+      - vss-web-extension-sdk.BuildHttpClient4.controllersApiVersion
       - vss-web-extension-sdk.BuildHttpClient4.createArtifact
       - vss-web-extension-sdk.BuildHttpClient4.createDefinition
       - vss-web-extension-sdk.BuildHttpClient4.createFolder
+      - vss-web-extension-sdk.BuildHttpClient4.definitionsApiVersion
       - vss-web-extension-sdk.BuildHttpClient4.deleteBuild
       - vss-web-extension-sdk.BuildHttpClient4.deleteBuildTag
       - vss-web-extension-sdk.BuildHttpClient4.deleteDefinition
       - vss-web-extension-sdk.BuildHttpClient4.deleteDefinitionTag
       - vss-web-extension-sdk.BuildHttpClient4.deleteFolder
       - vss-web-extension-sdk.BuildHttpClient4.deleteTemplate
+      - vss-web-extension-sdk.BuildHttpClient4.foldersApiVersion
+      - vss-web-extension-sdk.BuildHttpClient4.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.BuildHttpClient4.getArtifact
       - vss-web-extension-sdk.BuildHttpClient4.getArtifactContentZip
       - vss-web-extension-sdk.BuildHttpClient4.getArtifacts
@@ -56,8 +67,24 @@ items:
       - vss-web-extension-sdk.BuildHttpClient4.getTemplate
       - vss-web-extension-sdk.BuildHttpClient4.getTemplates
       - vss-web-extension-sdk.BuildHttpClient4.getWorkItemsBetweenBuilds
+      - vss-web-extension-sdk.BuildHttpClient4.logsApiVersion
+      - vss-web-extension-sdk.BuildHttpClient4.metricsApiVersion
+      - vss-web-extension-sdk.BuildHttpClient4.metricsApiVersion_7433fae7
+      - vss-web-extension-sdk.BuildHttpClient4.optionsApiVersion
+      - vss-web-extension-sdk.BuildHttpClient4.propertiesApiVersion
+      - vss-web-extension-sdk.BuildHttpClient4.propertiesApiVersion_0a6312e9
       - vss-web-extension-sdk.BuildHttpClient4.queueBuild
+      - vss-web-extension-sdk.BuildHttpClient4.reportApiVersion
+      - vss-web-extension-sdk.BuildHttpClient4.resourceUsageApiVersion
+      - vss-web-extension-sdk.BuildHttpClient4.revisionsApiVersion
       - vss-web-extension-sdk.BuildHttpClient4.saveTemplate
+      - vss-web-extension-sdk.BuildHttpClient4.serviceInstanceId
+      - vss-web-extension-sdk.BuildHttpClient4.settingsApiVersion
+      - vss-web-extension-sdk.BuildHttpClient4.tagsApiVersion
+      - vss-web-extension-sdk.BuildHttpClient4.tagsApiVersion_6e6114b2
+      - vss-web-extension-sdk.BuildHttpClient4.tagsApiVersion_cb894432
+      - vss-web-extension-sdk.BuildHttpClient4.templatesApiVersion
+      - vss-web-extension-sdk.BuildHttpClient4.timelineApiVersion
       - vss-web-extension-sdk.BuildHttpClient4.updateBuild
       - vss-web-extension-sdk.BuildHttpClient4.updateBuildProperties
       - vss-web-extension-sdk.BuildHttpClient4.updateBuilds
@@ -65,21 +92,24 @@ items:
       - vss-web-extension-sdk.BuildHttpClient4.updateDefinition
       - vss-web-extension-sdk.BuildHttpClient4.updateDefinitionProperties
       - vss-web-extension-sdk.BuildHttpClient4.updateFolder
+      - vss-web-extension-sdk.BuildHttpClient4.workitemsApiVersion
+      - vss-web-extension-sdk.BuildHttpClient4.workitemsApiVersion_5a21f5d2
       - vss-web-extension-sdk.BuildHttpClient4._beginGetLocation
       - vss-web-extension-sdk.BuildHttpClient4._beginRequest
       - vss-web-extension-sdk.BuildHttpClient4._beginRequestWithAjaxResult
       - vss-web-extension-sdk.BuildHttpClient4._issueAjaxRequest
+      - vss-web-extension-sdk.BuildHttpClient4._rootRequestPath
       - vss-web-extension-sdk.BuildHttpClient4._setInitializationPromise
     langs:
       - typeScript
-    type: Class
+    type: class
     summary: ''
   - uid: vss-web-extension-sdk.BuildHttpClient4.addBuildTag
     name: 'addBuildTag(project: string, buildId: number, tag: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Adds a tag to a build
     syntax:
       parameters:
         - id: project
@@ -97,14 +127,14 @@ items:
       content: 'function addBuildTag(project: string, buildId: number, tag: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.addBuildTags
     name: 'addBuildTags(tags: function, project: string, buildId: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Adds tag to a build
     syntax:
       parameters:
         - id: tags
@@ -122,14 +152,14 @@ items:
       content: 'function addBuildTags(tags: function, project: string, buildId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.addDefinitionTag
     name: 'addDefinitionTag(project: string, definitionId: number, tag: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Adds a tag to a definition'
     syntax:
       parameters:
         - id: project
@@ -149,14 +179,14 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.addDefinitionTags
     name: 'addDefinitionTags(tags: function, project: string, definitionId: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Adds multiple tags to a definition'
     syntax:
       parameters:
         - id: tags
@@ -176,8 +206,52 @@ items:
         definitionId: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.BuildHttpClient4.artifactsApiVersion
+    name: artifactsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.authTokenManager
+    name: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.BuildHttpClient4.badgeApiVersion
+    name: badgeApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.buildbadgeApiVersion
+    name: buildbadgeApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.BuildHttpClient4.constructor
     name: 'BuildHttpClient4(rootRequestPath: string, options?: IVssHttpClientOptions)'
     children: []
@@ -190,7 +264,7 @@ items:
           type:
             - string
           description: ''
-        - id: options
+        - id: vss-web-extension-sdk.IVssHttpClientOptions
           type:
             - IVssHttpClientOptions
           description: ''
@@ -200,17 +274,61 @@ items:
         IVssHttpClientOptions)
       return:
         type:
-          - BuildHttpClient4
+          - vss-web-extension-sdk.BuildHttpClient4
     type: constructor
+  - uid: vss-web-extension-sdk.BuildHttpClient4.buildsApiVersion
+    name: buildsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.changesApiVersion
+    name: changesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.changesApiVersion_54572c7b
+    name: changesApiVersion_54572c7b
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.controllersApiVersion
+    name: controllersApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.BuildHttpClient4.createArtifact
     name: 'createArtifact(artifact: BuildArtifact, buildId: number, project?: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Associates an artifact with a build
     syntax:
       parameters:
-        - id: artifact
+        - id: vss-web-extension-sdk.BuildArtifact
           type:
             - BuildArtifact
           description: ''
@@ -228,7 +346,7 @@ items:
         project?: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.createDefinition
     name: >-
@@ -237,10 +355,10 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Creates a new definition'
     syntax:
       parameters:
-        - id: definition
+        - id: vss-web-extension-sdk.BuildDefinition
           type:
             - BuildDefinition
           description: ''
@@ -264,7 +382,7 @@ items:
         definitionToCloneId?: number, definitionToCloneRevision?: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.createFolder
     name: 'createFolder(folder: Folder, project: string, path: string)'
@@ -274,7 +392,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: folder
+        - id: vss-web-extension-sdk.Folder
           type:
             - Folder
           description: ''
@@ -289,14 +407,25 @@ items:
       content: 'function createFolder(folder: Folder, project: string, path: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.BuildHttpClient4.definitionsApiVersion
+    name: definitionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.BuildHttpClient4.deleteBuild
     name: 'deleteBuild(buildId: number, project?: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Deletes a build
     syntax:
       parameters:
         - id: buildId
@@ -311,14 +440,14 @@ items:
       content: 'function deleteBuild(buildId: number, project?: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.deleteBuildTag
     name: 'deleteBuildTag(project: string, buildId: number, tag: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Deletes a tag from a build
     syntax:
       parameters:
         - id: project
@@ -336,14 +465,14 @@ items:
       content: 'function deleteBuildTag(project: string, buildId: number, tag: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.deleteDefinition
     name: 'deleteDefinition(definitionId: number, project?: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Deletes a definition and all associated builds
     syntax:
       parameters:
         - id: definitionId
@@ -358,14 +487,14 @@ items:
       content: 'function deleteDefinition(definitionId: number, project?: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.deleteDefinitionTag
     name: 'deleteDefinitionTag(project: string, definitionId: number, tag: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Deletes a tag from a definition'
     syntax:
       parameters:
         - id: project
@@ -385,7 +514,7 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.deleteFolder
     name: 'deleteFolder(project: string, path: string)'
@@ -406,14 +535,14 @@ items:
       content: 'function deleteFolder(project: string, path: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.deleteTemplate
     name: 'deleteTemplate(project: string, templateId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Deletes a definition template
     syntax:
       parameters:
         - id: project
@@ -427,14 +556,36 @@ items:
       content: 'function deleteTemplate(project: string, templateId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.BuildHttpClient4.foldersApiVersion
+    name: foldersApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.BuildHttpClient4.getArtifact
     name: 'getArtifact(buildId: number, artifactName: string, project?: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets a specific artifact for a build
     syntax:
       parameters:
         - id: buildId
@@ -455,7 +606,7 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getArtifactContentZip
     name: >-
@@ -464,7 +615,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets a specific artifact for a build
     syntax:
       parameters:
         - id: buildId
@@ -485,14 +636,14 @@ items:
         project?: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getArtifacts
     name: 'getArtifacts(buildId: number, project?: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets all artifacts for a build
     syntax:
       parameters:
         - id: buildId
@@ -507,7 +658,7 @@ items:
       content: 'function getArtifacts(buildId: number, project?: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBadge
     name: 'getBadge(project: string, definitionId: number, branchName?: string)'
@@ -535,14 +686,14 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuild
     name: 'getBuild(buildId: number, project?: string, propertyFilters?: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets a build
     syntax:
       parameters:
         - id: buildId
@@ -564,7 +715,7 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildBadge
     name: >-
@@ -599,7 +750,7 @@ items:
         string, branchName?: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildBadgeData
     name: >-
@@ -634,7 +785,7 @@ items:
         string, branchName?: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildChanges
     name: >-
@@ -643,7 +794,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets the changes associated with a build
     syntax:
       parameters:
         - id: project
@@ -674,14 +825,14 @@ items:
         continuationToken?: string, top?: number, includeSourceChange?: boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildController
     name: 'getBuildController(controllerId: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets a controller
     syntax:
       parameters:
         - id: controllerId
@@ -691,14 +842,14 @@ items:
       content: 'function getBuildController(controllerId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildControllers
     name: 'getBuildControllers(name?: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: 'Gets controller, optionally filtered by name'
     syntax:
       parameters:
         - id: name
@@ -709,7 +860,7 @@ items:
       content: 'function getBuildControllers(name?: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildLog
     name: >-
@@ -718,7 +869,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets a log
     syntax:
       parameters:
         - id: project
@@ -748,7 +899,7 @@ items:
         startLine?: number, endLine?: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildLogLines
     name: >-
@@ -757,7 +908,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets a log
     syntax:
       parameters:
         - id: project
@@ -787,14 +938,14 @@ items:
         number, startLine?: number, endLine?: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildLogs
     name: 'getBuildLogs(project: string, buildId: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets logs for a build
     syntax:
       parameters:
         - id: project
@@ -808,14 +959,14 @@ items:
       content: 'function getBuildLogs(project: string, buildId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildLogsZip
     name: 'getBuildLogsZip(project: string, buildId: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets logs for a build
     syntax:
       parameters:
         - id: project
@@ -829,14 +980,14 @@ items:
       content: 'function getBuildLogsZip(project: string, buildId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildOptionDefinitions
     name: 'getBuildOptionDefinitions(project?: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets all build option definitions
     syntax:
       parameters:
         - id: project
@@ -847,14 +998,14 @@ items:
       content: 'function getBuildOptionDefinitions(project?: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildProperties
     name: 'getBuildProperties(project: string, buildId: number, filter?: function)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Gets properties for a build.'
     syntax:
       parameters:
         - id: project
@@ -875,7 +1026,7 @@ items:
         function)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildReport
     name: 'getBuildReport(project: string, buildId: number, type?: string)'
@@ -901,7 +1052,7 @@ items:
       content: 'function getBuildReport(project: string, buildId: number, type?: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildReportHtmlContent
     name: 'getBuildReportHtmlContent(project: string, buildId: number, type?: string)'
@@ -929,7 +1080,7 @@ items:
         type?: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuilds
     name: >-
@@ -943,7 +1094,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets builds
     syntax:
       parameters:
         - id: project
@@ -1062,27 +1213,27 @@ items:
         string, repositoryType?: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildSettings
     name: getBuildSettings()
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets the build settings
     syntax:
       parameters: []
       content: function getBuildSettings()
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildTags
     name: 'getBuildTags(project: string, buildId: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets the tags for a build
     syntax:
       parameters:
         - id: project
@@ -1096,7 +1247,7 @@ items:
       content: 'function getBuildTags(project: string, buildId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildTimeline
     name: >-
@@ -1105,7 +1256,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets details for a build
     syntax:
       parameters:
         - id: project
@@ -1136,14 +1287,14 @@ items:
         string, changeId?: number, planId?: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildWorkItemsRefs
     name: 'getBuildWorkItemsRefs(project: string, buildId: number, top?: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets the work item ids associated with a build
     syntax:
       parameters:
         - id: project
@@ -1164,7 +1315,7 @@ items:
         number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getBuildWorkItemsRefsFromCommits
     name: >-
@@ -1173,7 +1324,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets the work item ids associated with build commits
     syntax:
       parameters:
         - id: commitIds
@@ -1200,7 +1351,7 @@ items:
         string, buildId: number, top?: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getChangesBetweenBuilds
     name: >-
@@ -1209,7 +1360,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Gets the changes associated between given builds'
     syntax:
       parameters:
         - id: project
@@ -1236,7 +1387,7 @@ items:
         toBuildId?: number, top?: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getDefinition
     name: >-
@@ -1246,7 +1397,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Gets a definition, optionally at a specific revision'
     syntax:
       parameters:
         - id: definitionId
@@ -1284,7 +1435,7 @@ items:
         includeLatestBuilds?: boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getDefinitionMetrics
     name: >-
@@ -1293,7 +1444,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Gets metrics of a definition'
     syntax:
       parameters:
         - id: project
@@ -1314,7 +1465,7 @@ items:
         minMetricsTime?: Date)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getDefinitionProperties
     name: >-
@@ -1323,7 +1474,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Gets properties for a definition.'
     syntax:
       parameters:
         - id: project
@@ -1344,14 +1495,14 @@ items:
         filter?: function)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getDefinitionRevisions
     name: 'getDefinitionRevisions(project: string, definitionId: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets revisions of a definition
     syntax:
       parameters:
         - id: project
@@ -1365,7 +1516,7 @@ items:
       content: 'function getDefinitionRevisions(project: string, definitionId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getDefinitions
     name: >-
@@ -1378,7 +1529,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: 'Gets definitions, optionally filtered by name'
     syntax:
       parameters:
         - id: project
@@ -1465,7 +1616,7 @@ items:
         taskIdFilter?: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getDefinitionTags
     name: >-
@@ -1474,7 +1625,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Gets the tags for a definition'
     syntax:
       parameters:
         - id: project
@@ -1495,7 +1646,7 @@ items:
         revision?: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getFolders
     name: 'getFolders(project: string, path?: string, queryOrder?: function)'
@@ -1524,7 +1675,7 @@ items:
         function)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getProjectMetrics
     name: >-
@@ -1533,7 +1684,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Gets metrics of a project'
     syntax:
       parameters:
         - id: project
@@ -1555,7 +1706,7 @@ items:
         string, minMetricsTime?: Date)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getResourceUsage
     name: getResourceUsage()
@@ -1568,14 +1719,14 @@ items:
       content: function getResourceUsage()
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getTags
     name: 'getTags(project: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets a list of tags in the project
     syntax:
       parameters:
         - id: project
@@ -1585,14 +1736,14 @@ items:
       content: 'function getTags(project: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getTemplate
     name: 'getTemplate(project: string, templateId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Gets definition template filtered by id'
     syntax:
       parameters:
         - id: project
@@ -1606,14 +1757,14 @@ items:
       content: 'function getTemplate(project: string, templateId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getTemplates
     name: 'getTemplates(project: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Gets definition templates'
     syntax:
       parameters:
         - id: project
@@ -1623,7 +1774,7 @@ items:
       content: 'function getTemplates(project: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.getWorkItemsBetweenBuilds
     name: >-
@@ -1632,7 +1783,9 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      [Preview API] Gets all the work item ids inbetween fromBuildId to
+      toBuildId
     syntax:
       parameters:
         - id: project
@@ -1657,8 +1810,74 @@ items:
         toBuildId: number, top?: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.BuildHttpClient4.logsApiVersion
+    name: logsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.metricsApiVersion
+    name: metricsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.metricsApiVersion_7433fae7
+    name: metricsApiVersion_7433fae7
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.optionsApiVersion
+    name: optionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.propertiesApiVersion
+    name: propertiesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.propertiesApiVersion_0a6312e9
+    name: propertiesApiVersion_0a6312e9
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.BuildHttpClient4.queueBuild
     name: >-
       queueBuild(build: Build, project?: string, ignoreWarnings?: boolean,
@@ -1666,10 +1885,10 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Queues a build
     syntax:
       parameters:
-        - id: build
+        - id: vss-web-extension-sdk.Build
           type:
             - Build
           description: ''
@@ -1693,8 +1912,41 @@ items:
         boolean, checkInTicket?: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.BuildHttpClient4.reportApiVersion
+    name: reportApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.resourceUsageApiVersion
+    name: resourceUsageApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.revisionsApiVersion
+    name: revisionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.BuildHttpClient4.saveTemplate
     name: >-
       saveTemplate(template: BuildDefinitionTemplate, project: string,
@@ -1702,10 +1954,10 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Saves a definition template'
     syntax:
       parameters:
-        - id: template
+        - id: vss-web-extension-sdk.BuildDefinitionTemplate
           type:
             - BuildDefinitionTemplate
           description: ''
@@ -1722,17 +1974,94 @@ items:
         string, templateId: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.BuildHttpClient4.serviceInstanceId
+    name: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.settingsApiVersion
+    name: settingsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.tagsApiVersion
+    name: tagsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.tagsApiVersion_6e6114b2
+    name: tagsApiVersion_6e6114b2
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.tagsApiVersion_cb894432
+    name: tagsApiVersion_cb894432
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.templatesApiVersion
+    name: templatesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.timelineApiVersion
+    name: timelineApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.BuildHttpClient4.updateBuild
     name: 'updateBuild(build: Build, buildId: number, project?: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Updates a build
     syntax:
       parameters:
-        - id: build
+        - id: vss-web-extension-sdk.Build
           type:
             - Build
           description: ''
@@ -1748,7 +2077,7 @@ items:
       content: 'function updateBuild(build: Build, buildId: number, project?: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.updateBuildProperties
     name: >-
@@ -1757,10 +2086,10 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Updates properties for a build.'
     syntax:
       parameters:
-        - id: document
+        - id: vss-web-extension-sdk.JsonPatchDocument
           type:
             - JsonPatchDocument
           description: ''
@@ -1777,14 +2106,14 @@ items:
         string, buildId: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.updateBuilds
     name: 'updateBuilds(builds: function, project?: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Update a batch of builds
     syntax:
       parameters:
         - id: builds
@@ -1799,24 +2128,24 @@ items:
       content: 'function updateBuilds(builds: function, project?: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.updateBuildSettings
     name: 'updateBuildSettings(settings: BuildSettings)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Updates the build settings
     syntax:
       parameters:
-        - id: settings
+        - id: vss-web-extension-sdk.BuildSettings
           type:
             - BuildSettings
           description: ''
       content: 'function updateBuildSettings(settings: BuildSettings)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.updateDefinition
     name: >-
@@ -1826,10 +2155,10 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Updates an existing definition'
     syntax:
       parameters:
-        - id: definition
+        - id: vss-web-extension-sdk.BuildDefinition
           type:
             - BuildDefinition
           description: ''
@@ -1858,7 +2187,7 @@ items:
         secretsSourceDefinitionRevision?: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.updateDefinitionProperties
     name: >-
@@ -1867,10 +2196,10 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API] Updates properties for a definition.'
     syntax:
       parameters:
-        - id: document
+        - id: vss-web-extension-sdk.JsonPatchDocument
           type:
             - JsonPatchDocument
           description: ''
@@ -1887,7 +2216,7 @@ items:
         project: string, definitionId: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4.updateFolder
     name: 'updateFolder(folder: Folder, project: string, path: string)'
@@ -1897,7 +2226,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: folder
+        - id: vss-web-extension-sdk.Folder
           type:
             - Folder
           description: ''
@@ -1912,14 +2241,38 @@ items:
       content: 'function updateFolder(folder: Folder, project: string, path: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.BuildHttpClient4.workitemsApiVersion
+    name: workitemsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildHttpClient4.workitemsApiVersion_5a21f5d2
+    name: workitemsApiVersion_5a21f5d2
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.BuildHttpClient4._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Gets information about an API resource location (route template, supported
+      versions, etc.)
     syntax:
       parameters:
         - id: area
@@ -1934,7 +2287,7 @@ items:
       content: 'function _beginGetLocation(area: string, locationId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4._beginRequest
     name: >-
@@ -1943,10 +2296,10 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: requestParams
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
           type:
             - VssApiResourceRequestParams
           description: request options
@@ -1962,17 +2315,19 @@ items:
         useAjaxResult?: boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.BuildHttpClient4._beginRequestWithAjaxResult
     name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Issue a request to a VSS REST endpoint and makes sure the result contains
+      jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: requestParams
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
           type:
             - VssApiResourceRequestParams
           description: request options
@@ -1990,7 +2345,11 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Issue an AJAX request. This is a wrapper around jquery's ajax method that
+      handles VSS authentication
+
+      and triggers events that can be listened to by other modules.
     syntax:
       parameters:
         - id: requestUrl
@@ -2008,7 +2367,7 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vssRequestOptions
+        - id: vss-web-extension-sdk.IVssAjaxOptions
           type:
             - IVssAjaxOptions
           description: ''
@@ -2019,17 +2378,32 @@ items:
         IVssAjaxOptions)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.BuildHttpClient4._rootRequestPath
+    name: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.BuildHttpClient4._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Sets a promise that is waited on before any requests are issued. Can be
+      used to asynchronously
+
+      set the request url and auth token manager.
     syntax:
       parameters:
-        - id: promise
+        - id: vss-web-extension-sdk.IPromise
           type:
             - IPromise
           description: ''

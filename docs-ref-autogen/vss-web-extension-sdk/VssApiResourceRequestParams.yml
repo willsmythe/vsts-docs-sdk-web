@@ -1,0 +1,258 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams
+    name: VssApiResourceRequestParams
+    fullName: VssApiResourceRequestParams
+    children:
+      - vss-web-extension-sdk.VssApiResourceRequestParams.apiVersion
+      - vss-web-extension-sdk.VssApiResourceRequestParams.area
+      - vss-web-extension-sdk.VssApiResourceRequestParams.customHeaders
+      - vss-web-extension-sdk.VssApiResourceRequestParams.data
+      - vss-web-extension-sdk.VssApiResourceRequestParams.httpMethod
+      - vss-web-extension-sdk.VssApiResourceRequestParams.httpResponseType
+      - vss-web-extension-sdk.VssApiResourceRequestParams.isRawData
+      - vss-web-extension-sdk.VssApiResourceRequestParams.locationId
+      - vss-web-extension-sdk.VssApiResourceRequestParams.queryParams
+      - vss-web-extension-sdk.VssApiResourceRequestParams.requestType
+      - vss-web-extension-sdk.VssApiResourceRequestParams.resource
+      - vss-web-extension-sdk.VssApiResourceRequestParams.responseIsCollection
+      - vss-web-extension-sdk.VssApiResourceRequestParams.responseType
+      - vss-web-extension-sdk.VssApiResourceRequestParams.routeTemplate
+      - vss-web-extension-sdk.VssApiResourceRequestParams.routeValues
+      - vss-web-extension-sdk.VssApiResourceRequestParams.timeout
+    langs:
+      - typeScript
+    type: interface
+    summary: Parameters for sending a WebApi request
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.apiVersion
+    name: apiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The api version string to send in the request (e.g. "1.0" or
+      "2.0-preview.2")
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.area
+    name: area
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Name of the area for the resource
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.customHeaders
+    name: customHeaders
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Allows the caller to specify custom request headers.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.data
+    name: data
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Data to post. In this case of a GET, this indicates query parameters.
+
+      For other requests, this is the request body object (which will be
+      serialized
+
+      into a JSON string unless isRawData is set to true).
+    syntax:
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.httpMethod
+    name: httpMethod
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: HTTP verb (GET by default if not specified)
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.httpResponseType
+    name: httpResponseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The http response (Accept) type. This is "json" (corresponds to
+      application/json Accept header)
+
+      unless otherwise specified. Other possible values are "html", "text",
+      "zip", or "binary" or their accept
+
+      header equivalents (e.g. application/zip).
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.isRawData
+    name: isRawData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If true, this indicates that no processing should be done on the 'data'
+      object
+
+      before it is sent in the request. *This is rarely needed*. One case is
+      when posting
+
+      an HTML5 File object.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.locationId
+    name: locationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Unique identifier for the resource's route to issue a request to. Used to
+      lookup the route template
+
+      for this request if the routeTemplate parameter is not supplied or for
+      version negotiation in S2S calls.
+
+      This is required to ensure any S2S calls work.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.queryParams
+    name: queryParams
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Query parameters to add to the url. In the case of a GET, query parameters
+      can
+
+      be supplied via 'data' or 'queryParams'. For other verbs such as POST, the
+
+      data object specifies the POST body, so queryParams is needed to indicate
+
+      parameters to add to the query string of the url (not included in the post
+      body).
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IDictionaryStringTo
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.requestType
+    name: requestType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Contract metadata for the request body. This allows us to do the necessary
+      serialization
+
+      for the provided 'data' object using VSS serialization settings.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ContractMetadata
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.resource
+    name: resource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Name of the resource to use in route template replacements. Only used if
+      routeTemplate is provided.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.responseIsCollection
+    name: responseIsCollection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Indicates that the response is expected to be a wrapped array, so unwrap
+      the response to
+
+      a regular array.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.responseType
+    name: responseType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Contract metadata for the response. This allows us to do the necessary
+      deserialization
+
+      for the response object using VSS serialization settings.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ContractMetadata
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.routeTemplate
+    name: routeTemplate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Route template that is used to form the request path. If routeTemplate is
+      NOT specified, then locationId
+
+      is used to lookup the template via an OPTIONS request.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.routeValues
+    name: routeValues
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Dictionary of route template replacement values
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VssApiResourceRequestParams.timeout
+    name: timeout
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Request timeout in milliseconds. The default is 5 minutes.
+    syntax:
+      return:
+        type:
+          - number

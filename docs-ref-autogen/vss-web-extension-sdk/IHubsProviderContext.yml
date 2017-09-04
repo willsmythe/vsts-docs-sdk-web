@@ -1,0 +1,36 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IHubsProviderContext
+    name: IHubsProviderContext
+    fullName: IHubsProviderContext
+    children:
+      - vss-web-extension-sdk.IHubsProviderContext.contributionId
+      - vss-web-extension-sdk.IHubsProviderContext.refreshDelegate
+    langs:
+      - typeScript
+    type: interface
+    summary: Context passed to hubs-providers in calls to get hubs
+  - uid: vss-web-extension-sdk.IHubsProviderContext.contributionId
+    name: contributionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The contribution id of the owning control
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IHubsProviderContext.refreshDelegate
+    name: refreshDelegate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Method that can be called when hubs change in order to update the owning
+      control
+    syntax:
+      return:
+        type:
+          - Function

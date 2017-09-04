@@ -1,0 +1,89 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.LocalSettingsService
+    name: LocalSettingsService
+    fullName: LocalSettingsService
+    children:
+      - vss-web-extension-sdk.LocalSettingsService.constructor
+      - vss-web-extension-sdk.LocalSettingsService.read
+      - vss-web-extension-sdk.LocalSettingsService.write
+    langs:
+      - typeScript
+    type: class
+    summary: Service for reading and writing to local storage
+  - uid: vss-web-extension-sdk.LocalSettingsService.constructor
+    name: 'LocalSettingsService(webContext?: WebContext)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.WebContext
+          type:
+            - WebContext
+          description: ''
+          optional: true
+      content: 'new LocalSettingsService(webContext?: WebContext)'
+      return:
+        type:
+          - vss-web-extension-sdk.LocalSettingsService
+    type: constructor
+  - uid: vss-web-extension-sdk.LocalSettingsService.read
+    name: 'read(key: string, defaultValue?: T, scope?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Read a setting from browser local storage.
+    syntax:
+      parameters:
+        - id: key
+          type:
+            - string
+          description: >-
+            Key for the setting to be written. This key will be prefixed with a
+            scope.
+        - id: defaultValue
+          type:
+            - T
+          description: The value to return in case no setting exists
+          optional: true
+        - id: scope
+          type:
+            - function
+          description: >-
+            Scope for the setting to apply to. This will determine the prefix to
+            use at the beginning of the setting key.
+          optional: true
+      content: 'function read(key: string, defaultValue?: T, scope?: function)'
+      return:
+        type:
+          - T
+    type: method
+  - uid: vss-web-extension-sdk.LocalSettingsService.write
+    name: 'write(key: string, value: any, scope?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Write a settings value to browser local storage
+    syntax:
+      parameters:
+        - id: key
+          type:
+            - string
+          description: >-
+            Key for the setting to be written. This key will be prefixed with a
+            scope.
+        - id: value
+          type:
+            - any
+          description: Value for the setting to be written
+        - id: scope
+          type:
+            - function
+          description: >
+            Scope for the setting to apply to. This will determine the prefix to
+            use at the beginning of the setting key.
+          optional: true
+      content: 'function write(key: string, value: any, scope?: function)'
+    type: method

@@ -4,10 +4,12 @@ items:
     name: ChatHttpClient2
     fullName: ChatHttpClient2
     children:
+      - vss-web-extension-sdk.ChatHttpClient2.authTokenManager
       - vss-web-extension-sdk.ChatHttpClient2.constructor
       - vss-web-extension-sdk.ChatHttpClient2.createChatRoom
       - vss-web-extension-sdk.ChatHttpClient2.deleteChatRoom
       - vss-web-extension-sdk.ChatHttpClient2.deleteMessage
+      - vss-web-extension-sdk.ChatHttpClient2.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.ChatHttpClient2.getAllChatRoomMessages
       - vss-web-extension-sdk.ChatHttpClient2.getAllChatRoomUsers
       - vss-web-extension-sdk.ChatHttpClient2.getAllRooms
@@ -16,18 +18,34 @@ items:
       - vss-web-extension-sdk.ChatHttpClient2.getChatRoomUserById
       - vss-web-extension-sdk.ChatHttpClient2.joinRoom
       - vss-web-extension-sdk.ChatHttpClient2.leaveRoom
+      - vss-web-extension-sdk.ChatHttpClient2.messagesApiVersion
+      - vss-web-extension-sdk.ChatHttpClient2.roomsApiVersion
       - vss-web-extension-sdk.ChatHttpClient2.sendMessageToRoom
+      - vss-web-extension-sdk.ChatHttpClient2.serviceInstanceId
       - vss-web-extension-sdk.ChatHttpClient2.updateChatMessage
       - vss-web-extension-sdk.ChatHttpClient2.updateChatRoom
+      - vss-web-extension-sdk.ChatHttpClient2.usersApiVersion
       - vss-web-extension-sdk.ChatHttpClient2._beginGetLocation
       - vss-web-extension-sdk.ChatHttpClient2._beginRequest
       - vss-web-extension-sdk.ChatHttpClient2._beginRequestWithAjaxResult
       - vss-web-extension-sdk.ChatHttpClient2._issueAjaxRequest
+      - vss-web-extension-sdk.ChatHttpClient2._rootRequestPath
       - vss-web-extension-sdk.ChatHttpClient2._setInitializationPromise
     langs:
       - typeScript
-    type: Class
+    type: class
     summary: ''
+  - uid: vss-web-extension-sdk.ChatHttpClient2.authTokenManager
+    name: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
   - uid: vss-web-extension-sdk.ChatHttpClient2.constructor
     name: 'ChatHttpClient2(rootRequestPath: string, options?: IVssHttpClientOptions)'
     children: []
@@ -40,7 +58,7 @@ items:
           type:
             - string
           description: ''
-        - id: options
+        - id: vss-web-extension-sdk.IVssHttpClientOptions
           type:
             - IVssHttpClientOptions
           description: ''
@@ -50,31 +68,31 @@ items:
         IVssHttpClientOptions)
       return:
         type:
-          - ChatHttpClient2
+          - vss-web-extension-sdk.ChatHttpClient2
     type: constructor
   - uid: vss-web-extension-sdk.ChatHttpClient2.createChatRoom
     name: 'createChatRoom(roomUpdate: RoomData)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Create a single chat room
     syntax:
       parameters:
-        - id: roomUpdate
+        - id: vss-web-extension-sdk.RoomData
           type:
             - RoomData
           description: Information to create the room
       content: 'function createChatRoom(roomUpdate: RoomData)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.ChatHttpClient2.deleteChatRoom
     name: 'deleteChatRoom(roomId: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Delete a given chat room
     syntax:
       parameters:
         - id: roomId
@@ -84,14 +102,14 @@ items:
       content: 'function deleteChatRoom(roomId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.ChatHttpClient2.deleteMessage
     name: 'deleteMessage(roomId: number, messageId: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Delete a given chat message
     syntax:
       parameters:
         - id: roomId
@@ -105,14 +123,25 @@ items:
       content: 'function deleteMessage(roomId: number, messageId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient2.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.ChatHttpClient2.getAllChatRoomMessages
     name: 'getAllChatRoomMessages(roomId: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Retrieve a listing of all chat messages in a given room
     syntax:
       parameters:
         - id: roomId
@@ -122,14 +151,14 @@ items:
       content: 'function getAllChatRoomMessages(roomId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.ChatHttpClient2.getAllChatRoomUsers
     name: 'getAllChatRoomUsers(roomId: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Retrieve a listing of all chat users
     syntax:
       parameters:
         - id: roomId
@@ -139,27 +168,27 @@ items:
       content: 'function getAllChatRoomUsers(roomId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.ChatHttpClient2.getAllRooms
     name: getAllRooms()
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Retrieve a listing of all chat rooms and the room information
     syntax:
       parameters: []
       content: function getAllRooms()
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.ChatHttpClient2.getChatRoomById
     name: 'getChatRoomById(roomId: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Retrieve information on a single chat room
     syntax:
       parameters:
         - id: roomId
@@ -169,14 +198,14 @@ items:
       content: 'function getChatRoomById(roomId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.ChatHttpClient2.getChatRoomMessageById
     name: 'getChatRoomMessageById(roomId: number, messageId: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Retrieve information on a single chat message
     syntax:
       parameters:
         - id: roomId
@@ -190,14 +219,14 @@ items:
       content: 'function getChatRoomMessageById(roomId: number, messageId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.ChatHttpClient2.getChatRoomUserById
     name: 'getChatRoomUserById(roomId: number, userId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Retrieve information on a single chat user
     syntax:
       parameters:
         - id: roomId
@@ -211,17 +240,17 @@ items:
       content: 'function getChatRoomUserById(roomId: number, userId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.ChatHttpClient2.joinRoom
     name: 'joinRoom(userUpdate: UserData, roomId: number, userId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Joins a user to a given room
     syntax:
       parameters:
-        - id: userUpdate
+        - id: vss-web-extension-sdk.UserData
           type:
             - UserData
           description: user model information
@@ -236,14 +265,14 @@ items:
       content: 'function joinRoom(userUpdate: UserData, roomId: number, userId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.ChatHttpClient2.leaveRoom
     name: 'leaveRoom(roomId: number, userId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Leaves a user from a given room
     syntax:
       parameters:
         - id: roomId
@@ -257,17 +286,39 @@ items:
       content: 'function leaveRoom(roomId: number, userId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient2.messagesApiVersion
+    name: messagesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ChatHttpClient2.roomsApiVersion
+    name: roomsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ChatHttpClient2.sendMessageToRoom
     name: 'sendMessageToRoom(messageUpdate: MessageData, roomId: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Post message to a room
     syntax:
       parameters:
-        - id: messageUpdate
+        - id: vss-web-extension-sdk.MessageData
           type:
             - MessageData
           description: Content of the message to post
@@ -278,8 +329,19 @@ items:
       content: 'function sendMessageToRoom(messageUpdate: MessageData, roomId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient2.serviceInstanceId
+    name: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ChatHttpClient2.updateChatMessage
     name: >-
       updateChatMessage(messageUpdate: MessageData, roomId: number, messageId:
@@ -287,10 +349,10 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Update a given chat message
     syntax:
       parameters:
-        - id: messageUpdate
+        - id: vss-web-extension-sdk.MessageData
           type:
             - MessageData
           description: New message content
@@ -307,17 +369,17 @@ items:
         messageId: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.ChatHttpClient2.updateChatRoom
     name: 'updateChatRoom(roomUpdate: RoomData, roomId: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Update information on a single chat room
     syntax:
       parameters:
-        - id: roomUpdate
+        - id: vss-web-extension-sdk.RoomData
           type:
             - RoomData
           description: Room information
@@ -328,14 +390,27 @@ items:
       content: 'function updateChatRoom(roomUpdate: RoomData, roomId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient2.usersApiVersion
+    name: usersApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ChatHttpClient2._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Gets information about an API resource location (route template, supported
+      versions, etc.)
     syntax:
       parameters:
         - id: area
@@ -350,7 +425,7 @@ items:
       content: 'function _beginGetLocation(area: string, locationId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.ChatHttpClient2._beginRequest
     name: >-
@@ -359,10 +434,10 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: requestParams
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
           type:
             - VssApiResourceRequestParams
           description: request options
@@ -378,17 +453,19 @@ items:
         useAjaxResult?: boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.ChatHttpClient2._beginRequestWithAjaxResult
     name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Issue a request to a VSS REST endpoint and makes sure the result contains
+      jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: requestParams
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
           type:
             - VssApiResourceRequestParams
           description: request options
@@ -406,7 +483,11 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Issue an AJAX request. This is a wrapper around jquery's ajax method that
+      handles VSS authentication
+
+      and triggers events that can be listened to by other modules.
     syntax:
       parameters:
         - id: requestUrl
@@ -424,7 +505,7 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vssRequestOptions
+        - id: vss-web-extension-sdk.IVssAjaxOptions
           type:
             - IVssAjaxOptions
           description: ''
@@ -435,17 +516,32 @@ items:
         IVssAjaxOptions)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ChatHttpClient2._rootRequestPath
+    name: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ChatHttpClient2._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Sets a promise that is waited on before any requests are issued. Can be
+      used to asynchronously
+
+      set the request url and auth token manager.
     syntax:
       parameters:
-        - id: promise
+        - id: vss-web-extension-sdk.IPromise
           type:
             - IPromise
           description: ''

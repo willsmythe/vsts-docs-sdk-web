@@ -8,6 +8,10 @@ items:
       - vss-web-extension-sdk.TaskAgentHttpClient3.addAgentPool
       - vss-web-extension-sdk.TaskAgentHttpClient3.addAgentQueue
       - vss-web-extension-sdk.TaskAgentHttpClient3.addTaskGroup
+      - vss-web-extension-sdk.TaskAgentHttpClient3.agentsApiVersion
+      - vss-web-extension-sdk.TaskAgentHttpClient3.authTokenManager
+      - >-
+        vss-web-extension-sdk.TaskAgentHttpClient3.azurermsubscriptionsApiVersion
       - vss-web-extension-sdk.TaskAgentHttpClient3.createAgentSession
       - vss-web-extension-sdk.TaskAgentHttpClient3.createServiceEndpoint
       - vss-web-extension-sdk.TaskAgentHttpClient3.createTeamProject
@@ -20,7 +24,10 @@ items:
       - vss-web-extension-sdk.TaskAgentHttpClient3.deleteServiceEndpoint
       - vss-web-extension-sdk.TaskAgentHttpClient3.deleteTaskDefinition
       - vss-web-extension-sdk.TaskAgentHttpClient3.deleteTaskGroup
+      - vss-web-extension-sdk.TaskAgentHttpClient3.endpointApiVersion
       - vss-web-extension-sdk.TaskAgentHttpClient3.executeServiceEndpointRequest
+      - >-
+        vss-web-extension-sdk.TaskAgentHttpClient3.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.TaskAgentHttpClient3.getAgent
       - vss-web-extension-sdk.TaskAgentHttpClient3.getAgentPool
       - vss-web-extension-sdk.TaskAgentHttpClient3.getAgentPoolRoles
@@ -45,14 +52,30 @@ items:
       - vss-web-extension-sdk.TaskAgentHttpClient3.getTaskDefinitions
       - vss-web-extension-sdk.TaskAgentHttpClient3.getTaskGroups
       - vss-web-extension-sdk.TaskAgentHttpClient3.getTaskHubLicenseDetails
+      - vss-web-extension-sdk.TaskAgentHttpClient3.hublicenseApiVersion
+      - vss-web-extension-sdk.TaskAgentHttpClient3.jobrequestsApiVersion
+      - vss-web-extension-sdk.TaskAgentHttpClient3.messagesApiVersion
+      - vss-web-extension-sdk.TaskAgentHttpClient3.packagesApiVersion
+      - vss-web-extension-sdk.TaskAgentHttpClient3.poolrolesApiVersion
+      - vss-web-extension-sdk.TaskAgentHttpClient3.poolsApiVersion
       - vss-web-extension-sdk.TaskAgentHttpClient3.queryEndpoint
       - vss-web-extension-sdk.TaskAgentHttpClient3.queryServiceEndpoint
       - vss-web-extension-sdk.TaskAgentHttpClient3.queueAgentRequest
+      - vss-web-extension-sdk.TaskAgentHttpClient3.queuerolesApiVersion
+      - vss-web-extension-sdk.TaskAgentHttpClient3.queuesApiVersion
       - vss-web-extension-sdk.TaskAgentHttpClient3.refreshAgent
       - vss-web-extension-sdk.TaskAgentHttpClient3.refreshAgents
       - vss-web-extension-sdk.TaskAgentHttpClient3.replaceAgent
       - vss-web-extension-sdk.TaskAgentHttpClient3.sendMessage
+      - >-
+        vss-web-extension-sdk.TaskAgentHttpClient3.serviceendpointproxyApiVersion
+      - vss-web-extension-sdk.TaskAgentHttpClient3.serviceendpointsApiVersion
+      - >-
+        vss-web-extension-sdk.TaskAgentHttpClient3.serviceendpointtypesApiVersion
+      - vss-web-extension-sdk.TaskAgentHttpClient3.sessionsApiVersion
       - vss-web-extension-sdk.TaskAgentHttpClient3.constructor
+      - vss-web-extension-sdk.TaskAgentHttpClient3.taskgroupsApiVersion
+      - vss-web-extension-sdk.TaskAgentHttpClient3.tasksApiVersion
       - vss-web-extension-sdk.TaskAgentHttpClient3.updateAgent
       - vss-web-extension-sdk.TaskAgentHttpClient3.updateAgentPool
       - vss-web-extension-sdk.TaskAgentHttpClient3.updateAgentRequest
@@ -60,14 +83,16 @@ items:
       - vss-web-extension-sdk.TaskAgentHttpClient3.updateServiceEndpoint
       - vss-web-extension-sdk.TaskAgentHttpClient3.updateTaskGroup
       - vss-web-extension-sdk.TaskAgentHttpClient3.updateTaskHubLicenseDetails
+      - vss-web-extension-sdk.TaskAgentHttpClient3.usercapabilitiesApiVersion
       - vss-web-extension-sdk.TaskAgentHttpClient3._beginGetLocation
       - vss-web-extension-sdk.TaskAgentHttpClient3._beginRequest
       - vss-web-extension-sdk.TaskAgentHttpClient3._beginRequestWithAjaxResult
       - vss-web-extension-sdk.TaskAgentHttpClient3._issueAjaxRequest
+      - vss-web-extension-sdk.TaskAgentHttpClient3._rootRequestPath
       - vss-web-extension-sdk.TaskAgentHttpClient3._setInitializationPromise
     langs:
       - typeScript
-    type: Class
+    type: class
     summary: ''
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.addAgent
     name: 'addAgent(agent: TaskAgent, poolId: number)'
@@ -77,7 +102,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: agent
+        - id: vss-web-extension-sdk.TaskAgent
           type:
             - TaskAgent
           description: ''
@@ -88,7 +113,7 @@ items:
       content: 'function addAgent(agent: TaskAgent, poolId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.addAgentPool
     name: 'addAgentPool(pool: TaskAgentPool)'
@@ -98,14 +123,14 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: pool
+        - id: vss-web-extension-sdk.TaskAgentPool
           type:
             - TaskAgentPool
           description: ''
       content: 'function addAgentPool(pool: TaskAgentPool)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.addAgentQueue
     name: 'addAgentQueue(queue: TaskAgentQueue, project?: string)'
@@ -115,7 +140,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: queue
+        - id: vss-web-extension-sdk.TaskAgentQueue
           type:
             - TaskAgentQueue
           description: ''
@@ -127,7 +152,7 @@ items:
       content: 'function addAgentQueue(queue: TaskAgentQueue, project?: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.addTaskGroup
     name: 'addTaskGroup(taskGroup: TaskGroup, project: string)'
@@ -137,7 +162,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: taskGroup
+        - id: vss-web-extension-sdk.TaskGroup
           type:
             - TaskGroup
           description: Task group object to create.
@@ -148,8 +173,41 @@ items:
       content: 'function addTaskGroup(taskGroup: TaskGroup, project: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.agentsApiVersion
+    name: agentsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.authTokenManager
+    name: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.azurermsubscriptionsApiVersion
+    name: azurermsubscriptionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.createAgentSession
     name: 'createAgentSession(session: TaskAgentSession, poolId: number)'
     children: []
@@ -158,7 +216,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: session
+        - id: vss-web-extension-sdk.TaskAgentSession
           type:
             - TaskAgentSession
           description: ''
@@ -169,7 +227,7 @@ items:
       content: 'function createAgentSession(session: TaskAgentSession, poolId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.createServiceEndpoint
     name: 'createServiceEndpoint(endpoint: ServiceEndpoint, project: string)'
@@ -179,7 +237,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: endpoint
+        - id: vss-web-extension-sdk.ServiceEndpoint
           type:
             - ServiceEndpoint
           description: ''
@@ -192,7 +250,7 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.createTeamProject
     name: 'createTeamProject(project?: string)'
@@ -210,7 +268,7 @@ items:
       content: 'function createTeamProject(project?: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.deleteAgent
     name: 'deleteAgent(poolId: number, agentId: number)'
@@ -231,7 +289,7 @@ items:
       content: 'function deleteAgent(poolId: number, agentId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.deleteAgentPool
     name: 'deleteAgentPool(poolId: number)'
@@ -248,7 +306,7 @@ items:
       content: 'function deleteAgentPool(poolId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.deleteAgentQueue
     name: 'deleteAgentQueue(queueId: number, project?: string)'
@@ -270,7 +328,7 @@ items:
       content: 'function deleteAgentQueue(queueId: number, project?: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.deleteAgentRequest
     name: >-
@@ -304,7 +362,7 @@ items:
         lockToken: string, result?: function)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.deleteAgentSession
     name: 'deleteAgentSession(poolId: number, sessionId: string)'
@@ -325,7 +383,7 @@ items:
       content: 'function deleteAgentSession(poolId: number, sessionId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.deleteMessage
     name: 'deleteMessage(poolId: number, messageId: number, sessionId: string)'
@@ -352,7 +410,7 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.deleteServiceEndpoint
     name: 'deleteServiceEndpoint(project: string, endpointId: string)'
@@ -373,7 +431,7 @@ items:
       content: 'function deleteServiceEndpoint(project: string, endpointId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.deleteTaskDefinition
     name: 'deleteTaskDefinition(taskId: string)'
@@ -390,7 +448,7 @@ items:
       content: 'function deleteTaskDefinition(taskId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.deleteTaskGroup
     name: 'deleteTaskGroup(project: string, taskGroupId: string, comment?: string)'
@@ -418,8 +476,19 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.endpointApiVersion
+    name: endpointApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.executeServiceEndpointRequest
     name: >-
       executeServiceEndpointRequest(serviceEndpointRequest:
@@ -430,7 +499,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: serviceEndpointRequest
+        - id: vss-web-extension-sdk.ServiceEndpointRequest
           type:
             - ServiceEndpointRequest
           description: ''
@@ -447,8 +516,20 @@ items:
         ServiceEndpointRequest, project: string, endpointId: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: >-
+      vss-web-extension-sdk.TaskAgentHttpClient3.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getAgent
     name: >-
       getAgent(poolId: number, agentId: number, includeCapabilities?: boolean,
@@ -487,7 +568,7 @@ items:
         boolean, includeAssignedRequest?: boolean, propertyFilters?: function)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getAgentPool
     name: >-
@@ -518,7 +599,7 @@ items:
         actionFilter?: function)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getAgentPoolRoles
     name: 'getAgentPoolRoles(poolId?: number)'
@@ -536,7 +617,7 @@ items:
       content: 'function getAgentPoolRoles(poolId?: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getAgentPools
     name: >-
@@ -573,7 +654,7 @@ items:
         poolType?: function, actionFilter?: function)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getAgentQueue
     name: 'getAgentQueue(queueId: number, project?: string, actionFilter?: function)'
@@ -602,7 +683,7 @@ items:
         function)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getAgentQueueRoles
     name: 'getAgentQueueRoles(queueId?: number)'
@@ -620,7 +701,7 @@ items:
       content: 'function getAgentQueueRoles(queueId?: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getAgentQueues
     name: >-
@@ -652,7 +733,7 @@ items:
         actionFilter?: function)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getAgentRequest
     name: 'getAgentRequest(poolId: number, requestId: number)'
@@ -673,7 +754,7 @@ items:
       content: 'function getAgentRequest(poolId: number, requestId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getAgentRequestsForAgent
     name: >-
@@ -703,7 +784,7 @@ items:
         completedRequestCount?: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getAgentRequestsForAgents
     name: >-
@@ -734,7 +815,7 @@ items:
         completedRequestCount?: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getAgentRequestsForPlan
     name: 'getAgentRequestsForPlan(poolId: number, planId: string, jobId?: string)'
@@ -762,7 +843,7 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getAgents
     name: >-
@@ -810,7 +891,7 @@ items:
         propertyFilters?: function, demands?: function)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getAzureSubscriptions
     name: getAzureSubscriptions()
@@ -823,7 +904,7 @@ items:
       content: function getAzureSubscriptions()
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getMessage
     name: 'getMessage(poolId: number, sessionId: string, lastMessageId?: number)'
@@ -851,7 +932,7 @@ items:
         number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getPackage
     name: 'getPackage(packageType: string, platform: string, version: string)'
@@ -878,7 +959,7 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getPackages
     name: 'getPackages(packageType?: string, platform?: string, top?: number)'
@@ -908,7 +989,7 @@ items:
         number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getServiceEndpointDetails
     name: 'getServiceEndpointDetails(project: string, endpointId: string)'
@@ -929,7 +1010,7 @@ items:
       content: 'function getServiceEndpointDetails(project: string, endpointId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getServiceEndpoints
     name: >-
@@ -970,7 +1051,7 @@ items:
         authSchemes?: function, endpointIds?: function, includeFailed?: boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getServiceEndpointTypes
     name: 'getServiceEndpointTypes(type?: string, scheme?: string)'
@@ -993,7 +1074,7 @@ items:
       content: 'function getServiceEndpointTypes(type?: string, scheme?: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getTaskContentZip
     name: >-
@@ -1028,7 +1109,7 @@ items:
         visibility?: function, scopeLocal?: boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getTaskDefinition
     name: >-
@@ -1063,7 +1144,7 @@ items:
         visibility?: function, scopeLocal?: boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getTaskDefinitions
     name: >-
@@ -1095,7 +1176,7 @@ items:
         scopeLocal?: boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getTaskGroups
     name: >-
@@ -1136,7 +1217,7 @@ items:
         boolean, taskIdFilter?: string, deleted?: boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.getTaskHubLicenseDetails
     name: >-
@@ -1168,34 +1249,107 @@ items:
         boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.hublicenseApiVersion
+    name: hublicenseApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.jobrequestsApiVersion
+    name: jobrequestsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.messagesApiVersion
+    name: messagesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.packagesApiVersion
+    name: packagesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.poolrolesApiVersion
+    name: poolrolesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.poolsApiVersion
+    name: poolsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.queryEndpoint
     name: 'queryEndpoint(endpoint: TaskDefinitionEndpoint)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Proxy for a GET request defined by an 'endpoint'. The request is
+      authorized using a service connection. The response is filtered using an
+      XPath/Json based selector.
     syntax:
       parameters:
-        - id: endpoint
+        - id: vss-web-extension-sdk.TaskDefinitionEndpoint
           type:
             - TaskDefinitionEndpoint
           description: Describes the URL to fetch.
       content: 'function queryEndpoint(endpoint: TaskDefinitionEndpoint)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.queryServiceEndpoint
     name: 'queryServiceEndpoint(binding: DataSourceBinding, project: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      [Obsolete - Use ExecuteServiceEndpointRequest API Instead] Proxy for a GET
+      request defined by an service endpoint. The request is authorized using a
+      data source in service endpoint. The response is filtered using an
+      XPath/Json based selector.
     syntax:
       parameters:
-        - id: binding
+        - id: vss-web-extension-sdk.DataSourceBinding
           type:
             - DataSourceBinding
           description: Describes the data source to fetch.
@@ -1208,7 +1362,7 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.queueAgentRequest
     name: 'queueAgentRequest(request: TaskAgentJobRequest, poolId: number)'
@@ -1218,7 +1372,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: request
+        - id: vss-web-extension-sdk.TaskAgentJobRequest
           type:
             - TaskAgentJobRequest
           description: ''
@@ -1229,8 +1383,30 @@ items:
       content: 'function queueAgentRequest(request: TaskAgentJobRequest, poolId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.queuerolesApiVersion
+    name: queuerolesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.queuesApiVersion
+    name: queuesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.refreshAgent
     name: 'refreshAgent(poolId: number, agentId: number)'
     children: []
@@ -1250,7 +1426,7 @@ items:
       content: 'function refreshAgent(poolId: number, agentId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.refreshAgents
     name: 'refreshAgents(poolId: number)'
@@ -1267,7 +1443,7 @@ items:
       content: 'function refreshAgents(poolId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.replaceAgent
     name: 'replaceAgent(agent: TaskAgent, poolId: number, agentId: number)'
@@ -1277,7 +1453,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: agent
+        - id: vss-web-extension-sdk.TaskAgent
           type:
             - TaskAgent
           description: ''
@@ -1292,7 +1468,7 @@ items:
       content: 'function replaceAgent(agent: TaskAgent, poolId: number, agentId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.sendMessage
     name: 'sendMessage(message: TaskAgentMessage, poolId: number, requestId: number)'
@@ -1302,7 +1478,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: message
+        - id: vss-web-extension-sdk.TaskAgentMessage
           type:
             - TaskAgentMessage
           description: ''
@@ -1319,8 +1495,52 @@ items:
         requestId: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.serviceendpointproxyApiVersion
+    name: serviceendpointproxyApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.serviceendpointsApiVersion
+    name: serviceendpointsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.serviceendpointtypesApiVersion
+    name: serviceendpointtypesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.sessionsApiVersion
+    name: sessionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.constructor
     name: >-
       TaskAgentHttpClient3(rootRequestPath: string, options?:
@@ -1335,7 +1555,7 @@ items:
           type:
             - string
           description: ''
-        - id: options
+        - id: vss-web-extension-sdk.IVssHttpClientOptions
           type:
             - IVssHttpClientOptions
           description: ''
@@ -1345,8 +1565,30 @@ items:
         IVssHttpClientOptions)
       return:
         type:
-          - TaskAgentHttpClient3
+          - vss-web-extension-sdk.TaskAgentHttpClient3
     type: constructor
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.taskgroupsApiVersion
+    name: taskgroupsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.tasksApiVersion
+    name: tasksApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.updateAgent
     name: 'updateAgent(agent: TaskAgent, poolId: number, agentId: number)'
     children: []
@@ -1355,7 +1597,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: agent
+        - id: vss-web-extension-sdk.TaskAgent
           type:
             - TaskAgent
           description: ''
@@ -1370,7 +1612,7 @@ items:
       content: 'function updateAgent(agent: TaskAgent, poolId: number, agentId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.updateAgentPool
     name: 'updateAgentPool(pool: TaskAgentPool, poolId: number)'
@@ -1380,7 +1622,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: pool
+        - id: vss-web-extension-sdk.TaskAgentPool
           type:
             - TaskAgentPool
           description: ''
@@ -1391,7 +1633,7 @@ items:
       content: 'function updateAgentPool(pool: TaskAgentPool, poolId: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.updateAgentRequest
     name: >-
@@ -1403,7 +1645,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: request
+        - id: vss-web-extension-sdk.TaskAgentJobRequest
           type:
             - TaskAgentJobRequest
           description: ''
@@ -1424,7 +1666,7 @@ items:
         number, requestId: number, lockToken: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.updateAgentUserCapabilities
     name: >-
@@ -1453,7 +1695,7 @@ items:
         number, agentId: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.updateServiceEndpoint
     name: >-
@@ -1465,7 +1707,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: endpoint
+        - id: vss-web-extension-sdk.ServiceEndpoint
           type:
             - ServiceEndpoint
           description: ''
@@ -1487,7 +1729,7 @@ items:
         string, endpointId: string, operation?: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.updateTaskGroup
     name: 'updateTaskGroup(taskGroup: TaskGroup, project: string)'
@@ -1497,7 +1739,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: taskGroup
+        - id: vss-web-extension-sdk.TaskGroup
           type:
             - TaskGroup
           description: Task group to update.
@@ -1508,7 +1750,7 @@ items:
       content: 'function updateTaskGroup(taskGroup: TaskGroup, project: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3.updateTaskHubLicenseDetails
     name: >-
@@ -1520,7 +1762,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: taskHubLicenseDetails
+        - id: vss-web-extension-sdk.TaskHubLicenseDetails
           type:
             - TaskHubLicenseDetails
           description: ''
@@ -1533,14 +1775,27 @@ items:
         TaskHubLicenseDetails, hubName: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3.usercapabilitiesApiVersion
+    name: usercapabilitiesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Gets information about an API resource location (route template, supported
+      versions, etc.)
     syntax:
       parameters:
         - id: area
@@ -1555,7 +1810,7 @@ items:
       content: 'function _beginGetLocation(area: string, locationId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3._beginRequest
     name: >-
@@ -1564,10 +1819,10 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: requestParams
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
           type:
             - VssApiResourceRequestParams
           description: request options
@@ -1583,17 +1838,19 @@ items:
         useAjaxResult?: boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3._beginRequestWithAjaxResult
     name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Issue a request to a VSS REST endpoint and makes sure the result contains
+      jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: requestParams
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
           type:
             - VssApiResourceRequestParams
           description: request options
@@ -1611,7 +1868,11 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Issue an AJAX request. This is a wrapper around jquery's ajax method that
+      handles VSS authentication
+
+      and triggers events that can be listened to by other modules.
     syntax:
       parameters:
         - id: requestUrl
@@ -1629,7 +1890,7 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vssRequestOptions
+        - id: vss-web-extension-sdk.IVssAjaxOptions
           type:
             - IVssAjaxOptions
           description: ''
@@ -1640,17 +1901,32 @@ items:
         IVssAjaxOptions)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TaskAgentHttpClient3._rootRequestPath
+    name: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient3._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Sets a promise that is waited on before any requests are issued. Can be
+      used to asynchronously
+
+      set the request url and auth token manager.
     syntax:
       parameters:
-        - id: promise
+        - id: vss-web-extension-sdk.IPromise
           type:
             - IPromise
           description: ''

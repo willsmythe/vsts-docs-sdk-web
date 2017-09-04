@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.WidgetSettings
+    name: WidgetSettings
+    fullName: WidgetSettings
+    children:
+      - vss-web-extension-sdk.WidgetSettings.customSettings
+      - vss-web-extension-sdk.WidgetSettings.lightboxOptions
+      - vss-web-extension-sdk.WidgetSettings.name
+      - vss-web-extension-sdk.WidgetSettings.size
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      A description of widget state, satisfying requirements for rendering a
+      widget (Does not contain grid centric information, or contribution
+      metadata).
+  - uid: vss-web-extension-sdk.WidgetSettings.customSettings
+    name: customSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: settings of the widget
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.CustomSettings
+  - uid: vss-web-extension-sdk.WidgetSettings.lightboxOptions
+    name: lightboxOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lightbox options
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.LightboxOptions
+  - uid: vss-web-extension-sdk.WidgetSettings.name
+    name: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      name of the widget (in case of configuration, this maps to the name sub
+      section in the general section of the configuration panel)
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.WidgetSettings.size
+    name: size
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      size of the widget (in case of configuration, this maps to the size sub
+      section in the general section of the configuration panel)
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.WidgetSize

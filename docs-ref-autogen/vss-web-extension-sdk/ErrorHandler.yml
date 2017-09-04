@@ -1,0 +1,170 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.ErrorHandler
+    name: ErrorHandler
+    fullName: ErrorHandler
+    children:
+      - vss-web-extension-sdk.ErrorHandler.$error
+      - vss-web-extension-sdk.ErrorHandler.attachErrorPublisher
+      - vss-web-extension-sdk.ErrorHandler.detachErrorPublisher
+      - vss-web-extension-sdk.ErrorHandler.constructor
+      - vss-web-extension-sdk.ErrorHandler.exists
+      - vss-web-extension-sdk.ErrorHandler.hideError
+      - vss-web-extension-sdk.ErrorHandler.ignoreRejectedPromiseTag
+      - vss-web-extension-sdk.ErrorHandler.initialize
+      - vss-web-extension-sdk.ErrorHandler.show
+      - vss-web-extension-sdk.ErrorHandler.showError
+      - vss-web-extension-sdk.ErrorHandler.visible
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+  - uid: vss-web-extension-sdk.ErrorHandler.$error
+    name: $error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
+  - uid: vss-web-extension-sdk.ErrorHandler.attachErrorPublisher
+    name: 'attachErrorPublisher(errorPublisher: errorPublisher)'
+    children: []
+    langs:
+      - typeScript
+    summary: Add error publisher to ErrorHander class
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.errorPublisher
+          type:
+            - errorPublisher
+          description: ''
+      content: 'function attachErrorPublisher(errorPublisher: errorPublisher)'
+    type: method
+  - uid: vss-web-extension-sdk.ErrorHandler.detachErrorPublisher
+    name: 'detachErrorPublisher(errorPublisher: errorPublisher)'
+    children: []
+    langs:
+      - typeScript
+    summary: Remove error publisher to ErrorHander class
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.errorPublisher
+          type:
+            - errorPublisher
+          description: ''
+      content: 'function detachErrorPublisher(errorPublisher: errorPublisher)'
+    type: method
+  - uid: vss-web-extension-sdk.ErrorHandler.constructor
+    name: ErrorHandler()
+    children: []
+    langs:
+      - typeScript
+    summary: Global error handler class which is attached to TFS
+    syntax:
+      parameters: []
+      content: new ErrorHandler()
+      return:
+        type:
+          - vss-web-extension-sdk.ErrorHandler
+    type: constructor
+  - uid: vss-web-extension-sdk.ErrorHandler.exists
+    name: exists()
+    children: []
+    langs:
+      - typeScript
+    summary: (Internal function) Checks whether error container exists or not
+    syntax:
+      parameters: []
+      content: function exists()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.ErrorHandler.hideError
+    name: hideError()
+    children: []
+    langs:
+      - typeScript
+    summary: (Internal function) Hides the error when clicked
+    syntax:
+      parameters: []
+      content: function hideError()
+    type: method
+  - uid: vss-web-extension-sdk.ErrorHandler.ignoreRejectedPromiseTag
+    name: ignoreRejectedPromiseTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ErrorHandler.initialize
+    name: initialize()
+    children: []
+    langs:
+      - typeScript
+    summary: (Internal function) Initializes error handler
+    syntax:
+      parameters: []
+      content: function initialize()
+    type: method
+  - uid: vss-web-extension-sdk.ErrorHandler.show
+    name: 'show(error: TfsError)'
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Displays error in a container. If no container is found, error
+      message is displayed in an alert dialog
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.TfsError
+          type:
+            - TfsError
+          description: ''
+      content: 'function show(error: TfsError)'
+    type: method
+  - uid: vss-web-extension-sdk.ErrorHandler.showError
+    name: 'showError(message: string, status?: string, stackTrace?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: (Internal function) Shows error in the container
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+        - id: status
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: stackTrace
+          type:
+            - string
+          description: ''
+          optional: true
+      content: >-
+        function showError(message: string, status?: string, stackTrace?:
+        string)
+    type: method
+  - uid: vss-web-extension-sdk.ErrorHandler.visible
+    name: visible
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean

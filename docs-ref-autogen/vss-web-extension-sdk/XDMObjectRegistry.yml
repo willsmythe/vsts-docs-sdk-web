@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.XDMObjectRegistry
+    name: XDMObjectRegistry
+    fullName: XDMObjectRegistry
+    children:
+      - vss-web-extension-sdk.XDMObjectRegistry.getInstance
+      - vss-web-extension-sdk.XDMObjectRegistry.register
+      - vss-web-extension-sdk.XDMObjectRegistry.unregister
+    langs:
+      - typeScript
+    type: class
+    summary: Catalog of objects exposed for XDM
+  - uid: vss-web-extension-sdk.XDMObjectRegistry.getInstance
+    name: 'getInstance(instanceId: string, contextData?: Object)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get an instance of an object registered with the given id
+    syntax:
+      parameters:
+        - id: instanceId
+          type:
+            - string
+          description: unique id of the registered object
+        - id: contextData
+          type:
+            - Object
+          description: >
+            Optional context data to pass to a registered object's factory
+            method
+          optional: true
+      content: 'function getInstance(instanceId: string, contextData?: Object)'
+      return:
+        type:
+          - T
+    type: method
+  - uid: vss-web-extension-sdk.XDMObjectRegistry.register
+    name: 'register(instanceId: string, instance: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Register an object (instance or factory method) exposed by this frame to
+      callers in a remote frame
+    syntax:
+      parameters:
+        - id: instanceId
+          type:
+            - string
+          description: unique id of the registered object
+        - id: instance
+          type:
+            - function
+          description: >
+            Either: (1) an object instance, or (2) a function that takes
+            optional context data and returns an object instance.
+      content: 'function register(instanceId: string, instance: function)'
+    type: method
+  - uid: vss-web-extension-sdk.XDMObjectRegistry.unregister
+    name: 'unregister(instanceId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Unregister an object (instance or factory method) that was previously
+      registered by this frame
+    syntax:
+      parameters:
+        - id: instanceId
+          type:
+            - string
+          description: |
+            unique id of the registered object
+      content: 'function unregister(instanceId: string)'
+    type: method

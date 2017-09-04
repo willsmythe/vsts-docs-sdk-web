@@ -1,0 +1,184 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.CloneOperationInformation
+    name: CloneOperationInformation
+    fullName: CloneOperationInformation
+    children:
+      - vss-web-extension-sdk.CloneOperationInformation.cloneStatistics
+      - vss-web-extension-sdk.CloneOperationInformation.completionDate
+      - vss-web-extension-sdk.CloneOperationInformation.creationDate
+      - vss-web-extension-sdk.CloneOperationInformation.destinationObject
+      - vss-web-extension-sdk.CloneOperationInformation.destinationPlan
+      - vss-web-extension-sdk.CloneOperationInformation.destinationProject
+      - vss-web-extension-sdk.CloneOperationInformation.message
+      - vss-web-extension-sdk.CloneOperationInformation.opId
+      - vss-web-extension-sdk.CloneOperationInformation.resultObjectType
+      - vss-web-extension-sdk.CloneOperationInformation.sourceObject
+      - vss-web-extension-sdk.CloneOperationInformation.sourcePlan
+      - vss-web-extension-sdk.CloneOperationInformation.sourceProject
+      - vss-web-extension-sdk.CloneOperationInformation.state
+      - vss-web-extension-sdk.CloneOperationInformation.url
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+  - uid: vss-web-extension-sdk.CloneOperationInformation.cloneStatistics
+    name: cloneStatistics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.CloneStatistics
+  - uid: vss-web-extension-sdk.CloneOperationInformation.completionDate
+    name: completionDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If the operation is complete, the DateTime of completion. If operation is
+      not complete, this is DateTime.MaxValue
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.CloneOperationInformation.creationDate
+    name: creationDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: DateTime when the operation was started
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.CloneOperationInformation.destinationObject
+    name: destinationObject
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Shallow reference of the destination
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ShallowReference
+  - uid: vss-web-extension-sdk.CloneOperationInformation.destinationPlan
+    name: destinationPlan
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Shallow reference of the destination
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ShallowReference
+  - uid: vss-web-extension-sdk.CloneOperationInformation.destinationProject
+    name: destinationProject
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Shallow reference of the destination
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ShallowReference
+  - uid: vss-web-extension-sdk.CloneOperationInformation.message
+    name: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If the operation has Failed, Message contains the reason for failure. Null
+      otherwise.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CloneOperationInformation.opId
+    name: opId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The ID of the operation
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.CloneOperationInformation.resultObjectType
+    name: resultObjectType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The type of the object generated as a result of the Clone operation
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.CloneOperationInformation.sourceObject
+    name: sourceObject
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Shallow reference of the source
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ShallowReference
+  - uid: vss-web-extension-sdk.CloneOperationInformation.sourcePlan
+    name: sourcePlan
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Shallow reference of the source
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ShallowReference
+  - uid: vss-web-extension-sdk.CloneOperationInformation.sourceProject
+    name: sourceProject
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Shallow reference of the source
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ShallowReference
+  - uid: vss-web-extension-sdk.CloneOperationInformation.state
+    name: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Current state of the operation. When State reaches Suceeded or Failed, the
+      operation is complete
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.CloneOperationInformation.url
+    name: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Url for geting the clone information
+    syntax:
+      return:
+        type:
+          - string

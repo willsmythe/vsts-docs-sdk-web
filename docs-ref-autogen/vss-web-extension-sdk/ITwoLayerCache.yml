@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.ITwoLayerCache
+    name: ITwoLayerCache
+    fullName: ITwoLayerCache
+    children:
+      - vss-web-extension-sdk.ITwoLayerCache.get
+      - vss-web-extension-sdk.ITwoLayerCache.set
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+  - uid: vss-web-extension-sdk.ITwoLayerCache.get
+    name: 'get(key: string, cacheTypeHint?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: This method can return null
+    syntax:
+      parameters:
+        - id: key
+          type:
+            - string
+          description: ''
+        - id: cacheTypeHint
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'function get(key: string, cacheTypeHint?: string)'
+      return:
+        type:
+          - V
+    type: method
+  - uid: vss-web-extension-sdk.ITwoLayerCache.set
+    name: 'set(key: string, value: V, cacheTypeHint?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: This method is optimistic
+    syntax:
+      parameters:
+        - id: key
+          type:
+            - string
+          description: ''
+        - id: value
+          type:
+            - V
+          description: ''
+        - id: cacheTypeHint
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'function set(key: string, value: V, cacheTypeHint?: string)'
+    type: method

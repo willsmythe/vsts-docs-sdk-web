@@ -4,12 +4,15 @@ items:
     name: CoreHttpClient2_3
     fullName: CoreHttpClient2_3
     children:
+      - vss-web-extension-sdk.CoreHttpClient2_3.authTokenManager
+      - vss-web-extension-sdk.CoreHttpClient2_3.connectedServicesApiVersion
       - vss-web-extension-sdk.CoreHttpClient2_3.constructor
       - vss-web-extension-sdk.CoreHttpClient2_3.createConnectedService
       - vss-web-extension-sdk.CoreHttpClient2_3.createIdentityMru
       - vss-web-extension-sdk.CoreHttpClient2_3.createTeam
       - vss-web-extension-sdk.CoreHttpClient2_3.deleteIdentityMru
       - vss-web-extension-sdk.CoreHttpClient2_3.deleteTeam
+      - vss-web-extension-sdk.CoreHttpClient2_3.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.CoreHttpClient2_3.getConnectedServiceDetails
       - vss-web-extension-sdk.CoreHttpClient2_3.getConnectedServices
       - vss-web-extension-sdk.CoreHttpClient2_3.getIdentityMru
@@ -24,8 +27,16 @@ items:
       - vss-web-extension-sdk.CoreHttpClient2_3.getTeam
       - vss-web-extension-sdk.CoreHttpClient2_3.getTeamMembers
       - vss-web-extension-sdk.CoreHttpClient2_3.getTeams
+      - vss-web-extension-sdk.CoreHttpClient2_3.identityMruApiVersion
+      - vss-web-extension-sdk.CoreHttpClient2_3.membersApiVersion
+      - vss-web-extension-sdk.CoreHttpClient2_3.processesApiVersion
+      - vss-web-extension-sdk.CoreHttpClient2_3.projectCollectionsApiVersion
+      - vss-web-extension-sdk.CoreHttpClient2_3.projectsApiVersion
+      - vss-web-extension-sdk.CoreHttpClient2_3.proxiesApiVersion
       - vss-web-extension-sdk.CoreHttpClient2_3.queueCreateProject
       - vss-web-extension-sdk.CoreHttpClient2_3.queueDeleteProject
+      - vss-web-extension-sdk.CoreHttpClient2_3.serviceInstanceId
+      - vss-web-extension-sdk.CoreHttpClient2_3.teamsApiVersion
       - vss-web-extension-sdk.CoreHttpClient2_3.updateIdentityMru
       - vss-web-extension-sdk.CoreHttpClient2_3.updateProject
       - vss-web-extension-sdk.CoreHttpClient2_3.updateTeam
@@ -33,11 +44,34 @@ items:
       - vss-web-extension-sdk.CoreHttpClient2_3._beginRequest
       - vss-web-extension-sdk.CoreHttpClient2_3._beginRequestWithAjaxResult
       - vss-web-extension-sdk.CoreHttpClient2_3._issueAjaxRequest
+      - vss-web-extension-sdk.CoreHttpClient2_3._rootRequestPath
       - vss-web-extension-sdk.CoreHttpClient2_3._setInitializationPromise
     langs:
       - typeScript
-    type: Class
+    type: class
     summary: ''
+  - uid: vss-web-extension-sdk.CoreHttpClient2_3.authTokenManager
+    name: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.CoreHttpClient2_3.connectedServicesApiVersion
+    name: connectedServicesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.constructor
     name: >-
       CoreHttpClient2_3(rootRequestPath: string, options?:
@@ -52,7 +86,7 @@ items:
           type:
             - string
           description: ''
-        - id: options
+        - id: vss-web-extension-sdk.IVssHttpClientOptions
           type:
             - IVssHttpClientOptions
           description: ''
@@ -62,7 +96,7 @@ items:
         IVssHttpClientOptions)
       return:
         type:
-          - CoreHttpClient2_3
+          - vss-web-extension-sdk.CoreHttpClient2_3
     type: constructor
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.createConnectedService
     name: >-
@@ -74,7 +108,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: connectedServiceCreationData
+        - id: vss-web-extension-sdk.WebApiConnectedServiceDetails
           type:
             - WebApiConnectedServiceDetails
           description: ''
@@ -87,7 +121,7 @@ items:
         WebApiConnectedServiceDetails, projectId: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.createIdentityMru
     name: 'createIdentityMru(mruData: IdentityData, mruName: string)'
@@ -97,7 +131,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: mruData
+        - id: vss-web-extension-sdk.IdentityData
           type:
             - IdentityData
           description: ''
@@ -108,17 +142,17 @@ items:
       content: 'function createIdentityMru(mruData: IdentityData, mruName: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.createTeam
     name: 'createTeam(team: WebApiTeam, projectId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Creates a team
     syntax:
       parameters:
-        - id: team
+        - id: vss-web-extension-sdk.WebApiTeam
           type:
             - WebApiTeam
           description: The team data used to create the team.
@@ -131,7 +165,7 @@ items:
       content: 'function createTeam(team: WebApiTeam, projectId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.deleteIdentityMru
     name: 'deleteIdentityMru(mruData: IdentityData, mruName: string)'
@@ -141,7 +175,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: mruData
+        - id: vss-web-extension-sdk.IdentityData
           type:
             - IdentityData
           description: ''
@@ -152,14 +186,14 @@ items:
       content: 'function deleteIdentityMru(mruData: IdentityData, mruName: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.deleteTeam
     name: 'deleteTeam(projectId: string, teamId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Deletes a team
     syntax:
       parameters:
         - id: projectId
@@ -175,8 +209,19 @@ items:
       content: 'function deleteTeam(projectId: string, teamId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.CoreHttpClient2_3.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.getConnectedServiceDetails
     name: 'getConnectedServiceDetails(projectId: string, name: string)'
     children: []
@@ -196,7 +241,7 @@ items:
       content: 'function getConnectedServiceDetails(projectId: string, name: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.getConnectedServices
     name: 'getConnectedServices(projectId: string, kind?: function)'
@@ -218,7 +263,7 @@ items:
       content: 'function getConnectedServices(projectId: string, kind?: function)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.getIdentityMru
     name: 'getIdentityMru(mruName: string)'
@@ -235,14 +280,14 @@ items:
       content: 'function getIdentityMru(mruName: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.getProcessById
     name: 'getProcessById(processId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Retrieve process by id
     syntax:
       parameters:
         - id: processId
@@ -252,20 +297,20 @@ items:
       content: 'function getProcessById(processId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.getProcesses
     name: getProcesses()
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Retrieve all processes
     syntax:
       parameters: []
       content: function getProcesses()
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.getProject
     name: >-
@@ -274,7 +319,9 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Get project with the specified id or name, optionally including
+      capabilities.
     syntax:
       parameters:
         - id: projectId
@@ -298,14 +345,14 @@ items:
         includeHistory?: boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.getProjectCollection
     name: 'getProjectCollection(collectionId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Get project collection with the specified id or name.
     syntax:
       parameters:
         - id: collectionId
@@ -315,14 +362,14 @@ items:
       content: 'function getProjectCollection(collectionId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.getProjectCollections
     name: 'getProjectCollections(top?: number, skip?: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Get project collection references for this application.
     syntax:
       parameters:
         - id: top
@@ -338,14 +385,14 @@ items:
       content: 'function getProjectCollections(top?: number, skip?: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.getProjectHistory
     name: 'getProjectHistory(minRevision?: number)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
         - id: minRevision
@@ -356,7 +403,7 @@ items:
       content: 'function getProjectHistory(minRevision?: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.getProjects
     name: >-
@@ -365,7 +412,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Get project references with the specified state
     syntax:
       parameters:
         - id: stateFilter
@@ -395,7 +442,7 @@ items:
         continuationToken?: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.getProxies
     name: 'getProxies(proxyUrl?: string)'
@@ -413,14 +460,14 @@ items:
       content: 'function getProxies(proxyUrl?: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.getTeam
     name: 'getTeam(projectId: string, teamId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Gets a team
     syntax:
       parameters:
         - id: projectId
@@ -434,7 +481,7 @@ items:
       content: 'function getTeam(projectId: string, teamId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.getTeamMembers
     name: >-
@@ -469,7 +516,7 @@ items:
         skip?: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.getTeams
     name: 'getTeams(projectId: string, top?: number, skip?: number)'
@@ -496,31 +543,97 @@ items:
       content: 'function getTeams(projectId: string, top?: number, skip?: number)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.CoreHttpClient2_3.identityMruApiVersion
+    name: identityMruApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CoreHttpClient2_3.membersApiVersion
+    name: membersApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CoreHttpClient2_3.processesApiVersion
+    name: processesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CoreHttpClient2_3.projectCollectionsApiVersion
+    name: projectCollectionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CoreHttpClient2_3.projectsApiVersion
+    name: projectsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CoreHttpClient2_3.proxiesApiVersion
+    name: proxiesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.queueCreateProject
     name: 'queueCreateProject(projectToCreate: TeamProject)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Queue a project creation.
     syntax:
       parameters:
-        - id: projectToCreate
+        - id: vss-web-extension-sdk.TeamProject
           type:
             - TeamProject
           description: The project to create.
       content: 'function queueCreateProject(projectToCreate: TeamProject)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.queueDeleteProject
     name: 'queueDeleteProject(projectId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Queue a project deletion.
     syntax:
       parameters:
         - id: projectId
@@ -530,8 +643,30 @@ items:
       content: 'function queueDeleteProject(projectId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.CoreHttpClient2_3.serviceInstanceId
+    name: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CoreHttpClient2_3.teamsApiVersion
+    name: teamsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.updateIdentityMru
     name: 'updateIdentityMru(mruData: IdentityData, mruName: string)'
     children: []
@@ -540,7 +675,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: mruData
+        - id: vss-web-extension-sdk.IdentityData
           type:
             - IdentityData
           description: ''
@@ -551,17 +686,17 @@ items:
       content: 'function updateIdentityMru(mruData: IdentityData, mruName: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.updateProject
     name: 'updateProject(projectUpdate: TeamProject, projectId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: 'Update an existing project''s name, abbreviation, or description.'
     syntax:
       parameters:
-        - id: projectUpdate
+        - id: vss-web-extension-sdk.TeamProject
           type:
             - TeamProject
           description: The updates for the project.
@@ -572,17 +707,17 @@ items:
       content: 'function updateProject(projectUpdate: TeamProject, projectId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3.updateTeam
     name: 'updateTeam(teamData: WebApiTeam, projectId: string, teamId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Updates a team's name and/or description
     syntax:
       parameters:
-        - id: teamData
+        - id: vss-web-extension-sdk.WebApiTeam
           type:
             - WebApiTeam
           description: ''
@@ -601,14 +736,16 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Gets information about an API resource location (route template, supported
+      versions, etc.)
     syntax:
       parameters:
         - id: area
@@ -623,7 +760,7 @@ items:
       content: 'function _beginGetLocation(area: string, locationId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3._beginRequest
     name: >-
@@ -632,10 +769,10 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: requestParams
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
           type:
             - VssApiResourceRequestParams
           description: request options
@@ -651,17 +788,19 @@ items:
         useAjaxResult?: boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.CoreHttpClient2_3._beginRequestWithAjaxResult
     name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Issue a request to a VSS REST endpoint and makes sure the result contains
+      jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: requestParams
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
           type:
             - VssApiResourceRequestParams
           description: request options
@@ -679,7 +818,11 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Issue an AJAX request. This is a wrapper around jquery's ajax method that
+      handles VSS authentication
+
+      and triggers events that can be listened to by other modules.
     syntax:
       parameters:
         - id: requestUrl
@@ -697,7 +840,7 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vssRequestOptions
+        - id: vss-web-extension-sdk.IVssAjaxOptions
           type:
             - IVssAjaxOptions
           description: ''
@@ -708,17 +851,32 @@ items:
         IVssAjaxOptions)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.CoreHttpClient2_3._rootRequestPath
+    name: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.CoreHttpClient2_3._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Sets a promise that is waited on before any requests are issued. Can be
+      used to asynchronously
+
+      set the request url and auth token manager.
     syntax:
       parameters:
-        - id: promise
+        - id: vss-web-extension-sdk.IPromise
           type:
             - IPromise
           description: ''

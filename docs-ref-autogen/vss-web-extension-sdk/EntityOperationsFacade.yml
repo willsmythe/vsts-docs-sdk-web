@@ -1,0 +1,121 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.EntityOperationsFacade
+    name: EntityOperationsFacade
+    fullName: EntityOperationsFacade
+    children:
+      - vss-web-extension-sdk.EntityOperationsFacade.constructor
+      - vss-web-extension-sdk.EntityOperationsFacade.filterEntities
+      - vss-web-extension-sdk.EntityOperationsFacade.getConnection
+      - vss-web-extension-sdk.EntityOperationsFacade.initializeConnection
+      - vss-web-extension-sdk.EntityOperationsFacade.mergeEntities
+      - vss-web-extension-sdk.EntityOperationsFacade.queryTokenEntityImageCache
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+  - uid: vss-web-extension-sdk.EntityOperationsFacade.constructor
+    name: EntityOperationsFacade()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: new EntityOperationsFacade()
+      return:
+        type:
+          - vss-web-extension-sdk.EntityOperationsFacade
+    type: constructor
+  - uid: vss-web-extension-sdk.EntityOperationsFacade.filterEntities
+    name: 'filterEntities(identities: function, prefix: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Return only the MRU users or groups that have the prefix
+    syntax:
+      parameters:
+        - id: identities
+          type:
+            - function
+          description: ''
+        - id: prefix
+          type:
+            - string
+          description: ''
+      content: 'function filterEntities(identities: function, prefix: string)'
+      return:
+        type:
+          - null
+    type: method
+  - uid: vss-web-extension-sdk.EntityOperationsFacade.getConnection
+    name: getConnection()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the relative location for the service's connection
+    syntax:
+      parameters: []
+      content: function getConnection()
+      return:
+        type:
+          - vss-web-extension-sdk.VssConnection
+    type: method
+  - uid: vss-web-extension-sdk.EntityOperationsFacade.initializeConnection
+    name: 'initializeConnection(connection: VssConnection)'
+    children: []
+    langs:
+      - typeScript
+    summary: Sets the VssConnection to use for this service
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VssConnection
+          type:
+            - VssConnection
+          description: |
+            VssConnection used by this service
+      content: 'function initializeConnection(connection: VssConnection)'
+    type: method
+  - uid: vss-web-extension-sdk.EntityOperationsFacade.mergeEntities
+    name: 'mergeEntities(list1: function, list2: function, mergePreference?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      This is the default way the controls internally merge MRU and DDS entities
+      entities.
+        Assumes that list1 and list2 are lists of distinct entities.
+        Use-cases apart from calls by the controls here are not supported; provided as a example of merging logic.
+    syntax:
+      parameters:
+        - id: list1
+          type:
+            - function
+          description: ''
+        - id: list2
+          type:
+            - function
+          description: ''
+        - id: mergePreference
+          type:
+            - string
+          description: ''
+          optional: true
+      content: >-
+        function mergeEntities(list1: function, list2: function,
+        mergePreference?: string)
+      return:
+        type:
+          - null
+    type: method
+  - uid: vss-web-extension-sdk.EntityOperationsFacade.queryTokenEntityImageCache
+    name: queryTokenEntityImageCache
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.HashCache

@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.WikiPage
+    name: WikiPage
+    fullName: WikiPage
+    children:
+      - vss-web-extension-sdk.WikiPage.childPages
+      - vss-web-extension-sdk.WikiPage.depth
+      - vss-web-extension-sdk.WikiPage.isNonConformant
+      - vss-web-extension-sdk.WikiPage.isParentPage
+      - vss-web-extension-sdk.WikiPage.order
+      - vss-web-extension-sdk.WikiPage.path
+    langs:
+      - typeScript
+    type: interface
+    summary: Defines a page in a wiki.
+  - uid: vss-web-extension-sdk.WikiPage.childPages
+    name: childPages
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Child pages of this page.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.WikiPage.depth
+    name: depth
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The depth in terms of level in the hierarchy.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.WikiPage.isNonConformant
+    name: isNonConformant
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Flag to denote if a page is non-conforming, i.e. 1) if the name doesn't
+      match our norms. 2) if the page does not have a valid entry in the
+      appropriate order file.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.WikiPage.isParentPage
+    name: isParentPage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Returns true if this page has child pages under its path.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.WikiPage.order
+    name: order
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Order associated with the page with respect to other pages in the same
+      hierarchy level.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.WikiPage.path
+    name: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Path of the wiki page.
+    syntax:
+      return:
+        type:
+          - string

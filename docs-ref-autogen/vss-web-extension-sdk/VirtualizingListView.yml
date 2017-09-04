@@ -1,0 +1,1043 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VirtualizingListView
+    name: VirtualizingListView
+    fullName: VirtualizingListView
+    children:
+      - vss-web-extension-sdk.VirtualizingListView.cancelDelayedFunction
+      - vss-web-extension-sdk.VirtualizingListView.create
+      - vss-web-extension-sdk.VirtualizingListView.createIn
+      - vss-web-extension-sdk.VirtualizingListView.delayExecute
+      - vss-web-extension-sdk.VirtualizingListView.enhance
+      - vss-web-extension-sdk.VirtualizingListView.ENHANCEMENTS_DATA_KEY
+      - vss-web-extension-sdk.VirtualizingListView.ENHANCEMENT_OPTIONPREFIX_KEY
+      - vss-web-extension-sdk.VirtualizingListView.ENHANCEMENT_OPTIONS_KEY
+      - vss-web-extension-sdk.VirtualizingListView.ensureEnhancement
+      - vss-web-extension-sdk.VirtualizingListView.ensureEnhancements
+      - vss-web-extension-sdk.VirtualizingListView.focus
+      - vss-web-extension-sdk.VirtualizingListView.getElement
+      - vss-web-extension-sdk.VirtualizingListView.getEnhancementOptions
+      - vss-web-extension-sdk.VirtualizingListView.getId
+      - vss-web-extension-sdk.VirtualizingListView.getInstance
+      - vss-web-extension-sdk.VirtualizingListView.getOptionPrefix
+      - vss-web-extension-sdk.VirtualizingListView.getTypeName
+      - vss-web-extension-sdk.VirtualizingListView.getTypeName
+      - vss-web-extension-sdk.VirtualizingListView.initializeOptions
+      - vss-web-extension-sdk.VirtualizingListView.isDisposed
+      - vss-web-extension-sdk.VirtualizingListView.optionsPrefix
+      - vss-web-extension-sdk.VirtualizingListView.registerEnhancement
+      - vss-web-extension-sdk.VirtualizingListView.registerJQueryWidget
+      - vss-web-extension-sdk.VirtualizingListView.selectNext
+      - vss-web-extension-sdk.VirtualizingListView.selectPrev
+      - vss-web-extension-sdk.VirtualizingListView.setAttribute
+      - vss-web-extension-sdk.VirtualizingListView.setEnhancementOptions
+      - vss-web-extension-sdk.VirtualizingListView.setRole
+      - vss-web-extension-sdk.VirtualizingListView.setSelectedIndex
+      - vss-web-extension-sdk.VirtualizingListView.constructor
+      - vss-web-extension-sdk.VirtualizingListView.visibleRowCount
+      - vss-web-extension-sdk.VirtualizingListView._bind
+      - vss-web-extension-sdk.VirtualizingListView._dataSource
+      - vss-web-extension-sdk.VirtualizingListView._disposed
+      - vss-web-extension-sdk.VirtualizingListView._element
+      - vss-web-extension-sdk.VirtualizingListView._enableMouseOver
+      - vss-web-extension-sdk.VirtualizingListView._enhance
+      - vss-web-extension-sdk.VirtualizingListView._enhancementOptions
+      - vss-web-extension-sdk.VirtualizingListView._ensureInitialized
+      - vss-web-extension-sdk.VirtualizingListView._fire
+      - vss-web-extension-sdk.VirtualizingListView._fireChange
+      - vss-web-extension-sdk.VirtualizingListView._firstVisible
+      - vss-web-extension-sdk.VirtualizingListView._getEventNameSpace
+      - vss-web-extension-sdk.VirtualizingListView._getInDomPromise
+      - vss-web-extension-sdk.VirtualizingListView._getUniqueId
+      - vss-web-extension-sdk.VirtualizingListView._initialized
+      - vss-web-extension-sdk.VirtualizingListView._itemsContainer
+      - vss-web-extension-sdk.VirtualizingListView._options
+      - vss-web-extension-sdk.VirtualizingListView._setElement
+      - vss-web-extension-sdk.VirtualizingListView._setId
+      - vss-web-extension-sdk.VirtualizingListView._unbind
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+  - uid: vss-web-extension-sdk.VirtualizingListView.cancelDelayedFunction
+    name: 'cancelDelayedFunction(name: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Cancels any pending delayed functions (delayExecute calls) with the
+      specified name
+    syntax:
+      parameters:
+        - id: name
+          type:
+            - string
+          description: Name (supplied in the delayExecute call) of the operations to cancel
+      content: 'function cancelDelayedFunction(name: string)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.create
+    name: >-
+      create(controlType: function, container: JQuery, controlOptions: TOptions,
+      enhancementOptions?: EnhancementOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: Creates a the control specified by TControl in the given container.
+    syntax:
+      parameters:
+        - id: controlType
+          type:
+            - function
+          description: ''
+        - id: container
+          type:
+            - JQuery
+          description: ''
+        - id: controlOptions
+          type:
+            - TOptions
+          description: ''
+        - id: vss-web-extension-sdk.EnhancementOptions
+          type:
+            - EnhancementOptions
+          description: ''
+          optional: true
+      content: >-
+        function create(controlType: function, container: JQuery,
+        controlOptions: TOptions, enhancementOptions?: EnhancementOptions)
+      return:
+        type:
+          - TControl
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.createIn
+    name: >-
+      createIn(type?: any, container?: any, options?: TOptions, koCompatable?:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: container
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - TOptions
+          description: ''
+          optional: true
+        - id: koCompatable
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: >-
+        function createIn(type?: any, container?: any, options?: TOptions,
+        koCompatable?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.Control
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.delayExecute
+    name: >-
+      delayExecute(name?: string, msDelay?: number, cancelPendingOps?: boolean,
+      func?: Function)
+    children: []
+    langs:
+      - typeScript
+    summary: Executes the provided function after the specified amount of time
+    syntax:
+      parameters:
+        - id: name
+          type:
+            - string
+          description: >-
+            (Optional) Name for this operation. Allows subsequent calls to
+            cancel this action.
+          optional: true
+        - id: msDelay
+          type:
+            - number
+          description: Delay in milliseconds to wait before executing the Function
+          optional: true
+        - id: cancelPendingOps
+          type:
+            - boolean
+          description: >-
+            If true, cancel any pending requests with this name. If false, and
+            there are outstanding requests with this name already in progress,
+            then do nothing.
+          optional: true
+        - id: func
+          type:
+            - Function
+          description: |
+            Method to execute after the delay
+          optional: true
+      content: >-
+        function delayExecute(name?: string, msDelay?: number,
+        cancelPendingOps?: boolean, func?: Function)
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.enhance
+    name: >-
+      enhance(type: function, element: function, options?: function,
+      enhancementOptions?: EnhancementOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - function
+          description: ''
+        - id: element
+          type:
+            - function
+          description: ''
+        - id: options
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: vss-web-extension-sdk.EnhancementOptions
+          type:
+            - EnhancementOptions
+          description: ''
+          optional: true
+      content: >-
+        function enhance(type: function, element: function, options?: function,
+        enhancementOptions?: EnhancementOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.Enhancement
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.ENHANCEMENTS_DATA_KEY
+    name: ENHANCEMENTS_DATA_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VirtualizingListView.ENHANCEMENT_OPTIONPREFIX_KEY
+    name: ENHANCEMENT_OPTIONPREFIX_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VirtualizingListView.ENHANCEMENT_OPTIONS_KEY
+    name: ENHANCEMENT_OPTIONS_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VirtualizingListView.ensureEnhancement
+    name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: context
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: errorCallback
+          type:
+            - any
+          description: ''
+          optional: true
+      content: >-
+        function ensureEnhancement(type?: any, context?: any, errorCallback?:
+        any)
+      return:
+        type:
+          - vss-web-extension-sdk.Enhancement
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.ensureEnhancements
+    name: 'ensureEnhancements(type?: any, context?: any, errorCallback?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: context
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: errorCallback
+          type:
+            - any
+          description: ''
+          optional: true
+      content: >-
+        function ensureEnhancements(type?: any, context?: any, errorCallback?:
+        any)
+      return:
+        type:
+          - null
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.focus
+    name: focus()
+    children: []
+    langs:
+      - typeScript
+    summary: Set Focus to the control
+    syntax:
+      parameters: []
+      content: function focus()
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.getElement
+    name: getElement()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the element associated with this control.
+    syntax:
+      parameters: []
+      content: function getElement()
+      return:
+        type:
+          - JQuery
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.getEnhancementOptions
+    name: 'getEnhancementOptions(type: any, element: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+        - id: element
+          type:
+            - any
+          description: |+
+
+      content: 'function getEnhancementOptions(type: any, element: any)'
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.getId
+    name: getId()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getId()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.getInstance
+    name: 'getInstance(type?: any, element?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: element
+          type:
+            - any
+          description: ''
+          optional: true
+      content: 'function getInstance(type?: any, element?: any)'
+      return:
+        type:
+          - vss-web-extension-sdk.Enhancement
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.getOptionPrefix
+    name: 'getOptionPrefix(type: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+      content: 'function getOptionPrefix(type: any)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.getTypeName
+    name: getTypeName()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getTypeName()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.getTypeName
+    name: 'getTypeName(type?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+          optional: true
+      content: 'function getTypeName(type?: any)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.initializeOptions
+    name: 'initializeOptions(options?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: options
+          type:
+            - any
+          description: |+
+
+          optional: true
+      content: 'function initializeOptions(options?: any)'
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.isDisposed
+    name: isDisposed()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function isDisposed()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.optionsPrefix
+    name: optionsPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VirtualizingListView.registerEnhancement
+    name: >-
+      registerEnhancement(type?: function, selector?: string, options?:
+      TOptions, errorCallback?: IErrorCallback, enhancementOptions?:
+      EnhancementOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: selector
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - TOptions
+          description: ''
+          optional: true
+        - id: vss-web-extension-sdk.IErrorCallback
+          type:
+            - IErrorCallback
+          description: |+
+
+          optional: true
+        - id: vss-web-extension-sdk.EnhancementOptions
+          type:
+            - EnhancementOptions
+          description: ''
+          optional: true
+      content: >-
+        function registerEnhancement(type?: function, selector?: string,
+        options?: TOptions, errorCallback?: IErrorCallback, enhancementOptions?:
+        EnhancementOptions)
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.registerJQueryWidget
+    name: >-
+      registerJQueryWidget(type?: any, widgetName?: any, widgetOptions?:
+      TOptions, enhancementOptions?: EnhancementOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: widgetName
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: widgetOptions
+          type:
+            - TOptions
+          description: |+
+
+          optional: true
+        - id: vss-web-extension-sdk.EnhancementOptions
+          type:
+            - EnhancementOptions
+          description: ''
+          optional: true
+      content: >-
+        function registerJQueryWidget(type?: any, widgetName?: any,
+        widgetOptions?: TOptions, enhancementOptions?: EnhancementOptions)
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.selectNext
+    name: 'selectNext(page?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: page
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: 'function selectNext(page?: boolean)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.selectPrev
+    name: 'selectPrev(page?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: page
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: 'function selectPrev(page?: boolean)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.setAttribute
+    name: 'setAttribute(attribute: string, value: function, element?: JQuery)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Sets the attribute for the current control using the specified attribute
+      name, value on the specified element.
+
+      If no element specified, default element is used.
+    syntax:
+      parameters:
+        - id: attribute
+          type:
+            - string
+          description: Attribute name to set value.
+        - id: value
+          type:
+            - function
+          description: Attribute value to set.
+        - id: element
+          type:
+            - JQuery
+          description: |
+            Element to apply the attribute (default is root element).
+          optional: true
+      content: >-
+        function setAttribute(attribute: string, value: function, element?:
+        JQuery)
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.setEnhancementOptions
+    name: 'setEnhancementOptions(enhancementOptions: EnhancementOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Sets options related to the creation of this control or enhancement of an
+      element as this control.
+
+      Note: Options are merged.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.EnhancementOptions
+          type:
+            - EnhancementOptions
+          description: ''
+      content: 'function setEnhancementOptions(enhancementOptions: EnhancementOptions)'
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.setRole
+    name: 'setRole(role: string, element?: JQuery)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Sets the role for the current control using the specified role value on
+      the specified element.
+
+      If no element specified, default element is used.
+    syntax:
+      parameters:
+        - id: role
+          type:
+            - string
+          description: Role to assign.
+        - id: element
+          type:
+            - JQuery
+          description: |
+            Element to apply the role (default is root element).
+          optional: true
+      content: 'function setRole(role: string, element?: JQuery)'
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.setSelectedIndex
+    name: 'setSelectedIndex(selectedIndex: number, noScrollIntoView?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: selectedIndex
+          type:
+            - number
+          description: ''
+        - id: noScrollIntoView
+          type:
+            - boolean
+          description: |+
+
+          optional: true
+      content: >-
+        function setSelectedIndex(selectedIndex: number, noScrollIntoView?:
+        boolean)
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.constructor
+    name: 'VirtualizingListView(options?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: options
+          type:
+            - any
+          description: |+
+
+          optional: true
+      content: 'new VirtualizingListView(options?: any)'
+      return:
+        type:
+          - vss-web-extension-sdk.VirtualizingListView
+    type: constructor
+  - uid: vss-web-extension-sdk.VirtualizingListView.visibleRowCount
+    name: visibleRowCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.VirtualizingListView._bind
+    name: '_bind(element?: any, eventType?: any, handler?: any, track?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: element
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: eventType
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: handler
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: track
+          type:
+            - any
+          description: |+
+
+          optional: true
+      content: >-
+        function _bind(element?: any, eventType?: any, handler?: any, track?:
+        any)
+      return:
+        type:
+          - vss-web-extension-sdk.Enhancement
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView._dataSource
+    name: _dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.BaseDataSource
+  - uid: vss-web-extension-sdk.VirtualizingListView._disposed
+    name: _disposed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VirtualizingListView._element
+    name: _element
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
+  - uid: vss-web-extension-sdk.VirtualizingListView._enableMouseOver
+    name: _enableMouseOver
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VirtualizingListView._enhance
+    name: '_enhance(element: JQuery)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: element
+          type:
+            - JQuery
+          description: |+
+
+      content: 'function _enhance(element: JQuery)'
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView._enhancementOptions
+    name: _enhancementOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.EnhancementOptions
+  - uid: vss-web-extension-sdk.VirtualizingListView._ensureInitialized
+    name: _ensureInitialized()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function _ensureInitialized()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView._fire
+    name: '_fire(element?: any, eventType?: any, args?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: element
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: eventType
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: args
+          type:
+            - any
+          description: |+
+
+          optional: true
+      content: 'function _fire(element?: any, eventType?: any, args?: any)'
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView._fireChange
+    name: '_fireChange(sender?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: Fires the change event for the control immediately
+    syntax:
+      parameters:
+        - id: sender
+          type:
+            - any
+          description: |
+            Source element of the event
+          optional: true
+      content: 'function _fireChange(sender?: any)'
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView._firstVisible
+    name: _firstVisible
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.VirtualizingListView._getEventNameSpace
+    name: _getEventNameSpace()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function _getEventNameSpace()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView._getInDomPromise
+    name: _getInDomPromise()
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Get a promise that is resolved once the containing element for this
+      control has been added to the DOM hierarchy.
+    syntax:
+      parameters: []
+      content: function _getInDomPromise()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView._getUniqueId
+    name: _getUniqueId()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function _getUniqueId()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView._initialized
+    name: _initialized
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VirtualizingListView._itemsContainer
+    name: _itemsContainer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
+  - uid: vss-web-extension-sdk.VirtualizingListView._options
+    name: _options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.VirtualizingListView._setElement
+    name: '_setElement(element: JQuery)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: element
+          type:
+            - JQuery
+          description: |+
+
+      content: 'function _setElement(element: JQuery)'
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView._setId
+    name: '_setId(id: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - string
+          description: |+
+
+      content: 'function _setId(id: string)'
+    type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView._unbind
+    name: '_unbind(element?: any, eventType?: any, handler?: any, track?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: element
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: eventType
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: handler
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: track
+          type:
+            - any
+          description: |+
+
+          optional: true
+      content: >-
+        function _unbind(element?: any, eventType?: any, handler?: any, track?:
+        any)
+      return:
+        type:
+          - vss-web-extension-sdk.Enhancement
+    type: method

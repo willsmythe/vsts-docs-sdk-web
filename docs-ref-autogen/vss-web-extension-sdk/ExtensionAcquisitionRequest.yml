@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.ExtensionAcquisitionRequest
+    name: ExtensionAcquisitionRequest
+    fullName: ExtensionAcquisitionRequest
+    children:
+      - vss-web-extension-sdk.ExtensionAcquisitionRequest.assignmentType
+      - vss-web-extension-sdk.ExtensionAcquisitionRequest.billingId
+      - vss-web-extension-sdk.ExtensionAcquisitionRequest.itemId
+      - vss-web-extension-sdk.ExtensionAcquisitionRequest.operationType
+      - vss-web-extension-sdk.ExtensionAcquisitionRequest.properties
+      - vss-web-extension-sdk.ExtensionAcquisitionRequest.quantity
+      - vss-web-extension-sdk.ExtensionAcquisitionRequest.targets
+    langs:
+      - typeScript
+    type: interface
+    summary: Contract for handling the extension acquisition process
+  - uid: vss-web-extension-sdk.ExtensionAcquisitionRequest.assignmentType
+    name: assignmentType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: How the item is being assigned
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ExtensionAcquisitionRequest.billingId
+    name: billingId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The id of the subscription used for purchase
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtensionAcquisitionRequest.itemId
+    name: itemId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The marketplace id (publisherName.extensionName) for the item
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtensionAcquisitionRequest.operationType
+    name: operationType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'The type of operation, such as install, request, purchase'
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ExtensionAcquisitionRequest.properties
+    name: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Additional properties which can be added to the request.
+    syntax:
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.ExtensionAcquisitionRequest.quantity
+    name: quantity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: How many licenses should be purchased
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.ExtensionAcquisitionRequest.targets
+    name: targets
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A list of target guids where the item should be acquired (installed,
+      requested, etc.), such as account id
+    syntax:
+      return:
+        type:
+          - union

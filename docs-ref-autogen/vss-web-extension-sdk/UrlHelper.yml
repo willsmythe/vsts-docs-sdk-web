@@ -1,0 +1,119 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.UrlHelper
+    name: UrlHelper
+    fullName: UrlHelper
+    children:
+      - vss-web-extension-sdk.UrlHelper.beginGetMvcUrl
+      - vss-web-extension-sdk.UrlHelper.getContentUrl
+      - vss-web-extension-sdk.UrlHelper.getMvcUrl
+      - vss-web-extension-sdk.UrlHelper.getVersionedContentUrl
+      - vss-web-extension-sdk.UrlHelper.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: Helper class for generating urls
+  - uid: vss-web-extension-sdk.UrlHelper.beginGetMvcUrl
+    name: 'beginGetMvcUrl(options: MvcRouteOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get the url of an MVC endpoint.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.MvcRouteOptions
+          type:
+            - MvcRouteOptions
+          description: Url generation options
+      content: 'function beginGetMvcUrl(options: MvcRouteOptions)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.UrlHelper.getContentUrl
+    name: 'getContentUrl(options: ContentLocationOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get the url of particular content. If a service id is specified, its url
+      needs to already be in the cached locations.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.ContentLocationOptions
+          type:
+            - ContentLocationOptions
+          description: Url generation options
+      content: 'function getContentUrl(options: ContentLocationOptions)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.UrlHelper.getMvcUrl
+    name: 'getMvcUrl(options: MvcRouteOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get the url of an MVC endpoint. If a service id is specified, its url
+      needs to already be in the cached locations.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.MvcRouteOptions
+          type:
+            - MvcRouteOptions
+          description: Url generation options
+      content: 'function getMvcUrl(options: MvcRouteOptions)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.UrlHelper.getVersionedContentUrl
+    name: >-
+      getVersionedContentUrl(contentFileName: string, serviceInstanceTypeId?:
+      string)
+    children: []
+    langs:
+      - typeScript
+    summary: Get the url of a versioned _content file from the hosting page's service.
+    syntax:
+      parameters:
+        - id: contentFileName
+          type:
+            - string
+          description: 'filename relative to "/_static/tfs/{Version}/_content/"'
+        - id: serviceInstanceTypeId
+          type:
+            - string
+          description: The id of the service instance to generate the content url of
+          optional: true
+      content: >-
+        function getVersionedContentUrl(contentFileName: string,
+        serviceInstanceTypeId?: string)
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.UrlHelper.constructor
+    name: 'UrlHelper(areaPrefix?: string, controllerPrefix?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: areaPrefix
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: controllerPrefix
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'new UrlHelper(areaPrefix?: string, controllerPrefix?: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.UrlHelper
+    type: constructor

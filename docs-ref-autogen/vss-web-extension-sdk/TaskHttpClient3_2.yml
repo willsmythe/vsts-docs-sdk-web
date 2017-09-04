@@ -6,10 +6,15 @@ items:
     children:
       - vss-web-extension-sdk.TaskHttpClient3_2.appendLogContent
       - vss-web-extension-sdk.TaskHttpClient3_2.appendTimelineRecordFeed
+      - vss-web-extension-sdk.TaskHttpClient3_2.attachmentsApiVersion
+      - vss-web-extension-sdk.TaskHttpClient3_2.attachmentsApiVersion_eb55e5d6
+      - vss-web-extension-sdk.TaskHttpClient3_2.authTokenManager
       - vss-web-extension-sdk.TaskHttpClient3_2.createAttachment
       - vss-web-extension-sdk.TaskHttpClient3_2.createLog
       - vss-web-extension-sdk.TaskHttpClient3_2.createTimeline
       - vss-web-extension-sdk.TaskHttpClient3_2.deleteTimeline
+      - vss-web-extension-sdk.TaskHttpClient3_2.feedApiVersion
+      - vss-web-extension-sdk.TaskHttpClient3_2.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.TaskHttpClient3_2.getAttachment
       - vss-web-extension-sdk.TaskHttpClient3_2.getAttachmentContent
       - vss-web-extension-sdk.TaskHttpClient3_2.getAttachments
@@ -23,16 +28,25 @@ items:
       - vss-web-extension-sdk.TaskHttpClient3_2.getRecords
       - vss-web-extension-sdk.TaskHttpClient3_2.getTimeline
       - vss-web-extension-sdk.TaskHttpClient3_2.getTimelines
+      - vss-web-extension-sdk.TaskHttpClient3_2.logsApiVersion
+      - vss-web-extension-sdk.TaskHttpClient3_2.metricsApiVersion
+      - vss-web-extension-sdk.TaskHttpClient3_2.plangroupsqueueApiVersion
+      - >-
+        vss-web-extension-sdk.TaskHttpClient3_2.plangroupsqueueApiVersion_65fd0708
+      - vss-web-extension-sdk.TaskHttpClient3_2.plansApiVersion
+      - vss-web-extension-sdk.TaskHttpClient3_2.recordsApiVersion
       - vss-web-extension-sdk.TaskHttpClient3_2.constructor
+      - vss-web-extension-sdk.TaskHttpClient3_2.timelinesApiVersion
       - vss-web-extension-sdk.TaskHttpClient3_2.updateRecords
       - vss-web-extension-sdk.TaskHttpClient3_2._beginGetLocation
       - vss-web-extension-sdk.TaskHttpClient3_2._beginRequest
       - vss-web-extension-sdk.TaskHttpClient3_2._beginRequestWithAjaxResult
       - vss-web-extension-sdk.TaskHttpClient3_2._issueAjaxRequest
+      - vss-web-extension-sdk.TaskHttpClient3_2._rootRequestPath
       - vss-web-extension-sdk.TaskHttpClient3_2._setInitializationPromise
     langs:
       - typeScript
-    type: Class
+    type: class
     summary: ''
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.appendLogContent
     name: >-
@@ -71,7 +85,7 @@ items:
         hubName: string, planId: string, logId: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.appendTimelineRecordFeed
     name: >-
@@ -84,7 +98,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: lines
+        - id: vss-web-extension-sdk.VssJsonCollectionWrapperV
           type:
             - VssJsonCollectionWrapperV
           description: ''
@@ -116,8 +130,41 @@ items:
         string, recordId: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TaskHttpClient3_2.attachmentsApiVersion
+    name: attachmentsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskHttpClient3_2.attachmentsApiVersion_eb55e5d6
+    name: attachmentsApiVersion_eb55e5d6
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskHttpClient3_2.authTokenManager
+    name: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.createAttachment
     name: >-
       createAttachment(content: string, scopeIdentifier: string, hubName:
@@ -126,7 +173,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
         - id: content
@@ -169,7 +216,7 @@ items:
         type: string, name: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.createLog
     name: >-
@@ -181,7 +228,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: log
+        - id: vss-web-extension-sdk.TaskLog
           type:
             - TaskLog
           description: ''
@@ -204,7 +251,7 @@ items:
         string, planId: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.createTimeline
     name: >-
@@ -216,7 +263,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: timeline
+        - id: vss-web-extension-sdk.Timeline
           type:
             - Timeline
           description: ''
@@ -239,7 +286,7 @@ items:
         hubName: string, planId: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.deleteTimeline
     name: >-
@@ -274,8 +321,30 @@ items:
         planId: string, timelineId: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TaskHttpClient3_2.feedApiVersion
+    name: feedApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskHttpClient3_2.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.getAttachment
     name: >-
       getAttachment(scopeIdentifier: string, hubName: string, planId: string,
@@ -283,7 +352,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
         - id: scopeIdentifier
@@ -322,7 +391,7 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.getAttachmentContent
     name: >-
@@ -331,7 +400,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
         - id: scopeIdentifier
@@ -370,7 +439,7 @@ items:
         name: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.getAttachments
     name: >-
@@ -379,7 +448,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
         - id: scopeIdentifier
@@ -413,7 +482,7 @@ items:
         planId: string, timelineId: string, recordId: string, type: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.getLog
     name: >-
@@ -458,7 +527,7 @@ items:
         string, logId: number, startLine?: number, endLine?: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.getLogs
     name: 'getLogs(scopeIdentifier: string, hubName: string, planId: string)'
@@ -487,7 +556,7 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.getPlan
     name: 'getPlan(scopeIdentifier: string, hubName: string, planId: string)'
@@ -516,7 +585,7 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.getPlanAttachments
     name: >-
@@ -525,7 +594,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
         - id: scopeIdentifier
@@ -551,14 +620,14 @@ items:
         planId: string, type: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.getPlanGroupsQueueMetrics
     name: 'getPlanGroupsQueueMetrics(scopeIdentifier: string, hubName: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
         - id: scopeIdentifier
@@ -576,7 +645,7 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.getQueuedPlanGroup
     name: >-
@@ -585,7 +654,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
         - id: scopeIdentifier
@@ -607,7 +676,7 @@ items:
         planGroup: string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.getQueuedPlanGroups
     name: >-
@@ -616,7 +685,7 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: '[Preview API]'
     syntax:
       parameters:
         - id: scopeIdentifier
@@ -644,7 +713,7 @@ items:
         statusFilter?: function, count?: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.getRecords
     name: >-
@@ -684,7 +753,7 @@ items:
         string, timelineId: string, changeId?: number)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.getTimeline
     name: >-
@@ -729,7 +798,7 @@ items:
         string, timelineId: string, changeId?: number, includeRecords?: boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.getTimelines
     name: 'getTimelines(scopeIdentifier: string, hubName: string, planId: string)'
@@ -758,8 +827,74 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TaskHttpClient3_2.logsApiVersion
+    name: logsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskHttpClient3_2.metricsApiVersion
+    name: metricsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskHttpClient3_2.plangroupsqueueApiVersion
+    name: plangroupsqueueApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskHttpClient3_2.plangroupsqueueApiVersion_65fd0708
+    name: plangroupsqueueApiVersion_65fd0708
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskHttpClient3_2.plansApiVersion
+    name: plansApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskHttpClient3_2.recordsApiVersion
+    name: recordsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.constructor
     name: >-
       TaskHttpClient3_2(rootRequestPath: string, options?:
@@ -774,7 +909,7 @@ items:
           type:
             - string
           description: ''
-        - id: options
+        - id: vss-web-extension-sdk.IVssHttpClientOptions
           type:
             - IVssHttpClientOptions
           description: ''
@@ -784,8 +919,19 @@ items:
         IVssHttpClientOptions)
       return:
         type:
-          - TaskHttpClient3_2
+          - vss-web-extension-sdk.TaskHttpClient3_2
     type: constructor
+  - uid: vss-web-extension-sdk.TaskHttpClient3_2.timelinesApiVersion
+    name: timelinesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TaskHttpClient3_2.updateRecords
     name: >-
       updateRecords(records: VssJsonCollectionWrapperV, scopeIdentifier: string,
@@ -796,7 +942,7 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: records
+        - id: vss-web-extension-sdk.VssJsonCollectionWrapperV
           type:
             - VssJsonCollectionWrapperV
           description: ''
@@ -824,14 +970,16 @@ items:
         string)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Gets information about an API resource location (route template, supported
+      versions, etc.)
     syntax:
       parameters:
         - id: area
@@ -846,7 +994,7 @@ items:
       content: 'function _beginGetLocation(area: string, locationId: string)'
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2._beginRequest
     name: >-
@@ -855,10 +1003,10 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: requestParams
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
           type:
             - VssApiResourceRequestParams
           description: request options
@@ -874,17 +1022,19 @@ items:
         useAjaxResult?: boolean)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TaskHttpClient3_2._beginRequestWithAjaxResult
     name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Issue a request to a VSS REST endpoint and makes sure the result contains
+      jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: requestParams
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
           type:
             - VssApiResourceRequestParams
           description: request options
@@ -902,7 +1052,11 @@ items:
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Issue an AJAX request. This is a wrapper around jquery's ajax method that
+      handles VSS authentication
+
+      and triggers events that can be listened to by other modules.
     syntax:
       parameters:
         - id: requestUrl
@@ -920,7 +1074,7 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vssRequestOptions
+        - id: vss-web-extension-sdk.IVssAjaxOptions
           type:
             - IVssAjaxOptions
           description: ''
@@ -931,17 +1085,32 @@ items:
         IVssAjaxOptions)
       return:
         type:
-          - IPromise
+          - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TaskHttpClient3_2._rootRequestPath
+    name: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TaskHttpClient3_2._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []
     langs:
       - typeScript
-    summary: ''
+    summary: >-
+      Sets a promise that is waited on before any requests are issued. Can be
+      used to asynchronously
+
+      set the request url and auth token manager.
     syntax:
       parameters:
-        - id: promise
+        - id: vss-web-extension-sdk.IPromise
           type:
             - IPromise
           description: ''

@@ -1,0 +1,44 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IWidgetHostService
+    name: IWidgetHostService
+    fullName: IWidgetHostService
+    children:
+      - vss-web-extension-sdk.IWidgetHostService.getWidgetId
+      - vss-web-extension-sdk.IWidgetHostService.showConfiguration
+    langs:
+      - typeScript
+    type: interface
+    summary: a service that manages widget host requests for action.
+  - uid: vss-web-extension-sdk.IWidgetHostService.getWidgetId
+    name: getWidgetId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Requst the host to supply id of Widget, if available.
+
+      Provides means for widget authors to track and understand
+      usage/performance of at context of individual of widgets.
+
+      Identification should not be relied upon to be present for all widgets. In
+      particular, new unsaved widgets in preview mode do not have an identity
+      yet.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IWidgetHostService.showConfiguration
+    name: showConfiguration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      request the host to open the configuration experience for the widget.
+      If the widget doesnt have configuration experience this is a no-op
+    syntax:
+      return:
+        type:
+          - union

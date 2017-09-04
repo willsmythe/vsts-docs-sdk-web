@@ -1,0 +1,72 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.ContentLocationOptions
+    name: ContentLocationOptions
+    fullName: ContentLocationOptions
+    children:
+      - vss-web-extension-sdk.ContentLocationOptions.hostType
+      - vss-web-extension-sdk.ContentLocationOptions.queryParams
+      - vss-web-extension-sdk.ContentLocationOptions.relativePath
+      - vss-web-extension-sdk.ContentLocationOptions.serviceInstanceId
+      - vss-web-extension-sdk.ContentLocationOptions.webContext
+    langs:
+      - typeScript
+    type: interface
+    summary: Options for generating content urls
+  - uid: vss-web-extension-sdk.ContentLocationOptions.hostType
+    name: hostType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Host level to get the url of
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ContentLocationOptions.queryParams
+    name: queryParams
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Query parameters to add to the url
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IDictionaryStringTo
+  - uid: vss-web-extension-sdk.ContentLocationOptions.relativePath
+    name: relativePath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Relative path to append to the url. This needs to be properly encoded by
+      the consumer.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ContentLocationOptions.serviceInstanceId
+    name: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Unique id of the service to generate the url for
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ContentLocationOptions.webContext
+    name: webContext
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specific web context to use when generating the url
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.WebContext
