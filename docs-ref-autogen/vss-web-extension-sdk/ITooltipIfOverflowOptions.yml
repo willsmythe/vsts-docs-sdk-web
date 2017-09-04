@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.ITooltipIfOverflowOptions
+    name: ITooltipIfOverflowOptions
+    fullName: ITooltipIfOverflowOptions
+    children:
+      - vss-web-extension-sdk.ITooltipIfOverflowOptions.addTooltipDelegate
+      - vss-web-extension-sdk.ITooltipIfOverflowOptions.eventSource
+      - vss-web-extension-sdk.ITooltipIfOverflowOptions.removeTooltipDelegate
+      - vss-web-extension-sdk.ITooltipIfOverflowOptions.titleTarget
+      - vss-web-extension-sdk.ITooltipIfOverflowOptions.titleText
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+  - uid: vss-web-extension-sdk.ITooltipIfOverflowOptions.addTooltipDelegate
+    name: addTooltipDelegate
+    fullName: addTooltipDelegate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Function that will add the tooltip on mouseenter or focus (default is to
+      add title attribute).
+
+      The options object passed to this function will have titleTarget and
+      titleText set to the correct values to use.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ITooltipIfOverflowOptions.eventSource
+    name: eventSource
+    fullName: eventSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      element that generates the mouseenter, mouseleave, focus, and blur events
+      we should listen for
+    syntax:
+      return:
+        type:
+          - HTMLElement
+  - uid: vss-web-extension-sdk.ITooltipIfOverflowOptions.removeTooltipDelegate
+    name: removeTooltipDelegate
+    fullName: removeTooltipDelegate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Function that removes the tooltip on mouseleave or blur
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ITooltipIfOverflowOptions.titleTarget
+    name: titleTarget
+    fullName: titleTarget
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      titleTarget element which will get the tooltip, and whose text will be
+      used to populate the tooltip, only need specify if different than element
+      argument passed in to tooltipIfOverflow()
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ITooltipIfOverflowOptions.titleText
+    name: titleText
+    fullName: titleText
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      titleText text to set the title to, otherwise use the titleTarget's
+      .text() or .val()
+    syntax:
+      return:
+        type:
+          - string

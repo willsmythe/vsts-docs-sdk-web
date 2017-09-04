@@ -1,0 +1,117 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.Cancelable
+    name: Cancelable
+    fullName: Cancelable
+    children:
+      - vss-web-extension-sdk.Cancelable.cancel
+      - vss-web-extension-sdk.Cancelable.constructor
+      - vss-web-extension-sdk.Cancelable.canceled
+      - vss-web-extension-sdk.Cancelable.context
+      - vss-web-extension-sdk.Cancelable.perform
+      - vss-web-extension-sdk.Cancelable.register
+      - vss-web-extension-sdk.Cancelable.wrap
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+  - uid: vss-web-extension-sdk.Cancelable.cancel
+    name: cancel()
+    children: []
+    langs:
+      - typeScript
+    summary: Cancel the operation.
+    syntax:
+      parameters: []
+      content: function cancel()
+    type: method
+  - uid: vss-web-extension-sdk.Cancelable.constructor
+    name: 'Cancelable(context: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: Manage cancellable operations.
+    syntax:
+      parameters:
+        - id: context
+          type:
+            - any
+          description: |
+            The context for the cancellable operation.
+            The context is passed to actions when they are called.
+      content: 'new Cancelable(context: any)'
+      return:
+        type:
+          - vss-web-extension-sdk.Cancelable
+    type: constructor
+  - uid: vss-web-extension-sdk.Cancelable.canceled
+    name: canceled
+    fullName: canceled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.Cancelable.context
+    name: context
+    fullName: context
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.Cancelable.perform
+    name: 'perform(action: Function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Perform the action if not cancelled.
+    syntax:
+      parameters:
+        - id: action
+          type:
+            - Function
+          description: |
+            The action to call if the current operation has not been cancelled.
+      content: 'function perform(action: Function)'
+    type: method
+  - uid: vss-web-extension-sdk.Cancelable.register
+    name: 'register(callback: Function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Register a callback to be called when the object is cancelled.
+    syntax:
+      parameters:
+        - id: callback
+          type:
+            - Function
+          description: |
+            The callback function.
+      content: 'function register(callback: Function)'
+    type: method
+  - uid: vss-web-extension-sdk.Cancelable.wrap
+    name: 'wrap(action: Function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Wrap an action to make it cancellable.
+    syntax:
+      parameters:
+        - id: action
+          type:
+            - Function
+          description: The action to wrap.
+      content: 'function wrap(action: Function)'
+      return:
+        type:
+          - Function
+    type: method

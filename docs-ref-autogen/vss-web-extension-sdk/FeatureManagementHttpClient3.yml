@@ -1,0 +1,466 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.FeatureManagementHttpClient3
+    name: FeatureManagementHttpClient3
+    fullName: FeatureManagementHttpClient3
+    children:
+      - vss-web-extension-sdk.FeatureManagementHttpClient3.authTokenManager
+      - vss-web-extension-sdk.FeatureManagementHttpClient3.constructor
+      - vss-web-extension-sdk.FeatureManagementHttpClient3.featuresApiVersion
+      - >-
+        vss-web-extension-sdk.FeatureManagementHttpClient3.featureStatesApiVersion
+      - >-
+        vss-web-extension-sdk.FeatureManagementHttpClient3.featureStatesApiVersion_98911314
+      - >-
+        vss-web-extension-sdk.FeatureManagementHttpClient3.forceOptionsCallForAutoNegotiate
+      - vss-web-extension-sdk.FeatureManagementHttpClient3.getFeature
+      - vss-web-extension-sdk.FeatureManagementHttpClient3.getFeatures
+      - vss-web-extension-sdk.FeatureManagementHttpClient3.getFeatureState
+      - >-
+        vss-web-extension-sdk.FeatureManagementHttpClient3.getFeatureStateForScope
+      - vss-web-extension-sdk.FeatureManagementHttpClient3.setFeatureState
+      - >-
+        vss-web-extension-sdk.FeatureManagementHttpClient3.setFeatureStateForScope
+      - vss-web-extension-sdk.FeatureManagementHttpClient3._beginGetLocation
+      - vss-web-extension-sdk.FeatureManagementHttpClient3._beginRequest
+      - >-
+        vss-web-extension-sdk.FeatureManagementHttpClient3._beginRequestWithAjaxResult
+      - vss-web-extension-sdk.FeatureManagementHttpClient3._issueAjaxRequest
+      - vss-web-extension-sdk.FeatureManagementHttpClient3._rootRequestPath
+      - >-
+        vss-web-extension-sdk.FeatureManagementHttpClient3._setInitializationPromise
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+  - uid: vss-web-extension-sdk.FeatureManagementHttpClient3.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.FeatureManagementHttpClient3.constructor
+    name: >-
+      FeatureManagementHttpClient3(rootRequestPath: string, options?:
+      IVssHttpClientOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: rootRequestPath
+          type:
+            - string
+          description: ''
+        - id: vss-web-extension-sdk.IVssHttpClientOptions
+          type:
+            - IVssHttpClientOptions
+          description: ''
+          optional: true
+      content: >-
+        new FeatureManagementHttpClient3(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.FeatureManagementHttpClient3
+    type: constructor
+  - uid: vss-web-extension-sdk.FeatureManagementHttpClient3.featuresApiVersion
+    name: featuresApiVersion
+    fullName: featuresApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.FeatureManagementHttpClient3.featureStatesApiVersion
+    name: featureStatesApiVersion
+    fullName: featureStatesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.FeatureManagementHttpClient3.featureStatesApiVersion_98911314
+    name: featureStatesApiVersion_98911314
+    fullName: featureStatesApiVersion_98911314
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.FeatureManagementHttpClient3.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.FeatureManagementHttpClient3.getFeature
+    name: 'getFeature(featureId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API] Get a specific feature by its id'
+    syntax:
+      parameters:
+        - id: featureId
+          type:
+            - string
+          description: The contribution id of the feature
+      content: 'function getFeature(featureId: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.FeatureManagementHttpClient3.getFeatures
+    name: 'getFeatures(targetContributionId?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API] Get a list of all defined features'
+    syntax:
+      parameters:
+        - id: targetContributionId
+          type:
+            - string
+          description: >-
+            Optional target contribution. If null/empty, return all features. If
+            specified include the features that target the specified
+            contribution.
+          optional: true
+      content: 'function getFeatures(targetContributionId?: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.FeatureManagementHttpClient3.getFeatureState
+    name: 'getFeatureState(featureId: string, userScope: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      [Preview API] Get the state of the specified feature for the given
+      user/all-users scope
+    syntax:
+      parameters:
+        - id: featureId
+          type:
+            - string
+          description: Contribution id of the feature
+        - id: userScope
+          type:
+            - string
+          description: >-
+            User-Scope at which to get the value. Should be "me" for the current
+            user or "host" for all users.
+      content: 'function getFeatureState(featureId: string, userScope: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.FeatureManagementHttpClient3.getFeatureStateForScope
+    name: >-
+      getFeatureStateForScope(featureId: string, userScope: string, scopeName:
+      string, scopeValue: string)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      [Preview API] Get the state of the specified feature for the given named
+      scope
+    syntax:
+      parameters:
+        - id: featureId
+          type:
+            - string
+          description: Contribution id of the feature
+        - id: userScope
+          type:
+            - string
+          description: >-
+            User-Scope at which to get the value. Should be "me" for the current
+            user or "host" for all users.
+        - id: scopeName
+          type:
+            - string
+          description: >-
+            Scope at which to get the feature setting for (e.g. "project" or
+            "team")
+        - id: scopeValue
+          type:
+            - string
+          description: Value of the scope (e.g. the project or team id)
+      content: >-
+        function getFeatureStateForScope(featureId: string, userScope: string,
+        scopeName: string, scopeValue: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.FeatureManagementHttpClient3.setFeatureState
+    name: >-
+      setFeatureState(feature: ContributedFeatureState, featureId: string,
+      userScope: string, reason?: string, reasonCode?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API] Set the state of a feature'
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.ContributedFeatureState
+          type:
+            - ContributedFeatureState
+          description: Posted feature state object. Should specify the effective value.
+        - id: featureId
+          type:
+            - string
+          description: Contribution id of the feature
+        - id: userScope
+          type:
+            - string
+          description: >-
+            User-Scope at which to set the value. Should be "me" for the current
+            user or "host" for all users.
+        - id: reason
+          type:
+            - string
+          description: Reason for changing the state
+          optional: true
+        - id: reasonCode
+          type:
+            - string
+          description: Short reason code
+          optional: true
+      content: >-
+        function setFeatureState(feature: ContributedFeatureState, featureId:
+        string, userScope: string, reason?: string, reasonCode?: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.FeatureManagementHttpClient3.setFeatureStateForScope
+    name: >-
+      setFeatureStateForScope(feature: ContributedFeatureState, featureId:
+      string, userScope: string, scopeName: string, scopeValue: string, reason?:
+      string, reasonCode?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: '[Preview API] Set the state of a feature at a specific scope'
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.ContributedFeatureState
+          type:
+            - ContributedFeatureState
+          description: Posted feature state object. Should specify the effective value.
+        - id: featureId
+          type:
+            - string
+          description: Contribution id of the feature
+        - id: userScope
+          type:
+            - string
+          description: >-
+            User-Scope at which to set the value. Should be "me" for the current
+            user or "host" for all users.
+        - id: scopeName
+          type:
+            - string
+          description: >-
+            Scope at which to get the feature setting for (e.g. "project" or
+            "team")
+        - id: scopeValue
+          type:
+            - string
+          description: Value of the scope (e.g. the project or team id)
+        - id: reason
+          type:
+            - string
+          description: Reason for changing the state
+          optional: true
+        - id: reasonCode
+          type:
+            - string
+          description: Short reason code
+          optional: true
+      content: >-
+        function setFeatureStateForScope(feature: ContributedFeatureState,
+        featureId: string, userScope: string, scopeName: string, scopeValue:
+        string, reason?: string, reasonCode?: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.FeatureManagementHttpClient3._beginGetLocation
+    name: '_beginGetLocation(area: string, locationId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Gets information about an API resource location (route template, supported
+      versions, etc.)
+    syntax:
+      parameters:
+        - id: area
+          type:
+            - string
+          description: resource area name
+        - id: locationId
+          type:
+            - string
+          description: |
+            Guid of the location to get
+      content: 'function _beginGetLocation(area: string, locationId: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.FeatureManagementHttpClient3._beginRequest
+    name: >-
+      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: Issue a request to a VSS REST endpoint.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
+          type:
+            - VssApiResourceRequestParams
+          description: request options
+        - id: useAjaxResult
+          type:
+            - boolean
+          description: >-
+            If true, textStatus and jqXHR are added to the success callback. In
+            this case, spread (instead of then) needs to be used
+          optional: true
+      content: >-
+        function _beginRequest(requestParams: VssApiResourceRequestParams,
+        useAjaxResult?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.FeatureManagementHttpClient3._beginRequestWithAjaxResult
+    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Issue a request to a VSS REST endpoint and makes sure the result contains
+      jqXHR. Use spread to access jqXHR.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
+          type:
+            - VssApiResourceRequestParams
+          description: request options
+      content: >-
+        function _beginRequestWithAjaxResult(requestParams:
+        VssApiResourceRequestParams)
+      return:
+        type:
+          - Q.Promise
+    type: method
+  - uid: vss-web-extension-sdk.FeatureManagementHttpClient3._issueAjaxRequest
+    name: >-
+      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
+      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Issue an AJAX request. This is a wrapper around jquery's ajax method that
+      handles VSS authentication
+
+      and triggers events that can be listened to by other modules.
+    syntax:
+      parameters:
+        - id: requestUrl
+          type:
+            - string
+          description: Url to send the request to
+        - id: ajaxOptions
+          type:
+            - JQueryAjaxSettings
+          description: jQuery.ajax options
+        - id: useAjaxResult
+          type:
+            - boolean
+          description: >
+            If true, textStatus and jqXHR are added to the success callback. In
+            this case, spread (instead of then) needs to be used.
+          optional: true
+        - id: vss-web-extension-sdk.IVssAjaxOptions
+          type:
+            - IVssAjaxOptions
+          description: ''
+          optional: true
+      content: >-
+        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
+        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
+        IVssAjaxOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.FeatureManagementHttpClient3._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.FeatureManagementHttpClient3._setInitializationPromise
+    name: '_setInitializationPromise(promise: IPromise)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Sets a promise that is waited on before any requests are issued. Can be
+      used to asynchronously
+
+      set the request url and auth token manager.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IPromise
+          type:
+            - IPromise
+          description: ''
+      content: 'function _setInitializationPromise(promise: IPromise)'
+    type: method

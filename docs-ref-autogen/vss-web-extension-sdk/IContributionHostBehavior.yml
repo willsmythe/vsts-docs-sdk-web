@@ -1,0 +1,91 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IContributionHostBehavior
+    name: IContributionHostBehavior
+    fullName: IContributionHostBehavior
+    children:
+      - vss-web-extension-sdk.IContributionHostBehavior.maxHandshakeDurationMs
+      - vss-web-extension-sdk.IContributionHostBehavior.resizeOptions
+      - vss-web-extension-sdk.IContributionHostBehavior.showErrorIndicator
+      - vss-web-extension-sdk.IContributionHostBehavior.showLoadingIndicator
+      - vss-web-extension-sdk.IContributionHostBehavior.slowWarningDurationMs
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Options for the host control to toggle progress indication or
+      error/warning handling.
+  - uid: vss-web-extension-sdk.IContributionHostBehavior.maxHandshakeDurationMs
+    name: maxHandshakeDurationMs
+    fullName: maxHandshakeDurationMs
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Time to wait in milliseconds (ms) before erroring when waiting for loaded
+      event handshake
+
+      If unspecified, the default timeout period is used.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.IContributionHostBehavior.resizeOptions
+    name: resizeOptions
+    fullName: resizeOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The resize options for the host. By default both height and width and be
+      resized but this can be changed to only allow one direction of resizing
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IContributionHostBehavior.showErrorIndicator
+    name: showErrorIndicator
+    fullName: showErrorIndicator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Show the error indicator for the extension. Defaults to true if
+      unspecified.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IContributionHostBehavior.showLoadingIndicator
+    name: showLoadingIndicator
+    fullName: showLoadingIndicator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Show the loading indicator for the extension. Defaults to true if
+      unspecified.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IContributionHostBehavior.slowWarningDurationMs
+    name: slowWarningDurationMs
+    fullName: slowWarningDurationMs
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Time to wait in milliseconds (ms) before the slow warning indicator for
+      the extension is displayed.
+
+      If unspecified, The default timeout period is used.
+    syntax:
+      return:
+        type:
+          - number

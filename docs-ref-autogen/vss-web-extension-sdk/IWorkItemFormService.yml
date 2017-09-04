@@ -1,0 +1,437 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IWorkItemFormService
+    name: IWorkItemFormService
+    fullName: IWorkItemFormService
+    children:
+      - vss-web-extension-sdk.IWorkItemFormService.addWorkItemRelations
+      - vss-web-extension-sdk.IWorkItemFormService.beginSaveWorkItem
+      - vss-web-extension-sdk.IWorkItemFormService.clearError
+      - vss-web-extension-sdk.IWorkItemFormService.getAllowedFieldValues
+      - vss-web-extension-sdk.IWorkItemFormService.getFields
+      - vss-web-extension-sdk.IWorkItemFormService.getFieldValue
+      - vss-web-extension-sdk.IWorkItemFormService.getFieldValues
+      - vss-web-extension-sdk.IWorkItemFormService.getId
+      - vss-web-extension-sdk.IWorkItemFormService.getInvalidFields
+      - vss-web-extension-sdk.IWorkItemFormService.getRevision
+      - vss-web-extension-sdk.IWorkItemFormService.getWorkItemRelations
+      - vss-web-extension-sdk.IWorkItemFormService.getWorkItemRelationTypes
+      - vss-web-extension-sdk.IWorkItemFormService.getWorkItemResourceUrl
+      - vss-web-extension-sdk.IWorkItemFormService.hasActiveWorkItem
+      - vss-web-extension-sdk.IWorkItemFormService.isDirty
+      - vss-web-extension-sdk.IWorkItemFormService.isNew
+      - vss-web-extension-sdk.IWorkItemFormService.isValid
+      - vss-web-extension-sdk.IWorkItemFormService.refresh
+      - vss-web-extension-sdk.IWorkItemFormService.removeWorkItemRelations
+      - vss-web-extension-sdk.IWorkItemFormService.reset
+      - vss-web-extension-sdk.IWorkItemFormService.save
+      - vss-web-extension-sdk.IWorkItemFormService.setError
+      - vss-web-extension-sdk.IWorkItemFormService.setFieldValue
+      - vss-web-extension-sdk.IWorkItemFormService.setFieldValues
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Host service for interacting with the currently active work item form
+      (work item currently displayed in the UI).
+
+      Form service depends on the current active work item context. Will throw
+      an error when there is no open work item.
+  - uid: vss-web-extension-sdk.IWorkItemFormService.addWorkItemRelations
+    name: 'addWorkItemRelations(workItemRelations: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Adds links of another work items or artifacts (e.g. commits, hyperlinks)
+      to the work item. Attachment is currently not supported by this function.
+    syntax:
+      parameters:
+        - id: workItemRelations
+          type:
+            - function
+          description: Work item links to add.
+      content: 'function addWorkItemRelations(workItemRelations: function)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.beginSaveWorkItem
+    name: 'beginSaveWorkItem(successCallback: function, errorCallback: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: successCallback
+          type:
+            - function
+          description: ''
+        - id: errorCallback
+          type:
+            - function
+          description: ''
+      content: >-
+        function beginSaveWorkItem(successCallback: function, errorCallback:
+        function)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.clearError
+    name: clearError()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Clears the error set by setError method and unblocks saving of the work
+      item in the form.
+    syntax:
+      parameters: []
+      content: function clearError()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.getAllowedFieldValues
+    name: 'getAllowedFieldValues(fieldReferenceName: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the allowed values for the field on the active work item.
+    syntax:
+      parameters:
+        - id: fieldReferenceName
+          type:
+            - string
+          description: Field reference name
+      content: 'function getAllowedFieldValues(fieldReferenceName: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.getFields
+    name: getFields()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets active work item fields.
+    syntax:
+      parameters: []
+      content: function getFields()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.getFieldValue
+    name: 'getFieldValue(fieldReferenceName: string, returnOriginalValue?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: Gets field value of the active work item.
+    syntax:
+      parameters:
+        - id: fieldReferenceName
+          type:
+            - string
+          description: Field reference name
+        - id: returnOriginalValue
+          type:
+            - boolean
+          description: '(Optional) If false, gets unsaved field values. Default is false.'
+          optional: true
+      content: >-
+        function getFieldValue(fieldReferenceName: string, returnOriginalValue?:
+        boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.getFieldValues
+    name: >-
+      getFieldValues(fieldReferenceNames: function, returnOriginalValue?:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: Gets field values of the active work item.
+    syntax:
+      parameters:
+        - id: fieldReferenceNames
+          type:
+            - function
+          description: An arrary of field reference names
+        - id: returnOriginalValue
+          type:
+            - boolean
+          description: '(Optional) If false, gets unsaved field values. Default is false.'
+          optional: true
+      content: >-
+        function getFieldValues(fieldReferenceNames: function,
+        returnOriginalValue?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.getId
+    name: getId()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets id of active work item.
+    syntax:
+      parameters: []
+      content: function getId()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.getInvalidFields
+    name: getInvalidFields()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Gets invalid fields who are in an invalid state according to the work item
+      rules. These fields need to be changed before the work item can be saved.
+    syntax:
+      parameters: []
+      content: function getInvalidFields()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.getRevision
+    name: getRevision()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets active work item's latest revision.
+    syntax:
+      parameters: []
+      content: function getRevision()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.getWorkItemRelations
+    name: getWorkItemRelations()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Returns an array of  work item links to other work items or artifacts
+      (e.g. commits, hyperlinks). Attachment is currently not supported by this
+      function.
+    syntax:
+      parameters: []
+      content: function getWorkItemRelations()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.getWorkItemRelationTypes
+    name: getWorkItemRelationTypes()
+    children: []
+    langs:
+      - typeScript
+    summary: Returns an array of work item relation types.
+    syntax:
+      parameters: []
+      content: function getWorkItemRelationTypes()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.getWorkItemResourceUrl
+    name: 'getWorkItemResourceUrl(workItemId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: Returns the REST API url of the specified work item resource.
+    syntax:
+      parameters:
+        - id: workItemId
+          type:
+            - number
+          description: Id of the work item that the resource url is requested for.
+      content: 'function getWorkItemResourceUrl(workItemId: number)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.hasActiveWorkItem
+    name: hasActiveWorkItem()
+    children: []
+    langs:
+      - typeScript
+    summary: Returns true if the active work item available.
+    syntax:
+      parameters: []
+      content: function hasActiveWorkItem()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.isDirty
+    name: isDirty()
+    children: []
+    langs:
+      - typeScript
+    summary: Returns true if the active work item is dirty.
+    syntax:
+      parameters: []
+      content: function isDirty()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.isNew
+    name: isNew()
+    children: []
+    langs:
+      - typeScript
+    summary: Returns true if the active work item is new.
+    syntax:
+      parameters: []
+      content: function isNew()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.isValid
+    name: isValid()
+    children: []
+    langs:
+      - typeScript
+    summary: Returns true if the active work item fields are all valid.
+    syntax:
+      parameters: []
+      content: function isValid()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.refresh
+    name: refresh()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Refreshes the active work item. Will prompt the user if the work item is
+      dirty.
+    syntax:
+      parameters: []
+      content: function refresh()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.removeWorkItemRelations
+    name: 'removeWorkItemRelations(workItemRelations: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Removes links to another work items or artifacts (e.g. commits,
+      hyperlinks) from the work item. Attachment is currently not supported by
+      this function.
+    syntax:
+      parameters:
+        - id: workItemRelations
+          type:
+            - function
+          description: Work item links to remove.
+      content: 'function removeWorkItemRelations(workItemRelations: function)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.reset
+    name: reset()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Reset any changes in the active work item. Will prompt the user to
+      confirm.
+    syntax:
+      parameters: []
+      content: function reset()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.save
+    name: save()
+    children: []
+    langs:
+      - typeScript
+    summary: Saves the active work item.
+    syntax:
+      parameters: []
+      content: function save()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.setError
+    name: 'setError(errorMessage: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Marks the work item as invalid and disable saving the work item on the
+      form.
+    syntax:
+      parameters:
+        - id: errorMessage
+          type:
+            - string
+          description: >
+            A custom error message that would be shown on top of the work item
+            form.
+      content: 'function setError(errorMessage: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.setFieldValue
+    name: 'setFieldValue(fieldReferenceName: string, value: Object)'
+    children: []
+    langs:
+      - typeScript
+    summary: Sets field value of the active work item.
+    syntax:
+      parameters:
+        - id: fieldReferenceName
+          type:
+            - string
+          description: Field reference name
+        - id: value
+          type:
+            - Object
+          description: Field value
+      content: 'function setFieldValue(fieldReferenceName: string, value: Object)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemFormService.setFieldValues
+    name: 'setFieldValues(fields: IDictionaryStringTo)'
+    children: []
+    langs:
+      - typeScript
+    summary: Sets field values of the active work item.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IDictionaryStringTo
+          type:
+            - IDictionaryStringTo
+          description: A dictionary of field refName/values
+      content: 'function setFieldValues(fields: IDictionaryStringTo)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method

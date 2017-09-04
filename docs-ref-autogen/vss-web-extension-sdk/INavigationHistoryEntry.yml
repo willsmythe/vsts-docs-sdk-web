@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.INavigationHistoryEntry
+    name: INavigationHistoryEntry
+    fullName: INavigationHistoryEntry
+    children:
+      - vss-web-extension-sdk.INavigationHistoryEntry.navigationElementId
+      - vss-web-extension-sdk.INavigationHistoryEntry.routeId
+      - vss-web-extension-sdk.INavigationHistoryEntry.state
+      - vss-web-extension-sdk.INavigationHistoryEntry.url
+    langs:
+      - typeScript
+    type: interface
+    summary: The state pushed in a single history entry
+  - uid: vss-web-extension-sdk.INavigationHistoryEntry.navigationElementId
+    name: navigationElementId
+    fullName: navigationElementId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The contribution id of the selected navigation element (like a hub) for
+      this history entry.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.INavigationHistoryEntry.routeId
+    name: routeId
+    fullName: routeId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The id of the route that this entry is using
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.INavigationHistoryEntry.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Dictionary of all URL state parameters used in this history entry. This
+      includes
+
+      route values as well as query parameters.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.INavigationHistoryEntry.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The url for this entry
+    syntax:
+      return:
+        type:
+          - string

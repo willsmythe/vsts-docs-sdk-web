@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.CodeCoverageSummary
+    name: CodeCoverageSummary
+    fullName: CodeCoverageSummary
+    children:
+      - vss-web-extension-sdk.CodeCoverageSummary.build
+      - vss-web-extension-sdk.CodeCoverageSummary.coverageData
+      - vss-web-extension-sdk.CodeCoverageSummary.deltaBuild
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Represents the code coverage summary results Used to publish or retrieve
+      code coverage summary against a build
+  - uid: vss-web-extension-sdk.CodeCoverageSummary.build
+    name: build
+    fullName: build
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uri of build for which data is retrieved/published
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ShallowReference
+  - uid: vss-web-extension-sdk.CodeCoverageSummary.coverageData
+    name: coverageData
+    fullName: coverageData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of coverage data and details for the build
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.CodeCoverageSummary.deltaBuild
+    name: deltaBuild
+    fullName: deltaBuild
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uri of build against which difference in coverage is computed
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ShallowReference

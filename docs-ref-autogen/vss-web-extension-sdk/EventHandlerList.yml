@@ -1,0 +1,109 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.EventHandlerList
+    name: EventHandlerList
+    fullName: EventHandlerList
+    children:
+      - vss-web-extension-sdk.EventHandlerList.constructor
+      - vss-web-extension-sdk.EventHandlerList.getHandlers
+      - vss-web-extension-sdk.EventHandlerList.invokeHandlers
+      - vss-web-extension-sdk.EventHandlerList.subscribe
+      - vss-web-extension-sdk.EventHandlerList.unsubscribe
+    langs:
+      - typeScript
+    type: class
+    summary: A list of event handlers
+  - uid: vss-web-extension-sdk.EventHandlerList.constructor
+    name: 'EventHandlerList(handlers?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Creates a new event handler list
+    syntax:
+      parameters:
+        - id: handlers
+          type:
+            - function
+          description: |
+            Optional initial list of handlers
+          optional: true
+      content: 'new EventHandlerList(handlers?: function)'
+      return:
+        type:
+          - vss-web-extension-sdk.EventHandlerList
+    type: constructor
+  - uid: vss-web-extension-sdk.EventHandlerList.getHandlers
+    name: getHandlers()
+    children: []
+    langs:
+      - typeScript
+    summary: Get the underlying list of handlers
+    syntax:
+      parameters: []
+      content: function getHandlers()
+      return:
+        type:
+          - null
+    type: method
+  - uid: vss-web-extension-sdk.EventHandlerList.invokeHandlers
+    name: >-
+      invokeHandlers(sender?: TSender, eventArgs?: TEventArgs,
+      handlerResultFilter?: function)
+    children: []
+    langs:
+      - typeScript
+    summary: Invoke the subscribed event handlers
+    syntax:
+      parameters:
+        - id: sender
+          type:
+            - TSender
+          description: The source that is triggering the event
+          optional: true
+        - id: eventArgs
+          type:
+            - TEventArgs
+          description: Event-specific arguments
+          optional: true
+        - id: handlerResultFilter
+          type:
+            - function
+          description: >
+            Optional callback method to be able to break out of the handler
+            invocation loop based on the return value of a handler. The filter
+            should return true to break out of the loop.
+          optional: true
+      content: >-
+        function invokeHandlers(sender?: TSender, eventArgs?: TEventArgs,
+        handlerResultFilter?: function)
+    type: method
+  - uid: vss-web-extension-sdk.EventHandlerList.subscribe
+    name: 'subscribe(handler: IFunctionPPR)'
+    children: []
+    langs:
+      - typeScript
+    summary: Adds an event handler to the list
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IFunctionPPR
+          type:
+            - IFunctionPPR
+          description: |
+            Event handler method to register
+      content: 'function subscribe(handler: IFunctionPPR)'
+    type: method
+  - uid: vss-web-extension-sdk.EventHandlerList.unsubscribe
+    name: 'unsubscribe(handler: IFunctionPPR)'
+    children: []
+    langs:
+      - typeScript
+    summary: Removes an event handler from the list
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IFunctionPPR
+          type:
+            - IFunctionPPR
+          description: |
+            Event handler method to remove
+      content: 'function unsubscribe(handler: IFunctionPPR)'
+    type: method

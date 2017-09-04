@@ -1,0 +1,100 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.LinkingUtilities
+    name: LinkingUtilities
+    fullName: LinkingUtilities
+    children:
+      - vss-web-extension-sdk.LinkingUtilities.decodeUri
+      - vss-web-extension-sdk.LinkingUtilities.encodeUri
+      - vss-web-extension-sdk.LinkingUtilities.legacyDecodeURIComponent
+      - vss-web-extension-sdk.LinkingUtilities.URI_SEPARATOR
+      - vss-web-extension-sdk.LinkingUtilities.VSTFS
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+  - uid: vss-web-extension-sdk.LinkingUtilities.decodeUri
+    name: 'decodeUri(artifactUri: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Decodes the specified artifact URI and creates artifact object which has
+      tool, type and id properties.
+    syntax:
+      parameters:
+        - id: artifactUri
+          type:
+            - string
+          description: URI to decode
+      content: 'function decodeUri(artifactUri: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IArtifactData
+    type: method
+  - uid: vss-web-extension-sdk.LinkingUtilities.encodeUri
+    name: 'encodeUri(artifact: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: Creates an artifact URI using specified artifact.
+    syntax:
+      parameters:
+        - id: artifact
+          type:
+            - any
+          description: |-
+            Artifact should have the following properties:
+                - tool: Artifact tool name
+                - type: Artifact type
+                - id: Artifact tool specific id
+      content: 'function encodeUri(artifact: any)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.LinkingUtilities.legacyDecodeURIComponent
+    name: 'legacyDecodeURIComponent(encodedURIComponent: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Decodes a uri component, maintaining backwards compatibility with how URIs
+      were encoded
+
+      from the rich client and in VS2010 and earlier versions.
+    syntax:
+      parameters:
+        - id: encodedURIComponent
+          type:
+            - string
+          description: URI component to decode
+      content: 'function legacyDecodeURIComponent(encodedURIComponent: string)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.LinkingUtilities.URI_SEPARATOR
+    name: URI_SEPARATOR
+    fullName: URI_SEPARATOR
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.LinkingUtilities.VSTFS
+    name: VSTFS
+    fullName: VSTFS
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string

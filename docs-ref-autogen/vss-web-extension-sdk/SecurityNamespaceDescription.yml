@@ -1,0 +1,214 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.SecurityNamespaceDescription
+    name: SecurityNamespaceDescription
+    fullName: SecurityNamespaceDescription
+    children:
+      - vss-web-extension-sdk.SecurityNamespaceDescription.actions
+      - vss-web-extension-sdk.SecurityNamespaceDescription.dataspaceCategory
+      - vss-web-extension-sdk.SecurityNamespaceDescription.displayName
+      - vss-web-extension-sdk.SecurityNamespaceDescription.elementLength
+      - vss-web-extension-sdk.SecurityNamespaceDescription.extensionType
+      - vss-web-extension-sdk.SecurityNamespaceDescription.isRemotable
+      - vss-web-extension-sdk.SecurityNamespaceDescription.name
+      - vss-web-extension-sdk.SecurityNamespaceDescription.namespaceId
+      - vss-web-extension-sdk.SecurityNamespaceDescription.readPermission
+      - vss-web-extension-sdk.SecurityNamespaceDescription.separatorValue
+      - vss-web-extension-sdk.SecurityNamespaceDescription.structureValue
+      - vss-web-extension-sdk.SecurityNamespaceDescription.systemBitMask
+      - vss-web-extension-sdk.SecurityNamespaceDescription.useTokenTranslator
+      - vss-web-extension-sdk.SecurityNamespaceDescription.writePermission
+    langs:
+      - typeScript
+    type: interface
+    summary: Class for describing the details of a TeamFoundationSecurityNamespace.
+  - uid: vss-web-extension-sdk.SecurityNamespaceDescription.actions
+    name: actions
+    fullName: actions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The list of actions that this Security Namespace is responsible for
+      securing.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.SecurityNamespaceDescription.dataspaceCategory
+    name: dataspaceCategory
+    fullName: dataspaceCategory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This is the dataspace category that describes where the security
+      information for this SecurityNamespace should be stored.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.SecurityNamespaceDescription.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: This localized name for this namespace.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.SecurityNamespaceDescription.elementLength
+    name: elementLength
+    fullName: elementLength
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If the security tokens this namespace will be operating on need to be
+      split on certain character lengths to determine its elements, that length
+      should be specified here. If not, this value will be -1.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.SecurityNamespaceDescription.extensionType
+    name: extensionType
+    fullName: extensionType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This is the type of the extension that should be loaded from the plugins
+      directory for extending this security namespace.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.SecurityNamespaceDescription.isRemotable
+    name: isRemotable
+    fullName: isRemotable
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If true, the security namespace is remotable, allowing another service to
+      proxy the namespace.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.SecurityNamespaceDescription.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: This non-localized for this namespace.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.SecurityNamespaceDescription.namespaceId
+    name: namespaceId
+    fullName: namespaceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The unique identifier for this namespace.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.SecurityNamespaceDescription.readPermission
+    name: readPermission
+    fullName: readPermission
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The permission bits needed by a user in order to read security data on the
+      Security Namespace.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.SecurityNamespaceDescription.separatorValue
+    name: separatorValue
+    fullName: separatorValue
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If the security tokens this namespace will be operating on need to be
+      split on certain characters to determine its elements that character
+      should be specified here. If not, this value will be the null character.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.SecurityNamespaceDescription.structureValue
+    name: structureValue
+    fullName: structureValue
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Used to send information about the structure of the security namespace
+      over the web service.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.SecurityNamespaceDescription.systemBitMask
+    name: systemBitMask
+    fullName: systemBitMask
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The bits reserved by system store
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.SecurityNamespaceDescription.useTokenTranslator
+    name: useTokenTranslator
+    fullName: useTokenTranslator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If true, the security service will expect an
+      ISecurityDataspaceTokenTranslator plugin to exist for this namespace
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.SecurityNamespaceDescription.writePermission
+    name: writePermission
+    fullName: writePermission
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The permission bits needed by a user in order to modify security data on
+      the Security Namespace.
+    syntax:
+      return:
+        type:
+          - number

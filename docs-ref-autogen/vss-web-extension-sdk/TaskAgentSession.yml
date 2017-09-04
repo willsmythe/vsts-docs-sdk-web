@@ -1,0 +1,77 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TaskAgentSession
+    name: TaskAgentSession
+    fullName: TaskAgentSession
+    children:
+      - vss-web-extension-sdk.TaskAgentSession.agent
+      - vss-web-extension-sdk.TaskAgentSession.encryptionKey
+      - vss-web-extension-sdk.TaskAgentSession.ownerName
+      - vss-web-extension-sdk.TaskAgentSession.sessionId
+      - vss-web-extension-sdk.TaskAgentSession.systemCapabilities
+    langs:
+      - typeScript
+    type: interface
+    summary: Represents a session for performing message exchanges from an agent.
+  - uid: vss-web-extension-sdk.TaskAgentSession.agent
+    name: agent
+    fullName: agent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets or sets the agent which is the target of the session.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.TaskAgentReference
+  - uid: vss-web-extension-sdk.TaskAgentSession.encryptionKey
+    name: encryptionKey
+    fullName: encryptionKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets the key used to encrypt message traffic for this session.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.TaskAgentSessionKey
+  - uid: vss-web-extension-sdk.TaskAgentSession.ownerName
+    name: ownerName
+    fullName: ownerName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets the owner name of this session. Generally this will be the
+      machine of origination.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentSession.sessionId
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets the unique identifier for this session.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentSession.systemCapabilities
+    name: systemCapabilities
+    fullName: systemCapabilities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union

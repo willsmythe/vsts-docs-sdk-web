@@ -1,0 +1,112 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.Component
+    name: Component
+    fullName: Component
+    children:
+      - vss-web-extension-sdk.Component.constructor
+      - vss-web-extension-sdk.Component.componentWillUnmount
+      - vss-web-extension-sdk.Component.createControl
+      - vss-web-extension-sdk.Component.getTagName
+      - vss-web-extension-sdk.Component.shouldComponentUpdate
+      - vss-web-extension-sdk.Component._control
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      This a base component which wraps an existing legacy platform control like
+      grid, treeview, splitter.
+  - uid: vss-web-extension-sdk.Component.constructor
+    name: 'Component(props?: TProps)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: props
+          type:
+            - TProps
+          description: ''
+          optional: true
+      content: 'new Component(props?: TProps)'
+      return:
+        type:
+          - vss-web-extension-sdk.Component
+    type: constructor
+  - uid: vss-web-extension-sdk.Component.componentWillUnmount
+    name: componentWillUnmount()
+    children: []
+    langs:
+      - typeScript
+    summary: Called before the component is unloaded.
+    syntax:
+      parameters: []
+      content: function componentWillUnmount()
+    type: method
+  - uid: vss-web-extension-sdk.Component.createControl
+    name: 'createControl(element: JQuery)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Components will override this method, generate the platform control and
+      return it.
+    syntax:
+      parameters:
+        - id: element
+          type:
+            - JQuery
+          description: JQuery element.
+      content: 'function createControl(element: JQuery)'
+      return:
+        type:
+          - TControl
+    type: method
+  - uid: vss-web-extension-sdk.Component.getTagName
+    name: getTagName()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the name of the tag for the React element.
+    syntax:
+      parameters: []
+      content: function getTagName()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.Component.shouldComponentUpdate
+    name: 'shouldComponentUpdate(nextProps: TProps, nextState: TState)'
+    children: []
+    langs:
+      - typeScript
+    summary: Determines whether render method should be executed or not.
+    syntax:
+      parameters:
+        - id: nextProps
+          type:
+            - TProps
+          description: New properties.
+        - id: nextState
+          type:
+            - TState
+          description: |
+            New state.
+      content: 'function shouldComponentUpdate(nextProps: TProps, nextState: TState)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.Component._control
+    name: _control
+    fullName: _control
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - TControl

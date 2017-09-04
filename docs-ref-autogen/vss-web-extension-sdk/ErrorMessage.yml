@@ -1,0 +1,55 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.ErrorMessage
+    name: ErrorMessage
+    fullName: ErrorMessage
+    children:
+      - vss-web-extension-sdk.ErrorMessage.isRichText
+      - vss-web-extension-sdk.ErrorMessage.isUserVisible
+      - vss-web-extension-sdk.ErrorMessage.message
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      contract to represent an error used by the framework (and will potentially
+      will be made available to widget authors)
+  - uid: vss-web-extension-sdk.ErrorMessage.isRichText
+    name: isRichText
+    fullName: isRichText
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      indicates whether its a rich text or not (that it can have renderable html
+      content).
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ErrorMessage.isUserVisible
+    name: isUserVisible
+    fullName: isUserVisible
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      indicates whether this message can be displayed to the user or not. If not
+      a general platform message is shown.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ErrorMessage.message
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: message representing the error.
+    syntax:
+      return:
+        type:
+          - string

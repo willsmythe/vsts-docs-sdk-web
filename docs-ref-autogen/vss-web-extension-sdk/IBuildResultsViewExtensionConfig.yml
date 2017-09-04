@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IBuildResultsViewExtensionConfig
+    name: IBuildResultsViewExtensionConfig
+    fullName: IBuildResultsViewExtensionConfig
+    children:
+      - vss-web-extension-sdk.IBuildResultsViewExtensionConfig.onBuildChanged
+      - vss-web-extension-sdk.IBuildResultsViewExtensionConfig.onViewDisplayed
+      - vss-web-extension-sdk.IBuildResultsViewExtensionConfig.selectTab
+      - >-
+        vss-web-extension-sdk.IBuildResultsViewExtensionConfig.setSectionVisibility
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Interface defining the configuration that is shared between extension
+      targeted at "ms.vss-build-web.build-results-view" and the host
+  - uid: vss-web-extension-sdk.IBuildResultsViewExtensionConfig.onBuildChanged
+    name: onBuildChanged
+    fullName: onBuildChanged
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Required if reacting to the current build.
+
+      More than one callbacks can be added, and all will be called.
+
+      It is important to have atleast one call back, since that's how an
+      extension can get information about the current build.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IBuildResultsViewExtensionConfig.onViewDisplayed
+    name: onViewDisplayed
+    fullName: onViewDisplayed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Optional, If needed, this callback will be called when this particular
+      extension is selected/displayed
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IBuildResultsViewExtensionConfig.selectTab
+    name: selectTab
+    fullName: selectTab
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Optional, for a given tab id, which can be fully qualified contribution id
+      (publisher.extensionId.tabId) for tab or a well known tab id,
+
+      the corresponding tab is selected if the tab is visible.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.IBuildResultsViewExtensionConfig.setSectionVisibility
+    name: setSectionVisibility
+    fullName: setSectionVisibility
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Optional, controls section visibility, call this method to hide or show
+      sections. fullyQualifiedSectionId is of the format -
+      publisher.extensionId.sectionId
+    syntax:
+      return:
+        type:
+          - union

@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.ISearchControlCallbackOptions
+    name: ISearchControlCallbackOptions
+    fullName: ISearchControlCallbackOptions
+    children:
+      - vss-web-extension-sdk.ISearchControlCallbackOptions.getCustomTooltip
+      - vss-web-extension-sdk.ISearchControlCallbackOptions.onInputBlur
+      - vss-web-extension-sdk.ISearchControlCallbackOptions.onItemSelect
+      - vss-web-extension-sdk.ISearchControlCallbackOptions.onKeyPress
+      - vss-web-extension-sdk.ISearchControlCallbackOptions.preDropdownRender
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+  - uid: vss-web-extension-sdk.ISearchControlCallbackOptions.getCustomTooltip
+    name: getCustomTooltip
+    fullName: getCustomTooltip
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      callback for a custom tooltip to be displayed for the single-select search
+      control instead of the display name and sign-in address of the resolved
+      identity
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ISearchControlCallbackOptions.onInputBlur
+    name: onInputBlur
+    fullName: onInputBlur
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      action that should execute when the input field loses focus. This action,
+      if supplied, shall be called after the control's default onInputBlur
+      action has executed
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ISearchControlCallbackOptions.onItemSelect
+    name: onItemSelect
+    fullName: onItemSelect
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      action that should execute when an item in this dropdown is selected. This
+      action, if supplied, shall be called after the dropdown's default
+      onItemSelect action has executed
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ISearchControlCallbackOptions.onKeyPress
+    name: onKeyPress
+    fullName: onKeyPress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      action that should execute when a key is pressed. This action, if
+      supplied, shall be called before the dropdown's default onKeyPress action
+      has executed to allow for overrides
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ISearchControlCallbackOptions.preDropdownRender
+    name: preDropdownRender
+    fullName: preDropdownRender
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      a pre-render hook that takes in the list of identities that would
+      otherwise have been displayed and rearranges or adds to them prior to
+      returning the new list
+    syntax:
+      return:
+        type:
+          - union

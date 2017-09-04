@@ -1,0 +1,156 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.GitItem
+    name: GitItem
+    fullName: GitItem
+    children:
+      - vss-web-extension-sdk.GitItem.commitId
+      - vss-web-extension-sdk.GitItem.contentMetadata
+      - vss-web-extension-sdk.GitItem.gitObjectType
+      - vss-web-extension-sdk.GitItem.isFolder
+      - vss-web-extension-sdk.GitItem.isSymLink
+      - vss-web-extension-sdk.GitItem.latestProcessedChange
+      - vss-web-extension-sdk.GitItem.objectId
+      - vss-web-extension-sdk.GitItem.originalObjectId
+      - vss-web-extension-sdk.GitItem.path
+      - vss-web-extension-sdk.GitItem.url
+      - vss-web-extension-sdk.GitItem._links
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+  - uid: vss-web-extension-sdk.GitItem.commitId
+    name: commitId
+    fullName: commitId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: SHA1 of commit item was fetched at
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitItem.contentMetadata
+    name: contentMetadata
+    fullName: contentMetadata
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.FileContentMetadata
+  - uid: vss-web-extension-sdk.GitItem.gitObjectType
+    name: gitObjectType
+    fullName: gitObjectType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Type of object (Commit, Tree, Blob, Tag, ...)'
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.GitItem.isFolder
+    name: isFolder
+    fullName: isFolder
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.GitItem.isSymLink
+    name: isSymLink
+    fullName: isSymLink
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.GitItem.latestProcessedChange
+    name: latestProcessedChange
+    fullName: latestProcessedChange
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Shallow ref to commit that last changed this item Only populated if
+      latestProcessedChange is requested May not be accurate if latest change is
+      not yet cached
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.GitCommitRef
+  - uid: vss-web-extension-sdk.GitItem.objectId
+    name: objectId
+    fullName: objectId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Git object id
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitItem.originalObjectId
+    name: originalObjectId
+    fullName: originalObjectId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Git object id
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitItem.path
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitItem.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitItem._links
+    name: _links
+    fullName: _links
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any
