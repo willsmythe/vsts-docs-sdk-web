@@ -6,29 +6,21 @@ items:
     children:
       - vss-web-extension-sdk.TaskHttpClient2.appendLogContent
       - vss-web-extension-sdk.TaskHttpClient2.appendTimelineRecordFeed
-      - vss-web-extension-sdk.TaskHttpClient2.authTokenManager
       - vss-web-extension-sdk.TaskHttpClient2.createLog
       - vss-web-extension-sdk.TaskHttpClient2.createTimeline
       - vss-web-extension-sdk.TaskHttpClient2.deleteTimeline
-      - vss-web-extension-sdk.TaskHttpClient2.feedApiVersion
-      - vss-web-extension-sdk.TaskHttpClient2.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.TaskHttpClient2.getLog
       - vss-web-extension-sdk.TaskHttpClient2.getLogs
       - vss-web-extension-sdk.TaskHttpClient2.getPlan
       - vss-web-extension-sdk.TaskHttpClient2.getRecords
       - vss-web-extension-sdk.TaskHttpClient2.getTimeline
       - vss-web-extension-sdk.TaskHttpClient2.getTimelines
-      - vss-web-extension-sdk.TaskHttpClient2.logsApiVersion
-      - vss-web-extension-sdk.TaskHttpClient2.plansApiVersion
-      - vss-web-extension-sdk.TaskHttpClient2.recordsApiVersion
       - vss-web-extension-sdk.TaskHttpClient2.constructor
-      - vss-web-extension-sdk.TaskHttpClient2.timelinesApiVersion
       - vss-web-extension-sdk.TaskHttpClient2.updateRecords
       - vss-web-extension-sdk.TaskHttpClient2._beginGetLocation
       - vss-web-extension-sdk.TaskHttpClient2._beginRequest
       - vss-web-extension-sdk.TaskHttpClient2._beginRequestWithAjaxResult
       - vss-web-extension-sdk.TaskHttpClient2._issueAjaxRequest
-      - vss-web-extension-sdk.TaskHttpClient2._rootRequestPath
       - vss-web-extension-sdk.TaskHttpClient2._setInitializationPromise
     langs:
       - typeScript
@@ -118,18 +110,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.TaskHttpClient2.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
   - uid: vss-web-extension-sdk.TaskHttpClient2.createLog
     name: >-
       createLog(log: TaskLog, scopeIdentifier: string, hubName: string, planId:
@@ -235,30 +215,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.TaskHttpClient2.feedApiVersion
-    name: feedApiVersion
-    fullName: feedApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TaskHttpClient2.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.TaskHttpClient2.getLog
     name: >-
       getLog(scopeIdentifier: string, hubName: string, planId: string, logId:
@@ -476,42 +432,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.TaskHttpClient2.logsApiVersion
-    name: logsApiVersion
-    fullName: logsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TaskHttpClient2.plansApiVersion
-    name: plansApiVersion
-    fullName: plansApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TaskHttpClient2.recordsApiVersion
-    name: recordsApiVersion
-    fullName: recordsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TaskHttpClient2.constructor
     name: 'TaskHttpClient2(rootRequestPath: string, options?: IVssHttpClientOptions)'
     children: []
@@ -536,18 +456,6 @@ items:
         type:
           - vss-web-extension-sdk.TaskHttpClient2
     type: constructor
-  - uid: vss-web-extension-sdk.TaskHttpClient2.timelinesApiVersion
-    name: timelinesApiVersion
-    fullName: timelinesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TaskHttpClient2.updateRecords
     name: >-
       updateRecords(records: VssJsonCollectionWrapperV, scopeIdentifier: string,
@@ -703,18 +611,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.TaskHttpClient2._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TaskHttpClient2._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

@@ -4,8 +4,6 @@ items:
     name: RunningDocument
     fullName: RunningDocument
     children:
-      - vss-web-extension-sdk.RunningDocument.beginSave
-      - vss-web-extension-sdk.RunningDocument.getDirtyDocumentTitles
       - vss-web-extension-sdk.RunningDocument.isDirty
     langs:
       - typeScript
@@ -13,34 +11,6 @@ items:
     summary: |-
       Represents a document to a host.
        A host can be tha browser, an IDE (e.g. Eclipse, Visual Studio)
-  - uid: vss-web-extension-sdk.RunningDocument.beginSave
-    name: beginSave
-    fullName: beginSave
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      (Optional) Callback method called before a save operation is performed on
-      the document service
-    syntax:
-      return:
-        type:
-          - union
-  - uid: vss-web-extension-sdk.RunningDocument.getDirtyDocumentTitles
-    name: getDirtyDocumentTitles
-    fullName: getDirtyDocumentTitles
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      (Optional) Callback method called to get the titles of the currently dirty
-      items.
-    syntax:
-      return:
-        type:
-          - union
   - uid: vss-web-extension-sdk.RunningDocument.isDirty
     name: isDirty()
     children: []

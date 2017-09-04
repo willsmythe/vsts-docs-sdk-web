@@ -4,19 +4,13 @@ items:
     name: DelegatedAuthorizationHttpClient2_3
     fullName: DelegatedAuthorizationHttpClient2_3
     children:
-      - >-
-        vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.authorizationsApiVersion
       - vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.authorize
       - vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.authorizeHost
-      - >-
-        vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.authTokenManager
       - >-
         vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.createRegistration
       - vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.constructor
       - >-
         vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.deleteRegistration
-      - >-
-        vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.forceOptionsCallForAutoNegotiate
       - >-
         vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.getAuthorizations
       - >-
@@ -27,13 +21,7 @@ items:
         vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.getRegistrations
       - vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.getSecret
       - >-
-        vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.hostAuthorizationApiVersion
-      - >-
         vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.initiateAuthorization
-      - >-
-        vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.registrationApiVersion
-      - >-
-        vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.registrationSecretApiVersion
       - >-
         vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.revokeAuthorization
       - >-
@@ -48,26 +36,11 @@ items:
       - >-
         vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3._issueAjaxRequest
       - >-
-        vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3._rootRequestPath
-      - >-
         vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
-  - uid: >-
-      vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.authorizationsApiVersion
-    name: authorizationsApiVersion
-    fullName: authorizationsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.authorize
     name: >-
       authorize(responseType: function, clientId: string, redirectUri: string,
@@ -123,18 +96,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
   - uid: >-
       vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.createRegistration
     name: 'createRegistration(registration: Registration, includeSecret?: boolean)'
@@ -204,19 +165,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: >-
-      vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: >-
       vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.getAuthorizations
     name: 'getAuthorizations(userId?: string)'
@@ -309,19 +257,6 @@ items:
           - vss-web-extension-sdk.IPromise
     type: method
   - uid: >-
-      vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.hostAuthorizationApiVersion
-    name: hostAuthorizationApiVersion
-    fullName: hostAuthorizationApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
       vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.initiateAuthorization
     name: >-
       initiateAuthorization(responseType: function, clientId: string,
@@ -360,32 +295,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: >-
-      vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.registrationApiVersion
-    name: registrationApiVersion
-    fullName: registrationApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.registrationSecretApiVersion
-    name: registrationSecretApiVersion
-    fullName: registrationSecretApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3.revokeAuthorization
     name: 'revokeAuthorization(authorizationId: string, userId?: string)'
@@ -575,18 +484,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.DelegatedAuthorizationHttpClient2_3._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'

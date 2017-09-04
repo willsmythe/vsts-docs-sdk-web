@@ -3,59 +3,8 @@ items:
   - uid: vss-web-extension-sdk.GitPullRequestCommentThreadContext
     name: GitPullRequestCommentThreadContext
     fullName: GitPullRequestCommentThreadContext
-    children:
-      - >-
-        vss-web-extension-sdk.GitPullRequestCommentThreadContext.changeTrackingId
-      - >-
-        vss-web-extension-sdk.GitPullRequestCommentThreadContext.iterationContext
-      - >-
-        vss-web-extension-sdk.GitPullRequestCommentThreadContext.trackingCriteria
+    children: []
     langs:
       - typeScript
     type: interface
     summary: ''
-  - uid: vss-web-extension-sdk.GitPullRequestCommentThreadContext.changeTrackingId
-    name: changeTrackingId
-    fullName: changeTrackingId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Used to track a comment across iterations. This value can be found by
-      looking at the iteration's changes list. Must be set for pull requests
-      with iteration support. Otherwise, it's not required for 'legacy' pull
-      requests.
-    syntax:
-      return:
-        type:
-          - number
-  - uid: vss-web-extension-sdk.GitPullRequestCommentThreadContext.iterationContext
-    name: iterationContext
-    fullName: iterationContext
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Specify comparing iteration Ids when a comment thread is added while
-      comparing 2 iterations.
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.CommentIterationContext
-  - uid: vss-web-extension-sdk.GitPullRequestCommentThreadContext.trackingCriteria
-    name: trackingCriteria
-    fullName: trackingCriteria
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      The criteria used to track this thread. If this property is filled out
-      when the thread is returned, then the thread has been tracked from its
-      original location using the given criteria.
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.CommentTrackingCriteria

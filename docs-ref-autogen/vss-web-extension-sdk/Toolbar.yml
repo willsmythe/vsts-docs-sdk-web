@@ -4,17 +4,11 @@ items:
     name: Toolbar
     fullName: Toolbar
     children:
-      - vss-web-extension-sdk.Toolbar.actionArguments
       - vss-web-extension-sdk.Toolbar.cancelDelayedFunction
-      - vss-web-extension-sdk.Toolbar.CONTRIBUTION_ITEMS_UPDATED_EVENT
       - vss-web-extension-sdk.Toolbar.create
       - vss-web-extension-sdk.Toolbar.createIn
       - vss-web-extension-sdk.Toolbar.delayExecute
       - vss-web-extension-sdk.Toolbar.enhance
-      - vss-web-extension-sdk.Toolbar.ENHANCEMENTS_DATA_KEY
-      - vss-web-extension-sdk.Toolbar.enhancementTypeName
-      - vss-web-extension-sdk.Toolbar.ENHANCEMENT_OPTIONPREFIX_KEY
-      - vss-web-extension-sdk.Toolbar.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.Toolbar.ensureEnhancement
       - vss-web-extension-sdk.Toolbar.ensureEnhancements
       - vss-web-extension-sdk.Toolbar.escape
@@ -41,8 +35,6 @@ items:
       - vss-web-extension-sdk.Toolbar.initializeOptions
       - vss-web-extension-sdk.Toolbar.isDisposed
       - vss-web-extension-sdk.Toolbar.moveMenuItemAfter
-      - vss-web-extension-sdk.Toolbar.openSubMenuOnHover
-      - vss-web-extension-sdk.Toolbar.optionsPrefix
       - vss-web-extension-sdk.Toolbar.refreshContributedItems
       - vss-web-extension-sdk.Toolbar.registerEnhancement
       - vss-web-extension-sdk.Toolbar.registerJQueryWidget
@@ -56,7 +48,6 @@ items:
       - vss-web-extension-sdk.Toolbar.setRole
       - vss-web-extension-sdk.Toolbar.setShowIcon
       - vss-web-extension-sdk.Toolbar.show
-      - vss-web-extension-sdk.Toolbar.shownTime
       - vss-web-extension-sdk.Toolbar.showSubMenuOnFocusedItem
       - vss-web-extension-sdk.Toolbar.constructor
       - vss-web-extension-sdk.Toolbar.tryActivate
@@ -64,57 +55,26 @@ items:
       - vss-web-extension-sdk.Toolbar.updateAriaSetProperties
       - vss-web-extension-sdk.Toolbar.updateCommandStates
       - vss-web-extension-sdk.Toolbar.updateContributedMenuItems
-      - vss-web-extension-sdk.Toolbar._active
-      - vss-web-extension-sdk.Toolbar._align
       - vss-web-extension-sdk.Toolbar._bind
-      - vss-web-extension-sdk.Toolbar._children
-      - vss-web-extension-sdk.Toolbar._commandStates
-      - vss-web-extension-sdk.Toolbar._contributedItems
-      - vss-web-extension-sdk.Toolbar._contributionPromise
-      - vss-web-extension-sdk.Toolbar._contributionProviderOptions
-      - vss-web-extension-sdk.Toolbar._disposed
-      - vss-web-extension-sdk.Toolbar._element
       - vss-web-extension-sdk.Toolbar._enhance
-      - vss-web-extension-sdk.Toolbar._enhancementOptions
       - vss-web-extension-sdk.Toolbar._ensureInitialized
       - vss-web-extension-sdk.Toolbar._fire
       - vss-web-extension-sdk.Toolbar._fireChange
-      - vss-web-extension-sdk.Toolbar._focusItem
       - vss-web-extension-sdk.Toolbar._getEventNameSpace
       - vss-web-extension-sdk.Toolbar._getInDomPromise
       - vss-web-extension-sdk.Toolbar._getNextFocusableItem
       - vss-web-extension-sdk.Toolbar._getUniqueId
-      - vss-web-extension-sdk.Toolbar._initialized
-      - vss-web-extension-sdk.Toolbar._menuItems
-      - vss-web-extension-sdk.Toolbar._options
-      - vss-web-extension-sdk.Toolbar._parent
-      - vss-web-extension-sdk.Toolbar._selectedItem
       - vss-web-extension-sdk.Toolbar._selectItem
       - vss-web-extension-sdk.Toolbar._setElement
       - vss-web-extension-sdk.Toolbar._setId
-      - vss-web-extension-sdk.Toolbar._subMenuVisible
-      - vss-web-extension-sdk.Toolbar._type
       - vss-web-extension-sdk.Toolbar._unbind
       - vss-web-extension-sdk.Toolbar._updateContributedMenuItems
-      - vss-web-extension-sdk.Toolbar._visible
     langs:
       - typeScript
     type: class
     summary: |-
       Toolbar widget wrapped around the menubar.
       https://www.w3.org/TR/wai-aria-practices/#toolbar
-  - uid: vss-web-extension-sdk.Toolbar.actionArguments
-    name: actionArguments
-    fullName: actionArguments
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
   - uid: vss-web-extension-sdk.Toolbar.cancelDelayedFunction
     name: 'cancelDelayedFunction(name: string)'
     children: []
@@ -134,18 +94,6 @@ items:
         type:
           - boolean
     type: method
-  - uid: vss-web-extension-sdk.Toolbar.CONTRIBUTION_ITEMS_UPDATED_EVENT
-    name: CONTRIBUTION_ITEMS_UPDATED_EVENT
-    fullName: CONTRIBUTION_ITEMS_UPDATED_EVENT
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.Toolbar.create
     name: >-
       create(controlType: function, container: JQuery, controlOptions: TOptions,
@@ -292,54 +240,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.Toolbar.ENHANCEMENTS_DATA_KEY
-    name: ENHANCEMENTS_DATA_KEY
-    fullName: ENHANCEMENTS_DATA_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.Toolbar.enhancementTypeName
-    name: enhancementTypeName
-    fullName: enhancementTypeName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.Toolbar.ENHANCEMENT_OPTIONPREFIX_KEY
-    name: ENHANCEMENT_OPTIONPREFIX_KEY
-    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.Toolbar.ENHANCEMENT_OPTIONS_KEY
-    name: ENHANCEMENT_OPTIONS_KEY
-    fullName: ENHANCEMENT_OPTIONS_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.Toolbar.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -787,30 +687,6 @@ items:
         type:
           - boolean
     type: method
-  - uid: vss-web-extension-sdk.Toolbar.openSubMenuOnHover
-    name: openSubMenuOnHover
-    fullName: openSubMenuOnHover
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.Toolbar.optionsPrefix
-    name: optionsPrefix
-    fullName: optionsPrefix
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.Toolbar.refreshContributedItems
     name: refreshContributedItems()
     children: []
@@ -1112,18 +988,6 @@ items:
         type:
           - boolean
     type: method
-  - uid: vss-web-extension-sdk.Toolbar.shownTime
-    name: shownTime
-    fullName: shownTime
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Time the Menu was last displayed.
-    syntax:
-      return:
-        type:
-          - number
   - uid: vss-web-extension-sdk.Toolbar.showSubMenuOnFocusedItem
     name: showSubMenuOnFocusedItem()
     children: []
@@ -1239,30 +1103,6 @@ items:
 
       content: 'function updateContributedMenuItems(contributedMenuItems: function)'
     type: method
-  - uid: vss-web-extension-sdk.Toolbar._active
-    name: _active
-    fullName: _active
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.Toolbar._align
-    name: _align
-    fullName: _align
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
   - uid: vss-web-extension-sdk.Toolbar._bind
     name: '_bind(element?: any, eventType?: any, handler?: any, track?: any)'
     children: []
@@ -1299,90 +1139,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.Toolbar._children
-    name: _children
-    fullName: _children
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - union
-  - uid: vss-web-extension-sdk.Toolbar._commandStates
-    name: _commandStates
-    fullName: _commandStates
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
-  - uid: vss-web-extension-sdk.Toolbar._contributedItems
-    name: _contributedItems
-    fullName: _contributedItems
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - union
-  - uid: vss-web-extension-sdk.Toolbar._contributionPromise
-    name: _contributionPromise
-    fullName: _contributionPromise
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-  - uid: vss-web-extension-sdk.Toolbar._contributionProviderOptions
-    name: _contributionProviderOptions
-    fullName: _contributionProviderOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.MenuContributionProviderOptions
-  - uid: vss-web-extension-sdk.Toolbar._disposed
-    name: _disposed
-    fullName: _disposed
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.Toolbar._element
-    name: _element
-    fullName: _element
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQuery
   - uid: vss-web-extension-sdk.Toolbar._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -1398,18 +1154,6 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
-  - uid: vss-web-extension-sdk.Toolbar._enhancementOptions
-    name: _enhancementOptions
-    fullName: _enhancementOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.Toolbar._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -1471,18 +1215,6 @@ items:
         type:
           - any
     type: method
-  - uid: vss-web-extension-sdk.Toolbar._focusItem
-    name: _focusItem
-    fullName: _focusItem
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.MenuItem
   - uid: vss-web-extension-sdk.Toolbar._getEventNameSpace
     name: _getEventNameSpace()
     children: []
@@ -1547,66 +1279,6 @@ items:
         type:
           - string
     type: method
-  - uid: vss-web-extension-sdk.Toolbar._initialized
-    name: _initialized
-    fullName: _initialized
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.Toolbar._menuItems
-    name: _menuItems
-    fullName: _menuItems
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - union
-  - uid: vss-web-extension-sdk.Toolbar._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.MenuBarOptions
-  - uid: vss-web-extension-sdk.Toolbar._parent
-    name: _parent
-    fullName: _parent
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
-  - uid: vss-web-extension-sdk.Toolbar._selectedItem
-    name: _selectedItem
-    fullName: _selectedItem
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.MenuItem
   - uid: vss-web-extension-sdk.Toolbar._selectItem
     name: >-
       _selectItem(item?: MenuItem, ignoreFocus?: boolean, setKeyboardFocus?:
@@ -1667,30 +1339,6 @@ items:
 
       content: 'function _setId(id: string)'
     type: method
-  - uid: vss-web-extension-sdk.Toolbar._subMenuVisible
-    name: _subMenuVisible
-    fullName: _subMenuVisible
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.Toolbar._type
-    name: _type
-    fullName: _type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
   - uid: vss-web-extension-sdk.Toolbar._unbind
     name: '_unbind(element?: any, eventType?: any, handler?: any, track?: any)'
     children: []
@@ -1742,15 +1390,3 @@ items:
 
       content: 'function _updateContributedMenuItems(items: function)'
     type: method
-  - uid: vss-web-extension-sdk.Toolbar._visible
-    name: _visible
-    fullName: _visible
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean

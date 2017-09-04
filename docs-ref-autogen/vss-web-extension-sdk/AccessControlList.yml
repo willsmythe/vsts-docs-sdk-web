@@ -3,62 +3,10 @@ items:
   - uid: vss-web-extension-sdk.AccessControlList
     name: AccessControlList
     fullName: AccessControlList
-    children:
-      - vss-web-extension-sdk.AccessControlList.acesDictionary
-      - vss-web-extension-sdk.AccessControlList.includeExtendedInfo
-      - vss-web-extension-sdk.AccessControlList.inheritPermissions
-      - vss-web-extension-sdk.AccessControlList.token
+    children: []
     langs:
       - typeScript
     type: interface
     summary: >-
       The AccessControlList class is meant to associate a set of
       AccessControlEntries with a security token and its inheritance settings.
-  - uid: vss-web-extension-sdk.AccessControlList.acesDictionary
-    name: acesDictionary
-    fullName: acesDictionary
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Storage of permissions keyed on the identity the permission is for.
-    syntax:
-      return:
-        type:
-          - union
-  - uid: vss-web-extension-sdk.AccessControlList.includeExtendedInfo
-    name: includeExtendedInfo
-    fullName: includeExtendedInfo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: True if this ACL holds ACEs that have extended information.
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.AccessControlList.inheritPermissions
-    name: inheritPermissions
-    fullName: inheritPermissions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: True if the given token inherits permissions from parents.
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.AccessControlList.token
-    name: token
-    fullName: token
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The token that this AccessControlList is for.
-    syntax:
-      return:
-        type:
-          - string

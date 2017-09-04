@@ -4,15 +4,11 @@ items:
     name: DashboardHttpClient
     fullName: DashboardHttpClient
     children:
-      - vss-web-extension-sdk.DashboardHttpClient.authTokenManager
       - vss-web-extension-sdk.DashboardHttpClient.createDashboard
       - vss-web-extension-sdk.DashboardHttpClient.createWidget
       - vss-web-extension-sdk.DashboardHttpClient.constructor
-      - vss-web-extension-sdk.DashboardHttpClient.dashboardsApiVersion
       - vss-web-extension-sdk.DashboardHttpClient.deleteDashboard
       - vss-web-extension-sdk.DashboardHttpClient.deleteWidget
-      - >-
-        vss-web-extension-sdk.DashboardHttpClient.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.DashboardHttpClient.getDashboard
       - vss-web-extension-sdk.DashboardHttpClient.getDashboards
       - vss-web-extension-sdk.DashboardHttpClient.getWidget
@@ -25,30 +21,15 @@ items:
       - vss-web-extension-sdk.DashboardHttpClient.replaceWidgets
       - vss-web-extension-sdk.DashboardHttpClient.updateWidget
       - vss-web-extension-sdk.DashboardHttpClient.updateWidgets
-      - vss-web-extension-sdk.DashboardHttpClient.widgetsApiVersion
-      - vss-web-extension-sdk.DashboardHttpClient.widgetTypesApiVersion
       - vss-web-extension-sdk.DashboardHttpClient._beginGetLocation
       - vss-web-extension-sdk.DashboardHttpClient._beginRequest
       - vss-web-extension-sdk.DashboardHttpClient._beginRequestWithAjaxResult
       - vss-web-extension-sdk.DashboardHttpClient._issueAjaxRequest
-      - vss-web-extension-sdk.DashboardHttpClient._rootRequestPath
       - vss-web-extension-sdk.DashboardHttpClient._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
-  - uid: vss-web-extension-sdk.DashboardHttpClient.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
   - uid: vss-web-extension-sdk.DashboardHttpClient.createDashboard
     name: 'createDashboard(dashboard: Dashboard, teamContext: TeamContext)'
     children: []
@@ -125,18 +106,6 @@ items:
         type:
           - vss-web-extension-sdk.DashboardHttpClient
     type: constructor
-  - uid: vss-web-extension-sdk.DashboardHttpClient.dashboardsApiVersion
-    name: dashboardsApiVersion
-    fullName: dashboardsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.DashboardHttpClient.deleteDashboard
     name: 'deleteDashboard(teamContext: TeamContext, dashboardId: string)'
     children: []
@@ -187,18 +156,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.DashboardHttpClient.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.DashboardHttpClient.getDashboard
     name: 'getDashboard(teamContext: TeamContext, dashboardId: string)'
     children: []
@@ -512,30 +469,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.DashboardHttpClient.widgetsApiVersion
-    name: widgetsApiVersion
-    fullName: widgetsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.DashboardHttpClient.widgetTypesApiVersion
-    name: widgetTypesApiVersion
-    fullName: widgetTypesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.DashboardHttpClient._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
@@ -651,18 +584,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.DashboardHttpClient._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.DashboardHttpClient._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

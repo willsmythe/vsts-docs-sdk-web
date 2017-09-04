@@ -7,10 +7,6 @@ items:
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.addAgent
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.addAgentPool
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.addAgentQueue
-      - vss-web-extension-sdk.TaskAgentHttpClient2_1.agentsApiVersion
-      - vss-web-extension-sdk.TaskAgentHttpClient2_1.authTokenManager
-      - >-
-        vss-web-extension-sdk.TaskAgentHttpClient2_1.azurermsubscriptionsApiVersion
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.createAgentSession
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.createServiceEndpoint
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.createTeamProject
@@ -22,11 +18,8 @@ items:
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.deleteMessage
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.deleteServiceEndpoint
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.deleteTaskDefinition
-      - vss-web-extension-sdk.TaskAgentHttpClient2_1.endpointApiVersion
       - >-
         vss-web-extension-sdk.TaskAgentHttpClient2_1.executeServiceEndpointRequest
-      - >-
-        vss-web-extension-sdk.TaskAgentHttpClient2_1.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.getAgent
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.getAgentPool
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.getAgentPoolRoles
@@ -50,35 +43,23 @@ items:
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.getTaskContentZip
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.getTaskDefinition
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.getTaskDefinitions
-      - vss-web-extension-sdk.TaskAgentHttpClient2_1.jobrequestsApiVersion
-      - vss-web-extension-sdk.TaskAgentHttpClient2_1.messagesApiVersion
-      - vss-web-extension-sdk.TaskAgentHttpClient2_1.poolrolesApiVersion
-      - vss-web-extension-sdk.TaskAgentHttpClient2_1.poolsApiVersion
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.queryEndpoint
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.queryServiceEndpoint
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.queueAgentRequest
-      - vss-web-extension-sdk.TaskAgentHttpClient2_1.queuerolesApiVersion
-      - vss-web-extension-sdk.TaskAgentHttpClient2_1.queuesApiVersion
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.refreshAgent
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.refreshAgents
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.replaceAgent
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.sendMessage
-      - >-
-        vss-web-extension-sdk.TaskAgentHttpClient2_1.serviceendpointtypesApiVersion
-      - vss-web-extension-sdk.TaskAgentHttpClient2_1.sessionsApiVersion
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.constructor
-      - vss-web-extension-sdk.TaskAgentHttpClient2_1.tasksApiVersion
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.updateAgent
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.updateAgentPool
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.updateAgentRequest
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.updateAgentUserCapabilities
       - vss-web-extension-sdk.TaskAgentHttpClient2_1.updateServiceEndpoint
-      - vss-web-extension-sdk.TaskAgentHttpClient2_1.usercapabilitiesApiVersion
       - vss-web-extension-sdk.TaskAgentHttpClient2_1._beginGetLocation
       - vss-web-extension-sdk.TaskAgentHttpClient2_1._beginRequest
       - vss-web-extension-sdk.TaskAgentHttpClient2_1._beginRequestWithAjaxResult
       - vss-web-extension-sdk.TaskAgentHttpClient2_1._issueAjaxRequest
-      - vss-web-extension-sdk.TaskAgentHttpClient2_1._rootRequestPath
       - vss-web-extension-sdk.TaskAgentHttpClient2_1._setInitializationPromise
     langs:
       - typeScript
@@ -144,43 +125,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.agentsApiVersion
-    name: agentsApiVersion
-    fullName: agentsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
-  - uid: >-
-      vss-web-extension-sdk.TaskAgentHttpClient2_1.azurermsubscriptionsApiVersion
-    name: azurermsubscriptionsApiVersion
-    fullName: azurermsubscriptionsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.createAgentSession
     name: 'createAgentSession(session: TaskAgentSession, poolId: number)'
     children: []
@@ -425,18 +369,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.endpointApiVersion
-    name: endpointApiVersion
-    fullName: endpointApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.executeServiceEndpointRequest
     name: >-
       executeServiceEndpointRequest(serviceEndpointRequest:
@@ -466,19 +398,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TaskAgentHttpClient2_1.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.getAgent
     name: >-
       getAgent(poolId: number, agentId: number, includeCapabilities?: boolean,
@@ -1123,54 +1042,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.jobrequestsApiVersion
-    name: jobrequestsApiVersion
-    fullName: jobrequestsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.messagesApiVersion
-    name: messagesApiVersion
-    fullName: messagesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.poolrolesApiVersion
-    name: poolrolesApiVersion
-    fullName: poolrolesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.poolsApiVersion
-    name: poolsApiVersion
-    fullName: poolsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.queryEndpoint
     name: 'queryEndpoint(endpoint: TaskDefinitionEndpoint)'
     children: []
@@ -1239,30 +1110,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.queuerolesApiVersion
-    name: queuerolesApiVersion
-    fullName: queuerolesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.queuesApiVersion
-    name: queuesApiVersion
-    fullName: queuesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.refreshAgent
     name: 'refreshAgent(poolId: number, agentId: number)'
     children: []
@@ -1353,31 +1200,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TaskAgentHttpClient2_1.serviceendpointtypesApiVersion
-    name: serviceendpointtypesApiVersion
-    fullName: serviceendpointtypesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.sessionsApiVersion
-    name: sessionsApiVersion
-    fullName: sessionsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.constructor
     name: >-
       TaskAgentHttpClient2_1(rootRequestPath: string, options?:
@@ -1404,18 +1226,6 @@ items:
         type:
           - vss-web-extension-sdk.TaskAgentHttpClient2_1
     type: constructor
-  - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.tasksApiVersion
-    name: tasksApiVersion
-    fullName: tasksApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.updateAgent
     name: 'updateAgent(agent: TaskAgent, poolId: number, agentId: number)'
     children: []
@@ -1558,18 +1368,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1.usercapabilitiesApiVersion
-    name: usercapabilitiesApiVersion
-    fullName: usercapabilitiesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
@@ -1685,18 +1483,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TaskAgentHttpClient2_1._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

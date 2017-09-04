@@ -5,18 +5,13 @@ items:
     fullName: TreeView
     children:
       - vss-web-extension-sdk.TreeView.cancelDelayedFunction
-      - vss-web-extension-sdk.TreeView.COLLAPSED_CLASS
       - vss-web-extension-sdk.TreeView.create
       - vss-web-extension-sdk.TreeView.createIn
       - vss-web-extension-sdk.TreeView.delayExecute
       - vss-web-extension-sdk.TreeView.enableFocusStyling
       - vss-web-extension-sdk.TreeView.enhance
-      - vss-web-extension-sdk.TreeView.ENHANCEMENTS_DATA_KEY
-      - vss-web-extension-sdk.TreeView.ENHANCEMENT_OPTIONPREFIX_KEY
-      - vss-web-extension-sdk.TreeView.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.TreeView.ensureEnhancement
       - vss-web-extension-sdk.TreeView.ensureEnhancements
-      - vss-web-extension-sdk.TreeView.EXPANDED_CLASS
       - vss-web-extension-sdk.TreeView.focusOnNode
       - vss-web-extension-sdk.TreeView.getElement
       - vss-web-extension-sdk.TreeView.getEnhancementOptions
@@ -29,14 +24,10 @@ items:
       - vss-web-extension-sdk.TreeView.getTypeName
       - vss-web-extension-sdk.TreeView.initializeOptions
       - vss-web-extension-sdk.TreeView.isDisposed
-      - vss-web-extension-sdk.TreeView.LEVEL_DATA_NAME
-      - vss-web-extension-sdk.TreeView.NODE_DATA_NAME
       - vss-web-extension-sdk.TreeView.onItemClick
-      - vss-web-extension-sdk.TreeView.optionsPrefix
       - vss-web-extension-sdk.TreeView.registerEnhancement
       - vss-web-extension-sdk.TreeView.registerJQueryWidget
       - vss-web-extension-sdk.TreeView.removeNode
-      - vss-web-extension-sdk.TreeView.rootNode
       - vss-web-extension-sdk.TreeView.setAttribute
       - vss-web-extension-sdk.TreeView.setDroppable
       - vss-web-extension-sdk.TreeView.setEnhancementOptions
@@ -45,30 +36,22 @@ items:
       - vss-web-extension-sdk.TreeView.constructor
       - vss-web-extension-sdk.TreeView.updateNode
       - vss-web-extension-sdk.TreeView._bind
-      - vss-web-extension-sdk.TreeView._disposed
       - vss-web-extension-sdk.TreeView._drawChildren
-      - vss-web-extension-sdk.TreeView._element
       - vss-web-extension-sdk.TreeView._enhance
-      - vss-web-extension-sdk.TreeView._enhancementOptions
       - vss-web-extension-sdk.TreeView._ensureInitialized
       - vss-web-extension-sdk.TreeView._fire
       - vss-web-extension-sdk.TreeView._fireChange
-      - vss-web-extension-sdk.TreeView._focusedNode
       - vss-web-extension-sdk.TreeView._getEventNameSpace
       - vss-web-extension-sdk.TreeView._getInDomPromise
       - vss-web-extension-sdk.TreeView._getNode
       - vss-web-extension-sdk.TreeView._getNodeElement
       - vss-web-extension-sdk.TreeView._getUniqueId
-      - vss-web-extension-sdk.TreeView._initialized
       - vss-web-extension-sdk.TreeView._onBlur
       - vss-web-extension-sdk.TreeView._onInputKeyDown
-      - vss-web-extension-sdk.TreeView._options
-      - vss-web-extension-sdk.TreeView._selectedNode
       - vss-web-extension-sdk.TreeView._setElement
       - vss-web-extension-sdk.TreeView._setId
       - vss-web-extension-sdk.TreeView._setNodeExpansion
       - vss-web-extension-sdk.TreeView._toggle
-      - vss-web-extension-sdk.TreeView._typeName
       - vss-web-extension-sdk.TreeView._unbind
     langs:
       - typeScript
@@ -93,18 +76,6 @@ items:
         type:
           - boolean
     type: method
-  - uid: vss-web-extension-sdk.TreeView.COLLAPSED_CLASS
-    name: COLLAPSED_CLASS
-    fullName: COLLAPSED_CLASS
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TreeView.create
     name: >-
       create(controlType: function, container: JQuery, controlOptions: TOptions,
@@ -268,42 +239,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.TreeView.ENHANCEMENTS_DATA_KEY
-    name: ENHANCEMENTS_DATA_KEY
-    fullName: ENHANCEMENTS_DATA_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TreeView.ENHANCEMENT_OPTIONPREFIX_KEY
-    name: ENHANCEMENT_OPTIONPREFIX_KEY
-    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TreeView.ENHANCEMENT_OPTIONS_KEY
-    name: ENHANCEMENT_OPTIONS_KEY
-    fullName: ENHANCEMENT_OPTIONS_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TreeView.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -364,18 +299,6 @@ items:
         type:
           - null
     type: method
-  - uid: vss-web-extension-sdk.TreeView.EXPANDED_CLASS
-    name: EXPANDED_CLASS
-    fullName: EXPANDED_CLASS
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TreeView.focusOnNode
     name: 'focusOnNode(node: TreeNode)'
     children: []
@@ -569,30 +492,6 @@ items:
         type:
           - boolean
     type: method
-  - uid: vss-web-extension-sdk.TreeView.LEVEL_DATA_NAME
-    name: LEVEL_DATA_NAME
-    fullName: LEVEL_DATA_NAME
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TreeView.NODE_DATA_NAME
-    name: NODE_DATA_NAME
-    fullName: NODE_DATA_NAME
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TreeView.onItemClick
     name: 'onItemClick(node: TreeNode, nodeElement: any, e?: JQueryEventObject)'
     children: []
@@ -621,18 +520,6 @@ items:
         type:
           - any
     type: method
-  - uid: vss-web-extension-sdk.TreeView.optionsPrefix
-    name: optionsPrefix
-    fullName: optionsPrefix
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TreeView.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -724,18 +611,6 @@ items:
           description: Node to be removed.
       content: 'function removeNode(node: TreeNode)'
     type: method
-  - uid: vss-web-extension-sdk.TreeView.rootNode
-    name: rootNode
-    fullName: rootNode
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TreeNode
   - uid: vss-web-extension-sdk.TreeView.setAttribute
     name: 'setAttribute(attribute: string, value: function, element?: JQuery)'
     children: []
@@ -917,18 +792,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.TreeView._disposed
-    name: _disposed
-    fullName: _disposed
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.TreeView._drawChildren
     name: '_drawChildren(node: TreeNode, nodeElement: any, level?: number)'
     children: []
@@ -953,18 +816,6 @@ items:
           optional: true
       content: 'function _drawChildren(node: TreeNode, nodeElement: any, level?: number)'
     type: method
-  - uid: vss-web-extension-sdk.TreeView._element
-    name: _element
-    fullName: _element
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQuery
   - uid: vss-web-extension-sdk.TreeView._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -980,18 +831,6 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
-  - uid: vss-web-extension-sdk.TreeView._enhancementOptions
-    name: _enhancementOptions
-    fullName: _enhancementOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.TreeView._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -1053,18 +892,6 @@ items:
         type:
           - any
     type: method
-  - uid: vss-web-extension-sdk.TreeView._focusedNode
-    name: _focusedNode
-    fullName: _focusedNode
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQuery
   - uid: vss-web-extension-sdk.TreeView._getEventNameSpace
     name: _getEventNameSpace()
     children: []
@@ -1140,18 +967,6 @@ items:
         type:
           - string
     type: method
-  - uid: vss-web-extension-sdk.TreeView._initialized
-    name: _initialized
-    fullName: _initialized
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.TreeView._onBlur
     name: '_onBlur(e?: JQueryEventObject)'
     children: []
@@ -1188,30 +1003,6 @@ items:
         type:
           - any
     type: method
-  - uid: vss-web-extension-sdk.TreeView._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.ITreeOptions
-  - uid: vss-web-extension-sdk.TreeView._selectedNode
-    name: _selectedNode
-    fullName: _selectedNode
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TreeNode
   - uid: vss-web-extension-sdk.TreeView._setElement
     name: '_setElement(element: JQuery)'
     children: []
@@ -1299,18 +1090,6 @@ items:
         type:
           - any
     type: method
-  - uid: vss-web-extension-sdk.TreeView._typeName
-    name: _typeName
-    fullName: _typeName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TreeView._unbind
     name: '_unbind(element?: any, eventType?: any, handler?: any, track?: any)'
     children: []

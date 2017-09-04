@@ -5,16 +5,11 @@ items:
     fullName: ComboMultiValueDropPopup
     children:
       - vss-web-extension-sdk.ComboMultiValueDropPopup.cancelDelayedFunction
-      - vss-web-extension-sdk.ComboMultiValueDropPopup.combo
       - vss-web-extension-sdk.ComboMultiValueDropPopup.constructor
       - vss-web-extension-sdk.ComboMultiValueDropPopup.create
       - vss-web-extension-sdk.ComboMultiValueDropPopup.createIn
       - vss-web-extension-sdk.ComboMultiValueDropPopup.delayExecute
       - vss-web-extension-sdk.ComboMultiValueDropPopup.enhance
-      - vss-web-extension-sdk.ComboMultiValueDropPopup.ENHANCEMENTS_DATA_KEY
-      - >-
-        vss-web-extension-sdk.ComboMultiValueDropPopup.ENHANCEMENT_OPTIONPREFIX_KEY
-      - vss-web-extension-sdk.ComboMultiValueDropPopup.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.ComboMultiValueDropPopup.ensureEnhancement
       - vss-web-extension-sdk.ComboMultiValueDropPopup.ensureEnhancements
       - vss-web-extension-sdk.ComboMultiValueDropPopup.focus
@@ -28,7 +23,6 @@ items:
       - vss-web-extension-sdk.ComboMultiValueDropPopup.getTypeName
       - vss-web-extension-sdk.ComboMultiValueDropPopup.initializeOptions
       - vss-web-extension-sdk.ComboMultiValueDropPopup.isDisposed
-      - vss-web-extension-sdk.ComboMultiValueDropPopup.optionsPrefix
       - vss-web-extension-sdk.ComboMultiValueDropPopup.registerEnhancement
       - vss-web-extension-sdk.ComboMultiValueDropPopup.registerJQueryWidget
       - vss-web-extension-sdk.ComboMultiValueDropPopup.selectNext
@@ -37,21 +31,14 @@ items:
       - vss-web-extension-sdk.ComboMultiValueDropPopup.setEnhancementOptions
       - vss-web-extension-sdk.ComboMultiValueDropPopup.setRole
       - vss-web-extension-sdk.ComboMultiValueDropPopup.update
-      - vss-web-extension-sdk.ComboMultiValueDropPopup.virtualizingListView
       - vss-web-extension-sdk.ComboMultiValueDropPopup._bind
-      - vss-web-extension-sdk.ComboMultiValueDropPopup._dataSource
-      - vss-web-extension-sdk.ComboMultiValueDropPopup._disposed
-      - vss-web-extension-sdk.ComboMultiValueDropPopup._element
       - vss-web-extension-sdk.ComboMultiValueDropPopup._enhance
-      - vss-web-extension-sdk.ComboMultiValueDropPopup._enhancementOptions
       - vss-web-extension-sdk.ComboMultiValueDropPopup._ensureInitialized
       - vss-web-extension-sdk.ComboMultiValueDropPopup._fire
       - vss-web-extension-sdk.ComboMultiValueDropPopup._fireChange
       - vss-web-extension-sdk.ComboMultiValueDropPopup._getEventNameSpace
       - vss-web-extension-sdk.ComboMultiValueDropPopup._getInDomPromise
       - vss-web-extension-sdk.ComboMultiValueDropPopup._getUniqueId
-      - vss-web-extension-sdk.ComboMultiValueDropPopup._initialized
-      - vss-web-extension-sdk.ComboMultiValueDropPopup._options
       - vss-web-extension-sdk.ComboMultiValueDropPopup._setElement
       - vss-web-extension-sdk.ComboMultiValueDropPopup._setId
       - vss-web-extension-sdk.ComboMultiValueDropPopup._unbind
@@ -78,18 +65,6 @@ items:
         type:
           - boolean
     type: method
-  - uid: vss-web-extension-sdk.ComboMultiValueDropPopup.combo
-    name: combo
-    fullName: combo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.Combo
   - uid: vss-web-extension-sdk.ComboMultiValueDropPopup.constructor
     name: 'ComboMultiValueDropPopup(options?: any)'
     children: []
@@ -254,43 +229,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.ComboMultiValueDropPopup.ENHANCEMENTS_DATA_KEY
-    name: ENHANCEMENTS_DATA_KEY
-    fullName: ENHANCEMENTS_DATA_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.ComboMultiValueDropPopup.ENHANCEMENT_OPTIONPREFIX_KEY
-    name: ENHANCEMENT_OPTIONPREFIX_KEY
-    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.ComboMultiValueDropPopup.ENHANCEMENT_OPTIONS_KEY
-    name: ENHANCEMENT_OPTIONS_KEY
-    fullName: ENHANCEMENT_OPTIONS_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.ComboMultiValueDropPopup.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -522,18 +460,6 @@ items:
         type:
           - boolean
     type: method
-  - uid: vss-web-extension-sdk.ComboMultiValueDropPopup.optionsPrefix
-    name: optionsPrefix
-    fullName: optionsPrefix
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.ComboMultiValueDropPopup.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -729,18 +655,6 @@ items:
       parameters: []
       content: function update()
     type: method
-  - uid: vss-web-extension-sdk.ComboMultiValueDropPopup.virtualizingListView
-    name: virtualizingListView
-    fullName: virtualizingListView
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VirtualizingListView
   - uid: vss-web-extension-sdk.ComboMultiValueDropPopup._bind
     name: '_bind(element?: any, eventType?: any, handler?: any, track?: any)'
     children: []
@@ -777,42 +691,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.ComboMultiValueDropPopup._dataSource
-    name: _dataSource
-    fullName: _dataSource
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.BaseDataSource
-  - uid: vss-web-extension-sdk.ComboMultiValueDropPopup._disposed
-    name: _disposed
-    fullName: _disposed
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.ComboMultiValueDropPopup._element
-    name: _element
-    fullName: _element
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQuery
   - uid: vss-web-extension-sdk.ComboMultiValueDropPopup._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -828,18 +706,6 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
-  - uid: vss-web-extension-sdk.ComboMultiValueDropPopup._enhancementOptions
-    name: _enhancementOptions
-    fullName: _enhancementOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.ComboMultiValueDropPopup._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -942,30 +808,6 @@ items:
         type:
           - string
     type: method
-  - uid: vss-web-extension-sdk.ComboMultiValueDropPopup._initialized
-    name: _initialized
-    fullName: _initialized
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.ComboMultiValueDropPopup._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
   - uid: vss-web-extension-sdk.ComboMultiValueDropPopup._setElement
     name: '_setElement(element: JQuery)'
     children: []

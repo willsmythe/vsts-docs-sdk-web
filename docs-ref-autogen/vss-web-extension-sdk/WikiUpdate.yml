@@ -3,79 +3,10 @@ items:
   - uid: vss-web-extension-sdk.WikiUpdate
     name: WikiUpdate
     fullName: WikiUpdate
-    children:
-      - vss-web-extension-sdk.WikiUpdate.associatedGitPush
-      - vss-web-extension-sdk.WikiUpdate.attachmentChanges
-      - vss-web-extension-sdk.WikiUpdate.comment
-      - vss-web-extension-sdk.WikiUpdate.headCommit
-      - vss-web-extension-sdk.WikiUpdate.pageChange
+    children: []
     langs:
       - typeScript
     type: interface
     summary: >-
       Defines a wiki update which encapsulates the changes that will be a part
       of this update.
-  - uid: vss-web-extension-sdk.WikiUpdate.associatedGitPush
-    name: associatedGitPush
-    fullName: associatedGitPush
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Git push object associated with this wiki update object. This is populated
-      only in the response of the wiki updates POST API.
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.GitPush
-  - uid: vss-web-extension-sdk.WikiUpdate.attachmentChanges
-    name: attachmentChanges
-    fullName: attachmentChanges
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      List of attachment change objects that is to be associated with this
-      update.
-    syntax:
-      return:
-        type:
-          - union
-  - uid: vss-web-extension-sdk.WikiUpdate.comment
-    name: comment
-    fullName: comment
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Comment to be associated with this update.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.WikiUpdate.headCommit
-    name: headCommit
-    fullName: headCommit
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Headcommit of the of the repository.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.WikiUpdate.pageChange
-    name: pageChange
-    fullName: pageChange
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Page change object associated with this update.
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.WikiPageChange

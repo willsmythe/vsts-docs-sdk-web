@@ -4,12 +4,9 @@ items:
     name: CommerceHttpClient3_1
     fullName: CommerceHttpClient3_1
     children:
-      - vss-web-extension-sdk.CommerceHttpClient3_1.authTokenManager
       - vss-web-extension-sdk.CommerceHttpClient3_1.cancelOfferSubscription
       - vss-web-extension-sdk.CommerceHttpClient3_1.changeSubscriptionAccount
       - vss-web-extension-sdk.CommerceHttpClient3_1.constructor
-      - vss-web-extension-sdk.CommerceHttpClient3_1.commercePackageApiVersion
-      - vss-web-extension-sdk.CommerceHttpClient3_1.connectedServerApiVersion
       - vss-web-extension-sdk.CommerceHttpClient3_1.createConnectedServer
       - vss-web-extension-sdk.CommerceHttpClient3_1.createOfferMeterDefinition
       - vss-web-extension-sdk.CommerceHttpClient3_1.createOfferSubscription
@@ -18,8 +15,6 @@ items:
         vss-web-extension-sdk.CommerceHttpClient3_1.enableTrialOfferSubscriptionExtension
       - >-
         vss-web-extension-sdk.CommerceHttpClient3_1.enableTrialOrPreviewOfferSubscription
-      - >-
-        vss-web-extension-sdk.CommerceHttpClient3_1.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.CommerceHttpClient3_1.getAccountRegions
       - vss-web-extension-sdk.CommerceHttpClient3_1.getAccounts
       - vss-web-extension-sdk.CommerceHttpClient3_1.getAccountsByIdentity
@@ -48,40 +43,19 @@ items:
       - vss-web-extension-sdk.CommerceHttpClient3_1.getSubscriptionAccount
       - vss-web-extension-sdk.CommerceHttpClient3_1.getUsage
       - vss-web-extension-sdk.CommerceHttpClient3_1.linkAccount
-      - vss-web-extension-sdk.CommerceHttpClient3_1.metersApiVersion
-      - vss-web-extension-sdk.CommerceHttpClient3_1.offerMeterApiVersion
-      - vss-web-extension-sdk.CommerceHttpClient3_1.offerMeterPriceApiVersion
-      - vss-web-extension-sdk.CommerceHttpClient3_1.offerSubscriptionApiVersion
-      - vss-web-extension-sdk.CommerceHttpClient3_1.regionsApiVersion
       - vss-web-extension-sdk.CommerceHttpClient3_1.reportUsage
-      - vss-web-extension-sdk.CommerceHttpClient3_1.serviceInstanceId
-      - vss-web-extension-sdk.CommerceHttpClient3_1.subscriptionApiVersion
       - vss-web-extension-sdk.CommerceHttpClient3_1.unlinkAccount
       - vss-web-extension-sdk.CommerceHttpClient3_1.updateMeter
       - vss-web-extension-sdk.CommerceHttpClient3_1.updateOfferSubscription
-      - vss-web-extension-sdk.CommerceHttpClient3_1.usageEventsApiVersion
       - vss-web-extension-sdk.CommerceHttpClient3_1._beginGetLocation
       - vss-web-extension-sdk.CommerceHttpClient3_1._beginRequest
       - vss-web-extension-sdk.CommerceHttpClient3_1._beginRequestWithAjaxResult
       - vss-web-extension-sdk.CommerceHttpClient3_1._issueAjaxRequest
-      - vss-web-extension-sdk.CommerceHttpClient3_1._rootRequestPath
       - vss-web-extension-sdk.CommerceHttpClient3_1._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
-  - uid: vss-web-extension-sdk.CommerceHttpClient3_1.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
   - uid: vss-web-extension-sdk.CommerceHttpClient3_1.cancelOfferSubscription
     name: >-
       cancelOfferSubscription(offerSubscription: OfferSubscription,
@@ -172,30 +146,6 @@ items:
         type:
           - vss-web-extension-sdk.CommerceHttpClient3_1
     type: constructor
-  - uid: vss-web-extension-sdk.CommerceHttpClient3_1.commercePackageApiVersion
-    name: commercePackageApiVersion
-    fullName: commercePackageApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.CommerceHttpClient3_1.connectedServerApiVersion
-    name: connectedServerApiVersion
-    fullName: connectedServerApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.CommerceHttpClient3_1.createConnectedServer
     name: 'createConnectedServer(connectedServer: ConnectedServer)'
     children: []
@@ -366,19 +316,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: >-
-      vss-web-extension-sdk.CommerceHttpClient3_1.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.CommerceHttpClient3_1.getAccountRegions
     name: getAccountRegions()
     children: []
@@ -1023,66 +960,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.CommerceHttpClient3_1.metersApiVersion
-    name: metersApiVersion
-    fullName: metersApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.CommerceHttpClient3_1.offerMeterApiVersion
-    name: offerMeterApiVersion
-    fullName: offerMeterApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.CommerceHttpClient3_1.offerMeterPriceApiVersion
-    name: offerMeterPriceApiVersion
-    fullName: offerMeterPriceApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.CommerceHttpClient3_1.offerSubscriptionApiVersion
-    name: offerSubscriptionApiVersion
-    fullName: offerSubscriptionApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.CommerceHttpClient3_1.regionsApiVersion
-    name: regionsApiVersion
-    fullName: regionsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.CommerceHttpClient3_1.reportUsage
     name: 'reportUsage(usageEvent: UsageEvent)'
     children: []
@@ -1100,30 +977,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.CommerceHttpClient3_1.serviceInstanceId
-    name: serviceInstanceId
-    fullName: serviceInstanceId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.CommerceHttpClient3_1.subscriptionApiVersion
-    name: subscriptionApiVersion
-    fullName: subscriptionApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.CommerceHttpClient3_1.unlinkAccount
     name: >-
       unlinkAccount(subscriptionId: string, providerNamespaceId: function,
@@ -1191,18 +1044,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.CommerceHttpClient3_1.usageEventsApiVersion
-    name: usageEventsApiVersion
-    fullName: usageEventsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.CommerceHttpClient3_1._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
@@ -1318,18 +1159,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.CommerceHttpClient3_1._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.CommerceHttpClient3_1._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

@@ -6,14 +6,10 @@ items:
     children:
       - vss-web-extension-sdk.BaseComboDropPopup.constructor
       - vss-web-extension-sdk.BaseComboDropPopup.cancelDelayedFunction
-      - vss-web-extension-sdk.BaseComboDropPopup.combo
       - vss-web-extension-sdk.BaseComboDropPopup.create
       - vss-web-extension-sdk.BaseComboDropPopup.createIn
       - vss-web-extension-sdk.BaseComboDropPopup.delayExecute
       - vss-web-extension-sdk.BaseComboDropPopup.enhance
-      - vss-web-extension-sdk.BaseComboDropPopup.ENHANCEMENTS_DATA_KEY
-      - vss-web-extension-sdk.BaseComboDropPopup.ENHANCEMENT_OPTIONPREFIX_KEY
-      - vss-web-extension-sdk.BaseComboDropPopup.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.BaseComboDropPopup.ensureEnhancement
       - vss-web-extension-sdk.BaseComboDropPopup.ensureEnhancements
       - vss-web-extension-sdk.BaseComboDropPopup.focus
@@ -27,7 +23,6 @@ items:
       - vss-web-extension-sdk.BaseComboDropPopup.getTypeName
       - vss-web-extension-sdk.BaseComboDropPopup.initializeOptions
       - vss-web-extension-sdk.BaseComboDropPopup.isDisposed
-      - vss-web-extension-sdk.BaseComboDropPopup.optionsPrefix
       - vss-web-extension-sdk.BaseComboDropPopup.registerEnhancement
       - vss-web-extension-sdk.BaseComboDropPopup.registerJQueryWidget
       - vss-web-extension-sdk.BaseComboDropPopup.setAttribute
@@ -35,18 +30,13 @@ items:
       - vss-web-extension-sdk.BaseComboDropPopup.setRole
       - vss-web-extension-sdk.BaseComboDropPopup.update
       - vss-web-extension-sdk.BaseComboDropPopup._bind
-      - vss-web-extension-sdk.BaseComboDropPopup._disposed
-      - vss-web-extension-sdk.BaseComboDropPopup._element
       - vss-web-extension-sdk.BaseComboDropPopup._enhance
-      - vss-web-extension-sdk.BaseComboDropPopup._enhancementOptions
       - vss-web-extension-sdk.BaseComboDropPopup._ensureInitialized
       - vss-web-extension-sdk.BaseComboDropPopup._fire
       - vss-web-extension-sdk.BaseComboDropPopup._fireChange
       - vss-web-extension-sdk.BaseComboDropPopup._getEventNameSpace
       - vss-web-extension-sdk.BaseComboDropPopup._getInDomPromise
       - vss-web-extension-sdk.BaseComboDropPopup._getUniqueId
-      - vss-web-extension-sdk.BaseComboDropPopup._initialized
-      - vss-web-extension-sdk.BaseComboDropPopup._options
       - vss-web-extension-sdk.BaseComboDropPopup._setElement
       - vss-web-extension-sdk.BaseComboDropPopup._setId
       - vss-web-extension-sdk.BaseComboDropPopup._unbind
@@ -91,18 +81,6 @@ items:
         type:
           - boolean
     type: method
-  - uid: vss-web-extension-sdk.BaseComboDropPopup.combo
-    name: combo
-    fullName: combo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.Combo
   - uid: vss-web-extension-sdk.BaseComboDropPopup.create
     name: >-
       create(controlType: function, container: JQuery, controlOptions: TOptions,
@@ -249,42 +227,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.BaseComboDropPopup.ENHANCEMENTS_DATA_KEY
-    name: ENHANCEMENTS_DATA_KEY
-    fullName: ENHANCEMENTS_DATA_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.BaseComboDropPopup.ENHANCEMENT_OPTIONPREFIX_KEY
-    name: ENHANCEMENT_OPTIONPREFIX_KEY
-    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.BaseComboDropPopup.ENHANCEMENT_OPTIONS_KEY
-    name: ENHANCEMENT_OPTIONS_KEY
-    fullName: ENHANCEMENT_OPTIONS_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.BaseComboDropPopup.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -518,18 +460,6 @@ items:
         type:
           - boolean
     type: method
-  - uid: vss-web-extension-sdk.BaseComboDropPopup.optionsPrefix
-    name: optionsPrefix
-    fullName: optionsPrefix
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.BaseComboDropPopup.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -727,30 +657,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.BaseComboDropPopup._disposed
-    name: _disposed
-    fullName: _disposed
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.BaseComboDropPopup._element
-    name: _element
-    fullName: _element
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQuery
   - uid: vss-web-extension-sdk.BaseComboDropPopup._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -766,18 +672,6 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
-  - uid: vss-web-extension-sdk.BaseComboDropPopup._enhancementOptions
-    name: _enhancementOptions
-    fullName: _enhancementOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.BaseComboDropPopup._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -880,30 +774,6 @@ items:
         type:
           - string
     type: method
-  - uid: vss-web-extension-sdk.BaseComboDropPopup._initialized
-    name: _initialized
-    fullName: _initialized
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.BaseComboDropPopup._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
   - uid: vss-web-extension-sdk.BaseComboDropPopup._setElement
     name: '_setElement(element: JQuery)'
     children: []

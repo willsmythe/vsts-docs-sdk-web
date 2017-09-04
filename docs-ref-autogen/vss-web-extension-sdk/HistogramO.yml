@@ -9,9 +9,6 @@ items:
       - vss-web-extension-sdk.HistogramO.createIn
       - vss-web-extension-sdk.HistogramO.delayExecute
       - vss-web-extension-sdk.HistogramO.enhance
-      - vss-web-extension-sdk.HistogramO.ENHANCEMENTS_DATA_KEY
-      - vss-web-extension-sdk.HistogramO.ENHANCEMENT_OPTIONPREFIX_KEY
-      - vss-web-extension-sdk.HistogramO.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.HistogramO.ensureEnhancement
       - vss-web-extension-sdk.HistogramO.ensureEnhancements
       - vss-web-extension-sdk.HistogramO.focus
@@ -25,25 +22,19 @@ items:
       - vss-web-extension-sdk.HistogramO.constructor
       - vss-web-extension-sdk.HistogramO.initializeOptions
       - vss-web-extension-sdk.HistogramO.isDisposed
-      - vss-web-extension-sdk.HistogramO.optionsPrefix
       - vss-web-extension-sdk.HistogramO.registerEnhancement
       - vss-web-extension-sdk.HistogramO.registerJQueryWidget
       - vss-web-extension-sdk.HistogramO.setAttribute
       - vss-web-extension-sdk.HistogramO.setEnhancementOptions
       - vss-web-extension-sdk.HistogramO.setRole
       - vss-web-extension-sdk.HistogramO._bind
-      - vss-web-extension-sdk.HistogramO._disposed
-      - vss-web-extension-sdk.HistogramO._element
       - vss-web-extension-sdk.HistogramO._enhance
-      - vss-web-extension-sdk.HistogramO._enhancementOptions
       - vss-web-extension-sdk.HistogramO._ensureInitialized
       - vss-web-extension-sdk.HistogramO._fire
       - vss-web-extension-sdk.HistogramO._fireChange
       - vss-web-extension-sdk.HistogramO._getEventNameSpace
       - vss-web-extension-sdk.HistogramO._getInDomPromise
       - vss-web-extension-sdk.HistogramO._getUniqueId
-      - vss-web-extension-sdk.HistogramO._initialized
-      - vss-web-extension-sdk.HistogramO._options
       - vss-web-extension-sdk.HistogramO._setElement
       - vss-web-extension-sdk.HistogramO._setId
       - vss-web-extension-sdk.HistogramO._unbind
@@ -216,42 +207,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.HistogramO.ENHANCEMENTS_DATA_KEY
-    name: ENHANCEMENTS_DATA_KEY
-    fullName: ENHANCEMENTS_DATA_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.HistogramO.ENHANCEMENT_OPTIONPREFIX_KEY
-    name: ENHANCEMENT_OPTIONPREFIX_KEY
-    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.HistogramO.ENHANCEMENT_OPTIONS_KEY
-    name: ENHANCEMENT_OPTIONS_KEY
-    fullName: ENHANCEMENT_OPTIONS_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.HistogramO.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -488,18 +443,6 @@ items:
         type:
           - boolean
     type: method
-  - uid: vss-web-extension-sdk.HistogramO.optionsPrefix
-    name: optionsPrefix
-    fullName: optionsPrefix
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.HistogramO.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -685,30 +628,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.HistogramO._disposed
-    name: _disposed
-    fullName: _disposed
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.HistogramO._element
-    name: _element
-    fullName: _element
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQuery
   - uid: vss-web-extension-sdk.HistogramO._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -724,18 +643,6 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
-  - uid: vss-web-extension-sdk.HistogramO._enhancementOptions
-    name: _enhancementOptions
-    fullName: _enhancementOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.HistogramO._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -838,30 +745,6 @@ items:
         type:
           - string
     type: method
-  - uid: vss-web-extension-sdk.HistogramO._initialized
-    name: _initialized
-    fullName: _initialized
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.HistogramO._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - TOptions
   - uid: vss-web-extension-sdk.HistogramO._setElement
     name: '_setElement(element: JQuery)'
     children: []

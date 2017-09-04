@@ -4,15 +4,11 @@ items:
     name: MenuBase
     fullName: MenuBase
     children:
-      - vss-web-extension-sdk.MenuBase.actionArguments
       - vss-web-extension-sdk.MenuBase.cancelDelayedFunction
       - vss-web-extension-sdk.MenuBase.create
       - vss-web-extension-sdk.MenuBase.createIn
       - vss-web-extension-sdk.MenuBase.delayExecute
       - vss-web-extension-sdk.MenuBase.enhance
-      - vss-web-extension-sdk.MenuBase.ENHANCEMENTS_DATA_KEY
-      - vss-web-extension-sdk.MenuBase.ENHANCEMENT_OPTIONPREFIX_KEY
-      - vss-web-extension-sdk.MenuBase.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.MenuBase.ensureEnhancement
       - vss-web-extension-sdk.MenuBase.ensureEnhancements
       - vss-web-extension-sdk.MenuBase.focus
@@ -30,49 +26,27 @@ items:
       - vss-web-extension-sdk.MenuBase.initializeOptions
       - vss-web-extension-sdk.MenuBase.isDisposed
       - vss-web-extension-sdk.MenuBase.constructor
-      - vss-web-extension-sdk.MenuBase.optionsPrefix
       - vss-web-extension-sdk.MenuBase.registerEnhancement
       - vss-web-extension-sdk.MenuBase.registerJQueryWidget
       - vss-web-extension-sdk.MenuBase.setAttribute
       - vss-web-extension-sdk.MenuBase.setEnhancementOptions
       - vss-web-extension-sdk.MenuBase.setRole
       - vss-web-extension-sdk.MenuBase._bind
-      - vss-web-extension-sdk.MenuBase._children
-      - vss-web-extension-sdk.MenuBase._commandStates
-      - vss-web-extension-sdk.MenuBase._disposed
-      - vss-web-extension-sdk.MenuBase._element
       - vss-web-extension-sdk.MenuBase._enhance
-      - vss-web-extension-sdk.MenuBase._enhancementOptions
       - vss-web-extension-sdk.MenuBase._ensureInitialized
       - vss-web-extension-sdk.MenuBase._fire
       - vss-web-extension-sdk.MenuBase._fireChange
       - vss-web-extension-sdk.MenuBase._getEventNameSpace
       - vss-web-extension-sdk.MenuBase._getInDomPromise
       - vss-web-extension-sdk.MenuBase._getUniqueId
-      - vss-web-extension-sdk.MenuBase._initialized
-      - vss-web-extension-sdk.MenuBase._options
-      - vss-web-extension-sdk.MenuBase._parent
       - vss-web-extension-sdk.MenuBase._setElement
       - vss-web-extension-sdk.MenuBase._setId
-      - vss-web-extension-sdk.MenuBase._type
       - vss-web-extension-sdk.MenuBase._unbind
       - vss-web-extension-sdk.MenuBase._updateContributedMenuItems
     langs:
       - typeScript
     type: class
     summary: ''
-  - uid: vss-web-extension-sdk.MenuBase.actionArguments
-    name: actionArguments
-    fullName: actionArguments
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
   - uid: vss-web-extension-sdk.MenuBase.cancelDelayedFunction
     name: 'cancelDelayedFunction(name: string)'
     children: []
@@ -238,42 +212,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.MenuBase.ENHANCEMENTS_DATA_KEY
-    name: ENHANCEMENTS_DATA_KEY
-    fullName: ENHANCEMENTS_DATA_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.MenuBase.ENHANCEMENT_OPTIONPREFIX_KEY
-    name: ENHANCEMENT_OPTIONPREFIX_KEY
-    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.MenuBase.ENHANCEMENT_OPTIONS_KEY
-    name: ENHANCEMENT_OPTIONS_KEY
-    fullName: ENHANCEMENT_OPTIONS_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.MenuBase.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -563,18 +501,6 @@ items:
         type:
           - vss-web-extension-sdk.MenuBase
     type: constructor
-  - uid: vss-web-extension-sdk.MenuBase.optionsPrefix
-    name: optionsPrefix
-    fullName: optionsPrefix
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.MenuBase.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -760,54 +686,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.MenuBase._children
-    name: _children
-    fullName: _children
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - union
-  - uid: vss-web-extension-sdk.MenuBase._commandStates
-    name: _commandStates
-    fullName: _commandStates
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
-  - uid: vss-web-extension-sdk.MenuBase._disposed
-    name: _disposed
-    fullName: _disposed
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.MenuBase._element
-    name: _element
-    fullName: _element
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQuery
   - uid: vss-web-extension-sdk.MenuBase._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -823,18 +701,6 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
-  - uid: vss-web-extension-sdk.MenuBase._enhancementOptions
-    name: _enhancementOptions
-    fullName: _enhancementOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.MenuBase._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -937,42 +803,6 @@ items:
         type:
           - string
     type: method
-  - uid: vss-web-extension-sdk.MenuBase._initialized
-    name: _initialized
-    fullName: _initialized
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.MenuBase._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - TOptions
-  - uid: vss-web-extension-sdk.MenuBase._parent
-    name: _parent
-    fullName: _parent
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
   - uid: vss-web-extension-sdk.MenuBase._setElement
     name: '_setElement(element: JQuery)'
     children: []
@@ -1003,18 +833,6 @@ items:
 
       content: 'function _setId(id: string)'
     type: method
-  - uid: vss-web-extension-sdk.MenuBase._type
-    name: _type
-    fullName: _type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
   - uid: vss-web-extension-sdk.MenuBase._unbind
     name: '_unbind(element?: any, eventType?: any, handler?: any, track?: any)'
     children: []

@@ -4,18 +4,10 @@ items:
     name: Uri
     fullName: Uri
     children:
-      - vss-web-extension-sdk.Uri.absoluteUri
       - vss-web-extension-sdk.Uri.addQueryParam
       - vss-web-extension-sdk.Uri.getEffectivePort
       - vss-web-extension-sdk.Uri.getQueryParam
-      - vss-web-extension-sdk.Uri.hashString
-      - vss-web-extension-sdk.Uri.host
       - vss-web-extension-sdk.Uri.parse
-      - vss-web-extension-sdk.Uri.path
-      - vss-web-extension-sdk.Uri.port
-      - vss-web-extension-sdk.Uri.queryParameters
-      - vss-web-extension-sdk.Uri.queryString
-      - vss-web-extension-sdk.Uri.scheme
       - vss-web-extension-sdk.Uri.constructor
     langs:
       - typeScript
@@ -23,18 +15,6 @@ items:
     summary: >-
       Class that represents a Uri and allows parsing/getting and setting of
       individual parts
-  - uid: vss-web-extension-sdk.Uri.absoluteUri
-    name: absoluteUri
-    fullName: absoluteUri
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Set the absolute uri string for this Uri. Replaces all existing values
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.Uri.addQueryParam
     name: 'addQueryParam(name: string, value: string, replaceExisting?: boolean)'
     children: []
@@ -94,30 +74,6 @@ items:
         type:
           - string
     type: method
-  - uid: vss-web-extension-sdk.Uri.hashString
-    name: hashString
-    fullName: hashString
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The hash string of the uri
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.Uri.host
-    name: host
-    fullName: host
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The uri hostname (does not include port or scheme)
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.Uri.parse
     name: 'parse(uri: string, options?: IUriParseOptions)'
     children: []
@@ -141,68 +97,6 @@ items:
         type:
           - vss-web-extension-sdk.Uri
     type: method
-  - uid: vss-web-extension-sdk.Uri.path
-    name: path
-    fullName: path
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The relative path of the uri
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.Uri.port
-    name: port
-    fullName: port
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      The port number of the uri as supplied in the url. 0 if left out in the
-      url (e.g. the default port for the scheme).
-    syntax:
-      return:
-        type:
-          - number
-  - uid: vss-web-extension-sdk.Uri.queryParameters
-    name: queryParameters
-    fullName: queryParameters
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The array of query parameters in the uri
-    syntax:
-      return:
-        type:
-          - union
-  - uid: vss-web-extension-sdk.Uri.queryString
-    name: queryString
-    fullName: queryString
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Set the query string for this Uri. Replaces existing value
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.Uri.scheme
-    name: scheme
-    fullName: scheme
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The uri scheme such as http or https
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.Uri.constructor
     name: 'Uri(uri?: string)'
     children: []

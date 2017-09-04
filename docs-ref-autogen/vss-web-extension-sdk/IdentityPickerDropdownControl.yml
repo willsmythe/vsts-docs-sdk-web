@@ -10,14 +10,7 @@ items:
       - vss-web-extension-sdk.IdentityPickerDropdownControl.create
       - vss-web-extension-sdk.IdentityPickerDropdownControl.createIn
       - vss-web-extension-sdk.IdentityPickerDropdownControl.delayExecute
-      - vss-web-extension-sdk.IdentityPickerDropdownControl.DROPDOWN_BASE_CLASS
       - vss-web-extension-sdk.IdentityPickerDropdownControl.enhance
-      - >-
-        vss-web-extension-sdk.IdentityPickerDropdownControl.ENHANCEMENTS_DATA_KEY
-      - >-
-        vss-web-extension-sdk.IdentityPickerDropdownControl.ENHANCEMENT_OPTIONPREFIX_KEY
-      - >-
-        vss-web-extension-sdk.IdentityPickerDropdownControl.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.IdentityPickerDropdownControl.ensureEnhancement
       - vss-web-extension-sdk.IdentityPickerDropdownControl.ensureEnhancements
       - vss-web-extension-sdk.IdentityPickerDropdownControl.focus
@@ -31,16 +24,12 @@ items:
       - vss-web-extension-sdk.IdentityPickerDropdownControl.getTypeName
       - vss-web-extension-sdk.IdentityPickerDropdownControl.getTypeName
       - vss-web-extension-sdk.IdentityPickerDropdownControl.hide
-      - >-
-        vss-web-extension-sdk.IdentityPickerDropdownControl.HIDE_DROPDOWN_EVENT_INTERNAL
       - vss-web-extension-sdk.IdentityPickerDropdownControl.constructor
-      - vss-web-extension-sdk.IdentityPickerDropdownControl.IMAGE_MARGINS_PX
       - >-
         vss-web-extension-sdk.IdentityPickerDropdownControl.initializeOptionsInternal
       - vss-web-extension-sdk.IdentityPickerDropdownControl.isDisposed
       - vss-web-extension-sdk.IdentityPickerDropdownControl.isFiltered
       - vss-web-extension-sdk.IdentityPickerDropdownControl.isVisible
-      - vss-web-extension-sdk.IdentityPickerDropdownControl.optionsPrefix
       - vss-web-extension-sdk.IdentityPickerDropdownControl.registerEnhancement
       - vss-web-extension-sdk.IdentityPickerDropdownControl.registerJQueryWidget
       - vss-web-extension-sdk.IdentityPickerDropdownControl.setAttribute
@@ -48,24 +37,15 @@ items:
         vss-web-extension-sdk.IdentityPickerDropdownControl.setEnhancementOptions
       - vss-web-extension-sdk.IdentityPickerDropdownControl.setRole
       - vss-web-extension-sdk.IdentityPickerDropdownControl.show
-      - >-
-        vss-web-extension-sdk.IdentityPickerDropdownControl.SHOW_DROPDOWN_EVENT_INTERNAL
       - vss-web-extension-sdk.IdentityPickerDropdownControl.updatePrefix
-      - >-
-        vss-web-extension-sdk.IdentityPickerDropdownControl.UPDATE_ACTIVE_DESCENDANT_ID
       - vss-web-extension-sdk.IdentityPickerDropdownControl._bind
-      - vss-web-extension-sdk.IdentityPickerDropdownControl._disposed
-      - vss-web-extension-sdk.IdentityPickerDropdownControl._element
       - vss-web-extension-sdk.IdentityPickerDropdownControl._enhance
-      - vss-web-extension-sdk.IdentityPickerDropdownControl._enhancementOptions
       - vss-web-extension-sdk.IdentityPickerDropdownControl._ensureInitialized
       - vss-web-extension-sdk.IdentityPickerDropdownControl._fire
       - vss-web-extension-sdk.IdentityPickerDropdownControl._fireChange
       - vss-web-extension-sdk.IdentityPickerDropdownControl._getEventNameSpace
       - vss-web-extension-sdk.IdentityPickerDropdownControl._getInDomPromise
       - vss-web-extension-sdk.IdentityPickerDropdownControl._getUniqueId
-      - vss-web-extension-sdk.IdentityPickerDropdownControl._initialized
-      - vss-web-extension-sdk.IdentityPickerDropdownControl._options
       - vss-web-extension-sdk.IdentityPickerDropdownControl._setElement
       - vss-web-extension-sdk.IdentityPickerDropdownControl._setId
       - vss-web-extension-sdk.IdentityPickerDropdownControl._unbind
@@ -217,18 +197,6 @@ items:
         function delayExecute(name?: string, msDelay?: number,
         cancelPendingOps?: boolean, func?: Function)
     type: method
-  - uid: vss-web-extension-sdk.IdentityPickerDropdownControl.DROPDOWN_BASE_CLASS
-    name: DROPDOWN_BASE_CLASS
-    fullName: DROPDOWN_BASE_CLASS
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.IdentityPickerDropdownControl.enhance
     name: >-
       enhance(type: function, element: function, options?: function,
@@ -264,44 +232,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.IdentityPickerDropdownControl.ENHANCEMENTS_DATA_KEY
-    name: ENHANCEMENTS_DATA_KEY
-    fullName: ENHANCEMENTS_DATA_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.IdentityPickerDropdownControl.ENHANCEMENT_OPTIONPREFIX_KEY
-    name: ENHANCEMENT_OPTIONPREFIX_KEY
-    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.IdentityPickerDropdownControl.ENHANCEMENT_OPTIONS_KEY
-    name: ENHANCEMENT_OPTIONS_KEY
-    fullName: ENHANCEMENT_OPTIONS_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.IdentityPickerDropdownControl.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -533,19 +463,6 @@ items:
           optional: true
       content: 'function hide(e?: JQueryEventObject, suppressHideEvent?: boolean)'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.IdentityPickerDropdownControl.HIDE_DROPDOWN_EVENT_INTERNAL
-    name: HIDE_DROPDOWN_EVENT_INTERNAL
-    fullName: HIDE_DROPDOWN_EVENT_INTERNAL
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.IdentityPickerDropdownControl.constructor
     name: 'IdentityPickerDropdownControl(options?: IIdentityPickerDropdownOptions)'
     children: []
@@ -566,18 +483,6 @@ items:
         type:
           - vss-web-extension-sdk.IdentityPickerDropdownControl
     type: constructor
-  - uid: vss-web-extension-sdk.IdentityPickerDropdownControl.IMAGE_MARGINS_PX
-    name: IMAGE_MARGINS_PX
-    fullName: IMAGE_MARGINS_PX
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
   - uid: >-
       vss-web-extension-sdk.IdentityPickerDropdownControl.initializeOptionsInternal
     name: 'initializeOptionsInternal(options?: IIdentityPickerDropdownOptions)'
@@ -637,18 +542,6 @@ items:
         type:
           - boolean
     type: method
-  - uid: vss-web-extension-sdk.IdentityPickerDropdownControl.optionsPrefix
-    name: optionsPrefix
-    fullName: optionsPrefix
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.IdentityPickerDropdownControl.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -808,19 +701,6 @@ items:
       parameters: []
       content: function show()
     type: method
-  - uid: >-
-      vss-web-extension-sdk.IdentityPickerDropdownControl.SHOW_DROPDOWN_EVENT_INTERNAL
-    name: SHOW_DROPDOWN_EVENT_INTERNAL
-    fullName: SHOW_DROPDOWN_EVENT_INTERNAL
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: This is intended for usage by unit tests only
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.IdentityPickerDropdownControl.updatePrefix
     name: 'updatePrefix(prefix: string)'
     children: []
@@ -835,19 +715,6 @@ items:
           description: ''
       content: 'function updatePrefix(prefix: string)'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.IdentityPickerDropdownControl.UPDATE_ACTIVE_DESCENDANT_ID
-    name: UPDATE_ACTIVE_DESCENDANT_ID
-    fullName: UPDATE_ACTIVE_DESCENDANT_ID
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.IdentityPickerDropdownControl._bind
     name: '_bind(element?: any, eventType?: any, handler?: any, track?: any)'
     children: []
@@ -884,30 +751,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.IdentityPickerDropdownControl._disposed
-    name: _disposed
-    fullName: _disposed
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.IdentityPickerDropdownControl._element
-    name: _element
-    fullName: _element
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQuery
   - uid: vss-web-extension-sdk.IdentityPickerDropdownControl._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -923,18 +766,6 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
-  - uid: vss-web-extension-sdk.IdentityPickerDropdownControl._enhancementOptions
-    name: _enhancementOptions
-    fullName: _enhancementOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.IdentityPickerDropdownControl._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -1037,30 +868,6 @@ items:
         type:
           - string
     type: method
-  - uid: vss-web-extension-sdk.IdentityPickerDropdownControl._initialized
-    name: _initialized
-    fullName: _initialized
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.IdentityPickerDropdownControl._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IIdentityPickerDropdownOptions
   - uid: vss-web-extension-sdk.IdentityPickerDropdownControl._setElement
     name: '_setElement(element: JQuery)'
     children: []

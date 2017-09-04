@@ -3,51 +3,8 @@ items:
   - uid: vss-web-extension-sdk.IDefaultGetServiceContext
     name: IDefaultGetServiceContext
     fullName: IDefaultGetServiceContext
-    children:
-      - vss-web-extension-sdk.IDefaultGetServiceContext.extensionContext
-      - >-
-        vss-web-extension-sdk.IDefaultGetServiceContext.hostManagementServiceOptions
-      - vss-web-extension-sdk.IDefaultGetServiceContext.webContext
+    children: []
     langs:
       - typeScript
     type: interface
     summary: Context passed to GetServiceInstance
-  - uid: vss-web-extension-sdk.IDefaultGetServiceContext.extensionContext
-    name: extensionContext
-    fullName: extensionContext
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: 'The extension context, i.e. publisher id, extension id, etc.'
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IExtensionContext
-  - uid: >-
-      vss-web-extension-sdk.IDefaultGetServiceContext.hostManagementServiceOptions
-    name: hostManagementServiceOptions
-    fullName: hostManagementServiceOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      Options that were passed to the host management service,
-      contains the registered VSS auth application id
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IHostManagementServiceOptions
-  - uid: vss-web-extension-sdk.IDefaultGetServiceContext.webContext
-    name: webContext
-    fullName: webContext
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The web context to be used in the get service call
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.WebContext

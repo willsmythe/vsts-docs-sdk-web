@@ -5,7 +5,6 @@ items:
     fullName: BaseComboBehavior
     children:
       - vss-web-extension-sdk.BaseComboBehavior.constructor
-      - vss-web-extension-sdk.BaseComboBehavior.combo
       - vss-web-extension-sdk.BaseComboBehavior.downKey
       - vss-web-extension-sdk.BaseComboBehavior.getAriaAutocomplete
       - vss-web-extension-sdk.BaseComboBehavior.getAriaDescription
@@ -23,8 +22,6 @@ items:
       - vss-web-extension-sdk.BaseComboBehavior.rightKey
       - vss-web-extension-sdk.BaseComboBehavior.setText
       - vss-web-extension-sdk.BaseComboBehavior.upKey
-      - vss-web-extension-sdk.BaseComboBehavior._dataSource
-      - vss-web-extension-sdk.BaseComboBehavior._options
     langs:
       - typeScript
     type: class
@@ -51,18 +48,6 @@ items:
         type:
           - vss-web-extension-sdk.BaseComboBehavior
     type: constructor
-  - uid: vss-web-extension-sdk.BaseComboBehavior.combo
-    name: combo
-    fullName: combo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.Combo
   - uid: vss-web-extension-sdk.BaseComboBehavior.downKey
     name: 'downKey(e?: JQueryEventObject)'
     children: []
@@ -355,27 +340,3 @@ items:
         type:
           - any
     type: method
-  - uid: vss-web-extension-sdk.BaseComboBehavior._dataSource
-    name: _dataSource
-    fullName: _dataSource
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.BaseDataSource
-  - uid: vss-web-extension-sdk.BaseComboBehavior._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

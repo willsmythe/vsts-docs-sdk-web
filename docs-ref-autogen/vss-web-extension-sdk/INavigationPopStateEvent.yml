@@ -3,49 +3,10 @@ items:
   - uid: vss-web-extension-sdk.INavigationPopStateEvent
     name: INavigationPopStateEvent
     fullName: INavigationPopStateEvent
-    children:
-      - vss-web-extension-sdk.INavigationPopStateEvent.isNewRouteId
-      - vss-web-extension-sdk.INavigationPopStateEvent.newState
-      - vss-web-extension-sdk.INavigationPopStateEvent.oldState
+    children: []
     langs:
       - typeScript
     type: interface
     summary: >-
       Event triggered when a browser history entry has been popped (back or
       forward navigate)
-  - uid: vss-web-extension-sdk.INavigationPopStateEvent.isNewRouteId
-    name: isNewRouteId
-    fullName: isNewRouteId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: True if the new state has a different route id than the previous state.
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.INavigationPopStateEvent.newState
-    name: newState
-    fullName: newState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The new/current history entry
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.INavigationHistoryEntry
-  - uid: vss-web-extension-sdk.INavigationPopStateEvent.oldState
-    name: oldState
-    fullName: oldState
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The previous history entry that we navigated away from
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.INavigationHistoryEntry

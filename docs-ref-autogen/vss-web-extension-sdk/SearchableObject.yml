@@ -5,10 +5,8 @@ items:
     fullName: SearchableObject
     children:
       - vss-web-extension-sdk.SearchableObject.addTerm
-      - vss-web-extension-sdk.SearchableObject.item
       - vss-web-extension-sdk.SearchableObject.constructor
       - vss-web-extension-sdk.SearchableObject.setTerms
-      - vss-web-extension-sdk.SearchableObject.terms
     langs:
       - typeScript
     type: class
@@ -28,18 +26,6 @@ items:
             The additional term
       content: 'function addTerm(term: string)'
     type: method
-  - uid: vss-web-extension-sdk.SearchableObject.item
-    name: item
-    fullName: item
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - T
   - uid: vss-web-extension-sdk.SearchableObject.constructor
     name: 'SearchableObject(item: T, terms: function)'
     children: []
@@ -77,15 +63,3 @@ items:
             The new terms
       content: 'function setTerms(terms: function)'
     type: method
-  - uid: vss-web-extension-sdk.SearchableObject.terms
-    name: terms
-    fullName: terms
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - union

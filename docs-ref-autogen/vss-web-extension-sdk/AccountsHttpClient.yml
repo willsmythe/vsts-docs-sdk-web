@@ -4,39 +4,20 @@ items:
     name: AccountsHttpClient
     fullName: AccountsHttpClient
     children:
-      - vss-web-extension-sdk.AccountsHttpClient.accountsApiVersion
       - vss-web-extension-sdk.AccountsHttpClient.constructor
-      - vss-web-extension-sdk.AccountsHttpClient.authTokenManager
       - vss-web-extension-sdk.AccountsHttpClient.createAccount
-      - >-
-        vss-web-extension-sdk.AccountsHttpClient.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.AccountsHttpClient.getAccount
       - vss-web-extension-sdk.AccountsHttpClient.getAccounts
       - vss-web-extension-sdk.AccountsHttpClient.getAccountSettings
-      - vss-web-extension-sdk.AccountsHttpClient.serviceInstanceId
-      - vss-web-extension-sdk.AccountsHttpClient.settingsApiVersion
       - vss-web-extension-sdk.AccountsHttpClient._beginGetLocation
       - vss-web-extension-sdk.AccountsHttpClient._beginRequest
       - vss-web-extension-sdk.AccountsHttpClient._beginRequestWithAjaxResult
       - vss-web-extension-sdk.AccountsHttpClient._issueAjaxRequest
-      - vss-web-extension-sdk.AccountsHttpClient._rootRequestPath
       - vss-web-extension-sdk.AccountsHttpClient._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
-  - uid: vss-web-extension-sdk.AccountsHttpClient.accountsApiVersion
-    name: accountsApiVersion
-    fullName: accountsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.AccountsHttpClient.constructor
     name: >-
       AccountsHttpClient(rootRequestPath: string, options?:
@@ -63,18 +44,6 @@ items:
         type:
           - vss-web-extension-sdk.AccountsHttpClient
     type: constructor
-  - uid: vss-web-extension-sdk.AccountsHttpClient.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
   - uid: vss-web-extension-sdk.AccountsHttpClient.createAccount
     name: 'createAccount(info: AccountCreateInfoInternal, usePrecreated?: boolean)'
     children: []
@@ -99,18 +68,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.AccountsHttpClient.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.AccountsHttpClient.getAccount
     name: 'getAccount(accountId: string)'
     children: []
@@ -175,30 +132,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.AccountsHttpClient.serviceInstanceId
-    name: serviceInstanceId
-    fullName: serviceInstanceId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.AccountsHttpClient.settingsApiVersion
-    name: settingsApiVersion
-    fullName: settingsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.AccountsHttpClient._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
@@ -314,18 +247,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.AccountsHttpClient._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.AccountsHttpClient._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

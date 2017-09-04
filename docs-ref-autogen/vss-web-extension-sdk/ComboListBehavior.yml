@@ -4,7 +4,6 @@ items:
     name: ComboListBehavior
     fullName: ComboListBehavior
     children:
-      - vss-web-extension-sdk.ComboListBehavior.combo
       - vss-web-extension-sdk.ComboListBehavior.constructor
       - vss-web-extension-sdk.ComboListBehavior.downKey
       - vss-web-extension-sdk.ComboListBehavior.getAriaAutocomplete
@@ -27,27 +26,12 @@ items:
       - vss-web-extension-sdk.ComboListBehavior.selectPrev
       - vss-web-extension-sdk.ComboListBehavior.setText
       - vss-web-extension-sdk.ComboListBehavior.upKey
-      - vss-web-extension-sdk.ComboListBehavior._dataSource
       - vss-web-extension-sdk.ComboListBehavior._dropSelectionChanged
-      - vss-web-extension-sdk.ComboListBehavior._maxItemLength
-      - vss-web-extension-sdk.ComboListBehavior._options
       - vss-web-extension-sdk.ComboListBehavior._setSelectedIndex
     langs:
       - typeScript
     type: class
     summary: ''
-  - uid: vss-web-extension-sdk.ComboListBehavior.combo
-    name: combo
-    fullName: combo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.Combo
   - uid: vss-web-extension-sdk.ComboListBehavior.constructor
     name: 'ComboListBehavior(combo: any, options?: any)'
     children: []
@@ -434,18 +418,6 @@ items:
         type:
           - any
     type: method
-  - uid: vss-web-extension-sdk.ComboListBehavior._dataSource
-    name: _dataSource
-    fullName: _dataSource
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.BaseDataSource
   - uid: vss-web-extension-sdk.ComboListBehavior._dropSelectionChanged
     name: '_dropSelectionChanged(selectedIndex: any, accept: any)'
     children: []
@@ -465,30 +437,6 @@ items:
             User has performed a click action
       content: 'function _dropSelectionChanged(selectedIndex: any, accept: any)'
     type: method
-  - uid: vss-web-extension-sdk.ComboListBehavior._maxItemLength
-    name: _maxItemLength
-    fullName: _maxItemLength
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
-  - uid: vss-web-extension-sdk.ComboListBehavior._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
   - uid: vss-web-extension-sdk.ComboListBehavior._setSelectedIndex
     name: '_setSelectedIndex(selectedIndex: number, fireEvent?: boolean)'
     children: []

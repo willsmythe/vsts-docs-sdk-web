@@ -9,9 +9,6 @@ items:
       - vss-web-extension-sdk.PopupContentControlO.createIn
       - vss-web-extension-sdk.PopupContentControlO.delayExecute
       - vss-web-extension-sdk.PopupContentControlO.enhance
-      - vss-web-extension-sdk.PopupContentControlO.ENHANCEMENTS_DATA_KEY
-      - vss-web-extension-sdk.PopupContentControlO.ENHANCEMENT_OPTIONPREFIX_KEY
-      - vss-web-extension-sdk.PopupContentControlO.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.PopupContentControlO.ensureEnhancement
       - vss-web-extension-sdk.PopupContentControlO.ensureEnhancements
       - vss-web-extension-sdk.PopupContentControlO.focus
@@ -24,7 +21,6 @@ items:
       - vss-web-extension-sdk.PopupContentControlO.getTypeName
       - vss-web-extension-sdk.PopupContentControlO.initializeOptions
       - vss-web-extension-sdk.PopupContentControlO.isDisposed
-      - vss-web-extension-sdk.PopupContentControlO.optionsPrefix
       - vss-web-extension-sdk.PopupContentControlO.constructor
       - vss-web-extension-sdk.PopupContentControlO.registerEnhancement
       - vss-web-extension-sdk.PopupContentControlO.registerJQueryWidget
@@ -33,25 +29,17 @@ items:
       - vss-web-extension-sdk.PopupContentControlO.setHtmlContent
       - vss-web-extension-sdk.PopupContentControlO.setRole
       - vss-web-extension-sdk.PopupContentControlO.setTextContent
-      - vss-web-extension-sdk.PopupContentControlO._$contentContainer
       - vss-web-extension-sdk.PopupContentControlO._bind
-      - vss-web-extension-sdk.PopupContentControlO._disposed
-      - vss-web-extension-sdk.PopupContentControlO._element
-      - vss-web-extension-sdk.PopupContentControlO._enhancementOptions
       - vss-web-extension-sdk.PopupContentControlO._ensureInitialized
       - vss-web-extension-sdk.PopupContentControlO._fire
       - vss-web-extension-sdk.PopupContentControlO._fireChange
       - vss-web-extension-sdk.PopupContentControlO._getEventNameSpace
       - vss-web-extension-sdk.PopupContentControlO._getInDomPromise
       - vss-web-extension-sdk.PopupContentControlO._getUniqueId
-      - vss-web-extension-sdk.PopupContentControlO._initialized
-      - vss-web-extension-sdk.PopupContentControlO._mousePosition
-      - vss-web-extension-sdk.PopupContentControlO._options
       - vss-web-extension-sdk.PopupContentControlO._setElement
       - vss-web-extension-sdk.PopupContentControlO._setId
       - vss-web-extension-sdk.PopupContentControlO._setPosition
       - vss-web-extension-sdk.PopupContentControlO._unbind
-      - vss-web-extension-sdk.PopupContentControlO._visible
     langs:
       - typeScript
     type: class
@@ -221,42 +209,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.PopupContentControlO.ENHANCEMENTS_DATA_KEY
-    name: ENHANCEMENTS_DATA_KEY
-    fullName: ENHANCEMENTS_DATA_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.PopupContentControlO.ENHANCEMENT_OPTIONPREFIX_KEY
-    name: ENHANCEMENT_OPTIONPREFIX_KEY
-    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.PopupContentControlO.ENHANCEMENT_OPTIONS_KEY
-    name: ENHANCEMENT_OPTIONS_KEY
-    fullName: ENHANCEMENT_OPTIONS_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.PopupContentControlO.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -475,18 +427,6 @@ items:
         type:
           - boolean
     type: method
-  - uid: vss-web-extension-sdk.PopupContentControlO.optionsPrefix
-    name: optionsPrefix
-    fullName: optionsPrefix
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.PopupContentControlO.constructor
     name: 'PopupContentControlO(options?: TOptions)'
     children: []
@@ -685,18 +625,6 @@ items:
 
       content: 'function setTextContent(content: string)'
     type: method
-  - uid: vss-web-extension-sdk.PopupContentControlO._$contentContainer
-    name: _$contentContainer
-    fullName: _$contentContainer
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQuery
   - uid: vss-web-extension-sdk.PopupContentControlO._bind
     name: '_bind(element?: any, eventType?: any, handler?: any, track?: any)'
     children: []
@@ -733,42 +661,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.PopupContentControlO._disposed
-    name: _disposed
-    fullName: _disposed
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.PopupContentControlO._element
-    name: _element
-    fullName: _element
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQuery
-  - uid: vss-web-extension-sdk.PopupContentControlO._enhancementOptions
-    name: _enhancementOptions
-    fullName: _enhancementOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.PopupContentControlO._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -871,42 +763,6 @@ items:
         type:
           - string
     type: method
-  - uid: vss-web-extension-sdk.PopupContentControlO._initialized
-    name: _initialized
-    fullName: _initialized
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.PopupContentControlO._mousePosition
-    name: _mousePosition
-    fullName: _mousePosition
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.ILocation
-  - uid: vss-web-extension-sdk.PopupContentControlO._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - TOptions
   - uid: vss-web-extension-sdk.PopupContentControlO._setElement
     name: '_setElement(element: JQuery)'
     children: []
@@ -983,15 +839,3 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.PopupContentControlO._visible
-    name: _visible
-    fullName: _visible
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean

@@ -3,52 +3,8 @@ items:
   - uid: vss-web-extension-sdk.ContributionBase
     name: ContributionBase
     fullName: ContributionBase
-    children:
-      - vss-web-extension-sdk.ContributionBase.description
-      - vss-web-extension-sdk.ContributionBase.id
-      - vss-web-extension-sdk.ContributionBase.visibleTo
+    children: []
     langs:
       - typeScript
     type: interface
     summary: Base class shared by contributions and contribution types
-  - uid: vss-web-extension-sdk.ContributionBase.description
-    name: description
-    fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Description of the contribution/type
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.ContributionBase.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Fully qualified identifier of the contribution/type
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.ContributionBase.visibleTo
-    name: visibleTo
-    fullName: visibleTo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      VisibleTo can be used to restrict whom can reference a given
-      contribution/type. This value should be a list of publishers or extensions
-      access is restricted too.  Examples: "ms" - Means only the "ms" publisher
-      can reference this. "ms.vss-web" - Means only the "vss-web" extension from
-      the "ms" publisher can reference this.
-    syntax:
-      return:
-        type:
-          - union

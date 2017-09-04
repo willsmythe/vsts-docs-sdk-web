@@ -4,19 +4,15 @@ items:
     name: WorkItemTrackingHttpBatchClient
     fullName: WorkItemTrackingHttpBatchClient
     children:
-      - vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.authTokenManager
       - >-
         vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.createWorkItemsBatch
       - >-
         vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.deleteWorkItemsBatch
       - >-
         vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.destroyWorkItemsBatch
-      - >-
-        vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.getQueriesBatch
       - >-
         vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.restoreWorkItemsBatch
-      - vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.serviceInstanceId
       - >-
         vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.updateWorkItemsBatch
       - vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.constructor
@@ -25,25 +21,12 @@ items:
       - >-
         vss-web-extension-sdk.WorkItemTrackingHttpBatchClient._beginRequestWithAjaxResult
       - vss-web-extension-sdk.WorkItemTrackingHttpBatchClient._issueAjaxRequest
-      - vss-web-extension-sdk.WorkItemTrackingHttpBatchClient._rootRequestPath
       - >-
         vss-web-extension-sdk.WorkItemTrackingHttpBatchClient._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
-  - uid: vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
   - uid: vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.createWorkItemsBatch
     name: 'createWorkItemsBatch(documents: function, project: string, type: string)'
     children: []
@@ -106,19 +89,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: >-
-      vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.getQueriesBatch
     name: 'getQueriesBatch(ids: function)'
     children: []
@@ -154,18 +124,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.serviceInstanceId
-    name: serviceInstanceId
-    fullName: serviceInstanceId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.WorkItemTrackingHttpBatchClient.updateWorkItemsBatch
     name: 'updateWorkItemsBatch(updateDocuments: function)'
     children: []
@@ -316,18 +274,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.WorkItemTrackingHttpBatchClient._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.WorkItemTrackingHttpBatchClient._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'

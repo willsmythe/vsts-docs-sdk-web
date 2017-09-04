@@ -4,36 +4,19 @@ items:
     name: CustomerIntelligenceHttpClient
     fullName: CustomerIntelligenceHttpClient
     children:
-      - vss-web-extension-sdk.CustomerIntelligenceHttpClient.authTokenManager
       - vss-web-extension-sdk.CustomerIntelligenceHttpClient.constructor
-      - vss-web-extension-sdk.CustomerIntelligenceHttpClient.eventsApiVersion
-      - >-
-        vss-web-extension-sdk.CustomerIntelligenceHttpClient.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.CustomerIntelligenceHttpClient.publishEvents
       - vss-web-extension-sdk.CustomerIntelligenceHttpClient._beginGetLocation
       - vss-web-extension-sdk.CustomerIntelligenceHttpClient._beginRequest
       - >-
         vss-web-extension-sdk.CustomerIntelligenceHttpClient._beginRequestWithAjaxResult
       - vss-web-extension-sdk.CustomerIntelligenceHttpClient._issueAjaxRequest
-      - vss-web-extension-sdk.CustomerIntelligenceHttpClient._rootRequestPath
       - >-
         vss-web-extension-sdk.CustomerIntelligenceHttpClient._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
-  - uid: vss-web-extension-sdk.CustomerIntelligenceHttpClient.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
   - uid: vss-web-extension-sdk.CustomerIntelligenceHttpClient.constructor
     name: >-
       CustomerIntelligenceHttpClient(rootRequestPath: string, options?:
@@ -60,31 +43,6 @@ items:
         type:
           - vss-web-extension-sdk.CustomerIntelligenceHttpClient
     type: constructor
-  - uid: vss-web-extension-sdk.CustomerIntelligenceHttpClient.eventsApiVersion
-    name: eventsApiVersion
-    fullName: eventsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.CustomerIntelligenceHttpClient.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.CustomerIntelligenceHttpClient.publishEvents
     name: 'publishEvents(events: function)'
     children: []
@@ -218,18 +176,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.CustomerIntelligenceHttpClient._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.CustomerIntelligenceHttpClient._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'

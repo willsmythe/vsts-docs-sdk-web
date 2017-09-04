@@ -9,27 +9,13 @@ items:
         vss-web-extension-sdk.LicensingRuleHttpClient2_2.applyGroupLicensingRulesToAllUsers
       - >-
         vss-web-extension-sdk.LicensingRuleHttpClient2_2.applyGroupLicensingRulesToUser
-      - vss-web-extension-sdk.LicensingRuleHttpClient2_2.authTokenManager
       - vss-web-extension-sdk.LicensingRuleHttpClient2_2.deleteGroupLicenseRule
-      - >-
-        vss-web-extension-sdk.LicensingRuleHttpClient2_2.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.LicensingRuleHttpClient2_2.getApplicationStatus
       - vss-web-extension-sdk.LicensingRuleHttpClient2_2.getGroupLicensingRule
       - vss-web-extension-sdk.LicensingRuleHttpClient2_2.getGroupLicensingRules
-      - >-
-        vss-web-extension-sdk.LicensingRuleHttpClient2_2.groupLicensingRulesApiVersion
-      - >-
-        vss-web-extension-sdk.LicensingRuleHttpClient2_2.groupLicensingRulesApplicationApiVersion
-      - >-
-        vss-web-extension-sdk.LicensingRuleHttpClient2_2.groupLicensingRulesApplicationStatusApiVersion
-      - >-
-        vss-web-extension-sdk.LicensingRuleHttpClient2_2.groupLicensingRulesLookupApiVersion
-      - >-
-        vss-web-extension-sdk.LicensingRuleHttpClient2_2.groupLicensingRulesUserApplicationApiVersion
       - vss-web-extension-sdk.LicensingRuleHttpClient2_2.constructor
       - >-
         vss-web-extension-sdk.LicensingRuleHttpClient2_2.lookupGroupLicensingRules
-      - vss-web-extension-sdk.LicensingRuleHttpClient2_2.serviceInstanceId
       - >-
         vss-web-extension-sdk.LicensingRuleHttpClient2_2.updateGroupLicensingRule
       - vss-web-extension-sdk.LicensingRuleHttpClient2_2._beginGetLocation
@@ -37,7 +23,6 @@ items:
       - >-
         vss-web-extension-sdk.LicensingRuleHttpClient2_2._beginRequestWithAjaxResult
       - vss-web-extension-sdk.LicensingRuleHttpClient2_2._issueAjaxRequest
-      - vss-web-extension-sdk.LicensingRuleHttpClient2_2._rootRequestPath
       - >-
         vss-web-extension-sdk.LicensingRuleHttpClient2_2._setInitializationPromise
     langs:
@@ -107,18 +92,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.LicensingRuleHttpClient2_2.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
   - uid: vss-web-extension-sdk.LicensingRuleHttpClient2_2.deleteGroupLicenseRule
     name: 'deleteGroupLicenseRule(subjectDescriptor: string, ruleOption?: function)'
     children: []
@@ -143,19 +116,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: >-
-      vss-web-extension-sdk.LicensingRuleHttpClient2_2.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.LicensingRuleHttpClient2_2.getApplicationStatus
     name: 'getApplicationStatus(operationId?: string)'
     children: []
@@ -215,71 +175,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: >-
-      vss-web-extension-sdk.LicensingRuleHttpClient2_2.groupLicensingRulesApiVersion
-    name: groupLicensingRulesApiVersion
-    fullName: groupLicensingRulesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.LicensingRuleHttpClient2_2.groupLicensingRulesApplicationApiVersion
-    name: groupLicensingRulesApplicationApiVersion
-    fullName: groupLicensingRulesApplicationApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.LicensingRuleHttpClient2_2.groupLicensingRulesApplicationStatusApiVersion
-    name: groupLicensingRulesApplicationStatusApiVersion
-    fullName: groupLicensingRulesApplicationStatusApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.LicensingRuleHttpClient2_2.groupLicensingRulesLookupApiVersion
-    name: groupLicensingRulesLookupApiVersion
-    fullName: groupLicensingRulesLookupApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.LicensingRuleHttpClient2_2.groupLicensingRulesUserApplicationApiVersion
-    name: groupLicensingRulesUserApplicationApiVersion
-    fullName: groupLicensingRulesUserApplicationApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.LicensingRuleHttpClient2_2.constructor
     name: >-
       LicensingRuleHttpClient2_2(rootRequestPath: string, options?:
@@ -325,18 +220,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.LicensingRuleHttpClient2_2.serviceInstanceId
-    name: serviceInstanceId
-    fullName: serviceInstanceId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.LicensingRuleHttpClient2_2.updateGroupLicensingRule
     name: >-
       updateGroupLicensingRule(licensingRuleUpdate: GroupLicensingRuleUpdate,
@@ -479,18 +362,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.LicensingRuleHttpClient2_2._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.LicensingRuleHttpClient2_2._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

@@ -4,12 +4,10 @@ items:
     name: ChatHttpClient
     fullName: ChatHttpClient
     children:
-      - vss-web-extension-sdk.ChatHttpClient.authTokenManager
       - vss-web-extension-sdk.ChatHttpClient.constructor
       - vss-web-extension-sdk.ChatHttpClient.createChatRoom
       - vss-web-extension-sdk.ChatHttpClient.deleteChatRoom
       - vss-web-extension-sdk.ChatHttpClient.deleteMessage
-      - vss-web-extension-sdk.ChatHttpClient.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.ChatHttpClient.getAllChatRoomMessages
       - vss-web-extension-sdk.ChatHttpClient.getAllChatRoomUsers
       - vss-web-extension-sdk.ChatHttpClient.getAllRooms
@@ -18,35 +16,18 @@ items:
       - vss-web-extension-sdk.ChatHttpClient.getChatRoomUserById
       - vss-web-extension-sdk.ChatHttpClient.joinRoom
       - vss-web-extension-sdk.ChatHttpClient.leaveRoom
-      - vss-web-extension-sdk.ChatHttpClient.messagesApiVersion
-      - vss-web-extension-sdk.ChatHttpClient.roomsApiVersion
       - vss-web-extension-sdk.ChatHttpClient.sendMessageToRoom
-      - vss-web-extension-sdk.ChatHttpClient.serviceInstanceId
       - vss-web-extension-sdk.ChatHttpClient.updateChatMessage
       - vss-web-extension-sdk.ChatHttpClient.updateChatRoom
-      - vss-web-extension-sdk.ChatHttpClient.usersApiVersion
       - vss-web-extension-sdk.ChatHttpClient._beginGetLocation
       - vss-web-extension-sdk.ChatHttpClient._beginRequest
       - vss-web-extension-sdk.ChatHttpClient._beginRequestWithAjaxResult
       - vss-web-extension-sdk.ChatHttpClient._issueAjaxRequest
-      - vss-web-extension-sdk.ChatHttpClient._rootRequestPath
       - vss-web-extension-sdk.ChatHttpClient._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
-  - uid: vss-web-extension-sdk.ChatHttpClient.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
   - uid: vss-web-extension-sdk.ChatHttpClient.constructor
     name: 'ChatHttpClient(rootRequestPath: string, options?: IVssHttpClientOptions)'
     children: []
@@ -126,18 +107,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.ChatHttpClient.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.ChatHttpClient.getAllChatRoomMessages
     name: 'getAllChatRoomMessages(roomId: number)'
     children: []
@@ -290,30 +259,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.ChatHttpClient.messagesApiVersion
-    name: messagesApiVersion
-    fullName: messagesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.ChatHttpClient.roomsApiVersion
-    name: roomsApiVersion
-    fullName: roomsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.ChatHttpClient.sendMessageToRoom
     name: 'sendMessageToRoom(messageUpdate: MessageData, roomId: number)'
     children: []
@@ -335,18 +280,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.ChatHttpClient.serviceInstanceId
-    name: serviceInstanceId
-    fullName: serviceInstanceId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.ChatHttpClient.updateChatMessage
     name: >-
       updateChatMessage(messageUpdate: MessageData, roomId: number, messageId:
@@ -397,18 +330,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.ChatHttpClient.usersApiVersion
-    name: usersApiVersion
-    fullName: usersApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.ChatHttpClient._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
@@ -524,18 +445,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.ChatHttpClient._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.ChatHttpClient._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

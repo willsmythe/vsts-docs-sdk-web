@@ -4,7 +4,6 @@ items:
     name: ConfirmationDialog
     fullName: ConfirmationDialog
     children:
-      - vss-web-extension-sdk.ConfirmationDialog.$errorContainer
       - vss-web-extension-sdk.ConfirmationDialog.beginExecuteDialogAction
       - vss-web-extension-sdk.ConfirmationDialog.beginLoad
       - vss-web-extension-sdk.ConfirmationDialog.cancelDelayedFunction
@@ -13,13 +12,8 @@ items:
       - vss-web-extension-sdk.ConfirmationDialog.createIn
       - vss-web-extension-sdk.ConfirmationDialog.delayExecute
       - vss-web-extension-sdk.ConfirmationDialog.enhance
-      - vss-web-extension-sdk.ConfirmationDialog.ENHANCEMENTS_DATA_KEY
-      - vss-web-extension-sdk.ConfirmationDialog.enhancementTypeName
-      - vss-web-extension-sdk.ConfirmationDialog.ENHANCEMENT_OPTIONPREFIX_KEY
-      - vss-web-extension-sdk.ConfirmationDialog.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.ConfirmationDialog.ensureEnhancement
       - vss-web-extension-sdk.ConfirmationDialog.ensureEnhancements
-      - vss-web-extension-sdk.ConfirmationDialog.EVENT_BUTTON_STATUS_CHANGE
       - vss-web-extension-sdk.ConfirmationDialog.focus
       - vss-web-extension-sdk.ConfirmationDialog.getDialogResult
       - vss-web-extension-sdk.ConfirmationDialog.getElement
@@ -41,7 +35,6 @@ items:
       - vss-web-extension-sdk.ConfirmationDialog.onOkClick
       - vss-web-extension-sdk.ConfirmationDialog.onOpen
       - vss-web-extension-sdk.ConfirmationDialog.onResultReady
-      - vss-web-extension-sdk.ConfirmationDialog.optionsPrefix
       - vss-web-extension-sdk.ConfirmationDialog.registerEnhancement
       - vss-web-extension-sdk.ConfirmationDialog.registerJQueryWidget
       - vss-web-extension-sdk.ConfirmationDialog.setAttribute
@@ -55,19 +48,13 @@ items:
       - vss-web-extension-sdk.ConfirmationDialog.show
       - vss-web-extension-sdk.ConfirmationDialog.updateOkButton
       - vss-web-extension-sdk.ConfirmationDialog._bind
-      - vss-web-extension-sdk.ConfirmationDialog._dialogActionInProgress
-      - vss-web-extension-sdk.ConfirmationDialog._disposed
-      - vss-web-extension-sdk.ConfirmationDialog._element
       - vss-web-extension-sdk.ConfirmationDialog._enhance
-      - vss-web-extension-sdk.ConfirmationDialog._enhancementOptions
       - vss-web-extension-sdk.ConfirmationDialog._ensureInitialized
       - vss-web-extension-sdk.ConfirmationDialog._fire
       - vss-web-extension-sdk.ConfirmationDialog._fireChange
       - vss-web-extension-sdk.ConfirmationDialog._getEventNameSpace
       - vss-web-extension-sdk.ConfirmationDialog._getInDomPromise
       - vss-web-extension-sdk.ConfirmationDialog._getUniqueId
-      - vss-web-extension-sdk.ConfirmationDialog._initialized
-      - vss-web-extension-sdk.ConfirmationDialog._options
       - vss-web-extension-sdk.ConfirmationDialog._setElement
       - vss-web-extension-sdk.ConfirmationDialog._setId
       - vss-web-extension-sdk.ConfirmationDialog._unbind
@@ -75,18 +62,6 @@ items:
       - typeScript
     type: class
     summary: ''
-  - uid: vss-web-extension-sdk.ConfirmationDialog.$errorContainer
-    name: $errorContainer
-    fullName: $errorContainer
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQuery
   - uid: vss-web-extension-sdk.ConfirmationDialog.beginExecuteDialogAction
     name: 'beginExecuteDialogAction(actionDelegate: Function)'
     children: []
@@ -302,54 +277,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.ConfirmationDialog.ENHANCEMENTS_DATA_KEY
-    name: ENHANCEMENTS_DATA_KEY
-    fullName: ENHANCEMENTS_DATA_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.ConfirmationDialog.enhancementTypeName
-    name: enhancementTypeName
-    fullName: enhancementTypeName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.ConfirmationDialog.ENHANCEMENT_OPTIONPREFIX_KEY
-    name: ENHANCEMENT_OPTIONPREFIX_KEY
-    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.ConfirmationDialog.ENHANCEMENT_OPTIONS_KEY
-    name: ENHANCEMENT_OPTIONS_KEY
-    fullName: ENHANCEMENT_OPTIONS_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.ConfirmationDialog.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -410,18 +337,6 @@ items:
         type:
           - null
     type: method
-  - uid: vss-web-extension-sdk.ConfirmationDialog.EVENT_BUTTON_STATUS_CHANGE
-    name: EVENT_BUTTON_STATUS_CHANGE
-    fullName: EVENT_BUTTON_STATUS_CHANGE
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.ConfirmationDialog.focus
     name: focus()
     children: []
@@ -771,18 +686,6 @@ items:
         type:
           - any
     type: method
-  - uid: vss-web-extension-sdk.ConfirmationDialog.optionsPrefix
-    name: optionsPrefix
-    fullName: optionsPrefix
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.ConfirmationDialog.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -1059,42 +962,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.ConfirmationDialog._dialogActionInProgress
-    name: _dialogActionInProgress
-    fullName: _dialogActionInProgress
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.ConfirmationDialog._disposed
-    name: _disposed
-    fullName: _disposed
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.ConfirmationDialog._element
-    name: _element
-    fullName: _element
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQuery
   - uid: vss-web-extension-sdk.ConfirmationDialog._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -1110,18 +977,6 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
-  - uid: vss-web-extension-sdk.ConfirmationDialog._enhancementOptions
-    name: _enhancementOptions
-    fullName: _enhancementOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.ConfirmationDialog._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -1224,30 +1079,6 @@ items:
         type:
           - string
     type: method
-  - uid: vss-web-extension-sdk.ConfirmationDialog._initialized
-    name: _initialized
-    fullName: _initialized
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.ConfirmationDialog._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IConfirmationDialogOptions
   - uid: vss-web-extension-sdk.ConfirmationDialog._setElement
     name: '_setElement(element: JQuery)'
     children: []

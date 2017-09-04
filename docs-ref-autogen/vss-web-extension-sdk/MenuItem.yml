@@ -4,16 +4,11 @@ items:
     name: MenuItem
     fullName: MenuItem
     children:
-      - vss-web-extension-sdk.MenuItem.actionArguments
       - vss-web-extension-sdk.MenuItem.cancelDelayedFunction
       - vss-web-extension-sdk.MenuItem.create
       - vss-web-extension-sdk.MenuItem.createIn
       - vss-web-extension-sdk.MenuItem.delayExecute
       - vss-web-extension-sdk.MenuItem.enhance
-      - vss-web-extension-sdk.MenuItem.ENHANCEMENTS_DATA_KEY
-      - vss-web-extension-sdk.MenuItem.enhancementTypeName
-      - vss-web-extension-sdk.MenuItem.ENHANCEMENT_OPTIONPREFIX_KEY
-      - vss-web-extension-sdk.MenuItem.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.MenuItem.ensureEnhancement
       - vss-web-extension-sdk.MenuItem.ensureEnhancements
       - vss-web-extension-sdk.MenuItem.execute
@@ -34,7 +29,6 @@ items:
       - vss-web-extension-sdk.MenuItem.isLabel
       - vss-web-extension-sdk.MenuItem.isSelected
       - vss-web-extension-sdk.MenuItem.constructor
-      - vss-web-extension-sdk.MenuItem.optionsPrefix
       - vss-web-extension-sdk.MenuItem.registerEnhancement
       - vss-web-extension-sdk.MenuItem.registerJQueryWidget
       - vss-web-extension-sdk.MenuItem.removeHighlight
@@ -47,45 +41,22 @@ items:
       - vss-web-extension-sdk.MenuItem.showPressedHighlight
       - vss-web-extension-sdk.MenuItem.updateText
       - vss-web-extension-sdk.MenuItem.updateTitle
-      - vss-web-extension-sdk.MenuItem._align
       - vss-web-extension-sdk.MenuItem._bind
-      - vss-web-extension-sdk.MenuItem._children
-      - vss-web-extension-sdk.MenuItem._commandStates
-      - vss-web-extension-sdk.MenuItem._disposed
-      - vss-web-extension-sdk.MenuItem._element
       - vss-web-extension-sdk.MenuItem._enhance
-      - vss-web-extension-sdk.MenuItem._enhancementOptions
       - vss-web-extension-sdk.MenuItem._ensureInitialized
       - vss-web-extension-sdk.MenuItem._fire
       - vss-web-extension-sdk.MenuItem._fireChange
       - vss-web-extension-sdk.MenuItem._getEventNameSpace
       - vss-web-extension-sdk.MenuItem._getInDomPromise
       - vss-web-extension-sdk.MenuItem._getUniqueId
-      - vss-web-extension-sdk.MenuItem._initialized
-      - vss-web-extension-sdk.MenuItem._item
-      - vss-web-extension-sdk.MenuItem._options
-      - vss-web-extension-sdk.MenuItem._parent
       - vss-web-extension-sdk.MenuItem._setElement
       - vss-web-extension-sdk.MenuItem._setId
-      - vss-web-extension-sdk.MenuItem._type
       - vss-web-extension-sdk.MenuItem._unbind
       - vss-web-extension-sdk.MenuItem._updateContributedMenuItems
     langs:
       - typeScript
     type: class
     summary: ''
-  - uid: vss-web-extension-sdk.MenuItem.actionArguments
-    name: actionArguments
-    fullName: actionArguments
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
   - uid: vss-web-extension-sdk.MenuItem.cancelDelayedFunction
     name: 'cancelDelayedFunction(name: string)'
     children: []
@@ -251,54 +222,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.MenuItem.ENHANCEMENTS_DATA_KEY
-    name: ENHANCEMENTS_DATA_KEY
-    fullName: ENHANCEMENTS_DATA_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.MenuItem.enhancementTypeName
-    name: enhancementTypeName
-    fullName: enhancementTypeName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.MenuItem.ENHANCEMENT_OPTIONPREFIX_KEY
-    name: ENHANCEMENT_OPTIONPREFIX_KEY
-    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.MenuItem.ENHANCEMENT_OPTIONS_KEY
-    name: ENHANCEMENT_OPTIONS_KEY
-    fullName: ENHANCEMENT_OPTIONS_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.MenuItem.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -638,18 +561,6 @@ items:
         type:
           - vss-web-extension-sdk.MenuItem
     type: constructor
-  - uid: vss-web-extension-sdk.MenuItem.optionsPrefix
-    name: optionsPrefix
-    fullName: optionsPrefix
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.MenuItem.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -889,18 +800,6 @@ items:
           description: ''
       content: 'function updateTitle(title: string)'
     type: method
-  - uid: vss-web-extension-sdk.MenuItem._align
-    name: _align
-    fullName: _align
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
   - uid: vss-web-extension-sdk.MenuItem._bind
     name: '_bind(element?: any, eventType?: any, handler?: any, track?: any)'
     children: []
@@ -937,54 +836,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.MenuItem._children
-    name: _children
-    fullName: _children
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - union
-  - uid: vss-web-extension-sdk.MenuItem._commandStates
-    name: _commandStates
-    fullName: _commandStates
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
-  - uid: vss-web-extension-sdk.MenuItem._disposed
-    name: _disposed
-    fullName: _disposed
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.MenuItem._element
-    name: _element
-    fullName: _element
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQuery
   - uid: vss-web-extension-sdk.MenuItem._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -1000,18 +851,6 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
-  - uid: vss-web-extension-sdk.MenuItem._enhancementOptions
-    name: _enhancementOptions
-    fullName: _enhancementOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.MenuItem._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -1114,54 +953,6 @@ items:
         type:
           - string
     type: method
-  - uid: vss-web-extension-sdk.MenuItem._initialized
-    name: _initialized
-    fullName: _initialized
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.MenuItem._item
-    name: _item
-    fullName: _item
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
-  - uid: vss-web-extension-sdk.MenuItem._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.MenuItemOptions
-  - uid: vss-web-extension-sdk.MenuItem._parent
-    name: _parent
-    fullName: _parent
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.Menu
   - uid: vss-web-extension-sdk.MenuItem._setElement
     name: '_setElement(element: JQuery)'
     children: []
@@ -1192,18 +983,6 @@ items:
 
       content: 'function _setId(id: string)'
     type: method
-  - uid: vss-web-extension-sdk.MenuItem._type
-    name: _type
-    fullName: _type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
   - uid: vss-web-extension-sdk.MenuItem._unbind
     name: '_unbind(element?: any, eventType?: any, handler?: any, track?: any)'
     children: []

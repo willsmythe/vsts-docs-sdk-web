@@ -7,9 +7,6 @@ items:
       - vss-web-extension-sdk.FileDropTarget.cancelDelayedFunction
       - vss-web-extension-sdk.FileDropTarget.delayExecute
       - vss-web-extension-sdk.FileDropTarget.enhance
-      - vss-web-extension-sdk.FileDropTarget.ENHANCEMENTS_DATA_KEY
-      - vss-web-extension-sdk.FileDropTarget.ENHANCEMENT_OPTIONPREFIX_KEY
-      - vss-web-extension-sdk.FileDropTarget.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.FileDropTarget.ensureEnhancement
       - vss-web-extension-sdk.FileDropTarget.ensureEnhancements
       - vss-web-extension-sdk.FileDropTarget.constructor
@@ -22,20 +19,14 @@ items:
       - vss-web-extension-sdk.FileDropTarget.getTypeName
       - vss-web-extension-sdk.FileDropTarget.initializeOptions
       - vss-web-extension-sdk.FileDropTarget.isDisposed
-      - vss-web-extension-sdk.FileDropTarget.optionsPrefix
       - vss-web-extension-sdk.FileDropTarget.registerEnhancement
       - vss-web-extension-sdk.FileDropTarget.registerJQueryWidget
       - vss-web-extension-sdk.FileDropTarget.setEnhancementOptions
       - vss-web-extension-sdk.FileDropTarget._bind
-      - vss-web-extension-sdk.FileDropTarget._disposed
-      - vss-web-extension-sdk.FileDropTarget._element
-      - vss-web-extension-sdk.FileDropTarget._enhancementOptions
       - vss-web-extension-sdk.FileDropTarget._ensureInitialized
       - vss-web-extension-sdk.FileDropTarget._fire
       - vss-web-extension-sdk.FileDropTarget._getEventNameSpace
       - vss-web-extension-sdk.FileDropTarget._getUniqueId
-      - vss-web-extension-sdk.FileDropTarget._initialized
-      - vss-web-extension-sdk.FileDropTarget._options
       - vss-web-extension-sdk.FileDropTarget._setElement
       - vss-web-extension-sdk.FileDropTarget._setId
       - vss-web-extension-sdk.FileDropTarget._unbind
@@ -137,42 +128,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.FileDropTarget.ENHANCEMENTS_DATA_KEY
-    name: ENHANCEMENTS_DATA_KEY
-    fullName: ENHANCEMENTS_DATA_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.FileDropTarget.ENHANCEMENT_OPTIONPREFIX_KEY
-    name: ENHANCEMENT_OPTIONPREFIX_KEY
-    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.FileDropTarget.ENHANCEMENT_OPTIONS_KEY
-    name: ENHANCEMENT_OPTIONS_KEY
-    fullName: ENHANCEMENT_OPTIONS_KEY
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.FileDropTarget.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -409,18 +364,6 @@ items:
         type:
           - boolean
     type: method
-  - uid: vss-web-extension-sdk.FileDropTarget.optionsPrefix
-    name: optionsPrefix
-    fullName: optionsPrefix
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.FileDropTarget.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -552,42 +495,6 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
-  - uid: vss-web-extension-sdk.FileDropTarget._disposed
-    name: _disposed
-    fullName: _disposed
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.FileDropTarget._element
-    name: _element
-    fullName: _element
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQuery
-  - uid: vss-web-extension-sdk.FileDropTarget._enhancementOptions
-    name: _enhancementOptions
-    fullName: _enhancementOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.FileDropTarget._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -656,30 +563,6 @@ items:
         type:
           - string
     type: method
-  - uid: vss-web-extension-sdk.FileDropTarget._initialized
-    name: _initialized
-    fullName: _initialized
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.FileDropTarget._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.FileDropTargetOptions
   - uid: vss-web-extension-sdk.FileDropTarget._setElement
     name: '_setElement(element: JQuery)'
     children: []

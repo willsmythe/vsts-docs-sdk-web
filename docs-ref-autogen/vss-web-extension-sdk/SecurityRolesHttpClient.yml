@@ -4,15 +4,10 @@ items:
     name: SecurityRolesHttpClient
     fullName: SecurityRolesHttpClient
     children:
-      - vss-web-extension-sdk.SecurityRolesHttpClient.authTokenManager
-      - >-
-        vss-web-extension-sdk.SecurityRolesHttpClient.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.SecurityRolesHttpClient.getRoleAssignments
       - vss-web-extension-sdk.SecurityRolesHttpClient.getRoleDefinitions
       - vss-web-extension-sdk.SecurityRolesHttpClient.removeRoleAssignment
       - vss-web-extension-sdk.SecurityRolesHttpClient.removeRoleAssignments
-      - vss-web-extension-sdk.SecurityRolesHttpClient.roleassignmentsApiVersion
-      - vss-web-extension-sdk.SecurityRolesHttpClient.roledefinitionsApiVersion
       - vss-web-extension-sdk.SecurityRolesHttpClient.constructor
       - vss-web-extension-sdk.SecurityRolesHttpClient.setRoleAssignment
       - vss-web-extension-sdk.SecurityRolesHttpClient.setRoleAssignments
@@ -21,37 +16,11 @@ items:
       - >-
         vss-web-extension-sdk.SecurityRolesHttpClient._beginRequestWithAjaxResult
       - vss-web-extension-sdk.SecurityRolesHttpClient._issueAjaxRequest
-      - vss-web-extension-sdk.SecurityRolesHttpClient._rootRequestPath
       - vss-web-extension-sdk.SecurityRolesHttpClient._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
-  - uid: vss-web-extension-sdk.SecurityRolesHttpClient.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
-  - uid: >-
-      vss-web-extension-sdk.SecurityRolesHttpClient.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.SecurityRolesHttpClient.getRoleAssignments
     name: 'getRoleAssignments(scopeId: string, resourceId: string)'
     children: []
@@ -148,30 +117,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.SecurityRolesHttpClient.roleassignmentsApiVersion
-    name: roleassignmentsApiVersion
-    fullName: roleassignmentsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.SecurityRolesHttpClient.roledefinitionsApiVersion
-    name: roledefinitionsApiVersion
-    fullName: roledefinitionsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.SecurityRolesHttpClient.constructor
     name: >-
       SecurityRolesHttpClient(rootRequestPath: string, options?:
@@ -375,18 +320,6 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
-  - uid: vss-web-extension-sdk.SecurityRolesHttpClient._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.SecurityRolesHttpClient._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []
