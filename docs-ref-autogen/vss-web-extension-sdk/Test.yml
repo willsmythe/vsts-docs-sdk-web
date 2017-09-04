@@ -1,29 +1,49 @@
 ### YamlMime:UniversalReference
 items:
-  - uid: sp-http.IHttpClientConfigurations
-    fullName: sp-http.IHttpClientConfigurations
-    name: IHttpClientConfigurations
-    package: sp-http
-    summary: This interface provides standard predefined HttpClientConfiguration objects for use with the HttpClient class. In general, clients should choose the latest available version number, which enables all the switches that are recommended for typical scenarios. (If new switches are introduced in the future, a new version number will be introduced, which ensures that existing code will continue to function the way it did at the time when it was tested.)
-    source:
-      path: lib\services\advisorManagement\lib\operations\operations.js
-      startLine: 276
-      remote:
-        branch: jsdoc
-        path: lib\services\advisorManagement\lib\operations\operations.js
-        repo: 'https://github.com/Azure/azure-sdk-for-node.git'
-    type: interface
+  - uid: vss-web-extension-sdk.Test
+    name: Test
+    fullName: Test
+    children:
+      - vss-web-extension-sdk.Test.automatedTestId
+      - vss-web-extension-sdk.Test.testCaseId
+      - vss-web-extension-sdk.Test.testName
     langs:
       - typeScript
-    children:
-      - sp-http.IHttpClientConfigurations.v1
-  - uid: sp-http.IHttpClientConfigurations.v1
-    fullName: sp-http.IHttpClientConfigurations.v1
-    name: v1
-    summary: 'This configuration turns off every feature switch for HttpClient. The fetch() behavior will be essentially identical to the [WHATWG standard API](https://fetch.spec.whatwg.org/)'
+    type: interface
+    summary: ''
+  - uid: vss-web-extension-sdk.Test.automatedTestId
+    name: automatedTestId
+    fullName: automatedTestId
+    children: []
+    langs:
+      - typeScript
     type: property
+    summary: Gets the automated test identifier.
     syntax:
-      content: public v1 { get; }
       return:
         type:
-          - sp-http.HttpClientConfiguration
+          - string
+  - uid: vss-web-extension-sdk.Test.testCaseId
+    name: testCaseId
+    fullName: testCaseId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.Test.testName
+    name: testName
+    fullName: testName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets or sets the name of the test.
+    syntax:
+      return:
+        type:
+          - string
