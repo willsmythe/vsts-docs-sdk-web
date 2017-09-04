@@ -3,8 +3,21 @@ items:
   - uid: vss-web-extension-sdk.ExtensionEventCallback
     name: ExtensionEventCallback
     fullName: ExtensionEventCallback
-    children: []
+    children:
+      - vss-web-extension-sdk.ExtensionEventCallback.uri
     langs:
       - typeScript
     type: interface
     summary: Base class for an event callback for an extension
+  - uid: vss-web-extension-sdk.ExtensionEventCallback.uri
+    name: uri
+    fullName: uri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The uri of the endpoint that is hit when an event occurs
+    syntax:
+      return:
+        type:
+          - string

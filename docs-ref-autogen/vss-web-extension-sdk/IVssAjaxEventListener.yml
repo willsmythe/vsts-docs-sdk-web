@@ -3,10 +3,51 @@ items:
   - uid: vss-web-extension-sdk.IVssAjaxEventListener
     name: IVssAjaxEventListener
     fullName: IVssAjaxEventListener
-    children: []
+    children:
+      - vss-web-extension-sdk.IVssAjaxEventListener.beforeRequest
+      - vss-web-extension-sdk.IVssAjaxEventListener.postResponseCallback
+      - vss-web-extension-sdk.IVssAjaxEventListener.responseReceived
     langs:
       - typeScript
     type: interface
     summary: >-
       Event listener for VSS ajax events. Gets notified before and after each
       request
+  - uid: vss-web-extension-sdk.IVssAjaxEventListener.beforeRequest
+    name: beforeRequest
+    fullName: beforeRequest
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Method invoked before a request is sent
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IVssAjaxEventListener.postResponseCallback
+    name: postResponseCallback
+    fullName: postResponseCallback
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Method invoked after a response has been received and its callback/promise
+      has been invoked
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IVssAjaxEventListener.responseReceived
+    name: responseReceived
+    fullName: responseReceived
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Method invoked when a response has been received
+    syntax:
+      return:
+        type:
+          - union

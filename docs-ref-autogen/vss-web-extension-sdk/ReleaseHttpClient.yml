@@ -8,12 +8,20 @@ items:
       - vss-web-extension-sdk.ReleaseHttpClient.addDefinitionTags
       - vss-web-extension-sdk.ReleaseHttpClient.addReleaseTag
       - vss-web-extension-sdk.ReleaseHttpClient.addReleaseTags
+      - vss-web-extension-sdk.ReleaseHttpClient.agentartifactsApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.approvalsApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.approvalsApiVersion_250c7158
+      - vss-web-extension-sdk.ReleaseHttpClient.approvalsApiVersion_9328e074
+      - vss-web-extension-sdk.ReleaseHttpClient.authTokenManager
+      - vss-web-extension-sdk.ReleaseHttpClient.changesApiVersion
       - >-
         vss-web-extension-sdk.ReleaseHttpClient.createDefinitionEnvironmentTemplate
       - vss-web-extension-sdk.ReleaseHttpClient.createFavorites
       - vss-web-extension-sdk.ReleaseHttpClient.createFolder
       - vss-web-extension-sdk.ReleaseHttpClient.createRelease
       - vss-web-extension-sdk.ReleaseHttpClient.createReleaseDefinition
+      - vss-web-extension-sdk.ReleaseHttpClient.definitionEnvironmentsApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.definitionsApiVersion
       - >-
         vss-web-extension-sdk.ReleaseHttpClient.deleteDefinitionEnvironmentTemplate
       - vss-web-extension-sdk.ReleaseHttpClient.deleteDefinitionTag
@@ -22,6 +30,12 @@ items:
       - vss-web-extension-sdk.ReleaseHttpClient.deleteRelease
       - vss-web-extension-sdk.ReleaseHttpClient.deleteReleaseDefinition
       - vss-web-extension-sdk.ReleaseHttpClient.deleteReleaseTag
+      - vss-web-extension-sdk.ReleaseHttpClient.deploymentsApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.environmentsApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.environmenttemplatesApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.favoritesApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.foldersApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.ReleaseHttpClient.getAgentArtifactDefinitions
       - vss-web-extension-sdk.ReleaseHttpClient.getApproval
       - vss-web-extension-sdk.ReleaseHttpClient.getApprovalHistory
@@ -67,10 +81,31 @@ items:
       - vss-web-extension-sdk.ReleaseHttpClient.getTaskLog
       - vss-web-extension-sdk.ReleaseHttpClient.getTasks
       - vss-web-extension-sdk.ReleaseHttpClient.getTasksForTaskGroup
+      - vss-web-extension-sdk.ReleaseHttpClient.historyApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.inputvaluesqueryApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.issuesApiVersion
       - >-
         vss-web-extension-sdk.ReleaseHttpClient.listDefinitionEnvironmentTemplates
+      - vss-web-extension-sdk.ReleaseHttpClient.logsApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.logsApiVersion_17c91af7
+      - vss-web-extension-sdk.ReleaseHttpClient.logsApiVersion_c37fbab5
+      - vss-web-extension-sdk.ReleaseHttpClient.manualInterventionsApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.metricsApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.projectsApiVersion
       - vss-web-extension-sdk.ReleaseHttpClient.constructor
+      - vss-web-extension-sdk.ReleaseHttpClient.releasesApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.releasesettingsApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.revisionsApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.sendmailApiVersion
       - vss-web-extension-sdk.ReleaseHttpClient.sendSummaryMail
+      - vss-web-extension-sdk.ReleaseHttpClient.serviceInstanceId
+      - vss-web-extension-sdk.ReleaseHttpClient.sourcebranchesApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.tagsApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.tagsApiVersion_3d21b4c8
+      - vss-web-extension-sdk.ReleaseHttpClient.tagsApiVersion_c5b602b6
+      - vss-web-extension-sdk.ReleaseHttpClient.tasksApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.tasksApiVersion_4259191d
+      - vss-web-extension-sdk.ReleaseHttpClient.typesApiVersion
       - vss-web-extension-sdk.ReleaseHttpClient.undeleteRelease
       - vss-web-extension-sdk.ReleaseHttpClient.updateFolder
       - vss-web-extension-sdk.ReleaseHttpClient.updateManualIntervention
@@ -80,10 +115,13 @@ items:
       - vss-web-extension-sdk.ReleaseHttpClient.updateReleaseEnvironment
       - vss-web-extension-sdk.ReleaseHttpClient.updateReleaseResource
       - vss-web-extension-sdk.ReleaseHttpClient.updateReleaseSettings
+      - vss-web-extension-sdk.ReleaseHttpClient.versionsApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient.workitemsApiVersion
       - vss-web-extension-sdk.ReleaseHttpClient._beginGetLocation
       - vss-web-extension-sdk.ReleaseHttpClient._beginRequest
       - vss-web-extension-sdk.ReleaseHttpClient._beginRequestWithAjaxResult
       - vss-web-extension-sdk.ReleaseHttpClient._issueAjaxRequest
+      - vss-web-extension-sdk.ReleaseHttpClient._rootRequestPath
       - vss-web-extension-sdk.ReleaseHttpClient._setInitializationPromise
     langs:
       - typeScript
@@ -199,6 +237,78 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.agentartifactsApiVersion
+    name: agentartifactsApiVersion
+    fullName: agentartifactsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.approvalsApiVersion
+    name: approvalsApiVersion
+    fullName: approvalsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.approvalsApiVersion_250c7158
+    name: approvalsApiVersion_250c7158
+    fullName: approvalsApiVersion_250c7158
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.approvalsApiVersion_9328e074
+    name: approvalsApiVersion_9328e074
+    fullName: approvalsApiVersion_9328e074
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.changesApiVersion
+    name: changesApiVersion
+    fullName: changesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: >-
       vss-web-extension-sdk.ReleaseHttpClient.createDefinitionEnvironmentTemplate
     name: >-
@@ -332,6 +442,30 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.definitionEnvironmentsApiVersion
+    name: definitionEnvironmentsApiVersion
+    fullName: definitionEnvironmentsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.definitionsApiVersion
+    name: definitionsApiVersion
+    fullName: definitionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: >-
       vss-web-extension-sdk.ReleaseHttpClient.deleteDefinitionEnvironmentTemplate
     name: 'deleteDefinitionEnvironmentTemplate(project: string, templateId: string)'
@@ -519,6 +653,78 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.deploymentsApiVersion
+    name: deploymentsApiVersion
+    fullName: deploymentsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.environmentsApiVersion
+    name: environmentsApiVersion
+    fullName: environmentsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.environmenttemplatesApiVersion
+    name: environmenttemplatesApiVersion
+    fullName: environmenttemplatesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.favoritesApiVersion
+    name: favoritesApiVersion
+    fullName: favoritesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.foldersApiVersion
+    name: foldersApiVersion
+    fullName: foldersApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.ReleaseHttpClient.getAgentArtifactDefinitions
     name: 'getAgentArtifactDefinitions(project: string, releaseId: number)'
     children: []
@@ -1983,6 +2189,42 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.historyApiVersion
+    name: historyApiVersion
+    fullName: historyApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.inputvaluesqueryApiVersion
+    name: inputvaluesqueryApiVersion
+    fullName: inputvaluesqueryApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.issuesApiVersion
+    name: issuesApiVersion
+    fullName: issuesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ReleaseHttpClient.listDefinitionEnvironmentTemplates
     name: 'listDefinitionEnvironmentTemplates(project: string)'
     children: []
@@ -2000,6 +2242,78 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.logsApiVersion
+    name: logsApiVersion
+    fullName: logsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.logsApiVersion_17c91af7
+    name: logsApiVersion_17c91af7
+    fullName: logsApiVersion_17c91af7
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.logsApiVersion_c37fbab5
+    name: logsApiVersion_c37fbab5
+    fullName: logsApiVersion_c37fbab5
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.manualInterventionsApiVersion
+    name: manualInterventionsApiVersion
+    fullName: manualInterventionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.metricsApiVersion
+    name: metricsApiVersion
+    fullName: metricsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.projectsApiVersion
+    name: projectsApiVersion
+    fullName: projectsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ReleaseHttpClient.constructor
     name: >-
       ReleaseHttpClient(rootRequestPath: string, options?:
@@ -2026,6 +2340,54 @@ items:
         type:
           - vss-web-extension-sdk.ReleaseHttpClient
     type: constructor
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.releasesApiVersion
+    name: releasesApiVersion
+    fullName: releasesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.releasesettingsApiVersion
+    name: releasesettingsApiVersion
+    fullName: releasesettingsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.revisionsApiVersion
+    name: revisionsApiVersion
+    fullName: revisionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.sendmailApiVersion
+    name: sendmailApiVersion
+    fullName: sendmailApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ReleaseHttpClient.sendSummaryMail
     name: >-
       sendSummaryMail(mailMessage: MailMessage, project: string, releaseId:
@@ -2055,6 +2417,102 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.serviceInstanceId
+    name: serviceInstanceId
+    fullName: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.sourcebranchesApiVersion
+    name: sourcebranchesApiVersion
+    fullName: sourcebranchesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.tagsApiVersion
+    name: tagsApiVersion
+    fullName: tagsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.tagsApiVersion_3d21b4c8
+    name: tagsApiVersion_3d21b4c8
+    fullName: tagsApiVersion_3d21b4c8
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.tagsApiVersion_c5b602b6
+    name: tagsApiVersion_c5b602b6
+    fullName: tagsApiVersion_c5b602b6
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.tasksApiVersion
+    name: tasksApiVersion
+    fullName: tasksApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.tasksApiVersion_4259191d
+    name: tasksApiVersion_4259191d
+    fullName: tasksApiVersion_4259191d
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.typesApiVersion
+    name: typesApiVersion
+    fullName: typesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ReleaseHttpClient.undeleteRelease
     name: 'undeleteRelease(project: string, releaseId: number, comment: string)'
     children: []
@@ -2310,6 +2768,30 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.versionsApiVersion
+    name: versionsApiVersion
+    fullName: versionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient.workitemsApiVersion
+    name: workitemsApiVersion
+    fullName: workitemsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ReleaseHttpClient._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
@@ -2425,6 +2907,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ReleaseHttpClient._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ReleaseHttpClient._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

@@ -3,8 +3,47 @@ items:
   - uid: vss-web-extension-sdk.WorkItemLink
     name: WorkItemLink
     fullName: WorkItemLink
-    children: []
+    children:
+      - vss-web-extension-sdk.WorkItemLink.rel
+      - vss-web-extension-sdk.WorkItemLink.source
+      - vss-web-extension-sdk.WorkItemLink.target
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.WorkItemLink.rel
+    name: rel
+    fullName: rel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.WorkItemLink.source
+    name: source
+    fullName: source
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.WorkItemReference
+  - uid: vss-web-extension-sdk.WorkItemLink.target
+    name: target
+    fullName: target
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.WorkItemReference

@@ -3,8 +3,75 @@ items:
   - uid: vss-web-extension-sdk.TaskAgentPoolReference
     name: TaskAgentPoolReference
     fullName: TaskAgentPoolReference
-    children: []
+    children:
+      - vss-web-extension-sdk.TaskAgentPoolReference.id
+      - vss-web-extension-sdk.TaskAgentPoolReference.isHosted
+      - vss-web-extension-sdk.TaskAgentPoolReference.name
+      - vss-web-extension-sdk.TaskAgentPoolReference.poolType
+      - vss-web-extension-sdk.TaskAgentPoolReference.scope
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.TaskAgentPoolReference.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.TaskAgentPoolReference.isHosted
+    name: isHosted
+    fullName: isHosted
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets a value indicating whether or not this pool is managed by the
+      service.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.TaskAgentPoolReference.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentPoolReference.poolType
+    name: poolType
+    fullName: poolType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets or sets the type of the pool
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.TaskAgentPoolReference.scope
+    name: scope
+    fullName: scope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string

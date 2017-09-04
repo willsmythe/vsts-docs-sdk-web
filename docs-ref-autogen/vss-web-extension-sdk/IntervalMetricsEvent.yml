@@ -4,19 +4,38 @@ items:
     name: IntervalMetricsEvent
     fullName: IntervalMetricsEvent
     children:
+      - vss-web-extension-sdk.IntervalMetricsEvent.area
       - vss-web-extension-sdk.IntervalMetricsEvent.begin
       - vss-web-extension-sdk.IntervalMetricsEvent.close
       - vss-web-extension-sdk.IntervalMetricsEvent.closeThis
+      - vss-web-extension-sdk.IntervalMetricsEvent.elapsedTime
       - vss-web-extension-sdk.IntervalMetricsEvent.end
+      - vss-web-extension-sdk.IntervalMetricsEvent.feature
       - vss-web-extension-sdk.IntervalMetricsEvent.constructor
+      - vss-web-extension-sdk.IntervalMetricsEvent.isClosed
       - vss-web-extension-sdk.IntervalMetricsEvent.newInnerMetrics
+      - vss-web-extension-sdk.IntervalMetricsEvent.properties
+      - vss-web-extension-sdk.IntervalMetricsEvent.publishOnClose
       - vss-web-extension-sdk.IntervalMetricsEvent.setValue
+      - vss-web-extension-sdk.IntervalMetricsEvent.startTime
     langs:
       - typeScript
     type: class
     summary: >-
       Provides an easy-to-use tracking object for sending customer intelligence
       telemetries
+  - uid: vss-web-extension-sdk.IntervalMetricsEvent.area
+    name: area
+    fullName: area
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.IntervalMetricsEvent.begin
     name: begin()
     children: []
@@ -62,6 +81,18 @@ items:
         type:
           - Q.Promise
     type: method
+  - uid: vss-web-extension-sdk.IntervalMetricsEvent.elapsedTime
+    name: elapsedTime
+    fullName: elapsedTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
   - uid: vss-web-extension-sdk.IntervalMetricsEvent.end
     name: end()
     children: []
@@ -77,6 +108,18 @@ items:
         type:
           - number
     type: method
+  - uid: vss-web-extension-sdk.IntervalMetricsEvent.feature
+    name: feature
+    fullName: feature
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.IntervalMetricsEvent.constructor
     name: >-
       IntervalMetricsEvent(area: string, feature: string, publishOnClose:
@@ -106,6 +149,18 @@ items:
         type:
           - vss-web-extension-sdk.IntervalMetricsEvent
     type: constructor
+  - uid: vss-web-extension-sdk.IntervalMetricsEvent.isClosed
+    name: isClosed
+    fullName: isClosed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.IntervalMetricsEvent.newInnerMetrics
     name: 'newInnerMetrics(innerFeature: string)'
     children: []
@@ -123,6 +178,30 @@ items:
         type:
           - vss-web-extension-sdk.IntervalMetricsEvent
     type: method
+  - uid: vss-web-extension-sdk.IntervalMetricsEvent.properties
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IDictionaryStringTo
+  - uid: vss-web-extension-sdk.IntervalMetricsEvent.publishOnClose
+    name: publishOnClose
+    fullName: publishOnClose
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.IntervalMetricsEvent.setValue
     name: 'setValue(key: string, value: T)'
     children: []
@@ -144,3 +223,15 @@ items:
         type:
           - any
     type: method
+  - uid: vss-web-extension-sdk.IntervalMetricsEvent.startTime
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number

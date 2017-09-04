@@ -3,8 +3,77 @@ items:
   - uid: vss-web-extension-sdk.JavascriptFileReference
     name: JavascriptFileReference
     fullName: JavascriptFileReference
-    children: []
+    children:
+      - vss-web-extension-sdk.JavascriptFileReference.fallbackCondition
+      - vss-web-extension-sdk.JavascriptFileReference.fallbackUrl
+      - vss-web-extension-sdk.JavascriptFileReference.identifier
+      - vss-web-extension-sdk.JavascriptFileReference.isCoreModule
+      - vss-web-extension-sdk.JavascriptFileReference.url
     langs:
       - typeScript
     type: interface
     summary: Reference to a javascript file to include on a page
+  - uid: vss-web-extension-sdk.JavascriptFileReference.fallbackCondition
+    name: fallbackCondition
+    fullName: fallbackCondition
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Condition to check in the case that Url lives on a CDN. The fallback
+      script will be included if this check fails.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.JavascriptFileReference.fallbackUrl
+    name: fallbackUrl
+    fullName: fallbackUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Fallback url to use in case Url lives on a CDN
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.JavascriptFileReference.identifier
+    name: identifier
+    fullName: identifier
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Id of the reference (JQuery, JQueryUI, MicrosoftAjax, etc.)'
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.JavascriptFileReference.isCoreModule
+    name: isCoreModule
+    fullName: isCoreModule
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Is this a core javascript file that needs to be included in all child
+      extension frames
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.JavascriptFileReference.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Url of the javascript reference
+    syntax:
+      return:
+        type:
+          - string

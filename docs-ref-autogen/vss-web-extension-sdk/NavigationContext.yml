@@ -3,7 +3,12 @@ items:
   - uid: vss-web-extension-sdk.NavigationContext
     name: NavigationContext
     fullName: NavigationContext
-    children: []
+    children:
+      - vss-web-extension-sdk.NavigationContext.area
+      - vss-web-extension-sdk.NavigationContext.currentAction
+      - vss-web-extension-sdk.NavigationContext.currentController
+      - vss-web-extension-sdk.NavigationContext.currentParameters
+      - vss-web-extension-sdk.NavigationContext.topMostLevel
     langs:
       - typeScript
     type: interface
@@ -12,3 +17,73 @@ items:
       The navigation context content's are generally obtained from the request
       URL. Some context specifiers such as "Account" can be implicit and might
       come from current IVssServiceHost.
+  - uid: vss-web-extension-sdk.NavigationContext.area
+    name: area
+    fullName: area
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A token to show which area the request has been targeted to. By default
+      there are two areas "Admin" and "Api". They can be specified in the URL as
+      _admin and _api respectively.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.NavigationContext.currentAction
+    name: currentAction
+    fullName: currentAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Current action route value
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.NavigationContext.currentController
+    name: currentController
+    fullName: currentController
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Current controller route value
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.NavigationContext.currentParameters
+    name: currentParameters
+    fullName: currentParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Current parameters route value (the path after the controller and action
+      in the url)
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.NavigationContext.topMostLevel
+    name: topMostLevel
+    fullName: topMostLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Flag to show top most navigation context. For example the URL
+      http://server:port/collection/project/_controller/action sets the Project
+      bit while the URL
+      http://server:port/collection/project/_admin/_controller/action sets also
+      sets the area property to Admin.
+    syntax:
+      return:
+        type:
+          - union

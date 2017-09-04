@@ -3,8 +3,90 @@ items:
   - uid: vss-web-extension-sdk.CommentTrackingCriteria
     name: CommentTrackingCriteria
     fullName: CommentTrackingCriteria
-    children: []
+    children:
+      - vss-web-extension-sdk.CommentTrackingCriteria.firstComparingIteration
+      - vss-web-extension-sdk.CommentTrackingCriteria.origLeftFileEnd
+      - vss-web-extension-sdk.CommentTrackingCriteria.origLeftFileStart
+      - vss-web-extension-sdk.CommentTrackingCriteria.origRightFileEnd
+      - vss-web-extension-sdk.CommentTrackingCriteria.origRightFileStart
+      - vss-web-extension-sdk.CommentTrackingCriteria.secondComparingIteration
     langs:
       - typeScript
     type: interface
     summary: Criteria to decide if and how a thread should be tracked
+  - uid: vss-web-extension-sdk.CommentTrackingCriteria.firstComparingIteration
+    name: firstComparingIteration
+    fullName: firstComparingIteration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The first comparing iteration being viewed. Threads will be tracked if
+      this is greater than 0.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.CommentTrackingCriteria.origLeftFileEnd
+    name: origLeftFileEnd
+    fullName: origLeftFileEnd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Original position of last character of the comment in left file.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.CommentPosition
+  - uid: vss-web-extension-sdk.CommentTrackingCriteria.origLeftFileStart
+    name: origLeftFileStart
+    fullName: origLeftFileStart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Original position of first character of the comment in left file.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.CommentPosition
+  - uid: vss-web-extension-sdk.CommentTrackingCriteria.origRightFileEnd
+    name: origRightFileEnd
+    fullName: origRightFileEnd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Original position of last character of the comment in right file.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.CommentPosition
+  - uid: vss-web-extension-sdk.CommentTrackingCriteria.origRightFileStart
+    name: origRightFileStart
+    fullName: origRightFileStart
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Original position of first character of the comment in right file.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.CommentPosition
+  - uid: vss-web-extension-sdk.CommentTrackingCriteria.secondComparingIteration
+    name: secondComparingIteration
+    fullName: secondComparingIteration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The second comparing iteration being viewed. Threads will be tracked if
+      this is greater than 0.
+    syntax:
+      return:
+        type:
+          - number

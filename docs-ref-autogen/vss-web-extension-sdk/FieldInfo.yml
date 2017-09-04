@@ -3,8 +3,60 @@ items:
   - uid: vss-web-extension-sdk.FieldInfo
     name: FieldInfo
     fullName: FieldInfo
-    children: []
+    children:
+      - vss-web-extension-sdk.FieldInfo.displayName
+      - vss-web-extension-sdk.FieldInfo.fieldType
+      - vss-web-extension-sdk.FieldInfo.isIdentity
+      - vss-web-extension-sdk.FieldInfo.referenceName
     langs:
       - typeScript
     type: interface
     summary: Object bag storing the set of permissions relevant to this plan
+  - uid: vss-web-extension-sdk.FieldInfo.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The additional field display name
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.FieldInfo.fieldType
+    name: fieldType
+    fullName: fieldType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The additional field type
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.FieldInfo.isIdentity
+    name: isIdentity
+    fullName: isIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indicates if the field definition is for an identity field.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.FieldInfo.referenceName
+    name: referenceName
+    fullName: referenceName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The additional field reference name
+    syntax:
+      return:
+        type:
+          - string

@@ -3,10 +3,41 @@ items:
   - uid: vss-web-extension-sdk.CustomSettings
     name: CustomSettings
     fullName: CustomSettings
-    children: []
+    children:
+      - vss-web-extension-sdk.CustomSettings.data
+      - vss-web-extension-sdk.CustomSettings.version
     langs:
       - typeScript
     type: interface
     summary: >-
       settings of the widget that encapsulate their serialized data and version
       support.
+  - uid: vss-web-extension-sdk.CustomSettings.data
+    name: data
+    fullName: data
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: the settings data serialized as a string.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CustomSettings.version
+    name: version
+    fullName: version
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      (Optional) version for the settings represented as a semantic version
+      object.
+
+      If none is available, the version defaults to {major:1, minor:0, patch:0}
+      or "1.0.0"
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.SemanticVersion

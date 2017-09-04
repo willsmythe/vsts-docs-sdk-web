@@ -4,12 +4,25 @@ items:
     name: IHostDialogService
     fullName: IHostDialogService
     children:
+      - vss-web-extension-sdk.IHostDialogService.buttons
       - vss-web-extension-sdk.IHostDialogService.openDialog
       - vss-web-extension-sdk.IHostDialogService.openMessageDialog
     langs:
       - typeScript
     type: interface
     summary: Service which manages showing dialogs in the parent frame
+  - uid: vss-web-extension-sdk.IHostDialogService.buttons
+    name: buttons
+    fullName: buttons
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
   - uid: vss-web-extension-sdk.IHostDialogService.openDialog
     name: >-
       openDialog(contributionId: string, dialogOptions: IHostDialogOptions,

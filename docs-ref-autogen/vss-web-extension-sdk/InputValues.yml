@@ -3,10 +3,103 @@ items:
   - uid: vss-web-extension-sdk.InputValues
     name: InputValues
     fullName: InputValues
-    children: []
+    children:
+      - vss-web-extension-sdk.InputValues.defaultValue
+      - vss-web-extension-sdk.InputValues.error
+      - vss-web-extension-sdk.InputValues.inputId
+      - vss-web-extension-sdk.InputValues.isDisabled
+      - vss-web-extension-sdk.InputValues.isLimitedToPossibleValues
+      - vss-web-extension-sdk.InputValues.isReadOnly
+      - vss-web-extension-sdk.InputValues.possibleValues
     langs:
       - typeScript
     type: interface
     summary: >-
       Information about the possible/allowed values for a given subscription
       input
+  - uid: vss-web-extension-sdk.InputValues.defaultValue
+    name: defaultValue
+    fullName: defaultValue
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The default value to use for this input
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.InputValues.error
+    name: error
+    fullName: error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Errors encountered while computing dynamic values.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.InputValuesError
+  - uid: vss-web-extension-sdk.InputValues.inputId
+    name: inputId
+    fullName: inputId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The id of the input
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.InputValues.isDisabled
+    name: isDisabled
+    fullName: isDisabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Should this input be disabled
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.InputValues.isLimitedToPossibleValues
+    name: isLimitedToPossibleValues
+    fullName: isLimitedToPossibleValues
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Should the value be restricted to one of the values in the PossibleValues
+      (True) or are the values in PossibleValues just a suggestion (False)
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.InputValues.isReadOnly
+    name: isReadOnly
+    fullName: isReadOnly
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Should this input be made read-only
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.InputValues.possibleValues
+    name: possibleValues
+    fullName: possibleValues
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Possible values that this input can take
+    syntax:
+      return:
+        type:
+          - union

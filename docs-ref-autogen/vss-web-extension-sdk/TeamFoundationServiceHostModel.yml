@@ -3,10 +3,79 @@ items:
   - uid: vss-web-extension-sdk.TeamFoundationServiceHostModel
     name: TeamFoundationServiceHostModel
     fullName: TeamFoundationServiceHostModel
-    children: []
+    children:
+      - vss-web-extension-sdk.TeamFoundationServiceHostModel.hostType
+      - vss-web-extension-sdk.TeamFoundationServiceHostModel.instanceId
+      - vss-web-extension-sdk.TeamFoundationServiceHostModel.name
+      - vss-web-extension-sdk.TeamFoundationServiceHostModel.relVDir
+      - vss-web-extension-sdk.TeamFoundationServiceHostModel.vDir
     langs:
       - typeScript
     type: interface
     summary: >-
       Data contract to represent a given team foundation service host (account,
       collection, deployment)
+  - uid: vss-web-extension-sdk.TeamFoundationServiceHostModel.hostType
+    name: hostType
+    fullName: hostType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Type of host (deployment, account, collection)'
+    syntax:
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.TeamFoundationServiceHostModel.instanceId
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Unique id of the host (collection id, account id, etc.)'
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TeamFoundationServiceHostModel.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Name of the host (collection name, account name, etc.)'
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TeamFoundationServiceHostModel.relVDir
+    name: relVDir
+    fullName: relVDir
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Path of the service host, relative to the root virtual directory (e.g.
+      DefaultCollection)
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TeamFoundationServiceHostModel.vDir
+    name: vDir
+    fullName: vDir
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Path of the service host relative to the web application root (e.g.
+      /tfs/DefaultCollection)
+    syntax:
+      return:
+        type:
+          - string

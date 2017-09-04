@@ -4,8 +4,13 @@ items:
     name: ProfileHttpClient
     fullName: ProfileHttpClient
     children:
+      - vss-web-extension-sdk.ProfileHttpClient.attributesApiVersion
+      - vss-web-extension-sdk.ProfileHttpClient.authTokenManager
+      - vss-web-extension-sdk.ProfileHttpClient.avatarApiVersion
       - vss-web-extension-sdk.ProfileHttpClient.createProfile
       - vss-web-extension-sdk.ProfileHttpClient.deleteProfileAttribute
+      - vss-web-extension-sdk.ProfileHttpClient.forceOptionsCallForAutoNegotiate
+      - vss-web-extension-sdk.ProfileHttpClient.geoRegionApiVersion
       - vss-web-extension-sdk.ProfileHttpClient.getAvatar
       - vss-web-extension-sdk.ProfileHttpClient.getAvatarPreview
       - vss-web-extension-sdk.ProfileHttpClient.getGeoRegion
@@ -15,21 +20,62 @@ items:
       - vss-web-extension-sdk.ProfileHttpClient.getRegions
       - vss-web-extension-sdk.ProfileHttpClient.getUserDefaults
       - vss-web-extension-sdk.ProfileHttpClient.constructor
+      - vss-web-extension-sdk.ProfileHttpClient.profilesApiVersion
       - vss-web-extension-sdk.ProfileHttpClient.refreshUserDefaults
+      - vss-web-extension-sdk.ProfileHttpClient.regionsApiVersion
       - vss-web-extension-sdk.ProfileHttpClient.resetAvatar
+      - vss-web-extension-sdk.ProfileHttpClient.serviceInstanceId
       - vss-web-extension-sdk.ProfileHttpClient.setAvatar
       - vss-web-extension-sdk.ProfileHttpClient.setProfileAttribute
       - vss-web-extension-sdk.ProfileHttpClient.setProfileAttributes
       - vss-web-extension-sdk.ProfileHttpClient.updateProfile
+      - vss-web-extension-sdk.ProfileHttpClient.userDefaultsApiVersion
       - vss-web-extension-sdk.ProfileHttpClient._beginGetLocation
       - vss-web-extension-sdk.ProfileHttpClient._beginRequest
       - vss-web-extension-sdk.ProfileHttpClient._beginRequestWithAjaxResult
       - vss-web-extension-sdk.ProfileHttpClient._issueAjaxRequest
+      - vss-web-extension-sdk.ProfileHttpClient._rootRequestPath
       - vss-web-extension-sdk.ProfileHttpClient._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.ProfileHttpClient.attributesApiVersion
+    name: attributesApiVersion
+    fullName: attributesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ProfileHttpClient.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.ProfileHttpClient.avatarApiVersion
+    name: avatarApiVersion
+    fullName: avatarApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ProfileHttpClient.createProfile
     name: >-
       createProfile(createProfileContext: CreateProfileContext, autoCreate?:
@@ -77,6 +123,30 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ProfileHttpClient.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ProfileHttpClient.geoRegionApiVersion
+    name: geoRegionApiVersion
+    fullName: geoRegionApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ProfileHttpClient.getAvatar
     name: 'getAvatar(id: string, size?: string, format?: string)'
     children: []
@@ -339,6 +409,18 @@ items:
         type:
           - vss-web-extension-sdk.ProfileHttpClient
     type: constructor
+  - uid: vss-web-extension-sdk.ProfileHttpClient.profilesApiVersion
+    name: profilesApiVersion
+    fullName: profilesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ProfileHttpClient.refreshUserDefaults
     name: 'refreshUserDefaults(id: string)'
     children: []
@@ -356,6 +438,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ProfileHttpClient.regionsApiVersion
+    name: regionsApiVersion
+    fullName: regionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ProfileHttpClient.resetAvatar
     name: 'resetAvatar(id: string)'
     children: []
@@ -373,6 +467,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ProfileHttpClient.serviceInstanceId
+    name: serviceInstanceId
+    fullName: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ProfileHttpClient.setAvatar
     name: 'setAvatar(container: any, id: string)'
     children: []
@@ -467,6 +573,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ProfileHttpClient.userDefaultsApiVersion
+    name: userDefaultsApiVersion
+    fullName: userDefaultsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ProfileHttpClient._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
@@ -582,6 +700,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ProfileHttpClient._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ProfileHttpClient._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

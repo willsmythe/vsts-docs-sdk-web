@@ -3,8 +3,65 @@ items:
   - uid: vss-web-extension-sdk.WikiAttachmentChange
     name: WikiAttachmentChange
     fullName: WikiAttachmentChange
-    children: []
+    children:
+      - vss-web-extension-sdk.WikiAttachmentChange.changeType
+      - vss-web-extension-sdk.WikiAttachmentChange.content
+      - vss-web-extension-sdk.WikiAttachmentChange.item
+      - vss-web-extension-sdk.WikiAttachmentChange.overwriteContentIfExisting
     langs:
       - typeScript
     type: interface
     summary: Defines the properties of wiki attachment change.
+  - uid: vss-web-extension-sdk.WikiAttachmentChange.changeType
+    name: changeType
+    fullName: changeType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ChangeType associated with the item in this change.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.WikiAttachmentChange.content
+    name: content
+    fullName: content
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: New content of the item.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.WikiAttachmentChange.item
+    name: item
+    fullName: item
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Item that is subject to this change.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.WikiAttachment
+  - uid: vss-web-extension-sdk.WikiAttachmentChange.overwriteContentIfExisting
+    name: overwriteContentIfExisting
+    fullName: overwriteContentIfExisting
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Defines whether the content of an existing attachment is to be overwriten
+      or not. If true, the content of the attachment is overwritten on an
+      existing attachment. If attachment non-existing, new attachment is
+      created. If false, exception is thrown if an attachment with same name
+      exists.
+    syntax:
+      return:
+        type:
+          - boolean

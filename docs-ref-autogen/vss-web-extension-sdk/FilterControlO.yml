@@ -4,11 +4,17 @@ items:
     name: FilterControlO
     fullName: FilterControlO
     children:
+      - vss-web-extension-sdk.FilterControlO.ADD_CLAUSE_ROW_CLASS
+      - vss-web-extension-sdk.FilterControlO.ADD_REMOVE_CLASS
       - vss-web-extension-sdk.FilterControlO.cancelDelayedFunction
       - vss-web-extension-sdk.FilterControlO.create
       - vss-web-extension-sdk.FilterControlO.createIn
       - vss-web-extension-sdk.FilterControlO.delayExecute
       - vss-web-extension-sdk.FilterControlO.enhance
+      - vss-web-extension-sdk.FilterControlO.ENHANCEMENTS_DATA_KEY
+      - vss-web-extension-sdk.FilterControlO.enhancementTypeName
+      - vss-web-extension-sdk.FilterControlO.ENHANCEMENT_OPTIONPREFIX_KEY
+      - vss-web-extension-sdk.FilterControlO.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.FilterControlO.ensureEnhancement
       - vss-web-extension-sdk.FilterControlO.ensureEnhancements
       - vss-web-extension-sdk.FilterControlO.constructor
@@ -22,13 +28,17 @@ items:
       - vss-web-extension-sdk.FilterControlO.getTypeName
       - vss-web-extension-sdk.FilterControlO.initializeOptions
       - vss-web-extension-sdk.FilterControlO.isDisposed
+      - vss-web-extension-sdk.FilterControlO.optionsPrefix
       - vss-web-extension-sdk.FilterControlO.registerEnhancement
       - vss-web-extension-sdk.FilterControlO.registerJQueryWidget
       - vss-web-extension-sdk.FilterControlO.setAttribute
       - vss-web-extension-sdk.FilterControlO.setEnhancementOptions
       - vss-web-extension-sdk.FilterControlO.setRole
       - vss-web-extension-sdk.FilterControlO._bind
+      - vss-web-extension-sdk.FilterControlO._disposed
+      - vss-web-extension-sdk.FilterControlO._element
       - vss-web-extension-sdk.FilterControlO._enhance
+      - vss-web-extension-sdk.FilterControlO._enhancementOptions
       - vss-web-extension-sdk.FilterControlO._ensureInitialized
       - vss-web-extension-sdk.FilterControlO._fire
       - vss-web-extension-sdk.FilterControlO._fireChange
@@ -39,6 +49,8 @@ items:
       - vss-web-extension-sdk.FilterControlO._getUniqueId
       - vss-web-extension-sdk.FilterControlO._handleFieldNameChanged
       - vss-web-extension-sdk.FilterControlO._handleOperatorChanged
+      - vss-web-extension-sdk.FilterControlO._initialized
+      - vss-web-extension-sdk.FilterControlO._options
       - vss-web-extension-sdk.FilterControlO._setDirty
       - vss-web-extension-sdk.FilterControlO._setElement
       - vss-web-extension-sdk.FilterControlO._setId
@@ -52,6 +64,30 @@ items:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.FilterControlO.ADD_CLAUSE_ROW_CLASS
+    name: ADD_CLAUSE_ROW_CLASS
+    fullName: ADD_CLAUSE_ROW_CLASS
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.FilterControlO.ADD_REMOVE_CLASS
+    name: ADD_REMOVE_CLASS
+    fullName: ADD_REMOVE_CLASS
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.FilterControlO.cancelDelayedFunction
     name: 'cancelDelayedFunction(name: string)'
     children: []
@@ -217,6 +253,54 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.FilterControlO.ENHANCEMENTS_DATA_KEY
+    name: ENHANCEMENTS_DATA_KEY
+    fullName: ENHANCEMENTS_DATA_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.FilterControlO.enhancementTypeName
+    name: enhancementTypeName
+    fullName: enhancementTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.FilterControlO.ENHANCEMENT_OPTIONPREFIX_KEY
+    name: ENHANCEMENT_OPTIONPREFIX_KEY
+    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.FilterControlO.ENHANCEMENT_OPTIONS_KEY
+    name: ENHANCEMENT_OPTIONS_KEY
+    fullName: ENHANCEMENT_OPTIONS_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.FilterControlO.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -450,6 +534,18 @@ items:
         type:
           - boolean
     type: method
+  - uid: vss-web-extension-sdk.FilterControlO.optionsPrefix
+    name: optionsPrefix
+    fullName: optionsPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.FilterControlO.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -635,6 +731,30 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.FilterControlO._disposed
+    name: _disposed
+    fullName: _disposed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.FilterControlO._element
+    name: _element
+    fullName: _element
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
   - uid: vss-web-extension-sdk.FilterControlO._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -650,6 +770,18 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
+  - uid: vss-web-extension-sdk.FilterControlO._enhancementOptions
+    name: _enhancementOptions
+    fullName: _enhancementOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.FilterControlO._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -813,6 +945,30 @@ items:
             The old operator value.
       content: 'function _handleOperatorChanged(clauseInfo: any, oldValue: string)'
     type: method
+  - uid: vss-web-extension-sdk.FilterControlO._initialized
+    name: _initialized
+    fullName: _initialized
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.FilterControlO._options
+    name: _options
+    fullName: _options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - TOptions
   - uid: vss-web-extension-sdk.FilterControlO._setDirty
     name: _setDirty()
     children: []

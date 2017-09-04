@@ -4,17 +4,59 @@ items:
     name: ReleaseHttpClient2
     fullName: ReleaseHttpClient2
     children:
+      - vss-web-extension-sdk.ReleaseHttpClient2.agentartifactsApiVersion
+      - vss-web-extension-sdk.ReleaseHttpClient2.authTokenManager
+      - >-
+        vss-web-extension-sdk.ReleaseHttpClient2.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.ReleaseHttpClient2.getAgentArtifactDefinitions
       - vss-web-extension-sdk.ReleaseHttpClient2.constructor
+      - vss-web-extension-sdk.ReleaseHttpClient2.serviceInstanceId
       - vss-web-extension-sdk.ReleaseHttpClient2._beginGetLocation
       - vss-web-extension-sdk.ReleaseHttpClient2._beginRequest
       - vss-web-extension-sdk.ReleaseHttpClient2._beginRequestWithAjaxResult
       - vss-web-extension-sdk.ReleaseHttpClient2._issueAjaxRequest
+      - vss-web-extension-sdk.ReleaseHttpClient2._rootRequestPath
       - vss-web-extension-sdk.ReleaseHttpClient2._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.ReleaseHttpClient2.agentartifactsApiVersion
+    name: agentartifactsApiVersion
+    fullName: agentartifactsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReleaseHttpClient2.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.ReleaseHttpClient2.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.ReleaseHttpClient2.getAgentArtifactDefinitions
     name: 'getAgentArtifactDefinitions(project: string, releaseId: number)'
     children: []
@@ -62,6 +104,18 @@ items:
         type:
           - vss-web-extension-sdk.ReleaseHttpClient2
     type: constructor
+  - uid: vss-web-extension-sdk.ReleaseHttpClient2.serviceInstanceId
+    name: serviceInstanceId
+    fullName: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ReleaseHttpClient2._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
@@ -177,6 +231,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.ReleaseHttpClient2._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ReleaseHttpClient2._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

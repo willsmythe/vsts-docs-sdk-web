@@ -4,18 +4,48 @@ items:
     name: OperationsHttpClient2_3
     fullName: OperationsHttpClient2_3
     children:
+      - vss-web-extension-sdk.OperationsHttpClient2_3.authTokenManager
+      - >-
+        vss-web-extension-sdk.OperationsHttpClient2_3.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.OperationsHttpClient2_3.getOperation
+      - vss-web-extension-sdk.OperationsHttpClient2_3.operationsApiVersion
       - vss-web-extension-sdk.OperationsHttpClient2_3.constructor
       - vss-web-extension-sdk.OperationsHttpClient2_3._beginGetLocation
       - vss-web-extension-sdk.OperationsHttpClient2_3._beginRequest
       - >-
         vss-web-extension-sdk.OperationsHttpClient2_3._beginRequestWithAjaxResult
       - vss-web-extension-sdk.OperationsHttpClient2_3._issueAjaxRequest
+      - vss-web-extension-sdk.OperationsHttpClient2_3._rootRequestPath
       - vss-web-extension-sdk.OperationsHttpClient2_3._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.OperationsHttpClient2_3.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: >-
+      vss-web-extension-sdk.OperationsHttpClient2_3.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.OperationsHttpClient2_3.getOperation
     name: 'getOperation(operationId: string)'
     children: []
@@ -33,6 +63,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.OperationsHttpClient2_3.operationsApiVersion
+    name: operationsApiVersion
+    fullName: operationsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.OperationsHttpClient2_3.constructor
     name: >-
       OperationsHttpClient2_3(rootRequestPath: string, options?:
@@ -174,6 +216,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.OperationsHttpClient2_3._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.OperationsHttpClient2_3._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

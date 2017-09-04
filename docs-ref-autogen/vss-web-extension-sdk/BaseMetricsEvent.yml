@@ -4,15 +4,32 @@ items:
     name: BaseMetricsEvent
     fullName: BaseMetricsEvent
     children:
+      - vss-web-extension-sdk.BaseMetricsEvent.area
       - vss-web-extension-sdk.BaseMetricsEvent.constructor
       - vss-web-extension-sdk.BaseMetricsEvent.close
       - vss-web-extension-sdk.BaseMetricsEvent.closeThis
+      - vss-web-extension-sdk.BaseMetricsEvent.feature
+      - vss-web-extension-sdk.BaseMetricsEvent.isClosed
       - vss-web-extension-sdk.BaseMetricsEvent.newInnerMetrics
+      - vss-web-extension-sdk.BaseMetricsEvent.properties
+      - vss-web-extension-sdk.BaseMetricsEvent.publishOnClose
       - vss-web-extension-sdk.BaseMetricsEvent.setValue
     langs:
       - typeScript
     type: class
     summary: Base metrics event
+  - uid: vss-web-extension-sdk.BaseMetricsEvent.area
+    name: area
+    fullName: area
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.BaseMetricsEvent.constructor
     name: 'BaseMetricsEvent(area: string, feature: string, publishOnClose: boolean)'
     children: []
@@ -72,6 +89,30 @@ items:
         type:
           - Q.Promise
     type: method
+  - uid: vss-web-extension-sdk.BaseMetricsEvent.feature
+    name: feature
+    fullName: feature
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BaseMetricsEvent.isClosed
+    name: isClosed
+    fullName: isClosed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.BaseMetricsEvent.newInnerMetrics
     name: 'newInnerMetrics(feature: string)'
     children: []
@@ -89,6 +130,30 @@ items:
         type:
           - T
     type: method
+  - uid: vss-web-extension-sdk.BaseMetricsEvent.properties
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IDictionaryStringTo
+  - uid: vss-web-extension-sdk.BaseMetricsEvent.publishOnClose
+    name: publishOnClose
+    fullName: publishOnClose
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.BaseMetricsEvent.setValue
     name: 'setValue(key: string, value: T)'
     children: []

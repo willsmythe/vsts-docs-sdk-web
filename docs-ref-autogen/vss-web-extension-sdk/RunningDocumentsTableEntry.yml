@@ -3,8 +3,34 @@ items:
   - uid: vss-web-extension-sdk.RunningDocumentsTableEntry
     name: RunningDocumentsTableEntry
     fullName: RunningDocumentsTableEntry
-    children: []
+    children:
+      - vss-web-extension-sdk.RunningDocumentsTableEntry.document
+      - vss-web-extension-sdk.RunningDocumentsTableEntry.moniker
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.RunningDocumentsTableEntry.document
+    name: document
+    fullName: document
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.RunningDocument
+  - uid: vss-web-extension-sdk.RunningDocumentsTableEntry.moniker
+    name: moniker
+    fullName: moniker
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string

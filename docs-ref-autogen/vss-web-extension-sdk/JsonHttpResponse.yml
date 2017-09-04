@@ -3,8 +3,47 @@ items:
   - uid: vss-web-extension-sdk.JsonHttpResponse
     name: JsonHttpResponse
     fullName: JsonHttpResponse
-    children: []
+    children:
+      - vss-web-extension-sdk.JsonHttpResponse.body
+      - vss-web-extension-sdk.JsonHttpResponse.code
+      - vss-web-extension-sdk.JsonHttpResponse.headers
     langs:
       - typeScript
     type: interface
     summary: Interface for the Json response message
+  - uid: vss-web-extension-sdk.JsonHttpResponse.body
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Request body.
+    syntax:
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.JsonHttpResponse.code
+    name: code
+    fullName: code
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Response code.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.JsonHttpResponse.headers
+    name: headers
+    fullName: headers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Dictionary of the headers to passed along.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IDictionaryStringTo

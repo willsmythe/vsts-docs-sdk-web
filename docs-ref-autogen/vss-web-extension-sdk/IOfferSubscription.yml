@@ -3,8 +3,284 @@ items:
   - uid: vss-web-extension-sdk.IOfferSubscription
     name: IOfferSubscription
     fullName: IOfferSubscription
-    children: []
+    children:
+      - vss-web-extension-sdk.IOfferSubscription.autoAssignOnAccess
+      - vss-web-extension-sdk.IOfferSubscription.azureSubscriptionId
+      - vss-web-extension-sdk.IOfferSubscription.azureSubscriptionName
+      - vss-web-extension-sdk.IOfferSubscription.azureSubscriptionState
+      - vss-web-extension-sdk.IOfferSubscription.committedQuantity
+      - vss-web-extension-sdk.IOfferSubscription.disabledReason
+      - vss-web-extension-sdk.IOfferSubscription.disabledResourceActionLink
+      - vss-web-extension-sdk.IOfferSubscription.includedQuantity
+      - vss-web-extension-sdk.IOfferSubscription.isPaidBillingEnabled
+      - vss-web-extension-sdk.IOfferSubscription.isPreview
+      - vss-web-extension-sdk.IOfferSubscription.isPurchaseCanceled
+      - vss-web-extension-sdk.IOfferSubscription.isPurchasedDuringTrial
+      - vss-web-extension-sdk.IOfferSubscription.isTrialOrPreview
+      - vss-web-extension-sdk.IOfferSubscription.isUseable
+      - vss-web-extension-sdk.IOfferSubscription.maximumQuantity
+      - vss-web-extension-sdk.IOfferSubscription.offerMeter
+      - vss-web-extension-sdk.IOfferSubscription.renewalGroup
+      - vss-web-extension-sdk.IOfferSubscription.resetDate
+      - vss-web-extension-sdk.IOfferSubscription.startDate
+      - vss-web-extension-sdk.IOfferSubscription.trialExpiryDate
     langs:
       - typeScript
     type: interface
     summary: Information about a resource associated with a subscription.
+  - uid: vss-web-extension-sdk.IOfferSubscription.autoAssignOnAccess
+    name: autoAssignOnAccess
+    fullName: autoAssignOnAccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Indicates whether users get auto assigned this license type duing first
+      access.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IOfferSubscription.azureSubscriptionId
+    name: azureSubscriptionId
+    fullName: azureSubscriptionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The azure subscription id
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IOfferSubscription.azureSubscriptionName
+    name: azureSubscriptionName
+    fullName: azureSubscriptionName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The azure subscription name
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IOfferSubscription.azureSubscriptionState
+    name: azureSubscriptionState
+    fullName: azureSubscriptionState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The azure subscription state
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IOfferSubscription.committedQuantity
+    name: committedQuantity
+    fullName: committedQuantity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Quantity commited by the user, when resources is commitment based.'
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.IOfferSubscription.disabledReason
+    name: disabledReason
+    fullName: disabledReason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A enumeration value indicating why the resource was disabled.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IOfferSubscription.disabledResourceActionLink
+    name: disabledResourceActionLink
+    fullName: disabledResourceActionLink
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uri pointing to user action on a disabled resource. It is based on  value.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IOfferSubscription.includedQuantity
+    name: includedQuantity
+    fullName: includedQuantity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Quantity included for free.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.IOfferSubscription.isPaidBillingEnabled
+    name: isPaidBillingEnabled
+    fullName: isPaidBillingEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Returns true if paid billing is enabled on the resource. Returns false for
+      non-azure subscriptions, disabled azure subscriptions or explicitly
+      disabled by user
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IOfferSubscription.isPreview
+    name: isPreview
+    fullName: isPreview
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets or sets a value indicating whether this instance is in preview.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IOfferSubscription.isPurchaseCanceled
+    name: isPurchaseCanceled
+    fullName: isPurchaseCanceled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets the value indicating whether the puchase is canceled.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IOfferSubscription.isPurchasedDuringTrial
+    name: isPurchasedDuringTrial
+    fullName: isPurchasedDuringTrial
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets the value indicating whether current meter was purchased while the
+      meter is still in trial
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IOfferSubscription.isTrialOrPreview
+    name: isTrialOrPreview
+    fullName: isTrialOrPreview
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets or sets a value indicating whether this instance is trial or preview.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IOfferSubscription.isUseable
+    name: isUseable
+    fullName: isUseable
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Returns true if resource is can be used otherwise returns false. can be
+      used to identify why resource is disabled.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IOfferSubscription.maximumQuantity
+    name: maximumQuantity
+    fullName: maximumQuantity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Returns an integer representing the maximum quantity that can be billed
+      for this resource. Any usage submitted over this number is automatically
+      excluded from being sent to azure.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.IOfferSubscription.offerMeter
+    name: offerMeter
+    fullName: offerMeter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets the name of this resource.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.OfferMeter
+  - uid: vss-web-extension-sdk.IOfferSubscription.renewalGroup
+    name: renewalGroup
+    fullName: renewalGroup
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets the renewal group.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IOfferSubscription.resetDate
+    name: resetDate
+    fullName: resetDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Returns a Date of UTC kind indicating when the next reset of quantities is
+      going to happen. On this day at UTC 2:00 AM is when the reset will occur.
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.IOfferSubscription.startDate
+    name: startDate
+    fullName: startDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets the start date for this resource. First install date in any
+      state.
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.IOfferSubscription.trialExpiryDate
+    name: trialExpiryDate
+    fullName: trialExpiryDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets or sets the trial expiry date.
+    syntax:
+      return:
+        type:
+          - Date

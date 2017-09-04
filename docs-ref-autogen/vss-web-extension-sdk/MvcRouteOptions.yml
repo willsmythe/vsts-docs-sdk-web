@@ -3,8 +3,142 @@ items:
   - uid: vss-web-extension-sdk.MvcRouteOptions
     name: MvcRouteOptions
     fullName: MvcRouteOptions
-    children: []
+    children:
+      - vss-web-extension-sdk.MvcRouteOptions.action
+      - vss-web-extension-sdk.MvcRouteOptions.area
+      - vss-web-extension-sdk.MvcRouteOptions.controller
+      - vss-web-extension-sdk.MvcRouteOptions.level
+      - vss-web-extension-sdk.MvcRouteOptions.parameters
+      - vss-web-extension-sdk.MvcRouteOptions.project
+      - vss-web-extension-sdk.MvcRouteOptions.queryParams
+      - vss-web-extension-sdk.MvcRouteOptions.serviceInstanceId
+      - vss-web-extension-sdk.MvcRouteOptions.team
+      - vss-web-extension-sdk.MvcRouteOptions.webContext
     langs:
       - typeScript
     type: interface
     summary: Options for generating MVC urls
+  - uid: vss-web-extension-sdk.MvcRouteOptions.action
+    name: action
+    fullName: action
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Controller action
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.MvcRouteOptions.area
+    name: area
+    fullName: area
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Route Area (e.g. "admin") or null/undefined for the default
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.MvcRouteOptions.controller
+    name: controller
+    fullName: controller
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: MVC controller name
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.MvcRouteOptions.level
+    name: level
+    fullName: level
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Navigation level at which to generate the url (Deployment, Account,
+      Collection, Project, Team)
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.MvcRouteOptions.parameters
+    name: parameters
+    fullName: parameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Array of parameters (path parts) to append to the path (after controller
+      and action)
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.MvcRouteOptions.project
+    name: project
+    fullName: project
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Override the project in the web context
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.MvcRouteOptions.queryParams
+    name: queryParams
+    fullName: queryParams
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Query parameters to add to the url
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IDictionaryStringTo
+  - uid: vss-web-extension-sdk.MvcRouteOptions.serviceInstanceId
+    name: serviceInstanceId
+    fullName: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Unique id of the service to generate the url for
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.MvcRouteOptions.team
+    name: team
+    fullName: team
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Override the team in the web context
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.MvcRouteOptions.webContext
+    name: webContext
+    fullName: webContext
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specific web context to use when generating the url
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.WebContext

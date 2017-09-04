@@ -3,8 +3,34 @@ items:
   - uid: vss-web-extension-sdk.ChangedIdentities
     name: ChangedIdentities
     fullName: ChangedIdentities
-    children: []
+    children:
+      - vss-web-extension-sdk.ChangedIdentities.identities
+      - vss-web-extension-sdk.ChangedIdentities.sequenceContext
     langs:
       - typeScript
     type: interface
     summary: Container class for changed identities
+  - uid: vss-web-extension-sdk.ChangedIdentities.identities
+    name: identities
+    fullName: identities
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Changed Identities
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ChangedIdentities.sequenceContext
+    name: sequenceContext
+    fullName: sequenceContext
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Last Identity SequenceId
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ChangedIdentitiesContext

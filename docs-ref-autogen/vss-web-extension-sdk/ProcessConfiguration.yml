@@ -3,8 +3,86 @@ items:
   - uid: vss-web-extension-sdk.ProcessConfiguration
     name: ProcessConfiguration
     fullName: ProcessConfiguration
-    children: []
+    children:
+      - vss-web-extension-sdk.ProcessConfiguration.bugWorkItems
+      - vss-web-extension-sdk.ProcessConfiguration.portfolioBacklogs
+      - vss-web-extension-sdk.ProcessConfiguration.requirementBacklog
+      - vss-web-extension-sdk.ProcessConfiguration.taskBacklog
+      - vss-web-extension-sdk.ProcessConfiguration.typeFields
+      - vss-web-extension-sdk.ProcessConfiguration.url
     langs:
       - typeScript
     type: interface
     summary: Process Configurations for the project
+  - uid: vss-web-extension-sdk.ProcessConfiguration.bugWorkItems
+    name: bugWorkItems
+    fullName: bugWorkItems
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Details about bug work items
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.CategoryConfiguration
+  - uid: vss-web-extension-sdk.ProcessConfiguration.portfolioBacklogs
+    name: portfolioBacklogs
+    fullName: portfolioBacklogs
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Details about portfolio backlogs
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ProcessConfiguration.requirementBacklog
+    name: requirementBacklog
+    fullName: requirementBacklog
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Details of requirement backlog
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.CategoryConfiguration
+  - uid: vss-web-extension-sdk.ProcessConfiguration.taskBacklog
+    name: taskBacklog
+    fullName: taskBacklog
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Details of task backlog
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.CategoryConfiguration
+  - uid: vss-web-extension-sdk.ProcessConfiguration.typeFields
+    name: typeFields
+    fullName: typeFields
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Type fields for the process configuration
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ProcessConfiguration.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string

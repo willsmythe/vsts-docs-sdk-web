@@ -4,6 +4,8 @@ items:
     name: CoreHttpClient3_1
     fullName: CoreHttpClient3_1
     children:
+      - vss-web-extension-sdk.CoreHttpClient3_1.authTokenManager
+      - vss-web-extension-sdk.CoreHttpClient3_1.connectedServicesApiVersion
       - vss-web-extension-sdk.CoreHttpClient3_1.constructor
       - vss-web-extension-sdk.CoreHttpClient3_1.createConnectedService
       - vss-web-extension-sdk.CoreHttpClient3_1.createIdentityMru
@@ -12,6 +14,7 @@ items:
       - vss-web-extension-sdk.CoreHttpClient3_1.deleteIdentityMru
       - vss-web-extension-sdk.CoreHttpClient3_1.deleteProxy
       - vss-web-extension-sdk.CoreHttpClient3_1.deleteTeam
+      - vss-web-extension-sdk.CoreHttpClient3_1.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.CoreHttpClient3_1.getConnectedServiceDetails
       - vss-web-extension-sdk.CoreHttpClient3_1.getConnectedServices
       - vss-web-extension-sdk.CoreHttpClient3_1.getIdentityMru
@@ -26,8 +29,16 @@ items:
       - vss-web-extension-sdk.CoreHttpClient3_1.getTeam
       - vss-web-extension-sdk.CoreHttpClient3_1.getTeamMembers
       - vss-web-extension-sdk.CoreHttpClient3_1.getTeams
+      - vss-web-extension-sdk.CoreHttpClient3_1.identityMruApiVersion
+      - vss-web-extension-sdk.CoreHttpClient3_1.membersApiVersion
+      - vss-web-extension-sdk.CoreHttpClient3_1.processesApiVersion
+      - vss-web-extension-sdk.CoreHttpClient3_1.projectCollectionsApiVersion
+      - vss-web-extension-sdk.CoreHttpClient3_1.projectsApiVersion
+      - vss-web-extension-sdk.CoreHttpClient3_1.proxiesApiVersion
       - vss-web-extension-sdk.CoreHttpClient3_1.queueCreateProject
       - vss-web-extension-sdk.CoreHttpClient3_1.queueDeleteProject
+      - vss-web-extension-sdk.CoreHttpClient3_1.serviceInstanceId
+      - vss-web-extension-sdk.CoreHttpClient3_1.teamsApiVersion
       - vss-web-extension-sdk.CoreHttpClient3_1.updateIdentityMru
       - vss-web-extension-sdk.CoreHttpClient3_1.updateProject
       - vss-web-extension-sdk.CoreHttpClient3_1.updateTeam
@@ -35,11 +46,36 @@ items:
       - vss-web-extension-sdk.CoreHttpClient3_1._beginRequest
       - vss-web-extension-sdk.CoreHttpClient3_1._beginRequestWithAjaxResult
       - vss-web-extension-sdk.CoreHttpClient3_1._issueAjaxRequest
+      - vss-web-extension-sdk.CoreHttpClient3_1._rootRequestPath
       - vss-web-extension-sdk.CoreHttpClient3_1._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.CoreHttpClient3_1.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.CoreHttpClient3_1.connectedServicesApiVersion
+    name: connectedServicesApiVersion
+    fullName: connectedServicesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.CoreHttpClient3_1.constructor
     name: >-
       CoreHttpClient3_1(rootRequestPath: string, options?:
@@ -218,6 +254,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.CoreHttpClient3_1.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.CoreHttpClient3_1.getConnectedServiceDetails
     name: 'getConnectedServiceDetails(projectId: string, name: string)'
     children: []
@@ -541,6 +589,78 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.CoreHttpClient3_1.identityMruApiVersion
+    name: identityMruApiVersion
+    fullName: identityMruApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CoreHttpClient3_1.membersApiVersion
+    name: membersApiVersion
+    fullName: membersApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CoreHttpClient3_1.processesApiVersion
+    name: processesApiVersion
+    fullName: processesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CoreHttpClient3_1.projectCollectionsApiVersion
+    name: projectCollectionsApiVersion
+    fullName: projectCollectionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CoreHttpClient3_1.projectsApiVersion
+    name: projectsApiVersion
+    fullName: projectsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CoreHttpClient3_1.proxiesApiVersion
+    name: proxiesApiVersion
+    fullName: proxiesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.CoreHttpClient3_1.queueCreateProject
     name: 'queueCreateProject(projectToCreate: TeamProject)'
     children: []
@@ -575,6 +695,30 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.CoreHttpClient3_1.serviceInstanceId
+    name: serviceInstanceId
+    fullName: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CoreHttpClient3_1.teamsApiVersion
+    name: teamsApiVersion
+    fullName: teamsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.CoreHttpClient3_1.updateIdentityMru
     name: 'updateIdentityMru(mruData: IdentityData, mruName: string)'
     children: []
@@ -761,6 +905,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.CoreHttpClient3_1._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.CoreHttpClient3_1._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

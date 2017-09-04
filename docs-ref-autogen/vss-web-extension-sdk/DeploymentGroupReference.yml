@@ -3,8 +3,60 @@ items:
   - uid: vss-web-extension-sdk.DeploymentGroupReference
     name: DeploymentGroupReference
     fullName: DeploymentGroupReference
-    children: []
+    children:
+      - vss-web-extension-sdk.DeploymentGroupReference.id
+      - vss-web-extension-sdk.DeploymentGroupReference.name
+      - vss-web-extension-sdk.DeploymentGroupReference.pool
+      - vss-web-extension-sdk.DeploymentGroupReference.project
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.DeploymentGroupReference.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.DeploymentGroupReference.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.DeploymentGroupReference.pool
+    name: pool
+    fullName: pool
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.TaskAgentPoolReference
+  - uid: vss-web-extension-sdk.DeploymentGroupReference.project
+    name: project
+    fullName: project
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ProjectReference

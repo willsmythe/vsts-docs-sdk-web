@@ -4,18 +4,33 @@ items:
     name: ErrorHandler
     fullName: ErrorHandler
     children:
+      - vss-web-extension-sdk.ErrorHandler.$error
       - vss-web-extension-sdk.ErrorHandler.attachErrorPublisher
       - vss-web-extension-sdk.ErrorHandler.detachErrorPublisher
       - vss-web-extension-sdk.ErrorHandler.constructor
       - vss-web-extension-sdk.ErrorHandler.exists
       - vss-web-extension-sdk.ErrorHandler.hideError
+      - vss-web-extension-sdk.ErrorHandler.ignoreRejectedPromiseTag
       - vss-web-extension-sdk.ErrorHandler.initialize
       - vss-web-extension-sdk.ErrorHandler.show
       - vss-web-extension-sdk.ErrorHandler.showError
+      - vss-web-extension-sdk.ErrorHandler.visible
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.ErrorHandler.$error
+    name: $error
+    fullName: $error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
   - uid: vss-web-extension-sdk.ErrorHandler.attachErrorPublisher
     name: 'attachErrorPublisher(errorPublisher: errorPublisher)'
     children: []
@@ -80,6 +95,18 @@ items:
       parameters: []
       content: function hideError()
     type: method
+  - uid: vss-web-extension-sdk.ErrorHandler.ignoreRejectedPromiseTag
+    name: ignoreRejectedPromiseTag
+    fullName: ignoreRejectedPromiseTag
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ErrorHandler.initialize
     name: initialize()
     children: []
@@ -132,3 +159,15 @@ items:
         function showError(message: string, status?: string, stackTrace?:
         string)
     type: method
+  - uid: vss-web-extension-sdk.ErrorHandler.visible
+    name: visible
+    fullName: visible
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean

@@ -3,8 +3,47 @@ items:
   - uid: vss-web-extension-sdk.ReleaseDefinitionSummary
     name: ReleaseDefinitionSummary
     fullName: ReleaseDefinitionSummary
-    children: []
+    children:
+      - vss-web-extension-sdk.ReleaseDefinitionSummary.environments
+      - vss-web-extension-sdk.ReleaseDefinitionSummary.releaseDefinition
+      - vss-web-extension-sdk.ReleaseDefinitionSummary.releases
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.ReleaseDefinitionSummary.environments
+    name: environments
+    fullName: environments
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ReleaseDefinitionSummary.releaseDefinition
+    name: releaseDefinition
+    fullName: releaseDefinition
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ReleaseDefinitionShallowReference
+  - uid: vss-web-extension-sdk.ReleaseDefinitionSummary.releases
+    name: releases
+    fullName: releases
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union

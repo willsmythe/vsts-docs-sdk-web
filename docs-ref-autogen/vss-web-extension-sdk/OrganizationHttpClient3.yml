@@ -4,11 +4,17 @@ items:
     name: OrganizationHttpClient3
     fullName: OrganizationHttpClient3
     children:
+      - vss-web-extension-sdk.OrganizationHttpClient3.authTokenManager
+      - >-
+        vss-web-extension-sdk.OrganizationHttpClient3.collectionPropertiesApiVersion
+      - vss-web-extension-sdk.OrganizationHttpClient3.collectionsApiVersion
       - vss-web-extension-sdk.OrganizationHttpClient3.createCollection
       - vss-web-extension-sdk.OrganizationHttpClient3.createOrganization
       - vss-web-extension-sdk.OrganizationHttpClient3.deleteCollection
       - >-
         vss-web-extension-sdk.OrganizationHttpClient3.exportOrganizationMigrationBlob
+      - >-
+        vss-web-extension-sdk.OrganizationHttpClient3.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.OrganizationHttpClient3.getCollection
       - vss-web-extension-sdk.OrganizationHttpClient3.getCollections
       - vss-web-extension-sdk.OrganizationHttpClient3.getOrganization
@@ -17,7 +23,14 @@ items:
       - >-
         vss-web-extension-sdk.OrganizationHttpClient3.importOrganizationMigrationBlob
       - vss-web-extension-sdk.OrganizationHttpClient3.constructor
+      - >-
+        vss-web-extension-sdk.OrganizationHttpClient3.organizationMigrationBlobsApiVersion
+      - >-
+        vss-web-extension-sdk.OrganizationHttpClient3.organizationPropertiesApiVersion
+      - vss-web-extension-sdk.OrganizationHttpClient3.organizationsApiVersion
+      - vss-web-extension-sdk.OrganizationHttpClient3.regionsApiVersion
       - vss-web-extension-sdk.OrganizationHttpClient3.restoreCollection
+      - vss-web-extension-sdk.OrganizationHttpClient3.serviceInstanceId
       - vss-web-extension-sdk.OrganizationHttpClient3.updateCollection
       - vss-web-extension-sdk.OrganizationHttpClient3.updateCollectionProperties
       - vss-web-extension-sdk.OrganizationHttpClient3.updateOrganization
@@ -28,11 +41,49 @@ items:
       - >-
         vss-web-extension-sdk.OrganizationHttpClient3._beginRequestWithAjaxResult
       - vss-web-extension-sdk.OrganizationHttpClient3._issueAjaxRequest
+      - vss-web-extension-sdk.OrganizationHttpClient3._rootRequestPath
       - vss-web-extension-sdk.OrganizationHttpClient3._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.OrganizationHttpClient3.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: >-
+      vss-web-extension-sdk.OrganizationHttpClient3.collectionPropertiesApiVersion
+    name: collectionPropertiesApiVersion
+    fullName: collectionPropertiesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.OrganizationHttpClient3.collectionsApiVersion
+    name: collectionsApiVersion
+    fullName: collectionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.OrganizationHttpClient3.createCollection
     name: 'createCollection(resource: Collection)'
     children: []
@@ -102,6 +153,19 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: >-
+      vss-web-extension-sdk.OrganizationHttpClient3.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.OrganizationHttpClient3.getCollection
     name: 'getCollection(collectionId: string, propertyNames?: function)'
     children: []
@@ -250,6 +314,56 @@ items:
         type:
           - vss-web-extension-sdk.OrganizationHttpClient3
     type: constructor
+  - uid: >-
+      vss-web-extension-sdk.OrganizationHttpClient3.organizationMigrationBlobsApiVersion
+    name: organizationMigrationBlobsApiVersion
+    fullName: organizationMigrationBlobsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.OrganizationHttpClient3.organizationPropertiesApiVersion
+    name: organizationPropertiesApiVersion
+    fullName: organizationPropertiesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.OrganizationHttpClient3.organizationsApiVersion
+    name: organizationsApiVersion
+    fullName: organizationsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.OrganizationHttpClient3.regionsApiVersion
+    name: regionsApiVersion
+    fullName: regionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.OrganizationHttpClient3.restoreCollection
     name: 'restoreCollection(collectionId: string, collectionName: string)'
     children: []
@@ -271,6 +385,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.OrganizationHttpClient3.serviceInstanceId
+    name: serviceInstanceId
+    fullName: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.OrganizationHttpClient3.updateCollection
     name: 'updateCollection(patchDocument: JsonPatchDocument, collectionId: string)'
     children: []
@@ -484,6 +610,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.OrganizationHttpClient3._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.OrganizationHttpClient3._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

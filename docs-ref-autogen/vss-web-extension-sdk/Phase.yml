@@ -3,8 +3,131 @@ items:
   - uid: vss-web-extension-sdk.Phase
     name: Phase
     fullName: Phase
-    children: []
+    children:
+      - vss-web-extension-sdk.Phase.condition
+      - vss-web-extension-sdk.Phase.dependencies
+      - vss-web-extension-sdk.Phase.jobAuthorizationScope
+      - vss-web-extension-sdk.Phase.jobCancelTimeoutInMinutes
+      - vss-web-extension-sdk.Phase.jobTimeoutInMinutes
+      - vss-web-extension-sdk.Phase.name
+      - vss-web-extension-sdk.Phase.steps
+      - vss-web-extension-sdk.Phase.target
+      - vss-web-extension-sdk.Phase.variables
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.Phase.condition
+    name: condition
+    fullName: condition
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Phase.dependencies
+    name: dependencies
+    fullName: dependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.Phase.jobAuthorizationScope
+    name: jobAuthorizationScope
+    fullName: jobAuthorizationScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets the job authorization scope for builds which are queued
+      against this definition
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.Phase.jobCancelTimeoutInMinutes
+    name: jobCancelTimeoutInMinutes
+    fullName: jobCancelTimeoutInMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets the job cancel timeout in minutes for builds which are
+      cancelled by user for this definition
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.Phase.jobTimeoutInMinutes
+    name: jobTimeoutInMinutes
+    fullName: jobTimeoutInMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets the job execution timeout in minutes for builds which are
+      queued against this definition
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.Phase.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The name of the phase.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Phase.steps
+    name: steps
+    fullName: steps
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.Phase.target
+    name: target
+    fullName: target
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.PhaseTarget
+  - uid: vss-web-extension-sdk.Phase.variables
+    name: variables
+    fullName: variables
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union

@@ -3,8 +3,34 @@ items:
   - uid: vss-web-extension-sdk.Metric
     name: Metric
     fullName: Metric
-    children: []
+    children:
+      - vss-web-extension-sdk.Metric.name
+      - vss-web-extension-sdk.Metric.value
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.Metric.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Metric.value
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number

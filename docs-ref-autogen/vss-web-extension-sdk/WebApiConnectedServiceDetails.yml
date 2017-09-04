@@ -3,8 +3,77 @@ items:
   - uid: vss-web-extension-sdk.WebApiConnectedServiceDetails
     name: WebApiConnectedServiceDetails
     fullName: WebApiConnectedServiceDetails
-    children: []
+    children:
+      - >-
+        vss-web-extension-sdk.WebApiConnectedServiceDetails.connectedServiceMetaData
+      - vss-web-extension-sdk.WebApiConnectedServiceDetails.credentialsXml
+      - vss-web-extension-sdk.WebApiConnectedServiceDetails.endPoint
+      - vss-web-extension-sdk.WebApiConnectedServiceDetails.id
+      - vss-web-extension-sdk.WebApiConnectedServiceDetails.url
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: >-
+      vss-web-extension-sdk.WebApiConnectedServiceDetails.connectedServiceMetaData
+    name: connectedServiceMetaData
+    fullName: connectedServiceMetaData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Meta data for service connection
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.WebApiConnectedService
+  - uid: vss-web-extension-sdk.WebApiConnectedServiceDetails.credentialsXml
+    name: credentialsXml
+    fullName: credentialsXml
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Credential info
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.WebApiConnectedServiceDetails.endPoint
+    name: endPoint
+    fullName: endPoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Optional uri to connect directly to the service such as
+      https://windows.azure.com
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.WebApiConnectedServiceDetails.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.WebApiConnectedServiceDetails.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string

@@ -4,6 +4,11 @@ items:
     name: SettingsHttpClient
     fullName: SettingsHttpClient
     children:
+      - vss-web-extension-sdk.SettingsHttpClient.authTokenManager
+      - vss-web-extension-sdk.SettingsHttpClient.entriesApiVersion
+      - vss-web-extension-sdk.SettingsHttpClient.entriesApiVersion_cd006711
+      - >-
+        vss-web-extension-sdk.SettingsHttpClient.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.SettingsHttpClient.getEntries
       - vss-web-extension-sdk.SettingsHttpClient.getEntriesForScope
       - vss-web-extension-sdk.SettingsHttpClient.removeEntries
@@ -15,11 +20,60 @@ items:
       - vss-web-extension-sdk.SettingsHttpClient._beginRequest
       - vss-web-extension-sdk.SettingsHttpClient._beginRequestWithAjaxResult
       - vss-web-extension-sdk.SettingsHttpClient._issueAjaxRequest
+      - vss-web-extension-sdk.SettingsHttpClient._rootRequestPath
       - vss-web-extension-sdk.SettingsHttpClient._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.SettingsHttpClient.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.SettingsHttpClient.entriesApiVersion
+    name: entriesApiVersion
+    fullName: entriesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.SettingsHttpClient.entriesApiVersion_cd006711
+    name: entriesApiVersion_cd006711
+    fullName: entriesApiVersion_cd006711
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.SettingsHttpClient.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.SettingsHttpClient.getEntries
     name: 'getEntries(userScope: string, key?: string)'
     children: []
@@ -339,6 +393,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.SettingsHttpClient._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.SettingsHttpClient._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

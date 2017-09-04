@@ -3,8 +3,222 @@ items:
   - uid: vss-web-extension-sdk.GitQueryCommitsCriteria
     name: GitQueryCommitsCriteria
     fullName: GitQueryCommitsCriteria
-    children: []
+    children:
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.$skip
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.$top
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.author
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.compareVersion
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.excludeDeletes
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.fromCommitId
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.fromDate
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.historyMode
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.ids
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.includeLinks
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.includeWorkItems
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.itemPath
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.itemVersion
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.toCommitId
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.toDate
+      - vss-web-extension-sdk.GitQueryCommitsCriteria.user
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.$skip
+    name: $skip
+    fullName: $skip
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Number of entries to skip
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.$top
+    name: $top
+    fullName: $top
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Maximum number of entries to retrieve
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.author
+    name: author
+    fullName: author
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Alias or display name of the author
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.compareVersion
+    name: compareVersion
+    fullName: compareVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'If provided, the earliest commit in the graph to search'
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.GitVersionDescriptor
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.excludeDeletes
+    name: excludeDeletes
+    fullName: excludeDeletes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'If true, don''t include delete history entries'
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.fromCommitId
+    name: fromCommitId
+    fullName: fromCommitId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'If provided, a lower bound for filtering commits alphabetically'
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.fromDate
+    name: fromDate
+    fullName: fromDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'If provided, only include history entries created after this date (string)'
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.historyMode
+    name: historyMode
+    fullName: historyMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      What Git history mode should be used. This only applies to the search
+      criteria when Ids = null.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.ids
+    name: ids
+    fullName: ids
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If provided, specifies the exact commit ids of the commits to fetch. May
+      not be combined with other parameters.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.includeLinks
+    name: includeLinks
+    fullName: includeLinks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether to include the _links field on the shallow references
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.includeWorkItems
+    name: includeWorkItems
+    fullName: includeWorkItems
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether to include linked work items
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.itemPath
+    name: itemPath
+    fullName: itemPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Path of item to search under
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.itemVersion
+    name: itemVersion
+    fullName: itemVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'If provided, identifies the commit or branch to search'
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.GitVersionDescriptor
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.toCommitId
+    name: toCommitId
+    fullName: toCommitId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'If provided, an upper bound for filtering commits alphabetically'
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.toDate
+    name: toDate
+    fullName: toDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If provided, only include history entries created before this date
+      (string)
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitQueryCommitsCriteria.user
+    name: user
+    fullName: user
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Alias or display name of the committer
+    syntax:
+      return:
+        type:
+          - string

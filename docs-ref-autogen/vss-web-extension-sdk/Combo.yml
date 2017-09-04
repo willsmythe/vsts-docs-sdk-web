@@ -10,6 +10,10 @@ items:
       - vss-web-extension-sdk.Combo.createIn
       - vss-web-extension-sdk.Combo.delayExecute
       - vss-web-extension-sdk.Combo.enhance
+      - vss-web-extension-sdk.Combo.ENHANCEMENTS_DATA_KEY
+      - vss-web-extension-sdk.Combo.enhancementTypeName
+      - vss-web-extension-sdk.Combo.ENHANCEMENT_OPTIONPREFIX_KEY
+      - vss-web-extension-sdk.Combo.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.Combo.ensureEnhancement
       - vss-web-extension-sdk.Combo.ensureEnhancements
       - vss-web-extension-sdk.Combo.fireChangeIfNecessary
@@ -28,8 +32,10 @@ items:
       - vss-web-extension-sdk.Combo.getTypeName
       - vss-web-extension-sdk.Combo.getValue
       - vss-web-extension-sdk.Combo.initializeOptions
+      - vss-web-extension-sdk.Combo.invalidAttribute
       - vss-web-extension-sdk.Combo.isDisposed
       - vss-web-extension-sdk.Combo.isValid
+      - vss-web-extension-sdk.Combo.optionsPrefix
       - vss-web-extension-sdk.Combo.registerEnhancement
       - vss-web-extension-sdk.Combo.registerJQueryWidget
       - vss-web-extension-sdk.Combo.setAttribute
@@ -44,17 +50,25 @@ items:
       - vss-web-extension-sdk.Combo.showDropPopup
       - vss-web-extension-sdk.Combo.toggleDropDown
       - vss-web-extension-sdk.Combo._bind
+      - vss-web-extension-sdk.Combo._blockBlur
+      - vss-web-extension-sdk.Combo._currentText
+      - vss-web-extension-sdk.Combo._disposed
+      - vss-web-extension-sdk.Combo._element
       - vss-web-extension-sdk.Combo._enhance
+      - vss-web-extension-sdk.Combo._enhancementOptions
       - vss-web-extension-sdk.Combo._ensureInitialized
       - vss-web-extension-sdk.Combo._fire
       - vss-web-extension-sdk.Combo._fireChange
       - vss-web-extension-sdk.Combo._getEventNameSpace
       - vss-web-extension-sdk.Combo._getInDomPromise
       - vss-web-extension-sdk.Combo._getUniqueId
+      - vss-web-extension-sdk.Combo._initialized
+      - vss-web-extension-sdk.Combo._input
       - vss-web-extension-sdk.Combo._onInputBlur
       - vss-web-extension-sdk.Combo._onInputClick
       - vss-web-extension-sdk.Combo._onInputFocus
       - vss-web-extension-sdk.Combo._onInputKeyDown
+      - vss-web-extension-sdk.Combo._options
       - vss-web-extension-sdk.Combo._setElement
       - vss-web-extension-sdk.Combo._setId
       - vss-web-extension-sdk.Combo._unbind
@@ -246,6 +260,54 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.Combo.ENHANCEMENTS_DATA_KEY
+    name: ENHANCEMENTS_DATA_KEY
+    fullName: ENHANCEMENTS_DATA_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Combo.enhancementTypeName
+    name: enhancementTypeName
+    fullName: enhancementTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Combo.ENHANCEMENT_OPTIONPREFIX_KEY
+    name: ENHANCEMENT_OPTIONPREFIX_KEY
+    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Combo.ENHANCEMENT_OPTIONS_KEY
+    name: ENHANCEMENT_OPTIONS_KEY
+    fullName: ENHANCEMENT_OPTIONS_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.Combo.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -551,6 +613,18 @@ items:
           optional: true
       content: 'function initializeOptions(options?: any)'
     type: method
+  - uid: vss-web-extension-sdk.Combo.invalidAttribute
+    name: invalidAttribute
+    fullName: invalidAttribute
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.Combo.isDisposed
     name: isDisposed()
     children: []
@@ -577,6 +651,18 @@ items:
         type:
           - Boolean
     type: method
+  - uid: vss-web-extension-sdk.Combo.optionsPrefix
+    name: optionsPrefix
+    fullName: optionsPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.Combo.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -876,6 +962,54 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.Combo._blockBlur
+    name: _blockBlur
+    fullName: _blockBlur
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.Combo._currentText
+    name: _currentText
+    fullName: _currentText
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Combo._disposed
+    name: _disposed
+    fullName: _disposed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.Combo._element
+    name: _element
+    fullName: _element
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
   - uid: vss-web-extension-sdk.Combo._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -891,6 +1025,18 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
+  - uid: vss-web-extension-sdk.Combo._enhancementOptions
+    name: _enhancementOptions
+    fullName: _enhancementOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.Combo._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -993,6 +1139,30 @@ items:
         type:
           - string
     type: method
+  - uid: vss-web-extension-sdk.Combo._initialized
+    name: _initialized
+    fullName: _initialized
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.Combo._input
+    name: _input
+    fullName: _input
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
   - uid: vss-web-extension-sdk.Combo._onInputBlur
     name: '_onInputBlur(e?: JQueryEventObject)'
     children: []
@@ -1065,6 +1235,18 @@ items:
         type:
           - any
     type: method
+  - uid: vss-web-extension-sdk.Combo._options
+    name: _options
+    fullName: _options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IComboOptions
   - uid: vss-web-extension-sdk.Combo._setElement
     name: '_setElement(element: JQuery)'
     children: []

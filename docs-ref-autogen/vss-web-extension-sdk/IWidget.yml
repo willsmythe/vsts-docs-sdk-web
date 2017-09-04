@@ -3,8 +3,108 @@ items:
   - uid: vss-web-extension-sdk.IWidget
     name: IWidget
     fullName: IWidget
-    children: []
+    children:
+      - vss-web-extension-sdk.IWidget.disableWidgetForStakeholders
+      - vss-web-extension-sdk.IWidget.lightbox
+      - vss-web-extension-sdk.IWidget.listen
+      - vss-web-extension-sdk.IWidget.load
+      - vss-web-extension-sdk.IWidget.onDashboardLoaded
+      - vss-web-extension-sdk.IWidget.preload
     langs:
       - typeScript
     type: interface
     summary: All widgets implement this interface
+  - uid: vss-web-extension-sdk.IWidget.disableWidgetForStakeholders
+    name: disableWidgetForStakeholders
+    fullName: disableWidgetForStakeholders
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The framework calls this method to determine if the widget should be
+      disabled for users with stakeholder license
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IWidget.lightbox
+    name: lightbox
+    fullName: lightbox
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Run widget in lightboxed mode
+       @param {WidgetSettings} settings of the widget as available when the widget render is called by the host.
+       @param {LightboxSize} size of the lightbox
+       @returns object wrapped in a promise that encapsulates the success of this operation.
+               when this calls are completed and the experience is done loading.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IWidget.listen
+    name: listen
+    fullName: listen
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Listen to message from host
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IWidget.load
+    name: load
+    fullName: load
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Widgets use the settings provided as well as server side calls to complete
+      their rendering experience.
+       In the future, widgets are expected to provide a loading experience while the calls are being waited to be completed.
+       Until then, the widget host will provide the loading experience
+       @param {WidgetSettings} settings of the widget as available when the widget render is called by the host.
+       @returns object wrapped in a promise that encapsulates the success of this operation.
+               when this calls are completed and the experience is done loading.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IWidget.onDashboardLoaded
+    name: onDashboardLoaded
+    fullName: onDashboardLoaded
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Widgets manage any operations that are not necessary for initial load but
+      are required for the full widget experience.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IWidget.preload
+    name: preload
+    fullName: preload
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      widgets use the settings provided along with the any cached data they may
+      have to paint an interactive state. No network calls should be made by the
+      widget.
+       @param {WidgetSettings} settings of the widget as available when the widget render is called by the host.
+       @returns object wrapped in a promise that encapsulates the success of this operation.
+               when this calls are completed and the experience is done loading.
+    syntax:
+      return:
+        type:
+          - union

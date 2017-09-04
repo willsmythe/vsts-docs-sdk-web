@@ -4,14 +4,24 @@ items:
     name: SecurityHttpClient3_2
     fullName: SecurityHttpClient3_2
     children:
+      - >-
+        vss-web-extension-sdk.SecurityHttpClient3_2.accessControlEntriesApiVersion
+      - vss-web-extension-sdk.SecurityHttpClient3_2.accessControlListsApiVersion
+      - vss-web-extension-sdk.SecurityHttpClient3_2.authTokenManager
+      - >-
+        vss-web-extension-sdk.SecurityHttpClient3_2.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.SecurityHttpClient3_2.hasPermissions
       - vss-web-extension-sdk.SecurityHttpClient3_2.hasPermissionsBatch
+      - >-
+        vss-web-extension-sdk.SecurityHttpClient3_2.permissionEvaluationBatchApiVersion
+      - vss-web-extension-sdk.SecurityHttpClient3_2.permissionsApiVersion
       - vss-web-extension-sdk.SecurityHttpClient3_2.queryAccessControlLists
       - vss-web-extension-sdk.SecurityHttpClient3_2.querySecurityNamespaces
       - vss-web-extension-sdk.SecurityHttpClient3_2.removeAccessControlEntries
       - vss-web-extension-sdk.SecurityHttpClient3_2.removeAccessControlLists
       - vss-web-extension-sdk.SecurityHttpClient3_2.removePermission
       - vss-web-extension-sdk.SecurityHttpClient3_2.constructor
+      - vss-web-extension-sdk.SecurityHttpClient3_2.securityNamespacesApiVersion
       - vss-web-extension-sdk.SecurityHttpClient3_2.setAccessControlEntries
       - vss-web-extension-sdk.SecurityHttpClient3_2.setAccessControlLists
       - vss-web-extension-sdk.SecurityHttpClient3_2.setInheritFlag
@@ -19,11 +29,61 @@ items:
       - vss-web-extension-sdk.SecurityHttpClient3_2._beginRequest
       - vss-web-extension-sdk.SecurityHttpClient3_2._beginRequestWithAjaxResult
       - vss-web-extension-sdk.SecurityHttpClient3_2._issueAjaxRequest
+      - vss-web-extension-sdk.SecurityHttpClient3_2._rootRequestPath
       - vss-web-extension-sdk.SecurityHttpClient3_2._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_2.accessControlEntriesApiVersion
+    name: accessControlEntriesApiVersion
+    fullName: accessControlEntriesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_2.accessControlListsApiVersion
+    name: accessControlListsApiVersion
+    fullName: accessControlListsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_2.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: >-
+      vss-web-extension-sdk.SecurityHttpClient3_2.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.SecurityHttpClient3_2.hasPermissions
     name: >-
       hasPermissions(securityNamespaceId: string, permissions?: number, tokens?:
@@ -86,6 +146,31 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: >-
+      vss-web-extension-sdk.SecurityHttpClient3_2.permissionEvaluationBatchApiVersion
+    name: permissionEvaluationBatchApiVersion
+    fullName: permissionEvaluationBatchApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_2.permissionsApiVersion
+    name: permissionsApiVersion
+    fullName: permissionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.SecurityHttpClient3_2.queryAccessControlLists
     name: >-
       queryAccessControlLists(securityNamespaceId: string, token?: string,
@@ -276,6 +361,18 @@ items:
         type:
           - vss-web-extension-sdk.SecurityHttpClient3_2
     type: constructor
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_2.securityNamespacesApiVersion
+    name: securityNamespacesApiVersion
+    fullName: securityNamespacesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.SecurityHttpClient3_2.setAccessControlEntries
     name: 'setAccessControlEntries(container: any, securityNamespaceId: string)'
     children: []
@@ -460,6 +557,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_2._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.SecurityHttpClient3_2._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

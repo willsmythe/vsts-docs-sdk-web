@@ -3,8 +3,90 @@ items:
   - uid: vss-web-extension-sdk.ExtensionCategory
     name: ExtensionCategory
     fullName: ExtensionCategory
-    children: []
+    children:
+      - vss-web-extension-sdk.ExtensionCategory.associatedProducts
+      - vss-web-extension-sdk.ExtensionCategory.categoryId
+      - vss-web-extension-sdk.ExtensionCategory.categoryName
+      - vss-web-extension-sdk.ExtensionCategory.language
+      - vss-web-extension-sdk.ExtensionCategory.languageTitles
+      - vss-web-extension-sdk.ExtensionCategory.parentCategoryName
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.ExtensionCategory.associatedProducts
+    name: associatedProducts
+    fullName: associatedProducts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The name of the products with which this category is associated to.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ExtensionCategory.categoryId
+    name: categoryId
+    fullName: categoryId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.ExtensionCategory.categoryName
+    name: categoryName
+    fullName: categoryName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: This is the internal name for a category
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtensionCategory.language
+    name: language
+    fullName: language
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This parameter is obsolete. Refer to LanguageTitles for langauge specific
+      titles
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtensionCategory.languageTitles
+    name: languageTitles
+    fullName: languageTitles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The list of all the titles of this category in various languages
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ExtensionCategory.parentCategoryName
+    name: parentCategoryName
+    fullName: parentCategoryName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This is the internal name of the parent if this is associated with a
+      parent
+    syntax:
+      return:
+        type:
+          - string

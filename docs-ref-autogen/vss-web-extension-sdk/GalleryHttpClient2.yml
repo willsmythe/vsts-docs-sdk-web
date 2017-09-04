@@ -4,12 +4,25 @@ items:
     name: GalleryHttpClient2
     fullName: GalleryHttpClient2
     children:
+      - vss-web-extension-sdk.GalleryHttpClient2.accountsApiVersion
+      - vss-web-extension-sdk.GalleryHttpClient2.accountsbynameApiVersion
+      - vss-web-extension-sdk.GalleryHttpClient2.assetbynameApiVersion
+      - vss-web-extension-sdk.GalleryHttpClient2.assetsApiVersion
+      - vss-web-extension-sdk.GalleryHttpClient2.authTokenManager
+      - vss-web-extension-sdk.GalleryHttpClient2.categoriesApiVersion
+      - vss-web-extension-sdk.GalleryHttpClient2.categoriesApiVersion_e0a5a71e
+      - vss-web-extension-sdk.GalleryHttpClient2.certificatesApiVersion
       - vss-web-extension-sdk.GalleryHttpClient2.createExtension
       - vss-web-extension-sdk.GalleryHttpClient2.createExtensionWithPublisher
       - vss-web-extension-sdk.GalleryHttpClient2.createPublisher
       - vss-web-extension-sdk.GalleryHttpClient2.deleteExtension
       - vss-web-extension-sdk.GalleryHttpClient2.deleteExtensionById
       - vss-web-extension-sdk.GalleryHttpClient2.deletePublisher
+      - vss-web-extension-sdk.GalleryHttpClient2.extensionqueryApiVersion
+      - vss-web-extension-sdk.GalleryHttpClient2.extensionsApiVersion
+      - vss-web-extension-sdk.GalleryHttpClient2.extensionsApiVersion_a41192c8
+      - >-
+        vss-web-extension-sdk.GalleryHttpClient2.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.GalleryHttpClient2.constructor
       - vss-web-extension-sdk.GalleryHttpClient2.generateKey
       - vss-web-extension-sdk.GalleryHttpClient2.getAsset
@@ -23,10 +36,16 @@ items:
       - vss-web-extension-sdk.GalleryHttpClient2.getPackage
       - vss-web-extension-sdk.GalleryHttpClient2.getPublisher
       - vss-web-extension-sdk.GalleryHttpClient2.getSigningKey
+      - vss-web-extension-sdk.GalleryHttpClient2.packageApiVersion
+      - vss-web-extension-sdk.GalleryHttpClient2.privateassetApiVersion
+      - vss-web-extension-sdk.GalleryHttpClient2.publisherqueryApiVersion
+      - vss-web-extension-sdk.GalleryHttpClient2.publishersApiVersion
       - vss-web-extension-sdk.GalleryHttpClient2.queryExtensions
       - vss-web-extension-sdk.GalleryHttpClient2.queryPublishers
+      - vss-web-extension-sdk.GalleryHttpClient2.serviceInstanceId
       - vss-web-extension-sdk.GalleryHttpClient2.shareExtension
       - vss-web-extension-sdk.GalleryHttpClient2.shareExtensionById
+      - vss-web-extension-sdk.GalleryHttpClient2.signingkeyApiVersion
       - vss-web-extension-sdk.GalleryHttpClient2.unshareExtension
       - vss-web-extension-sdk.GalleryHttpClient2.unshareExtensionById
       - vss-web-extension-sdk.GalleryHttpClient2.updateExtension
@@ -37,11 +56,108 @@ items:
       - vss-web-extension-sdk.GalleryHttpClient2._beginRequest
       - vss-web-extension-sdk.GalleryHttpClient2._beginRequestWithAjaxResult
       - vss-web-extension-sdk.GalleryHttpClient2._issueAjaxRequest
+      - vss-web-extension-sdk.GalleryHttpClient2._rootRequestPath
       - vss-web-extension-sdk.GalleryHttpClient2._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.accountsApiVersion
+    name: accountsApiVersion
+    fullName: accountsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.accountsbynameApiVersion
+    name: accountsbynameApiVersion
+    fullName: accountsbynameApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.assetbynameApiVersion
+    name: assetbynameApiVersion
+    fullName: assetbynameApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.assetsApiVersion
+    name: assetsApiVersion
+    fullName: assetsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.categoriesApiVersion
+    name: categoriesApiVersion
+    fullName: categoriesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.categoriesApiVersion_e0a5a71e
+    name: categoriesApiVersion_e0a5a71e
+    fullName: categoriesApiVersion_e0a5a71e
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.certificatesApiVersion
+    name: certificatesApiVersion
+    fullName: certificatesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GalleryHttpClient2.createExtension
     name: 'createExtension(extensionPackage: ExtensionPackage)'
     children: []
@@ -170,6 +286,54 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.extensionqueryApiVersion
+    name: extensionqueryApiVersion
+    fullName: extensionqueryApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.extensionsApiVersion
+    name: extensionsApiVersion
+    fullName: extensionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.extensionsApiVersion_a41192c8
+    name: extensionsApiVersion_a41192c8
+    fullName: extensionsApiVersion_a41192c8
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.GalleryHttpClient2.constructor
     name: >-
       GalleryHttpClient2(rootRequestPath: string, options?:
@@ -577,6 +741,54 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.packageApiVersion
+    name: packageApiVersion
+    fullName: packageApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.privateassetApiVersion
+    name: privateassetApiVersion
+    fullName: privateassetApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.publisherqueryApiVersion
+    name: publisherqueryApiVersion
+    fullName: publisherqueryApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.publishersApiVersion
+    name: publishersApiVersion
+    fullName: publishersApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GalleryHttpClient2.queryExtensions
     name: 'queryExtensions(extensionQuery: ExtensionQuery, accountToken?: string)'
     children: []
@@ -618,6 +830,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.serviceInstanceId
+    name: serviceInstanceId
+    fullName: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GalleryHttpClient2.shareExtension
     name: >-
       shareExtension(publisherName: string, extensionName: string, accountName:
@@ -668,6 +892,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GalleryHttpClient2.signingkeyApiVersion
+    name: signingkeyApiVersion
+    fullName: signingkeyApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GalleryHttpClient2.unshareExtension
     name: >-
       unshareExtension(publisherName: string, extensionName: string,
@@ -937,6 +1173,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GalleryHttpClient2._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GalleryHttpClient2._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

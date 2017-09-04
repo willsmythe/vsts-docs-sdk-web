@@ -3,10 +3,70 @@ items:
   - uid: vss-web-extension-sdk.AccessControlEntry
     name: AccessControlEntry
     fullName: AccessControlEntry
-    children: []
+    children:
+      - vss-web-extension-sdk.AccessControlEntry.allow
+      - vss-web-extension-sdk.AccessControlEntry.deny
+      - vss-web-extension-sdk.AccessControlEntry.descriptor
+      - vss-web-extension-sdk.AccessControlEntry.extendedInfo
     langs:
       - typeScript
     type: interface
     summary: >-
       Class for encapsulating the allowed and denied permissions for a given
       IdentityDescriptor.
+  - uid: vss-web-extension-sdk.AccessControlEntry.allow
+    name: allow
+    fullName: allow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The set of permission bits that represent the actions that the associated
+      descriptor is allowed to perform.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.AccessControlEntry.deny
+    name: deny
+    fullName: deny
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The set of permission bits that represent the actions that the associated
+      descriptor is not allowed to perform.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.AccessControlEntry.descriptor
+    name: descriptor
+    fullName: descriptor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The descriptor for the user this AccessControlEntry applies to.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IdentityDescriptor
+  - uid: vss-web-extension-sdk.AccessControlEntry.extendedInfo
+    name: extendedInfo
+    fullName: extendedInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This value, when set, reports the inherited and effective information for
+      the associated descriptor. This value is only set on AccessControlEntries
+      returned by the QueryAccessControlList(s) call when its
+      includeExtendedInfo parameter is set to true.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.AceExtendedInformation

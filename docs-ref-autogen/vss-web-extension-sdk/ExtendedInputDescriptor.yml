@@ -3,8 +3,319 @@ items:
   - uid: vss-web-extension-sdk.ExtendedInputDescriptor
     name: ExtendedInputDescriptor
     fullName: ExtendedInputDescriptor
-    children: []
+    children:
+      - vss-web-extension-sdk.ExtendedInputDescriptor.deleteCallbacks
+      - vss-web-extension-sdk.ExtendedInputDescriptor.dependencies
+      - >-
+        vss-web-extension-sdk.ExtendedInputDescriptor.dependenciesSatisfiedCallbacks
+      - vss-web-extension-sdk.ExtendedInputDescriptor.dependencyInputIds
+      - vss-web-extension-sdk.ExtendedInputDescriptor.description
+      - vss-web-extension-sdk.ExtendedInputDescriptor.groupName
+      - vss-web-extension-sdk.ExtendedInputDescriptor.hasDynamicValueInformation
+      - vss-web-extension-sdk.ExtendedInputDescriptor.hideUntilSatisfied
+      - vss-web-extension-sdk.ExtendedInputDescriptor.id
+      - vss-web-extension-sdk.ExtendedInputDescriptor.inputMode
+      - vss-web-extension-sdk.ExtendedInputDescriptor.isConfidential
+      - vss-web-extension-sdk.ExtendedInputDescriptor.isDeletable
+      - vss-web-extension-sdk.ExtendedInputDescriptor.name
+      - >-
+        vss-web-extension-sdk.ExtendedInputDescriptor.noInvalidateOnDependencyChange
+      - vss-web-extension-sdk.ExtendedInputDescriptor.noValidIcon
+      - vss-web-extension-sdk.ExtendedInputDescriptor.properties
+      - vss-web-extension-sdk.ExtendedInputDescriptor.type
+      - vss-web-extension-sdk.ExtendedInputDescriptor.useInDefaultDescription
+      - vss-web-extension-sdk.ExtendedInputDescriptor.validation
+      - vss-web-extension-sdk.ExtendedInputDescriptor.valueChangedCallbacks
+      - vss-web-extension-sdk.ExtendedInputDescriptor.valueHint
+      - vss-web-extension-sdk.ExtendedInputDescriptor.values
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.deleteCallbacks
+    name: deleteCallbacks
+    fullName: deleteCallbacks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A list of functions to be called when this input is deleted.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.dependencies
+    name: dependencies
+    fullName: dependencies
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A list of functions, all of which must return true for this input to be
+      considered valid
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.ExtendedInputDescriptor.dependenciesSatisfiedCallbacks
+    name: dependenciesSatisfiedCallbacks
+    fullName: dependenciesSatisfiedCallbacks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A list of functions to be called when the state of all dependencies of
+      this input being satisfied changes.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.dependencyInputIds
+    name: dependencyInputIds
+    fullName: dependencyInputIds
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The ids of all inputs that the value of this input is dependent on.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Description of what this input is used for
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.groupName
+    name: groupName
+    fullName: groupName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The group localized name to which this input belongs and can be shown as a
+      header for the container that will include all the inputs in the group.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.hasDynamicValueInformation
+    name: hasDynamicValueInformation
+    fullName: hasDynamicValueInformation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If true, the value information for this input is dynamic and should be
+      fetched when the value of dependency inputs change.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.hideUntilSatisfied
+    name: hideUntilSatisfied
+    fullName: hideUntilSatisfied
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets whether this input should be invisible until all of its dependencies
+      are satisfied or not.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Identifier for the subscription input
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.inputMode
+    name: inputMode
+    fullName: inputMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Mode in which the value of this input should be entered
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.isConfidential
+    name: isConfidential
+    fullName: isConfidential
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets whether this input is confidential, such as for a password or
+      application key
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.isDeletable
+    name: isDeletable
+    fullName: isDeletable
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets whether this input is deletable.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Localized name which can be shown as a label for the subscription input
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.ExtendedInputDescriptor.noInvalidateOnDependencyChange
+    name: noInvalidateOnDependencyChange
+    fullName: noInvalidateOnDependencyChange
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets whether this input should be invalidated when one of its dependency's
+      value changes or not.
+
+      Odd name is due to the fact that the default should be to invalidate
+      (based on FormInput_Contracts.InputDescriptor).
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.noValidIcon
+    name: noValidIcon
+    fullName: noValidIcon
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets whether or not to display the valid icon for this input.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.properties
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Custom properties for the input which can be used by the service provider
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Underlying data type for the input value. When this value is specified,
+      InputMode, Validation and Values are optional.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.useInDefaultDescription
+    name: useInDefaultDescription
+    fullName: useInDefaultDescription
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets whether this input is included in the default generated action
+      description.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.validation
+    name: validation
+    fullName: validation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Information to use to validate this input's value
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ExtendedInputValidation
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.valueChangedCallbacks
+    name: valueChangedCallbacks
+    fullName: valueChangedCallbacks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A list of functions to be called when the value of this input is changed.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.valueHint
+    name: valueHint
+    fullName: valueHint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A hint for input value. It can be used in the UI as the input placeholder.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtendedInputDescriptor.values
+    name: values
+    fullName: values
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Information about possible values for this input
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.InputValues

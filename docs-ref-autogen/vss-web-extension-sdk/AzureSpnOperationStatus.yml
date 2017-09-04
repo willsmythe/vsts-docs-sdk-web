@@ -3,8 +3,34 @@ items:
   - uid: vss-web-extension-sdk.AzureSpnOperationStatus
     name: AzureSpnOperationStatus
     fullName: AzureSpnOperationStatus
-    children: []
+    children:
+      - vss-web-extension-sdk.AzureSpnOperationStatus.state
+      - vss-web-extension-sdk.AzureSpnOperationStatus.statusMessage
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.AzureSpnOperationStatus.state
+    name: state
+    fullName: state
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.AzureSpnOperationStatus.statusMessage
+    name: statusMessage
+    fullName: statusMessage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string

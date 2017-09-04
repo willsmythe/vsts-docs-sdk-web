@@ -5,13 +5,18 @@ items:
     fullName: GraphHttpClient3_2
     children:
       - vss-web-extension-sdk.GraphHttpClient3_2.addMembership
+      - vss-web-extension-sdk.GraphHttpClient3_2.authTokenManager
+      - vss-web-extension-sdk.GraphHttpClient3_2.cachepoliciesApiVersion
       - vss-web-extension-sdk.GraphHttpClient3_2.checkMembershipExistence
       - vss-web-extension-sdk.GraphHttpClient3_2.createGroup
       - vss-web-extension-sdk.GraphHttpClient3_2.createUser
       - vss-web-extension-sdk.GraphHttpClient3_2.deleteGroup
       - vss-web-extension-sdk.GraphHttpClient3_2.deleteUser
+      - vss-web-extension-sdk.GraphHttpClient3_2.descriptorsApiVersion
       - vss-web-extension-sdk.GraphHttpClient3_2.findGroupsBySearchFactor
       - vss-web-extension-sdk.GraphHttpClient3_2.findUsersBySearchFactor
+      - >-
+        vss-web-extension-sdk.GraphHttpClient3_2.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.GraphHttpClient3_2.getDescriptor
       - vss-web-extension-sdk.GraphHttpClient3_2.getGroup
       - vss-web-extension-sdk.GraphHttpClient3_2.getGroups
@@ -21,14 +26,33 @@ items:
       - vss-web-extension-sdk.GraphHttpClient3_2.getStorageKey
       - vss-web-extension-sdk.GraphHttpClient3_2.getUser
       - vss-web-extension-sdk.GraphHttpClient3_2.getUsers
+      - >-
+        vss-web-extension-sdk.GraphHttpClient3_2.graphGlobalExtendedPropertyBatchApiVersion
       - vss-web-extension-sdk.GraphHttpClient3_2.constructor
+      - vss-web-extension-sdk.GraphHttpClient3_2.groupsApiVersion
+      - vss-web-extension-sdk.GraphHttpClient3_2.idsApiVersion
       - vss-web-extension-sdk.GraphHttpClient3_2.lookupSubjects
+      - vss-web-extension-sdk.GraphHttpClient3_2.memberlookupApiVersion
+      - vss-web-extension-sdk.GraphHttpClient3_2.membersApiVersion
+      - vss-web-extension-sdk.GraphHttpClient3_2.membersApiVersion_42939f1e
+      - vss-web-extension-sdk.GraphHttpClient3_2.membersApiVersion_8b9ecdb2
+      - vss-web-extension-sdk.GraphHttpClient3_2.membershipsApiVersion
+      - vss-web-extension-sdk.GraphHttpClient3_2.membershipsbatchApiVersion
+      - vss-web-extension-sdk.GraphHttpClient3_2.membershipstatesApiVersion
+      - vss-web-extension-sdk.GraphHttpClient3_2.membershipTraversalsApiVersion
       - vss-web-extension-sdk.GraphHttpClient3_2.removeMembership
+      - vss-web-extension-sdk.GraphHttpClient3_2.scopesApiVersion
+      - vss-web-extension-sdk.GraphHttpClient3_2.shardingstateApiVersion
+      - vss-web-extension-sdk.GraphHttpClient3_2.storagekeysApiVersion
+      - vss-web-extension-sdk.GraphHttpClient3_2.subjectlookupApiVersion
+      - vss-web-extension-sdk.GraphHttpClient3_2.subjectsApiVersion
       - vss-web-extension-sdk.GraphHttpClient3_2.updateGroup
+      - vss-web-extension-sdk.GraphHttpClient3_2.usersApiVersion
       - vss-web-extension-sdk.GraphHttpClient3_2._beginGetLocation
       - vss-web-extension-sdk.GraphHttpClient3_2._beginRequest
       - vss-web-extension-sdk.GraphHttpClient3_2._beginRequestWithAjaxResult
       - vss-web-extension-sdk.GraphHttpClient3_2._issueAjaxRequest
+      - vss-web-extension-sdk.GraphHttpClient3_2._rootRequestPath
       - vss-web-extension-sdk.GraphHttpClient3_2._setInitializationPromise
     langs:
       - typeScript
@@ -61,6 +85,30 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.cachepoliciesApiVersion
+    name: cachepoliciesApiVersion
+    fullName: cachepoliciesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GraphHttpClient3_2.checkMembershipExistence
     name: >-
       checkMembershipExistence(subjectDescriptor: string, containerDescriptor:
@@ -219,6 +267,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.descriptorsApiVersion
+    name: descriptorsApiVersion
+    fullName: descriptorsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GraphHttpClient3_2.findGroupsBySearchFactor
     name: >-
       findGroupsBySearchFactor(searchFactor: function, searchValue?: string,
@@ -295,6 +355,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.GraphHttpClient3_2.getDescriptor
     name: 'getDescriptor(storageKey: string)'
     children: []
@@ -528,6 +600,19 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: >-
+      vss-web-extension-sdk.GraphHttpClient3_2.graphGlobalExtendedPropertyBatchApiVersion
+    name: graphGlobalExtendedPropertyBatchApiVersion
+    fullName: graphGlobalExtendedPropertyBatchApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GraphHttpClient3_2.constructor
     name: >-
       GraphHttpClient3_2(rootRequestPath: string, options?:
@@ -554,6 +639,30 @@ items:
         type:
           - vss-web-extension-sdk.GraphHttpClient3_2
     type: constructor
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.groupsApiVersion
+    name: groupsApiVersion
+    fullName: groupsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.idsApiVersion
+    name: idsApiVersion
+    fullName: idsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GraphHttpClient3_2.lookupSubjects
     name: 'lookupSubjects(subjectLookup: GraphSubjectLookup)'
     children: []
@@ -571,6 +680,102 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.memberlookupApiVersion
+    name: memberlookupApiVersion
+    fullName: memberlookupApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.membersApiVersion
+    name: membersApiVersion
+    fullName: membersApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.membersApiVersion_42939f1e
+    name: membersApiVersion_42939f1e
+    fullName: membersApiVersion_42939f1e
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.membersApiVersion_8b9ecdb2
+    name: membersApiVersion_8b9ecdb2
+    fullName: membersApiVersion_8b9ecdb2
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.membershipsApiVersion
+    name: membershipsApiVersion
+    fullName: membershipsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.membershipsbatchApiVersion
+    name: membershipsbatchApiVersion
+    fullName: membershipsbatchApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.membershipstatesApiVersion
+    name: membershipstatesApiVersion
+    fullName: membershipstatesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.membershipTraversalsApiVersion
+    name: membershipTraversalsApiVersion
+    fullName: membershipTraversalsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GraphHttpClient3_2.removeMembership
     name: 'removeMembership(subjectDescriptor: string, containerDescriptor: string)'
     children: []
@@ -596,6 +801,66 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.scopesApiVersion
+    name: scopesApiVersion
+    fullName: scopesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.shardingstateApiVersion
+    name: shardingstateApiVersion
+    fullName: shardingstateApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.storagekeysApiVersion
+    name: storagekeysApiVersion
+    fullName: storagekeysApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.subjectlookupApiVersion
+    name: subjectlookupApiVersion
+    fullName: subjectlookupApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.subjectsApiVersion
+    name: subjectsApiVersion
+    fullName: subjectsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GraphHttpClient3_2.updateGroup
     name: 'updateGroup(groupDescriptor: string, patchDocument: JsonPatchDocument)'
     children: []
@@ -621,6 +886,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2.usersApiVersion
+    name: usersApiVersion
+    fullName: usersApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GraphHttpClient3_2._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
@@ -736,6 +1013,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GraphHttpClient3_2._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GraphHttpClient3_2._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

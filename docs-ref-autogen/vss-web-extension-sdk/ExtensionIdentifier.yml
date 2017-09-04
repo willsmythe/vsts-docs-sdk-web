@@ -3,10 +3,40 @@ items:
   - uid: vss-web-extension-sdk.ExtensionIdentifier
     name: ExtensionIdentifier
     fullName: ExtensionIdentifier
-    children: []
+    children:
+      - vss-web-extension-sdk.ExtensionIdentifier.extensionName
+      - vss-web-extension-sdk.ExtensionIdentifier.publisherName
     langs:
       - typeScript
     type: interface
     summary: >-
       Represents the component pieces of an extensions fully qualified name,
       along with the fully qualified name.
+  - uid: vss-web-extension-sdk.ExtensionIdentifier.extensionName
+    name: extensionName
+    fullName: extensionName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The ExtensionName component part of the fully qualified
+      ExtensionIdentifier
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtensionIdentifier.publisherName
+    name: publisherName
+    fullName: publisherName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The PublisherName component part of the fully qualified
+      ExtensionIdentifier
+    syntax:
+      return:
+        type:
+          - string

@@ -3,8 +3,47 @@ items:
   - uid: vss-web-extension-sdk.GroupLicensingRule
     name: GroupLicensingRule
     fullName: GroupLicensingRule
-    children: []
+    children:
+      - vss-web-extension-sdk.GroupLicensingRule.extensionRules
+      - vss-web-extension-sdk.GroupLicensingRule.licenseRule
+      - vss-web-extension-sdk.GroupLicensingRule.subjectDescriptor
     langs:
       - typeScript
     type: interface
     summary: Represents a GroupLicensingRule
+  - uid: vss-web-extension-sdk.GroupLicensingRule.extensionRules
+    name: extensionRules
+    fullName: extensionRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Extension Rules
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.GroupLicensingRule.licenseRule
+    name: licenseRule
+    fullName: licenseRule
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: License Rule
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.LicenseRule
+  - uid: vss-web-extension-sdk.GroupLicensingRule.subjectDescriptor
+    name: subjectDescriptor
+    fullName: subjectDescriptor
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: SubjectDescriptor for the rule
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.SubjectDescriptor

@@ -3,10 +3,107 @@ items:
   - uid: vss-web-extension-sdk.ConnectionData
     name: ConnectionData
     fullName: ConnectionData
-    children: []
+    children:
+      - vss-web-extension-sdk.ConnectionData.authenticatedUser
+      - vss-web-extension-sdk.ConnectionData.authorizedUser
+      - vss-web-extension-sdk.ConnectionData.deploymentId
+      - vss-web-extension-sdk.ConnectionData.instanceId
+      - vss-web-extension-sdk.ConnectionData.lastUserAccess
+      - vss-web-extension-sdk.ConnectionData.locationServiceData
+      - vss-web-extension-sdk.ConnectionData.webApplicationRelativeDirectory
     langs:
       - typeScript
     type: interface
     summary: >-
       Data transfer class that holds information needed to set up a connection
       with a VSS server.
+  - uid: vss-web-extension-sdk.ConnectionData.authenticatedUser
+    name: authenticatedUser
+    fullName: authenticatedUser
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The Id of the authenticated user who made this request. More information
+      about the user can be obtained by passing this Id to the Identity service
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.Identity
+  - uid: vss-web-extension-sdk.ConnectionData.authorizedUser
+    name: authorizedUser
+    fullName: authorizedUser
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The Id of the authorized user who made this request. More information
+      about the user can be obtained by passing this Id to the Identity service
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.Identity
+  - uid: vss-web-extension-sdk.ConnectionData.deploymentId
+    name: deploymentId
+    fullName: deploymentId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The id for the server.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ConnectionData.instanceId
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The instance id for this host.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ConnectionData.lastUserAccess
+    name: lastUserAccess
+    fullName: lastUserAccess
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The last user access for this instance.  Null if not requested
+      specifically.
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.ConnectionData.locationServiceData
+    name: locationServiceData
+    fullName: locationServiceData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Data that the location service holds.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.LocationServiceData
+  - uid: vss-web-extension-sdk.ConnectionData.webApplicationRelativeDirectory
+    name: webApplicationRelativeDirectory
+    fullName: webApplicationRelativeDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The virtual directory of the host we are talking to.
+    syntax:
+      return:
+        type:
+          - string

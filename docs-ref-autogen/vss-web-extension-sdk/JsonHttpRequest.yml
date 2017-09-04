@@ -3,8 +3,60 @@ items:
   - uid: vss-web-extension-sdk.JsonHttpRequest
     name: JsonHttpRequest
     fullName: JsonHttpRequest
-    children: []
+    children:
+      - vss-web-extension-sdk.JsonHttpRequest.body
+      - vss-web-extension-sdk.JsonHttpRequest.headers
+      - vss-web-extension-sdk.JsonHttpRequest.method
+      - vss-web-extension-sdk.JsonHttpRequest.uri
     langs:
       - typeScript
     type: interface
     summary: Interface for the Json request message
+  - uid: vss-web-extension-sdk.JsonHttpRequest.body
+    name: body
+    fullName: body
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Request body.
+    syntax:
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.JsonHttpRequest.headers
+    name: headers
+    fullName: headers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Dictionary of the headers to passed along.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IDictionaryStringTo
+  - uid: vss-web-extension-sdk.JsonHttpRequest.method
+    name: method
+    fullName: method
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: HTTP verb.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.JsonHttpRequest.uri
+    name: uri
+    fullName: uri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uri of the resource to be invoked.
+    syntax:
+      return:
+        type:
+          - string

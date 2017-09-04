@@ -4,6 +4,7 @@ items:
     name: ITestActionOwner
     fullName: ITestActionOwner
     children:
+      - vss-web-extension-sdk.ITestActionOwner.actions
       - vss-web-extension-sdk.ITestActionOwner.createTestStep
       - vss-web-extension-sdk.ITestActionOwner.generateXmlFromActions
       - vss-web-extension-sdk.ITestActionOwner.getNextAvailableActionId
@@ -13,6 +14,18 @@ items:
       - typeScript
     type: interface
     summary: Interface for TestActionOwner
+  - uid: vss-web-extension-sdk.ITestActionOwner.actions
+    name: actions
+    fullName: actions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'array of actions: which could be teststep or sharedstep'
+    syntax:
+      return:
+        type:
+          - Array
   - uid: vss-web-extension-sdk.ITestActionOwner.createTestStep
     name: createTestStep()
     children: []

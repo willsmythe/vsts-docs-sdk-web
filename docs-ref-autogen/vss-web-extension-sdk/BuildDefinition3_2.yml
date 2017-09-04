@@ -3,10 +3,484 @@ items:
   - uid: vss-web-extension-sdk.BuildDefinition3_2
     name: BuildDefinition3_2
     fullName: BuildDefinition3_2
-    children: []
+    children:
+      - vss-web-extension-sdk.BuildDefinition3_2.authoredBy
+      - vss-web-extension-sdk.BuildDefinition3_2.badgeEnabled
+      - vss-web-extension-sdk.BuildDefinition3_2.build
+      - vss-web-extension-sdk.BuildDefinition3_2.buildNumberFormat
+      - vss-web-extension-sdk.BuildDefinition3_2.comment
+      - vss-web-extension-sdk.BuildDefinition3_2.createdDate
+      - vss-web-extension-sdk.BuildDefinition3_2.demands
+      - vss-web-extension-sdk.BuildDefinition3_2.description
+      - vss-web-extension-sdk.BuildDefinition3_2.draftOf
+      - vss-web-extension-sdk.BuildDefinition3_2.dropLocation
+      - vss-web-extension-sdk.BuildDefinition3_2.id
+      - vss-web-extension-sdk.BuildDefinition3_2.jobAuthorizationScope
+      - vss-web-extension-sdk.BuildDefinition3_2.jobCancelTimeoutInMinutes
+      - vss-web-extension-sdk.BuildDefinition3_2.jobTimeoutInMinutes
+      - vss-web-extension-sdk.BuildDefinition3_2.latestBuild
+      - vss-web-extension-sdk.BuildDefinition3_2.latestCompletedBuild
+      - vss-web-extension-sdk.BuildDefinition3_2.metrics
+      - vss-web-extension-sdk.BuildDefinition3_2.name
+      - vss-web-extension-sdk.BuildDefinition3_2.options
+      - vss-web-extension-sdk.BuildDefinition3_2.path
+      - vss-web-extension-sdk.BuildDefinition3_2.processParameters
+      - vss-web-extension-sdk.BuildDefinition3_2.project
+      - vss-web-extension-sdk.BuildDefinition3_2.properties
+      - vss-web-extension-sdk.BuildDefinition3_2.quality
+      - vss-web-extension-sdk.BuildDefinition3_2.queue
+      - vss-web-extension-sdk.BuildDefinition3_2.queueStatus
+      - vss-web-extension-sdk.BuildDefinition3_2.repository
+      - vss-web-extension-sdk.BuildDefinition3_2.retentionRules
+      - vss-web-extension-sdk.BuildDefinition3_2.revision
+      - vss-web-extension-sdk.BuildDefinition3_2.tags
+      - vss-web-extension-sdk.BuildDefinition3_2.triggers
+      - vss-web-extension-sdk.BuildDefinition3_2.type
+      - vss-web-extension-sdk.BuildDefinition3_2.uri
+      - vss-web-extension-sdk.BuildDefinition3_2.url
+      - vss-web-extension-sdk.BuildDefinition3_2.variables
+      - vss-web-extension-sdk.BuildDefinition3_2._links
     langs:
       - typeScript
     type: interface
     summary: >-
       For back-compat with extensions that use the old Steps format instead of
       Process and Phases
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.authoredBy
+    name: authoredBy
+    fullName: authoredBy
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The author of the definition.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IdentityRef
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.badgeEnabled
+    name: badgeEnabled
+    fullName: badgeEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indicates whether badges are enabled for this definition
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.build
+    name: build
+    fullName: build
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.buildNumberFormat
+    name: buildNumberFormat
+    fullName: buildNumberFormat
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The build number format
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.comment
+    name: comment
+    fullName: comment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The comment entered when saving the definition
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.createdDate
+    name: createdDate
+    fullName: createdDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The date the definition was created
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.demands
+    name: demands
+    fullName: demands
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The description
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.draftOf
+    name: draftOf
+    fullName: draftOf
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'If this is a draft definition, it might have a parent'
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.DefinitionReference
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.dropLocation
+    name: dropLocation
+    fullName: dropLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The drop location for the definition
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Id of the resource
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.jobAuthorizationScope
+    name: jobAuthorizationScope
+    fullName: jobAuthorizationScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets the job authorization scope for builds which are queued
+      against this definition
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.jobCancelTimeoutInMinutes
+    name: jobCancelTimeoutInMinutes
+    fullName: jobCancelTimeoutInMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets the job cancel timeout in minutes for builds which are
+      cancelled by user for this definition
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.jobTimeoutInMinutes
+    name: jobTimeoutInMinutes
+    fullName: jobTimeoutInMinutes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets the job execution timeout in minutes for builds which are
+      queued against this definition
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.latestBuild
+    name: latestBuild
+    fullName: latestBuild
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.Build
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.latestCompletedBuild
+    name: latestCompletedBuild
+    fullName: latestCompletedBuild
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.Build
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.metrics
+    name: metrics
+    fullName: metrics
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Name of the linked resource (definition name, controller name, etc.)'
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.options
+    name: options
+    fullName: options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.path
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The path this definitions belongs to
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.processParameters
+    name: processParameters
+    fullName: processParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Process Parameters
+    syntax:
+      return:
+        type:
+          - ProcessParameters
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.project
+    name: project
+    fullName: project
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The project.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.TeamProjectReference
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.properties
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.quality
+    name: quality
+    fullName: quality
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'The quality of the definition document (draft, etc.)'
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.queue
+    name: queue
+    fullName: queue
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The default queue which should be used for requests.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.AgentPoolQueue
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.queueStatus
+    name: queueStatus
+    fullName: queueStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: If builds can be queued from this definition
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.repository
+    name: repository
+    fullName: repository
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The repository
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.BuildRepository
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.retentionRules
+    name: retentionRules
+    fullName: retentionRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.revision
+    name: revision
+    fullName: revision
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The definition revision number.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.tags
+    name: tags
+    fullName: tags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.triggers
+    name: triggers
+    fullName: triggers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The type of the definition.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.uri
+    name: uri
+    fullName: uri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The Uri of the definition
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Full http link to the resource
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.BuildDefinition3_2.variables
+    name: variables
+    fullName: variables
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.BuildDefinition3_2._links
+    name: _links
+    fullName: _links
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any

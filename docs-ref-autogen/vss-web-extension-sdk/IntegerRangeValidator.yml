@@ -7,8 +7,13 @@ items:
       - vss-web-extension-sdk.IntegerRangeValidator.cancelDelayedFunction
       - vss-web-extension-sdk.IntegerRangeValidator.delayExecute
       - vss-web-extension-sdk.IntegerRangeValidator.enhance
+      - vss-web-extension-sdk.IntegerRangeValidator.ENHANCEMENTS_DATA_KEY
+      - vss-web-extension-sdk.IntegerRangeValidator.ENHANCEMENT_OPTIONPREFIX_KEY
+      - vss-web-extension-sdk.IntegerRangeValidator.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.IntegerRangeValidator.ensureEnhancement
       - vss-web-extension-sdk.IntegerRangeValidator.ensureEnhancements
+      - vss-web-extension-sdk.IntegerRangeValidator.EVENT_VALIDATE
+      - vss-web-extension-sdk.IntegerRangeValidator.EVENT_VALIDATE_STATUS
       - vss-web-extension-sdk.IntegerRangeValidator.getElement
       - vss-web-extension-sdk.IntegerRangeValidator.getEnhancementOptions
       - vss-web-extension-sdk.IntegerRangeValidator.getId
@@ -18,18 +23,25 @@ items:
       - vss-web-extension-sdk.IntegerRangeValidator.getTypeName
       - vss-web-extension-sdk.IntegerRangeValidator.getTypeName
       - vss-web-extension-sdk.IntegerRangeValidator.initializeOptions
+      - vss-web-extension-sdk.IntegerRangeValidator.instanceId
       - vss-web-extension-sdk.IntegerRangeValidator.constructor
       - vss-web-extension-sdk.IntegerRangeValidator.isDisposed
       - vss-web-extension-sdk.IntegerRangeValidator.isValid
+      - vss-web-extension-sdk.IntegerRangeValidator.optionsPrefix
       - vss-web-extension-sdk.IntegerRangeValidator.registerEnhancement
       - vss-web-extension-sdk.IntegerRangeValidator.registerJQueryWidget
       - vss-web-extension-sdk.IntegerRangeValidator.setEnhancementOptions
       - vss-web-extension-sdk.IntegerRangeValidator._bind
+      - vss-web-extension-sdk.IntegerRangeValidator._disposed
+      - vss-web-extension-sdk.IntegerRangeValidator._element
       - vss-web-extension-sdk.IntegerRangeValidator._enhance
+      - vss-web-extension-sdk.IntegerRangeValidator._enhancementOptions
       - vss-web-extension-sdk.IntegerRangeValidator._ensureInitialized
       - vss-web-extension-sdk.IntegerRangeValidator._fire
       - vss-web-extension-sdk.IntegerRangeValidator._getEventNameSpace
       - vss-web-extension-sdk.IntegerRangeValidator._getUniqueId
+      - vss-web-extension-sdk.IntegerRangeValidator._initialized
+      - vss-web-extension-sdk.IntegerRangeValidator._options
       - vss-web-extension-sdk.IntegerRangeValidator._setElement
       - vss-web-extension-sdk.IntegerRangeValidator._setId
       - vss-web-extension-sdk.IntegerRangeValidator._unbind
@@ -131,6 +143,42 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.ENHANCEMENTS_DATA_KEY
+    name: ENHANCEMENTS_DATA_KEY
+    fullName: ENHANCEMENTS_DATA_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.ENHANCEMENT_OPTIONPREFIX_KEY
+    name: ENHANCEMENT_OPTIONPREFIX_KEY
+    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.ENHANCEMENT_OPTIONS_KEY
+    name: ENHANCEMENT_OPTIONS_KEY
+    fullName: ENHANCEMENT_OPTIONS_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.IntegerRangeValidator.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -188,6 +236,30 @@ items:
         function ensureEnhancements(type?: any, context?: any, errorCallback?:
         any)
     type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.EVENT_VALIDATE
+    name: EVENT_VALIDATE
+    fullName: EVENT_VALIDATE
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.EVENT_VALIDATE_STATUS
+    name: EVENT_VALIDATE_STATUS
+    fullName: EVENT_VALIDATE_STATUS
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.IntegerRangeValidator.getElement
     name: getElement()
     children: []
@@ -336,6 +408,18 @@ items:
           optional: true
       content: 'function initializeOptions(options?: TOptions)'
     type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.instanceId
+    name: instanceId
+    fullName: instanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any
   - uid: vss-web-extension-sdk.IntegerRangeValidator.constructor
     name: 'IntegerRangeValidator(options?: TOptions)'
     children: []
@@ -388,6 +472,18 @@ items:
         type:
           - boolean
     type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.optionsPrefix
+    name: optionsPrefix
+    fullName: optionsPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.IntegerRangeValidator.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -519,6 +615,30 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator._disposed
+    name: _disposed
+    fullName: _disposed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IntegerRangeValidator._element
+    name: _element
+    fullName: _element
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
   - uid: vss-web-extension-sdk.IntegerRangeValidator._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -534,6 +654,18 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator._enhancementOptions
+    name: _enhancementOptions
+    fullName: _enhancementOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.IntegerRangeValidator._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -602,6 +734,30 @@ items:
         type:
           - string
     type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator._initialized
+    name: _initialized
+    fullName: _initialized
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IntegerRangeValidator._options
+    name: _options
+    fullName: _options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - TOptions
   - uid: vss-web-extension-sdk.IntegerRangeValidator._setElement
     name: '_setElement(element: JQuery)'
     children: []

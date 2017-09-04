@@ -3,10 +3,194 @@ items:
   - uid: vss-web-extension-sdk.UsageEvent
     name: UsageEvent
     fullName: UsageEvent
-    children: []
+    children:
+      - vss-web-extension-sdk.UsageEvent.accountId
+      - vss-web-extension-sdk.UsageEvent.accountName
+      - vss-web-extension-sdk.UsageEvent.associatedUser
+      - vss-web-extension-sdk.UsageEvent.billableDate
+      - vss-web-extension-sdk.UsageEvent.eventId
+      - vss-web-extension-sdk.UsageEvent.eventTimestamp
+      - vss-web-extension-sdk.UsageEvent.eventUniqueId
+      - vss-web-extension-sdk.UsageEvent.meterName
+      - vss-web-extension-sdk.UsageEvent.partitionId
+      - vss-web-extension-sdk.UsageEvent.quantity
+      - vss-web-extension-sdk.UsageEvent.resourceBillingMode
+      - vss-web-extension-sdk.UsageEvent.serviceIdentity
+      - vss-web-extension-sdk.UsageEvent.subscriptionAnniversaryDay
+      - vss-web-extension-sdk.UsageEvent.subscriptionId
     langs:
       - typeScript
     type: interface
     summary: >-
       Class that represents common set of properties for a raw usage event
       reported by TFS services.
+  - uid: vss-web-extension-sdk.UsageEvent.accountId
+    name: accountId
+    fullName: accountId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets account id of the event. Note: This is for backward compat
+      with BI.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.UsageEvent.accountName
+    name: accountName
+    fullName: accountName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Account name associated with the usage event
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.UsageEvent.associatedUser
+    name: associatedUser
+    fullName: associatedUser
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: User GUID associated with the usage event
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.UsageEvent.billableDate
+    name: billableDate
+    fullName: billableDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Timestamp when this billing event is billable
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.UsageEvent.eventId
+    name: eventId
+    fullName: eventId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Unique event identifier
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.UsageEvent.eventTimestamp
+    name: eventTimestamp
+    fullName: eventTimestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Recieving Timestamp of the billing event by metering service
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.UsageEvent.eventUniqueId
+    name: eventUniqueId
+    fullName: eventUniqueId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets or sets the event unique identifier.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.UsageEvent.meterName
+    name: meterName
+    fullName: meterName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Meter Id.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.UsageEvent.partitionId
+    name: partitionId
+    fullName: partitionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Partition id of the account
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.UsageEvent.quantity
+    name: quantity
+    fullName: quantity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Quantity of the usage event
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.UsageEvent.resourceBillingMode
+    name: resourceBillingMode
+    fullName: resourceBillingMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets or sets the billing mode for the resource involved in the usage
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.UsageEvent.serviceIdentity
+    name: serviceIdentity
+    fullName: serviceIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Service context GUID associated with the usage event
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.UsageEvent.subscriptionAnniversaryDay
+    name: subscriptionAnniversaryDay
+    fullName: subscriptionAnniversaryDay
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets or sets subscription anniversary day of the subscription
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.UsageEvent.subscriptionId
+    name: subscriptionId
+    fullName: subscriptionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets or sets subscription guid of the associated account of the event
+    syntax:
+      return:
+        type:
+          - string

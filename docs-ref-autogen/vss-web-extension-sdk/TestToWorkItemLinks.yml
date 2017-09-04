@@ -3,8 +3,34 @@ items:
   - uid: vss-web-extension-sdk.TestToWorkItemLinks
     name: TestToWorkItemLinks
     fullName: TestToWorkItemLinks
-    children: []
+    children:
+      - vss-web-extension-sdk.TestToWorkItemLinks.test
+      - vss-web-extension-sdk.TestToWorkItemLinks.workItems
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.TestToWorkItemLinks.test
+    name: test
+    fullName: test
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.TestMethod
+  - uid: vss-web-extension-sdk.TestToWorkItemLinks.workItems
+    name: workItems
+    fullName: workItems
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union

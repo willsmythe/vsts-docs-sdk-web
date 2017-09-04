@@ -3,8 +3,73 @@ items:
   - uid: vss-web-extension-sdk.TeamFieldValues
     name: TeamFieldValues
     fullName: TeamFieldValues
-    children: []
+    children:
+      - vss-web-extension-sdk.TeamFieldValues.defaultValue
+      - vss-web-extension-sdk.TeamFieldValues.field
+      - vss-web-extension-sdk.TeamFieldValues.url
+      - vss-web-extension-sdk.TeamFieldValues.values
+      - vss-web-extension-sdk.TeamFieldValues._links
     langs:
       - typeScript
     type: interface
     summary: Essentially a collection of team field values
+  - uid: vss-web-extension-sdk.TeamFieldValues.defaultValue
+    name: defaultValue
+    fullName: defaultValue
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The default team field value
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TeamFieldValues.field
+    name: field
+    fullName: field
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Shallow ref to the field being used as a team field
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.FieldReference
+  - uid: vss-web-extension-sdk.TeamFieldValues.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Full http link to the resource
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TeamFieldValues.values
+    name: values
+    fullName: values
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Collection of all valid team field values
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.TeamFieldValues._links
+    name: _links
+    fullName: _links
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Collection of links relevant to resource
+    syntax:
+      return:
+        type:
+          - any

@@ -4,6 +4,7 @@ items:
     name: ITestBase
     fullName: ITestBase
     children:
+      - vss-web-extension-sdk.ITestBase.actions
       - vss-web-extension-sdk.ITestBase.createTestStep
       - vss-web-extension-sdk.ITestBase.generateXmlFromActions
       - vss-web-extension-sdk.ITestBase.loadActions
@@ -12,6 +13,18 @@ items:
       - typeScript
     type: interface
     summary: Interface for test base
+  - uid: vss-web-extension-sdk.ITestBase.actions
+    name: actions
+    fullName: actions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'array of actions: which could be teststep or sharedstep'
+    syntax:
+      return:
+        type:
+          - Array
   - uid: vss-web-extension-sdk.ITestBase.createTestStep
     name: createTestStep()
     children: []

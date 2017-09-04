@@ -5,11 +5,15 @@ items:
     fullName: ComboTreeDropPopup
     children:
       - vss-web-extension-sdk.ComboTreeDropPopup.cancelDelayedFunction
+      - vss-web-extension-sdk.ComboTreeDropPopup.combo
       - vss-web-extension-sdk.ComboTreeDropPopup.constructor
       - vss-web-extension-sdk.ComboTreeDropPopup.create
       - vss-web-extension-sdk.ComboTreeDropPopup.createIn
       - vss-web-extension-sdk.ComboTreeDropPopup.delayExecute
       - vss-web-extension-sdk.ComboTreeDropPopup.enhance
+      - vss-web-extension-sdk.ComboTreeDropPopup.ENHANCEMENTS_DATA_KEY
+      - vss-web-extension-sdk.ComboTreeDropPopup.ENHANCEMENT_OPTIONPREFIX_KEY
+      - vss-web-extension-sdk.ComboTreeDropPopup.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.ComboTreeDropPopup.ensureEnhancement
       - vss-web-extension-sdk.ComboTreeDropPopup.ensureEnhancements
       - vss-web-extension-sdk.ComboTreeDropPopup.focus
@@ -23,6 +27,7 @@ items:
       - vss-web-extension-sdk.ComboTreeDropPopup.getTypeName
       - vss-web-extension-sdk.ComboTreeDropPopup.initializeOptions
       - vss-web-extension-sdk.ComboTreeDropPopup.isDisposed
+      - vss-web-extension-sdk.ComboTreeDropPopup.optionsPrefix
       - vss-web-extension-sdk.ComboTreeDropPopup.registerEnhancement
       - vss-web-extension-sdk.ComboTreeDropPopup.registerJQueryWidget
       - vss-web-extension-sdk.ComboTreeDropPopup.selectNext
@@ -31,14 +36,21 @@ items:
       - vss-web-extension-sdk.ComboTreeDropPopup.setEnhancementOptions
       - vss-web-extension-sdk.ComboTreeDropPopup.setRole
       - vss-web-extension-sdk.ComboTreeDropPopup.update
+      - vss-web-extension-sdk.ComboTreeDropPopup.virtualizingListView
       - vss-web-extension-sdk.ComboTreeDropPopup._bind
+      - vss-web-extension-sdk.ComboTreeDropPopup._dataSource
+      - vss-web-extension-sdk.ComboTreeDropPopup._disposed
+      - vss-web-extension-sdk.ComboTreeDropPopup._element
       - vss-web-extension-sdk.ComboTreeDropPopup._enhance
+      - vss-web-extension-sdk.ComboTreeDropPopup._enhancementOptions
       - vss-web-extension-sdk.ComboTreeDropPopup._ensureInitialized
       - vss-web-extension-sdk.ComboTreeDropPopup._fire
       - vss-web-extension-sdk.ComboTreeDropPopup._fireChange
       - vss-web-extension-sdk.ComboTreeDropPopup._getEventNameSpace
       - vss-web-extension-sdk.ComboTreeDropPopup._getInDomPromise
       - vss-web-extension-sdk.ComboTreeDropPopup._getUniqueId
+      - vss-web-extension-sdk.ComboTreeDropPopup._initialized
+      - vss-web-extension-sdk.ComboTreeDropPopup._options
       - vss-web-extension-sdk.ComboTreeDropPopup._setElement
       - vss-web-extension-sdk.ComboTreeDropPopup._setId
       - vss-web-extension-sdk.ComboTreeDropPopup._unbind
@@ -65,6 +77,18 @@ items:
         type:
           - boolean
     type: method
+  - uid: vss-web-extension-sdk.ComboTreeDropPopup.combo
+    name: combo
+    fullName: combo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.Combo
   - uid: vss-web-extension-sdk.ComboTreeDropPopup.constructor
     name: 'ComboTreeDropPopup(options?: any)'
     children: []
@@ -229,6 +253,42 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.ComboTreeDropPopup.ENHANCEMENTS_DATA_KEY
+    name: ENHANCEMENTS_DATA_KEY
+    fullName: ENHANCEMENTS_DATA_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ComboTreeDropPopup.ENHANCEMENT_OPTIONPREFIX_KEY
+    name: ENHANCEMENT_OPTIONPREFIX_KEY
+    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ComboTreeDropPopup.ENHANCEMENT_OPTIONS_KEY
+    name: ENHANCEMENT_OPTIONS_KEY
+    fullName: ENHANCEMENT_OPTIONS_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ComboTreeDropPopup.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -457,6 +517,18 @@ items:
         type:
           - boolean
     type: method
+  - uid: vss-web-extension-sdk.ComboTreeDropPopup.optionsPrefix
+    name: optionsPrefix
+    fullName: optionsPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ComboTreeDropPopup.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -652,6 +724,18 @@ items:
       parameters: []
       content: function update()
     type: method
+  - uid: vss-web-extension-sdk.ComboTreeDropPopup.virtualizingListView
+    name: virtualizingListView
+    fullName: virtualizingListView
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VirtualizingListView
   - uid: vss-web-extension-sdk.ComboTreeDropPopup._bind
     name: '_bind(element?: any, eventType?: any, handler?: any, track?: any)'
     children: []
@@ -688,6 +772,42 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.ComboTreeDropPopup._dataSource
+    name: _dataSource
+    fullName: _dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.BaseDataSource
+  - uid: vss-web-extension-sdk.ComboTreeDropPopup._disposed
+    name: _disposed
+    fullName: _disposed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ComboTreeDropPopup._element
+    name: _element
+    fullName: _element
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
   - uid: vss-web-extension-sdk.ComboTreeDropPopup._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -703,6 +823,18 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
+  - uid: vss-web-extension-sdk.ComboTreeDropPopup._enhancementOptions
+    name: _enhancementOptions
+    fullName: _enhancementOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.ComboTreeDropPopup._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -805,6 +937,30 @@ items:
         type:
           - string
     type: method
+  - uid: vss-web-extension-sdk.ComboTreeDropPopup._initialized
+    name: _initialized
+    fullName: _initialized
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ComboTreeDropPopup._options
+    name: _options
+    fullName: _options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any
   - uid: vss-web-extension-sdk.ComboTreeDropPopup._setElement
     name: '_setElement(element: JQuery)'
     children: []

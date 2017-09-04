@@ -10,6 +10,10 @@ items:
       - vss-web-extension-sdk.PivotFilter.createIn
       - vss-web-extension-sdk.PivotFilter.delayExecute
       - vss-web-extension-sdk.PivotFilter.enhance
+      - vss-web-extension-sdk.PivotFilter.ENHANCEMENTS_DATA_KEY
+      - vss-web-extension-sdk.PivotFilter.enhancementTypeName
+      - vss-web-extension-sdk.PivotFilter.ENHANCEMENT_OPTIONPREFIX_KEY
+      - vss-web-extension-sdk.PivotFilter.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.PivotFilter.ensureEnhancement
       - vss-web-extension-sdk.PivotFilter.ensureEnhancements
       - vss-web-extension-sdk.PivotFilter.focus
@@ -26,6 +30,7 @@ items:
       - vss-web-extension-sdk.PivotFilter.getTypeName
       - vss-web-extension-sdk.PivotFilter.initializeOptions
       - vss-web-extension-sdk.PivotFilter.isDisposed
+      - vss-web-extension-sdk.PivotFilter.optionsPrefix
       - vss-web-extension-sdk.PivotFilter.constructor
       - vss-web-extension-sdk.PivotFilter.registerBehavior
       - vss-web-extension-sdk.PivotFilter.registerEnhancement
@@ -37,13 +42,18 @@ items:
       - vss-web-extension-sdk.PivotFilter.updateItems
       - vss-web-extension-sdk.PivotFilter._bind
       - vss-web-extension-sdk.PivotFilter._createElement
+      - vss-web-extension-sdk.PivotFilter._disposed
+      - vss-web-extension-sdk.PivotFilter._element
       - vss-web-extension-sdk.PivotFilter._enhance
+      - vss-web-extension-sdk.PivotFilter._enhancementOptions
       - vss-web-extension-sdk.PivotFilter._ensureInitialized
       - vss-web-extension-sdk.PivotFilter._fire
       - vss-web-extension-sdk.PivotFilter._fireChange
       - vss-web-extension-sdk.PivotFilter._getEventNameSpace
       - vss-web-extension-sdk.PivotFilter._getInDomPromise
       - vss-web-extension-sdk.PivotFilter._getUniqueId
+      - vss-web-extension-sdk.PivotFilter._initialized
+      - vss-web-extension-sdk.PivotFilter._options
       - vss-web-extension-sdk.PivotFilter._setElement
       - vss-web-extension-sdk.PivotFilter._setId
       - vss-web-extension-sdk.PivotFilter._unbind
@@ -238,6 +248,54 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.PivotFilter.ENHANCEMENTS_DATA_KEY
+    name: ENHANCEMENTS_DATA_KEY
+    fullName: ENHANCEMENTS_DATA_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.PivotFilter.enhancementTypeName
+    name: enhancementTypeName
+    fullName: enhancementTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.PivotFilter.ENHANCEMENT_OPTIONPREFIX_KEY
+    name: ENHANCEMENT_OPTIONPREFIX_KEY
+    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.PivotFilter.ENHANCEMENT_OPTIONS_KEY
+    name: ENHANCEMENT_OPTIONS_KEY
+    fullName: ENHANCEMENT_OPTIONS_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.PivotFilter.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -503,6 +561,18 @@ items:
         type:
           - boolean
     type: method
+  - uid: vss-web-extension-sdk.PivotFilter.optionsPrefix
+    name: optionsPrefix
+    fullName: optionsPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.PivotFilter.constructor
     name: 'PivotFilter(options?: any)'
     children: []
@@ -775,6 +845,30 @@ items:
       parameters: []
       content: function _createElement()
     type: method
+  - uid: vss-web-extension-sdk.PivotFilter._disposed
+    name: _disposed
+    fullName: _disposed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.PivotFilter._element
+    name: _element
+    fullName: _element
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
   - uid: vss-web-extension-sdk.PivotFilter._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -790,6 +884,18 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
+  - uid: vss-web-extension-sdk.PivotFilter._enhancementOptions
+    name: _enhancementOptions
+    fullName: _enhancementOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.PivotFilter._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -892,6 +998,30 @@ items:
         type:
           - string
     type: method
+  - uid: vss-web-extension-sdk.PivotFilter._initialized
+    name: _initialized
+    fullName: _initialized
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.PivotFilter._options
+    name: _options
+    fullName: _options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IPivotFilterOptions
   - uid: vss-web-extension-sdk.PivotFilter._setElement
     name: '_setElement(element: JQuery)'
     children: []

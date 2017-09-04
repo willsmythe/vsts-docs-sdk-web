@@ -9,6 +9,9 @@ items:
       - vss-web-extension-sdk.VirtualizingListView.createIn
       - vss-web-extension-sdk.VirtualizingListView.delayExecute
       - vss-web-extension-sdk.VirtualizingListView.enhance
+      - vss-web-extension-sdk.VirtualizingListView.ENHANCEMENTS_DATA_KEY
+      - vss-web-extension-sdk.VirtualizingListView.ENHANCEMENT_OPTIONPREFIX_KEY
+      - vss-web-extension-sdk.VirtualizingListView.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.VirtualizingListView.ensureEnhancement
       - vss-web-extension-sdk.VirtualizingListView.ensureEnhancements
       - vss-web-extension-sdk.VirtualizingListView.focus
@@ -21,6 +24,7 @@ items:
       - vss-web-extension-sdk.VirtualizingListView.getTypeName
       - vss-web-extension-sdk.VirtualizingListView.initializeOptions
       - vss-web-extension-sdk.VirtualizingListView.isDisposed
+      - vss-web-extension-sdk.VirtualizingListView.optionsPrefix
       - vss-web-extension-sdk.VirtualizingListView.registerEnhancement
       - vss-web-extension-sdk.VirtualizingListView.registerJQueryWidget
       - vss-web-extension-sdk.VirtualizingListView.selectNext
@@ -30,14 +34,24 @@ items:
       - vss-web-extension-sdk.VirtualizingListView.setRole
       - vss-web-extension-sdk.VirtualizingListView.setSelectedIndex
       - vss-web-extension-sdk.VirtualizingListView.constructor
+      - vss-web-extension-sdk.VirtualizingListView.visibleRowCount
       - vss-web-extension-sdk.VirtualizingListView._bind
+      - vss-web-extension-sdk.VirtualizingListView._dataSource
+      - vss-web-extension-sdk.VirtualizingListView._disposed
+      - vss-web-extension-sdk.VirtualizingListView._element
+      - vss-web-extension-sdk.VirtualizingListView._enableMouseOver
       - vss-web-extension-sdk.VirtualizingListView._enhance
+      - vss-web-extension-sdk.VirtualizingListView._enhancementOptions
       - vss-web-extension-sdk.VirtualizingListView._ensureInitialized
       - vss-web-extension-sdk.VirtualizingListView._fire
       - vss-web-extension-sdk.VirtualizingListView._fireChange
+      - vss-web-extension-sdk.VirtualizingListView._firstVisible
       - vss-web-extension-sdk.VirtualizingListView._getEventNameSpace
       - vss-web-extension-sdk.VirtualizingListView._getInDomPromise
       - vss-web-extension-sdk.VirtualizingListView._getUniqueId
+      - vss-web-extension-sdk.VirtualizingListView._initialized
+      - vss-web-extension-sdk.VirtualizingListView._itemsContainer
+      - vss-web-extension-sdk.VirtualizingListView._options
       - vss-web-extension-sdk.VirtualizingListView._setElement
       - vss-web-extension-sdk.VirtualizingListView._setId
       - vss-web-extension-sdk.VirtualizingListView._unbind
@@ -210,6 +224,42 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.ENHANCEMENTS_DATA_KEY
+    name: ENHANCEMENTS_DATA_KEY
+    fullName: ENHANCEMENTS_DATA_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VirtualizingListView.ENHANCEMENT_OPTIONPREFIX_KEY
+    name: ENHANCEMENT_OPTIONPREFIX_KEY
+    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VirtualizingListView.ENHANCEMENT_OPTIONS_KEY
+    name: ENHANCEMENT_OPTIONS_KEY
+    fullName: ENHANCEMENT_OPTIONS_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.VirtualizingListView.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -425,6 +475,18 @@ items:
         type:
           - boolean
     type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView.optionsPrefix
+    name: optionsPrefix
+    fullName: optionsPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.VirtualizingListView.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -651,6 +713,18 @@ items:
         type:
           - vss-web-extension-sdk.VirtualizingListView
     type: constructor
+  - uid: vss-web-extension-sdk.VirtualizingListView.visibleRowCount
+    name: visibleRowCount
+    fullName: visibleRowCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
   - uid: vss-web-extension-sdk.VirtualizingListView._bind
     name: '_bind(element?: any, eventType?: any, handler?: any, track?: any)'
     children: []
@@ -687,6 +761,54 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView._dataSource
+    name: _dataSource
+    fullName: _dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.BaseDataSource
+  - uid: vss-web-extension-sdk.VirtualizingListView._disposed
+    name: _disposed
+    fullName: _disposed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VirtualizingListView._element
+    name: _element
+    fullName: _element
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
+  - uid: vss-web-extension-sdk.VirtualizingListView._enableMouseOver
+    name: _enableMouseOver
+    fullName: _enableMouseOver
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.VirtualizingListView._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -702,6 +824,18 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView._enhancementOptions
+    name: _enhancementOptions
+    fullName: _enhancementOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.VirtualizingListView._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -763,6 +897,18 @@ items:
         type:
           - any
     type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView._firstVisible
+    name: _firstVisible
+    fullName: _firstVisible
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
   - uid: vss-web-extension-sdk.VirtualizingListView._getEventNameSpace
     name: _getEventNameSpace()
     children: []
@@ -804,6 +950,42 @@ items:
         type:
           - string
     type: method
+  - uid: vss-web-extension-sdk.VirtualizingListView._initialized
+    name: _initialized
+    fullName: _initialized
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VirtualizingListView._itemsContainer
+    name: _itemsContainer
+    fullName: _itemsContainer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
+  - uid: vss-web-extension-sdk.VirtualizingListView._options
+    name: _options
+    fullName: _options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any
   - uid: vss-web-extension-sdk.VirtualizingListView._setElement
     name: '_setElement(element: JQuery)'
     children: []

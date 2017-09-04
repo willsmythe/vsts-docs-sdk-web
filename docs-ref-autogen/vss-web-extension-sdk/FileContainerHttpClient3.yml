@@ -4,10 +4,14 @@ items:
     name: FileContainerHttpClient3
     fullName: FileContainerHttpClient3
     children:
+      - vss-web-extension-sdk.FileContainerHttpClient3.authTokenManager
+      - vss-web-extension-sdk.FileContainerHttpClient3.containersApiVersion
       - vss-web-extension-sdk.FileContainerHttpClient3.createItem
       - vss-web-extension-sdk.FileContainerHttpClient3.createItems
       - vss-web-extension-sdk.FileContainerHttpClient3.deleteItem
       - vss-web-extension-sdk.FileContainerHttpClient3.constructor
+      - >-
+        vss-web-extension-sdk.FileContainerHttpClient3.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.FileContainerHttpClient3.getContainers
       - vss-web-extension-sdk.FileContainerHttpClient3.getItems
       - vss-web-extension-sdk.FileContainerHttpClient3._beginGetLocation
@@ -15,11 +19,36 @@ items:
       - >-
         vss-web-extension-sdk.FileContainerHttpClient3._beginRequestWithAjaxResult
       - vss-web-extension-sdk.FileContainerHttpClient3._issueAjaxRequest
+      - vss-web-extension-sdk.FileContainerHttpClient3._rootRequestPath
       - vss-web-extension-sdk.FileContainerHttpClient3._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.FileContainerHttpClient3.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.FileContainerHttpClient3.containersApiVersion
+    name: containersApiVersion
+    fullName: containersApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.FileContainerHttpClient3.createItem
     name: >-
       createItem(content: string, containerId: number, itemPath: string, scope?:
@@ -146,6 +175,19 @@ items:
         type:
           - vss-web-extension-sdk.FileContainerHttpClient3
     type: constructor
+  - uid: >-
+      vss-web-extension-sdk.FileContainerHttpClient3.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.FileContainerHttpClient3.getContainers
     name: 'getContainers(scope?: string, artifactUris?: string)'
     children: []
@@ -347,6 +389,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.FileContainerHttpClient3._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.FileContainerHttpClient3._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

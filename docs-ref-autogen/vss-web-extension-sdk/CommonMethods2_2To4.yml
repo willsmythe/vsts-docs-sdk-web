@@ -4,22 +4,40 @@ items:
     name: CommonMethods2_2To4
     fullName: CommonMethods2_2To4
     children:
+      - vss-web-extension-sdk.CommonMethods2_2To4.authTokenManager
       - vss-web-extension-sdk.CommonMethods2_2To4.constructor
+      - >-
+        vss-web-extension-sdk.CommonMethods2_2To4.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.CommonMethods2_2To4.getRoleAssignments
       - vss-web-extension-sdk.CommonMethods2_2To4.getRoleDefinitions
       - vss-web-extension-sdk.CommonMethods2_2To4.removeRoleAssignment
       - vss-web-extension-sdk.CommonMethods2_2To4.removeRoleAssignments
+      - vss-web-extension-sdk.CommonMethods2_2To4.roleassignmentsApiVersion
+      - vss-web-extension-sdk.CommonMethods2_2To4.roledefinitionsApiVersion
       - vss-web-extension-sdk.CommonMethods2_2To4.setRoleAssignment
       - vss-web-extension-sdk.CommonMethods2_2To4.setRoleAssignments
       - vss-web-extension-sdk.CommonMethods2_2To4._beginGetLocation
       - vss-web-extension-sdk.CommonMethods2_2To4._beginRequest
       - vss-web-extension-sdk.CommonMethods2_2To4._beginRequestWithAjaxResult
       - vss-web-extension-sdk.CommonMethods2_2To4._issueAjaxRequest
+      - vss-web-extension-sdk.CommonMethods2_2To4._rootRequestPath
       - vss-web-extension-sdk.CommonMethods2_2To4._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.CommonMethods2_2To4.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
   - uid: vss-web-extension-sdk.CommonMethods2_2To4.constructor
     name: >-
       CommonMethods2_2To4(rootRequestPath: string, options?:
@@ -46,6 +64,18 @@ items:
         type:
           - vss-web-extension-sdk.CommonMethods2_2To4
     type: constructor
+  - uid: vss-web-extension-sdk.CommonMethods2_2To4.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.CommonMethods2_2To4.getRoleAssignments
     name: 'getRoleAssignments(scopeId: string, resourceId: string)'
     children: []
@@ -142,6 +172,30 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.CommonMethods2_2To4.roleassignmentsApiVersion
+    name: roleassignmentsApiVersion
+    fullName: roleassignmentsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CommonMethods2_2To4.roledefinitionsApiVersion
+    name: roledefinitionsApiVersion
+    fullName: roledefinitionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.CommonMethods2_2To4.setRoleAssignment
     name: >-
       setRoleAssignment(roleAssignment: UserRoleAssignmentRef, scopeId: string,
@@ -319,6 +373,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.CommonMethods2_2To4._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.CommonMethods2_2To4._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

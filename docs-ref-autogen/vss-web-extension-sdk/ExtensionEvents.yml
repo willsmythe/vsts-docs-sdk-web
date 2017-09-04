@@ -3,7 +3,11 @@ items:
   - uid: vss-web-extension-sdk.ExtensionEvents
     name: ExtensionEvents
     fullName: ExtensionEvents
-    children: []
+    children:
+      - vss-web-extension-sdk.ExtensionEvents.events
+      - vss-web-extension-sdk.ExtensionEvents.extensionId
+      - vss-web-extension-sdk.ExtensionEvents.extensionName
+      - vss-web-extension-sdk.ExtensionEvents.publisherName
     langs:
       - typeScript
     type: interface
@@ -12,3 +16,56 @@ items:
       uninstall events related to an extension. The events container is generic
       so can store data of any type of event. New event types can be added
       without altering the contract.
+  - uid: vss-web-extension-sdk.ExtensionEvents.events
+    name: events
+    fullName: events
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Generic container for events data. The dictionary key denotes the type of
+      event and the list contains properties related to that event
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ExtensionEvents.extensionId
+    name: extensionId
+    fullName: extensionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Id of the extension, this will never be sent back to the client. This
+      field will mainly be used when EMS calls into Gallery REST API to update
+      install/uninstall events for various extensions in one go.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtensionEvents.extensionName
+    name: extensionName
+    fullName: extensionName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Name of the extension
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtensionEvents.publisherName
+    name: publisherName
+    fullName: publisherName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Name of the publisher
+    syntax:
+      return:
+        type:
+          - string

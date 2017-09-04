@@ -3,10 +3,58 @@ items:
   - uid: vss-web-extension-sdk.ExtensionQuery
     name: ExtensionQuery
     fullName: ExtensionQuery
-    children: []
+    children:
+      - vss-web-extension-sdk.ExtensionQuery.assetTypes
+      - vss-web-extension-sdk.ExtensionQuery.filters
+      - vss-web-extension-sdk.ExtensionQuery.flags
     langs:
       - typeScript
     type: interface
     summary: >-
       An ExtensionQuery is used to search the gallery for a set of extensions
       that match one of many filter values.
+  - uid: vss-web-extension-sdk.ExtensionQuery.assetTypes
+    name: assetTypes
+    fullName: assetTypes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      When retrieving extensions with a query; frequently the caller only needs
+      a small subset of the assets. The caller may specify a list of asset types
+      that should be returned if the extension contains it. All other assets
+      will not be returned.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ExtensionQuery.filters
+    name: filters
+    fullName: filters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Each filter is a unique query and will have matching set of extensions
+      returned from the request. Each result will have the same index in the
+      resulting array that the filter had in the incoming query.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ExtensionQuery.flags
+    name: flags
+    fullName: flags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The Flags are used to deterine which set of information the caller would
+      like returned for the matched extensions.
+    syntax:
+      return:
+        type:
+          - union

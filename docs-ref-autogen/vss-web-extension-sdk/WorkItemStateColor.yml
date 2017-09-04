@@ -3,8 +3,34 @@ items:
   - uid: vss-web-extension-sdk.WorkItemStateColor
     name: WorkItemStateColor
     fullName: WorkItemStateColor
-    children: []
+    children:
+      - vss-web-extension-sdk.WorkItemStateColor.color
+      - vss-web-extension-sdk.WorkItemStateColor.name
     langs:
       - typeScript
     type: interface
     summary: Work item type state name and color pair
+  - uid: vss-web-extension-sdk.WorkItemStateColor.color
+    name: color
+    fullName: color
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Color value
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.WorkItemStateColor.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Work item type state name
+    syntax:
+      return:
+        type:
+          - string

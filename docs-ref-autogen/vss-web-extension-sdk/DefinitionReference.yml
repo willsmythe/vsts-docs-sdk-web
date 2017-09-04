@@ -3,8 +3,138 @@ items:
   - uid: vss-web-extension-sdk.DefinitionReference
     name: DefinitionReference
     fullName: DefinitionReference
-    children: []
+    children:
+      - vss-web-extension-sdk.DefinitionReference.createdDate
+      - vss-web-extension-sdk.DefinitionReference.id
+      - vss-web-extension-sdk.DefinitionReference.name
+      - vss-web-extension-sdk.DefinitionReference.path
+      - vss-web-extension-sdk.DefinitionReference.project
+      - vss-web-extension-sdk.DefinitionReference.queueStatus
+      - vss-web-extension-sdk.DefinitionReference.revision
+      - vss-web-extension-sdk.DefinitionReference.type
+      - vss-web-extension-sdk.DefinitionReference.uri
+      - vss-web-extension-sdk.DefinitionReference.url
     langs:
       - typeScript
     type: interface
     summary: A reference to a definition.
+  - uid: vss-web-extension-sdk.DefinitionReference.createdDate
+    name: createdDate
+    fullName: createdDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The date the definition was created
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.DefinitionReference.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Id of the resource
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.DefinitionReference.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Name of the linked resource (definition name, controller name, etc.)'
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.DefinitionReference.path
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The path this definitions belongs to
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.DefinitionReference.project
+    name: project
+    fullName: project
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The project.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.TeamProjectReference
+  - uid: vss-web-extension-sdk.DefinitionReference.queueStatus
+    name: queueStatus
+    fullName: queueStatus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: If builds can be queued from this definition
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.DefinitionReference.revision
+    name: revision
+    fullName: revision
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The definition revision number.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.DefinitionReference.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The type of the definition.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.DefinitionReference.uri
+    name: uri
+    fullName: uri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The Uri of the definition
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.DefinitionReference.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Full http link to the resource
+    syntax:
+      return:
+        type:
+          - string

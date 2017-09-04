@@ -3,8 +3,99 @@ items:
   - uid: vss-web-extension-sdk.TfvcChange
     name: TfvcChange
     fullName: TfvcChange
-    children: []
+    children:
+      - vss-web-extension-sdk.TfvcChange.changeType
+      - vss-web-extension-sdk.TfvcChange.item
+      - vss-web-extension-sdk.TfvcChange.mergeSources
+      - vss-web-extension-sdk.TfvcChange.newContent
+      - vss-web-extension-sdk.TfvcChange.pendingVersion
+      - vss-web-extension-sdk.TfvcChange.sourceServerItem
+      - vss-web-extension-sdk.TfvcChange.url
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.TfvcChange.changeType
+    name: changeType
+    fullName: changeType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.TfvcChange.item
+    name: item
+    fullName: item
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.TfvcItem
+  - uid: vss-web-extension-sdk.TfvcChange.mergeSources
+    name: mergeSources
+    fullName: mergeSources
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of merge sources in case of rename or branch creation.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.TfvcChange.newContent
+    name: newContent
+    fullName: newContent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ItemContent
+  - uid: vss-web-extension-sdk.TfvcChange.pendingVersion
+    name: pendingVersion
+    fullName: pendingVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Version at which a (shelved) change was pended against
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.TfvcChange.sourceServerItem
+    name: sourceServerItem
+    fullName: sourceServerItem
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcChange.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string

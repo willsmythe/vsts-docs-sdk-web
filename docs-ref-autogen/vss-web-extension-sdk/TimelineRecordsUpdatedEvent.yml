@@ -3,8 +3,34 @@ items:
   - uid: vss-web-extension-sdk.TimelineRecordsUpdatedEvent
     name: TimelineRecordsUpdatedEvent
     fullName: TimelineRecordsUpdatedEvent
-    children: []
+    children:
+      - vss-web-extension-sdk.TimelineRecordsUpdatedEvent.buildId
+      - vss-web-extension-sdk.TimelineRecordsUpdatedEvent.timelineRecords
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.TimelineRecordsUpdatedEvent.buildId
+    name: buildId
+    fullName: buildId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.TimelineRecordsUpdatedEvent.timelineRecords
+    name: timelineRecords
+    fullName: timelineRecords
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union

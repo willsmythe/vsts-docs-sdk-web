@@ -3,8 +3,34 @@ items:
   - uid: vss-web-extension-sdk.ServerExecutionDefinition
     name: ServerExecutionDefinition
     fullName: ServerExecutionDefinition
-    children: []
+    children:
+      - vss-web-extension-sdk.ServerExecutionDefinition.events
+      - vss-web-extension-sdk.ServerExecutionDefinition.handlerName
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.ServerExecutionDefinition.events
+    name: events
+    fullName: events
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.EventsConfig
+  - uid: vss-web-extension-sdk.ServerExecutionDefinition.handlerName
+    name: handlerName
+    fullName: handlerName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string

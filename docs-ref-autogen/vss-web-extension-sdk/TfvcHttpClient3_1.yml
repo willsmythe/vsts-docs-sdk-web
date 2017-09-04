@@ -4,7 +4,14 @@ items:
     name: TfvcHttpClient3_1
     fullName: TfvcHttpClient3_1
     children:
+      - vss-web-extension-sdk.TfvcHttpClient3_1.authTokenManager
+      - vss-web-extension-sdk.TfvcHttpClient3_1.branchesApiVersion
+      - vss-web-extension-sdk.TfvcHttpClient3_1.changesetChangesApiVersion
+      - vss-web-extension-sdk.TfvcHttpClient3_1.changesetsApiVersion
+      - vss-web-extension-sdk.TfvcHttpClient3_1.changesetsBatchApiVersion
+      - vss-web-extension-sdk.TfvcHttpClient3_1.changesetWorkItemsApiVersion
       - vss-web-extension-sdk.TfvcHttpClient3_1.createChangeset
+      - vss-web-extension-sdk.TfvcHttpClient3_1.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.TfvcHttpClient3_1.getBatchedChangesets
       - vss-web-extension-sdk.TfvcHttpClient3_1.getBranch
       - vss-web-extension-sdk.TfvcHttpClient3_1.getBranches
@@ -27,16 +34,97 @@ items:
       - vss-web-extension-sdk.TfvcHttpClient3_1.getShelvesetChanges
       - vss-web-extension-sdk.TfvcHttpClient3_1.getShelvesets
       - vss-web-extension-sdk.TfvcHttpClient3_1.getShelvesetWorkItems
+      - vss-web-extension-sdk.TfvcHttpClient3_1.itemBatchApiVersion
+      - vss-web-extension-sdk.TfvcHttpClient3_1.itemsApiVersion
+      - vss-web-extension-sdk.TfvcHttpClient3_1.labelItemsApiVersion
+      - vss-web-extension-sdk.TfvcHttpClient3_1.labelsApiVersion
+      - vss-web-extension-sdk.TfvcHttpClient3_1.serviceInstanceId
+      - vss-web-extension-sdk.TfvcHttpClient3_1.shelvesetChangesApiVersion
+      - vss-web-extension-sdk.TfvcHttpClient3_1.shelvesetsApiVersion
+      - vss-web-extension-sdk.TfvcHttpClient3_1.shelvesetWorkItemsApiVersion
       - vss-web-extension-sdk.TfvcHttpClient3_1.constructor
       - vss-web-extension-sdk.TfvcHttpClient3_1._beginGetLocation
       - vss-web-extension-sdk.TfvcHttpClient3_1._beginRequest
       - vss-web-extension-sdk.TfvcHttpClient3_1._beginRequestWithAjaxResult
       - vss-web-extension-sdk.TfvcHttpClient3_1._issueAjaxRequest
+      - vss-web-extension-sdk.TfvcHttpClient3_1._rootRequestPath
       - vss-web-extension-sdk.TfvcHttpClient3_1._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1.branchesApiVersion
+    name: branchesApiVersion
+    fullName: branchesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1.changesetChangesApiVersion
+    name: changesetChangesApiVersion
+    fullName: changesetChangesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1.changesetsApiVersion
+    name: changesetsApiVersion
+    fullName: changesetsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1.changesetsBatchApiVersion
+    name: changesetsBatchApiVersion
+    fullName: changesetsBatchApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1.changesetWorkItemsApiVersion
+    name: changesetWorkItemsApiVersion
+    fullName: changesetWorkItemsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TfvcHttpClient3_1.createChangeset
     name: 'createChangeset(changeset: TfvcChangeset, project?: string)'
     children: []
@@ -59,6 +147,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.TfvcHttpClient3_1.getBatchedChangesets
     name: 'getBatchedChangesets(changesetsRequestData: TfvcChangesetsRequestData)'
     children: []
@@ -893,6 +993,102 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1.itemBatchApiVersion
+    name: itemBatchApiVersion
+    fullName: itemBatchApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1.itemsApiVersion
+    name: itemsApiVersion
+    fullName: itemsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1.labelItemsApiVersion
+    name: labelItemsApiVersion
+    fullName: labelItemsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1.labelsApiVersion
+    name: labelsApiVersion
+    fullName: labelsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1.serviceInstanceId
+    name: serviceInstanceId
+    fullName: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1.shelvesetChangesApiVersion
+    name: shelvesetChangesApiVersion
+    fullName: shelvesetChangesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1.shelvesetsApiVersion
+    name: shelvesetsApiVersion
+    fullName: shelvesetsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1.shelvesetWorkItemsApiVersion
+    name: shelvesetWorkItemsApiVersion
+    fullName: shelvesetWorkItemsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TfvcHttpClient3_1.constructor
     name: >-
       TfvcHttpClient3_1(rootRequestPath: string, options?:
@@ -1034,6 +1230,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient3_1._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TfvcHttpClient3_1._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

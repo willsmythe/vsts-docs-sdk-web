@@ -3,10 +3,23 @@ items:
   - uid: vss-web-extension-sdk.EventArgs
     name: EventArgs
     fullName: EventArgs
-    children: []
+    children:
+      - vss-web-extension-sdk.EventArgs.data
     langs:
       - typeScript
     type: interface
     summary: >-
       Arguments associated with an event being passed by a widget or
       configurations.
+  - uid: vss-web-extension-sdk.EventArgs.data
+    name: data
+    fullName: data
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Data relevant to the event.
+    syntax:
+      return:
+        type:
+          - T

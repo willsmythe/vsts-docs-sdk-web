@@ -3,8 +3,625 @@ items:
   - uid: vss-web-extension-sdk.IMessageDialogOptions
     name: IMessageDialogOptions
     fullName: IMessageDialogOptions
-    children: []
+    children:
+      - vss-web-extension-sdk.IMessageDialogOptions.attachResize
+      - vss-web-extension-sdk.IMessageDialogOptions.beforeClose
+      - vss-web-extension-sdk.IMessageDialogOptions.bowtieVersion
+      - vss-web-extension-sdk.IMessageDialogOptions.buttons
+      - vss-web-extension-sdk.IMessageDialogOptions.cache
+      - vss-web-extension-sdk.IMessageDialogOptions.close
+      - vss-web-extension-sdk.IMessageDialogOptions.closeText
+      - vss-web-extension-sdk.IMessageDialogOptions.content
+      - vss-web-extension-sdk.IMessageDialogOptions.contentMargin
+      - vss-web-extension-sdk.IMessageDialogOptions.contentText
+      - vss-web-extension-sdk.IMessageDialogOptions.defaultButton
+      - vss-web-extension-sdk.IMessageDialogOptions.dialogClass
+      - vss-web-extension-sdk.IMessageDialogOptions.disposeOnClose
+      - vss-web-extension-sdk.IMessageDialogOptions.dynamicSize
+      - vss-web-extension-sdk.IMessageDialogOptions.error
+      - vss-web-extension-sdk.IMessageDialogOptions.escapeButton
+      - vss-web-extension-sdk.IMessageDialogOptions.hasProgressElement
+      - vss-web-extension-sdk.IMessageDialogOptions.height
+      - vss-web-extension-sdk.IMessageDialogOptions.heightPct
+      - vss-web-extension-sdk.IMessageDialogOptions.hideCloseButton
+      - vss-web-extension-sdk.IMessageDialogOptions.initialFocusSelector
+      - vss-web-extension-sdk.IMessageDialogOptions.initialize
+      - vss-web-extension-sdk.IMessageDialogOptions.maxHeight
+      - vss-web-extension-sdk.IMessageDialogOptions.maxWidth
+      - vss-web-extension-sdk.IMessageDialogOptions.minHeight
+      - vss-web-extension-sdk.IMessageDialogOptions.minWidth
+      - vss-web-extension-sdk.IMessageDialogOptions.noAutoCta
+      - vss-web-extension-sdk.IMessageDialogOptions.noDefaultButton
+      - vss-web-extension-sdk.IMessageDialogOptions.noFocusOnClose
+      - vss-web-extension-sdk.IMessageDialogOptions.open
+      - vss-web-extension-sdk.IMessageDialogOptions.position
+      - vss-web-extension-sdk.IMessageDialogOptions.preventAutoResize
+      - vss-web-extension-sdk.IMessageDialogOptions.replaceContent
+      - vss-web-extension-sdk.IMessageDialogOptions.requiredTypedConfirmation
+      - vss-web-extension-sdk.IMessageDialogOptions.resizable
+      - vss-web-extension-sdk.IMessageDialogOptions.showStatusIndicator
+      - vss-web-extension-sdk.IMessageDialogOptions.subtitle
+      - vss-web-extension-sdk.IMessageDialogOptions.success
+      - vss-web-extension-sdk.IMessageDialogOptions.title
+      - vss-web-extension-sdk.IMessageDialogOptions.url
+      - vss-web-extension-sdk.IMessageDialogOptions.urlParams
+      - vss-web-extension-sdk.IMessageDialogOptions.useBowtieStyle
+      - vss-web-extension-sdk.IMessageDialogOptions.useLegacyStyle
+      - vss-web-extension-sdk.IMessageDialogOptions.width
+      - vss-web-extension-sdk.IMessageDialogOptions.widthPct
     langs:
       - typeScript
     type: interface
     summary: Used internally by MessageDialogO.
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.attachResize
+    name: attachResize
+    fullName: attachResize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.beforeClose
+    name: beforeClose
+    fullName: beforeClose
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Optional delegate that can be called when a dialog button is clicked. This
+      can be used to get a value from UI in the dialog before it is removed from
+      the DOM.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.bowtieVersion
+    name: bowtieVersion
+    fullName: bowtieVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An optional variable to specify the version of Bowtie styling for this
+      Dialog.
+
+      Defaults to 1, but 2 should be used for the updated styling in TFS
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.buttons
+    name: buttons
+    fullName: buttons
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.cache
+    name: cache
+    fullName: cache
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.close
+    name: close
+    fullName: close
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Delegate to be executed when the dialog is closed.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.closeText
+    name: closeText
+    fullName: closeText
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Text to add to the close button tooltip.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.content
+    name: content
+    fullName: content
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Content of the dialog. It can be either a jQuery selector or a jQuery
+      object.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.contentMargin
+    name: contentMargin
+    fullName: contentMargin
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Determines if the standard 24-px margin will be applied to all content.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.contentText
+    name: contentText
+    fullName: contentText
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Text to be displayed in the dialog as the content.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.defaultButton
+    name: defaultButton
+    fullName: defaultButton
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.dialogClass
+    name: dialogClass
+    fullName: dialogClass
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Additional class to apply to the container dialog element.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.disposeOnClose
+    name: disposeOnClose
+    fullName: disposeOnClose
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specifies whether the dialog should be displayed when closed.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.dynamicSize
+    name: dynamicSize
+    fullName: dynamicSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Determines whether or not the dialog resizes automatically when the
+      window is resized.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.error
+    name: error
+    fullName: error
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Callback executed if the load fails.
+    syntax:
+      return:
+        type:
+          - Function
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.escapeButton
+    name: escapeButton
+    fullName: escapeButton
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IMessageDialogButton
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.hasProgressElement
+    name: hasProgressElement
+    fullName: hasProgressElement
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Indicates whether global progress indicator is enabled for the dialog or
+      not.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.height
+    name: height
+    fullName: height
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Height of the dialog in px or %.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.heightPct
+    name: heightPct
+    fullName: heightPct
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.hideCloseButton
+    name: hideCloseButton
+    fullName: hideCloseButton
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Hide the X button.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.initialFocusSelector
+    name: initialFocusSelector
+    fullName: initialFocusSelector
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Specifies the jQuery selector for the default element to be focused
+      initially.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.initialize
+    name: initialize
+    fullName: initialize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Delegate to be executed when the dialog is initialized completely
+      (including sizing and positioning).
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.maxHeight
+    name: maxHeight
+    fullName: maxHeight
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Max height of the dialog in px.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.maxWidth
+    name: maxWidth
+    fullName: maxWidth
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Max width of the dialog in px.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.minHeight
+    name: minHeight
+    fullName: minHeight
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Min height of the dialog in px.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.minWidth
+    name: minWidth
+    fullName: minWidth
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Min width of the dialog in px.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.noAutoCta
+    name: noAutoCta
+    fullName: noAutoCta
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An optional boolean to indicate that the leftmost dialog button should not
+      get
+
+      the "cta" (call to action) style applied automatically.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.noDefaultButton
+    name: noDefaultButton
+    fullName: noDefaultButton
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If set to true, no button is highlighted as the default button. Otherwise,
+      the first button is the default.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.noFocusOnClose
+    name: noFocusOnClose
+    fullName: noFocusOnClose
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.open
+    name: open
+    fullName: open
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Delegate to be executed when the dialog is opened.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.position
+    name: position
+    fullName: position
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Specifies where the dialog should be displayed when opened. This option is
+      conveyed to underlying jQuery UI Dialog. See
+      http://api.jqueryui.com/dialog/#option-position for more details.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.preventAutoResize
+    name: preventAutoResize
+    fullName: preventAutoResize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.replaceContent
+    name: replaceContent
+    fullName: replaceContent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.requiredTypedConfirmation
+    name: requiredTypedConfirmation
+    fullName: requiredTypedConfirmation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.resizable
+    name: resizable
+    fullName: resizable
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indicates whether the dialog is resizable or not.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.showStatusIndicator
+    name: showStatusIndicator
+    fullName: showStatusIndicator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Determines whether status indicator is displayed or not.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.subtitle
+    name: subtitle
+    fullName: subtitle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Subtitle of the dialog.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.success
+    name: success
+    fullName: success
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Callback executed if the load succeeds.
+    syntax:
+      return:
+        type:
+          - Function
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.title
+    name: title
+    fullName: title
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Title of the dialog.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Url to load the content from.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.urlParams
+    name: urlParams
+    fullName: urlParams
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Url request paremeters.
+    syntax:
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.useBowtieStyle
+    name: useBowtieStyle
+    fullName: useBowtieStyle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An optional boolean to specify whether or not to use the Bowtie styling
+      for this Dialog.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.useLegacyStyle
+    name: useLegacyStyle
+    fullName: useLegacyStyle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      An optional variable to specify that the dialog should take on legacy UI
+      styles
+
+      Defaults to false.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.width
+    name: width
+    fullName: width
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Width of the dialog in px or %.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.IMessageDialogOptions.widthPct
+    name: widthPct
+    fullName: widthPct
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number

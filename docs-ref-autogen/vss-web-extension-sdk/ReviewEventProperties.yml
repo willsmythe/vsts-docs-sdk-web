@@ -3,8 +3,177 @@ items:
   - uid: vss-web-extension-sdk.ReviewEventProperties
     name: ReviewEventProperties
     fullName: ReviewEventProperties
-    children: []
+    children:
+      - vss-web-extension-sdk.ReviewEventProperties.eventOperation
+      - vss-web-extension-sdk.ReviewEventProperties.isAdminReply
+      - vss-web-extension-sdk.ReviewEventProperties.isIgnored
+      - vss-web-extension-sdk.ReviewEventProperties.rating
+      - vss-web-extension-sdk.ReviewEventProperties.replyDate
+      - vss-web-extension-sdk.ReviewEventProperties.replyText
+      - vss-web-extension-sdk.ReviewEventProperties.replyUserId
+      - vss-web-extension-sdk.ReviewEventProperties.resourceType
+      - vss-web-extension-sdk.ReviewEventProperties.reviewDate
+      - vss-web-extension-sdk.ReviewEventProperties.reviewId
+      - vss-web-extension-sdk.ReviewEventProperties.reviewText
+      - vss-web-extension-sdk.ReviewEventProperties.userDisplayName
+      - vss-web-extension-sdk.ReviewEventProperties.userId
     langs:
       - typeScript
     type: interface
     summary: Properties associated with Review event
+  - uid: vss-web-extension-sdk.ReviewEventProperties.eventOperation
+    name: eventOperation
+    fullName: eventOperation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Operation performed on Event - Create\Update
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ReviewEventProperties.isAdminReply
+    name: isAdminReply
+    fullName: isAdminReply
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Flag to see if reply is admin reply
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ReviewEventProperties.isIgnored
+    name: isIgnored
+    fullName: isIgnored
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Flag to record if the reviwe is ignored
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ReviewEventProperties.rating
+    name: rating
+    fullName: rating
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Rating at the time of event
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.ReviewEventProperties.replyDate
+    name: replyDate
+    fullName: replyDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Reply update date
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.ReviewEventProperties.replyText
+    name: replyText
+    fullName: replyText
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Publisher reply text or admin reply text
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReviewEventProperties.replyUserId
+    name: replyUserId
+    fullName: replyUserId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: User who responded to the review
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReviewEventProperties.resourceType
+    name: resourceType
+    fullName: resourceType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Review Event Type - Review
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ReviewEventProperties.reviewDate
+    name: reviewDate
+    fullName: reviewDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Review update date
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.ReviewEventProperties.reviewId
+    name: reviewId
+    fullName: reviewId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ReviewId of the review  on which the operation is performed
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.ReviewEventProperties.reviewText
+    name: reviewText
+    fullName: reviewText
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Text in Review Text
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReviewEventProperties.userDisplayName
+    name: userDisplayName
+    fullName: userDisplayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: User display name at the time of review
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ReviewEventProperties.userId
+    name: userId
+    fullName: userId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: User who gave review
+    syntax:
+      return:
+        type:
+          - string

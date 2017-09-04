@@ -3,8 +3,47 @@ items:
   - uid: vss-web-extension-sdk.DeploymentApprovalCompletedEvent
     name: DeploymentApprovalCompletedEvent
     fullName: DeploymentApprovalCompletedEvent
-    children: []
+    children:
+      - vss-web-extension-sdk.DeploymentApprovalCompletedEvent.approval
+      - vss-web-extension-sdk.DeploymentApprovalCompletedEvent.project
+      - vss-web-extension-sdk.DeploymentApprovalCompletedEvent.release
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.DeploymentApprovalCompletedEvent.approval
+    name: approval
+    fullName: approval
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ReleaseApproval
+  - uid: vss-web-extension-sdk.DeploymentApprovalCompletedEvent.project
+    name: project
+    fullName: project
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ProjectReference
+  - uid: vss-web-extension-sdk.DeploymentApprovalCompletedEvent.release
+    name: release
+    fullName: release
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.Release

@@ -3,8 +3,49 @@ items:
   - uid: vss-web-extension-sdk.FileInputControlLimitEventData
     name: FileInputControlLimitEventData
     fullName: FileInputControlLimitEventData
-    children: []
+    children:
+      - vss-web-extension-sdk.FileInputControlLimitEventData.fileCount
+      - vss-web-extension-sdk.FileInputControlLimitEventData.fileSize
+      - vss-web-extension-sdk.FileInputControlLimitEventData.totalSize
     langs:
       - typeScript
     type: interface
     summary: Context for the limit message handler on why the upload limit was reached.
+  - uid: vss-web-extension-sdk.FileInputControlLimitEventData.fileCount
+    name: fileCount
+    fullName: fileCount
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Number of files the user attempted to upload, if it was capped by
+      maximumNumberOfFiles in the options.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.FileInputControlLimitEventData.fileSize
+    name: fileSize
+    fullName: fileSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Size of the file that was too large, in bytes.'
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.FileInputControlLimitEventData.totalSize
+    name: totalSize
+    fullName: totalSize
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Total size of all files, if the size was too large, in bytes.'
+    syntax:
+      return:
+        type:
+          - number

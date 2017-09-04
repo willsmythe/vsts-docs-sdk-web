@@ -5,12 +5,17 @@ items:
     fullName: IdentitiesHttpClient2_1
     children:
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.addMember
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.authTokenManager
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.claimsApiVersion
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.createGroups
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.createIdentity
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.createOrBindWithClaims
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.createScope
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.deleteGroup
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.deleteScope
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.descriptorsApiVersion
+      - >-
+        vss-web-extension-sdk.IdentitiesHttpClient2_1.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.getDescriptorById
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.getIdentityChanges
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.getIdentitySnapshot
@@ -23,8 +28,17 @@ items:
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.getTenant
       - >-
         vss-web-extension-sdk.IdentitiesHttpClient2_1.getUserIdentityIdsByDomainId
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.groupsApiVersion
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.identitiesApiVersion
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.constructor
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.identityApiVersion
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.identityBatchApiVersion
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.identitySnapshotApiVersion
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.listGroups
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.maxSequenceIdApiVersion
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.meApiVersion
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.membersApiVersion
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.membersOfApiVersion
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.readIdentities
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.readIdentitiesByScope
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.readIdentity
@@ -35,6 +49,10 @@ items:
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.readMembersOf
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.removeMember
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.renameScope
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.scopesApiVersion
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.signedInTokenApiVersion
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.signoutTokenApiVersion
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1.tenantApiVersion
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.updateIdentities
       - vss-web-extension-sdk.IdentitiesHttpClient2_1.updateIdentity
       - vss-web-extension-sdk.IdentitiesHttpClient2_1._beginGetLocation
@@ -42,6 +60,7 @@ items:
       - >-
         vss-web-extension-sdk.IdentitiesHttpClient2_1._beginRequestWithAjaxResult
       - vss-web-extension-sdk.IdentitiesHttpClient2_1._issueAjaxRequest
+      - vss-web-extension-sdk.IdentitiesHttpClient2_1._rootRequestPath
       - vss-web-extension-sdk.IdentitiesHttpClient2_1._setInitializationPromise
     langs:
       - typeScript
@@ -68,6 +87,30 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.claimsApiVersion
+    name: claimsApiVersion
+    fullName: claimsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.createGroups
     name: 'createGroups(container: any)'
     children: []
@@ -174,6 +217,31 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.descriptorsApiVersion
+    name: descriptorsApiVersion
+    fullName: descriptorsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.IdentitiesHttpClient2_1.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.getDescriptorById
     name: 'getDescriptorById(id: string, isMasterId?: boolean)'
     children: []
@@ -363,6 +431,30 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.groupsApiVersion
+    name: groupsApiVersion
+    fullName: groupsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.identitiesApiVersion
+    name: identitiesApiVersion
+    fullName: identitiesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.constructor
     name: >-
       IdentitiesHttpClient2_1(rootRequestPath: string, options?:
@@ -389,6 +481,42 @@ items:
         type:
           - vss-web-extension-sdk.IdentitiesHttpClient2_1
     type: constructor
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.identityApiVersion
+    name: identityApiVersion
+    fullName: identityApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.identityBatchApiVersion
+    name: identityBatchApiVersion
+    fullName: identityBatchApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.identitySnapshotApiVersion
+    name: identitySnapshotApiVersion
+    fullName: identitySnapshotApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.listGroups
     name: >-
       listGroups(scopeIds?: string, recurse?: boolean, deleted?: boolean,
@@ -426,6 +554,54 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.maxSequenceIdApiVersion
+    name: maxSequenceIdApiVersion
+    fullName: maxSequenceIdApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.meApiVersion
+    name: meApiVersion
+    fullName: meApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.membersApiVersion
+    name: membersApiVersion
+    fullName: membersApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.membersOfApiVersion
+    name: membersOfApiVersion
+    fullName: membersOfApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.readIdentities
     name: >-
       readIdentities(descriptors?: string, identityIds?: string, searchFilter?:
@@ -711,6 +887,54 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.scopesApiVersion
+    name: scopesApiVersion
+    fullName: scopesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.signedInTokenApiVersion
+    name: signedInTokenApiVersion
+    fullName: signedInTokenApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.signoutTokenApiVersion
+    name: signoutTokenApiVersion
+    fullName: signoutTokenApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.tenantApiVersion
+    name: tenantApiVersion
+    fullName: tenantApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1.updateIdentities
     name: 'updateIdentities(identities: VssJsonCollectionWrapperV)'
     children: []
@@ -864,6 +1088,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.IdentitiesHttpClient2_1._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

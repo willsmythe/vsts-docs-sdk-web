@@ -10,6 +10,10 @@ items:
       - vss-web-extension-sdk.CheckboxList.createIn
       - vss-web-extension-sdk.CheckboxList.delayExecute
       - vss-web-extension-sdk.CheckboxList.enhance
+      - vss-web-extension-sdk.CheckboxList.ENHANCEMENTS_DATA_KEY
+      - vss-web-extension-sdk.CheckboxList.enhancementTypeName
+      - vss-web-extension-sdk.CheckboxList.ENHANCEMENT_OPTIONPREFIX_KEY
+      - vss-web-extension-sdk.CheckboxList.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.CheckboxList.ensureEnhancement
       - vss-web-extension-sdk.CheckboxList.ensureEnhancements
       - vss-web-extension-sdk.CheckboxList.focus
@@ -22,19 +26,25 @@ items:
       - vss-web-extension-sdk.CheckboxList.getTypeName
       - vss-web-extension-sdk.CheckboxList.initializeOptions
       - vss-web-extension-sdk.CheckboxList.isDisposed
+      - vss-web-extension-sdk.CheckboxList.optionsPrefix
       - vss-web-extension-sdk.CheckboxList.registerEnhancement
       - vss-web-extension-sdk.CheckboxList.registerJQueryWidget
       - vss-web-extension-sdk.CheckboxList.setAttribute
       - vss-web-extension-sdk.CheckboxList.setEnhancementOptions
       - vss-web-extension-sdk.CheckboxList.setRole
       - vss-web-extension-sdk.CheckboxList._bind
+      - vss-web-extension-sdk.CheckboxList._disposed
+      - vss-web-extension-sdk.CheckboxList._element
       - vss-web-extension-sdk.CheckboxList._enhance
+      - vss-web-extension-sdk.CheckboxList._enhancementOptions
       - vss-web-extension-sdk.CheckboxList._ensureInitialized
       - vss-web-extension-sdk.CheckboxList._fire
       - vss-web-extension-sdk.CheckboxList._fireChange
       - vss-web-extension-sdk.CheckboxList._getEventNameSpace
       - vss-web-extension-sdk.CheckboxList._getInDomPromise
       - vss-web-extension-sdk.CheckboxList._getUniqueId
+      - vss-web-extension-sdk.CheckboxList._initialized
+      - vss-web-extension-sdk.CheckboxList._options
       - vss-web-extension-sdk.CheckboxList._setElement
       - vss-web-extension-sdk.CheckboxList._setId
       - vss-web-extension-sdk.CheckboxList._unbind
@@ -226,6 +236,54 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.CheckboxList.ENHANCEMENTS_DATA_KEY
+    name: ENHANCEMENTS_DATA_KEY
+    fullName: ENHANCEMENTS_DATA_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CheckboxList.enhancementTypeName
+    name: enhancementTypeName
+    fullName: enhancementTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CheckboxList.ENHANCEMENT_OPTIONPREFIX_KEY
+    name: ENHANCEMENT_OPTIONPREFIX_KEY
+    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.CheckboxList.ENHANCEMENT_OPTIONS_KEY
+    name: ENHANCEMENT_OPTIONS_KEY
+    fullName: ENHANCEMENT_OPTIONS_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.CheckboxList.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -441,6 +499,18 @@ items:
         type:
           - boolean
     type: method
+  - uid: vss-web-extension-sdk.CheckboxList.optionsPrefix
+    name: optionsPrefix
+    fullName: optionsPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.CheckboxList.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -626,6 +696,30 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.CheckboxList._disposed
+    name: _disposed
+    fullName: _disposed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.CheckboxList._element
+    name: _element
+    fullName: _element
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
   - uid: vss-web-extension-sdk.CheckboxList._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -641,6 +735,18 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
+  - uid: vss-web-extension-sdk.CheckboxList._enhancementOptions
+    name: _enhancementOptions
+    fullName: _enhancementOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.CheckboxList._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -743,6 +849,30 @@ items:
         type:
           - string
     type: method
+  - uid: vss-web-extension-sdk.CheckboxList._initialized
+    name: _initialized
+    fullName: _initialized
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.CheckboxList._options
+    name: _options
+    fullName: _options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ICheckboxListOptions
   - uid: vss-web-extension-sdk.CheckboxList._setElement
     name: '_setElement(element: JQuery)'
     children: []

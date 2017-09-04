@@ -3,8 +3,88 @@ items:
   - uid: vss-web-extension-sdk.TaskAgentReference
     name: TaskAgentReference
     fullName: TaskAgentReference
-    children: []
+    children:
+      - vss-web-extension-sdk.TaskAgentReference.enabled
+      - vss-web-extension-sdk.TaskAgentReference.id
+      - vss-web-extension-sdk.TaskAgentReference.name
+      - vss-web-extension-sdk.TaskAgentReference.status
+      - vss-web-extension-sdk.TaskAgentReference.version
+      - vss-web-extension-sdk.TaskAgentReference._links
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.TaskAgentReference.enabled
+    name: enabled
+    fullName: enabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Gets or sets a value indicating whether or not this agent should be
+      enabled for job execution.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.TaskAgentReference.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets the identifier of the agent.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.TaskAgentReference.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets the name of the agent.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentReference.status
+    name: status
+    fullName: status
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets the current connectivity status of the agent.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.TaskAgentReference.version
+    name: version
+    fullName: version
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets the version of the agent.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TaskAgentReference._links
+    name: _links
+    fullName: _links
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any

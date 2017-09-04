@@ -3,8 +3,166 @@ items:
   - uid: vss-web-extension-sdk.ITabPageOption
     name: ITabPageOption
     fullName: ITabPageOption
-    children: []
+    children:
+      - vss-web-extension-sdk.ITabPageOption.contentContainer
+      - vss-web-extension-sdk.ITabPageOption.handleServerError
+      - vss-web-extension-sdk.ITabPageOption.navigationMode
+      - vss-web-extension-sdk.ITabPageOption.onDirtyStateChanged
+      - vss-web-extension-sdk.ITabPageOption.onSavingStateChanged
+      - vss-web-extension-sdk.ITabPageOption.onTabChanged
+      - vss-web-extension-sdk.ITabPageOption.onTabChanging
+      - vss-web-extension-sdk.ITabPageOption.onTabSaved
+      - vss-web-extension-sdk.ITabPageOption.savingMode
+      - vss-web-extension-sdk.ITabPageOption.tab
+      - vss-web-extension-sdk.ITabPageOption.tabIndex
+      - vss-web-extension-sdk.ITabPageOption.titleContainer
     langs:
       - typeScript
     type: interface
     summary: The tab page option
+  - uid: vss-web-extension-sdk.ITabPageOption.contentContainer
+    name: contentContainer
+    fullName: contentContainer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Dom element to host the tab content
+    syntax:
+      return:
+        type:
+          - JQuery
+  - uid: vss-web-extension-sdk.ITabPageOption.handleServerError
+    name: handleServerError
+    fullName: handleServerError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If set to true, the control will handle the server errors and the
+      individual tabs should handle only the client-side validation errors
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ITabPageOption.navigationMode
+    name: navigationMode
+    fullName: navigationMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: navigation mode from tab control
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ITabPageOption.onDirtyStateChanged
+    name: onDirtyStateChanged
+    fullName: onDirtyStateChanged
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: callback function when dirty state changes
+    syntax:
+      return:
+        type:
+          - Function
+  - uid: vss-web-extension-sdk.ITabPageOption.onSavingStateChanged
+    name: onSavingStateChanged
+    fullName: onSavingStateChanged
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: callback function when saving state changes
+    syntax:
+      return:
+        type:
+          - Function
+  - uid: vss-web-extension-sdk.ITabPageOption.onTabChanged
+    name: onTabChanged
+    fullName: onTabChanged
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: callback function after tab changed
+    syntax:
+      return:
+        type:
+          - Function
+  - uid: vss-web-extension-sdk.ITabPageOption.onTabChanging
+    name: onTabChanging
+    fullName: onTabChanging
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: callback function when tab changing
+    syntax:
+      return:
+        type:
+          - Function
+  - uid: vss-web-extension-sdk.ITabPageOption.onTabSaved
+    name: onTabSaved
+    fullName: onTabSaved
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: callback function after tab saved
+    syntax:
+      return:
+        type:
+          - Function
+  - uid: vss-web-extension-sdk.ITabPageOption.savingMode
+    name: savingMode
+    fullName: savingMode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: saving mode from tab control
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ITabPageOption.tab
+    name: tab
+    fullName: tab
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The tab information associated with tab page
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.ITab
+  - uid: vss-web-extension-sdk.ITabPageOption.tabIndex
+    name: tabIndex
+    fullName: tabIndex
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'The first tab should have tabindex 0, the remaining -1.'
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.ITabPageOption.titleContainer
+    name: titleContainer
+    fullName: titleContainer
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Dom element to host the tab title
+    syntax:
+      return:
+        type:
+          - JQuery

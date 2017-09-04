@@ -8,10 +8,24 @@ items:
         vss-web-extension-sdk.LicensingHttpClient2_1.assignAccountEntitlementForUser
       - >-
         vss-web-extension-sdk.LicensingHttpClient2_1.assignAvailableAccountEntitlement
+      - vss-web-extension-sdk.LicensingHttpClient2_1.authTokenManager
       - >-
         vss-web-extension-sdk.LicensingHttpClient2_1.bulkGetExtensionsAssignedToUsers
+      - vss-web-extension-sdk.LicensingHttpClient2_1.certificateApiVersion
+      - vss-web-extension-sdk.LicensingHttpClient2_1.clientRightsApiVersion
       - vss-web-extension-sdk.LicensingHttpClient2_1.computeExtensionRights
       - vss-web-extension-sdk.LicensingHttpClient2_1.deleteUserEntitlements
+      - vss-web-extension-sdk.LicensingHttpClient2_1.entitlementsApiVersion
+      - >-
+        vss-web-extension-sdk.LicensingHttpClient2_1.entitlementsApiVersion_c01e9fd5
+      - vss-web-extension-sdk.LicensingHttpClient2_1.entitlementsBatchApiVersion
+      - >-
+        vss-web-extension-sdk.LicensingHttpClient2_1.extensionEntitlementsBatchApiVersion
+      - >-
+        vss-web-extension-sdk.LicensingHttpClient2_1.extensionRegistrationApiVersion
+      - vss-web-extension-sdk.LicensingHttpClient2_1.extensionRightsApiVersion
+      - >-
+        vss-web-extension-sdk.LicensingHttpClient2_1.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.LicensingHttpClient2_1.getAccountEntitlement
       - >-
         vss-web-extension-sdk.LicensingHttpClient2_1.getAccountEntitlementForUser
@@ -24,13 +38,18 @@ items:
       - vss-web-extension-sdk.LicensingHttpClient2_1.getMsdnPresence
       - vss-web-extension-sdk.LicensingHttpClient2_1.getUsageRights
       - vss-web-extension-sdk.LicensingHttpClient2_1.constructor
+      - vss-web-extension-sdk.LicensingHttpClient2_1.msdnApiVersion
+      - vss-web-extension-sdk.LicensingHttpClient2_1.msdnApiVersion_69522c3f
       - >-
         vss-web-extension-sdk.LicensingHttpClient2_1.obtainAvailableAccountEntitlements
       - vss-web-extension-sdk.LicensingHttpClient2_1.registerExtensionLicense
+      - vss-web-extension-sdk.LicensingHttpClient2_1.usageApiVersion
+      - vss-web-extension-sdk.LicensingHttpClient2_1.usageRightsApiVersion
       - vss-web-extension-sdk.LicensingHttpClient2_1._beginGetLocation
       - vss-web-extension-sdk.LicensingHttpClient2_1._beginRequest
       - vss-web-extension-sdk.LicensingHttpClient2_1._beginRequestWithAjaxResult
       - vss-web-extension-sdk.LicensingHttpClient2_1._issueAjaxRequest
+      - vss-web-extension-sdk.LicensingHttpClient2_1._rootRequestPath
       - vss-web-extension-sdk.LicensingHttpClient2_1._setInitializationPromise
     langs:
       - typeScript
@@ -80,6 +99,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.LicensingHttpClient2_1.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
   - uid: >-
       vss-web-extension-sdk.LicensingHttpClient2_1.bulkGetExtensionsAssignedToUsers
     name: 'bulkGetExtensionsAssignedToUsers(userIds: function)'
@@ -100,6 +131,30 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.LicensingHttpClient2_1.certificateApiVersion
+    name: certificateApiVersion
+    fullName: certificateApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.LicensingHttpClient2_1.clientRightsApiVersion
+    name: clientRightsApiVersion
+    fullName: clientRightsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.LicensingHttpClient2_1.computeExtensionRights
     name: 'computeExtensionRights(ids: function)'
     children: []
@@ -134,6 +189,94 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.LicensingHttpClient2_1.entitlementsApiVersion
+    name: entitlementsApiVersion
+    fullName: entitlementsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.LicensingHttpClient2_1.entitlementsApiVersion_c01e9fd5
+    name: entitlementsApiVersion_c01e9fd5
+    fullName: entitlementsApiVersion_c01e9fd5
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.LicensingHttpClient2_1.entitlementsBatchApiVersion
+    name: entitlementsBatchApiVersion
+    fullName: entitlementsBatchApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.LicensingHttpClient2_1.extensionEntitlementsBatchApiVersion
+    name: extensionEntitlementsBatchApiVersion
+    fullName: extensionEntitlementsBatchApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.LicensingHttpClient2_1.extensionRegistrationApiVersion
+    name: extensionRegistrationApiVersion
+    fullName: extensionRegistrationApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.LicensingHttpClient2_1.extensionRightsApiVersion
+    name: extensionRightsApiVersion
+    fullName: extensionRightsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.LicensingHttpClient2_1.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.LicensingHttpClient2_1.getAccountEntitlement
     name: getAccountEntitlement()
     children: []
@@ -354,6 +497,30 @@ items:
         type:
           - vss-web-extension-sdk.LicensingHttpClient2_1
     type: constructor
+  - uid: vss-web-extension-sdk.LicensingHttpClient2_1.msdnApiVersion
+    name: msdnApiVersion
+    fullName: msdnApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.LicensingHttpClient2_1.msdnApiVersion_69522c3f
+    name: msdnApiVersion_69522c3f
+    fullName: msdnApiVersion_69522c3f
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: >-
       vss-web-extension-sdk.LicensingHttpClient2_1.obtainAvailableAccountEntitlements
     name: 'obtainAvailableAccountEntitlements(userIds: function)'
@@ -393,6 +560,30 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.LicensingHttpClient2_1.usageApiVersion
+    name: usageApiVersion
+    fullName: usageApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.LicensingHttpClient2_1.usageRightsApiVersion
+    name: usageRightsApiVersion
+    fullName: usageRightsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.LicensingHttpClient2_1._beginGetLocation
     name: '_beginGetLocation(area: string, locationId: string)'
     children: []
@@ -508,6 +699,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.LicensingHttpClient2_1._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.LicensingHttpClient2_1._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

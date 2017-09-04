@@ -4,6 +4,13 @@ items:
     name: GitHttpClient2
     fullName: GitHttpClient2
     children:
+      - vss-web-extension-sdk.GitHttpClient2.authTokenManager
+      - vss-web-extension-sdk.GitHttpClient2.blobsApiVersion
+      - vss-web-extension-sdk.GitHttpClient2.branchStatsApiVersion
+      - vss-web-extension-sdk.GitHttpClient2.changesApiVersion
+      - vss-web-extension-sdk.GitHttpClient2.commitDiffsApiVersion
+      - vss-web-extension-sdk.GitHttpClient2.commitsApiVersion
+      - vss-web-extension-sdk.GitHttpClient2.commitsBatchApiVersion
       - vss-web-extension-sdk.GitHttpClient2.createPullRequest
       - vss-web-extension-sdk.GitHttpClient2.createPullRequestReviewer
       - vss-web-extension-sdk.GitHttpClient2.createPullRequestReviewers
@@ -11,6 +18,7 @@ items:
       - vss-web-extension-sdk.GitHttpClient2.createRepository
       - vss-web-extension-sdk.GitHttpClient2.deletePullRequestReviewer
       - vss-web-extension-sdk.GitHttpClient2.deleteRepository
+      - vss-web-extension-sdk.GitHttpClient2.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.GitHttpClient2.getBlob
       - vss-web-extension-sdk.GitHttpClient2.getBlobContent
       - vss-web-extension-sdk.GitHttpClient2.getBlobsZip
@@ -44,6 +52,17 @@ items:
       - vss-web-extension-sdk.GitHttpClient2.getTree
       - vss-web-extension-sdk.GitHttpClient2.getTreeZip
       - vss-web-extension-sdk.GitHttpClient2.constructor
+      - vss-web-extension-sdk.GitHttpClient2.itemsApiVersion
+      - vss-web-extension-sdk.GitHttpClient2.itemsBatchApiVersion
+      - vss-web-extension-sdk.GitHttpClient2.pullRequestReviewersApiVersion
+      - vss-web-extension-sdk.GitHttpClient2.pullRequestsApiVersion
+      - vss-web-extension-sdk.GitHttpClient2.pullRequestsApiVersion_a5d28130
+      - vss-web-extension-sdk.GitHttpClient2.pullRequestWorkItemsApiVersion
+      - vss-web-extension-sdk.GitHttpClient2.pushesApiVersion
+      - vss-web-extension-sdk.GitHttpClient2.refsApiVersion
+      - vss-web-extension-sdk.GitHttpClient2.repositoriesApiVersion
+      - vss-web-extension-sdk.GitHttpClient2.serviceInstanceId
+      - vss-web-extension-sdk.GitHttpClient2.treesApiVersion
       - vss-web-extension-sdk.GitHttpClient2.updatePullRequest
       - vss-web-extension-sdk.GitHttpClient2.updateRef
       - vss-web-extension-sdk.GitHttpClient2.updateRefs
@@ -52,11 +71,96 @@ items:
       - vss-web-extension-sdk.GitHttpClient2._beginRequest
       - vss-web-extension-sdk.GitHttpClient2._beginRequestWithAjaxResult
       - vss-web-extension-sdk.GitHttpClient2._issueAjaxRequest
+      - vss-web-extension-sdk.GitHttpClient2._rootRequestPath
       - vss-web-extension-sdk.GitHttpClient2._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.GitHttpClient2.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.GitHttpClient2.blobsApiVersion
+    name: blobsApiVersion
+    fullName: blobsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient2.branchStatsApiVersion
+    name: branchStatsApiVersion
+    fullName: branchStatsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient2.changesApiVersion
+    name: changesApiVersion
+    fullName: changesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient2.commitDiffsApiVersion
+    name: commitDiffsApiVersion
+    fullName: commitDiffsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient2.commitsApiVersion
+    name: commitsApiVersion
+    fullName: commitsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient2.commitsBatchApiVersion
+    name: commitsBatchApiVersion
+    fullName: commitsBatchApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GitHttpClient2.createPullRequest
     name: >-
       createPullRequest(gitPullRequestToCreate: GitPullRequest, repositoryId:
@@ -287,6 +391,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GitHttpClient2.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.GitHttpClient2.getBlob
     name: >-
       getBlob(repositoryId: string, sha1: string, project?: string, download?:
@@ -1746,6 +1862,138 @@ items:
         type:
           - vss-web-extension-sdk.GitHttpClient2
     type: constructor
+  - uid: vss-web-extension-sdk.GitHttpClient2.itemsApiVersion
+    name: itemsApiVersion
+    fullName: itemsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient2.itemsBatchApiVersion
+    name: itemsBatchApiVersion
+    fullName: itemsBatchApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient2.pullRequestReviewersApiVersion
+    name: pullRequestReviewersApiVersion
+    fullName: pullRequestReviewersApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient2.pullRequestsApiVersion
+    name: pullRequestsApiVersion
+    fullName: pullRequestsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient2.pullRequestsApiVersion_a5d28130
+    name: pullRequestsApiVersion_a5d28130
+    fullName: pullRequestsApiVersion_a5d28130
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient2.pullRequestWorkItemsApiVersion
+    name: pullRequestWorkItemsApiVersion
+    fullName: pullRequestWorkItemsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient2.pushesApiVersion
+    name: pushesApiVersion
+    fullName: pushesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient2.refsApiVersion
+    name: refsApiVersion
+    fullName: refsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient2.repositoriesApiVersion
+    name: repositoriesApiVersion
+    fullName: repositoriesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient2.serviceInstanceId
+    name: serviceInstanceId
+    fullName: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient2.treesApiVersion
+    name: treesApiVersion
+    fullName: treesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GitHttpClient2.updatePullRequest
     name: >-
       updatePullRequest(gitPullRequestToUpdate: GitPullRequest, repositoryId:
@@ -2003,6 +2251,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GitHttpClient2._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GitHttpClient2._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

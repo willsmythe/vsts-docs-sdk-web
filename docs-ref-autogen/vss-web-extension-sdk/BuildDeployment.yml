@@ -3,8 +3,34 @@ items:
   - uid: vss-web-extension-sdk.BuildDeployment
     name: BuildDeployment
     fullName: BuildDeployment
-    children: []
+    children:
+      - vss-web-extension-sdk.BuildDeployment.deployment
+      - vss-web-extension-sdk.BuildDeployment.sourceBuild
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.BuildDeployment.deployment
+    name: deployment
+    fullName: deployment
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.BuildSummary
+  - uid: vss-web-extension-sdk.BuildDeployment.sourceBuild
+    name: sourceBuild
+    fullName: sourceBuild
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.XamlBuildReference

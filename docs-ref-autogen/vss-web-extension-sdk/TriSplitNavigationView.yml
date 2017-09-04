@@ -4,11 +4,16 @@ items:
     name: TriSplitNavigationView
     fullName: TriSplitNavigationView
     children:
+      - vss-web-extension-sdk.TriSplitNavigationView.ACTION_CONTRIBUTION
       - vss-web-extension-sdk.TriSplitNavigationView.cancelDelayedFunction
       - vss-web-extension-sdk.TriSplitNavigationView.create
       - vss-web-extension-sdk.TriSplitNavigationView.createIn
       - vss-web-extension-sdk.TriSplitNavigationView.delayExecute
       - vss-web-extension-sdk.TriSplitNavigationView.enhance
+      - vss-web-extension-sdk.TriSplitNavigationView.ENHANCEMENTS_DATA_KEY
+      - >-
+        vss-web-extension-sdk.TriSplitNavigationView.ENHANCEMENT_OPTIONPREFIX_KEY
+      - vss-web-extension-sdk.TriSplitNavigationView.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.TriSplitNavigationView.ensureEnhancement
       - vss-web-extension-sdk.TriSplitNavigationView.ensureEnhancements
       - vss-web-extension-sdk.TriSplitNavigationView.focus
@@ -24,6 +29,7 @@ items:
       - vss-web-extension-sdk.TriSplitNavigationView.initializeOptions
       - vss-web-extension-sdk.TriSplitNavigationView.isDisposed
       - vss-web-extension-sdk.TriSplitNavigationView.onNavigate
+      - vss-web-extension-sdk.TriSplitNavigationView.optionsPrefix
       - vss-web-extension-sdk.TriSplitNavigationView.registerEnhancement
       - vss-web-extension-sdk.TriSplitNavigationView.registerJQueryWidget
       - vss-web-extension-sdk.TriSplitNavigationView.setAttribute
@@ -36,7 +42,10 @@ items:
       - vss-web-extension-sdk.TriSplitNavigationView.setWindowTitle
       - vss-web-extension-sdk.TriSplitNavigationView.constructor
       - vss-web-extension-sdk.TriSplitNavigationView._bind
+      - vss-web-extension-sdk.TriSplitNavigationView._disposed
+      - vss-web-extension-sdk.TriSplitNavigationView._element
       - vss-web-extension-sdk.TriSplitNavigationView._enhance
+      - vss-web-extension-sdk.TriSplitNavigationView._enhancementOptions
       - vss-web-extension-sdk.TriSplitNavigationView._ensureInitialized
       - vss-web-extension-sdk.TriSplitNavigationView._fire
       - vss-web-extension-sdk.TriSplitNavigationView._fireChange
@@ -45,6 +54,8 @@ items:
       - vss-web-extension-sdk.TriSplitNavigationView._getPageTitleString
       - vss-web-extension-sdk.TriSplitNavigationView._getUniqueId
       - vss-web-extension-sdk.TriSplitNavigationView._getViewTitle
+      - vss-web-extension-sdk.TriSplitNavigationView._initialized
+      - vss-web-extension-sdk.TriSplitNavigationView._options
       - vss-web-extension-sdk.TriSplitNavigationView._setElement
       - vss-web-extension-sdk.TriSplitNavigationView._setId
       - vss-web-extension-sdk.TriSplitNavigationView._setTitleMode
@@ -57,6 +68,18 @@ items:
       depends
 
       on the structure defined in the HubPageExplorerTriSplitPivot.master page.
+  - uid: vss-web-extension-sdk.TriSplitNavigationView.ACTION_CONTRIBUTION
+    name: ACTION_CONTRIBUTION
+    fullName: ACTION_CONTRIBUTION
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TriSplitNavigationView.cancelDelayedFunction
     name: 'cancelDelayedFunction(name: string)'
     children: []
@@ -222,6 +245,42 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.TriSplitNavigationView.ENHANCEMENTS_DATA_KEY
+    name: ENHANCEMENTS_DATA_KEY
+    fullName: ENHANCEMENTS_DATA_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TriSplitNavigationView.ENHANCEMENT_OPTIONPREFIX_KEY
+    name: ENHANCEMENT_OPTIONPREFIX_KEY
+    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TriSplitNavigationView.ENHANCEMENT_OPTIONS_KEY
+    name: ENHANCEMENT_OPTIONS_KEY
+    fullName: ENHANCEMENT_OPTIONS_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TriSplitNavigationView.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -475,6 +534,18 @@ items:
             Hash object containing the hash-url parameters
       content: 'function onNavigate(state: any)'
     type: method
+  - uid: vss-web-extension-sdk.TriSplitNavigationView.optionsPrefix
+    name: optionsPrefix
+    fullName: optionsPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TriSplitNavigationView.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -787,6 +858,30 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.TriSplitNavigationView._disposed
+    name: _disposed
+    fullName: _disposed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.TriSplitNavigationView._element
+    name: _element
+    fullName: _element
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
   - uid: vss-web-extension-sdk.TriSplitNavigationView._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -802,6 +897,18 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
+  - uid: vss-web-extension-sdk.TriSplitNavigationView._enhancementOptions
+    name: _enhancementOptions
+    fullName: _enhancementOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.TriSplitNavigationView._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -932,6 +1039,30 @@ items:
         type:
           - JQuery
     type: method
+  - uid: vss-web-extension-sdk.TriSplitNavigationView._initialized
+    name: _initialized
+    fullName: _initialized
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.TriSplitNavigationView._options
+    name: _options
+    fullName: _options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any
   - uid: vss-web-extension-sdk.TriSplitNavigationView._setElement
     name: '_setElement(element: JQuery)'
     children: []

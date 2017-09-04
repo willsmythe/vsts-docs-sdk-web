@@ -10,6 +10,10 @@ items:
       - vss-web-extension-sdk.StatusIndicatorO.delayExecute
       - vss-web-extension-sdk.StatusIndicatorO.delayStart
       - vss-web-extension-sdk.StatusIndicatorO.enhance
+      - vss-web-extension-sdk.StatusIndicatorO.ENHANCEMENTS_DATA_KEY
+      - vss-web-extension-sdk.StatusIndicatorO.enhancementTypeName
+      - vss-web-extension-sdk.StatusIndicatorO.ENHANCEMENT_OPTIONPREFIX_KEY
+      - vss-web-extension-sdk.StatusIndicatorO.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.StatusIndicatorO.ensureEnhancement
       - vss-web-extension-sdk.StatusIndicatorO.ensureEnhancements
       - vss-web-extension-sdk.StatusIndicatorO.focus
@@ -22,6 +26,7 @@ items:
       - vss-web-extension-sdk.StatusIndicatorO.getTypeName
       - vss-web-extension-sdk.StatusIndicatorO.initializeOptions
       - vss-web-extension-sdk.StatusIndicatorO.isDisposed
+      - vss-web-extension-sdk.StatusIndicatorO.optionsPrefix
       - vss-web-extension-sdk.StatusIndicatorO.registerEnhancement
       - vss-web-extension-sdk.StatusIndicatorO.registerJQueryWidget
       - vss-web-extension-sdk.StatusIndicatorO.setAttribute
@@ -30,13 +35,18 @@ items:
       - vss-web-extension-sdk.StatusIndicatorO.start
       - vss-web-extension-sdk.StatusIndicatorO.constructor
       - vss-web-extension-sdk.StatusIndicatorO._bind
+      - vss-web-extension-sdk.StatusIndicatorO._disposed
+      - vss-web-extension-sdk.StatusIndicatorO._element
       - vss-web-extension-sdk.StatusIndicatorO._enhance
+      - vss-web-extension-sdk.StatusIndicatorO._enhancementOptions
       - vss-web-extension-sdk.StatusIndicatorO._ensureInitialized
       - vss-web-extension-sdk.StatusIndicatorO._fire
       - vss-web-extension-sdk.StatusIndicatorO._fireChange
       - vss-web-extension-sdk.StatusIndicatorO._getEventNameSpace
       - vss-web-extension-sdk.StatusIndicatorO._getInDomPromise
       - vss-web-extension-sdk.StatusIndicatorO._getUniqueId
+      - vss-web-extension-sdk.StatusIndicatorO._initialized
+      - vss-web-extension-sdk.StatusIndicatorO._options
       - vss-web-extension-sdk.StatusIndicatorO._setElement
       - vss-web-extension-sdk.StatusIndicatorO._setId
       - vss-web-extension-sdk.StatusIndicatorO._unbind
@@ -224,6 +234,54 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.StatusIndicatorO.ENHANCEMENTS_DATA_KEY
+    name: ENHANCEMENTS_DATA_KEY
+    fullName: ENHANCEMENTS_DATA_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.StatusIndicatorO.enhancementTypeName
+    name: enhancementTypeName
+    fullName: enhancementTypeName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.StatusIndicatorO.ENHANCEMENT_OPTIONPREFIX_KEY
+    name: ENHANCEMENT_OPTIONPREFIX_KEY
+    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.StatusIndicatorO.ENHANCEMENT_OPTIONS_KEY
+    name: ENHANCEMENT_OPTIONS_KEY
+    fullName: ENHANCEMENT_OPTIONS_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.StatusIndicatorO.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -439,6 +497,18 @@ items:
         type:
           - boolean
     type: method
+  - uid: vss-web-extension-sdk.StatusIndicatorO.optionsPrefix
+    name: optionsPrefix
+    fullName: optionsPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.StatusIndicatorO.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -658,6 +728,30 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.StatusIndicatorO._disposed
+    name: _disposed
+    fullName: _disposed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.StatusIndicatorO._element
+    name: _element
+    fullName: _element
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
   - uid: vss-web-extension-sdk.StatusIndicatorO._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -673,6 +767,18 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
+  - uid: vss-web-extension-sdk.StatusIndicatorO._enhancementOptions
+    name: _enhancementOptions
+    fullName: _enhancementOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.StatusIndicatorO._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -775,6 +881,30 @@ items:
         type:
           - string
     type: method
+  - uid: vss-web-extension-sdk.StatusIndicatorO._initialized
+    name: _initialized
+    fullName: _initialized
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.StatusIndicatorO._options
+    name: _options
+    fullName: _options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - TOptions
   - uid: vss-web-extension-sdk.StatusIndicatorO._setElement
     name: '_setElement(element: JQuery)'
     children: []

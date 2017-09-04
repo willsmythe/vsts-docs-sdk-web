@@ -3,8 +3,47 @@ items:
   - uid: vss-web-extension-sdk.PersonaCardState
     name: PersonaCardState
     fullName: PersonaCardState
-    children: []
+    children:
+      - vss-web-extension-sdk.PersonaCardState.dataState
+      - vss-web-extension-sdk.PersonaCardState.visualState
+      - vss-web-extension-sdk.PersonaCardState.working
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.PersonaCardState.dataState
+    name: dataState
+    fullName: dataState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.DataState
+  - uid: vss-web-extension-sdk.PersonaCardState.visualState
+    name: visualState
+    fullName: visualState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.PersonaCardState.working
+    name: working
+    fullName: working
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean

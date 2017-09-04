@@ -3,8 +3,144 @@ items:
   - uid: vss-web-extension-sdk.ISearchBoxControlOptions
     name: ISearchBoxControlOptions
     fullName: ISearchBoxControlOptions
-    children: []
+    children:
+      - vss-web-extension-sdk.ISearchBoxControlOptions.activateSearchHandler
+      - vss-web-extension-sdk.ISearchBoxControlOptions.deactivateSearchHandler
+      - vss-web-extension-sdk.ISearchBoxControlOptions.filterTitle
+      - vss-web-extension-sdk.ISearchBoxControlOptions.hideWatermark
+      - vss-web-extension-sdk.ISearchBoxControlOptions.inputChangedEventHandler
+      - vss-web-extension-sdk.ISearchBoxControlOptions.placeholderText
+      - vss-web-extension-sdk.ISearchBoxControlOptions.searchBoxActiveIcon
+      - vss-web-extension-sdk.ISearchBoxControlOptions.searchBoxIcon
+      - vss-web-extension-sdk.ISearchBoxControlOptions.searchIconTooltip
+      - vss-web-extension-sdk.ISearchBoxControlOptions.tabIndex
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.ISearchBoxControlOptions.activateSearchHandler
+    name: activateSearchHandler
+    fullName: activateSearchHandler
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'activateSearchHandler: Optional: Callback when the control is activated.'
+    syntax:
+      return:
+        type:
+          - Function
+  - uid: vss-web-extension-sdk.ISearchBoxControlOptions.deactivateSearchHandler
+    name: deactivateSearchHandler
+    fullName: deactivateSearchHandler
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      deactivateSearchHandler: Optional: Callback when the control is
+      deactivated.
+    syntax:
+      return:
+        type:
+          - Function
+  - uid: vss-web-extension-sdk.ISearchBoxControlOptions.filterTitle
+    name: filterTitle
+    fullName: filterTitle
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'filterTitle: Optional: Aria-label for the control input.'
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ISearchBoxControlOptions.hideWatermark
+    name: hideWatermark
+    fullName: hideWatermark
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'hideWatermark: Optional: Set to true to hide watermark for the control.'
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ISearchBoxControlOptions.inputChangedEventHandler
+    name: inputChangedEventHandler
+    fullName: inputChangedEventHandler
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'inputChangedEventHandler: Optional: When the control input changed.'
+    syntax:
+      return:
+        type:
+          - Function
+  - uid: vss-web-extension-sdk.ISearchBoxControlOptions.placeholderText
+    name: placeholderText
+    fullName: placeholderText
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Optional: Place holder/water mark text for search box.'
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ISearchBoxControlOptions.searchBoxActiveIcon
+    name: searchBoxActiveIcon
+    fullName: searchBoxActiveIcon
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Optional: Search box icon when it's active, default behaviour is icon
+      unchanged.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ISearchBoxControlOptions.searchBoxIcon
+    name: searchBoxIcon
+    fullName: searchBoxIcon
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Optional: Search icon, defaults to bowtie-search icon.'
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ISearchBoxControlOptions.searchIconTooltip
+    name: searchIconTooltip
+    fullName: searchIconTooltip
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      searchIconTooltip: Optional: Tooltip for the search icon of
+      ToggleSearchBoxControl.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ISearchBoxControlOptions.tabIndex
+    name: tabIndex
+    fullName: tabIndex
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Optional: Tab index for search box.'
+    syntax:
+      return:
+        type:
+          - number

@@ -4,6 +4,7 @@ items:
     name: MultiSelectTreeComboBehavior
     fullName: MultiSelectTreeComboBehavior
     children:
+      - vss-web-extension-sdk.MultiSelectTreeComboBehavior.combo
       - vss-web-extension-sdk.MultiSelectTreeComboBehavior.downKey
       - vss-web-extension-sdk.MultiSelectTreeComboBehavior.getAriaAutocomplete
       - vss-web-extension-sdk.MultiSelectTreeComboBehavior.getAriaDescription
@@ -25,12 +26,27 @@ items:
       - vss-web-extension-sdk.MultiSelectTreeComboBehavior.selectPrev
       - vss-web-extension-sdk.MultiSelectTreeComboBehavior.setText
       - vss-web-extension-sdk.MultiSelectTreeComboBehavior.upKey
+      - vss-web-extension-sdk.MultiSelectTreeComboBehavior._dataSource
       - vss-web-extension-sdk.MultiSelectTreeComboBehavior._dropSelectionChanged
+      - vss-web-extension-sdk.MultiSelectTreeComboBehavior._maxItemLength
+      - vss-web-extension-sdk.MultiSelectTreeComboBehavior._options
       - vss-web-extension-sdk.MultiSelectTreeComboBehavior._setSelectedIndex
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.MultiSelectTreeComboBehavior.combo
+    name: combo
+    fullName: combo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.Combo
   - uid: vss-web-extension-sdk.MultiSelectTreeComboBehavior.downKey
     name: 'downKey(e?: JQueryEventObject)'
     children: []
@@ -404,6 +420,18 @@ items:
         type:
           - any
     type: method
+  - uid: vss-web-extension-sdk.MultiSelectTreeComboBehavior._dataSource
+    name: _dataSource
+    fullName: _dataSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.BaseDataSource
   - uid: vss-web-extension-sdk.MultiSelectTreeComboBehavior._dropSelectionChanged
     name: '_dropSelectionChanged(selectedIndex: any, accept: any)'
     children: []
@@ -423,6 +451,30 @@ items:
             User has performed a click action
       content: 'function _dropSelectionChanged(selectedIndex: any, accept: any)'
     type: method
+  - uid: vss-web-extension-sdk.MultiSelectTreeComboBehavior._maxItemLength
+    name: _maxItemLength
+    fullName: _maxItemLength
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.MultiSelectTreeComboBehavior._options
+    name: _options
+    fullName: _options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any
   - uid: vss-web-extension-sdk.MultiSelectTreeComboBehavior._setSelectedIndex
     name: '_setSelectedIndex(selectedIndex: number, fireEvent?: boolean)'
     children: []

@@ -3,8 +3,75 @@ items:
   - uid: vss-web-extension-sdk.AccessMapping
     name: AccessMapping
     fullName: AccessMapping
-    children: []
+    children:
+      - vss-web-extension-sdk.AccessMapping.accessPoint
+      - vss-web-extension-sdk.AccessMapping.displayName
+      - vss-web-extension-sdk.AccessMapping.moniker
+      - vss-web-extension-sdk.AccessMapping.serviceOwner
+      - vss-web-extension-sdk.AccessMapping.virtualDirectory
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.AccessMapping.accessPoint
+    name: accessPoint
+    fullName: accessPoint
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.AccessMapping.displayName
+    name: displayName
+    fullName: displayName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.AccessMapping.moniker
+    name: moniker
+    fullName: moniker
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.AccessMapping.serviceOwner
+    name: serviceOwner
+    fullName: serviceOwner
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'The service which owns this access mapping e.g. TFS, ELS, etc.'
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.AccessMapping.virtualDirectory
+    name: virtualDirectory
+    fullName: virtualDirectory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Part of the access mapping which applies context after the access point of
+      the server.
+    syntax:
+      return:
+        type:
+          - string

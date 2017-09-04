@@ -9,6 +9,9 @@ items:
       - vss-web-extension-sdk.ToastNotification.createIn
       - vss-web-extension-sdk.ToastNotification.delayExecute
       - vss-web-extension-sdk.ToastNotification.enhance
+      - vss-web-extension-sdk.ToastNotification.ENHANCEMENTS_DATA_KEY
+      - vss-web-extension-sdk.ToastNotification.ENHANCEMENT_OPTIONPREFIX_KEY
+      - vss-web-extension-sdk.ToastNotification.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.ToastNotification.ensureEnhancement
       - vss-web-extension-sdk.ToastNotification.ensureEnhancements
       - vss-web-extension-sdk.ToastNotification.focus
@@ -20,6 +23,7 @@ items:
       - vss-web-extension-sdk.ToastNotification.getTypeName
       - vss-web-extension-sdk.ToastNotification.getTypeName
       - vss-web-extension-sdk.ToastNotification.isDisposed
+      - vss-web-extension-sdk.ToastNotification.optionsPrefix
       - vss-web-extension-sdk.ToastNotification.registerEnhancement
       - vss-web-extension-sdk.ToastNotification.registerJQueryWidget
       - vss-web-extension-sdk.ToastNotification.setAttribute
@@ -28,13 +32,18 @@ items:
       - vss-web-extension-sdk.ToastNotification.toast
       - vss-web-extension-sdk.ToastNotification.constructor
       - vss-web-extension-sdk.ToastNotification._bind
+      - vss-web-extension-sdk.ToastNotification._disposed
+      - vss-web-extension-sdk.ToastNotification._element
       - vss-web-extension-sdk.ToastNotification._enhance
+      - vss-web-extension-sdk.ToastNotification._enhancementOptions
       - vss-web-extension-sdk.ToastNotification._ensureInitialized
       - vss-web-extension-sdk.ToastNotification._fire
       - vss-web-extension-sdk.ToastNotification._fireChange
       - vss-web-extension-sdk.ToastNotification._getEventNameSpace
       - vss-web-extension-sdk.ToastNotification._getInDomPromise
       - vss-web-extension-sdk.ToastNotification._getUniqueId
+      - vss-web-extension-sdk.ToastNotification._initialized
+      - vss-web-extension-sdk.ToastNotification._options
       - vss-web-extension-sdk.ToastNotification._setElement
       - vss-web-extension-sdk.ToastNotification._setId
       - vss-web-extension-sdk.ToastNotification._unbind
@@ -209,6 +218,42 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.ToastNotification.ENHANCEMENTS_DATA_KEY
+    name: ENHANCEMENTS_DATA_KEY
+    fullName: ENHANCEMENTS_DATA_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ToastNotification.ENHANCEMENT_OPTIONPREFIX_KEY
+    name: ENHANCEMENT_OPTIONPREFIX_KEY
+    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ToastNotification.ENHANCEMENT_OPTIONS_KEY
+    name: ENHANCEMENT_OPTIONS_KEY
+    fullName: ENHANCEMENT_OPTIONS_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ToastNotification.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -408,6 +453,18 @@ items:
         type:
           - boolean
     type: method
+  - uid: vss-web-extension-sdk.ToastNotification.optionsPrefix
+    name: optionsPrefix
+    fullName: optionsPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.ToastNotification.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -631,6 +688,30 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.ToastNotification._disposed
+    name: _disposed
+    fullName: _disposed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ToastNotification._element
+    name: _element
+    fullName: _element
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
   - uid: vss-web-extension-sdk.ToastNotification._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -646,6 +727,18 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
+  - uid: vss-web-extension-sdk.ToastNotification._enhancementOptions
+    name: _enhancementOptions
+    fullName: _enhancementOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.ToastNotification._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -748,6 +841,30 @@ items:
         type:
           - string
     type: method
+  - uid: vss-web-extension-sdk.ToastNotification._initialized
+    name: _initialized
+    fullName: _initialized
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ToastNotification._options
+    name: _options
+    fullName: _options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any
   - uid: vss-web-extension-sdk.ToastNotification._setElement
     name: '_setElement(element: JQuery)'
     children: []

@@ -4,6 +4,14 @@ items:
     name: GitHttpClient3
     fullName: GitHttpClient3
     children:
+      - vss-web-extension-sdk.GitHttpClient3.authTokenManager
+      - vss-web-extension-sdk.GitHttpClient3.blobsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.branchStatsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.changesApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.cherryPicksApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.commitDiffsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.commitsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.commitsBatchApiVersion
       - vss-web-extension-sdk.GitHttpClient3.createCherryPick
       - vss-web-extension-sdk.GitHttpClient3.createComment
       - vss-web-extension-sdk.GitHttpClient3.createCommitStatus
@@ -19,9 +27,12 @@ items:
       - vss-web-extension-sdk.GitHttpClient3.createRevert
       - vss-web-extension-sdk.GitHttpClient3.createThread
       - vss-web-extension-sdk.GitHttpClient3.deleteComment
+      - vss-web-extension-sdk.GitHttpClient3.deletedRepositoriesApiVersion
       - vss-web-extension-sdk.GitHttpClient3.deletePullRequestReviewer
       - vss-web-extension-sdk.GitHttpClient3.deleteRefFavorite
       - vss-web-extension-sdk.GitHttpClient3.deleteRepository
+      - vss-web-extension-sdk.GitHttpClient3.filePathsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.GitHttpClient3.getBlob
       - vss-web-extension-sdk.GitHttpClient3.getBlobContent
       - vss-web-extension-sdk.GitHttpClient3.getBlobsZip
@@ -85,7 +96,42 @@ items:
       - vss-web-extension-sdk.GitHttpClient3.getTree
       - vss-web-extension-sdk.GitHttpClient3.getTreeZip
       - vss-web-extension-sdk.GitHttpClient3.constructor
+      - >-
+        vss-web-extension-sdk.GitHttpClient3.importRepositoryValidationsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.importRequestsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.itemsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.itemsBatchApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.pullRequestCommitsApiVersion
+      - >-
+        vss-web-extension-sdk.GitHttpClient3.pullRequestCommitsApiVersion_e7ea0883
+      - vss-web-extension-sdk.GitHttpClient3.pullRequestConflictsApiVersion
+      - >-
+        vss-web-extension-sdk.GitHttpClient3.pullRequestIterationChangesApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.pullRequestIterationsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.pullRequestQueryApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.pullRequestReviewersApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.pullRequestsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.pullRequestsApiVersion_01a46dea
+      - vss-web-extension-sdk.GitHttpClient3.pullRequestsApiVersion_a5d28130
+      - vss-web-extension-sdk.GitHttpClient3.pullRequestStatusesApiVersion
+      - >-
+        vss-web-extension-sdk.GitHttpClient3.pullRequestStatusesApiVersion_75cf11c5
+      - vss-web-extension-sdk.GitHttpClient3.pullRequestThreadCommentsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.pullRequestThreadsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.pullRequestWorkItemsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.pushesApiVersion
       - vss-web-extension-sdk.GitHttpClient3.queryImportRequests
+      - vss-web-extension-sdk.GitHttpClient3.refsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.refsFavoritesApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.repositoriesApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.repositoryStatsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.revertsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.serviceInstanceId
+      - vss-web-extension-sdk.GitHttpClient3.statusesApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.suggestionsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.templatesApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.treeDiffsApiVersion
+      - vss-web-extension-sdk.GitHttpClient3.treesApiVersion
       - vss-web-extension-sdk.GitHttpClient3.updateComment
       - vss-web-extension-sdk.GitHttpClient3.updateImportRequest
       - vss-web-extension-sdk.GitHttpClient3.updatePullRequest
@@ -99,11 +145,108 @@ items:
       - vss-web-extension-sdk.GitHttpClient3._beginRequest
       - vss-web-extension-sdk.GitHttpClient3._beginRequestWithAjaxResult
       - vss-web-extension-sdk.GitHttpClient3._issueAjaxRequest
+      - vss-web-extension-sdk.GitHttpClient3._rootRequestPath
       - vss-web-extension-sdk.GitHttpClient3._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.GitHttpClient3.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.GitHttpClient3.blobsApiVersion
+    name: blobsApiVersion
+    fullName: blobsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.branchStatsApiVersion
+    name: branchStatsApiVersion
+    fullName: branchStatsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.changesApiVersion
+    name: changesApiVersion
+    fullName: changesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.cherryPicksApiVersion
+    name: cherryPicksApiVersion
+    fullName: cherryPicksApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.commitDiffsApiVersion
+    name: commitDiffsApiVersion
+    fullName: commitDiffsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.commitsApiVersion
+    name: commitsApiVersion
+    fullName: commitsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.commitsBatchApiVersion
+    name: commitsBatchApiVersion
+    fullName: commitsBatchApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GitHttpClient3.createCherryPick
     name: >-
       createCherryPick(cherryPickToCreate: GitAsyncRefOperationParameters,
@@ -604,6 +747,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GitHttpClient3.deletedRepositoriesApiVersion
+    name: deletedRepositoriesApiVersion
+    fullName: deletedRepositoriesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GitHttpClient3.deletePullRequestReviewer
     name: >-
       deletePullRequestReviewer(repositoryId: string, pullRequestId: number,
@@ -681,6 +836,30 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GitHttpClient3.filePathsApiVersion
+    name: filePathsApiVersion
+    fullName: filePathsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.GitHttpClient3.getBlob
     name: >-
       getBlob(repositoryId: string, sha1: string, project?: string, download?:
@@ -3109,6 +3288,247 @@ items:
         type:
           - vss-web-extension-sdk.GitHttpClient3
     type: constructor
+  - uid: vss-web-extension-sdk.GitHttpClient3.importRepositoryValidationsApiVersion
+    name: importRepositoryValidationsApiVersion
+    fullName: importRepositoryValidationsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.importRequestsApiVersion
+    name: importRequestsApiVersion
+    fullName: importRequestsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.itemsApiVersion
+    name: itemsApiVersion
+    fullName: itemsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.itemsBatchApiVersion
+    name: itemsBatchApiVersion
+    fullName: itemsBatchApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.pullRequestCommitsApiVersion
+    name: pullRequestCommitsApiVersion
+    fullName: pullRequestCommitsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.pullRequestCommitsApiVersion_e7ea0883
+    name: pullRequestCommitsApiVersion_e7ea0883
+    fullName: pullRequestCommitsApiVersion_e7ea0883
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.pullRequestConflictsApiVersion
+    name: pullRequestConflictsApiVersion
+    fullName: pullRequestConflictsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.pullRequestIterationChangesApiVersion
+    name: pullRequestIterationChangesApiVersion
+    fullName: pullRequestIterationChangesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.pullRequestIterationsApiVersion
+    name: pullRequestIterationsApiVersion
+    fullName: pullRequestIterationsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.pullRequestQueryApiVersion
+    name: pullRequestQueryApiVersion
+    fullName: pullRequestQueryApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.pullRequestReviewersApiVersion
+    name: pullRequestReviewersApiVersion
+    fullName: pullRequestReviewersApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.pullRequestsApiVersion
+    name: pullRequestsApiVersion
+    fullName: pullRequestsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.pullRequestsApiVersion_01a46dea
+    name: pullRequestsApiVersion_01a46dea
+    fullName: pullRequestsApiVersion_01a46dea
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.pullRequestsApiVersion_a5d28130
+    name: pullRequestsApiVersion_a5d28130
+    fullName: pullRequestsApiVersion_a5d28130
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.pullRequestStatusesApiVersion
+    name: pullRequestStatusesApiVersion
+    fullName: pullRequestStatusesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.GitHttpClient3.pullRequestStatusesApiVersion_75cf11c5
+    name: pullRequestStatusesApiVersion_75cf11c5
+    fullName: pullRequestStatusesApiVersion_75cf11c5
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.pullRequestThreadCommentsApiVersion
+    name: pullRequestThreadCommentsApiVersion
+    fullName: pullRequestThreadCommentsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.pullRequestThreadsApiVersion
+    name: pullRequestThreadsApiVersion
+    fullName: pullRequestThreadsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.pullRequestWorkItemsApiVersion
+    name: pullRequestWorkItemsApiVersion
+    fullName: pullRequestWorkItemsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.pushesApiVersion
+    name: pushesApiVersion
+    fullName: pushesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GitHttpClient3.queryImportRequests
     name: >-
       queryImportRequests(project: string, repositoryId: string,
@@ -3139,6 +3559,138 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GitHttpClient3.refsApiVersion
+    name: refsApiVersion
+    fullName: refsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.refsFavoritesApiVersion
+    name: refsFavoritesApiVersion
+    fullName: refsFavoritesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.repositoriesApiVersion
+    name: repositoriesApiVersion
+    fullName: repositoriesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.repositoryStatsApiVersion
+    name: repositoryStatsApiVersion
+    fullName: repositoryStatsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.revertsApiVersion
+    name: revertsApiVersion
+    fullName: revertsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.serviceInstanceId
+    name: serviceInstanceId
+    fullName: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.statusesApiVersion
+    name: statusesApiVersion
+    fullName: statusesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.suggestionsApiVersion
+    name: suggestionsApiVersion
+    fullName: suggestionsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.templatesApiVersion
+    name: templatesApiVersion
+    fullName: templatesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.treeDiffsApiVersion
+    name: treeDiffsApiVersion
+    fullName: treeDiffsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.GitHttpClient3.treesApiVersion
+    name: treesApiVersion
+    fullName: treesApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GitHttpClient3.updateComment
     name: >-
       updateComment(comment: Comment, repositoryId: string, pullRequestId:
@@ -3576,6 +4128,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.GitHttpClient3._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.GitHttpClient3._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []

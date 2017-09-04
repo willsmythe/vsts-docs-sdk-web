@@ -9,6 +9,9 @@ items:
       - vss-web-extension-sdk.Header.createIn
       - vss-web-extension-sdk.Header.delayExecute
       - vss-web-extension-sdk.Header.enhance
+      - vss-web-extension-sdk.Header.ENHANCEMENTS_DATA_KEY
+      - vss-web-extension-sdk.Header.ENHANCEMENT_OPTIONPREFIX_KEY
+      - vss-web-extension-sdk.Header.ENHANCEMENT_OPTIONS_KEY
       - vss-web-extension-sdk.Header.ensureEnhancement
       - vss-web-extension-sdk.Header.ensureEnhancements
       - vss-web-extension-sdk.Header.focus
@@ -21,19 +24,25 @@ items:
       - vss-web-extension-sdk.Header.getTypeName
       - vss-web-extension-sdk.Header.constructor
       - vss-web-extension-sdk.Header.isDisposed
+      - vss-web-extension-sdk.Header.optionsPrefix
       - vss-web-extension-sdk.Header.registerEnhancement
       - vss-web-extension-sdk.Header.registerJQueryWidget
       - vss-web-extension-sdk.Header.setAttribute
       - vss-web-extension-sdk.Header.setEnhancementOptions
       - vss-web-extension-sdk.Header.setRole
       - vss-web-extension-sdk.Header._bind
+      - vss-web-extension-sdk.Header._disposed
+      - vss-web-extension-sdk.Header._element
       - vss-web-extension-sdk.Header._enhance
+      - vss-web-extension-sdk.Header._enhancementOptions
       - vss-web-extension-sdk.Header._ensureInitialized
       - vss-web-extension-sdk.Header._fire
       - vss-web-extension-sdk.Header._fireChange
       - vss-web-extension-sdk.Header._getEventNameSpace
       - vss-web-extension-sdk.Header._getInDomPromise
       - vss-web-extension-sdk.Header._getUniqueId
+      - vss-web-extension-sdk.Header._initialized
+      - vss-web-extension-sdk.Header._options
       - vss-web-extension-sdk.Header._setElement
       - vss-web-extension-sdk.Header._setId
       - vss-web-extension-sdk.Header._unbind
@@ -206,6 +215,42 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.Header.ENHANCEMENTS_DATA_KEY
+    name: ENHANCEMENTS_DATA_KEY
+    fullName: ENHANCEMENTS_DATA_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Header.ENHANCEMENT_OPTIONPREFIX_KEY
+    name: ENHANCEMENT_OPTIONPREFIX_KEY
+    fullName: ENHANCEMENT_OPTIONPREFIX_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.Header.ENHANCEMENT_OPTIONS_KEY
+    name: ENHANCEMENT_OPTIONS_KEY
+    fullName: ENHANCEMENT_OPTIONS_KEY
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.Header.ensureEnhancement
     name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
     children: []
@@ -424,6 +469,18 @@ items:
         type:
           - boolean
     type: method
+  - uid: vss-web-extension-sdk.Header.optionsPrefix
+    name: optionsPrefix
+    fullName: optionsPrefix
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.Header.registerEnhancement
     name: >-
       registerEnhancement(type?: function, selector?: string, options?:
@@ -609,6 +666,30 @@ items:
         type:
           - vss-web-extension-sdk.Enhancement
     type: method
+  - uid: vss-web-extension-sdk.Header._disposed
+    name: _disposed
+    fullName: _disposed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.Header._element
+    name: _element
+    fullName: _element
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - JQuery
   - uid: vss-web-extension-sdk.Header._enhance
     name: '_enhance(element: JQuery)'
     children: []
@@ -624,6 +705,18 @@ items:
 
       content: 'function _enhance(element: JQuery)'
     type: method
+  - uid: vss-web-extension-sdk.Header._enhancementOptions
+    name: _enhancementOptions
+    fullName: _enhancementOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.EnhancementOptions
   - uid: vss-web-extension-sdk.Header._ensureInitialized
     name: _ensureInitialized()
     children: []
@@ -726,6 +819,30 @@ items:
         type:
           - string
     type: method
+  - uid: vss-web-extension-sdk.Header._initialized
+    name: _initialized
+    fullName: _initialized
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.Header._options
+    name: _options
+    fullName: _options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - TModel
   - uid: vss-web-extension-sdk.Header._setElement
     name: '_setElement(element: JQuery)'
     children: []

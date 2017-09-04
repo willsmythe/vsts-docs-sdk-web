@@ -3,8 +3,34 @@ items:
   - uid: vss-web-extension-sdk.BuildProcess
     name: BuildProcess
     fullName: BuildProcess
-    children: []
+    children:
+      - vss-web-extension-sdk.BuildProcess.repositories
+      - vss-web-extension-sdk.BuildProcess.type
     langs:
       - typeScript
     type: interface
     summary: ''
+  - uid: vss-web-extension-sdk.BuildProcess.repositories
+    name: repositories
+    fullName: repositories
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.BuildProcess.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number

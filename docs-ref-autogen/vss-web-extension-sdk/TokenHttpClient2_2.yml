@@ -4,24 +4,80 @@ items:
     name: TokenHttpClient2_2
     fullName: TokenHttpClient2_2
     children:
+      - vss-web-extension-sdk.TokenHttpClient2_2.accessTokensApiVersion
+      - vss-web-extension-sdk.TokenHttpClient2_2.appSessionTokensApiVersion
+      - vss-web-extension-sdk.TokenHttpClient2_2.appTokenPairsApiVersion
+      - vss-web-extension-sdk.TokenHttpClient2_2.authTokenManager
       - vss-web-extension-sdk.TokenHttpClient2_2.createSessionToken
       - vss-web-extension-sdk.TokenHttpClient2_2.exchangeAppToken
+      - >-
+        vss-web-extension-sdk.TokenHttpClient2_2.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.TokenHttpClient2_2.getAccessToken
       - vss-web-extension-sdk.TokenHttpClient2_2.getSessionToken
       - vss-web-extension-sdk.TokenHttpClient2_2.getSessionTokens
       - vss-web-extension-sdk.TokenHttpClient2_2.issueAppSessionToken
       - vss-web-extension-sdk.TokenHttpClient2_2.removePublicKey
       - vss-web-extension-sdk.TokenHttpClient2_2.revokeSessionToken
+      - vss-web-extension-sdk.TokenHttpClient2_2.sessionTokensApiVersion
       - vss-web-extension-sdk.TokenHttpClient2_2.constructor
       - vss-web-extension-sdk.TokenHttpClient2_2._beginGetLocation
       - vss-web-extension-sdk.TokenHttpClient2_2._beginRequest
       - vss-web-extension-sdk.TokenHttpClient2_2._beginRequestWithAjaxResult
       - vss-web-extension-sdk.TokenHttpClient2_2._issueAjaxRequest
+      - vss-web-extension-sdk.TokenHttpClient2_2._rootRequestPath
       - vss-web-extension-sdk.TokenHttpClient2_2._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+  - uid: vss-web-extension-sdk.TokenHttpClient2_2.accessTokensApiVersion
+    name: accessTokensApiVersion
+    fullName: accessTokensApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TokenHttpClient2_2.appSessionTokensApiVersion
+    name: appSessionTokensApiVersion
+    fullName: appSessionTokensApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TokenHttpClient2_2.appTokenPairsApiVersion
+    name: appTokenPairsApiVersion
+    fullName: appTokenPairsApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TokenHttpClient2_2.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
   - uid: vss-web-extension-sdk.TokenHttpClient2_2.createSessionToken
     name: >-
       createSessionToken(sessionToken: SessionToken, tokenType?: function,
@@ -70,6 +126,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TokenHttpClient2_2.forceOptionsCallForAutoNegotiate
+    name: forceOptionsCallForAutoNegotiate
+    fullName: forceOptionsCallForAutoNegotiate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
   - uid: vss-web-extension-sdk.TokenHttpClient2_2.getAccessToken
     name: 'getAccessToken(key?: string, isPublic?: boolean)'
     children: []
@@ -205,6 +273,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TokenHttpClient2_2.sessionTokensApiVersion
+    name: sessionTokensApiVersion
+    fullName: sessionTokensApiVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TokenHttpClient2_2.constructor
     name: >-
       TokenHttpClient2_2(rootRequestPath: string, options?:
@@ -346,6 +426,18 @@ items:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
+  - uid: vss-web-extension-sdk.TokenHttpClient2_2._rootRequestPath
+    name: _rootRequestPath
+    fullName: _rootRequestPath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
   - uid: vss-web-extension-sdk.TokenHttpClient2_2._setInitializationPromise
     name: '_setInitializationPromise(promise: IPromise)'
     children: []
