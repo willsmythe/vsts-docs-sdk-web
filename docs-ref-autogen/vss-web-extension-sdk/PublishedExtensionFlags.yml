@@ -1,0 +1,160 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.PublishedExtensionFlags
+    name: PublishedExtensionFlags
+    fullName: PublishedExtensionFlags
+    children:
+      - vss-web-extension-sdk.PublishedExtensionFlags.BuiltIn
+      - vss-web-extension-sdk.PublishedExtensionFlags.Disabled
+      - vss-web-extension-sdk.PublishedExtensionFlags.MultiVersion
+      - vss-web-extension-sdk.PublishedExtensionFlags.None
+      - vss-web-extension-sdk.PublishedExtensionFlags.Paid
+      - vss-web-extension-sdk.PublishedExtensionFlags.Preview
+      - vss-web-extension-sdk.PublishedExtensionFlags.Public
+      - vss-web-extension-sdk.PublishedExtensionFlags.System
+      - vss-web-extension-sdk.PublishedExtensionFlags.Trial
+      - vss-web-extension-sdk.PublishedExtensionFlags.Trusted
+      - vss-web-extension-sdk.PublishedExtensionFlags.Unpublished
+      - vss-web-extension-sdk.PublishedExtensionFlags.Validated
+    langs:
+      - typeScript
+    type: enum
+    summary: >-
+      Set of flags that can be associated with a given extension. These flags
+      apply to all versions of the extension and not to a specific version.
+  - uid: vss-web-extension-sdk.PublishedExtensionFlags.BuiltIn
+    name: BuiltIn
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      BuiltIn Extension are available to all Tenants. An explicit registration
+      is not required. This attribute is reserved and can't be supplied by
+      Extension Developers.  BuiltIn extensions are by definition Public. There
+      is no need to set the public flag for extensions marked BuiltIn.
+    type: field
+    numericValue: 2
+  - uid: vss-web-extension-sdk.PublishedExtensionFlags.Disabled
+    name: Disabled
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The Disabled flag for an extension means the extension can't be changed
+      and won't be used by consumers. The disabled flag is managed by the
+      service and can't be supplied by the Extension Developers.
+    type: field
+    numericValue: 1
+  - uid: vss-web-extension-sdk.PublishedExtensionFlags.MultiVersion
+    name: MultiVersion
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      This extension has multiple versions active at one time and version
+      discovery should be done usig the defined "Version Discovery" protocol to
+      determine the version available to a specific user or tenant.  @TODO: Link
+      to Version Discovery Protocol.
+    type: field
+    numericValue: 512
+  - uid: vss-web-extension-sdk.PublishedExtensionFlags.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: No flags exist for this extension.
+    type: field
+    numericValue: 0
+  - uid: vss-web-extension-sdk.PublishedExtensionFlags.Paid
+    name: Paid
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The Paid flag indicates that the commerce can be enabled for this
+      extension. Publisher needs to setup Offer/Pricing plan in Azure. If Paid
+      flag is set and a corresponding Offer is not available, the extension will
+      automatically be marked as Preview. If the publisher intends to make the
+      extension Paid in the future, it is mandatory to set the Preview flag.
+      This is currently available only for VSTS extensions only.
+    type: field
+    numericValue: 16
+  - uid: vss-web-extension-sdk.PublishedExtensionFlags.Preview
+    name: Preview
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The Preview flag indicates that the extension is still under preview (not
+      yet of "release" quality). These extensions may be decorated differently
+      in the gallery and may have different policies applied to them.
+    type: field
+    numericValue: 2048
+  - uid: vss-web-extension-sdk.PublishedExtensionFlags.Public
+    name: Public
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      This extension registration is public, making its visibilty open to the
+      public. This means all tenants have the ability to install this extension.
+      Without this flag the extension will be private and will need to be shared
+      with the tenants that can install it.
+    type: field
+    numericValue: 256
+  - uid: vss-web-extension-sdk.PublishedExtensionFlags.System
+    name: System
+    children: []
+    langs:
+      - typeScript
+    summary: 'The system flag is reserved, and cant be used by publishers.'
+    type: field
+    numericValue: 1024
+  - uid: vss-web-extension-sdk.PublishedExtensionFlags.Trial
+    name: Trial
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The Trial flag indicates that the extension is in Trial version. The flag
+      is right now being used only with respec to Visual Studio extensions.
+    type: field
+    numericValue: 8192
+  - uid: vss-web-extension-sdk.PublishedExtensionFlags.Trusted
+    name: Trusted
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Trusted extensions are ones that are given special capabilities. These
+      tend to come from Microsoft and can't be published by the general public. 
+      Note: BuiltIn extensions are always trusted.
+    type: field
+    numericValue: 8
+  - uid: vss-web-extension-sdk.PublishedExtensionFlags.Unpublished
+    name: Unpublished
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The Unpublished flag indicates that the extension can't be
+      installed/downloaded. Users who have installed such an extension can
+      continue to use the extension.
+    type: field
+    numericValue: 4096
+  - uid: vss-web-extension-sdk.PublishedExtensionFlags.Validated
+    name: Validated
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      This extension has been validated by the service. The extension meets the
+      requirements specified. This attribute is reserved and can't be supplied
+      by the Extension Developers. Validation is a process that ensures that all
+      contributions are well formed. They meet the requirements defined by the
+      contribution type they are extending. Note this attribute will be updated
+      asynchronously as the extension is validated by the developer of the
+      contribution type. There will be restricted access to the extension while
+      this process is performed.
+    type: field
+    numericValue: 4

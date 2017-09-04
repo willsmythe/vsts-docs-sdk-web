@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.DefinitionTriggerType
+    name: DefinitionTriggerType
+    fullName: DefinitionTriggerType
+    children:
+      - vss-web-extension-sdk.DefinitionTriggerType.All
+      - vss-web-extension-sdk.DefinitionTriggerType.BatchedContinuousIntegration
+      - vss-web-extension-sdk.DefinitionTriggerType.BatchedGatedCheckIn
+      - vss-web-extension-sdk.DefinitionTriggerType.ContinuousIntegration
+      - vss-web-extension-sdk.DefinitionTriggerType.GatedCheckIn
+      - vss-web-extension-sdk.DefinitionTriggerType.None
+      - vss-web-extension-sdk.DefinitionTriggerType.PullRequest
+      - vss-web-extension-sdk.DefinitionTriggerType.Schedule
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+  - uid: vss-web-extension-sdk.DefinitionTriggerType.All
+    name: All
+    children: []
+    langs:
+      - typeScript
+    summary: All types.
+    type: field
+    numericValue: 127
+  - uid: vss-web-extension-sdk.DefinitionTriggerType.BatchedContinuousIntegration
+    name: BatchedContinuousIntegration
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      A build should be started for multiple changesets at a time at a specified
+      interval.
+    type: field
+    numericValue: 4
+  - uid: vss-web-extension-sdk.DefinitionTriggerType.BatchedGatedCheckIn
+    name: BatchedGatedCheckIn
+    children: []
+    langs:
+      - typeScript
+    summary: A validation build should be started for each batch of check-ins.
+    type: field
+    numericValue: 32
+  - uid: vss-web-extension-sdk.DefinitionTriggerType.ContinuousIntegration
+    name: ContinuousIntegration
+    children: []
+    langs:
+      - typeScript
+    summary: A build should be started for each changeset.
+    type: field
+    numericValue: 2
+  - uid: vss-web-extension-sdk.DefinitionTriggerType.GatedCheckIn
+    name: GatedCheckIn
+    children: []
+    langs:
+      - typeScript
+    summary: A validation build should be started for each check-in.
+    type: field
+    numericValue: 16
+  - uid: vss-web-extension-sdk.DefinitionTriggerType.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: Manual builds only.
+    type: field
+    numericValue: 1
+  - uid: vss-web-extension-sdk.DefinitionTriggerType.PullRequest
+    name: PullRequest
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      A build should be triggered when a GitHub pull request is created or
+      updated. Added in resource version 3
+    type: field
+    numericValue: 64
+  - uid: vss-web-extension-sdk.DefinitionTriggerType.Schedule
+    name: Schedule
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      A build should be started on a specified schedule whether or not
+      changesets exist.
+    type: field
+    numericValue: 8

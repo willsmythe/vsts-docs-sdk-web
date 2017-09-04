@@ -1,0 +1,37 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.GitRefUpdateMode
+    name: GitRefUpdateMode
+    fullName: GitRefUpdateMode
+    children:
+      - vss-web-extension-sdk.GitRefUpdateMode.AllOrNone
+      - vss-web-extension-sdk.GitRefUpdateMode.BestEffort
+    langs:
+      - typeScript
+    type: enum
+    summary: >-
+      Enumerates the modes under which ref updates can be written to their
+      repositories.
+  - uid: vss-web-extension-sdk.GitRefUpdateMode.AllOrNone
+    name: AllOrNone
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates that all ref updates must succeed or none will succeed. All ref
+      updates will be atomically written. If any failure is encountered,
+      previously successful updates will be rolled back and the entire operation
+      will fail.
+    type: field
+    numericValue: 1
+  - uid: vss-web-extension-sdk.GitRefUpdateMode.BestEffort
+    name: BestEffort
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates the Git protocol model where any refs that can be updated will
+      be updated, but any failures will not prevent other updates from
+      succeeding.
+    type: field
+    numericValue: 0

@@ -1,0 +1,67 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.PublisherFlags
+    name: PublisherFlags
+    fullName: PublisherFlags
+    children:
+      - vss-web-extension-sdk.PublisherFlags.Disabled
+      - vss-web-extension-sdk.PublisherFlags.None
+      - vss-web-extension-sdk.PublisherFlags.ServiceFlags
+      - vss-web-extension-sdk.PublisherFlags.UnChanged
+      - vss-web-extension-sdk.PublisherFlags.Verified
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+  - uid: vss-web-extension-sdk.PublisherFlags.Disabled
+    name: Disabled
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The Disabled flag for a publisher means the publisher can't be changed and
+      won't be used by consumers, this extends to extensions owned by the
+      publisher as well. The disabled flag is managed by the service and can't
+      be supplied by the Extension Developers.
+    type: field
+    numericValue: 1
+  - uid: vss-web-extension-sdk.PublisherFlags.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: No flags exist for this publisher.
+    type: field
+    numericValue: 0
+  - uid: vss-web-extension-sdk.PublisherFlags.ServiceFlags
+    name: ServiceFlags
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      This is the set of flags that can't be supplied by the developer and is
+      managed by the service itself.
+    type: field
+    numericValue: 3
+  - uid: vss-web-extension-sdk.PublisherFlags.UnChanged
+    name: UnChanged
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      This should never be returned, it is used to represent a publisher who's
+      flags havent changed during update calls.
+    type: field
+    numericValue: 1073741824
+  - uid: vss-web-extension-sdk.PublisherFlags.Verified
+    name: Verified
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      A verified publisher is one that Microsoft has done some review of and
+      ensured the publisher meets a set of requirements. The requirements to
+      become a verified publisher are not listed here.  They can be found in
+      public documentation (TBD).
+    type: field
+    numericValue: 2
