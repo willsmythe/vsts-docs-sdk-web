@@ -4,150 +4,39 @@ items:
     name: CheckboxList
     fullName: CheckboxList
     children:
-      - vss-web-extension-sdk.CheckboxList.focus
-      - vss-web-extension-sdk.CheckboxList.getElement
-      - vss-web-extension-sdk.CheckboxList.getEnhancementOptions
-      - vss-web-extension-sdk.CheckboxList.getId
-      - vss-web-extension-sdk.CheckboxList.getInstance
-      - vss-web-extension-sdk.CheckboxList.getOptionPrefix
-      - vss-web-extension-sdk.CheckboxList.getTypeName
-      - vss-web-extension-sdk.CheckboxList.getTypeName
-      - vss-web-extension-sdk.CheckboxList.initializeOptions
+      - vss-web-extension-sdk.CheckboxList.cancelDelayedFunction
+      - vss-web-extension-sdk.CheckboxList.constructor
+      - vss-web-extension-sdk.CheckboxList.create
+      - vss-web-extension-sdk.CheckboxList.createIn
+      - vss-web-extension-sdk.CheckboxList.delayExecute
+      - vss-web-extension-sdk.CheckboxList.enhance
+      - vss-web-extension-sdk.CheckboxList.ensureEnhancement
+      - vss-web-extension-sdk.CheckboxList.ensureEnhancements
     langs:
       - typeScript
     type: class
     summary: ''
-  - uid: vss-web-extension-sdk.CheckboxList.focus
-    name: focus()
+  - uid: vss-web-extension-sdk.CheckboxList.cancelDelayedFunction
+    name: 'cancelDelayedFunction(name: string)'
     children: []
     langs:
       - typeScript
-    summary: Set Focus to the control
-    syntax:
-      parameters: []
-      content: function focus()
-    type: method
-  - uid: vss-web-extension-sdk.CheckboxList.getElement
-    name: getElement()
-    children: []
-    langs:
-      - typeScript
-    summary: Gets the element associated with this control.
-    syntax:
-      parameters: []
-      content: function getElement()
-      return:
-        type:
-          - JQuery
-    type: method
-  - uid: vss-web-extension-sdk.CheckboxList.getEnhancementOptions
-    name: 'getEnhancementOptions(type: any, element: any)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
+    summary: >-
+      Cancels any pending delayed functions (delayExecute calls) with the
+      specified name
     syntax:
       parameters:
-        - id: type
+        - id: name
           type:
-            - any
-          description: ''
-        - id: element
-          type:
-            - any
-          description: |+
-
-      content: 'function getEnhancementOptions(type: any, element: any)'
+            - string
+          description: Name (supplied in the delayExecute call) of the operations to cancel
+      content: 'function cancelDelayedFunction(name: string)'
       return:
         type:
-          - any
+          - boolean
     type: method
-  - uid: vss-web-extension-sdk.CheckboxList.getId
-    name: getId()
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters: []
-      content: function getId()
-      return:
-        type:
-          - string
-    type: method
-  - uid: vss-web-extension-sdk.CheckboxList.getInstance
-    name: 'getInstance(type?: any, element?: any)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: type
-          type:
-            - any
-          description: ''
-          optional: true
-        - id: element
-          type:
-            - any
-          description: ''
-          optional: true
-      content: 'function getInstance(type?: any, element?: any)'
-      return:
-        type:
-          - vss-web-extension-sdk.Enhancement
-    type: method
-  - uid: vss-web-extension-sdk.CheckboxList.getOptionPrefix
-    name: 'getOptionPrefix(type: any)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: type
-          type:
-            - any
-          description: ''
-      content: 'function getOptionPrefix(type: any)'
-      return:
-        type:
-          - string
-    type: method
-  - uid: vss-web-extension-sdk.CheckboxList.getTypeName
-    name: getTypeName()
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters: []
-      content: function getTypeName()
-      return:
-        type:
-          - string
-    type: method
-  - uid: vss-web-extension-sdk.CheckboxList.getTypeName
-    name: 'getTypeName(type?: any)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: type
-          type:
-            - any
-          description: ''
-          optional: true
-      content: 'function getTypeName(type?: any)'
-      return:
-        type:
-          - string
-    type: method
-  - uid: vss-web-extension-sdk.CheckboxList.initializeOptions
-    name: 'initializeOptions(options?: ICheckboxListOptions)'
+  - uid: vss-web-extension-sdk.CheckboxList.constructor
+    name: 'CheckboxList(options?: ICheckboxListOptions)'
     children: []
     langs:
       - typeScript
@@ -160,5 +49,214 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: ICheckboxListOptions)'
+      content: 'new CheckboxList(options?: ICheckboxListOptions)'
+      return:
+        type:
+          - vss-web-extension-sdk.CheckboxList
+    type: constructor
+  - uid: vss-web-extension-sdk.CheckboxList.create
+    name: >-
+      create(controlType: function, container: JQuery, controlOptions: TOptions,
+      enhancementOptions?: EnhancementOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: Creates a the control specified by TControl in the given container.
+    syntax:
+      parameters:
+        - id: controlType
+          type:
+            - function
+          description: ''
+        - id: container
+          type:
+            - JQuery
+          description: ''
+        - id: controlOptions
+          type:
+            - TOptions
+          description: ''
+        - id: vss-web-extension-sdk.EnhancementOptions
+          type:
+            - EnhancementOptions
+          description: ''
+          optional: true
+      content: >-
+        function create(controlType: function, container: JQuery,
+        controlOptions: TOptions, enhancementOptions?: EnhancementOptions)
+      return:
+        type:
+          - TControl
+    type: method
+  - uid: vss-web-extension-sdk.CheckboxList.createIn
+    name: >-
+      createIn(type?: any, container?: any, options?: TOptions, koCompatable?:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: container
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - TOptions
+          description: ''
+          optional: true
+        - id: koCompatable
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: >-
+        function createIn(type?: any, container?: any, options?: TOptions,
+        koCompatable?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.Control
+    type: method
+  - uid: vss-web-extension-sdk.CheckboxList.delayExecute
+    name: >-
+      delayExecute(name?: string, msDelay?: number, cancelPendingOps?: boolean,
+      func?: Function)
+    children: []
+    langs:
+      - typeScript
+    summary: Executes the provided function after the specified amount of time
+    syntax:
+      parameters:
+        - id: name
+          type:
+            - string
+          description: >-
+            (Optional) Name for this operation. Allows subsequent calls to
+            cancel this action.
+          optional: true
+        - id: msDelay
+          type:
+            - number
+          description: Delay in milliseconds to wait before executing the Function
+          optional: true
+        - id: cancelPendingOps
+          type:
+            - boolean
+          description: >-
+            If true, cancel any pending requests with this name. If false, and
+            there are outstanding requests with this name already in progress,
+            then do nothing.
+          optional: true
+        - id: func
+          type:
+            - Function
+          description: |
+            Method to execute after the delay
+          optional: true
+      content: >-
+        function delayExecute(name?: string, msDelay?: number,
+        cancelPendingOps?: boolean, func?: Function)
+    type: method
+  - uid: vss-web-extension-sdk.CheckboxList.enhance
+    name: >-
+      enhance(type: function, element: function, options?: function,
+      enhancementOptions?: EnhancementOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - function
+          description: ''
+        - id: element
+          type:
+            - function
+          description: ''
+        - id: options
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: vss-web-extension-sdk.EnhancementOptions
+          type:
+            - EnhancementOptions
+          description: ''
+          optional: true
+      content: >-
+        function enhance(type: function, element: function, options?: function,
+        enhancementOptions?: EnhancementOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.Enhancement
+    type: method
+  - uid: vss-web-extension-sdk.CheckboxList.ensureEnhancement
+    name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: context
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: errorCallback
+          type:
+            - any
+          description: ''
+          optional: true
+      content: >-
+        function ensureEnhancement(type?: any, context?: any, errorCallback?:
+        any)
+      return:
+        type:
+          - vss-web-extension-sdk.Enhancement
+    type: method
+  - uid: vss-web-extension-sdk.CheckboxList.ensureEnhancements
+    name: 'ensureEnhancements(type?: any, context?: any, errorCallback?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: context
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: errorCallback
+          type:
+            - any
+          description: ''
+          optional: true
+      content: >-
+        function ensureEnhancements(type?: any, context?: any, errorCallback?:
+        any)
+      return:
+        type:
+          - null
     type: method
