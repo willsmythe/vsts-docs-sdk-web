@@ -1,0 +1,193 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.OperationsHttpClient4
+    name: OperationsHttpClient4
+    fullName: OperationsHttpClient4
+    children:
+      - vss-web-extension-sdk.OperationsHttpClient4.getOperation
+      - vss-web-extension-sdk.OperationsHttpClient4.constructor
+      - vss-web-extension-sdk.OperationsHttpClient4._beginGetLocation
+      - vss-web-extension-sdk.OperationsHttpClient4._beginRequest
+      - vss-web-extension-sdk.OperationsHttpClient4._beginRequestWithAjaxResult
+      - vss-web-extension-sdk.OperationsHttpClient4._issueAjaxRequest
+      - vss-web-extension-sdk.OperationsHttpClient4._setInitializationPromise
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+  - uid: vss-web-extension-sdk.OperationsHttpClient4.getOperation
+    name: 'getOperation(operationId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Gets an operation from the the Id.
+    syntax:
+      parameters:
+        - id: operationId
+          type:
+            - string
+          description: The id for the operation.
+      content: 'function getOperation(operationId: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.OperationsHttpClient4.constructor
+    name: >-
+      OperationsHttpClient4(rootRequestPath: string, options?:
+      IVssHttpClientOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: rootRequestPath
+          type:
+            - string
+          description: ''
+        - id: vss-web-extension-sdk.IVssHttpClientOptions
+          type:
+            - IVssHttpClientOptions
+          description: ''
+          optional: true
+      content: >-
+        new OperationsHttpClient4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.OperationsHttpClient4
+    type: constructor
+  - uid: vss-web-extension-sdk.OperationsHttpClient4._beginGetLocation
+    name: '_beginGetLocation(area: string, locationId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Gets information about an API resource location (route template, supported
+      versions, etc.)
+    syntax:
+      parameters:
+        - id: area
+          type:
+            - string
+          description: resource area name
+        - id: locationId
+          type:
+            - string
+          description: |
+            Guid of the location to get
+      content: 'function _beginGetLocation(area: string, locationId: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.OperationsHttpClient4._beginRequest
+    name: >-
+      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: Issue a request to a VSS REST endpoint.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
+          type:
+            - VssApiResourceRequestParams
+          description: request options
+        - id: useAjaxResult
+          type:
+            - boolean
+          description: >-
+            If true, textStatus and jqXHR are added to the success callback. In
+            this case, spread (instead of then) needs to be used
+          optional: true
+      content: >-
+        function _beginRequest(requestParams: VssApiResourceRequestParams,
+        useAjaxResult?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.OperationsHttpClient4._beginRequestWithAjaxResult
+    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Issue a request to a VSS REST endpoint and makes sure the result contains
+      jqXHR. Use spread to access jqXHR.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
+          type:
+            - VssApiResourceRequestParams
+          description: request options
+      content: >-
+        function _beginRequestWithAjaxResult(requestParams:
+        VssApiResourceRequestParams)
+      return:
+        type:
+          - Q.Promise
+    type: method
+  - uid: vss-web-extension-sdk.OperationsHttpClient4._issueAjaxRequest
+    name: >-
+      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
+      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Issue an AJAX request. This is a wrapper around jquery's ajax method that
+      handles VSS authentication
+
+      and triggers events that can be listened to by other modules.
+    syntax:
+      parameters:
+        - id: requestUrl
+          type:
+            - string
+          description: Url to send the request to
+        - id: ajaxOptions
+          type:
+            - JQueryAjaxSettings
+          description: jQuery.ajax options
+        - id: useAjaxResult
+          type:
+            - boolean
+          description: >
+            If true, textStatus and jqXHR are added to the success callback. In
+            this case, spread (instead of then) needs to be used.
+          optional: true
+        - id: vss-web-extension-sdk.IVssAjaxOptions
+          type:
+            - IVssAjaxOptions
+          description: ''
+          optional: true
+      content: >-
+        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
+        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
+        IVssAjaxOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.OperationsHttpClient4._setInitializationPromise
+    name: '_setInitializationPromise(promise: IPromise)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Sets a promise that is waited on before any requests are issued. Can be
+      used to asynchronously
+
+      set the request url and auth token manager.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IPromise
+          type:
+            - IPromise
+          description: ''
+      content: 'function _setInitializationPromise(promise: IPromise)'
+    type: method

@@ -1,0 +1,480 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1
+    name: SecurityHttpClient3_1
+    fullName: SecurityHttpClient3_1
+    children:
+      - vss-web-extension-sdk.SecurityHttpClient3_1.hasPermissions
+      - vss-web-extension-sdk.SecurityHttpClient3_1.hasPermissionsBatch
+      - vss-web-extension-sdk.SecurityHttpClient3_1.queryAccessControlLists
+      - vss-web-extension-sdk.SecurityHttpClient3_1.querySecurityNamespaces
+      - vss-web-extension-sdk.SecurityHttpClient3_1.removeAccessControlEntries
+      - vss-web-extension-sdk.SecurityHttpClient3_1.removeAccessControlLists
+      - vss-web-extension-sdk.SecurityHttpClient3_1.removePermission
+      - vss-web-extension-sdk.SecurityHttpClient3_1.constructor
+      - vss-web-extension-sdk.SecurityHttpClient3_1.setAccessControlEntries
+      - vss-web-extension-sdk.SecurityHttpClient3_1.setAccessControlLists
+      - vss-web-extension-sdk.SecurityHttpClient3_1.setInheritFlag
+      - vss-web-extension-sdk.SecurityHttpClient3_1._beginGetLocation
+      - vss-web-extension-sdk.SecurityHttpClient3_1._beginRequest
+      - vss-web-extension-sdk.SecurityHttpClient3_1._beginRequestWithAjaxResult
+      - vss-web-extension-sdk.SecurityHttpClient3_1._issueAjaxRequest
+      - vss-web-extension-sdk.SecurityHttpClient3_1._setInitializationPromise
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1.hasPermissions
+    name: >-
+      hasPermissions(securityNamespaceId: string, permissions?: number, tokens?:
+      string, alwaysAllowAdministrators?: boolean, delimiter?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: securityNamespaceId
+          type:
+            - string
+          description: ''
+        - id: permissions
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: tokens
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: alwaysAllowAdministrators
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: delimiter
+          type:
+            - string
+          description: ''
+          optional: true
+      content: >-
+        function hasPermissions(securityNamespaceId: string, permissions?:
+        number, tokens?: string, alwaysAllowAdministrators?: boolean,
+        delimiter?: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1.hasPermissionsBatch
+    name: 'hasPermissionsBatch(evalBatch: PermissionEvaluationBatch)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Perform a batch of "has permission" checks. This methods does not
+      aggregate the results nor does it shortcircut if one of the permissions
+      evaluates to false.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.PermissionEvaluationBatch
+          type:
+            - PermissionEvaluationBatch
+          description: ''
+      content: 'function hasPermissionsBatch(evalBatch: PermissionEvaluationBatch)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1.queryAccessControlLists
+    name: >-
+      queryAccessControlLists(securityNamespaceId: string, token?: string,
+      descriptors?: string, includeExtendedInfo?: boolean, recurse?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: securityNamespaceId
+          type:
+            - string
+          description: ''
+        - id: token
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: descriptors
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: includeExtendedInfo
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: recurse
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: >-
+        function queryAccessControlLists(securityNamespaceId: string, token?:
+        string, descriptors?: string, includeExtendedInfo?: boolean, recurse?:
+        boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1.querySecurityNamespaces
+    name: 'querySecurityNamespaces(securityNamespaceId: string, localOnly?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: securityNamespaceId
+          type:
+            - string
+          description: ''
+        - id: localOnly
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: >-
+        function querySecurityNamespaces(securityNamespaceId: string,
+        localOnly?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1.removeAccessControlEntries
+    name: >-
+      removeAccessControlEntries(securityNamespaceId: string, token?: string,
+      descriptors?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: securityNamespaceId
+          type:
+            - string
+          description: ''
+        - id: token
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: descriptors
+          type:
+            - string
+          description: ''
+          optional: true
+      content: >-
+        function removeAccessControlEntries(securityNamespaceId: string, token?:
+        string, descriptors?: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1.removeAccessControlLists
+    name: >-
+      removeAccessControlLists(securityNamespaceId: string, tokens?: string,
+      recurse?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: securityNamespaceId
+          type:
+            - string
+          description: ''
+        - id: tokens
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: recurse
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: >-
+        function removeAccessControlLists(securityNamespaceId: string, tokens?:
+        string, recurse?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1.removePermission
+    name: >-
+      removePermission(securityNamespaceId: string, permissions?: number,
+      token?: string, descriptor?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: securityNamespaceId
+          type:
+            - string
+          description: ''
+        - id: permissions
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: token
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: descriptor
+          type:
+            - string
+          description: ''
+          optional: true
+      content: >-
+        function removePermission(securityNamespaceId: string, permissions?:
+        number, token?: string, descriptor?: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1.constructor
+    name: >-
+      SecurityHttpClient3_1(rootRequestPath: string, options?:
+      IVssHttpClientOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: rootRequestPath
+          type:
+            - string
+          description: ''
+        - id: vss-web-extension-sdk.IVssHttpClientOptions
+          type:
+            - IVssHttpClientOptions
+          description: ''
+          optional: true
+      content: >-
+        new SecurityHttpClient3_1(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.SecurityHttpClient3_1
+    type: constructor
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1.setAccessControlEntries
+    name: 'setAccessControlEntries(container: any, securityNamespaceId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: container
+          type:
+            - any
+          description: ''
+        - id: securityNamespaceId
+          type:
+            - string
+          description: ''
+      content: >-
+        function setAccessControlEntries(container: any, securityNamespaceId:
+        string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1.setAccessControlLists
+    name: >-
+      setAccessControlLists(accessControlLists: VssJsonCollectionWrapperV,
+      securityNamespaceId: string)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VssJsonCollectionWrapperV
+          type:
+            - VssJsonCollectionWrapperV
+          description: ''
+        - id: securityNamespaceId
+          type:
+            - string
+          description: ''
+      content: >-
+        function setAccessControlLists(accessControlLists:
+        VssJsonCollectionWrapperV, securityNamespaceId: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1.setInheritFlag
+    name: 'setInheritFlag(container: any, securityNamespaceId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: container
+          type:
+            - any
+          description: ''
+        - id: securityNamespaceId
+          type:
+            - string
+          description: ''
+      content: 'function setInheritFlag(container: any, securityNamespaceId: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1._beginGetLocation
+    name: '_beginGetLocation(area: string, locationId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Gets information about an API resource location (route template, supported
+      versions, etc.)
+    syntax:
+      parameters:
+        - id: area
+          type:
+            - string
+          description: resource area name
+        - id: locationId
+          type:
+            - string
+          description: |
+            Guid of the location to get
+      content: 'function _beginGetLocation(area: string, locationId: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1._beginRequest
+    name: >-
+      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: Issue a request to a VSS REST endpoint.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
+          type:
+            - VssApiResourceRequestParams
+          description: request options
+        - id: useAjaxResult
+          type:
+            - boolean
+          description: >-
+            If true, textStatus and jqXHR are added to the success callback. In
+            this case, spread (instead of then) needs to be used
+          optional: true
+      content: >-
+        function _beginRequest(requestParams: VssApiResourceRequestParams,
+        useAjaxResult?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1._beginRequestWithAjaxResult
+    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Issue a request to a VSS REST endpoint and makes sure the result contains
+      jqXHR. Use spread to access jqXHR.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
+          type:
+            - VssApiResourceRequestParams
+          description: request options
+      content: >-
+        function _beginRequestWithAjaxResult(requestParams:
+        VssApiResourceRequestParams)
+      return:
+        type:
+          - Q.Promise
+    type: method
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1._issueAjaxRequest
+    name: >-
+      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
+      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Issue an AJAX request. This is a wrapper around jquery's ajax method that
+      handles VSS authentication
+
+      and triggers events that can be listened to by other modules.
+    syntax:
+      parameters:
+        - id: requestUrl
+          type:
+            - string
+          description: Url to send the request to
+        - id: ajaxOptions
+          type:
+            - JQueryAjaxSettings
+          description: jQuery.ajax options
+        - id: useAjaxResult
+          type:
+            - boolean
+          description: >
+            If true, textStatus and jqXHR are added to the success callback. In
+            this case, spread (instead of then) needs to be used.
+          optional: true
+        - id: vss-web-extension-sdk.IVssAjaxOptions
+          type:
+            - IVssAjaxOptions
+          description: ''
+          optional: true
+      content: >-
+        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
+        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
+        IVssAjaxOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.SecurityHttpClient3_1._setInitializationPromise
+    name: '_setInitializationPromise(promise: IPromise)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Sets a promise that is waited on before any requests are issued. Can be
+      used to asynchronously
+
+      set the request url and auth token manager.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IPromise
+          type:
+            - IPromise
+          description: ''
+      content: 'function _setInitializationPromise(promise: IPromise)'
+    type: method

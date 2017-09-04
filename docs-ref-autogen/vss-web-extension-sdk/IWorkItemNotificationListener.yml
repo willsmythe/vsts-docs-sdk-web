@@ -1,0 +1,107 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IWorkItemNotificationListener
+    name: IWorkItemNotificationListener
+    fullName: IWorkItemNotificationListener
+    children:
+      - vss-web-extension-sdk.IWorkItemNotificationListener.onFieldChanged
+      - vss-web-extension-sdk.IWorkItemNotificationListener.onLoaded
+      - vss-web-extension-sdk.IWorkItemNotificationListener.onRefreshed
+      - vss-web-extension-sdk.IWorkItemNotificationListener.onReset
+      - vss-web-extension-sdk.IWorkItemNotificationListener.onSaved
+      - vss-web-extension-sdk.IWorkItemNotificationListener.onUnloaded
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface defining notifications provided by the ActiveWorkItemService
+  - uid: vss-web-extension-sdk.IWorkItemNotificationListener.onFieldChanged
+    name: 'onFieldChanged(fieldChangedArgs: IWorkItemFieldChangedArgs)'
+    children: []
+    langs:
+      - typeScript
+    summary: Called when a field is modified
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IWorkItemFieldChangedArgs
+          type:
+            - IWorkItemFieldChangedArgs
+          description: >
+            Information about the work item that was modified and the fields
+            that were changed.
+      content: 'function onFieldChanged(fieldChangedArgs: IWorkItemFieldChangedArgs)'
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemNotificationListener.onLoaded
+    name: 'onLoaded(workItemLoadedArgs: IWorkItemLoadedArgs)'
+    children: []
+    langs:
+      - typeScript
+    summary: Called when an extension is loaded
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IWorkItemLoadedArgs
+          type:
+            - IWorkItemLoadedArgs
+          description: |
+            Information about the work item that was loaded.
+      content: 'function onLoaded(workItemLoadedArgs: IWorkItemLoadedArgs)'
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemNotificationListener.onRefreshed
+    name: 'onRefreshed(refreshEventArgs: IWorkItemChangedArgs)'
+    children: []
+    langs:
+      - typeScript
+    summary: Called when a work item is refreshed
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IWorkItemChangedArgs
+          type:
+            - IWorkItemChangedArgs
+          description: |
+            Information about the work item that was refreshed.
+      content: 'function onRefreshed(refreshEventArgs: IWorkItemChangedArgs)'
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemNotificationListener.onReset
+    name: 'onReset(undoEventArgs: IWorkItemChangedArgs)'
+    children: []
+    langs:
+      - typeScript
+    summary: Called when a work item is reset (undo back to unchanged state)
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IWorkItemChangedArgs
+          type:
+            - IWorkItemChangedArgs
+          description: |
+            Information about the work item that was reset.
+      content: 'function onReset(undoEventArgs: IWorkItemChangedArgs)'
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemNotificationListener.onSaved
+    name: 'onSaved(savedEventArgs: IWorkItemChangedArgs)'
+    children: []
+    langs:
+      - typeScript
+    summary: Called when a work item is saved
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IWorkItemChangedArgs
+          type:
+            - IWorkItemChangedArgs
+          description: |
+            Information about the work item that was saved.
+      content: 'function onSaved(savedEventArgs: IWorkItemChangedArgs)'
+    type: method
+  - uid: vss-web-extension-sdk.IWorkItemNotificationListener.onUnloaded
+    name: 'onUnloaded(unloadedEventArgs: IWorkItemChangedArgs)'
+    children: []
+    langs:
+      - typeScript
+    summary: Called when a work item is unloaded
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IWorkItemChangedArgs
+          type:
+            - IWorkItemChangedArgs
+          description: |
+            Information about the work item that was saved.
+      content: 'function onUnloaded(unloadedEventArgs: IWorkItemChangedArgs)'
+    type: method

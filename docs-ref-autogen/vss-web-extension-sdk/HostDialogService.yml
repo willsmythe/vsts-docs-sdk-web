@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.HostDialogService
+    name: HostDialogService
+    fullName: HostDialogService
+    children:
+      - vss-web-extension-sdk.HostDialogService.openDialog
+      - vss-web-extension-sdk.HostDialogService.openMessageDialog
+    langs:
+      - typeScript
+    type: class
+    summary: Class which manages showing dialogs in the parent frame
+  - uid: vss-web-extension-sdk.HostDialogService.openDialog
+    name: >-
+      openDialog(contributionId: string, dialogOptions: IHostDialogOptions,
+      contributionConfig?: Object, postContent?: Object)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Open a modal dialog in the host frame which will get its content from a
+      contributed control.
+    syntax:
+      parameters:
+        - id: contributionId
+          type:
+            - string
+          description: The id of the control contribution to host in the dialog
+        - id: vss-web-extension-sdk.IHostDialogOptions
+          type:
+            - IHostDialogOptions
+          description: options.title - title of dialog
+        - id: contributionConfig
+          type:
+            - Object
+          description: Initial configuration to pass to the contribution control.
+          optional: true
+        - id: postContent
+          type:
+            - Object
+          description: >
+            Optional data to post to the contribution endpoint. If not
+            specified, a GET request will be performed.
+          optional: true
+      content: >-
+        function openDialog(contributionId: string, dialogOptions:
+        IHostDialogOptions, contributionConfig?: Object, postContent?: Object)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.HostDialogService.openMessageDialog
+    name: 'openMessageDialog(message: function, options?: IOpenMessageDialogOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Open a modal dialog in the host frame which will display the supplied
+      message.
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - function
+          description: >-
+            the message to display in the dialog. If it's a string, the message
+            is displayed as plain text (no html). For HTML display, pass in a
+            jQuery object.
+        - id: vss-web-extension-sdk.IOpenMessageDialogOptions
+          type:
+            - IOpenMessageDialogOptions
+          description: ''
+          optional: true
+      content: >-
+        function openMessageDialog(message: function, options?:
+        IOpenMessageDialogOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method

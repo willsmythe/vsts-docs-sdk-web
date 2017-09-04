@@ -1,0 +1,670 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IntegerRangeValidator
+    name: IntegerRangeValidator
+    fullName: IntegerRangeValidator
+    children:
+      - vss-web-extension-sdk.IntegerRangeValidator.cancelDelayedFunction
+      - vss-web-extension-sdk.IntegerRangeValidator.delayExecute
+      - vss-web-extension-sdk.IntegerRangeValidator.enhance
+      - vss-web-extension-sdk.IntegerRangeValidator.ensureEnhancement
+      - vss-web-extension-sdk.IntegerRangeValidator.ensureEnhancements
+      - vss-web-extension-sdk.IntegerRangeValidator.getElement
+      - vss-web-extension-sdk.IntegerRangeValidator.getEnhancementOptions
+      - vss-web-extension-sdk.IntegerRangeValidator.getId
+      - vss-web-extension-sdk.IntegerRangeValidator.getInstance
+      - vss-web-extension-sdk.IntegerRangeValidator.getMessage
+      - vss-web-extension-sdk.IntegerRangeValidator.getOptionPrefix
+      - vss-web-extension-sdk.IntegerRangeValidator.getTypeName
+      - vss-web-extension-sdk.IntegerRangeValidator.getTypeName
+      - vss-web-extension-sdk.IntegerRangeValidator.initializeOptions
+      - vss-web-extension-sdk.IntegerRangeValidator.constructor
+      - vss-web-extension-sdk.IntegerRangeValidator.isDisposed
+      - vss-web-extension-sdk.IntegerRangeValidator.isValid
+      - vss-web-extension-sdk.IntegerRangeValidator.registerEnhancement
+      - vss-web-extension-sdk.IntegerRangeValidator.registerJQueryWidget
+      - vss-web-extension-sdk.IntegerRangeValidator.setEnhancementOptions
+      - vss-web-extension-sdk.IntegerRangeValidator._bind
+      - vss-web-extension-sdk.IntegerRangeValidator._enhance
+      - vss-web-extension-sdk.IntegerRangeValidator._ensureInitialized
+      - vss-web-extension-sdk.IntegerRangeValidator._fire
+      - vss-web-extension-sdk.IntegerRangeValidator._getEventNameSpace
+      - vss-web-extension-sdk.IntegerRangeValidator._getUniqueId
+      - vss-web-extension-sdk.IntegerRangeValidator._setElement
+      - vss-web-extension-sdk.IntegerRangeValidator._setId
+      - vss-web-extension-sdk.IntegerRangeValidator._unbind
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.cancelDelayedFunction
+    name: 'cancelDelayedFunction(name: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Cancels any pending delayed functions (delayExecute calls) with the
+      specified name
+    syntax:
+      parameters:
+        - id: name
+          type:
+            - string
+          description: Name (supplied in the delayExecute call) of the operations to cancel
+      content: 'function cancelDelayedFunction(name: string)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.delayExecute
+    name: >-
+      delayExecute(name?: string, msDelay?: number, cancelPendingOps?: boolean,
+      func?: Function)
+    children: []
+    langs:
+      - typeScript
+    summary: Executes the provided function after the specified amount of time
+    syntax:
+      parameters:
+        - id: name
+          type:
+            - string
+          description: >-
+            (Optional) Name for this operation. Allows subsequent calls to
+            cancel this action.
+          optional: true
+        - id: msDelay
+          type:
+            - number
+          description: Delay in milliseconds to wait before executing the Function
+          optional: true
+        - id: cancelPendingOps
+          type:
+            - boolean
+          description: >-
+            If true, cancel any pending requests with this name. If false, and
+            there are outstanding requests with this name already in progress,
+            then do nothing.
+          optional: true
+        - id: func
+          type:
+            - Function
+          description: |
+            Method to execute after the delay
+          optional: true
+      content: >-
+        function delayExecute(name?: string, msDelay?: number,
+        cancelPendingOps?: boolean, func?: Function)
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.enhance
+    name: >-
+      enhance(type: function, element: function, options?: function,
+      enhancementOptions?: EnhancementOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - function
+          description: ''
+        - id: element
+          type:
+            - function
+          description: ''
+        - id: options
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: vss-web-extension-sdk.EnhancementOptions
+          type:
+            - EnhancementOptions
+          description: ''
+          optional: true
+      content: >-
+        function enhance(type: function, element: function, options?: function,
+        enhancementOptions?: EnhancementOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.Enhancement
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.ensureEnhancement
+    name: 'ensureEnhancement(type?: any, context?: any, errorCallback?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: context
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: errorCallback
+          type:
+            - any
+          description: ''
+          optional: true
+      content: >-
+        function ensureEnhancement(type?: any, context?: any, errorCallback?:
+        any)
+      return:
+        type:
+          - vss-web-extension-sdk.Enhancement
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.ensureEnhancements
+    name: 'ensureEnhancements(type?: any, context?: any, errorCallback?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: context
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: errorCallback
+          type:
+            - any
+          description: ''
+          optional: true
+      content: >-
+        function ensureEnhancements(type?: any, context?: any, errorCallback?:
+        any)
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.getElement
+    name: getElement()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the element associated with this control.
+    syntax:
+      parameters: []
+      content: function getElement()
+      return:
+        type:
+          - JQuery
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.getEnhancementOptions
+    name: 'getEnhancementOptions(type: any, element: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+        - id: element
+          type:
+            - any
+          description: |+
+
+      content: 'function getEnhancementOptions(type: any, element: any)'
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.getId
+    name: getId()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getId()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.getInstance
+    name: 'getInstance(type?: any, element?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: element
+          type:
+            - any
+          description: ''
+          optional: true
+      content: 'function getInstance(type?: any, element?: any)'
+      return:
+        type:
+          - vss-web-extension-sdk.Enhancement
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.getMessage
+    name: getMessage()
+    children: []
+    langs:
+      - typeScript
+    summary: 'OVERRIDE: Gets the error message for display purposes'
+    syntax:
+      parameters: []
+      content: function getMessage()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.getOptionPrefix
+    name: 'getOptionPrefix(type: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+      content: 'function getOptionPrefix(type: any)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.getTypeName
+    name: getTypeName()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getTypeName()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.getTypeName
+    name: 'getTypeName(type?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+          optional: true
+      content: 'function getTypeName(type?: any)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.initializeOptions
+    name: 'initializeOptions(options?: TOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: options
+          type:
+            - TOptions
+          description: |+
+
+          optional: true
+      content: 'function initializeOptions(options?: TOptions)'
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.constructor
+    name: 'IntegerRangeValidator(options?: TOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      A validator that ensures only whole integers between an upper and lower
+      limit are entered.
+    syntax:
+      parameters:
+        - id: options
+          type:
+            - TOptions
+          description: |+
+            Options to apply to the validator:
+                minValue: The minimum value (inclusive)
+                maxValue: The maximum value (inclusive)
+
+          optional: true
+      content: 'new IntegerRangeValidator(options?: TOptions)'
+      return:
+        type:
+          - vss-web-extension-sdk.IntegerRangeValidator
+    type: constructor
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.isDisposed
+    name: isDisposed()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function isDisposed()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.isValid
+    name: isValid()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      OVERRIDE: Determines whether the input control bound to this validator
+      contains valid input
+    syntax:
+      parameters: []
+      content: function isValid()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.registerEnhancement
+    name: >-
+      registerEnhancement(type?: function, selector?: string, options?:
+      TOptions, errorCallback?: IErrorCallback, enhancementOptions?:
+      EnhancementOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: selector
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - TOptions
+          description: ''
+          optional: true
+        - id: vss-web-extension-sdk.IErrorCallback
+          type:
+            - IErrorCallback
+          description: |+
+
+          optional: true
+        - id: vss-web-extension-sdk.EnhancementOptions
+          type:
+            - EnhancementOptions
+          description: ''
+          optional: true
+      content: >-
+        function registerEnhancement(type?: function, selector?: string,
+        options?: TOptions, errorCallback?: IErrorCallback, enhancementOptions?:
+        EnhancementOptions)
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.registerJQueryWidget
+    name: >-
+      registerJQueryWidget(type?: any, widgetName?: any, widgetOptions?:
+      TOptions, enhancementOptions?: EnhancementOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: widgetName
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: widgetOptions
+          type:
+            - TOptions
+          description: |+
+
+          optional: true
+        - id: vss-web-extension-sdk.EnhancementOptions
+          type:
+            - EnhancementOptions
+          description: ''
+          optional: true
+      content: >-
+        function registerJQueryWidget(type?: any, widgetName?: any,
+        widgetOptions?: TOptions, enhancementOptions?: EnhancementOptions)
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator.setEnhancementOptions
+    name: 'setEnhancementOptions(enhancementOptions: EnhancementOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Sets options related to the creation of this control or enhancement of an
+      element as this control.
+
+      Note: Options are merged.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.EnhancementOptions
+          type:
+            - EnhancementOptions
+          description: ''
+      content: 'function setEnhancementOptions(enhancementOptions: EnhancementOptions)'
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator._bind
+    name: '_bind(element?: any, eventType?: any, handler?: any, track?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: element
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: eventType
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: handler
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: track
+          type:
+            - any
+          description: |+
+
+          optional: true
+      content: >-
+        function _bind(element?: any, eventType?: any, handler?: any, track?:
+        any)
+      return:
+        type:
+          - vss-web-extension-sdk.Enhancement
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator._enhance
+    name: '_enhance(element: JQuery)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: element
+          type:
+            - JQuery
+          description: |+
+
+      content: 'function _enhance(element: JQuery)'
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator._ensureInitialized
+    name: _ensureInitialized()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function _ensureInitialized()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator._fire
+    name: '_fire(element?: any, eventType?: any, args?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: element
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: eventType
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: args
+          type:
+            - any
+          description: |+
+
+          optional: true
+      content: 'function _fire(element?: any, eventType?: any, args?: any)'
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator._getEventNameSpace
+    name: _getEventNameSpace()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function _getEventNameSpace()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator._getUniqueId
+    name: _getUniqueId()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function _getUniqueId()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator._setElement
+    name: '_setElement(element: JQuery)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: element
+          type:
+            - JQuery
+          description: |+
+
+      content: 'function _setElement(element: JQuery)'
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator._setId
+    name: '_setId(id: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - string
+          description: |+
+
+      content: 'function _setId(id: string)'
+    type: method
+  - uid: vss-web-extension-sdk.IntegerRangeValidator._unbind
+    name: '_unbind(element?: any, eventType?: any, handler?: any, track?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: element
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: eventType
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: handler
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: track
+          type:
+            - any
+          description: |+
+
+          optional: true
+      content: >-
+        function _unbind(element?: any, eventType?: any, handler?: any, track?:
+        any)
+      return:
+        type:
+          - vss-web-extension-sdk.Enhancement
+    type: method

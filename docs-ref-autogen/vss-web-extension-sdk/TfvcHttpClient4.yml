@@ -1,0 +1,1052 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TfvcHttpClient4
+    name: TfvcHttpClient4
+    fullName: TfvcHttpClient4
+    children:
+      - vss-web-extension-sdk.TfvcHttpClient4.createChangeset
+      - vss-web-extension-sdk.TfvcHttpClient4.getBatchedChangesets
+      - vss-web-extension-sdk.TfvcHttpClient4.getBranch
+      - vss-web-extension-sdk.TfvcHttpClient4.getBranches
+      - vss-web-extension-sdk.TfvcHttpClient4.getBranchRefs
+      - vss-web-extension-sdk.TfvcHttpClient4.getChangeset
+      - vss-web-extension-sdk.TfvcHttpClient4.getChangesetChanges
+      - vss-web-extension-sdk.TfvcHttpClient4.getChangesets
+      - vss-web-extension-sdk.TfvcHttpClient4.getChangesetWorkItems
+      - vss-web-extension-sdk.TfvcHttpClient4.getItem
+      - vss-web-extension-sdk.TfvcHttpClient4.getItemContent
+      - vss-web-extension-sdk.TfvcHttpClient4.getItems
+      - vss-web-extension-sdk.TfvcHttpClient4.getItemsBatch
+      - vss-web-extension-sdk.TfvcHttpClient4.getItemsBatchZip
+      - vss-web-extension-sdk.TfvcHttpClient4.getItemText
+      - vss-web-extension-sdk.TfvcHttpClient4.getItemZip
+      - vss-web-extension-sdk.TfvcHttpClient4.getLabel
+      - vss-web-extension-sdk.TfvcHttpClient4.getLabelItems
+      - vss-web-extension-sdk.TfvcHttpClient4.getLabels
+      - vss-web-extension-sdk.TfvcHttpClient4.getShelveset
+      - vss-web-extension-sdk.TfvcHttpClient4.getShelvesetChanges
+      - vss-web-extension-sdk.TfvcHttpClient4.getShelvesets
+      - vss-web-extension-sdk.TfvcHttpClient4.getShelvesetWorkItems
+      - vss-web-extension-sdk.TfvcHttpClient4.constructor
+      - vss-web-extension-sdk.TfvcHttpClient4._beginGetLocation
+      - vss-web-extension-sdk.TfvcHttpClient4._beginRequest
+      - vss-web-extension-sdk.TfvcHttpClient4._beginRequestWithAjaxResult
+      - vss-web-extension-sdk.TfvcHttpClient4._issueAjaxRequest
+      - vss-web-extension-sdk.TfvcHttpClient4._setInitializationPromise
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.createChangeset
+    name: 'createChangeset(changeset: TfvcChangeset, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Create a new changeset.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.TfvcChangeset
+          type:
+            - TfvcChangeset
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+      content: 'function createChangeset(changeset: TfvcChangeset, project?: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getBatchedChangesets
+    name: 'getBatchedChangesets(changesetsRequestData: TfvcChangesetsRequestData)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.TfvcChangesetsRequestData
+          type:
+            - TfvcChangesetsRequestData
+          description: ''
+      content: >-
+        function getBatchedChangesets(changesetsRequestData:
+        TfvcChangesetsRequestData)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getBranch
+    name: >-
+      getBranch(path: string, project?: string, includeParent?: boolean,
+      includeChildren?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get a single branch hierarchy at the given path with parents or children
+      (if specified)
+    syntax:
+      parameters:
+        - id: path
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: includeParent
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: includeChildren
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: >-
+        function getBranch(path: string, project?: string, includeParent?:
+        boolean, includeChildren?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getBranches
+    name: >-
+      getBranches(project?: string, includeParent?: boolean, includeChildren?:
+      boolean, includeDeleted?: boolean, includeLinks?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get a collection of branch roots -- first-level children, branches with no
+      parents
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: includeParent
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: includeChildren
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: includeDeleted
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: includeLinks
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: >-
+        function getBranches(project?: string, includeParent?: boolean,
+        includeChildren?: boolean, includeDeleted?: boolean, includeLinks?:
+        boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getBranchRefs
+    name: >-
+      getBranchRefs(scopePath: string, project?: string, includeDeleted?:
+      boolean, includeLinks?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: Get branch hierarchies below the specified scopePath
+    syntax:
+      parameters:
+        - id: scopePath
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: includeDeleted
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: includeLinks
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: >-
+        function getBranchRefs(scopePath: string, project?: string,
+        includeDeleted?: boolean, includeLinks?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getChangeset
+    name: >-
+      getChangeset(id: number, project?: string, maxChangeCount?: number,
+      includeDetails?: boolean, includeWorkItems?: boolean, maxCommentLength?:
+      number, includeSourceRename?: boolean, skip?: number, top?: number,
+      orderby?: string, searchCriteria?: TfvcChangesetSearchCriteria)
+    children: []
+    langs:
+      - typeScript
+    summary: Retrieve a Tfvc Changeset
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - number
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: maxChangeCount
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: includeDetails
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: includeWorkItems
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: maxCommentLength
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: includeSourceRename
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: top
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: orderby
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: vss-web-extension-sdk.TfvcChangesetSearchCriteria
+          type:
+            - TfvcChangesetSearchCriteria
+          description: ''
+          optional: true
+      content: >-
+        function getChangeset(id: number, project?: string, maxChangeCount?:
+        number, includeDetails?: boolean, includeWorkItems?: boolean,
+        maxCommentLength?: number, includeSourceRename?: boolean, skip?: number,
+        top?: number, orderby?: string, searchCriteria?:
+        TfvcChangesetSearchCriteria)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getChangesetChanges
+    name: 'getChangesetChanges(id?: number, skip?: number, top?: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: Retrieve Tfvc changes for a given changeset
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: top
+          type:
+            - number
+          description: ''
+          optional: true
+      content: 'function getChangesetChanges(id?: number, skip?: number, top?: number)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getChangesets
+    name: >-
+      getChangesets(project?: string, maxCommentLength?: number, skip?: number,
+      top?: number, orderby?: string, searchCriteria?:
+      TfvcChangesetSearchCriteria)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Retrieve Tfvc changesets Note: This is a new version of the GetChangesets
+      API that doesn't expose the unneeded queryParams present in the 1.0
+      version of the API.
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: maxCommentLength
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: top
+          type:
+            - number
+          description: ''
+          optional: true
+        - id: orderby
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: vss-web-extension-sdk.TfvcChangesetSearchCriteria
+          type:
+            - TfvcChangesetSearchCriteria
+          description: ''
+          optional: true
+      content: >-
+        function getChangesets(project?: string, maxCommentLength?: number,
+        skip?: number, top?: number, orderby?: string, searchCriteria?:
+        TfvcChangesetSearchCriteria)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getChangesetWorkItems
+    name: 'getChangesetWorkItems(id?: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - number
+          description: ''
+          optional: true
+      content: 'function getChangesetWorkItems(id?: number)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getItem
+    name: >-
+      getItem(path: string, project?: string, fileName?: string, download?:
+      boolean, scopePath?: string, recursionLevel?: function,
+      versionDescriptor?: TfvcVersionDescriptor)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get Item Metadata and/or Content for a single item. The download parameter
+      is to indicate whether the content should be available as a download or
+      just sent as a stream in the response. Doesn't apply to zipped content
+      which is always returned as a download.
+    syntax:
+      parameters:
+        - id: path
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: fileName
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: download
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: scopePath
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: recursionLevel
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: vss-web-extension-sdk.TfvcVersionDescriptor
+          type:
+            - TfvcVersionDescriptor
+          description: ''
+          optional: true
+      content: >-
+        function getItem(path: string, project?: string, fileName?: string,
+        download?: boolean, scopePath?: string, recursionLevel?: function,
+        versionDescriptor?: TfvcVersionDescriptor)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getItemContent
+    name: >-
+      getItemContent(path: string, project?: string, fileName?: string,
+      download?: boolean, scopePath?: string, recursionLevel?: function,
+      versionDescriptor?: TfvcVersionDescriptor)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get Item Metadata and/or Content for a single item. The download parameter
+      is to indicate whether the content should be available as a download or
+      just sent as a stream in the response. Doesn't apply to zipped content
+      which is always returned as a download.
+    syntax:
+      parameters:
+        - id: path
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: fileName
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: download
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: scopePath
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: recursionLevel
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: vss-web-extension-sdk.TfvcVersionDescriptor
+          type:
+            - TfvcVersionDescriptor
+          description: ''
+          optional: true
+      content: >-
+        function getItemContent(path: string, project?: string, fileName?:
+        string, download?: boolean, scopePath?: string, recursionLevel?:
+        function, versionDescriptor?: TfvcVersionDescriptor)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getItems
+    name: >-
+      getItems(project?: string, scopePath?: string, recursionLevel?: function,
+      includeLinks?: boolean, versionDescriptor?: TfvcVersionDescriptor)
+    children: []
+    langs:
+      - typeScript
+    summary: Get a list of Tfvc items
+    syntax:
+      parameters:
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: scopePath
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: recursionLevel
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: includeLinks
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: vss-web-extension-sdk.TfvcVersionDescriptor
+          type:
+            - TfvcVersionDescriptor
+          description: ''
+          optional: true
+      content: >-
+        function getItems(project?: string, scopePath?: string, recursionLevel?:
+        function, includeLinks?: boolean, versionDescriptor?:
+        TfvcVersionDescriptor)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getItemsBatch
+    name: 'getItemsBatch(itemRequestData: TfvcItemRequestData, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Post for retrieving a set of items given a list of paths or a long path.
+      Allows for specifying the recursionLevel and version descriptors for each
+      path.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.TfvcItemRequestData
+          type:
+            - TfvcItemRequestData
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+      content: >-
+        function getItemsBatch(itemRequestData: TfvcItemRequestData, project?:
+        string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getItemsBatchZip
+    name: 'getItemsBatchZip(itemRequestData: TfvcItemRequestData, project?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Post for retrieving a set of items given a list of paths or a long path.
+      Allows for specifying the recursionLevel and version descriptors for each
+      path.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.TfvcItemRequestData
+          type:
+            - TfvcItemRequestData
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+      content: >-
+        function getItemsBatchZip(itemRequestData: TfvcItemRequestData,
+        project?: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getItemText
+    name: >-
+      getItemText(path: string, project?: string, fileName?: string, download?:
+      boolean, scopePath?: string, recursionLevel?: function,
+      versionDescriptor?: TfvcVersionDescriptor)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get Item Metadata and/or Content for a single item. The download parameter
+      is to indicate whether the content should be available as a download or
+      just sent as a stream in the response. Doesn't apply to zipped content
+      which is always returned as a download.
+    syntax:
+      parameters:
+        - id: path
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: fileName
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: download
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: scopePath
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: recursionLevel
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: vss-web-extension-sdk.TfvcVersionDescriptor
+          type:
+            - TfvcVersionDescriptor
+          description: ''
+          optional: true
+      content: >-
+        function getItemText(path: string, project?: string, fileName?: string,
+        download?: boolean, scopePath?: string, recursionLevel?: function,
+        versionDescriptor?: TfvcVersionDescriptor)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getItemZip
+    name: >-
+      getItemZip(path: string, project?: string, fileName?: string, download?:
+      boolean, scopePath?: string, recursionLevel?: function,
+      versionDescriptor?: TfvcVersionDescriptor)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get Item Metadata and/or Content for a single item. The download parameter
+      is to indicate whether the content should be available as a download or
+      just sent as a stream in the response. Doesn't apply to zipped content
+      which is always returned as a download.
+    syntax:
+      parameters:
+        - id: path
+          type:
+            - string
+          description: ''
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: fileName
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: download
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: scopePath
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: recursionLevel
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: vss-web-extension-sdk.TfvcVersionDescriptor
+          type:
+            - TfvcVersionDescriptor
+          description: ''
+          optional: true
+      content: >-
+        function getItemZip(path: string, project?: string, fileName?: string,
+        download?: boolean, scopePath?: string, recursionLevel?: function,
+        versionDescriptor?: TfvcVersionDescriptor)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getLabel
+    name: >-
+      getLabel(labelId: string, requestData: TfvcLabelRequestData, project?:
+      string)
+    children: []
+    langs:
+      - typeScript
+    summary: Get a single deep label.
+    syntax:
+      parameters:
+        - id: labelId
+          type:
+            - string
+          description: Unique identifier of label
+        - id: vss-web-extension-sdk.TfvcLabelRequestData
+          type:
+            - TfvcLabelRequestData
+          description: maxItemCount
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+      content: >-
+        function getLabel(labelId: string, requestData: TfvcLabelRequestData,
+        project?: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getLabelItems
+    name: 'getLabelItems(labelId: string, top?: number, skip?: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get items under a label.
+    syntax:
+      parameters:
+        - id: labelId
+          type:
+            - string
+          description: Unique identifier of label
+        - id: top
+          type:
+            - number
+          description: Max number of items to return
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: Number of items to skip
+          optional: true
+      content: 'function getLabelItems(labelId: string, top?: number, skip?: number)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getLabels
+    name: >-
+      getLabels(requestData: TfvcLabelRequestData, project?: string, top?:
+      number, skip?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: Get a collection of shallow label references.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.TfvcLabelRequestData
+          type:
+            - TfvcLabelRequestData
+          description: 'labelScope, name, owner, and itemLabelFilter'
+        - id: project
+          type:
+            - string
+          description: Project ID or project name
+          optional: true
+        - id: top
+          type:
+            - number
+          description: Max number of labels to return
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: Number of labels to skip
+          optional: true
+      content: >-
+        function getLabels(requestData: TfvcLabelRequestData, project?: string,
+        top?: number, skip?: number)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getShelveset
+    name: 'getShelveset(shelvesetId: string, requestData?: TfvcShelvesetRequestData)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get a single deep shelveset.
+    syntax:
+      parameters:
+        - id: shelvesetId
+          type:
+            - string
+          description: Shelveset's unique ID
+        - id: vss-web-extension-sdk.TfvcShelvesetRequestData
+          type:
+            - TfvcShelvesetRequestData
+          description: >-
+            includeDetails, includeWorkItems, maxChangeCount, and
+            maxCommentLength
+          optional: true
+      content: >-
+        function getShelveset(shelvesetId: string, requestData?:
+        TfvcShelvesetRequestData)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getShelvesetChanges
+    name: 'getShelvesetChanges(shelvesetId: string, top?: number, skip?: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get changes included in a shelveset.
+    syntax:
+      parameters:
+        - id: shelvesetId
+          type:
+            - string
+          description: Shelveset's unique ID
+        - id: top
+          type:
+            - number
+          description: Max number of changes to return
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: Number of changes to skip
+          optional: true
+      content: >-
+        function getShelvesetChanges(shelvesetId: string, top?: number, skip?:
+        number)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getShelvesets
+    name: >-
+      getShelvesets(requestData?: TfvcShelvesetRequestData, top?: number, skip?:
+      number)
+    children: []
+    langs:
+      - typeScript
+    summary: Return a collection of shallow shelveset references.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.TfvcShelvesetRequestData
+          type:
+            - TfvcShelvesetRequestData
+          description: 'name, owner, and maxCommentLength'
+          optional: true
+        - id: top
+          type:
+            - number
+          description: Max number of shelvesets to return
+          optional: true
+        - id: skip
+          type:
+            - number
+          description: Number of shelvesets to skip
+          optional: true
+      content: >-
+        function getShelvesets(requestData?: TfvcShelvesetRequestData, top?:
+        number, skip?: number)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.getShelvesetWorkItems
+    name: 'getShelvesetWorkItems(shelvesetId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get work items associated with a shelveset.
+    syntax:
+      parameters:
+        - id: shelvesetId
+          type:
+            - string
+          description: Shelveset's unique ID
+      content: 'function getShelvesetWorkItems(shelvesetId: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4.constructor
+    name: 'TfvcHttpClient4(rootRequestPath: string, options?: IVssHttpClientOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: rootRequestPath
+          type:
+            - string
+          description: ''
+        - id: vss-web-extension-sdk.IVssHttpClientOptions
+          type:
+            - IVssHttpClientOptions
+          description: ''
+          optional: true
+      content: >-
+        new TfvcHttpClient4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.TfvcHttpClient4
+    type: constructor
+  - uid: vss-web-extension-sdk.TfvcHttpClient4._beginGetLocation
+    name: '_beginGetLocation(area: string, locationId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Gets information about an API resource location (route template, supported
+      versions, etc.)
+    syntax:
+      parameters:
+        - id: area
+          type:
+            - string
+          description: resource area name
+        - id: locationId
+          type:
+            - string
+          description: |
+            Guid of the location to get
+      content: 'function _beginGetLocation(area: string, locationId: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4._beginRequest
+    name: >-
+      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: Issue a request to a VSS REST endpoint.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
+          type:
+            - VssApiResourceRequestParams
+          description: request options
+        - id: useAjaxResult
+          type:
+            - boolean
+          description: >-
+            If true, textStatus and jqXHR are added to the success callback. In
+            this case, spread (instead of then) needs to be used
+          optional: true
+      content: >-
+        function _beginRequest(requestParams: VssApiResourceRequestParams,
+        useAjaxResult?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4._beginRequestWithAjaxResult
+    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Issue a request to a VSS REST endpoint and makes sure the result contains
+      jqXHR. Use spread to access jqXHR.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VssApiResourceRequestParams
+          type:
+            - VssApiResourceRequestParams
+          description: request options
+      content: >-
+        function _beginRequestWithAjaxResult(requestParams:
+        VssApiResourceRequestParams)
+      return:
+        type:
+          - Q.Promise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4._issueAjaxRequest
+    name: >-
+      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
+      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Issue an AJAX request. This is a wrapper around jquery's ajax method that
+      handles VSS authentication
+
+      and triggers events that can be listened to by other modules.
+    syntax:
+      parameters:
+        - id: requestUrl
+          type:
+            - string
+          description: Url to send the request to
+        - id: ajaxOptions
+          type:
+            - JQueryAjaxSettings
+          description: jQuery.ajax options
+        - id: useAjaxResult
+          type:
+            - boolean
+          description: >
+            If true, textStatus and jqXHR are added to the success callback. In
+            this case, spread (instead of then) needs to be used.
+          optional: true
+        - id: vss-web-extension-sdk.IVssAjaxOptions
+          type:
+            - IVssAjaxOptions
+          description: ''
+          optional: true
+      content: >-
+        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
+        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
+        IVssAjaxOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.TfvcHttpClient4._setInitializationPromise
+    name: '_setInitializationPromise(promise: IPromise)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Sets a promise that is waited on before any requests are issued. Can be
+      used to asynchronously
+
+      set the request url and auth token manager.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IPromise
+          type:
+            - IPromise
+          description: ''
+      content: 'function _setInitializationPromise(promise: IPromise)'
+    type: method

@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TreeNode
+    name: TreeNode
+    fullName: TreeNode
+    children:
+      - vss-web-extension-sdk.TreeNode.create
+      - vss-web-extension-sdk.TreeNode.findNode
+      - vss-web-extension-sdk.TreeNode.moveTo
+      - vss-web-extension-sdk.TreeNode.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+  - uid: vss-web-extension-sdk.TreeNode.create
+    name: 'create(text: string, config?: any, children?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: text
+          type:
+            - string
+          description: ''
+        - id: config
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: children
+          type:
+            - function
+          description: ''
+          optional: true
+      content: 'function create(text: string, config?: any, children?: function)'
+      return:
+        type:
+          - vss-web-extension-sdk.TreeNode
+    type: method
+  - uid: vss-web-extension-sdk.TreeNode.findNode
+    name: 'findNode(path: string, sepChar?: string, comparer?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Finds a node using the given path
+    syntax:
+      parameters:
+        - id: path
+          type:
+            - string
+          description: Path to find
+        - id: sepChar
+          type:
+            - string
+          description: 'Path separator, if not given default will be used'
+          optional: true
+        - id: comparer
+          type:
+            - function
+          description: >
+            Comparer used to compare nodes in the path, if not given default
+            will be used
+          optional: true
+      content: 'function findNode(path: string, sepChar?: string, comparer?: function)'
+      return:
+        type:
+          - vss-web-extension-sdk.TreeNode
+    type: method
+  - uid: vss-web-extension-sdk.TreeNode.moveTo
+    name: 'moveTo(newParent: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: Move this node to reside under the specified new parent.
+    syntax:
+      parameters:
+        - id: newParent
+          type:
+            - any
+          description: |
+            The destination to reparent the source under.
+      content: 'function moveTo(newParent: any)'
+    type: method
+  - uid: vss-web-extension-sdk.TreeNode.constructor
+    name: 'TreeNode(text: string, config?: any, children?: function, id?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: text
+          type:
+            - string
+          description: ''
+        - id: config
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: children
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: id
+          type:
+            - string
+          description: |+
+
+          optional: true
+      content: >-
+        new TreeNode(text: string, config?: any, children?: function, id?:
+        string)
+      return:
+        type:
+          - vss-web-extension-sdk.TreeNode
+    type: constructor

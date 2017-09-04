@@ -1,0 +1,383 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.HistoryService
+    name: HistoryService
+    fullName: HistoryService
+    children:
+      - vss-web-extension-sdk.HistoryService.addHistoryPoint
+      - vss-web-extension-sdk.HistoryService.attachNavigate
+      - vss-web-extension-sdk.HistoryService.deserializeState
+      - vss-web-extension-sdk.HistoryService.detachNavigate
+      - vss-web-extension-sdk.HistoryService.getCurrentFragment
+      - vss-web-extension-sdk.HistoryService.getCurrentHashString
+      - vss-web-extension-sdk.HistoryService.getCurrentQueryString
+      - vss-web-extension-sdk.HistoryService.getCurrentState
+      - vss-web-extension-sdk.HistoryService.getFragmentActionLink
+      - vss-web-extension-sdk.HistoryService.constructor
+      - vss-web-extension-sdk.HistoryService.pushState
+      - vss-web-extension-sdk.HistoryService.replaceHistoryPoint
+      - vss-web-extension-sdk.HistoryService.replaceState
+      - vss-web-extension-sdk.HistoryService.serializeState
+      - vss-web-extension-sdk.HistoryService.updateHistoryEntry
+    langs:
+      - typeScript
+    type: class
+    summary: Local service to manage history and navigation state
+  - uid: vss-web-extension-sdk.HistoryService.addHistoryPoint
+    name: >-
+      addHistoryPoint(action: string, data?: any, windowTitle?: string,
+      suppressNavigate?: boolean, mergeCurrentState?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Add a new history entry with the given state. Merges data with the current
+      navigation data.
+    syntax:
+      parameters:
+        - id: action
+          type:
+            - string
+          description: >-
+            The "action" state parameter. This is the _a key in the url or
+            "action" in the current state dictionary
+        - id: data
+          type:
+            - any
+          description: >-
+            New history entries to merge into the current navigation data. Set
+            keys to null/undefined to remove them from the current state.
+          optional: true
+        - id: windowTitle
+          type:
+            - string
+          description: >-
+            The new window title. A null or empty value indicates to leave the
+            title unchanged.
+          optional: true
+        - id: suppressNavigate
+          type:
+            - boolean
+          description: >-
+            If true, don't trigger any of the attached navigate event handlers
+            due to this update.
+          optional: true
+        - id: mergeCurrentState
+          type:
+            - boolean
+          description: >
+            If true, the supplied data just modify the existing/current state.
+            If false, they replace all existing key/value pairs.
+          optional: true
+      content: >-
+        function addHistoryPoint(action: string, data?: any, windowTitle?:
+        string, suppressNavigate?: boolean, mergeCurrentState?: boolean)
+    type: method
+  - uid: vss-web-extension-sdk.HistoryService.attachNavigate
+    name: 'attachNavigate(handler: IFunctionPPR, checkCurrentState?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: Attach a new navigate handler
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IFunctionPPR
+          type:
+            - IFunctionPPR
+          description: The method called whenever a navigation event occurs
+        - id: checkCurrentState
+          type:
+            - boolean
+          description: |
+            If true, immediately invoke the handler
+          optional: true
+      content: >-
+        function attachNavigate(handler: IFunctionPPR, checkCurrentState?:
+        boolean)
+    type: method
+  - uid: vss-web-extension-sdk.HistoryService.deserializeState
+    name: 'deserializeState(state: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Deserialize a navigation state string into a navigation data lookup.
+    syntax:
+      parameters:
+        - id: state
+          type:
+            - string
+          description: |
+            The serialized navigation state string (hash or query string)
+      content: 'function deserializeState(state: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IDictionaryStringTo
+    type: method
+  - uid: vss-web-extension-sdk.HistoryService.detachNavigate
+    name: 'detachNavigate(handler: IFunctionPPR)'
+    children: []
+    langs:
+      - typeScript
+    summary: Remove a navigate handler
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IFunctionPPR
+          type:
+            - IFunctionPPR
+          description: |
+            The global navigate handler method to remove
+      content: 'function detachNavigate(handler: IFunctionPPR)'
+    type: method
+  - uid: vss-web-extension-sdk.HistoryService.getCurrentFragment
+    name: getCurrentFragment()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the serialized version of the current navigation state.
+    syntax:
+      parameters: []
+      content: function getCurrentFragment()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.HistoryService.getCurrentHashString
+    name: getCurrentHashString()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the current url's hash string
+    syntax:
+      parameters: []
+      content: function getCurrentHashString()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.HistoryService.getCurrentQueryString
+    name: getCurrentQueryString()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the current url's query string
+    syntax:
+      parameters: []
+      content: function getCurrentQueryString()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.HistoryService.getCurrentState
+    name: getCurrentState()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get the current navigation state dictionary. Uses query parameters and
+      hash parameters.
+    syntax:
+      parameters: []
+      content: function getCurrentState()
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.HistoryService.getFragmentActionLink
+    name: 'getFragmentActionLink(action: string, data?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Creates a fragment url to be used in flight navigation.
+
+      This always returns a fragment link, regardless of the browser's
+      capability to handle push state.
+    syntax:
+      parameters:
+        - id: action
+          type:
+            - string
+          description: The action name
+        - id: data
+          type:
+            - any
+          description: Action parameters
+          optional: true
+      content: 'function getFragmentActionLink(action: string, data?: any)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.HistoryService.constructor
+    name: HistoryService()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: new HistoryService()
+      return:
+        type:
+          - vss-web-extension-sdk.HistoryService
+    type: constructor
+  - uid: vss-web-extension-sdk.HistoryService.pushState
+    name: 'pushState(url: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Add a new history entry to the browser's history (updating the url in the
+      address bar)
+    syntax:
+      parameters:
+        - id: url
+          type:
+            - string
+          description: |
+            Url to update the browser's address bar to
+      content: 'function pushState(url: string)'
+    type: method
+  - uid: vss-web-extension-sdk.HistoryService.replaceHistoryPoint
+    name: >-
+      replaceHistoryPoint(action: string, data: any, windowTitle?: string,
+      suppressNavigate?: boolean, mergeCurrentState?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Replace the current history entry with the given state.
+
+      The back button will therefore not map to the current url (at the time
+      this call is made), but rather to the previous history entry.
+    syntax:
+      parameters:
+        - id: action
+          type:
+            - string
+          description: >-
+            The "action" state parameter. This is the _a key in the url or
+            "action" in the current state dictionary
+        - id: data
+          type:
+            - any
+          description: >-
+            The new full set of navigation/history entries. This set completely
+            replaces the current set.
+        - id: windowTitle
+          type:
+            - string
+          description: >-
+            The new window title. A null or empty value indicates to leave the
+            title unchanged.
+          optional: true
+        - id: suppressNavigate
+          type:
+            - boolean
+          description: >-
+            If true, don't trigger any of the attached navigate event handlers
+            due to this update.
+          optional: true
+        - id: mergeCurrentState
+          type:
+            - boolean
+          description: >
+            If true, the supplied data just modify the existing/current state.
+            If false, they replace all existing key/value pairs.
+          optional: true
+      content: >-
+        function replaceHistoryPoint(action: string, data: any, windowTitle?:
+        string, suppressNavigate?: boolean, mergeCurrentState?: boolean)
+    type: method
+  - uid: vss-web-extension-sdk.HistoryService.replaceState
+    name: 'replaceState(url: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Replace the current history entry in the browser's history (updating the
+      url in the address bar)
+    syntax:
+      parameters:
+        - id: url
+          type:
+            - string
+          description: |
+            Url to update the browser's address bar to
+      content: 'function replaceState(url: string)'
+    type: method
+  - uid: vss-web-extension-sdk.HistoryService.serializeState
+    name: 'serializeState(state: IDictionaryStringTo)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Serialize a navigation data lookup into a string that can be used as a
+      hash or query string.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IDictionaryStringTo
+          type:
+            - IDictionaryStringTo
+          description: |
+            The navigation state dictionary to convert
+      content: 'function serializeState(state: IDictionaryStringTo)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.HistoryService.updateHistoryEntry
+    name: >-
+      updateHistoryEntry(action: string, data?: IDictionaryStringTo,
+      replaceHistoryEntry?: boolean, mergeWithCurrentState?: boolean,
+      windowTitle?: string, suppressNavigate?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: Update the current history entry
+    syntax:
+      parameters:
+        - id: action
+          type:
+            - string
+          description: >-
+            The "action" state parameter. This is the _a key in the url or
+            "action" in the current state dictionary
+        - id: vss-web-extension-sdk.IDictionaryStringTo
+          type:
+            - IDictionaryStringTo
+          description: The history entry's new state key/value pairs
+          optional: true
+        - id: replaceHistoryEntry
+          type:
+            - boolean
+          description: >-
+            If true, replace the current history entry. Otherwise, add a new
+            history entry.
+          optional: true
+        - id: mergeWithCurrentState
+          type:
+            - boolean
+          description: >-
+            If true, the supplied data just modify the existing/current state.
+            If false, they replace all existing key/value pairs.
+          optional: true
+        - id: windowTitle
+          type:
+            - string
+          description: >-
+            The new window title. A null or empty value indicates to leave the
+            title unchanged.
+          optional: true
+        - id: suppressNavigate
+          type:
+            - boolean
+          description: >
+            If true, don't trigger any of the attached navigate event handlers
+            due to this update.
+          optional: true
+      content: >-
+        function updateHistoryEntry(action: string, data?: IDictionaryStringTo,
+        replaceHistoryEntry?: boolean, mergeWithCurrentState?: boolean,
+        windowTitle?: string, suppressNavigate?: boolean)
+    type: method

@@ -1,0 +1,254 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IScenarioDescriptor
+    name: IScenarioDescriptor
+    fullName: IScenarioDescriptor
+    children:
+      - vss-web-extension-sdk.IScenarioDescriptor.abort
+      - vss-web-extension-sdk.IScenarioDescriptor.addAjaxCallStart
+      - vss-web-extension-sdk.IScenarioDescriptor.addData
+      - vss-web-extension-sdk.IScenarioDescriptor.addSplitTiming
+      - vss-web-extension-sdk.IScenarioDescriptor.end
+      - vss-web-extension-sdk.IScenarioDescriptor.getAjaxCalls
+      - vss-web-extension-sdk.IScenarioDescriptor.getCorrelationId
+      - vss-web-extension-sdk.IScenarioDescriptor.getData
+      - vss-web-extension-sdk.IScenarioDescriptor.getDuration
+      - vss-web-extension-sdk.IScenarioDescriptor.getFeatureArea
+      - vss-web-extension-sdk.IScenarioDescriptor.getName
+      - vss-web-extension-sdk.IScenarioDescriptor.getSplitTimings
+      - vss-web-extension-sdk.IScenarioDescriptor.getStartTime
+      - vss-web-extension-sdk.IScenarioDescriptor.getTelemetry
+      - vss-web-extension-sdk.IScenarioDescriptor.isActive
+      - vss-web-extension-sdk.IScenarioDescriptor.isPageInteractive
+      - vss-web-extension-sdk.IScenarioDescriptor.log
+    langs:
+      - typeScript
+    type: interface
+    summary: Describes single scenario
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.abort
+    name: abort()
+    children: []
+    langs:
+      - typeScript
+    summary: Aborts this scenario
+    syntax:
+      parameters: []
+      content: function abort()
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.addAjaxCallStart
+    name: addAjaxCallStart()
+    children: []
+    langs:
+      - typeScript
+    summary: Add information about ajax call to scenario
+    syntax:
+      parameters: []
+      content: function addAjaxCallStart()
+      return:
+        type:
+          - vss-web-extension-sdk.IEndAjaxCallTiming
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.addData
+    name: 'addData(data: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: Add additional data to the scenario.
+    syntax:
+      parameters:
+        - id: data
+          type:
+            - any
+          description: |
+            Property bag of additional data
+      content: 'function addData(data: any)'
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.addSplitTiming
+    name: 'addSplitTiming(name: string, elapsedTime?: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: Add split timing at current timestamp
+    syntax:
+      parameters:
+        - id: name
+          type:
+            - string
+          description: Name of split timing
+        - id: elapsedTime
+          type:
+            - number
+          description: |
+            Optional: Deprecated: Store elapsed time in addition to split
+          optional: true
+      content: 'function addSplitTiming(name: string, elapsedTime?: number)'
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.end
+    name: 'end(endTime?: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: Ends this scenario
+    syntax:
+      parameters:
+        - id: endTime
+          type:
+            - number
+          description: >
+            Optional Scenario End Time. IMPORTANT: Has to be obtained using
+            getTimestamp
+          optional: true
+      content: 'function end(endTime?: number)'
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.getAjaxCalls
+    name: getAjaxCalls()
+    children: []
+    langs:
+      - typeScript
+    summary: Return ajax call timings
+    syntax:
+      parameters: []
+      content: function getAjaxCalls()
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.getCorrelationId
+    name: getCorrelationId()
+    children: []
+    langs:
+      - typeScript
+    summary: Returns scenario's correlation id
+    syntax:
+      parameters: []
+      content: function getCorrelationId()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.getData
+    name: getData()
+    children: []
+    langs:
+      - typeScript
+    summary: Return the data associated with the scenario
+    syntax:
+      parameters: []
+      content: function getData()
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.getDuration
+    name: getDuration()
+    children: []
+    langs:
+      - typeScript
+    summary: Returns scenario duration in ms
+    syntax:
+      parameters: []
+      content: function getDuration()
+      return:
+        type:
+          - number
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.getFeatureArea
+    name: getFeatureArea()
+    children: []
+    langs:
+      - typeScript
+    summary: Returns scenario area
+    syntax:
+      parameters: []
+      content: function getFeatureArea()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.getName
+    name: getName()
+    children: []
+    langs:
+      - typeScript
+    summary: Returns scenario name
+    syntax:
+      parameters: []
+      content: function getName()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.getSplitTimings
+    name: getSplitTimings()
+    children: []
+    langs:
+      - typeScript
+    summary: Return split timings
+    syntax:
+      parameters: []
+      content: function getSplitTimings()
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.getStartTime
+    name: getStartTime()
+    children: []
+    langs:
+      - typeScript
+    summary: Get the scenario start timestamp
+    syntax:
+      parameters: []
+      content: function getStartTime()
+      return:
+        type:
+          - number
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.getTelemetry
+    name: getTelemetry()
+    children: []
+    langs:
+      - typeScript
+    summary: Returns telemetry data for scenario
+    syntax:
+      parameters: []
+      content: function getTelemetry()
+      return:
+        type:
+          - vss-web-extension-sdk.TelemetryEventData
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.isActive
+    name: isActive()
+    children: []
+    langs:
+      - typeScript
+    summary: Returns a value indicating whether the scenario is active
+    syntax:
+      parameters: []
+      content: function isActive()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.isPageInteractive
+    name: isPageInteractive()
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Determines whether or not the scenario is the primary indicator
+      of Time-to-Interactive on the page
+    syntax:
+      parameters: []
+      content: function isPageInteractive()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.IScenarioDescriptor.log
+    name: log()
+    children: []
+    langs:
+      - typeScript
+    summary: Logs scenario data to the browser's console
+    syntax:
+      parameters: []
+      content: function log()
+    type: method

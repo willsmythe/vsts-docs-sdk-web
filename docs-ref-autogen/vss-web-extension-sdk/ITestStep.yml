@@ -1,0 +1,92 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.ITestStep
+    name: ITestStep
+    fullName: ITestStep
+    children:
+      - vss-web-extension-sdk.ITestStep.createAttachment
+      - vss-web-extension-sdk.ITestStep.getExpectedResult
+      - vss-web-extension-sdk.ITestStep.getTitle
+      - vss-web-extension-sdk.ITestStep.setExpectedResult
+      - vss-web-extension-sdk.ITestStep.setTitle
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface for test step
+  - uid: vss-web-extension-sdk.ITestStep.createAttachment
+    name: 'createAttachment(url: string, name?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: create atatchment for test step
+    syntax:
+      parameters:
+        - id: url
+          type:
+            - string
+          description: '-- url of attachemnt'
+        - id: name
+          type:
+            - string
+          description: |
+            -- name for attachment
+          optional: true
+      content: 'function createAttachment(url: string, name?: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.ITestStepAttachment
+    type: method
+  - uid: vss-web-extension-sdk.ITestStep.getExpectedResult
+    name: getExpectedResult()
+    children: []
+    langs:
+      - typeScript
+    summary: get expectedresult for test step
+    syntax:
+      parameters: []
+      content: function getExpectedResult()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.ITestStep.getTitle
+    name: getTitle()
+    children: []
+    langs:
+      - typeScript
+    summary: get test step title/action
+    syntax:
+      parameters: []
+      content: function getTitle()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.ITestStep.setExpectedResult
+    name: 'setExpectedResult(expectedResult: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: set expectedresult for test step
+    syntax:
+      parameters:
+        - id: expectedResult
+          type:
+            - string
+          description: ''
+      content: 'function setExpectedResult(expectedResult: string)'
+    type: method
+  - uid: vss-web-extension-sdk.ITestStep.setTitle
+    name: 'setTitle(title: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: set title/action for test step
+    syntax:
+      parameters:
+        - id: title
+          type:
+            - string
+          description: ''
+      content: 'function setTitle(title: string)'
+    type: method

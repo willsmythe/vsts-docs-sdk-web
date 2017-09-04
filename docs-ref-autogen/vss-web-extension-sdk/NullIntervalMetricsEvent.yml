@@ -1,0 +1,58 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.NullIntervalMetricsEvent
+    name: NullIntervalMetricsEvent
+    fullName: NullIntervalMetricsEvent
+    children:
+      - vss-web-extension-sdk.NullIntervalMetricsEvent.closeThis
+      - vss-web-extension-sdk.NullIntervalMetricsEvent.newInnerMetrics
+      - vss-web-extension-sdk.NullIntervalMetricsEvent.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: Interval metrics event that does nothing
+  - uid: vss-web-extension-sdk.NullIntervalMetricsEvent.closeThis
+    name: closeThis()
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Publishes data to telemetry services
+      To be overriden for specific implementations
+    syntax:
+      parameters: []
+      content: function closeThis()
+      return:
+        type:
+          - Q.Promise
+    type: method
+  - uid: vss-web-extension-sdk.NullIntervalMetricsEvent.newInnerMetrics
+    name: 'newInnerMetrics(innerFeature: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Create inner metrics by prefixing the keys with innerFeature
+    syntax:
+      parameters:
+        - id: innerFeature
+          type:
+            - string
+          description: ''
+      content: 'function newInnerMetrics(innerFeature: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IntervalMetricsEvent
+    type: method
+  - uid: vss-web-extension-sdk.NullIntervalMetricsEvent.constructor
+    name: NullIntervalMetricsEvent()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: new NullIntervalMetricsEvent()
+      return:
+        type:
+          - vss-web-extension-sdk.NullIntervalMetricsEvent
+    type: constructor

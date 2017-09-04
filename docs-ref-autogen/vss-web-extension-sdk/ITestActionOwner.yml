@@ -1,0 +1,92 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.ITestActionOwner
+    name: ITestActionOwner
+    fullName: ITestActionOwner
+    children:
+      - vss-web-extension-sdk.ITestActionOwner.createTestStep
+      - vss-web-extension-sdk.ITestActionOwner.generateXmlFromActions
+      - vss-web-extension-sdk.ITestActionOwner.getNextAvailableActionId
+      - vss-web-extension-sdk.ITestActionOwner.loadActions
+      - vss-web-extension-sdk.ITestActionOwner.saveActions
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface for TestActionOwner
+  - uid: vss-web-extension-sdk.ITestActionOwner.createTestStep
+    name: createTestStep()
+    children: []
+    langs:
+      - typeScript
+    summary: create a test step
+    syntax:
+      parameters: []
+      content: function createTestStep()
+      return:
+        type:
+          - vss-web-extension-sdk.ITestStep
+    type: method
+  - uid: vss-web-extension-sdk.ITestActionOwner.generateXmlFromActions
+    name: generateXmlFromActions()
+    children: []
+    langs:
+      - typeScript
+    summary: function to generate teststep xml for all actions
+    syntax:
+      parameters: []
+      content: function generateXmlFromActions()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.ITestActionOwner.getNextAvailableActionId
+    name: getNextAvailableActionId()
+    children: []
+    langs:
+      - typeScript
+    summary: will generate next available Id for new action
+    syntax:
+      parameters: []
+      content: function getNextAvailableActionId()
+      return:
+        type:
+          - number
+    type: method
+  - uid: vss-web-extension-sdk.ITestActionOwner.loadActions
+    name: 'loadActions(xmString: string, links: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: it will initalize actions array for given input
+    syntax:
+      parameters:
+        - id: xmString
+          type:
+            - string
+          description: ''
+        - id: links
+          type:
+            - function
+          description: ''
+      content: 'function loadActions(xmString: string, links: function)'
+    type: method
+  - uid: vss-web-extension-sdk.ITestActionOwner.saveActions
+    name: 'saveActions(json: JsonPatchDocument)'
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      it will update json with new operations
+      1st for teststep xml
+      remaining for add relation links based on all teststep attachments
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.JsonPatchDocument
+          type:
+            - JsonPatchDocument
+          description: ''
+      content: 'function saveActions(json: JsonPatchDocument)'
+      return:
+        type:
+          - vss-web-extension-sdk.JsonPatchDocument
+    type: method

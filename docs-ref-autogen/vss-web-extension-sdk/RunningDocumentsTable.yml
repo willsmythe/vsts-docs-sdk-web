@@ -1,0 +1,87 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.RunningDocumentsTable
+    name: RunningDocumentsTable
+    fullName: RunningDocumentsTable
+    children:
+      - vss-web-extension-sdk.RunningDocumentsTable.add
+      - vss-web-extension-sdk.RunningDocumentsTable.isModified
+      - vss-web-extension-sdk.RunningDocumentsTable.remove
+      - vss-web-extension-sdk.RunningDocumentsTable.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+  - uid: vss-web-extension-sdk.RunningDocumentsTable.add
+    name: 'add(moniker: string, document: RunningDocument)'
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Add specified document to the running document table
+        The document must have a method named isDirty that returns boolean
+    syntax:
+      parameters:
+        - id: moniker
+          type:
+            - string
+          description: Name for this document type
+        - id: vss-web-extension-sdk.RunningDocument
+          type:
+            - RunningDocument
+          description: Object that will be called to determine state (e.g. dirty//modified)
+      content: 'function add(moniker: string, document: RunningDocument)'
+      return:
+        type:
+          - vss-web-extension-sdk.RunningDocumentsTableEntry
+    type: method
+  - uid: vss-web-extension-sdk.RunningDocumentsTable.isModified
+    name: 'isModified(moniker?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Check if the specified document is modified.  If specified moniker is null
+      or undefined
+        will return true if any currently opened documents are modified
+    syntax:
+      parameters:
+        - id: moniker
+          type:
+            - string
+          description: Name for this document type
+          optional: true
+      content: 'function isModified(moniker?: string)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.RunningDocumentsTable.remove
+    name: 'remove(entry: RunningDocumentsTableEntry)'
+    children: []
+    langs:
+      - typeScript
+    summary: Remove an entry from the running document table
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.RunningDocumentsTableEntry
+          type:
+            - RunningDocumentsTableEntry
+          description: >
+            The handle to the entry that will be removed. The handle is returned
+            from the add function
+      content: 'function remove(entry: RunningDocumentsTableEntry)'
+    type: method
+  - uid: vss-web-extension-sdk.RunningDocumentsTable.constructor
+    name: RunningDocumentsTable()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: new RunningDocumentsTable()
+      return:
+        type:
+          - vss-web-extension-sdk.RunningDocumentsTable
+    type: constructor

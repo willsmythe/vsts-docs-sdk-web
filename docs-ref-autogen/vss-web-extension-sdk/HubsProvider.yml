@@ -1,0 +1,119 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.HubsProvider
+    name: HubsProvider
+    fullName: HubsProvider
+    children:
+      - vss-web-extension-sdk.HubsProvider.getCachedPageData
+      - vss-web-extension-sdk.HubsProvider.getRootContributedHub
+      - vss-web-extension-sdk.HubsProvider.constructor
+      - vss-web-extension-sdk.HubsProvider.reloadCachedProviderData
+    langs:
+      - typeScript
+    type: class
+    summary: Base class for hubs providers.
+  - uid: vss-web-extension-sdk.HubsProvider.getCachedPageData
+    name: >-
+      getCachedPageData(cachedDataProviderContributionId: string,
+      primaryDataProviderContributionId?: string, refreshCache?: boolean,
+      contractMetadata?: ContractMetadata)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get page data from a data provider contribution that is cached, optionally
+      queueing an update of the data
+
+      after reading from the cache
+    syntax:
+      parameters:
+        - id: cachedDataProviderContributionId
+          type:
+            - string
+          description: Id of the data provider which caches data in localStorage
+        - id: primaryDataProviderContributionId
+          type:
+            - string
+          description: >-
+            Optional contribution id of a data provider to use if it exists. The
+            cached data will not be used or updated if this exists.
+          optional: true
+        - id: refreshCache
+          type:
+            - boolean
+          description: >-
+            If true and data was read from the cache, queue up a request to
+            update it.
+          optional: true
+        - id: vss-web-extension-sdk.ContractMetadata
+          type:
+            - ContractMetadata
+          description: >
+            Optional contract metadata to use when deserializing the JSON island
+            data
+          optional: true
+      content: >-
+        function getCachedPageData(cachedDataProviderContributionId: string,
+        primaryDataProviderContributionId?: string, refreshCache?: boolean,
+        contractMetadata?: ContractMetadata)
+      return:
+        type:
+          - T
+    type: method
+  - uid: vss-web-extension-sdk.HubsProvider.getRootContributedHub
+    name: 'getRootContributedHub(context: IHubsProviderContext)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get the root contributed hub for this provider
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IHubsProviderContext
+          type:
+            - IHubsProviderContext
+          description: |
+            hubs provider context
+      content: 'function getRootContributedHub(context: IHubsProviderContext)'
+    type: method
+  - uid: vss-web-extension-sdk.HubsProvider.constructor
+    name: 'HubsProvider(variesByOwner: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: Create a hubs provider
+    syntax:
+      parameters:
+        - id: variesByOwner
+          type:
+            - boolean
+          description: ''
+      content: 'new HubsProvider(variesByOwner: boolean)'
+      return:
+        type:
+          - vss-web-extension-sdk.HubsProvider
+    type: constructor
+  - uid: vss-web-extension-sdk.HubsProvider.reloadCachedProviderData
+    name: >-
+      reloadCachedProviderData(cachedDataProviderContributionId: string,
+      properties?: any)
+    children: []
+    langs:
+      - typeScript
+    summary: Always reloads provider data by queuing up a new request
+    syntax:
+      parameters:
+        - id: cachedDataProviderContributionId
+          type:
+            - string
+          description: Id of the data provider
+        - id: properties
+          type:
+            - any
+          description: >
+            Additional properties to pass to the provider on reload as part of
+            the context
+          optional: true
+      content: >-
+        function reloadCachedProviderData(cachedDataProviderContributionId:
+        string, properties?: any)
+    type: method
