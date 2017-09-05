@@ -199,9 +199,10 @@ items:
     summary: 'Currently supports only Successors, Managers, and Direct Reports'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Identities.Picker.Services.IConnectionType
+        - id: connectionType
           type:
-            - IConnectionType
+            - >-
+              vss-web-extension-sdk.VSS.Identities.Picker.Services.IConnectionType
           description: ''
       content: 'function getConnectionTypeList(connectionType: IConnectionType)'
     type: method
@@ -227,9 +228,9 @@ items:
     summary: Currently supports only Users and Groups
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Identities.Picker.Services.IEntityType
+        - id: identityType
           type:
-            - IEntityType
+            - vss-web-extension-sdk.VSS.Identities.Picker.Services.IEntityType
           description: ''
       content: 'function getIdentityTypeList(identityType: IEntityType)'
     type: method
@@ -245,9 +246,10 @@ items:
       on-premise TFS)
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
+        - id: operationScope
           type:
-            - IOperationScope
+            - >-
+              vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
           description: ''
       content: 'function getOperationScopeList(operationScope: IOperationScope)'
     type: method

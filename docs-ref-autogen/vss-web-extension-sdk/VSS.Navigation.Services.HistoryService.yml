@@ -98,9 +98,9 @@ items:
     summary: Attach a new navigate handler
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IFunctionPPR
+        - id: handler
           type:
-            - IFunctionPPR
+            - vss-web-extension-sdk.IFunctionPPR
           description: The method called whenever a navigation event occurs
         - id: checkCurrentState
           type:
@@ -140,9 +140,9 @@ items:
     summary: Remove a navigate handler
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IFunctionPPR
+        - id: handler
           type:
-            - IFunctionPPR
+            - vss-web-extension-sdk.IFunctionPPR
           description: |
             The global navigate handler method to remove
       content: 'function detachNavigate(handler: IFunctionPPR)'
@@ -342,9 +342,9 @@ items:
       hash or query string.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IDictionaryStringTo
+        - id: state
           type:
-            - IDictionaryStringTo
+            - vss-web-extension-sdk.IDictionaryStringTo
           description: |
             The navigation state dictionary to convert
       content: 'function serializeState(state: IDictionaryStringTo)'
@@ -370,9 +370,9 @@ items:
           description: >-
             The "action" state parameter. This is the _a key in the url or
             "action" in the current state dictionary
-        - id: vss-web-extension-sdk.IDictionaryStringTo
+        - id: data
           type:
-            - IDictionaryStringTo
+            - vss-web-extension-sdk.IDictionaryStringTo
           description: The history entry's new state key/value pairs
           optional: true
         - id: replaceHistoryEntry

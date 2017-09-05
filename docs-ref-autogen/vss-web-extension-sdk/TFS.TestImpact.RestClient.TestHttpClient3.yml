@@ -105,10 +105,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.TestImpact.Contracts.TestResultSignaturesInfo
+        - id: results
           type:
-            - TestResultSignaturesInfo
+            - >-
+              vss-web-extension-sdk.TFS.TestImpact.Contracts.TestResultSignaturesInfo
           description: ''
         - id: project
           type:
@@ -132,17 +132,17 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestImpact.Contracts.TestImpactBuildData
+        - id: testImapctBuildData
           type:
-            - TestImpactBuildData
+            - vss-web-extension-sdk.TFS.TestImpact.Contracts.TestImpactBuildData
           description: ''
         - id: project
           type:
             - string
           description: Project ID or project name
-        - id: vss-web-extension-sdk.TFS.TestImpact.Contracts.DefinitionRunInfo
+        - id: definitionRunInfo
           type:
-            - DefinitionRunInfo
+            - vss-web-extension-sdk.TFS.TestImpact.Contracts.DefinitionRunInfo
           description: ''
       content: >-
         function publishTestImpactBuildData(testImapctBuildData:
@@ -187,9 +187,9 @@ items:
           type:
             - string
           description: Project ID or project name
-        - id: vss-web-extension-sdk.TFS.TestImpact.Contracts.DefinitionRunInfo
+        - id: definitionRunInfo
           type:
-            - DefinitionRunInfo
+            - vss-web-extension-sdk.TFS.TestImpact.Contracts.DefinitionRunInfo
           description: ''
       content: >-
         function queryCodeChanges(project: string, definitionRunInfo:
@@ -213,9 +213,9 @@ items:
           type:
             - string
           description: Project ID or project name
-        - id: vss-web-extension-sdk.TFS.TestImpact.Contracts.DefinitionRunInfo
+        - id: definitionRunInfo
           type:
-            - DefinitionRunInfo
+            - vss-web-extension-sdk.TFS.TestImpact.Contracts.DefinitionRunInfo
           description: ''
         - id: currentTestRunId
           type:
@@ -259,9 +259,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -307,10 +307,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -337,10 +337,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -379,9 +379,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -418,9 +418,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

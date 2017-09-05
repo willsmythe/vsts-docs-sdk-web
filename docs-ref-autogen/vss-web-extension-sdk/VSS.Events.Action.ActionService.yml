@@ -102,9 +102,9 @@ items:
           type:
             - string
           description: The action to register
-        - id: vss-web-extension-sdk.VSS.Events.Action.IActionWorker
+        - id: actionWorker
           type:
-            - IActionWorker
+            - vss-web-extension-sdk.VSS.Events.Action.IActionWorker
           description: >
             Function(actionArgs, next), The handler to invoke for the given
             action when the performAction
@@ -158,9 +158,9 @@ items:
           type:
             - string
           description: The action to un-register
-        - id: vss-web-extension-sdk.VSS.Events.Action.IActionWorker
+        - id: actionWorker
           type:
-            - IActionWorker
+            - vss-web-extension-sdk.VSS.Events.Action.IActionWorker
           description: |
             Function(actionArgs, next), The IActionWorker that was registered.
       content: >-

@@ -59,14 +59,14 @@ items:
       and completion/rejection.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
-        - id: >-
-            vss-web-extension-sdk.VSS.Utils.Accessibility.ProgressAnnouncerOptions
+        - id: options
           type:
-            - ProgressAnnouncerOptions
+            - >-
+              vss-web-extension-sdk.VSS.Utils.Accessibility.ProgressAnnouncerOptions
           description: |+
 
       content: >-
@@ -82,10 +82,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.Utils.Accessibility.ProgressAnnouncerOptions
+        - id: options
           type:
-            - ProgressAnnouncerOptions
+            - >-
+              vss-web-extension-sdk.VSS.Utils.Accessibility.ProgressAnnouncerOptions
           description: ''
       content: 'new ProgressAnnouncer(options: ProgressAnnouncerOptions)'
       return:

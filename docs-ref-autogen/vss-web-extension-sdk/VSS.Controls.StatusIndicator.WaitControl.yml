@@ -144,9 +144,9 @@ items:
           type:
             - TOptions
           description: ''
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -280,9 +280,9 @@ items:
             - function
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -599,15 +599,15 @@ items:
             - TOptions
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.IErrorCallback
+        - id: errorCallback
           type:
-            - IErrorCallback
+            - vss-web-extension-sdk.IErrorCallback
           description: |+
 
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -642,9 +642,9 @@ items:
           description: |+
 
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -695,9 +695,9 @@ items:
       Note: Options are merged.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
       content: 'function setEnhancementOptions(enhancementOptions: EnhancementOptions)'
     type: method
@@ -749,9 +749,9 @@ items:
       element.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Utils.Core.Cancelable
+        - id: cancellable
           type:
-            - Cancelable
+            - vss-web-extension-sdk.VSS.Utils.Core.Cancelable
           description: ''
           optional: true
       content: 'function startWait(cancellable?: Cancelable)'
@@ -764,10 +764,10 @@ items:
     summary: Constructs a WaitControl object.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.Controls.StatusIndicator.IWaitControlOptions
+        - id: options
           type:
-            - IWaitControlOptions
+            - >-
+              vss-web-extension-sdk.VSS.Controls.StatusIndicator.IWaitControlOptions
           description: >
             The options to initialize the control. It has the following
             properties:

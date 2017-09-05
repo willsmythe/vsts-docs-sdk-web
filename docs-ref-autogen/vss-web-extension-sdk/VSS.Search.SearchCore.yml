@@ -80,13 +80,13 @@ items:
       strategy.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Search.SearchStrategy
+        - id: strategy
           type:
-            - SearchStrategy
+            - vss-web-extension-sdk.VSS.Search.SearchStrategy
           description: The search strategy to use.
-        - id: vss-web-extension-sdk.VSS.Search.SearchAdapter
+        - id: adapter
           type:
-            - SearchAdapter
+            - vss-web-extension-sdk.VSS.Search.SearchAdapter
           description: |
             The search adapter to use.
       content: 'new SearchCore(strategy: SearchStrategy, adapter: SearchAdapter)'

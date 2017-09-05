@@ -239,9 +239,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -272,9 +272,9 @@ items:
     summary: Associates an artifact with a build
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Build.Contracts.BuildArtifact
+        - id: artifact
           type:
-            - BuildArtifact
+            - vss-web-extension-sdk.TFS.Build.Contracts.BuildArtifact
           description: ''
         - id: buildId
           type:
@@ -303,9 +303,9 @@ items:
     summary: Creates a new definition
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition3_2
+        - id: definition
           type:
-            - BuildDefinition3_2
+            - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition3_2
           description: ''
         - id: project
           type:
@@ -338,9 +338,9 @@ items:
     summary: Creates a build queue
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue
+        - id: queue
           type:
-            - AgentPoolQueue
+            - vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue
           description: ''
       content: 'function createQueue(queue: AgentPoolQueue)'
       return:
@@ -1466,9 +1466,9 @@ items:
     summary: Queues a build
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Build.Contracts.Build
+        - id: build
           type:
-            - Build
+            - vss-web-extension-sdk.TFS.Build.Contracts.Build
           description: ''
         - id: project
           type:
@@ -1533,9 +1533,10 @@ items:
     summary: Saves a definition template
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionTemplate3_2
+        - id: template
           type:
-            - BuildDefinitionTemplate3_2
+            - >-
+              vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionTemplate3_2
           description: ''
         - id: project
           type:
@@ -1639,9 +1640,9 @@ items:
     summary: Updates a build
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Build.Contracts.Build
+        - id: build
           type:
-            - Build
+            - vss-web-extension-sdk.TFS.Build.Contracts.Build
           description: ''
         - id: buildId
           type:
@@ -1673,9 +1674,9 @@ items:
     summary: Updates the build settings
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Build.Contracts.BuildSettings
+        - id: settings
           type:
-            - BuildSettings
+            - vss-web-extension-sdk.TFS.Build.Contracts.BuildSettings
           description: ''
       content: 'function updateBuildSettings(settings: BuildSettings)'
       return:
@@ -1694,9 +1695,9 @@ items:
     summary: Updates an existing definition
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition3_2
+        - id: definition
           type:
-            - BuildDefinition3_2
+            - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition3_2
           description: ''
         - id: definitionId
           type:
@@ -1760,10 +1761,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -1790,10 +1791,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -1832,9 +1833,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -1871,9 +1872,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

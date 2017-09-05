@@ -71,9 +71,9 @@ items:
     summary: Get the baseUri this contribution.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: |
             The contribution whose baseUri is being requested
       content: 'function getBaseUri(contribution: Contribution)'
@@ -213,9 +213,9 @@ items:
     summary: Get the fallbackUri this contribution.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: |
             The contribution whose fallbackUri is being requested
       content: 'function getFallbackUri(contribution: Contribution)'
@@ -258,9 +258,9 @@ items:
     summary: Get the version this contribution.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: |
             The contribution whose version is being requested
       content: 'function getProviderDisplayName(contribution: Contribution)'
@@ -277,9 +277,9 @@ items:
     summary: Get the specified provider property for this contribution.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: The contribution whose provider property is being requested
         - id: propertyName
           type:
@@ -302,9 +302,9 @@ items:
     summary: Get the registrationId this contribution.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: |
             The contribution whose registration is being requested
       content: 'function getRegistrationId(contribution: Contribution)'
@@ -321,9 +321,9 @@ items:
     summary: Get the ServiceInstanceTypeProperty for this contribution.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: |
             The contribution whose fallbackUri is being requested
       content: 'function getServiceInstanceType(contribution: Contribution)'
@@ -340,9 +340,9 @@ items:
     summary: Get the version this contribution.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: |
             The contribution whose version is being requested
       content: 'function getVersion(contribution: Contribution)'
@@ -363,9 +363,9 @@ items:
       Should be called by the Service factory.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Service.VssConnection
+        - id: connection
           type:
-            - VssConnection
+            - vss-web-extension-sdk.VSS.Service.VssConnection
           description: |
             Service.VssConnection
       content: 'function initializeConnection(connection: VssConnection)'
@@ -415,10 +415,10 @@ items:
             - string
           description: Optional type of contribution to filter by
           optional: true
-        - id: >-
-            vss-web-extension-sdk.VSS.Contributions.Services.ContributionQueryCallback
+        - id: queryCallback
           type:
-            - ContributionQueryCallback
+            - >-
+              vss-web-extension-sdk.VSS.Contributions.Services.ContributionQueryCallback
           description: Optional method to filter contributions by
           optional: true
       content: >-
@@ -441,10 +441,10 @@ items:
       AJAX call for the specified contributions
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributionsPageData
+        - id: contributionData
           type:
-            - ContributionsPageData
+            - >-
+              vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributionsPageData
           description: The contribution data to register
         - id: clearExisting
           type:

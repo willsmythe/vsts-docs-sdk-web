@@ -38,16 +38,16 @@ items:
           type:
             - string
           description: Feature name
-        - id: vss-web-extension-sdk.IResultCallback
+        - id: callback
           type:
-            - IResultCallback
+            - vss-web-extension-sdk.IResultCallback
           description: >
 
             Success callback, taking one parameter (boolean) - the feature
             availability state
-        - id: vss-web-extension-sdk.IErrorCallback
+        - id: errorCallback
           type:
-            - IErrorCallback
+            - vss-web-extension-sdk.IErrorCallback
           description: |
             Error callback
           optional: true
@@ -93,9 +93,9 @@ items:
     summary: Sets the VssConnection to use for this service
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Service.VssConnection
+        - id: connection
           type:
-            - VssConnection
+            - vss-web-extension-sdk.VSS.Service.VssConnection
           description: |
             VssConnection used by this service
       content: 'function initializeConnection(connection: VssConnection)'

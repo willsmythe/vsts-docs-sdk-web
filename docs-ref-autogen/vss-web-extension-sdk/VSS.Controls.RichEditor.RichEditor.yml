@@ -166,9 +166,9 @@ items:
           type:
             - TOptions
           description: ''
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -311,9 +311,9 @@ items:
             - function
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -586,9 +586,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.RichEditor.IRichEditorOptions
+        - id: options
           type:
-            - IRichEditorOptions
+            - vss-web-extension-sdk.VSS.Controls.RichEditor.IRichEditorOptions
           description: |+
 
           optional: true
@@ -782,15 +782,15 @@ items:
             - TOptions
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.IErrorCallback
+        - id: errorCallback
           type:
-            - IErrorCallback
+            - vss-web-extension-sdk.IErrorCallback
           description: |+
 
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -825,9 +825,9 @@ items:
           description: |+
 
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -867,9 +867,9 @@ items:
     summary: Creates a new rich editor with the provided options
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.RichEditor.IRichEditorOptions
+        - id: options
           type:
-            - IRichEditorOptions
+            - vss-web-extension-sdk.VSS.Controls.RichEditor.IRichEditorOptions
           description: ''
       content: 'new RichEditor(options: IRichEditorOptions)'
       return:
@@ -919,9 +919,9 @@ items:
       Note: Options are merged.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
       content: 'function setEnhancementOptions(enhancementOptions: EnhancementOptions)'
     type: method

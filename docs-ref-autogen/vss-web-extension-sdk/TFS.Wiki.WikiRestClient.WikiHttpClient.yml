@@ -61,9 +61,9 @@ items:
       version of the wiki.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Wiki.Contracts.WikiUpdate
+        - id: update
           type:
-            - WikiUpdate
+            - vss-web-extension-sdk.TFS.Wiki.Contracts.WikiUpdate
           description: ''
         - id: project
           type:
@@ -73,10 +73,10 @@ items:
           type:
             - string
           description: ID of the wiki in which the update is to be made.
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
+        - id: versionDescriptor
           type:
-            - GitVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
           description: >-
             Version descriptor for the version on which the update is to be
             made. Defaults to deafult branch (Optional)
@@ -98,9 +98,9 @@ items:
       of the wiki for the given project.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository
+        - id: wikiToCreate
           type:
-            - GitRepository
+            - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository
           description: >-
             Object containing name of the wiki to be created and the ID of the
             project in which the wiki is to be created. The provided name will
@@ -159,10 +159,10 @@ items:
             - function
           description: Recusion level for the page retrieval. Defaults to None (Optional).
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
+        - id: versionDescriptor
           type:
-            - GitVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
           description: >-
             Version descriptor for the page. Defaults to deafult branch
             (Optional).
@@ -204,10 +204,10 @@ items:
             - function
           description: Recusion level for the page retrieval. Defaults to None (Optional).
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
+        - id: versionDescriptor
           type:
-            - GitVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
           description: >-
             Version descriptor for the page. Defaults to deafult branch
             (Optional).
@@ -249,10 +249,10 @@ items:
             - function
           description: Recusion level for the page retrieval. Defaults to None (Optional).
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
+        - id: versionDescriptor
           type:
-            - GitVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
           description: >-
             Version descriptor for the page. Defaults to deafult branch
             (Optional).
@@ -307,9 +307,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -354,10 +354,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -384,10 +384,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -426,9 +426,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -465,9 +465,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

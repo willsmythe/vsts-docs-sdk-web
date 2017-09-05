@@ -52,9 +52,9 @@ items:
             If true and data was read from the cache, queue up a request to
             update it.
           optional: true
-        - id: vss-web-extension-sdk.VSS.Serialization.ContractMetadata
+        - id: contractMetadata
           type:
-            - ContractMetadata
+            - vss-web-extension-sdk.VSS.Serialization.ContractMetadata
           description: >
             Optional contract metadata to use when deserializing the JSON island
             data
@@ -76,9 +76,9 @@ items:
     summary: Get the root contributed hub for this provider
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IHubsProviderContext
+        - id: context
           type:
-            - IHubsProviderContext
+            - vss-web-extension-sdk.IHubsProviderContext
           description: |
             hubs provider context
       content: 'function getRootContributedHub(context: IHubsProviderContext)'

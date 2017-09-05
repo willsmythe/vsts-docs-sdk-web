@@ -187,9 +187,9 @@ items:
     summary: Create a new changeset.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset
+        - id: changeset
           type:
-            - TfvcChangeset
+            - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset
           description: ''
         - id: project
           type:
@@ -223,10 +223,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetsRequestData
+        - id: changesetsRequestData
           type:
-            - TfvcChangesetsRequestData
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetsRequestData
           description: ''
       content: >-
         function getBatchedChangesets(changesetsRequestData:
@@ -419,10 +419,10 @@ items:
             - string
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetSearchCriteria
+        - id: searchCriteria
           type:
-            - TfvcChangesetSearchCriteria
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetSearchCriteria
           description: ''
           optional: true
       content: >-
@@ -522,10 +522,10 @@ items:
             - string
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetSearchCriteria
+        - id: searchCriteria
           type:
-            - TfvcChangesetSearchCriteria
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetSearchCriteria
           description: ''
           optional: true
       content: >-
@@ -601,10 +601,10 @@ items:
             - function
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
+        - id: versionDescriptor
           type:
-            - TfvcVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -660,10 +660,10 @@ items:
             - function
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
+        - id: versionDescriptor
           type:
-            - TfvcVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -705,10 +705,10 @@ items:
             - boolean
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
+        - id: versionDescriptor
           type:
-            - TfvcVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -731,10 +731,10 @@ items:
       path.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcItemRequestData
+        - id: itemRequestData
           type:
-            - TfvcItemRequestData
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcItemRequestData
           description: ''
         - id: project
           type:
@@ -760,10 +760,10 @@ items:
       path.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcItemRequestData
+        - id: itemRequestData
           type:
-            - TfvcItemRequestData
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcItemRequestData
           description: ''
         - id: project
           type:
@@ -822,10 +822,10 @@ items:
             - function
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
+        - id: versionDescriptor
           type:
-            - TfvcVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -881,10 +881,10 @@ items:
             - function
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
+        - id: versionDescriptor
           type:
-            - TfvcVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -910,10 +910,10 @@ items:
           type:
             - string
           description: Unique identifier of label
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcLabelRequestData
+        - id: requestData
           type:
-            - TfvcLabelRequestData
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcLabelRequestData
           description: maxItemCount
         - id: project
           type:
@@ -966,10 +966,10 @@ items:
     summary: Get a collection of shallow label references.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcLabelRequestData
+        - id: requestData
           type:
-            - TfvcLabelRequestData
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcLabelRequestData
           description: 'labelScope, name, owner, and itemLabelFilter'
         - id: project
           type:
@@ -1006,10 +1006,10 @@ items:
           type:
             - string
           description: Shelveset's unique ID
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelvesetRequestData
+        - id: requestData
           type:
-            - TfvcShelvesetRequestData
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelvesetRequestData
           description: >-
             includeDetails, includeWorkItems, maxChangeCount, and
             maxCommentLength
@@ -1062,10 +1062,10 @@ items:
     summary: Return a collection of shallow shelveset references.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelvesetRequestData
+        - id: requestData
           type:
-            - TfvcShelvesetRequestData
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelvesetRequestData
           description: 'name, owner, and maxCommentLength'
           optional: true
         - id: top
@@ -1222,9 +1222,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -1271,10 +1271,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -1301,10 +1301,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -1343,9 +1343,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -1382,9 +1382,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

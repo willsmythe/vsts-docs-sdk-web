@@ -55,9 +55,9 @@ items:
     summary: Get the default hub to use for the specified hub group
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.HubGroup
+        - id: hubGroup
           type:
-            - HubGroup
+            - vss-web-extension-sdk.HubGroup
           description: The hub group whose default hub to return
         - id: hubGroupHubs
           type:
@@ -241,9 +241,9 @@ items:
     summary: Is the specified hub group explicitly pinned by the user?
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.HubGroup
+        - id: hubGroup
           type:
-            - HubGroup
+            - vss-web-extension-sdk.HubGroup
           description: |
             The hub group to check
       content: 'function isHubGroupPinned(hubGroup: HubGroup)'
@@ -260,9 +260,9 @@ items:
     summary: Is the specified hub group explicitly unpinned by the user?
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.HubGroup
+        - id: hubGroup
           type:
-            - HubGroup
+            - vss-web-extension-sdk.HubGroup
           description: |
             Hub group to check
       content: 'function isHubGroupUnpinned(hubGroup: HubGroup)'
@@ -280,9 +280,9 @@ items:
       current user
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.Hub
+        - id: hub
           type:
-            - Hub
+            - vss-web-extension-sdk.Hub
           description: |
             The hub to check
       content: 'function isHubPinned(hub: Hub)'
@@ -319,9 +319,9 @@ items:
     summary: Pin the specified hub for the current user
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.Hub
+        - id: hub
           type:
-            - Hub
+            - vss-web-extension-sdk.Hub
           description: |
             Hub to pin
       content: 'function pinHub(hub: Hub)'
@@ -334,9 +334,9 @@ items:
     summary: Pin the hub group for the current user
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.HubGroup
+        - id: hubGroup
           type:
-            - HubGroup
+            - vss-web-extension-sdk.HubGroup
           description: |
             Hub group to pin
       content: 'function pinHubGroup(hubGroup: HubGroup)'
@@ -415,9 +415,9 @@ items:
     summary: Unpin the specified hub for the current user
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.Hub
+        - id: hub
           type:
-            - Hub
+            - vss-web-extension-sdk.Hub
           description: |
             Hub to unpin
       content: 'function unpinHub(hub: Hub)'
@@ -430,9 +430,9 @@ items:
     summary: Unpin the hub group for the current user
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.HubGroup
+        - id: hubGroup
           type:
-            - HubGroup
+            - vss-web-extension-sdk.HubGroup
           description: |
             Hub group to unpin
       content: 'function unpinHubGroup(hubGroup: HubGroup)'

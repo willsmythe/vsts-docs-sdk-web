@@ -76,9 +76,9 @@ items:
       error out.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.TabContent.ITabRegistration
+        - id: registration
           type:
-            - ITabRegistration
+            - vss-web-extension-sdk.VSS.Controls.TabContent.ITabRegistration
           description: a tab and group
       content: 'function registerTab(registration: ITabRegistration)'
       return:
@@ -96,9 +96,10 @@ items:
       If the groupId has been registered to the control, it will error out
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.TabContent.ITabGroupRegistration
+        - id: groupRegistration
           type:
-            - ITabGroupRegistration
+            - >-
+              vss-web-extension-sdk.VSS.Controls.TabContent.ITabGroupRegistration
           description: |
             The group that needs to be registered
       content: 'function registerTabGroup(groupRegistration: ITabGroupRegistration)'

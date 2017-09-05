@@ -30,9 +30,9 @@ items:
           type:
             - string
           description: Name for this document type
-        - id: vss-web-extension-sdk.VSS.Events.Document.RunningDocument
+        - id: document
           type:
-            - RunningDocument
+            - vss-web-extension-sdk.VSS.Events.Document.RunningDocument
           description: Object that will be called to determine state (e.g. dirty//modified)
       content: 'function add(moniker: string, document: RunningDocument)'
       return:
@@ -68,9 +68,10 @@ items:
     summary: Remove an entry from the running document table
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTableEntry
+        - id: entry
           type:
-            - RunningDocumentsTableEntry
+            - >-
+              vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTableEntry
           description: >
             The handle to the entry that will be removed. The handle is returned
             from the add function

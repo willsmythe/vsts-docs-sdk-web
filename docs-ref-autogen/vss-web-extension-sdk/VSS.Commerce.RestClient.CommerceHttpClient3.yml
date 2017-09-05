@@ -140,9 +140,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Commerce.Contracts.OfferSubscription
+        - id: offerSubscription
           type:
-            - OfferSubscription
+            - vss-web-extension-sdk.VSS.Commerce.Contracts.OfferSubscription
           description: ''
         - id: cancelReason
           type:
@@ -210,9 +210,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -257,9 +257,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Commerce.Contracts.ConnectedServer
+        - id: connectedServer
           type:
-            - ConnectedServer
+            - vss-web-extension-sdk.VSS.Commerce.Contracts.ConnectedServer
           description: ''
       content: 'function createConnectedServer(connectedServer: ConnectedServer)'
       return:
@@ -275,9 +275,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Commerce.Contracts.OfferMeter
+        - id: offerConfig
           type:
-            - OfferMeter
+            - vss-web-extension-sdk.VSS.Commerce.Contracts.OfferMeter
           description: ''
       content: 'function createOfferMeterDefinition(offerConfig: OfferMeter)'
       return:
@@ -295,9 +295,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Commerce.Contracts.OfferSubscription
+        - id: offerSubscription
           type:
-            - OfferSubscription
+            - vss-web-extension-sdk.VSS.Commerce.Contracts.OfferSubscription
           description: ''
         - id: offerCode
           type:
@@ -1168,9 +1168,9 @@ items:
     summary: '[Preview API] Saves usage entry of a resource.'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Commerce.Contracts.UsageEvent
+        - id: usageEvent
           type:
-            - UsageEvent
+            - vss-web-extension-sdk.VSS.Commerce.Contracts.UsageEvent
           description: Detailed usage event
       content: 'function reportUsage(usageEvent: UsageEvent)'
       return:
@@ -1246,9 +1246,9 @@ items:
     summary: '[Preview API] Sets the maximum and included quantities for a resource'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Commerce.Contracts.SubscriptionResource
+        - id: meter
           type:
-            - SubscriptionResource
+            - vss-web-extension-sdk.VSS.Commerce.Contracts.SubscriptionResource
           description: ''
       content: 'function updateMeter(meter: SubscriptionResource)'
       return:
@@ -1264,9 +1264,9 @@ items:
     summary: '[Preview API] Sets the maximum and included quantities for a resource'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Commerce.Contracts.OfferSubscription
+        - id: offerSubscription
           type:
-            - OfferSubscription
+            - vss-web-extension-sdk.VSS.Commerce.Contracts.OfferSubscription
           description: ''
       content: 'function updateOfferSubscription(offerSubscription: OfferSubscription)'
       return:
@@ -1322,10 +1322,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -1352,10 +1352,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -1394,9 +1394,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -1433,9 +1433,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

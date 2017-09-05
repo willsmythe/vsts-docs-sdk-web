@@ -293,9 +293,9 @@ items:
             - function
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -720,15 +720,15 @@ items:
             - TOptions
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.IErrorCallback
+        - id: errorCallback
           type:
-            - IErrorCallback
+            - vss-web-extension-sdk.IErrorCallback
           description: |+
 
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -763,9 +763,9 @@ items:
           description: |+
 
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -829,9 +829,9 @@ items:
       Note: Options are merged.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
       content: 'function setEnhancementOptions(enhancementOptions: EnhancementOptions)'
     type: method
@@ -941,9 +941,10 @@ items:
             the message to display in the dialog. If it's a string, the message
             is displayed as plain text (no html). For HTML display, pass in a
             jQuery object.
-        - id: vss-web-extension-sdk.VSS.Controls.Dialogs.IShowMessageDialogOptions
+        - id: methodOptions
           type:
-            - IShowMessageDialogOptions
+            - >-
+              vss-web-extension-sdk.VSS.Controls.Dialogs.IShowMessageDialogOptions
           description: options affecting the dialog
           optional: true
       content: >-

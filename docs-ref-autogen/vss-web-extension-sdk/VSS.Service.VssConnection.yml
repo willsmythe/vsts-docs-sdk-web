@@ -59,9 +59,9 @@ items:
     summary: Get a (cached) VssConnection object of the given type
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext
+        - id: webContext
           type:
-            - WebContext
+            - vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext
           description: Specific web context to get the connection for
           optional: true
         - id: hostType
@@ -133,14 +133,14 @@ items:
             - string
           description: Unique id of the service to scope the http client to
           optional: true
-        - id: vss-web-extension-sdk.IAuthTokenManager
+        - id: authTokenManager
           type:
-            - IAuthTokenManager
+            - vss-web-extension-sdk.IAuthTokenManager
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: clientOptions
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -181,9 +181,9 @@ items:
     summary: Create a new connection object
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext
+        - id: webContext
           type:
-            - WebContext
+            - vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext
           description: Specific web context to get the connection for
         - id: hostType
           type:

@@ -23,9 +23,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Telemetry.Services.TelemetryEventData
+        - id: eventData
           type:
-            - TelemetryEventData
+            - vss-web-extension-sdk.VSS.Telemetry.Services.TelemetryEventData
           description: ''
         - id: publishImmediately
           type:
@@ -48,10 +48,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.Telemetry.RestClient.CustomerIntelligenceHttpClient
+        - id: client
           type:
-            - CustomerIntelligenceHttpClient
+            - >-
+              vss-web-extension-sdk.VSS.Telemetry.RestClient.CustomerIntelligenceHttpClient
           description: ''
           optional: true
       content: 'new TelemetryAsyncHelper(client?: CustomerIntelligenceHttpClient)'

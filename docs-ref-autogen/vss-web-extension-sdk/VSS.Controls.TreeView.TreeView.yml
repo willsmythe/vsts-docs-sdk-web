@@ -136,9 +136,9 @@ items:
           type:
             - TOptions
           description: ''
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -265,9 +265,9 @@ items:
             - function
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -392,9 +392,9 @@ items:
     summary: Set UI Focus on the node (Does not change selected node state)
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
+        - id: node
           type:
-            - TreeNode
+            - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
           description: |
             Tree node to navigate to
       content: 'function focusOnNode(node: TreeNode)'
@@ -609,9 +609,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
+        - id: node
           type:
-            - TreeNode
+            - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
           description: ''
         - id: nodeElement
           type:
@@ -667,15 +667,15 @@ items:
             - TOptions
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.IErrorCallback
+        - id: errorCallback
           type:
-            - IErrorCallback
+            - vss-web-extension-sdk.IErrorCallback
           description: |+
 
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -709,9 +709,9 @@ items:
           description: |+
 
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -726,9 +726,9 @@ items:
     summary: Removes the specified node from the tree.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
+        - id: node
           type:
-            - TreeNode
+            - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
           description: Node to be removed.
       content: 'function removeNode(node: TreeNode)'
     type: method
@@ -801,9 +801,9 @@ items:
       Note: Options are merged.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
       content: 'function setEnhancementOptions(enhancementOptions: EnhancementOptions)'
     type: method
@@ -839,9 +839,9 @@ items:
     summary: Sets the specified node as selected.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
+        - id: node
           type:
-            - TreeNode
+            - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
           description: Node to be selected.
         - id: suppressChangeEvent
           type:
@@ -878,9 +878,9 @@ items:
       added or removed.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
+        - id: node
           type:
-            - TreeNode
+            - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
           description: Node to be updated.
         - id: suppressFocus
           type:
@@ -945,9 +945,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
+        - id: node
           type:
-            - TreeNode
+            - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
           description: ''
         - id: nodeElement
           type:
@@ -1126,9 +1126,9 @@ items:
     summary: Gets the DOM element associated with the specified node
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
+        - id: node
           type:
-            - TreeNode
+            - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
           description: Node associated with the seeked DOM element
       content: 'function _getNodeElement(node: TreeNode)'
       return:
@@ -1258,9 +1258,9 @@ items:
     summary: Ensure the tree node's expansion state is set to a particular value
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
+        - id: node
           type:
-            - TreeNode
+            - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
           description: The tree node
         - id: nodeElement
           type:
@@ -1287,9 +1287,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
+        - id: node
           type:
-            - TreeNode
+            - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
           description: ''
         - id: nodeElement
           type:

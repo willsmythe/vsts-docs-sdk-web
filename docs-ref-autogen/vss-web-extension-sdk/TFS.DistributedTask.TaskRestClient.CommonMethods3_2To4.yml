@@ -141,9 +141,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV
+        - id: lines
           type:
-            - VssJsonCollectionWrapperV
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV
           description: ''
         - id: scopeIdentifier
           type:
@@ -229,9 +230,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -307,9 +308,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog
+        - id: log
           type:
-            - TaskLog
+            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog
           description: ''
         - id: scopeIdentifier
           type:
@@ -343,9 +344,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline
+        - id: timeline
           type:
-            - Timeline
+            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline
           description: ''
         - id: scopeIdentifier
           type:
@@ -1029,9 +1030,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV
+        - id: records
           type:
-            - VssJsonCollectionWrapperV
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV
           description: ''
         - id: scopeIdentifier
           type:
@@ -1095,10 +1097,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -1125,10 +1127,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -1167,9 +1169,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -1206,9 +1208,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

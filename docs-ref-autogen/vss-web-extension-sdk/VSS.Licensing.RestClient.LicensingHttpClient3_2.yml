@@ -128,10 +128,10 @@ items:
     summary: '[Preview API] Assign an explicit account entitlement'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.Licensing.Contracts.AccountEntitlementUpdateModel
+        - id: body
           type:
-            - AccountEntitlementUpdateModel
+            - >-
+              vss-web-extension-sdk.VSS.Licensing.Contracts.AccountEntitlementUpdateModel
           description: The update model for the entitlement
         - id: userId
           type:
@@ -194,9 +194,9 @@ items:
       of users
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Licensing.Contracts.ExtensionAssignment
+        - id: body
           type:
-            - ExtensionAssignment
+            - vss-web-extension-sdk.VSS.Licensing.Contracts.ExtensionAssignment
           description: The extension assignment details.
       content: 'function assignExtensionToUsers(body: ExtensionAssignment)'
       return:
@@ -717,9 +717,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -785,9 +785,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Licensing.Contracts.ExtensionLicenseData
+        - id: extensionLicenseData
           type:
-            - ExtensionLicenseData
+            - vss-web-extension-sdk.VSS.Licensing.Contracts.ExtensionLicenseData
           description: ''
       content: >-
         function registerExtensionLicense(extensionLicenseData:
@@ -858,10 +858,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -888,10 +888,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -930,9 +930,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -969,9 +969,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

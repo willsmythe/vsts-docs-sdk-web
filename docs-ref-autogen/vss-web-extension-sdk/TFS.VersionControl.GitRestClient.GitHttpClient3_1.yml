@@ -438,9 +438,9 @@ items:
     summary: '[Preview API] Create an annotated tag'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAnnotatedTag
+        - id: tagObject
           type:
-            - GitAnnotatedTag
+            - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAnnotatedTag
           description: Object containing details of tag to be created
         - id: project
           type:
@@ -507,10 +507,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationParameters
+        - id: cherryPickToCreate
           type:
-            - GitAsyncRefOperationParameters
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationParameters
           description: ''
         - id: project
           type:
@@ -538,9 +538,9 @@ items:
     summary: Create a pull request review comment
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.Comment
+        - id: comment
           type:
-            - Comment
+            - vss-web-extension-sdk.TFS.VersionControl.Contracts.Comment
           description: ''
         - id: repositoryId
           type:
@@ -577,9 +577,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitStatus
+        - id: gitCommitStatusToCreate
           type:
-            - GitStatus
+            - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitStatus
           description: ''
         - id: commitId
           type:
@@ -610,9 +610,9 @@ items:
     summary: '[Preview API] Creates a ref favorite'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefFavorite
+        - id: favorite
           type:
-            - GitRefFavorite
+            - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefFavorite
           description: ''
         - id: project
           type:
@@ -634,9 +634,10 @@ items:
     summary: '[Preview API] Create an import request'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitImportRequest
+        - id: importRequest
           type:
-            - GitImportRequest
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitImportRequest
           description: ''
         - id: project
           type:
@@ -665,9 +666,9 @@ items:
     summary: Create a git pull request
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequest
+        - id: gitPullRequestToCreate
           type:
-            - GitPullRequest
+            - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequest
           description: ''
         - id: repositoryId
           type:
@@ -713,10 +714,10 @@ items:
     summary: '[Preview API] Create a pull request iteration status'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestStatus
+        - id: status
           type:
-            - GitPullRequestStatus
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestStatus
           description: ''
         - id: repositoryId
           type:
@@ -754,10 +755,10 @@ items:
     summary: Adds a reviewer to a git pull request
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.IdentityRefWithVote
+        - id: reviewer
           type:
-            - IdentityRefWithVote
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.IdentityRefWithVote
           description: ''
         - id: repositoryId
           type:
@@ -830,10 +831,10 @@ items:
     summary: '[Preview API] Create a pull request status'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestStatus
+        - id: status
           type:
-            - GitPullRequestStatus
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestStatus
           description: ''
         - id: repositoryId
           type:
@@ -864,9 +865,9 @@ items:
     summary: Push changes to the repository.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPush
+        - id: push
           type:
-            - GitPush
+            - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPush
           description: ''
         - id: repositoryId
           type:
@@ -895,9 +896,9 @@ items:
     summary: Create a git repository
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository
+        - id: gitRepositoryToCreate
           type:
-            - GitRepository
+            - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository
           description: ''
         - id: project
           type:
@@ -922,10 +923,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationParameters
+        - id: revertToCreate
           type:
-            - GitAsyncRefOperationParameters
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationParameters
           description: ''
         - id: project
           type:
@@ -953,10 +954,10 @@ items:
     summary: Create a pull request review comment thread
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestCommentThread
+        - id: commentThread
           type:
-            - GitPullRequestCommentThread
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestCommentThread
           description: ''
         - id: repositoryId
           type:
@@ -1483,10 +1484,10 @@ items:
             - string
           description: Project ID or project name
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
+        - id: baseVersionDescriptor
           type:
-            - GitVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -1516,10 +1517,10 @@ items:
             - string
           description: Project ID or project name
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
+        - id: baseVersionDescriptor
           type:
-            - GitVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -1540,10 +1541,10 @@ items:
     summary: Retrieve statistics for multiple commits
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitQueryBranchStatsCriteria
+        - id: searchCriteria
           type:
-            - GitQueryBranchStatsCriteria
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitQueryBranchStatsCriteria
           description: ''
         - id: repositoryId
           type:
@@ -1811,16 +1812,16 @@ items:
             - number
           description: Number of changes to skip
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitBaseVersionDescriptor
+        - id: baseVersionDescriptor
           type:
-            - GitBaseVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitBaseVersionDescriptor
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitTargetVersionDescriptor
+        - id: targetVersionDescriptor
           type:
-            - GitTargetVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitTargetVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -1849,10 +1850,10 @@ items:
           description: >-
             The id or friendly name of the repository. To use the friendly name,
             projectId must also be specified.
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitQueryCommitsCriteria
+        - id: searchCriteria
           type:
-            - GitQueryCommitsCriteria
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitQueryCommitsCriteria
           description: ''
         - id: project
           type:
@@ -1888,10 +1889,10 @@ items:
     summary: Retrieve git commits for a project
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitQueryCommitsCriteria
+        - id: searchCriteria
           type:
-            - GitQueryCommitsCriteria
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitQueryCommitsCriteria
           description: Search options
         - id: repositoryId
           type:
@@ -1969,10 +1970,10 @@ items:
             - string
           description: path to search under
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
+        - id: versionDescriptor
           type:
-            - GitVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
           description: 'version, version type and options'
           optional: true
       content: >-
@@ -2067,10 +2068,10 @@ items:
             - boolean
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
+        - id: versionDescriptor
           type:
-            - GitVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -2137,10 +2138,10 @@ items:
             - boolean
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
+        - id: versionDescriptor
           type:
-            - GitVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -2208,10 +2209,10 @@ items:
             - boolean
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
+        - id: versionDescriptor
           type:
-            - GitVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -2236,10 +2237,10 @@ items:
       project given a list of paths or a long path
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitItemRequestData
+        - id: requestData
           type:
-            - GitItemRequestData
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitItemRequestData
           description: ''
         - id: repositoryId
           type:
@@ -2312,10 +2313,10 @@ items:
             - boolean
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
+        - id: versionDescriptor
           type:
-            - GitVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -2382,10 +2383,10 @@ items:
             - boolean
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
+        - id: versionDescriptor
           type:
-            - GitVersionDescriptor
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -2832,10 +2833,10 @@ items:
     summary: Query for pull requests
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestQuery
+        - id: queries
           type:
-            - GitPullRequestQuery
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestQuery
           description: ''
         - id: repositoryId
           type:
@@ -2935,10 +2936,10 @@ items:
           type:
             - string
           description: ''
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestSearchCriteria
+        - id: searchCriteria
           type:
-            - GitPullRequestSearchCriteria
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestSearchCriteria
           description: ''
         - id: project
           type:
@@ -2984,10 +2985,10 @@ items:
           type:
             - string
           description: Project ID or project name
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestSearchCriteria
+        - id: searchCriteria
           type:
-            - GitPullRequestSearchCriteria
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestSearchCriteria
           description: ''
         - id: maxCommentLength
           type:
@@ -3279,10 +3280,10 @@ items:
             - number
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPushSearchCriteria
+        - id: searchCriteria
           type:
-            - GitPushSearchCriteria
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPushSearchCriteria
           description: ''
           optional: true
       content: >-
@@ -3797,9 +3798,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -4216,10 +4217,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.ShareNotificationContext
+        - id: userMessage
           type:
-            - ShareNotificationContext
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.ShareNotificationContext
           description: ''
         - id: repositoryId
           type:
@@ -4317,9 +4318,9 @@ items:
     summary: Update a pull request review comment thread
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.Comment
+        - id: comment
           type:
-            - Comment
+            - vss-web-extension-sdk.TFS.VersionControl.Contracts.Comment
           description: ''
         - id: repositoryId
           type:
@@ -4361,9 +4362,10 @@ items:
     summary: '[Preview API] Update an import request'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitImportRequest
+        - id: importRequestToUpdate
           type:
-            - GitImportRequest
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitImportRequest
           description: ''
         - id: project
           type:
@@ -4395,9 +4397,9 @@ items:
     summary: Updates a pull request
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequest
+        - id: gitPullRequestToUpdate
           type:
-            - GitPullRequest
+            - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequest
           description: ''
         - id: repositoryId
           type:
@@ -4430,9 +4432,9 @@ items:
     summary: '[Preview API] Update merge conflict resolution'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflict
+        - id: conflict
           type:
-            - GitConflict
+            - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflict
           description: ''
         - id: repositoryId
           type:
@@ -4469,9 +4471,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdate
+        - id: newRefInfo
           type:
-            - GitRefUpdate
+            - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdate
           description: ''
         - id: repositoryId
           type:
@@ -4549,9 +4551,9 @@ items:
       specified repository information.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository
+        - id: newRepositoryInfo
           type:
-            - GitRepository
+            - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository
           description: ''
         - id: repositoryId
           type:
@@ -4580,10 +4582,10 @@ items:
     summary: Update a pull request review comment thread
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestCommentThread
+        - id: commentThread
           type:
-            - GitPullRequestCommentThread
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestCommentThread
           description: ''
         - id: repositoryId
           type:
@@ -4623,10 +4625,10 @@ items:
       repository is not reachable
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.ImportRepositoryValidation
+        - id: remoteRepository
           type:
-            - ImportRepositoryValidation
+            - >-
+              vss-web-extension-sdk.TFS.VersionControl.Contracts.ImportRepositoryValidation
           description: The remote repository to validate.
         - id: project
           type:
@@ -4675,10 +4677,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -4705,10 +4707,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -4747,9 +4749,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -4786,9 +4788,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

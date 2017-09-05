@@ -53,9 +53,9 @@ items:
           description: >-
             The action that the handler applies to (or null to listen for all
             events)
-        - id: vss-web-extension-sdk.IFunctionPPR
+        - id: handler
           type:
-            - IFunctionPPR
+            - vss-web-extension-sdk.IFunctionPPR
           description: >-
             The method called whenever a navigation event occurs with the
             matching action value
@@ -83,9 +83,9 @@ items:
           type:
             - string
           description: The action that the handler applies to (or null for global handlers)
-        - id: vss-web-extension-sdk.IFunctionPPR
+        - id: handler
           type:
-            - IFunctionPPR
+            - vss-web-extension-sdk.IFunctionPPR
           description: >
             The method called whenever a navigation event occurs with the
             matching action value
@@ -250,9 +250,9 @@ items:
           description: >-
             The "action" state parameter. This is the _a key in the url or
             "action" in the current state dictionary
-        - id: vss-web-extension-sdk.IDictionaryStringTo
+        - id: data
           type:
-            - IDictionaryStringTo
+            - vss-web-extension-sdk.IDictionaryStringTo
           description: The history entry's new state key/value pairs
           optional: true
         - id: replaceHistoryEntry

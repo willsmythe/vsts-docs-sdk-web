@@ -73,9 +73,9 @@ items:
           type:
             - string
           description: Name of the page event to subscribe.
-        - id: vss-web-extension-sdk.VSS.Events.Page.IPageEventCallback
+        - id: callback
           type:
-            - IPageEventCallback
+            - vss-web-extension-sdk.VSS.Events.Page.IPageEventCallback
           description: |
             Callback to invoke when the event is fired.
       content: 'function subscribe(eventName: string, callback: IPageEventCallback)'
@@ -94,9 +94,9 @@ items:
           type:
             - string
           description: Name of the page event to unsubscribe.
-        - id: vss-web-extension-sdk.VSS.Events.Page.IPageEventCallback
+        - id: callback
           type:
-            - IPageEventCallback
+            - vss-web-extension-sdk.VSS.Events.Page.IPageEventCallback
           description: |
             Callback to invoke when the event is fired.
       content: 'function unsubscribe(eventName: string, callback: IPageEventCallback)'

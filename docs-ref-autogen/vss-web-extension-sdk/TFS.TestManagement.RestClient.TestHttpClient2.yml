@@ -410,10 +410,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.TestManagement.Contracts.TestCaseResultUpdateModel
+        - id: resultUpdateModel
           type:
-            - TestCaseResultUpdateModel
+            - >-
+              vss-web-extension-sdk.TFS.TestManagement.Contracts.TestCaseResultUpdateModel
           description: ''
         - id: project
           type:
@@ -485,10 +485,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.TestManagement.Contracts.TestPlanCloneRequest
+        - id: cloneRequestBody
           type:
-            - TestPlanCloneRequest
+            - >-
+              vss-web-extension-sdk.TFS.TestManagement.Contracts.TestPlanCloneRequest
           description: ''
         - id: project
           type:
@@ -516,10 +516,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSuiteCloneRequest
+        - id: cloneRequestBody
           type:
-            - TestSuiteCloneRequest
+            - >-
+              vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSuiteCloneRequest
           description: ''
         - id: project
           type:
@@ -590,9 +590,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.TestConfiguration
+        - id: testConfiguration
           type:
-            - TestConfiguration
+            - >-
+              vss-web-extension-sdk.TFS.TestManagement.Contracts.TestConfiguration
           description: ''
         - id: project
           type:
@@ -617,10 +618,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.TestManagement.Contracts.TestAttachmentRequestModel
+        - id: attachmentRequestModel
           type:
-            - TestAttachmentRequestModel
+            - >-
+              vss-web-extension-sdk.TFS.TestManagement.Contracts.TestAttachmentRequestModel
           description: ''
         - id: project
           type:
@@ -660,9 +661,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.PlanUpdateModel
+        - id: testPlan
           type:
-            - PlanUpdateModel
+            - vss-web-extension-sdk.TFS.TestManagement.Contracts.PlanUpdateModel
           description: ''
         - id: project
           type:
@@ -685,10 +686,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.TestManagement.Contracts.TestAttachmentRequestModel
+        - id: attachmentRequestModel
           type:
-            - TestAttachmentRequestModel
+            - >-
+              vss-web-extension-sdk.TFS.TestManagement.Contracts.TestAttachmentRequestModel
           description: ''
         - id: project
           type:
@@ -719,9 +720,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.RunCreateModel
+        - id: testRun
           type:
-            - RunCreateModel
+            - vss-web-extension-sdk.TFS.TestManagement.Contracts.RunCreateModel
           description: ''
         - id: project
           type:
@@ -743,10 +744,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.TestManagement.Contracts.TestAttachmentRequestModel
+        - id: attachmentRequestModel
           type:
-            - TestAttachmentRequestModel
+            - >-
+              vss-web-extension-sdk.TFS.TestManagement.Contracts.TestAttachmentRequestModel
           description: ''
         - id: project
           type:
@@ -772,13 +773,13 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSession
+        - id: testSession
           type:
-            - TestSession
+            - vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSession
           description: ''
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
       content: >-
         function createTestSession(testSession: TestSession, teamContext:
@@ -796,9 +797,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSettings
+        - id: testSettings
           type:
-            - TestSettings
+            - vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSettings
           description: ''
         - id: project
           type:
@@ -820,9 +821,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.SuiteCreateModel
+        - id: testSuite
           type:
-            - SuiteCreateModel
+            - >-
+              vss-web-extension-sdk.TFS.TestManagement.Contracts.SuiteCreateModel
           description: ''
         - id: project
           type:
@@ -852,9 +854,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.TestVariable
+        - id: testVariable
           type:
-            - TestVariable
+            - vss-web-extension-sdk.TFS.TestManagement.Contracts.TestVariable
           description: ''
         - id: project
           type:
@@ -1423,9 +1425,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.TestPointsQuery
+        - id: query
           type:
-            - TestPointsQuery
+            - vss-web-extension-sdk.TFS.TestManagement.Contracts.TestPointsQuery
           description: ''
         - id: project
           type:
@@ -1972,9 +1974,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.QueryModel
+        - id: query
           type:
-            - QueryModel
+            - vss-web-extension-sdk.TFS.TestManagement.Contracts.QueryModel
           description: ''
         - id: project
           type:
@@ -2215,9 +2217,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.QueryModel
+        - id: query
           type:
-            - QueryModel
+            - vss-web-extension-sdk.TFS.TestManagement.Contracts.QueryModel
           description: ''
         - id: project
           type:
@@ -2279,9 +2281,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: period
           type:
@@ -2912,9 +2914,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -2951,9 +2953,10 @@ items:
       Request: Json of code coverage summary
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.CodeCoverageData
+        - id: coverageData
           type:
-            - CodeCoverageData
+            - >-
+              vss-web-extension-sdk.TFS.TestManagement.Contracts.CodeCoverageData
           description: ''
         - id: project
           type:
@@ -2981,10 +2984,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.TestManagement.Contracts.ResultRetentionSettings
+        - id: retentionSettings
           type:
-            - ResultRetentionSettings
+            - >-
+              vss-web-extension-sdk.TFS.TestManagement.Contracts.ResultRetentionSettings
           description: ''
         - id: project
           type:
@@ -3008,9 +3011,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.TestConfiguration
+        - id: testConfiguration
           type:
-            - TestConfiguration
+            - >-
+              vss-web-extension-sdk.TFS.TestManagement.Contracts.TestConfiguration
           description: ''
         - id: project
           type:
@@ -3038,9 +3042,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.PlanUpdateModel
+        - id: planUpdateModel
           type:
-            - PlanUpdateModel
+            - vss-web-extension-sdk.TFS.TestManagement.Contracts.PlanUpdateModel
           description: ''
         - id: project
           type:
@@ -3068,9 +3072,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.PointUpdateModel
+        - id: pointUpdateModel
           type:
-            - PointUpdateModel
+            - >-
+              vss-web-extension-sdk.TFS.TestManagement.Contracts.PointUpdateModel
           description: ''
         - id: project
           type:
@@ -3136,9 +3141,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.RunUpdateModel
+        - id: runUpdateModel
           type:
-            - RunUpdateModel
+            - vss-web-extension-sdk.TFS.TestManagement.Contracts.RunUpdateModel
           description: ''
         - id: project
           type:
@@ -3164,13 +3169,13 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSession
+        - id: testSession
           type:
-            - TestSession
+            - vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSession
           description: ''
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
       content: >-
         function updateTestSession(testSession: TestSession, teamContext:
@@ -3190,9 +3195,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.SuiteUpdateModel
+        - id: suiteUpdateModel
           type:
-            - SuiteUpdateModel
+            - >-
+              vss-web-extension-sdk.TFS.TestManagement.Contracts.SuiteUpdateModel
           description: ''
         - id: project
           type:
@@ -3224,9 +3230,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.TestManagement.Contracts.TestVariable
+        - id: testVariable
           type:
-            - TestVariable
+            - vss-web-extension-sdk.TFS.TestManagement.Contracts.TestVariable
           description: ''
         - id: project
           type:
@@ -3292,10 +3298,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -3322,10 +3328,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -3364,9 +3370,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -3403,9 +3409,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

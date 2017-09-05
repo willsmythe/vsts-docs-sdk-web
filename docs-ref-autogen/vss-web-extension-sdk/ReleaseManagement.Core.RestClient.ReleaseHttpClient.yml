@@ -443,10 +443,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironmentTemplate
+        - id: template
           type:
-            - ReleaseDefinitionEnvironmentTemplate
+            - >-
+              vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironmentTemplate
           description: ''
         - id: project
           type:
@@ -503,9 +503,9 @@ items:
     summary: '[Preview API] Creates a new folder'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Folder
+        - id: folder
           type:
-            - Folder
+            - vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Folder
           description: ''
         - id: project
           type:
@@ -529,10 +529,10 @@ items:
     summary: '[Preview API] Create a release.'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseStartMetadata
+        - id: releaseStartMetadata
           type:
-            - ReleaseStartMetadata
+            - >-
+              vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseStartMetadata
           description: Metadata to create a release.
         - id: project
           type:
@@ -556,10 +556,10 @@ items:
     summary: '[Preview API] Create a release definition'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinition
+        - id: releaseDefinition
           type:
-            - ReleaseDefinition
+            - >-
+              vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinition
           description: release definition object to create.
         - id: project
           type:
@@ -1316,10 +1316,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeploymentQueryParameters
+        - id: queryParameters
           type:
-            - DeploymentQueryParameters
+            - >-
+              vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeploymentQueryParameters
           description: ''
         - id: project
           type:
@@ -1400,10 +1400,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputValuesQuery
+        - id: query
           type:
-            - InputValuesQuery
+            - >-
+              vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputValuesQuery
           description: ''
         - id: project
           type:
@@ -2528,9 +2528,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -2604,9 +2604,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.ReleaseManagement.Core.Contracts.MailMessage
+        - id: mailMessage
           type:
-            - MailMessage
+            - vss-web-extension-sdk.ReleaseManagement.Core.Contracts.MailMessage
           description: ''
         - id: project
           type:
@@ -2764,9 +2764,9 @@ items:
     summary: '[Preview API] Updates an existing folder at given  existing path'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Folder
+        - id: folder
           type:
-            - Folder
+            - vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Folder
           description: ''
         - id: project
           type:
@@ -2793,10 +2793,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ManualInterventionUpdateMetadata
+        - id: manualInterventionUpdateMetadata
           type:
-            - ManualInterventionUpdateMetadata
+            - >-
+              vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ManualInterventionUpdateMetadata
           description: ''
         - id: project
           type:
@@ -2827,9 +2827,9 @@ items:
     summary: '[Preview API] Update a complete release object.'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release
+        - id: release
           type:
-            - Release
+            - vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release
           description: Release object for update.
         - id: project
           type:
@@ -2857,10 +2857,10 @@ items:
     summary: '[Preview API] Update status of an approval'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval
+        - id: approval
           type:
-            - ReleaseApproval
+            - >-
+              vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval
           description: 'ReleaseApproval object having status, approver and comments.'
         - id: project
           type:
@@ -2888,10 +2888,10 @@ items:
     summary: '[Preview API] Update a release definition.'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinition
+        - id: releaseDefinition
           type:
-            - ReleaseDefinition
+            - >-
+              vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinition
           description: Release definition object to update.
         - id: project
           type:
@@ -2916,10 +2916,10 @@ items:
     summary: '[Preview API] Update the status of a release environment'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironmentUpdateMetadata
+        - id: environmentUpdateData
           type:
-            - ReleaseEnvironmentUpdateMetadata
+            - >-
+              vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironmentUpdateMetadata
           description: Environment update meta data.
         - id: project
           type:
@@ -2952,10 +2952,10 @@ items:
     summary: '[Preview API] Update few properties of a release.'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseUpdateMetadata
+        - id: releaseUpdateMetadata
           type:
-            - ReleaseUpdateMetadata
+            - >-
+              vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseUpdateMetadata
           description: Properties of release to update.
         - id: project
           type:
@@ -2981,10 +2981,10 @@ items:
     summary: '[Preview API] Updates the release settings'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseSettings
+        - id: releaseSettings
           type:
-            - ReleaseSettings
+            - >-
+              vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseSettings
           description: ''
         - id: project
           type:
@@ -3059,10 +3059,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -3089,10 +3089,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -3131,9 +3131,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -3170,9 +3170,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

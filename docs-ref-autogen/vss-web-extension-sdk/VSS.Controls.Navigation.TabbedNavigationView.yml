@@ -189,9 +189,9 @@ items:
           type:
             - TOptions
           description: ''
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -303,9 +303,9 @@ items:
             - function
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -769,9 +769,9 @@ items:
           type:
             - any
           description: The raw state info from the hash url for the new navigation
-        - id: vss-web-extension-sdk.IResultCallback
+        - id: callback
           type:
-            - IResultCallback
+            - vss-web-extension-sdk.IResultCallback
           description: |+
 
                Callback that should be called when the state was successfully parsed. The callback takes 2 parameters: the tab id (typically
@@ -824,15 +824,15 @@ items:
             - TOptions
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.IErrorCallback
+        - id: errorCallback
           type:
-            - IErrorCallback
+            - vss-web-extension-sdk.IErrorCallback
           description: |+
 
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -867,9 +867,9 @@ items:
           description: |+
 
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -920,9 +920,9 @@ items:
       Note: Options are merged.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
       content: 'function setEnhancementOptions(enhancementOptions: EnhancementOptions)'
     type: method

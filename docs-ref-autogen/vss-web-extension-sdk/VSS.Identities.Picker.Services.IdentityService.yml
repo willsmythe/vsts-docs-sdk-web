@@ -59,29 +59,31 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
+        - id: operationScope
           type:
-            - IOperationScope
+            - >-
+              vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
           description: ''
-        - id: vss-web-extension-sdk.VSS.Identities.Picker.Services.IEntityType
+        - id: identityType
           type:
-            - IEntityType
+            - vss-web-extension-sdk.VSS.Identities.Picker.Services.IEntityType
           description: ''
-        - id: >-
-            vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
+        - id: options
           type:
-            - IIdentityServiceOptions
-          description: ''
-          optional: true
-        - id: vss-web-extension-sdk.VSS.Identities.Picker.Services.IQueryTypeHint
-          type:
-            - IQueryTypeHint
+            - >-
+              vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityPickerExtensionOptions
+        - id: queryTypeHint
           type:
-            - IIdentityPickerExtensionOptions
+            - >-
+              vss-web-extension-sdk.VSS.Identities.Picker.Services.IQueryTypeHint
+          description: ''
+          optional: true
+        - id: extensionOptions
+          type:
+            - >-
+              vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityPickerExtensionOptions
           description: ''
           optional: true
       content: >-
@@ -108,32 +110,34 @@ items:
       Identity graph
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity
+        - id: identity
           type:
-            - IEntity
+            - vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity
           description: ''
-        - id: vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
+        - id: operationScope
           type:
-            - IOperationScope
+            - >-
+              vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
           description: ''
-        - id: vss-web-extension-sdk.VSS.Identities.Picker.Services.IEntityType
+        - id: identityType
           type:
-            - IEntityType
+            - vss-web-extension-sdk.VSS.Identities.Picker.Services.IEntityType
           description: ''
-        - id: vss-web-extension-sdk.VSS.Identities.Picker.Services.IConnectionType
+        - id: connectionType
           type:
-            - IConnectionType
+            - >-
+              vss-web-extension-sdk.VSS.Identities.Picker.Services.IConnectionType
           description: ''
-        - id: >-
-            vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
+        - id: options
           type:
-            - IIdentityServiceOptions
+            - >-
+              vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
           description: ''
           optional: true
-        - id: >-
-            vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityPickerExtensionOptions
+        - id: extensionOptions
           type:
-            - IIdentityPickerExtensionOptions
+            - >-
+              vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityPickerExtensionOptions
           description: ''
           optional: true
         - id: depth
@@ -167,10 +171,10 @@ items:
           type:
             - function
           description: ''
-        - id: >-
-            vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
+        - id: options
           type:
-            - IIdentityServiceOptions
+            - >-
+              vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
           description: ''
           optional: true
       content: >-
@@ -203,9 +207,9 @@ items:
     summary: Sets the VssConnection to use for this service
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Service.VssConnection
+        - id: connection
           type:
-            - VssConnection
+            - vss-web-extension-sdk.VSS.Service.VssConnection
           description: |
             VssConnection used by this service
       content: 'function initializeConnection(connection: VssConnection)'

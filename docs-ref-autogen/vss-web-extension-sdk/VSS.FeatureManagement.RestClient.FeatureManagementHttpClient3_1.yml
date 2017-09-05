@@ -87,9 +87,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -306,10 +306,10 @@ items:
     summary: '[Preview API] Get the effective state for a list of feature ids'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.FeatureManagement.Contracts.ContributedFeatureStateQuery
+        - id: query
           type:
-            - ContributedFeatureStateQuery
+            - >-
+              vss-web-extension-sdk.VSS.FeatureManagement.Contracts.ContributedFeatureStateQuery
           description: Features to query along with current scope values
       content: 'function queryFeatureStates(query: ContributedFeatureStateQuery)'
       return:
@@ -329,10 +329,10 @@ items:
       scope
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.FeatureManagement.Contracts.ContributedFeatureStateQuery
+        - id: query
           type:
-            - ContributedFeatureStateQuery
+            - >-
+              vss-web-extension-sdk.VSS.FeatureManagement.Contracts.ContributedFeatureStateQuery
           description: Query describing the features to query.
         - id: userScope
           type:
@@ -358,10 +358,10 @@ items:
       named scope
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.FeatureManagement.Contracts.ContributedFeatureStateQuery
+        - id: query
           type:
-            - ContributedFeatureStateQuery
+            - >-
+              vss-web-extension-sdk.VSS.FeatureManagement.Contracts.ContributedFeatureStateQuery
           description: Query describing the features to query.
         - id: userScope
           type:
@@ -394,10 +394,10 @@ items:
     summary: '[Preview API] Set the state of a feature'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.FeatureManagement.Contracts.ContributedFeatureState
+        - id: feature
           type:
-            - ContributedFeatureState
+            - >-
+              vss-web-extension-sdk.VSS.FeatureManagement.Contracts.ContributedFeatureState
           description: Posted feature state object. Should specify the effective value.
         - id: featureId
           type:
@@ -438,10 +438,10 @@ items:
     summary: '[Preview API] Set the state of a feature at a specific scope'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.FeatureManagement.Contracts.ContributedFeatureState
+        - id: feature
           type:
-            - ContributedFeatureState
+            - >-
+              vss-web-extension-sdk.VSS.FeatureManagement.Contracts.ContributedFeatureState
           description: Posted feature state object. Should specify the effective value.
         - id: featureId
           type:
@@ -517,10 +517,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -547,10 +547,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -589,9 +589,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -628,9 +628,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

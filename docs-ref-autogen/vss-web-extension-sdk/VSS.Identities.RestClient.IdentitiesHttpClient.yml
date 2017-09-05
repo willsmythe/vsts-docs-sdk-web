@@ -195,9 +195,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Identities.Contracts.FrameworkIdentityInfo
+        - id: frameworkIdentityInfo
           type:
-            - FrameworkIdentityInfo
+            - >-
+              vss-web-extension-sdk.VSS.Identities.Contracts.FrameworkIdentityInfo
           description: ''
       content: 'function createIdentity(frameworkIdentityInfo: FrameworkIdentityInfo)'
       return:
@@ -213,9 +214,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Identities.Contracts.Identity
+        - id: sourceIdentity
           type:
-            - Identity
+            - vss-web-extension-sdk.VSS.Identities.Contracts.Identity
           description: ''
       content: 'function createOrBindWithClaims(sourceIdentity: Identity)'
       return:
@@ -231,9 +232,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Identities.Contracts.CreateScopeInfo
+        - id: info
           type:
-            - CreateScopeInfo
+            - vss-web-extension-sdk.VSS.Identities.Contracts.CreateScopeInfo
           description: ''
         - id: scopeId
           type:
@@ -547,9 +548,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -822,9 +823,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Identities.Contracts.IdentityBatchInfo
+        - id: batchInfo
           type:
-            - IdentityBatchInfo
+            - vss-web-extension-sdk.VSS.Identities.Contracts.IdentityBatchInfo
           description: ''
       content: 'function readIdentityBatch(batchInfo: IdentityBatchInfo)'
       return:
@@ -970,9 +971,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Identities.Contracts.IdentityScope
+        - id: renameScope
           type:
-            - IdentityScope
+            - vss-web-extension-sdk.VSS.Identities.Contracts.IdentityScope
           description: ''
         - id: scopeId
           type:
@@ -1044,9 +1045,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV
+        - id: identities
           type:
-            - VssJsonCollectionWrapperV
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV
           description: ''
       content: 'function updateIdentities(identities: VssJsonCollectionWrapperV)'
       return:
@@ -1062,9 +1064,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Identities.Contracts.Identity
+        - id: identity
           type:
-            - Identity
+            - vss-web-extension-sdk.VSS.Identities.Contracts.Identity
           description: ''
         - id: identityId
           type:
@@ -1111,10 +1113,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -1141,10 +1143,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -1183,9 +1185,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -1222,9 +1224,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

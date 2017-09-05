@@ -69,9 +69,10 @@ items:
     summary: '[Preview API] Add a new group Licensing rule asynchronously'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.LicensingRule.Contracts.GroupLicensingRule
+        - id: licensingRule
           type:
-            - GroupLicensingRule
+            - >-
+              vss-web-extension-sdk.VSS.LicensingRule.Contracts.GroupLicensingRule
           description: The Licensing Rule
         - id: ruleOption
           type:
@@ -150,9 +151,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -338,9 +339,10 @@ items:
       Ids
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.LicensingRule.Contracts.GraphSubjectLookup
+        - id: groupRuleLookup
           type:
-            - GraphSubjectLookup
+            - >-
+              vss-web-extension-sdk.VSS.LicensingRule.Contracts.GraphSubjectLookup
           description: ''
       content: 'function lookupGroupLicensingRules(groupRuleLookup: GraphSubjectLookup)'
       return:
@@ -371,10 +373,10 @@ items:
     summary: '[Preview API] Update a group Licensing rule'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.LicensingRule.Contracts.GroupLicensingRuleUpdate
+        - id: licensingRuleUpdate
           type:
-            - GroupLicensingRuleUpdate
+            - >-
+              vss-web-extension-sdk.VSS.LicensingRule.Contracts.GroupLicensingRuleUpdate
           description: The update model for the Licensing Rule
         - id: ruleOption
           type:
@@ -424,10 +426,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -454,10 +456,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -496,9 +498,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -535,9 +537,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

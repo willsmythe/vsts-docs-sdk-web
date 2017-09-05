@@ -82,9 +82,9 @@ items:
           type:
             - string
           description: the name of the event to subscribe to
-        - id: vss-web-extension-sdk.IFunctionPPR
+        - id: handler
           type:
-            - IFunctionPPR
+            - vss-web-extension-sdk.IFunctionPPR
           description: |
             Event handler method to register
       content: 'function subscribe(eventName: string, handler: IFunctionPPR)'
@@ -101,9 +101,9 @@ items:
           type:
             - string
           description: The name of the event to unsubscribe to
-        - id: vss-web-extension-sdk.IFunctionPPR
+        - id: handler
           type:
-            - IFunctionPPR
+            - vss-web-extension-sdk.IFunctionPPR
           description: |
             Event handler method to remove
       content: 'function unsubscribe(eventName: string, handler: IFunctionPPR)'

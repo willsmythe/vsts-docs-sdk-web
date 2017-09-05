@@ -41,9 +41,9 @@ items:
     summary: Add error publisher to ErrorHander class
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.VSS.errorPublisher
+        - id: errorPublisher
           type:
-            - errorPublisher
+            - vss-web-extension-sdk.VSS.VSS.errorPublisher
           description: ''
       content: 'function attachErrorPublisher(errorPublisher: errorPublisher)'
     type: method
@@ -55,9 +55,9 @@ items:
     summary: Remove error publisher to ErrorHander class
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.VSS.errorPublisher
+        - id: errorPublisher
           type:
-            - errorPublisher
+            - vss-web-extension-sdk.VSS.VSS.errorPublisher
           description: ''
       content: 'function detachErrorPublisher(errorPublisher: errorPublisher)'
     type: method
@@ -129,9 +129,9 @@ items:
       message is displayed in an alert dialog
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TfsError
+        - id: error
           type:
-            - TfsError
+            - vss-web-extension-sdk.TfsError
           description: ''
       content: 'function show(error: TfsError)'
     type: method

@@ -178,9 +178,9 @@ items:
           type:
             - TOptions
           description: ''
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -290,9 +290,9 @@ items:
             - function
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -794,13 +794,13 @@ items:
     summary: Move a menu item to appear immediately after the other given menu item.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem
+        - id: item
           type:
-            - MenuItem
+            - vss-web-extension-sdk.VSS.Controls.Menus.MenuItem
           description: ''
-        - id: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem
+        - id: after
           type:
-            - MenuItem
+            - vss-web-extension-sdk.VSS.Controls.Menus.MenuItem
           description: |+
 
       content: 'function moveMenuItemAfter(item: MenuItem, after: MenuItem)'
@@ -868,15 +868,15 @@ items:
             - TOptions
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.IErrorCallback
+        - id: errorCallback
           type:
-            - IErrorCallback
+            - vss-web-extension-sdk.IErrorCallback
           description: |+
 
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -910,9 +910,9 @@ items:
           description: |+
 
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -1065,9 +1065,9 @@ items:
       Note: Options are merged.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
       content: 'function setEnhancementOptions(enhancementOptions: EnhancementOptions)'
     type: method
@@ -1601,9 +1601,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem
+        - id: item
           type:
-            - MenuItem
+            - vss-web-extension-sdk.VSS.Controls.Menus.MenuItem
           description: ''
           optional: true
         - id: ignoreFocus

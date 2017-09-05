@@ -234,10 +234,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.AadOauthTokenRequest
+        - id: authenticationRequest
           type:
-            - AadOauthTokenRequest
+            - >-
+              vss-web-extension-sdk.TFS.DistributedTask.Contracts.AadOauthTokenRequest
           description: ''
       content: 'function acquireAccessToken(authenticationRequest: AadOauthTokenRequest)'
       return:
@@ -253,9 +253,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent
+        - id: agent
           type:
-            - TaskAgent
+            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent
           description: ''
         - id: poolId
           type:
@@ -275,9 +275,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool
+        - id: pool
           type:
-            - TaskAgentPool
+            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool
           description: ''
       content: 'function addAgentPool(pool: TaskAgentPool)'
       return:
@@ -293,9 +293,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentQueue
+        - id: queue
           type:
-            - TaskAgentQueue
+            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentQueue
           description: ''
         - id: project
           type:
@@ -318,10 +318,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentMachineGroup
+        - id: machineGroup
           type:
-            - DeploymentMachineGroup
+            - >-
+              vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentMachineGroup
           description: ''
         - id: project
           type:
@@ -343,9 +343,9 @@ items:
     summary: '[Preview API] Create a task group.'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskGroup
+        - id: taskGroup
           type:
-            - TaskGroup
+            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskGroup
           description: Task group object to create.
         - id: project
           type:
@@ -365,9 +365,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableGroup
+        - id: group
           type:
-            - VariableGroup
+            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableGroup
           description: ''
         - id: project
           type:
@@ -462,9 +462,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentSession
+        - id: session
           type:
-            - TaskAgentSession
+            - >-
+              vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentSession
           description: ''
         - id: poolId
           type:
@@ -484,9 +485,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.ServiceEndpoint
+        - id: endpoint
           type:
-            - ServiceEndpoint
+            - >-
+              vss-web-extension-sdk.TFS.DistributedTask.Contracts.ServiceEndpoint
           description: ''
         - id: project
           type:
@@ -805,10 +807,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.ServiceEndpointRequest
+        - id: serviceEndpointRequest
           type:
-            - ServiceEndpointRequest
+            - >-
+              vss-web-extension-sdk.TFS.DistributedTask.Contracts.ServiceEndpointRequest
           description: ''
         - id: project
           type:
@@ -1974,10 +1976,10 @@ items:
       XPath/Json based selector.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskDefinitionEndpoint
+        - id: endpoint
           type:
-            - TaskDefinitionEndpoint
+            - >-
+              vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskDefinitionEndpoint
           description: Describes the URL to fetch.
       content: 'function queryEndpoint(endpoint: TaskDefinitionEndpoint)'
       return:
@@ -1997,10 +1999,10 @@ items:
       XPath/Json based selector.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.DataSourceBinding
+        - id: binding
           type:
-            - DataSourceBinding
+            - >-
+              vss-web-extension-sdk.TFS.DistributedTask.Contracts.DataSourceBinding
           description: Describes the data source to fetch.
         - id: project
           type:
@@ -2022,10 +2024,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest
+        - id: request
           type:
-            - TaskAgentJobRequest
+            - >-
+              vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest
           description: ''
         - id: poolId
           type:
@@ -2111,9 +2113,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent
+        - id: agent
           type:
-            - TaskAgent
+            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent
           description: ''
         - id: poolId
           type:
@@ -2150,9 +2152,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentMessage
+        - id: message
           type:
-            - TaskAgentMessage
+            - >-
+              vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentMessage
           description: ''
         - id: poolId
           type:
@@ -2236,9 +2239,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -2284,9 +2287,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent
+        - id: agent
           type:
-            - TaskAgent
+            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent
           description: ''
         - id: poolId
           type:
@@ -2310,9 +2313,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool
+        - id: pool
           type:
-            - TaskAgentPool
+            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool
           description: ''
         - id: poolId
           type:
@@ -2334,10 +2337,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest
+        - id: request
           type:
-            - TaskAgentJobRequest
+            - >-
+              vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest
           description: ''
         - id: poolId
           type:
@@ -2399,10 +2402,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentMachineGroup
+        - id: machineGroup
           type:
-            - DeploymentMachineGroup
+            - >-
+              vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentMachineGroup
           description: ''
         - id: project
           type:
@@ -2460,9 +2463,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.ServiceEndpoint
+        - id: endpoint
           type:
-            - ServiceEndpoint
+            - >-
+              vss-web-extension-sdk.TFS.DistributedTask.Contracts.ServiceEndpoint
           description: ''
         - id: project
           type:
@@ -2493,9 +2497,9 @@ items:
     summary: '[Preview API] Update a task group.'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskGroup
+        - id: taskGroup
           type:
-            - TaskGroup
+            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskGroup
           description: Task group to update.
         - id: project
           type:
@@ -2517,10 +2521,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskHubLicenseDetails
+        - id: taskHubLicenseDetails
           type:
-            - TaskHubLicenseDetails
+            - >-
+              vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskHubLicenseDetails
           description: ''
         - id: hubName
           type:
@@ -2544,9 +2548,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableGroup
+        - id: group
           type:
-            - VariableGroup
+            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableGroup
           description: ''
         - id: project
           type:
@@ -2638,10 +2642,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -2668,10 +2672,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -2710,9 +2714,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -2749,9 +2753,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

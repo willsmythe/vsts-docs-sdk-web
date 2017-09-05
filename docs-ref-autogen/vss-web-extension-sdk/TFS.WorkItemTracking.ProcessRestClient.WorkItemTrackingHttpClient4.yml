@@ -92,10 +92,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.ProcessContracts.FieldRuleModel
+        - id: fieldRule
           type:
-            - FieldRuleModel
+            - >-
+              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessContracts.FieldRuleModel
           description: ''
         - id: processId
           type:
@@ -147,10 +147,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.ProcessContracts.CreateProcessModel
+        - id: createRequest
           type:
-            - CreateProcessModel
+            - >-
+              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessContracts.CreateProcessModel
           description: ''
       content: 'function createProcess(createRequest: CreateProcessModel)'
       return:
@@ -591,10 +591,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.ProcessContracts.UpdateProcessModel
+        - id: updateRequest
           type:
-            - UpdateProcessModel
+            - >-
+              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessContracts.UpdateProcessModel
           description: ''
         - id: processTypeId
           type:
@@ -618,10 +618,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.ProcessContracts.FieldRuleModel
+        - id: fieldRule
           type:
-            - FieldRuleModel
+            - >-
+              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessContracts.FieldRuleModel
           description: ''
         - id: processId
           type:
@@ -657,9 +657,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -719,10 +719,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -749,10 +749,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -791,9 +791,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -830,9 +830,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

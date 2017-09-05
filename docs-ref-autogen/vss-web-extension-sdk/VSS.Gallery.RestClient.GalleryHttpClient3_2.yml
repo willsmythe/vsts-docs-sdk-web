@@ -445,9 +445,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionCategory
+        - id: category
           type:
-            - ExtensionCategory
+            - vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionCategory
           description: ''
       content: 'function createCategory(category: ExtensionCategory)'
       return:
@@ -505,9 +505,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Gallery.Contracts.Publisher
+        - id: publisher
           type:
-            - Publisher
+            - vss-web-extension-sdk.VSS.Gallery.Contracts.Publisher
           description: ''
       content: 'function createPublisher(publisher: Publisher)'
       return:
@@ -525,9 +525,9 @@ items:
     summary: '[Preview API] Creates a new question for an extension.'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Gallery.Contracts.Question
+        - id: question
           type:
-            - Question
+            - vss-web-extension-sdk.VSS.Gallery.Contracts.Question
           description: Question to be created for the extension.
         - id: publisherName
           type:
@@ -557,9 +557,9 @@ items:
       extension.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Gallery.Contracts.Response
+        - id: response
           type:
-            - Response
+            - vss-web-extension-sdk.VSS.Gallery.Contracts.Response
           description: Response to be created for the extension.
         - id: publisherName
           type:
@@ -591,9 +591,9 @@ items:
     summary: '[Preview API] Creates a new review for an extension'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Gallery.Contracts.Review
+        - id: review
           type:
-            - Review
+            - vss-web-extension-sdk.VSS.Gallery.Contracts.Review
           description: Review to be created for the extension
         - id: pubName
           type:
@@ -848,9 +848,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiRequestModel
+        - id: azureRestApiRequestModel
           type:
-            - AzureRestApiRequestModel
+            - >-
+              vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiRequestModel
           description: ''
       content: >-
         function extensionValidator(azureRestApiRequestModel:
@@ -900,9 +901,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -2042,9 +2043,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionQuery
+        - id: extensionQuery
           type:
-            - ExtensionQuery
+            - vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionQuery
           description: ''
         - id: accountToken
           type:
@@ -2067,9 +2068,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Gallery.Contracts.PublisherQuery
+        - id: publisherQuery
           type:
-            - PublisherQuery
+            - vss-web-extension-sdk.VSS.Gallery.Contracts.PublisherQuery
           description: ''
       content: 'function queryPublishers(publisherQuery: PublisherQuery)'
       return:
@@ -2087,9 +2088,9 @@ items:
     summary: '[Preview API] Flags a concern with an existing question for an extension.'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Gallery.Contracts.Concern
+        - id: concern
           type:
-            - Concern
+            - vss-web-extension-sdk.VSS.Gallery.Contracts.Concern
           description: User reported concern with a question for the extension.
         - id: pubName
           type:
@@ -2132,10 +2133,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionAcquisitionRequest
+        - id: acquisitionRequest
           type:
-            - ExtensionAcquisitionRequest
+            - >-
+              vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionAcquisitionRequest
           description: ''
       content: >-
         function requestAcquisition(acquisitionRequest:
@@ -2205,9 +2206,9 @@ items:
     summary: '[Preview API] Send Notification'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Gallery.Contracts.NotificationsData
+        - id: notificationData
           type:
-            - NotificationsData
+            - vss-web-extension-sdk.VSS.Gallery.Contracts.NotificationsData
           description: Denoting the data needed to send notification
       content: 'function sendNotifications(notificationData: NotificationsData)'
       return:
@@ -2509,9 +2510,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionStatisticUpdate
+        - id: extensionStatisticsUpdate
           type:
-            - ExtensionStatisticUpdate
+            - >-
+              vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionStatisticUpdate
           description: ''
         - id: publisherName
           type:
@@ -2537,9 +2539,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Gallery.Contracts.Publisher
+        - id: publisher
           type:
-            - Publisher
+            - vss-web-extension-sdk.VSS.Gallery.Contracts.Publisher
           description: ''
         - id: publisherName
           type:
@@ -2561,9 +2563,9 @@ items:
     summary: '[Preview API] Updates an existing question for an extension.'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Gallery.Contracts.Question
+        - id: question
           type:
-            - Question
+            - vss-web-extension-sdk.VSS.Gallery.Contracts.Question
           description: Updated question to be set for the extension.
         - id: publisherName
           type:
@@ -2597,9 +2599,9 @@ items:
       extension.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Gallery.Contracts.Response
+        - id: response
           type:
-            - Response
+            - vss-web-extension-sdk.VSS.Gallery.Contracts.Response
           description: Updated response to be set for the extension.
         - id: publisherName
           type:
@@ -2637,9 +2639,9 @@ items:
     summary: '[Preview API] Updates or Flags a review'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Gallery.Contracts.ReviewPatch
+        - id: reviewPatch
           type:
-            - ReviewPatch
+            - vss-web-extension-sdk.VSS.Gallery.Contracts.ReviewPatch
           description: >-
             ReviewPatch object which contains the changes to be applied to the
             review
@@ -2711,10 +2713,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -2741,10 +2743,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -2783,9 +2785,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -2822,9 +2824,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

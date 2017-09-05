@@ -41,9 +41,9 @@ items:
     summary: Get the identfier for the extension that published this contribution.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: |
             The contribution whose extension is being requested
       content: 'function getExtensionId(contribution: Contribution)'
@@ -60,9 +60,9 @@ items:
     summary: full contribution id for the given contribution.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: |
             The contribution to get the id of
       content: 'function getFullContributionId(contribution: Contribution)'
@@ -79,9 +79,9 @@ items:
     summary: Get the identfier for the publisher that published this contribution.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: |
             The contribution whose publisher is being requested
       content: 'function getPublisherId(contribution: Contribution)'
@@ -98,9 +98,9 @@ items:
     summary: Determine whether or not the given contribution provides hostable content
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: The contribution whose properties to check
         - id: uriProperty
           type:
@@ -124,9 +124,9 @@ items:
       extension and has internal content
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: |
             The contribution whose properties to check
       content: 'function hasInternalContent(contribution: Contribution)'
@@ -143,9 +143,9 @@ items:
     summary: Is the contribution of the given contribution type
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: The contribution whose type to check
         - id: contributionType
           type:
@@ -168,9 +168,9 @@ items:
     summary: Determines whether or not a contribution is from a trusted source.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: |
             The contribution whose trust to check
       content: 'function isContributionTrusted(contribution: Contribution)'
@@ -189,9 +189,9 @@ items:
     summary: Publish tracing data for a given contribution
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: ''
         - id: data
           type:
@@ -276,9 +276,9 @@ items:
       replacements object
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+        - id: contribution
           type:
-            - Contribution
+            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
           description: ''
         - id: replacementObject
           type:

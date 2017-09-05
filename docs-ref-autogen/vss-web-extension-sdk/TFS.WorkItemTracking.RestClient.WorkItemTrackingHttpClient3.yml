@@ -354,10 +354,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemClassificationNode
+        - id: postedNode
           type:
-            - WorkItemClassificationNode
+            - >-
+              vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemClassificationNode
           description: ''
         - id: project
           type:
@@ -391,10 +391,10 @@ items:
     summary: 'Creates a query, or moves a query.'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem
+        - id: postedQuery
           type:
-            - QueryHierarchyItem
+            - >-
+              vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem
           description: The query to create.
         - id: project
           type:
@@ -420,10 +420,10 @@ items:
     summary: '[Preview API] Creates a template'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate
+        - id: template
           type:
-            - WorkItemTemplate
+            - >-
+              vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate
           description: Template contents
         - id: project
           type:
@@ -452,9 +452,9 @@ items:
     summary: Creates a single work item
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument
+        - id: document
           type:
-            - JsonPatchDocument
+            - vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument
           description: The JSON Patch document representing the work item
         - id: project
           type:
@@ -653,10 +653,10 @@ items:
     summary: Validates the fields values.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.FieldsToEvaluate
+        - id: ruleEngineInput
           type:
-            - FieldsToEvaluate
+            - >-
+              vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.FieldsToEvaluate
           description: ''
       content: 'function evaluateRulesOnField(ruleEngineInput: FieldsToEvaluate)'
       return:
@@ -1799,9 +1799,9 @@ items:
     summary: Gets the results of the query.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.Wiql
+        - id: wiql
           type:
-            - Wiql
+            - vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.Wiql
           description: The query containing the wiql.
         - id: project
           type:
@@ -1941,10 +1941,10 @@ items:
     summary: Get a batch of work item revisions
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.ReportingWorkItemRevisionsFilter
+        - id: filter
           type:
-            - ReportingWorkItemRevisionsFilter
+            - >-
+              vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.ReportingWorkItemRevisionsFilter
           description: >-
             An object that contains request settings: field filter, type filter,
             identity format
@@ -2005,10 +2005,10 @@ items:
     summary: '[Preview API] Replace template contents'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate
+        - id: templateContent
           type:
-            - WorkItemTemplate
+            - >-
+              vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate
           description: Template contents to replace with
         - id: project
           type:
@@ -2040,10 +2040,10 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemDeleteUpdate
+        - id: payload
           type:
-            - WorkItemDeleteUpdate
+            - >-
+              vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemDeleteUpdate
           description: ''
         - id: id
           type:
@@ -2178,10 +2178,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemClassificationNode
+        - id: postedNode
           type:
-            - WorkItemClassificationNode
+            - >-
+              vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemClassificationNode
           description: ''
         - id: project
           type:
@@ -2215,9 +2215,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemField
+        - id: workItemField
           type:
-            - WorkItemField
+            - vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemField
           description: ''
         - id: fieldNameOrRefName
           type:
@@ -2246,10 +2246,10 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem
+        - id: queryUpdate
           type:
-            - QueryHierarchyItem
+            - >-
+              vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem
           description: ''
         - id: project
           type:
@@ -2295,9 +2295,9 @@ items:
     summary: Updates a single work item
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument
+        - id: document
           type:
-            - JsonPatchDocument
+            - vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument
           description: The JSON Patch document representing the update
         - id: id
           type:
@@ -2339,10 +2339,10 @@ items:
     summary: Add/updates a work item type
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeTemplateUpdateModel
+        - id: updateModel
           type:
-            - WorkItemTypeTemplateUpdateModel
+            - >-
+              vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeTemplateUpdateModel
           description: ''
         - id: project
           type:
@@ -2488,9 +2488,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -2628,10 +2628,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -2658,10 +2658,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -2700,9 +2700,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -2739,9 +2739,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

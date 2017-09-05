@@ -313,9 +313,9 @@ items:
     summary: '[Preview API] Add a new plan for the team'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Work.Contracts.CreatePlan
+        - id: postedPlan
           type:
-            - CreatePlan
+            - vss-web-extension-sdk.TFS.Work.Contracts.CreatePlan
           description: Plan definition
         - id: project
           type:
@@ -356,9 +356,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: id
           type:
@@ -404,9 +404,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
       content: 'function getBacklogConfigurations(teamContext: TeamContext)'
       return:
@@ -421,9 +421,9 @@ items:
     summary: Get board
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: id
           type:
@@ -447,9 +447,9 @@ items:
       name
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: board
           type:
@@ -471,9 +471,9 @@ items:
     summary: Get board card settings for the board id or board by name
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: board
           type:
@@ -492,9 +492,9 @@ items:
     summary: Get a board chart
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: board
           type:
@@ -521,9 +521,9 @@ items:
     summary: Get board charts
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: board
           type:
@@ -544,9 +544,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: board
           type:
@@ -568,9 +568,9 @@ items:
       board by name
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: board
           type:
@@ -594,9 +594,9 @@ items:
       list of workitem ids
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: childBacklogContextCategoryRefName
           type:
@@ -621,9 +621,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: board
           type:
@@ -642,9 +642,9 @@ items:
     summary: Get boards
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
       content: 'function getBoards(teamContext: TeamContext)'
       return:
@@ -660,9 +660,9 @@ items:
     summary: '[Preview API]'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: board
           type:
@@ -681,9 +681,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: iterationId
           type:
@@ -704,9 +704,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: iterationId
           type:
@@ -872,9 +872,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: iterationId
           type:
@@ -894,9 +894,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
       content: 'function getTeamFieldValues(teamContext: TeamContext)'
       return:
@@ -911,9 +911,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: id
           type:
@@ -933,9 +933,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: timeframe
           type:
@@ -955,9 +955,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
       content: 'function getTeamSettings(teamContext: TeamContext)'
       return:
@@ -1000,13 +1000,13 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration
+        - id: iteration
           type:
-            - TeamSettingsIteration
+            - vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration
           description: ''
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
       content: >-
         function postTeamIteration(iteration: TeamSettingsIteration,
@@ -1043,9 +1043,9 @@ items:
           type:
             - function
           description: ''
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: iterationId
           type:
@@ -1095,9 +1095,9 @@ items:
           type:
             - function
           description: options to updated
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: id
           type:
@@ -1164,13 +1164,13 @@ items:
       name
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Work.Contracts.BoardCardRuleSettings
+        - id: boardCardRuleSettings
           type:
-            - BoardCardRuleSettings
+            - vss-web-extension-sdk.TFS.Work.Contracts.BoardCardRuleSettings
           description: ''
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: board
           type:
@@ -1194,13 +1194,13 @@ items:
     summary: Update board card settings for the board id or board by name
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Work.Contracts.BoardCardSettings
+        - id: boardCardSettingsToSave
           type:
-            - BoardCardSettings
+            - vss-web-extension-sdk.TFS.Work.Contracts.BoardCardSettings
           description: ''
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: board
           type:
@@ -1223,13 +1223,13 @@ items:
     summary: Update a board chart
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Work.Contracts.BoardChart
+        - id: chart
           type:
-            - BoardChart
+            - vss-web-extension-sdk.TFS.Work.Contracts.BoardChart
           description: ''
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: board
           type:
@@ -1263,9 +1263,9 @@ items:
           type:
             - function
           description: ''
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: board
           type:
@@ -1291,13 +1291,13 @@ items:
       name
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Work.Contracts.BoardFilterSettings
+        - id: filterSettings
           type:
-            - BoardFilterSettings
+            - vss-web-extension-sdk.TFS.Work.Contracts.BoardFilterSettings
           description: ''
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: board
           type:
@@ -1324,9 +1324,9 @@ items:
           type:
             - function
           description: ''
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: board
           type:
@@ -1354,9 +1354,9 @@ items:
           type:
             - function
           description: ''
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: board
           type:
@@ -1379,13 +1379,13 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Work.Contracts.CapacityPatch
+        - id: patch
           type:
-            - CapacityPatch
+            - vss-web-extension-sdk.TFS.Work.Contracts.CapacityPatch
           description: ''
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: iterationId
           type:
@@ -1410,9 +1410,9 @@ items:
     summary: '[Preview API] Update the information for the specified plan'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Work.Contracts.UpdatePlan
+        - id: updatedPlan
           type:
-            - UpdatePlan
+            - vss-web-extension-sdk.TFS.Work.Contracts.UpdatePlan
           description: Plan definition to be updated
         - id: project
           type:
@@ -1440,13 +1440,13 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsDaysOffPatch
+        - id: daysOffPatch
           type:
-            - TeamSettingsDaysOffPatch
+            - vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsDaysOffPatch
           description: ''
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
         - id: iterationId
           type:
@@ -1470,13 +1470,13 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Work.Contracts.TeamFieldValuesPatch
+        - id: patch
           type:
-            - TeamFieldValuesPatch
+            - vss-web-extension-sdk.TFS.Work.Contracts.TeamFieldValuesPatch
           description: ''
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
       content: >-
         function updateTeamFieldValues(patch: TeamFieldValuesPatch, teamContext:
@@ -1496,13 +1496,13 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsPatch
+        - id: teamSettingsPatch
           type:
-            - TeamSettingsPatch
+            - vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsPatch
           description: ''
-        - id: vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+        - id: teamContext
           type:
-            - TeamContext
+            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
           description: The team context for the operation
       content: >-
         function updateTeamSettings(teamSettingsPatch: TeamSettingsPatch,
@@ -1523,9 +1523,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -1570,10 +1570,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -1600,10 +1600,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -1642,9 +1642,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -1680,9 +1680,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

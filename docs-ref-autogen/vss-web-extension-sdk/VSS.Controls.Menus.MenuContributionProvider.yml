@@ -43,13 +43,13 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.Menus.Menu
+        - id: menu
           type:
-            - Menu
+            - vss-web-extension-sdk.VSS.Controls.Menus.Menu
           description: ''
-        - id: vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext
+        - id: webContext
           type:
-            - WebContext
+            - vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext
           description: ''
         - id: contributionIds
           type:
@@ -67,10 +67,10 @@ items:
           type:
             - function
           description: ''
-        - id: >-
-            vss-web-extension-sdk.VSS.Controls.Menus.MenuContributionProviderOptions
+        - id: options
           type:
-            - MenuContributionProviderOptions
+            - >-
+              vss-web-extension-sdk.VSS.Controls.Menus.MenuContributionProviderOptions
           description: ''
       content: >-
         new MenuContributionProvider(menu: Menu, webContext: WebContext,

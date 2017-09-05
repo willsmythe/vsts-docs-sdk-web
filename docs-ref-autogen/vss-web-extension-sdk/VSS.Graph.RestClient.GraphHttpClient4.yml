@@ -198,9 +198,10 @@ items:
       key for the group.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Graph.Contracts.GraphGroupCreationContext
+        - id: creationContext
           type:
-            - GraphGroupCreationContext
+            - >-
+              vss-web-extension-sdk.VSS.Graph.Contracts.GraphGroupCreationContext
           description: >-
             The subset of the full graph group used to uniquely find the graph
             subject in an external provider.
@@ -247,9 +248,9 @@ items:
       Team Services group and/or specify a custom storage key for the user.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Graph.Contracts.GraphUserCreationContext
+        - id: creationContext
           type:
-            - GraphUserCreationContext
+            - vss-web-extension-sdk.VSS.Graph.Contracts.GraphUserCreationContext
           description: >-
             The subset of the full graph user used to uniquely find the graph
             subject in an external provider.
@@ -671,9 +672,9 @@ items:
           type:
             - string
           description: ''
-        - id: vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+        - id: options
           type:
-            - IVssHttpClientOptions
+            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
           description: ''
           optional: true
       content: >-
@@ -716,9 +717,9 @@ items:
     summary: '[Preview API] Resolve descriptors to users or groups (Subjects) in a batch'
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Graph.Contracts.GraphSubjectLookup
+        - id: subjectLookup
           type:
-            - GraphSubjectLookup
+            - vss-web-extension-sdk.VSS.Graph.Contracts.GraphSubjectLookup
           description: ''
       content: 'function lookupSubjects(subjectLookup: GraphSubjectLookup)'
       return:
@@ -934,9 +935,9 @@ items:
           type:
             - string
           description: The descriptor of the group to modify.
-        - id: vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument
+        - id: patchDocument
           type:
-            - JsonPatchDocument
+            - vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument
           description: The JSON+Patch document containing the fields to alter.
       content: >-
         function updateGroup(groupDescriptor: string, patchDocument:
@@ -993,10 +994,10 @@ items:
     summary: Issue a request to a VSS REST endpoint.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
         - id: useAjaxResult
           type:
@@ -1023,10 +1024,10 @@ items:
       jqXHR. Use spread to access jqXHR.
     syntax:
       parameters:
-        - id: >-
-            vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
+        - id: requestParams
           type:
-            - VssApiResourceRequestParams
+            - >-
+              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
           description: request options
       content: >-
         function _beginRequestWithAjaxResult(requestParams:
@@ -1065,9 +1066,9 @@ items:
             If true, textStatus and jqXHR are added to the success callback. In
             this case, spread (instead of then) needs to be used.
           optional: true
-        - id: vss-web-extension-sdk.IVssAjaxOptions
+        - id: vssRequestOptions
           type:
-            - IVssAjaxOptions
+            - vss-web-extension-sdk.IVssAjaxOptions
           description: ''
           optional: true
       content: >-
@@ -1104,9 +1105,9 @@ items:
       set the request url and auth token manager.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IPromise
+        - id: promise
           type:
-            - IPromise
+            - vss-web-extension-sdk.IPromise
           description: ''
       content: 'function _setInitializationPromise(promise: IPromise)'
     type: method

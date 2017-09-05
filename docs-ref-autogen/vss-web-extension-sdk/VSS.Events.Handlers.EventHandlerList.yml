@@ -85,9 +85,9 @@ items:
     summary: Adds an event handler to the list
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IFunctionPPR
+        - id: handler
           type:
-            - IFunctionPPR
+            - vss-web-extension-sdk.IFunctionPPR
           description: |
             Event handler method to register
       content: 'function subscribe(handler: IFunctionPPR)'
@@ -100,9 +100,9 @@ items:
     summary: Removes an event handler from the list
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IFunctionPPR
+        - id: handler
           type:
-            - IFunctionPPR
+            - vss-web-extension-sdk.IFunctionPPR
           description: |
             Event handler method to remove
       content: 'function unsubscribe(handler: IFunctionPPR)'

@@ -189,15 +189,15 @@ items:
     summary: Generates a table of the selected items in the grid.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IResultCallback
+        - id: operationCompleteCallback
           type:
-            - IResultCallback
+            - vss-web-extension-sdk.IResultCallback
           description: |-
             A callback function invoked when the
             current selection is available to the client for processing.
-        - id: vss-web-extension-sdk.IErrorCallback
+        - id: errorCallback
           type:
-            - IErrorCallback
+            - vss-web-extension-sdk.IErrorCallback
           description: |+
 
           optional: true
@@ -282,9 +282,9 @@ items:
           type:
             - TOptions
           description: ''
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -448,9 +448,9 @@ items:
             - function
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -1316,15 +1316,15 @@ items:
             - TOptions
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.IErrorCallback
+        - id: errorCallback
           type:
-            - IErrorCallback
+            - vss-web-extension-sdk.IErrorCallback
           description: |+
 
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -1358,9 +1358,9 @@ items:
           description: |+
 
           optional: true
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
           optional: true
       content: >-
@@ -1411,9 +1411,9 @@ items:
           type:
             - string
           description: Name of the column to change the options.
-        - id: vss-web-extension-sdk.VSS.Controls.Grids.IGridColumn
+        - id: options
           type:
-            - IGridColumn
+            - vss-web-extension-sdk.VSS.Controls.Grids.IGridColumn
           description: New column options.
           optional: true
       content: 'function setColumnOptions(columnName: string, options?: IGridColumn)'
@@ -1426,9 +1426,9 @@ items:
     summary: Sets the source of the grid using GridSource object.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.Grids.IGridSource
+        - id: source
           type:
-            - IGridSource
+            - vss-web-extension-sdk.VSS.Controls.Grids.IGridSource
           description: GridSource object to set the grid source.
       content: 'function setDataSource(source: IGridSource)'
     type: method
@@ -1444,9 +1444,9 @@ items:
       Note: Options are merged.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+        - id: enhancementOptions
           type:
-            - EnhancementOptions
+            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
           description: ''
       content: 'function setEnhancementOptions(enhancementOptions: EnhancementOptions)'
     type: method
@@ -1663,14 +1663,14 @@ items:
       are available to process.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.IResultCallback
+        - id: itemsAvailableCallback
           type:
-            - IResultCallback
+            - vss-web-extension-sdk.IResultCallback
           description: ''
           optional: true
-        - id: vss-web-extension-sdk.IErrorCallback
+        - id: errorCallback
           type:
-            - IErrorCallback
+            - vss-web-extension-sdk.IErrorCallback
           description: |+
 
           optional: true

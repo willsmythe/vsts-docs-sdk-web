@@ -24,9 +24,9 @@ items:
     summary: ''
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel
+        - id: formInputViewModel
           type:
-            - FormInputViewModel
+            - vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel
           description: ''
         - id: inputDescriptors
           type:
@@ -36,13 +36,15 @@ items:
           type:
             - function
           description: ''
-        - id: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate
+        - id: inputValidChangedCallback
           type:
-            - InputViewModelDelegate
+            - >-
+              vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate
           description: ''
-        - id: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate
+        - id: valuesChangedCallback
           type:
-            - InputViewModelDelegate
+            - >-
+              vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate
           description: ''
       content: >-
         new InputsViewModel(formInputViewModel: FormInputViewModel,

@@ -23,9 +23,9 @@ items:
     summary: Get the url of an MVC endpoint.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Locations.MvcRouteOptions
+        - id: options
           type:
-            - MvcRouteOptions
+            - vss-web-extension-sdk.VSS.Locations.MvcRouteOptions
           description: Url generation options
       content: 'function beginGetMvcUrl(options: MvcRouteOptions)'
       return:
@@ -42,9 +42,9 @@ items:
       needs to already be in the cached locations.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Locations.ContentLocationOptions
+        - id: options
           type:
-            - ContentLocationOptions
+            - vss-web-extension-sdk.VSS.Locations.ContentLocationOptions
           description: Url generation options
       content: 'function getContentUrl(options: ContentLocationOptions)'
       return:
@@ -61,9 +61,9 @@ items:
       needs to already be in the cached locations.
     syntax:
       parameters:
-        - id: vss-web-extension-sdk.VSS.Locations.MvcRouteOptions
+        - id: options
           type:
-            - MvcRouteOptions
+            - vss-web-extension-sdk.VSS.Locations.MvcRouteOptions
           description: Url generation options
       content: 'function getMvcUrl(options: MvcRouteOptions)'
       return:
