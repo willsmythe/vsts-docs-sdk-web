@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitImportTfvcSource
+    name: GitImportTfvcSource
+    fullName: GitImportTfvcSource
+    children:
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitImportTfvcSource.importHistory
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitImportTfvcSource.importHistoryDurationInDays
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitImportTfvcSource.path
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Parameter for creating a git import request when source is tfvc version
+      control
+    package: vss-web-extension-sdk
+    module: TFS.VersionControl.Contracts
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitImportTfvcSource.importHistory
+    name: importHistory
+    fullName: importHistory
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Set true to import History, false otherwise'
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitImportTfvcSource.importHistoryDurationInDays
+    name: importHistoryDurationInDays
+    fullName: importHistoryDurationInDays
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Get history for last n days (max allowed value is 180 days)
+    syntax:
+      return:
+        type:
+          - number
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitImportTfvcSource.path
+    name: path
+    fullName: path
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Path which we want to import (this can be copied from Path Control in
+      Explorer)
+    syntax:
+      return:
+        type:
+          - string

@@ -1,0 +1,57 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Events.Handlers.Event
+    name: Event
+    fullName: Event
+    children:
+      - vss-web-extension-sdk.VSS.Events.Handlers.Event.getHandlers
+      - vss-web-extension-sdk.VSS.Events.Handlers.Event.invokeHandlers
+    langs:
+      - typeScript
+    type: class
+    summary: Represents a specific event that event listeners can attach to
+    package: vss-web-extension-sdk
+    module: VSS.Events.Handlers
+  - uid: vss-web-extension-sdk.VSS.Events.Handlers.Event.getHandlers
+    name: getHandlers()
+    children: []
+    langs:
+      - typeScript
+    summary: The list of handlers for this event
+    syntax:
+      parameters: []
+      content: function getHandlers()
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Events.Handlers.EventHandlerList
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Events.Handlers.Event.invokeHandlers
+    name: >-
+      invokeHandlers(sender: TSender, eventArgs: TEventArgs,
+      handlerResultFilter?: function)
+    children: []
+    langs:
+      - typeScript
+    summary: Invoke the handlers that have subscribed to this event
+    syntax:
+      parameters:
+        - id: sender
+          type:
+            - TSender
+          description: The source that is triggering the event
+        - id: eventArgs
+          type:
+            - TEventArgs
+          description: Event-specific arguments
+        - id: handlerResultFilter
+          type:
+            - function
+          description: >
+            Optional callback method to be able to break out of the handler
+            invocation loop based on the return value of a handler. The filter
+            should return true to break out of the loop.
+          optional: true
+      content: >-
+        function invokeHandlers(sender: TSender, eventArgs: TEventArgs,
+        handlerResultFilter?: function)
+    type: method

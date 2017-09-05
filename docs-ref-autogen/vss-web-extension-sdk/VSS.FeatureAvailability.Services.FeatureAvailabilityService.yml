@@ -1,0 +1,160 @@
+### YamlMime:UniversalReference
+items:
+  - uid: >-
+      vss-web-extension-sdk.VSS.FeatureAvailability.Services.FeatureAvailabilityService
+    name: FeatureAvailabilityService
+    fullName: FeatureAvailabilityService
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.FeatureAvailability.Services.FeatureAvailabilityService.beginIsFeatureEnabled
+      - >-
+        vss-web-extension-sdk.VSS.FeatureAvailability.Services.FeatureAvailabilityService.constructor
+      - >-
+        vss-web-extension-sdk.VSS.FeatureAvailability.Services.FeatureAvailabilityService.getConnection
+      - >-
+        vss-web-extension-sdk.VSS.FeatureAvailability.Services.FeatureAvailabilityService.initializeConnection
+      - >-
+        vss-web-extension-sdk.VSS.FeatureAvailability.Services.FeatureAvailabilityService.isFeatureEnabled
+      - >-
+        vss-web-extension-sdk.VSS.FeatureAvailability.Services.FeatureAvailabilityService.isFeatureEnabledLocal
+    langs:
+      - typeScript
+    type: class
+    summary: Service to manage feature availability data
+    package: vss-web-extension-sdk
+    module: VSS.FeatureAvailability.Services
+  - uid: >-
+      vss-web-extension-sdk.VSS.FeatureAvailability.Services.FeatureAvailabilityService.beginIsFeatureEnabled
+    name: >-
+      beginIsFeatureEnabled(featureName: string, callback: IResultCallback,
+      errorCallback?: IErrorCallback)
+    children: []
+    langs:
+      - typeScript
+    summary: Returns whether or not a feature is enabled.
+    syntax:
+      parameters:
+        - id: featureName
+          type:
+            - string
+          description: Feature name
+        - id: vss-web-extension-sdk.IResultCallback
+          type:
+            - IResultCallback
+          description: >
+
+            Success callback, taking one parameter (boolean) - the feature
+            availability state
+        - id: vss-web-extension-sdk.IErrorCallback
+          type:
+            - IErrorCallback
+          description: |
+            Error callback
+          optional: true
+      content: >-
+        function beginIsFeatureEnabled(featureName: string, callback:
+        IResultCallback, errorCallback?: IErrorCallback)
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.FeatureAvailability.Services.FeatureAvailabilityService.constructor
+    name: FeatureAvailabilityService()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: new FeatureAvailabilityService()
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.FeatureAvailability.Services.FeatureAvailabilityService
+    type: constructor
+  - uid: >-
+      vss-web-extension-sdk.VSS.FeatureAvailability.Services.FeatureAvailabilityService.getConnection
+    name: getConnection()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the relative location for the service's connection
+    syntax:
+      parameters: []
+      content: function getConnection()
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Service.VssConnection
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.FeatureAvailability.Services.FeatureAvailabilityService.initializeConnection
+    name: 'initializeConnection(connection: VssConnection)'
+    children: []
+    langs:
+      - typeScript
+    summary: Sets the VssConnection to use for this service
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Service.VssConnection
+          type:
+            - VssConnection
+          description: |
+            VssConnection used by this service
+      content: 'function initializeConnection(connection: VssConnection)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.FeatureAvailability.Services.FeatureAvailabilityService.isFeatureEnabled
+    name: 'isFeatureEnabled(featureName: string, defaultValue?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Uses the default service to perform a local-only check to determine if the
+      feature is enabled.
+
+      This requires the feature to be present on the the page scope
+      feature-availability-data island.
+    syntax:
+      parameters:
+        - id: featureName
+          type:
+            - string
+          description: Feature name
+        - id: defaultValue
+          type:
+            - boolean
+          description: |
+            Value to return if the feature is not present in page context data.
+          optional: true
+      content: 'function isFeatureEnabled(featureName: string, defaultValue?: boolean)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.FeatureAvailability.Services.FeatureAvailabilityService.isFeatureEnabledLocal
+    name: 'isFeatureEnabledLocal(featureName: string, defaultValue?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Performs a local-only check to determine if the feature is enabled. This
+      requires the feature to be present on the the page scope
+      feature-availability-data island.
+    syntax:
+      parameters:
+        - id: featureName
+          type:
+            - string
+          description: Feature name
+        - id: defaultValue
+          type:
+            - boolean
+          description: |
+            Value to return if the feature is not present in page context data.
+          optional: true
+      content: >-
+        function isFeatureEnabledLocal(featureName: string, defaultValue?:
+        boolean)
+      return:
+        type:
+          - boolean
+    type: method

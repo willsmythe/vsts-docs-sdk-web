@@ -1,0 +1,181 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent
+    name: BaseMetricsEvent
+    fullName: BaseMetricsEvent
+    children:
+      - vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.area
+      - vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.constructor
+      - vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.close
+      - vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.closeThis
+      - vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.feature
+      - vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.isClosed
+      - >-
+        vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.newInnerMetrics
+      - vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.properties
+      - >-
+        vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.publishOnClose
+      - vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.setValue
+    langs:
+      - typeScript
+    type: class
+    summary: Base metrics event
+    package: vss-web-extension-sdk
+    module: VSS.Profile.Metrics
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.area
+    name: area
+    fullName: area
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.constructor
+    name: 'BaseMetricsEvent(area: string, feature: string, publishOnClose: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: Creates a MetricsEvent with specified area and feature
+    syntax:
+      parameters:
+        - id: area
+          type:
+            - string
+          description: ''
+        - id: feature
+          type:
+            - string
+          description: ''
+        - id: publishOnClose
+          type:
+            - boolean
+          description: ''
+      content: >-
+        new BaseMetricsEvent(area: string, feature: string, publishOnClose:
+        boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent
+    type: constructor
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.close
+    name: close()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Marks a MetricsEvent project as closed, once it is closed, it will not be
+      updated with any new values
+
+      invokes closeThis for specific implementations.
+    syntax:
+      parameters: []
+      content: function close()
+      return:
+        type:
+          - Q.Promise
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.closeThis
+    name: closeThis()
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Publishes data to telemetry services
+      To be overriden for specific implementations
+    syntax:
+      parameters: []
+      content: function closeThis()
+      return:
+        type:
+          - Q.Promise
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.feature
+    name: feature
+    fullName: feature
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.isClosed
+    name: isClosed
+    fullName: isClosed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.newInnerMetrics
+    name: 'newInnerMetrics(feature: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Create inner metrics by prefixing the keys with innerFeature
+    syntax:
+      parameters:
+        - id: feature
+          type:
+            - string
+          description: ''
+      content: 'function newInnerMetrics(feature: string)'
+      return:
+        type:
+          - T
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.properties
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IDictionaryStringTo
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.publishOnClose
+    name: publishOnClose
+    fullName: publishOnClose
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.setValue
+    name: 'setValue(key: string, value: T)'
+    children: []
+    langs:
+      - typeScript
+    summary: Set value for a metric field
+    syntax:
+      parameters:
+        - id: key
+          type:
+            - string
+          description: ''
+        - id: value
+          type:
+            - T
+          description: ''
+      content: 'function setValue(key: string, value: T)'
+      return:
+        type:
+          - any
+    type: method

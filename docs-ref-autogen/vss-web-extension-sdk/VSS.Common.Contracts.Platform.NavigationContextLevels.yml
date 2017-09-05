@@ -1,0 +1,108 @@
+### YamlMime:UniversalReference
+items:
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels
+    name: NavigationContextLevels
+    fullName: NavigationContextLevels
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.None
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.Deployment
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.Application
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.Collection
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.Project
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.Team
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.ApplicationAll
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.All
+    langs:
+      - typeScript
+    type: enum
+    summary: >-
+      Flags to show which tokens of the navigation context are present in the
+      current request URL. The request url's context part are formed like
+      http://server:port[/{collection}[/{project}[/{team}]]][/_admin]/_{controller}/{action}
+      The tokens {collection}, {project} and {team} are navigation level tokens
+      whereas _admin segment is a switch to show admin areas of the site.
+    package: vss-web-extension-sdk
+    module: VSS.Common.Contracts.Platform
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 0
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.Deployment
+    name: Deployment
+    children: []
+    langs:
+      - typeScript
+    summary: Root level in Azure.
+    type: field
+    numericValue: 1
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.Application
+    name: Application
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Root level in on premises. Neither of {collection}, {project} and {team}
+      tokens have information
+    type: field
+    numericValue: 2
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.Collection
+    name: Collection
+    children: []
+    langs:
+      - typeScript
+    summary: 'Flag to show {collection} token has information.'
+    type: field
+    numericValue: 4
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.Project
+    name: Project
+    children: []
+    langs:
+      - typeScript
+    summary: 'Flag to show {project} token has information.'
+    type: field
+    numericValue: 8
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.Team
+    name: Team
+    children: []
+    langs:
+      - typeScript
+    summary: 'Flag to show {team} token has information.'
+    type: field
+    numericValue: 16
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.ApplicationAll
+    name: ApplicationAll
+    children: []
+    langs:
+      - typeScript
+    summary: Sugar for all application levels.
+    type: field
+    numericValue: 30
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContextLevels.All
+    name: All
+    children: []
+    langs:
+      - typeScript
+    summary: Sugar for all levels
+    type: field
+    numericValue: 31

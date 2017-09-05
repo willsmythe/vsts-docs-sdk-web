@@ -1,0 +1,66 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Events.Services.EventService
+    name: EventService
+    fullName: EventService
+    children:
+      - vss-web-extension-sdk.VSS.Events.Services.EventService.attachEvent
+      - vss-web-extension-sdk.VSS.Events.Services.EventService.detachEvent
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: vss-web-extension-sdk
+    module: VSS.Events.Services
+  - uid: vss-web-extension-sdk.VSS.Events.Services.EventService.attachEvent
+    name: 'attachEvent(eventName: string, handler: IEventHandler, scope?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Attatch a handler to an event.
+    syntax:
+      parameters:
+        - id: eventName
+          type:
+            - string
+          description: The event name.
+        - id: vss-web-extension-sdk.IEventHandler
+          type:
+            - IEventHandler
+          description: The handler to attach.
+        - id: scope
+          type:
+            - string
+          description: |
+            The scope of the event.
+          optional: true
+      content: >-
+        function attachEvent(eventName: string, handler: IEventHandler, scope?:
+        string)
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Events.Services.EventService.detachEvent
+    name: 'detachEvent(eventName: string, handler: IEventHandler, scope?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Detatch a handler from an event.
+    syntax:
+      parameters:
+        - id: eventName
+          type:
+            - string
+          description: The event name.
+        - id: vss-web-extension-sdk.IEventHandler
+          type:
+            - IEventHandler
+          description: The handler to detach.
+        - id: scope
+          type:
+            - string
+          description: |
+            The scope of the event.
+          optional: true
+      content: >-
+        function detachEvent(eventName: string, handler: IEventHandler, scope?:
+        string)
+    type: method

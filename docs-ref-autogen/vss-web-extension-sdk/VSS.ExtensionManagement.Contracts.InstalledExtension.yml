@@ -1,0 +1,310 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension
+    name: InstalledExtension
+    fullName: InstalledExtension
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.baseUri
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.contributions
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.contributionTypes
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.demands
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.eventCallbacks
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.extensionId
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.extensionName
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.files
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.flags
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.installState
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.language
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.lastPublished
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.manifestVersion
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.publisherId
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.publisherName
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.registrationId
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.scopes
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.serviceInstanceType
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.version
+    langs:
+      - typeScript
+    type: interface
+    summary: Represents a VSTS extension along with its installation state
+    package: vss-web-extension-sdk
+    module: VSS.ExtensionManagement.Contracts
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.baseUri
+    name: baseUri
+    fullName: baseUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uri used as base for other relative uri's defined in extension
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.contributions
+    name: contributions
+    fullName: contributions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of contributions made by this extension
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.contributionTypes
+    name: contributionTypes
+    fullName: contributionTypes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of contribution types defined by this extension
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.demands
+    name: demands
+    fullName: demands
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of explicit demands required by this extension
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.eventCallbacks
+    name: eventCallbacks
+    fullName: eventCallbacks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Collection of endpoints that get called when particular extension events
+      occur
+    syntax:
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionEventCallbackCollection
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.extensionId
+    name: extensionId
+    fullName: extensionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The friendly extension id for this extension - unique for a given
+      publisher.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.extensionName
+    name: extensionName
+    fullName: extensionName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The display name of the extension.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.files
+    name: files
+    fullName: files
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: This is the set of files available from the extension.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.flags
+    name: flags
+    fullName: flags
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Extension flags relevant to contribution consumers
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.installState
+    name: installState
+    fullName: installState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Information about this particular installation of the extension
+    syntax:
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtensionState
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.language
+    name: language
+    fullName: language
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Language Culture Name set by the Gallery
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.lastPublished
+    name: lastPublished
+    fullName: lastPublished
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This represents the date/time the extensions was last updated in the
+      gallery. This doesnt mean this version was updated the value represents
+      changes to any and all versions of the extension.
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.manifestVersion
+    name: manifestVersion
+    fullName: manifestVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Version of the extension manifest format/content
+    syntax:
+      return:
+        type:
+          - number
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.publisherId
+    name: publisherId
+    fullName: publisherId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Unique id of the publisher of this extension
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.publisherName
+    name: publisherName
+    fullName: publisherName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The display name of the publisher
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.registrationId
+    name: registrationId
+    fullName: registrationId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Unique id for this extension (the same id is used for all versions of a
+      single extension)
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.scopes
+    name: scopes
+    fullName: scopes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of all oauth scopes required by this extension
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.serviceInstanceType
+    name: serviceInstanceType
+    fullName: serviceInstanceType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The ServiceInstanceType(Guid) of the VSTS service that must be available
+      to an account in order for the extension to be installed
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtension.version
+    name: version
+    fullName: version
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Version of this extension
+    syntax:
+      return:
+        type:
+          - string

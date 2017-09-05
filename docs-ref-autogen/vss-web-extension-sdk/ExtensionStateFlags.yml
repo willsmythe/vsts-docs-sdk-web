@@ -13,10 +13,18 @@ items:
       - vss-web-extension-sdk.ExtensionStateFlags.Trusted
       - vss-web-extension-sdk.ExtensionStateFlags.Error
       - vss-web-extension-sdk.ExtensionStateFlags.NeedsReauthorization
+      - vss-web-extension-sdk.ExtensionStateFlags.AutoUpgradeError
+      - vss-web-extension-sdk.ExtensionStateFlags.Warning
     langs:
       - typeScript
     type: enum
-    summary: ''
+    summary: >-
+      States of an extension Note:  If you add value to this enum, you need to
+      do 2 other things.  First add the back compat enum in value
+      src\Vssf\Sdk\Server\Contributions\InstalledExtensionMessage.cs.  Second,
+      you can not send the new value on the message bus.  You need to remove it
+      from the message bus event prior to being sent.
+    package: vss-web-extension-sdk
   - uid: vss-web-extension-sdk.ExtensionStateFlags.None
     name: None
     children: []
@@ -94,3 +102,24 @@ items:
     summary: Extension scopes have changed and the extension requires re-authorization
     type: field
     numericValue: 128
+  - uid: vss-web-extension-sdk.ExtensionStateFlags.AutoUpgradeError
+    name: AutoUpgradeError
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Error performing auto-upgrade. For example, if the new version has demands
+      not supported the extension cannot be auto-upgraded.
+    type: field
+    numericValue: 256
+  - uid: vss-web-extension-sdk.ExtensionStateFlags.Warning
+    name: Warning
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Extension is currently in a warning state, that can cause a degraded
+      experience. The degraded experience can be caused for example by some
+      installation issues detected such as implicit demands not supported.
+    type: field
+    numericValue: 512

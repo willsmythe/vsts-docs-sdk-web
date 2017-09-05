@@ -1,0 +1,69 @@
+### YamlMime:UniversalReference
+items:
+  - uid: >-
+      vss-web-extension-sdk.VSS.FeatureManagement.Services.FeatureManagementService
+    name: FeatureManagementService
+    fullName: FeatureManagementService
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.FeatureManagement.Services.FeatureManagementService.getConnection
+      - >-
+        vss-web-extension-sdk.VSS.FeatureManagement.Services.FeatureManagementService.initializeConnection
+      - >-
+        vss-web-extension-sdk.VSS.FeatureManagement.Services.FeatureManagementService.isFeatureEnabled
+    langs:
+      - typeScript
+    type: class
+    summary: Service to manage feature availability data
+    package: vss-web-extension-sdk
+    module: VSS.FeatureManagement.Services
+  - uid: >-
+      vss-web-extension-sdk.VSS.FeatureManagement.Services.FeatureManagementService.getConnection
+    name: getConnection()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the relative location for the service's connection
+    syntax:
+      parameters: []
+      content: function getConnection()
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Service.VssConnection
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.FeatureManagement.Services.FeatureManagementService.initializeConnection
+    name: 'initializeConnection(connection: VssConnection)'
+    children: []
+    langs:
+      - typeScript
+    summary: Sets the VssConnection to use for this service
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Service.VssConnection
+          type:
+            - VssConnection
+          description: |
+            VssConnection used by this service
+      content: 'function initializeConnection(connection: VssConnection)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.FeatureManagement.Services.FeatureManagementService.isFeatureEnabled
+    name: 'isFeatureEnabled(featureId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Returns whether or not a feature is enabled. Checks features sent through
+      JSON island data via IClientFeatureProviderService.AddFeatureState
+    syntax:
+      parameters:
+        - id: featureId
+          type:
+            - string
+          description: ''
+      content: 'function isFeatureEnabled(featureId: string)'
+      return:
+        type:
+          - boolean
+    type: method

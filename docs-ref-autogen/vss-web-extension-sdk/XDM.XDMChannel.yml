@@ -1,0 +1,153 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.XDM.XDMChannel
+    name: XDMChannel
+    fullName: XDMChannel
+    children:
+      - vss-web-extension-sdk.XDM.XDMChannel.getObjectRegistry
+      - vss-web-extension-sdk.XDM.XDMChannel.getRemoteObjectProxy
+      - vss-web-extension-sdk.XDM.XDMChannel.invokeRemoteMethod
+      - vss-web-extension-sdk.XDM.XDMChannel.onMessage
+      - vss-web-extension-sdk.XDM.XDMChannel.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: |-
+      Represents a channel of communication between frames\document
+      Stays "alive" across multiple funtion\method calls
+    package: vss-web-extension-sdk
+    module: XDM
+  - uid: vss-web-extension-sdk.XDM.XDMChannel.getObjectRegistry
+    name: getObjectRegistry()
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Get the object registry to handle messages from this specific channel.
+      Upon receiving a message, this channel registry will be used first, then
+      the global registry will be used if no handler is found here.
+    syntax:
+      parameters: []
+      content: function getObjectRegistry()
+      return:
+        type:
+          - vss-web-extension-sdk.IXDMObjectRegistry
+    type: method
+  - uid: vss-web-extension-sdk.XDM.XDMChannel.getRemoteObjectProxy
+    name: 'getRemoteObjectProxy(instanceId: string, contextData?: Object)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get a proxied object that represents the object registered with the given
+      instance id on the remote side of this channel.
+    syntax:
+      parameters:
+        - id: instanceId
+          type:
+            - string
+          description: unique id of the registered object
+        - id: contextData
+          type:
+            - Object
+          description: >
+            Optional context data to pass to a registered object's factory
+            method
+          optional: true
+      content: 'function getRemoteObjectProxy(instanceId: string, contextData?: Object)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.XDM.XDMChannel.invokeRemoteMethod
+    name: >-
+      invokeRemoteMethod(methodName: string, instanceId: string, params?:
+      function, instanceContextData?: Object, serializationSettings?:
+      ISerializationSettings)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Invoke a method via RPC. Lookup the registered object on the remote end of
+      the channel and invoke the specified method.
+    syntax:
+      parameters:
+        - id: methodName
+          type:
+            - string
+          description: ''
+        - id: instanceId
+          type:
+            - string
+          description: unique id of the registered object
+        - id: params
+          type:
+            - function
+          description: Arguments to the method to invoke
+          optional: true
+        - id: instanceContextData
+          type:
+            - Object
+          description: >-
+            Optional context data to pass to a registered object's factory
+            method
+          optional: true
+        - id: vss-web-extension-sdk.XDM.ISerializationSettings
+          type:
+            - ISerializationSettings
+          description: |
+            Optional serialization settings
+          optional: true
+      content: >-
+        function invokeRemoteMethod(methodName: string, instanceId: string,
+        params?: function, instanceContextData?: Object, serializationSettings?:
+        ISerializationSettings)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.XDM.XDMChannel.onMessage
+    name: 'onMessage(data: any, origin: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Handle a received message on this channel. Dispatch to the appropriate
+      object found via object registry
+    syntax:
+      parameters:
+        - id: data
+          type:
+            - any
+          description: Message data
+        - id: origin
+          type:
+            - string
+          description: Origin of the frame that sent the message
+      content: 'function onMessage(data: any, origin: string)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.XDM.XDMChannel.constructor
+    name: 'XDMChannel(postToWindow: Window, targetOrigin?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: postToWindow
+          type:
+            - Window
+          description: ''
+        - id: targetOrigin
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'new XDMChannel(postToWindow: Window, targetOrigin?: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.XDM.XDMChannel
+    type: constructor

@@ -1,0 +1,290 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService
+    name: HostNavigationService
+    fullName: HostNavigationService
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.attachNavigate
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.detachNavigate
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.getCurrentState
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.getHash
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.navigate
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.onHashChanged
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.openNewWindow
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.reload
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.replaceHash
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.setHash
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.setWindowTitle
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.updateHistoryEntry
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Service which allows interaction with the browser location and navigation
+      of the host frame
+    package: vss-web-extension-sdk
+    module: VSS.SDK.Services.Navigation
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.attachNavigate
+    name: >-
+      attachNavigate(action: string, handler: IFunctionPPR, checkCurrentState?:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: Attach a new navigate handler
+    syntax:
+      parameters:
+        - id: action
+          type:
+            - string
+          description: >-
+            The action that the handler applies to (or null to listen for all
+            events)
+        - id: vss-web-extension-sdk.IFunctionPPR
+          type:
+            - IFunctionPPR
+          description: >-
+            The method called whenever a navigation event occurs with the
+            matching action value
+        - id: checkCurrentState
+          type:
+            - boolean
+          description: >
+            If true, immediately invoke the handler if the current state is
+            appropriate (has the matching action value)
+          optional: true
+      content: >-
+        function attachNavigate(action: string, handler: IFunctionPPR,
+        checkCurrentState?: boolean)
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.detachNavigate
+    name: 'detachNavigate(action: string, handler?: IFunctionPPR)'
+    children: []
+    langs:
+      - typeScript
+    summary: Remove a navigate handler
+    syntax:
+      parameters:
+        - id: action
+          type:
+            - string
+          description: The action that the handler applies to (or null for global handlers)
+        - id: vss-web-extension-sdk.IFunctionPPR
+          type:
+            - IFunctionPPR
+          description: >
+            The method called whenever a navigation event occurs with the
+            matching action value
+          optional: true
+      content: 'function detachNavigate(action: string, handler?: IFunctionPPR)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.getCurrentState
+    name: getCurrentState()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get the current navigation state dictionary. Uses query parameters and
+      hash parameters.
+    syntax:
+      parameters: []
+      content: function getCurrentState()
+      return:
+        type:
+          - any
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.getHash
+    name: getHash()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the current hash.
+    syntax:
+      parameters: []
+      content: function getHash()
+      return:
+        type:
+          - Q.Promise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.navigate
+    name: 'navigate(url: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Navigate the parent page to the specified url
+    syntax:
+      parameters:
+        - id: url
+          type:
+            - string
+          description: |
+            Url to navigate to
+      content: 'function navigate(url: string)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.onHashChanged
+    name: 'onHashChanged(callback: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Add a callback to be invoked each time the hash navigation has changed
+    syntax:
+      parameters:
+        - id: callback
+          type:
+            - function
+          description: |
+            Method invoked on each navigation hash change
+      content: 'function onHashChanged(callback: function)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.openNewWindow
+    name: 'openNewWindow(url: string, features: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Open a new window to the specified url
+    syntax:
+      parameters:
+        - id: url
+          type:
+            - string
+          description: Url of the new window
+        - id: features
+          type:
+            - string
+          description: >
+            Comma-separated list of features/specs sent as the 3rd parameter to
+            window.open. For example: "height=400,width=400".
+      content: 'function openNewWindow(url: string, features: string)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.reload
+    name: reload()
+    children: []
+    langs:
+      - typeScript
+    summary: Reloads the parent frame
+    syntax:
+      parameters: []
+      content: function reload()
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.replaceHash
+    name: 'replaceHash(hash: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Replace existing hash with the provided hash from the hosted content.
+    syntax:
+      parameters:
+        - id: hash
+          type:
+            - string
+          description: ''
+      content: 'function replaceHash(hash: string)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.setHash
+    name: 'setHash(hash: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Sets the provided hash from the hosted content.
+    syntax:
+      parameters:
+        - id: hash
+          type:
+            - string
+          description: ''
+      content: 'function setHash(hash: string)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.setWindowTitle
+    name: 'setWindowTitle(title: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Update the host document's title (appears as the browser tab title).
+    syntax:
+      parameters:
+        - id: title
+          type:
+            - string
+          description: |
+            The new title of the window
+      content: 'function setWindowTitle(title: string)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.updateHistoryEntry
+    name: >-
+      updateHistoryEntry(action: string, data?: IDictionaryStringTo,
+      replaceHistoryEntry?: boolean, mergeWithCurrentState?: boolean,
+      windowTitle?: string, suppressNavigate?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: Update the current history entry
+    syntax:
+      parameters:
+        - id: action
+          type:
+            - string
+          description: >-
+            The "action" state parameter. This is the _a key in the url or
+            "action" in the current state dictionary
+        - id: vss-web-extension-sdk.IDictionaryStringTo
+          type:
+            - IDictionaryStringTo
+          description: The history entry's new state key/value pairs
+          optional: true
+        - id: replaceHistoryEntry
+          type:
+            - boolean
+          description: >-
+            If true, replace the current history entry. Otherwise, add a new
+            history entry.
+          optional: true
+        - id: mergeWithCurrentState
+          type:
+            - boolean
+          description: >-
+            If true, the supplied data just modify the existing/current state.
+            If false, they replace all existing key/value pairs.
+          optional: true
+        - id: windowTitle
+          type:
+            - string
+          description: >-
+            The new window title. A null or empty value indicates to leave the
+            title unchanged.
+          optional: true
+        - id: suppressNavigate
+          type:
+            - boolean
+          description: >
+            If true, don't trigger any of the attached navigate event handlers
+            due to this update.
+          optional: true
+      content: >-
+        function updateHistoryEntry(action: string, data?: IDictionaryStringTo,
+        replaceHistoryEntry?: boolean, mergeWithCurrentState?: boolean,
+        windowTitle?: string, suppressNavigate?: boolean)
+    type: method

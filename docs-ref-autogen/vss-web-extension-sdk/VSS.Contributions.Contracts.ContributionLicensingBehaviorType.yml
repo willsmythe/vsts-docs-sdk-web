@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionLicensingBehaviorType
+    name: ContributionLicensingBehaviorType
+    fullName: ContributionLicensingBehaviorType
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionLicensingBehaviorType.OnlyIfLicensed
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionLicensingBehaviorType.OnlyIfUnlicensed
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionLicensingBehaviorType.AlwaysInclude
+    langs:
+      - typeScript
+    type: enum
+    summary: Represents different ways of including contributions based on licensing
+    package: vss-web-extension-sdk
+    module: VSS.Contributions.Contracts
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionLicensingBehaviorType.OnlyIfLicensed
+    name: OnlyIfLicensed
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Default value - only include the contribution if the user is licensed for
+      the extension
+    type: field
+    numericValue: 0
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionLicensingBehaviorType.OnlyIfUnlicensed
+    name: OnlyIfUnlicensed
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Only include the contribution if the user is NOT licensed for the
+      extension
+    type: field
+    numericValue: 1
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionLicensingBehaviorType.AlwaysInclude
+    name: AlwaysInclude
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Always include the contribution regardless of whether or not the user is
+      licensed for the extension
+    type: field
+    numericValue: 2

@@ -1,0 +1,56 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TFS.Build.Contracts.RepositoryCleanOptions
+    name: RepositoryCleanOptions
+    fullName: RepositoryCleanOptions
+    children:
+      - vss-web-extension-sdk.TFS.Build.Contracts.RepositoryCleanOptions.Source
+      - >-
+        vss-web-extension-sdk.TFS.Build.Contracts.RepositoryCleanOptions.SourceAndOutputDir
+      - >-
+        vss-web-extension-sdk.TFS.Build.Contracts.RepositoryCleanOptions.SourceDir
+      - >-
+        vss-web-extension-sdk.TFS.Build.Contracts.RepositoryCleanOptions.AllBuildDir
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: vss-web-extension-sdk
+    module: TFS.Build.Contracts
+  - uid: vss-web-extension-sdk.TFS.Build.Contracts.RepositoryCleanOptions.Source
+    name: Source
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 0
+  - uid: >-
+      vss-web-extension-sdk.TFS.Build.Contracts.RepositoryCleanOptions.SourceAndOutputDir
+    name: SourceAndOutputDir
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 1
+  - uid: vss-web-extension-sdk.TFS.Build.Contracts.RepositoryCleanOptions.SourceDir
+    name: SourceDir
+    children: []
+    langs:
+      - typeScript
+    summary: Re-create $(build.sourcesDirectory)
+    type: field
+    numericValue: 2
+  - uid: >-
+      vss-web-extension-sdk.TFS.Build.Contracts.RepositoryCleanOptions.AllBuildDir
+    name: AllBuildDir
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Re-create $(agnet.buildDirectory) which contains
+      $(build.sourcesDirectory), $(build.binariesDirectory) and any folders that
+      left from previous build.
+    type: field
+    numericValue: 3

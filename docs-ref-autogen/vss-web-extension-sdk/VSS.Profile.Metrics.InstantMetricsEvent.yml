@@ -1,0 +1,186 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent
+    name: InstantMetricsEvent
+    fullName: InstantMetricsEvent
+    children:
+      - vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.area
+      - vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.close
+      - vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.closeThis
+      - vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.feature
+      - >-
+        vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.constructor
+      - vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.isClosed
+      - >-
+        vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.newInnerMetrics
+      - vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.properties
+      - >-
+        vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.publishOnClose
+      - vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.setValue
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: vss-web-extension-sdk
+    module: VSS.Profile.Metrics
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.area
+    name: area
+    fullName: area
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.close
+    name: close()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Marks a MetricsEvent project as closed, once it is closed, it will not be
+      updated with any new values
+
+      invokes closeThis for specific implementations.
+    syntax:
+      parameters: []
+      content: function close()
+      return:
+        type:
+          - Q.Promise
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.closeThis
+    name: closeThis()
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Publishes data to telemetry services
+      To be overriden for specific implementations
+    syntax:
+      parameters: []
+      content: function closeThis()
+      return:
+        type:
+          - Q.Promise
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.feature
+    name: feature
+    fullName: feature
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.constructor
+    name: >-
+      InstantMetricsEvent(area: string, feature: string, publishOnClose:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: Creates a MetricsEvent with specified area and feature
+    syntax:
+      parameters:
+        - id: area
+          type:
+            - string
+          description: ''
+        - id: feature
+          type:
+            - string
+          description: ''
+        - id: publishOnClose
+          type:
+            - boolean
+          description: ''
+      content: >-
+        new InstantMetricsEvent(area: string, feature: string, publishOnClose:
+        boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent
+    type: constructor
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.isClosed
+    name: isClosed
+    fullName: isClosed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.newInnerMetrics
+    name: 'newInnerMetrics(innerFeature: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Create inner metrics by prefixing the keys with innerFeature
+    syntax:
+      parameters:
+        - id: innerFeature
+          type:
+            - string
+          description: ''
+      content: 'function newInnerMetrics(innerFeature: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Profile.Metrics.MetricsEvent
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.properties
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IDictionaryStringTo
+  - uid: >-
+      vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.publishOnClose
+    name: publishOnClose
+    fullName: publishOnClose
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent.setValue
+    name: 'setValue(key: string, value: T)'
+    children: []
+    langs:
+      - typeScript
+    summary: Set value for a metric field
+    syntax:
+      parameters:
+        - id: key
+          type:
+            - string
+          description: ''
+        - id: value
+          type:
+            - T
+          description: ''
+      content: 'function setValue(key: string, value: T)'
+      return:
+        type:
+          - any
+    type: method

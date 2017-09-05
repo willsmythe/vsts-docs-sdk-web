@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCache
+    name: ITwoLayerCache
+    fullName: ITwoLayerCache
+    children:
+      - vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCache.get
+      - vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCache.set
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: vss-web-extension-sdk
+    module: VSS.Identities.Picker.Cache
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCache.get
+    name: 'get(key: string, cacheTypeHint?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: This method can return null
+    syntax:
+      parameters:
+        - id: key
+          type:
+            - string
+          description: ''
+        - id: cacheTypeHint
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'function get(key: string, cacheTypeHint?: string)'
+      return:
+        type:
+          - V
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCache.set
+    name: 'set(key: string, value: V, cacheTypeHint?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: This method is optimistic
+    syntax:
+      parameters:
+        - id: key
+          type:
+            - string
+          description: ''
+        - id: value
+          type:
+            - V
+          description: ''
+        - id: cacheTypeHint
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'function set(key: string, value: V, cacheTypeHint?: string)'
+    type: method

@@ -1,0 +1,154 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest
+    name: ExtensionManifest
+    fullName: ExtensionManifest
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.baseUri
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.contributions
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.contributionTypes
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.demands
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.eventCallbacks
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.language
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.manifestVersion
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.scopes
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.serviceInstanceType
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Base class for extension properties which are shared by the extension
+      manifest and the extension model
+    package: vss-web-extension-sdk
+    module: VSS.ExtensionManagement.Contracts
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.baseUri
+    name: baseUri
+    fullName: baseUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uri used as base for other relative uri's defined in extension
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.contributions
+    name: contributions
+    fullName: contributions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of contributions made by this extension
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.contributionTypes
+    name: contributionTypes
+    fullName: contributionTypes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of contribution types defined by this extension
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.demands
+    name: demands
+    fullName: demands
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of explicit demands required by this extension
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.eventCallbacks
+    name: eventCallbacks
+    fullName: eventCallbacks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Collection of endpoints that get called when particular extension events
+      occur
+    syntax:
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionEventCallbackCollection
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.language
+    name: language
+    fullName: language
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Language Culture Name set by the Gallery
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.manifestVersion
+    name: manifestVersion
+    fullName: manifestVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Version of the extension manifest format/content
+    syntax:
+      return:
+        type:
+          - number
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.scopes
+    name: scopes
+    fullName: scopes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of all oauth scopes required by this extension
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionManifest.serviceInstanceType
+    name: serviceInstanceType
+    fullName: serviceInstanceType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The ServiceInstanceType(Guid) of the VSTS service that must be available
+      to an account in order for the extension to be installed
+    syntax:
+      return:
+        type:
+          - string

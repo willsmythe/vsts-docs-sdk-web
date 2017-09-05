@@ -1,0 +1,387 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService
+    name: WebPageDataService
+    fullName: WebPageDataService
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.addResolutionPlugin
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.ensureDataProvidersResolved
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getCachedPageData
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getConnection
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageData
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageDataByDataType
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageDataSource
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.initializeConnection
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.invalidateCachedProviderData
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.registerProviderData
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.reloadCachedProviderData
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.removePageData
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.removeResolutionPlugin
+    langs:
+      - typeScript
+    type: class
+    summary: Service for obtaining web page data from contributed data providers
+    package: vss-web-extension-sdk
+    module: VSS.Contributions.Services
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.addResolutionPlugin
+    name: >-
+      addResolutionPlugin(dataType: string, handler:
+      WebPageDataResolutionPlugin)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Add a plugin handler that gets called when data with the given key has
+      been sent from the server
+    syntax:
+      parameters:
+        - id: dataType
+          type:
+            - string
+          description: The data type property as set in the data provider's contribution
+        - id: >-
+            vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataResolutionPlugin
+          type:
+            - WebPageDataResolutionPlugin
+          description: |
+            Function called whenever data with the given key has been provided
+      content: >-
+        function addResolutionPlugin(dataType: string, handler:
+        WebPageDataResolutionPlugin)
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.ensureDataProvidersResolved
+    name: >-
+      ensureDataProvidersResolved(contributions: function, refreshIfExpired?:
+      boolean, properties?: any)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Ensure that all data providers have been resolved for all of the given
+      data-provider contributions
+    syntax:
+      parameters:
+        - id: contributions
+          type:
+            - function
+          description: The data provider contributions to resolve
+        - id: refreshIfExpired
+          type:
+            - boolean
+          description: >
+            If true, force a server request to re-populate the data provider
+            data if the data has expired.  Default is it is always expired.
+          optional: true
+        - id: properties
+          type:
+            - any
+          description: ''
+          optional: true
+      content: >-
+        function ensureDataProvidersResolved(contributions: function,
+        refreshIfExpired?: boolean, properties?: any)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getCachedPageData
+    name: >-
+      getCachedPageData(cachedDataProviderContributionId: string,
+      primaryDataProviderContributionId?: string, refreshCache?: boolean,
+      contractMetadata?: ContractMetadata, reloadCallback?: IResultCallback)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get page data from a data provider contribution that is cached, optionally
+      queueing an update of the data
+
+      after reading from the cache
+    syntax:
+      parameters:
+        - id: cachedDataProviderContributionId
+          type:
+            - string
+          description: Id of the data provider which caches data in localStorage
+        - id: primaryDataProviderContributionId
+          type:
+            - string
+          description: >-
+            Optional contribution id of a data provider to use if it exists. The
+            cached data will not be used or updated if this exists.
+          optional: true
+        - id: refreshCache
+          type:
+            - boolean
+          description: >-
+            If true and data was read from the cache, queue up a request to
+            update it.
+          optional: true
+        - id: vss-web-extension-sdk.VSS.Serialization.ContractMetadata
+          type:
+            - ContractMetadata
+          description: >
+            Optional contract metadata to use when deserializing the JSON island
+            data
+          optional: true
+        - id: vss-web-extension-sdk.IResultCallback
+          type:
+            - IResultCallback
+          description: ''
+          optional: true
+      content: >-
+        function getCachedPageData(cachedDataProviderContributionId: string,
+        primaryDataProviderContributionId?: string, refreshCache?: boolean,
+        contractMetadata?: ContractMetadata, reloadCallback?: IResultCallback)
+      return:
+        type:
+          - T
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getConnection
+    name: getConnection()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the relative location for the service's connection
+    syntax:
+      parameters: []
+      content: function getConnection()
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Service.VssConnection
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageData
+    name: 'getPageData(contributionId: string, contractMetadata?: ContractMetadata)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get web page data that was contributed from the given contribution
+    syntax:
+      parameters:
+        - id: contributionId
+          type:
+            - string
+          description: The data provider key
+        - id: vss-web-extension-sdk.VSS.Serialization.ContractMetadata
+          type:
+            - ContractMetadata
+          description: |
+            Optional contract metadata to use to deserialize the object
+          optional: true
+      content: >-
+        function getPageData(contributionId: string, contractMetadata?:
+        ContractMetadata)
+      return:
+        type:
+          - T
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageDataByDataType
+    name: >-
+      getPageDataByDataType(dataType: string, contractMetadata?:
+      ContractMetadata)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get the page data entries from all data provider contributions with the
+      given dataType property.
+    syntax:
+      parameters:
+        - id: dataType
+          type:
+            - string
+          description: >-
+            Value of the dataType property in the data provider contribution's
+            properties
+        - id: vss-web-extension-sdk.VSS.Serialization.ContractMetadata
+          type:
+            - ContractMetadata
+          description: >
+            Optional contract metadata to use to deserialize the returned
+            values.
+          optional: true
+      content: >-
+        function getPageDataByDataType(dataType: string, contractMetadata?:
+        ContractMetadata)
+      return:
+        type:
+          - vss-web-extension-sdk.IDictionaryStringTo
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageDataSource
+    name: 'getPageDataSource(contributionId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Gets the source from which a data provider's data was populated (JSON
+      island data, REST call, localStorage, etc.)
+    syntax:
+      parameters:
+        - id: contributionId
+          type:
+            - string
+          description: ''
+      content: 'function getPageDataSource(contributionId: string)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.initializeConnection
+    name: 'initializeConnection(connection: VssConnection)'
+    children: []
+    langs:
+      - typeScript
+    summary: Sets the VssConnection to use for this service
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Service.VssConnection
+          type:
+            - VssConnection
+          description: |
+            VssConnection used by this service
+      content: 'function initializeConnection(connection: VssConnection)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.invalidateCachedProviderData
+    name: >-
+      invalidateCachedProviderData(cachedDataProviderContributionId: string,
+      reloadDataNow?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: Invalidate any previously-cached data for the given data provider.
+    syntax:
+      parameters:
+        - id: cachedDataProviderContributionId
+          type:
+            - string
+          description: Contribution id of the data provider
+        - id: reloadDataNow
+          type:
+            - boolean
+          description: >
+            If true, immediately make a request to repopulate the data
+            provider's data
+          optional: true
+      content: >-
+        function invalidateCachedProviderData(cachedDataProviderContributionId:
+        string, reloadDataNow?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.registerProviderData
+    name: >-
+      registerProviderData(result: DataProviderResult, contributions: function,
+      clearExisting?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Register the given data provider data with this instance of the
+      contribution service
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult
+          type:
+            - DataProviderResult
+          description: Data provider result to merge-in
+        - id: contributions
+          type:
+            - function
+          description: Contributions to leverage when resolving provider data
+        - id: clearExisting
+          type:
+            - boolean
+          description: |
+            If true, clear any existing data providers. If false, add to it.
+          optional: true
+      content: >-
+        function registerProviderData(result: DataProviderResult, contributions:
+        function, clearExisting?: boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.reloadCachedProviderData
+    name: >-
+      reloadCachedProviderData(cachedDataProviderContributionId: string,
+      reloadCallback?: IResultCallback, properties?: any)
+    children: []
+    langs:
+      - typeScript
+    summary: Always reloads provider data by queuing up a new request
+    syntax:
+      parameters:
+        - id: cachedDataProviderContributionId
+          type:
+            - string
+          description: Id of the data provider
+        - id: vss-web-extension-sdk.IResultCallback
+          type:
+            - IResultCallback
+          description: ''
+          optional: true
+        - id: properties
+          type:
+            - any
+          description: >
+            Additional properties to pass to the provider on reload as part of
+            the context
+          optional: true
+      content: >-
+        function reloadCachedProviderData(cachedDataProviderContributionId:
+        string, reloadCallback?: IResultCallback, properties?: any)
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.removePageData
+    name: 'removePageData(contributionId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Removes web page data that was contributed from the given contribution
+    syntax:
+      parameters:
+        - id: contributionId
+          type:
+            - string
+          description: |
+            The data provider key
+      content: 'function removePageData(contributionId: string)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.removeResolutionPlugin
+    name: 'removeResolutionPlugin(dataType: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Remove the plugin handler that gets called when data with the given key
+    syntax:
+      parameters:
+        - id: dataType
+          type:
+            - string
+          description: |
+            The data type property as set in the data provider's contribution
+      content: 'function removeResolutionPlugin(dataType: string)'
+    type: method

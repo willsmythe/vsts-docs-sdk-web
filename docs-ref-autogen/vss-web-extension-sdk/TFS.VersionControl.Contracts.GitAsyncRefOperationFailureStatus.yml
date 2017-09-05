@@ -1,0 +1,131 @@
+### YamlMime:UniversalReference
+items:
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus
+    name: GitAsyncRefOperationFailureStatus
+    fullName: GitAsyncRefOperationFailureStatus
+    children:
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.None
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.InvalidRefName
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.RefNameConflict
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.CreateBranchPermissionRequired
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.WritePermissionRequired
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.TargetBranchDeleted
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.GitObjectTooLarge
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.OperationIndentityNotFound
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.AsyncOperationNotFound
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.Other
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: vss-web-extension-sdk
+    module: TFS.VersionControl.Contracts
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: No status
+    type: field
+    numericValue: 0
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.InvalidRefName
+    name: InvalidRefName
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates that the ref update request could not be completed because the
+      ref name presented in the request was not valid.
+    type: field
+    numericValue: 1
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.RefNameConflict
+    name: RefNameConflict
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update could not be completed because, in case-insensitive mode,
+      the ref name conflicts with an existing, differently-cased ref name.
+    type: field
+    numericValue: 2
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.CreateBranchPermissionRequired
+    name: CreateBranchPermissionRequired
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update request could not be completed because the user lacks the
+      permission to create a branch
+    type: field
+    numericValue: 3
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.WritePermissionRequired
+    name: WritePermissionRequired
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update request could not be completed because the user lacks write
+      permissions required to write this ref
+    type: field
+    numericValue: 4
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.TargetBranchDeleted
+    name: TargetBranchDeleted
+    children: []
+    langs:
+      - typeScript
+    summary: Target branch was deleted after Git async operation started
+    type: field
+    numericValue: 5
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.GitObjectTooLarge
+    name: GitObjectTooLarge
+    children: []
+    langs:
+      - typeScript
+    summary: Git object is too large to materialize into memory
+    type: field
+    numericValue: 6
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.OperationIndentityNotFound
+    name: OperationIndentityNotFound
+    children: []
+    langs:
+      - typeScript
+    summary: Identity who authorized the operation was not found
+    type: field
+    numericValue: 7
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.AsyncOperationNotFound
+    name: AsyncOperationNotFound
+    children: []
+    langs:
+      - typeScript
+    summary: Async operation was not found
+    type: field
+    numericValue: 8
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationFailureStatus.Other
+    name: Other
+    children: []
+    langs:
+      - typeScript
+    summary: Unexpected failure
+    type: field
+    numericValue: 9

@@ -1,0 +1,46 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Identities.Contracts.IdentityDescriptor
+    name: IdentityDescriptor
+    fullName: IdentityDescriptor
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Contracts.IdentityDescriptor.identifier
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Contracts.IdentityDescriptor.identityType
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      An Identity descriptor is a wrapper for the identity type (Windows SID,
+      Passport) along with a unique identifier such as the SID or PUID.
+    package: vss-web-extension-sdk
+    module: VSS.Identities.Contracts
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Contracts.IdentityDescriptor.identifier
+    name: identifier
+    fullName: identifier
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The unique identifier for this identity, not exceeding 256 chars, which
+      will be persisted.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Contracts.IdentityDescriptor.identityType
+    name: identityType
+    fullName: identityType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Type of descriptor (for example, Windows, Passport, etc.).'
+    syntax:
+      return:
+        type:
+          - string

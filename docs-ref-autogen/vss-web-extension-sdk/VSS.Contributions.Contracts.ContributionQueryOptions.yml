@@ -1,0 +1,84 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionQueryOptions
+    name: ContributionQueryOptions
+    fullName: ContributionQueryOptions
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionQueryOptions.None
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionQueryOptions.IncludeSelf
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionQueryOptions.IncludeChildren
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionQueryOptions.IncludeSubTree
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionQueryOptions.IncludeAll
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionQueryOptions.IgnoreConstraints
+    langs:
+      - typeScript
+    type: enum
+    summary: Options that control the contributions to include in a query
+    package: vss-web-extension-sdk
+    module: VSS.Contributions.Contracts
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionQueryOptions.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 0
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionQueryOptions.IncludeSelf
+    name: IncludeSelf
+    children: []
+    langs:
+      - typeScript
+    summary: Include the direct contributions that have the ids queried.
+    type: field
+    numericValue: 16
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionQueryOptions.IncludeChildren
+    name: IncludeChildren
+    children: []
+    langs:
+      - typeScript
+    summary: Include the contributions that directly target the contributions queried.
+    type: field
+    numericValue: 32
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionQueryOptions.IncludeSubTree
+    name: IncludeSubTree
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Include the contributions from the entire sub-tree targetting the
+      contributions queried.
+    type: field
+    numericValue: 96
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionQueryOptions.IncludeAll
+    name: IncludeAll
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Include the contribution being queried as well as all contributions that
+      target them recursively.
+    type: field
+    numericValue: 112
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionQueryOptions.IgnoreConstraints
+    name: IgnoreConstraints
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Some callers may want the entire tree back without constraint evaluation
+      being performed.
+    type: field
+    numericValue: 256

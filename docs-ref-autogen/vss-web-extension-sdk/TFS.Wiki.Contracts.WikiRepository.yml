@@ -1,0 +1,55 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TFS.Wiki.Contracts.WikiRepository
+    name: WikiRepository
+    fullName: WikiRepository
+    children:
+      - vss-web-extension-sdk.TFS.Wiki.Contracts.WikiRepository.headCommit
+      - vss-web-extension-sdk.TFS.Wiki.Contracts.WikiRepository.id
+      - vss-web-extension-sdk.TFS.Wiki.Contracts.WikiRepository.repository
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Defines a wiki repository which encapsulates the git repository backing
+      the wiki.
+    package: vss-web-extension-sdk
+    module: TFS.Wiki.Contracts
+  - uid: vss-web-extension-sdk.TFS.Wiki.Contracts.WikiRepository.headCommit
+    name: headCommit
+    fullName: headCommit
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The head commit associated with the git repository backing up the wiki.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TFS.Wiki.Contracts.WikiRepository.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The ID of the wiki which is same as the ID of the Git repository that it
+      is backed by.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TFS.Wiki.Contracts.WikiRepository.repository
+    name: repository
+    fullName: repository
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The git repository that backs up the wiki.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository

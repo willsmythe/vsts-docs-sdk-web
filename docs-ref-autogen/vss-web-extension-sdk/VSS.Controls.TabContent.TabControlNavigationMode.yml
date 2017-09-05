@@ -1,0 +1,38 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Controls.TabContent.TabControlNavigationMode
+    name: TabControlNavigationMode
+    fullName: TabControlNavigationMode
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Controls.TabContent.TabControlNavigationMode.ALWAYS_NAVIGATE
+      - >-
+        vss-web-extension-sdk.VSS.Controls.TabContent.TabControlNavigationMode.CUSTOMIZED
+    langs:
+      - typeScript
+    type: enum
+    summary: The enum for tab control navigation mode
+    package: vss-web-extension-sdk
+    module: VSS.Controls.TabContent
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.TabContent.TabControlNavigationMode.ALWAYS_NAVIGATE
+    name: ALWAYS_NAVIGATE
+    children: []
+    langs:
+      - typeScript
+    summary: Always allow user to navigate away from current tab
+    type: field
+    numericValue: 0
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.TabContent.TabControlNavigationMode.CUSTOMIZED
+    name: CUSTOMIZED
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Call tabContentControl onTabChanging() to determine if user can navigate
+      away from current tab. If onTabChanging()
+
+      is not defined, allow user to navigate away.
+    type: field
+    numericValue: 1

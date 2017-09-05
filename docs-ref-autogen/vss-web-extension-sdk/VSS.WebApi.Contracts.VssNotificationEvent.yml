@@ -1,0 +1,91 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.VssNotificationEvent
+    name: VssNotificationEvent
+    fullName: VssNotificationEvent
+    children:
+      - vss-web-extension-sdk.VSS.WebApi.Contracts.VssNotificationEvent.actors
+      - >-
+        vss-web-extension-sdk.VSS.WebApi.Contracts.VssNotificationEvent.artifactUris
+      - vss-web-extension-sdk.VSS.WebApi.Contracts.VssNotificationEvent.data
+      - >-
+        vss-web-extension-sdk.VSS.WebApi.Contracts.VssNotificationEvent.eventType
+      - vss-web-extension-sdk.VSS.WebApi.Contracts.VssNotificationEvent.scopes
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      This is the type used for firing notifications intended for the subsystem
+      in the Notifications SDK. For components that can't take a dependency on
+      the Notifications SDK directly, they can use
+      ITeamFoundationEventService.PublishNotification and the Notifications SDK
+      ISubscriber implementation will get it.
+    package: vss-web-extension-sdk
+    module: VSS.WebApi.Contracts
+  - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.VssNotificationEvent.actors
+    name: actors
+    fullName: actors
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Optional: A list of actors which are additional identities with
+      corresponding roles that are relevant to the event.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.WebApi.Contracts.VssNotificationEvent.artifactUris
+    name: artifactUris
+    fullName: artifactUris
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Optional: A list of artifacts referenced or impacted by this event.'
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.VssNotificationEvent.data
+    name: data
+    fullName: data
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Required: The event payload.  If Data is a string, it must be in Json or
+      XML format.  Otherwise it must have a serialization format attribute.
+    syntax:
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.VssNotificationEvent.eventType
+    name: eventType
+    fullName: eventType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Required: The name of the event.  This event must be registered in the
+      context it is being fired.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.VssNotificationEvent.scopes
+    name: scopes
+    fullName: scopes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Optional: A list of scopes which are are relevant to the event.'
+    syntax:
+      return:
+        type:
+          - union

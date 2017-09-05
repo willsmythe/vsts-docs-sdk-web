@@ -1,0 +1,76 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.AadLoginPromptOption
+    name: AadLoginPromptOption
+    fullName: AadLoginPromptOption
+    children:
+      - >-
+        vss-web-extension-sdk.TFS.DistributedTask.Contracts.AadLoginPromptOption.NoOption
+      - >-
+        vss-web-extension-sdk.TFS.DistributedTask.Contracts.AadLoginPromptOption.Login
+      - >-
+        vss-web-extension-sdk.TFS.DistributedTask.Contracts.AadLoginPromptOption.SelectAccount
+      - >-
+        vss-web-extension-sdk.TFS.DistributedTask.Contracts.AadLoginPromptOption.FreshLogin
+      - >-
+        vss-web-extension-sdk.TFS.DistributedTask.Contracts.AadLoginPromptOption.FreshLoginWithMfa
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: vss-web-extension-sdk
+    module: TFS.DistributedTask.Contracts
+  - uid: >-
+      vss-web-extension-sdk.TFS.DistributedTask.Contracts.AadLoginPromptOption.NoOption
+    name: NoOption
+    children: []
+    langs:
+      - typeScript
+    summary: Do not provide a prompt option
+    type: field
+    numericValue: 0
+  - uid: >-
+      vss-web-extension-sdk.TFS.DistributedTask.Contracts.AadLoginPromptOption.Login
+    name: Login
+    children: []
+    langs:
+      - typeScript
+    summary: Force the user to login again.
+    type: field
+    numericValue: 1
+  - uid: >-
+      vss-web-extension-sdk.TFS.DistributedTask.Contracts.AadLoginPromptOption.SelectAccount
+    name: SelectAccount
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Force the user to select which account they are logging in with instead of
+      automatically picking the user up from the session state. NOTE: This does
+      not work for switching bewtween the variants of a dual-homed user.
+    type: field
+    numericValue: 2
+  - uid: >-
+      vss-web-extension-sdk.TFS.DistributedTask.Contracts.AadLoginPromptOption.FreshLogin
+    name: FreshLogin
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Force the user to login again.  Ignore current authentication state and
+      force the user to authenticate again. This option should be used instead
+      of Login.
+    type: field
+    numericValue: 3
+  - uid: >-
+      vss-web-extension-sdk.TFS.DistributedTask.Contracts.AadLoginPromptOption.FreshLoginWithMfa
+    name: FreshLoginWithMfa
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Force the user to login again with mfa.  Ignore current authentication
+      state and force the user to authenticate again. This option should be used
+      instead of Login, if MFA is required.
+    type: field
+    numericValue: 4

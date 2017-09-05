@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Locations.ContentLocationOptions
+    name: ContentLocationOptions
+    fullName: ContentLocationOptions
+    children:
+      - vss-web-extension-sdk.VSS.Locations.ContentLocationOptions.hostType
+      - vss-web-extension-sdk.VSS.Locations.ContentLocationOptions.queryParams
+      - vss-web-extension-sdk.VSS.Locations.ContentLocationOptions.relativePath
+      - >-
+        vss-web-extension-sdk.VSS.Locations.ContentLocationOptions.serviceInstanceId
+      - vss-web-extension-sdk.VSS.Locations.ContentLocationOptions.webContext
+    langs:
+      - typeScript
+    type: interface
+    summary: Options for generating content urls
+    package: vss-web-extension-sdk
+    module: VSS.Locations
+  - uid: vss-web-extension-sdk.VSS.Locations.ContentLocationOptions.hostType
+    name: hostType
+    fullName: hostType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Host level to get the url of
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.Locations.ContentLocationOptions.queryParams
+    name: queryParams
+    fullName: queryParams
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Query parameters to add to the url
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IDictionaryStringTo
+  - uid: vss-web-extension-sdk.VSS.Locations.ContentLocationOptions.relativePath
+    name: relativePath
+    fullName: relativePath
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Relative path to append to the url. This needs to be properly encoded by
+      the consumer.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Locations.ContentLocationOptions.serviceInstanceId
+    name: serviceInstanceId
+    fullName: serviceInstanceId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Unique id of the service to generate the url for
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Locations.ContentLocationOptions.webContext
+    name: webContext
+    fullName: webContext
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specific web context to use when generating the url
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext

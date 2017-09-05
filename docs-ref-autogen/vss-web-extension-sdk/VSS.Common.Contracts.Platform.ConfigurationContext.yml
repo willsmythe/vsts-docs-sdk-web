@@ -1,0 +1,93 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContext
+    name: ConfigurationContext
+    fullName: ConfigurationContext
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContext.api
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContext.clientHost
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContext.isHosted
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContext.mailSettings
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContext.paths
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Web Access configuration data. This information is used to process
+      requests on the server.  This data is also placed in a json island on each
+      page in order for JavaScript to know key configuration data required to
+      things like construct proper urls
+    package: vss-web-extension-sdk
+    module: VSS.Common.Contracts.Platform
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContext.api
+    name: api
+    fullName: api
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: MVC api configuration
+    syntax:
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContextApis
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContext.clientHost
+    name: clientHost
+    fullName: clientHost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Optional name of the client (e.g. TEE) hosting the page
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContext.isHosted
+    name: isHosted
+    fullName: isHosted
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContext.mailSettings
+    name: mailSettings
+    fullName: mailSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Current mail settings for TFS
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Common.Contracts.Platform.TfsMailSettings
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContext.paths
+    name: paths
+    fullName: paths
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Server resource paths
+    syntax:
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContextPaths

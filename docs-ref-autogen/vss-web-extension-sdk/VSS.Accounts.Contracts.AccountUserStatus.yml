@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Accounts.Contracts.AccountUserStatus
+    name: AccountUserStatus
+    fullName: AccountUserStatus
+    children:
+      - vss-web-extension-sdk.VSS.Accounts.Contracts.AccountUserStatus.None
+      - vss-web-extension-sdk.VSS.Accounts.Contracts.AccountUserStatus.Active
+      - vss-web-extension-sdk.VSS.Accounts.Contracts.AccountUserStatus.Disabled
+      - vss-web-extension-sdk.VSS.Accounts.Contracts.AccountUserStatus.Deleted
+      - vss-web-extension-sdk.VSS.Accounts.Contracts.AccountUserStatus.Pending
+      - vss-web-extension-sdk.VSS.Accounts.Contracts.AccountUserStatus.Expired
+      - >-
+        vss-web-extension-sdk.VSS.Accounts.Contracts.AccountUserStatus.PendingDisabled
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: vss-web-extension-sdk
+    module: VSS.Accounts.Contracts
+  - uid: vss-web-extension-sdk.VSS.Accounts.Contracts.AccountUserStatus.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    type: field
+    numericValue: 0
+  - uid: vss-web-extension-sdk.VSS.Accounts.Contracts.AccountUserStatus.Active
+    name: Active
+    children: []
+    langs:
+      - typeScript
+    summary: User has signed in at least once to the VSTS account
+    type: field
+    numericValue: 1
+  - uid: vss-web-extension-sdk.VSS.Accounts.Contracts.AccountUserStatus.Disabled
+    name: Disabled
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      User cannot sign in; primarily used by admin to temporarily remove a user
+      due to absence or license reallocation
+    type: field
+    numericValue: 2
+  - uid: vss-web-extension-sdk.VSS.Accounts.Contracts.AccountUserStatus.Deleted
+    name: Deleted
+    children: []
+    langs:
+      - typeScript
+    summary: User is removed from the VSTS account by the VSTS account admin
+    type: field
+    numericValue: 3
+  - uid: vss-web-extension-sdk.VSS.Accounts.Contracts.AccountUserStatus.Pending
+    name: Pending
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      User is invited to join the VSTS account by the VSTS account admin, but
+      has not signed up/signed in yet
+    type: field
+    numericValue: 4
+  - uid: vss-web-extension-sdk.VSS.Accounts.Contracts.AccountUserStatus.Expired
+    name: Expired
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      User can sign in; primarily used when license is in expired state and we
+      give a grace period
+    type: field
+    numericValue: 5
+  - uid: >-
+      vss-web-extension-sdk.VSS.Accounts.Contracts.AccountUserStatus.PendingDisabled
+    name: PendingDisabled
+    children: []
+    langs:
+      - typeScript
+    summary: 'User is disabled; if reenabled, they will still be in the Pending state'
+    type: field
+    numericValue: 6

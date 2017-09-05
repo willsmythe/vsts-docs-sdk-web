@@ -1,0 +1,101 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase
+    name: ITestBase
+    fullName: ITestBase
+    children:
+      - vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.actions
+      - >-
+        vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.createTestStep
+      - >-
+        vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.generateXmlFromActions
+      - >-
+        vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.loadActions
+      - >-
+        vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.saveActions
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface for test base
+    package: vss-web-extension-sdk
+    module: TFS.TestManagement.Helper.Utils
+  - uid: vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.actions
+    name: actions
+    fullName: actions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'array of actions: which could be teststep or sharedstep'
+    syntax:
+      return:
+        type:
+          - Array
+  - uid: >-
+      vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.createTestStep
+    name: createTestStep()
+    children: []
+    langs:
+      - typeScript
+    summary: create a test step
+    syntax:
+      parameters: []
+      content: function createTestStep()
+      return:
+        type:
+          - vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.generateXmlFromActions
+    name: generateXmlFromActions()
+    children: []
+    langs:
+      - typeScript
+    summary: function to generate teststep xml for all actions
+    syntax:
+      parameters: []
+      content: function generateXmlFromActions()
+      return:
+        type:
+          - string
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.loadActions
+    name: 'loadActions(xmString: string, links: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: it will initalize actions array for given input
+    syntax:
+      parameters:
+        - id: xmString
+          type:
+            - string
+          description: ''
+        - id: links
+          type:
+            - function
+          description: ''
+      content: 'function loadActions(xmString: string, links: function)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.saveActions
+    name: 'saveActions(json: JsonPatchDocument)'
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      it will update json with new operations
+      1st for teststep xml
+      remaining for add relation links based on all teststep attachments
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument
+          type:
+            - JsonPatchDocument
+          description: ''
+      content: 'function saveActions(json: JsonPatchDocument)'
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument
+    type: method

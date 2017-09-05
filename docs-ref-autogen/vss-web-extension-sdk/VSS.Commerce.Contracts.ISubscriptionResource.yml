@@ -1,0 +1,155 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource
+    name: ISubscriptionResource
+    fullName: ISubscriptionResource
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.committedQuantity
+      - >-
+        vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.disabledReason
+      - >-
+        vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.disabledResourceActionLink
+      - >-
+        vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.includedQuantity
+      - >-
+        vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.isPaidBillingEnabled
+      - >-
+        vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.isUseable
+      - >-
+        vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.maximumQuantity
+      - vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.name
+      - >-
+        vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.resetDate
+    langs:
+      - typeScript
+    type: interface
+    summary: Information about a resource associated with a subscription.
+    package: vss-web-extension-sdk
+    module: VSS.Commerce.Contracts
+  - uid: >-
+      vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.committedQuantity
+    name: committedQuantity
+    fullName: committedQuantity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Quantity commited by the user, when resources is commitment based.'
+    syntax:
+      return:
+        type:
+          - number
+  - uid: >-
+      vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.disabledReason
+    name: disabledReason
+    fullName: disabledReason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A enumeration value indicating why the resource was disabled.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.disabledResourceActionLink
+    name: disabledResourceActionLink
+    fullName: disabledResourceActionLink
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uri pointing to user action on a disabled resource. It is based on  value.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.includedQuantity
+    name: includedQuantity
+    fullName: includedQuantity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Quantity included for free.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: >-
+      vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.isPaidBillingEnabled
+    name: isPaidBillingEnabled
+    fullName: isPaidBillingEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Returns true if paid billing is enabled on the resource. Returns false for
+      non-azure subscriptions, disabled azure subscriptions or explicitly
+      disabled by user
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.isUseable
+    name: isUseable
+    fullName: isUseable
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Returns true if resource is can be used otherwise returns false. can be
+      used to identify why resource is disabled.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.maximumQuantity
+    name: maximumQuantity
+    fullName: maximumQuantity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Returns an integer representing the maximum quantity that can be billed
+      for this resource. Any usage submitted over this number is automatically
+      excluded from being sent to azure.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gets the name of this resource.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource.resetDate
+    name: resetDate
+    fullName: resetDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Returns a Date of UTC kind indicating when the next reset of quantities is
+      going to happen. On this day at UTC 2:00 AM is when the reset will occur.
+    syntax:
+      return:
+        type:
+          - Date

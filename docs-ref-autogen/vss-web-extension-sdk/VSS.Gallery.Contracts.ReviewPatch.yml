@@ -1,0 +1,51 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.ReviewPatch
+    name: ReviewPatch
+    fullName: ReviewPatch
+    children:
+      - vss-web-extension-sdk.VSS.Gallery.Contracts.ReviewPatch.operation
+      - vss-web-extension-sdk.VSS.Gallery.Contracts.ReviewPatch.reportedConcern
+      - vss-web-extension-sdk.VSS.Gallery.Contracts.ReviewPatch.reviewItem
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: vss-web-extension-sdk
+    module: VSS.Gallery.Contracts
+  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.ReviewPatch.operation
+    name: operation
+    fullName: operation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Denotes the patch operation type
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.ReviewPatch.reportedConcern
+    name: reportedConcern
+    fullName: reportedConcern
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Use when patch operation is FlagReview
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Gallery.Contracts.UserReportedConcern
+  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.ReviewPatch.reviewItem
+    name: reviewItem
+    fullName: reviewItem
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Use when patch operation is EditReview
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Gallery.Contracts.Review

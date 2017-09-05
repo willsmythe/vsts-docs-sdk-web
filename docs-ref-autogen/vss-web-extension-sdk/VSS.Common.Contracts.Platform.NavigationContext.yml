@@ -1,0 +1,162 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext
+    name: NavigationContext
+    fullName: NavigationContext
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.area
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.commandName
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.currentAction
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.currentController
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.currentParameters
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.routeId
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.routeTemplate
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.routeValues
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.topMostLevel
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Structure to specify current navigation context of the executing request.
+      The navigation context content's are generally obtained from the request
+      URL. Some context specifiers such as "Account" can be implicit and might
+      come from current IVssServiceHost.
+    package: vss-web-extension-sdk
+    module: VSS.Common.Contracts.Platform
+  - uid: vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.area
+    name: area
+    fullName: area
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A token to show which area the request has been targeted to. By default
+      there are two areas "Admin" and "Api". They can be specified in the URL as
+      _admin and _api respectively.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.commandName
+    name: commandName
+    fullName: commandName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Command name for the current request's route. Used in telemetry and
+      reporting.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.currentAction
+    name: currentAction
+    fullName: currentAction
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Current action route value
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.currentController
+    name: currentController
+    fullName: currentController
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Current controller route value
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.currentParameters
+    name: currentParameters
+    fullName: currentParameters
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Current parameters route value (the path after the controller and action
+      in the url)
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.routeId
+    name: routeId
+    fullName: routeId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The id of the matched route
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.routeTemplate
+    name: routeTemplate
+    fullName: routeTemplate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The template for the matched route
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.routeValues
+    name: routeValues
+    fullName: routeValues
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The set of route values for this request
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.NavigationContext.topMostLevel
+    name: topMostLevel
+    fullName: topMostLevel
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Flag to show top most navigation context. For example the URL
+      http://server:port/collection/project/_controller/action sets the Project
+      bit while the URL
+      http://server:port/collection/project/_admin/_controller/action sets also
+      sets the area property to Admin.
+    syntax:
+      return:
+        type:
+          - union

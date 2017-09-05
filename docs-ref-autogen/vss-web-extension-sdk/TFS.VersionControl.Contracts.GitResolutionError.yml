@@ -1,0 +1,92 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionError
+    name: GitResolutionError
+    fullName: GitResolutionError
+    children:
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionError.None
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionError.MergeContentNotFound
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionError.PathInUse
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionError.InvalidPath
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionError.UnknownAction
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionError.UnknownMergeType
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionError.OtherError
+    langs:
+      - typeScript
+    type: enum
+    summary: The type of a merge conflict.
+    package: vss-web-extension-sdk
+    module: TFS.VersionControl.Contracts
+  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionError.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: No error
+    type: field
+    numericValue: 0
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionError.MergeContentNotFound
+    name: MergeContentNotFound
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      User set a blob id for resolving a content merge, but blob was not found
+      in repo during application
+    type: field
+    numericValue: 1
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionError.PathInUse
+    name: PathInUse
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Attempted to resolve a conflict by moving a file to another path, but path
+      was already in use
+    type: field
+    numericValue: 2
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionError.InvalidPath
+    name: InvalidPath
+    children: []
+    langs:
+      - typeScript
+    summary: No error
+    type: field
+    numericValue: 3
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionError.UnknownAction
+    name: UnknownAction
+    children: []
+    langs:
+      - typeScript
+    summary: GitResolutionAction was set to an unrecognized value
+    type: field
+    numericValue: 4
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionError.UnknownMergeType
+    name: UnknownMergeType
+    children: []
+    langs:
+      - typeScript
+    summary: GitResolutionMergeType was set to an unrecognized value
+    type: field
+    numericValue: 5
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionError.OtherError
+    name: OtherError
+    children: []
+    langs:
+      - typeScript
+    summary: Any error for which a more specific code doesn't apply
+    type: field
+    numericValue: 255

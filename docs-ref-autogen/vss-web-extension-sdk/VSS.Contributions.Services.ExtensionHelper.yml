@@ -1,0 +1,303 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper
+    name: ExtensionHelper
+    fullName: ExtensionHelper
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.getExtensionId
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.getFullContributionId
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.getPublisherId
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.hasContent
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.hasInternalContent
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.isContributionOfType
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.isContributionTrusted
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.publishTraceData
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.resolveTemplateString
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.resolveUriTemplate
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.resolveUriTemplateProperty
+    langs:
+      - typeScript
+    type: class
+    summary: Provides helper functions for extensions-related types.
+    package: vss-web-extension-sdk
+    module: VSS.Contributions.Services
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.getExtensionId
+    name: 'getExtensionId(contribution: Contribution)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get the identfier for the extension that published this contribution.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: |
+            The contribution whose extension is being requested
+      content: 'function getExtensionId(contribution: Contribution)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.getFullContributionId
+    name: 'getFullContributionId(contribution: Contribution)'
+    children: []
+    langs:
+      - typeScript
+    summary: full contribution id for the given contribution.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: |
+            The contribution to get the id of
+      content: 'function getFullContributionId(contribution: Contribution)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.getPublisherId
+    name: 'getPublisherId(contribution: Contribution)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get the identfier for the publisher that published this contribution.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: |
+            The contribution whose publisher is being requested
+      content: 'function getPublisherId(contribution: Contribution)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.hasContent
+    name: 'hasContent(contribution: Contribution, uriProperty?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Determine whether or not the given contribution provides hostable content
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: The contribution whose properties to check
+        - id: uriProperty
+          type:
+            - string
+          description: |
+            The property name which contains the content uri ("uri" by default)
+          optional: true
+      content: 'function hasContent(contribution: Contribution, uriProperty?: string)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.hasInternalContent
+    name: 'hasInternalContent(contribution: Contribution)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Determine whether or not the given contribution is from a trusted
+      extension and has internal content
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: |
+            The contribution whose properties to check
+      content: 'function hasInternalContent(contribution: Contribution)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.isContributionOfType
+    name: 'isContributionOfType(contribution: Contribution, contributionType: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Is the contribution of the given contribution type
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: The contribution whose type to check
+        - id: contributionType
+          type:
+            - string
+          description: |
+            The full id of the contribution type to check for
+      content: >-
+        function isContributionOfType(contribution: Contribution,
+        contributionType: string)
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.isContributionTrusted
+    name: 'isContributionTrusted(contribution: Contribution)'
+    children: []
+    langs:
+      - typeScript
+    summary: Determines whether or not a contribution is from a trusted source.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: |
+            The contribution whose trust to check
+      content: 'function isContributionTrusted(contribution: Contribution)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.publishTraceData
+    name: >-
+      publishTraceData(contribution: Contribution, data?: string,
+      contributionId?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: Publish tracing data for a given contribution
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: ''
+        - id: data
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: contributionId
+          type:
+            - string
+          description: ''
+          optional: true
+      content: >-
+        function publishTraceData(contribution: Contribution, data?: string,
+        contributionId?: string)
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.resolveTemplateString
+    name: 'resolveTemplateString(templateString: string, replacementObject: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: Processes a mustache template string with the given replacement object
+    syntax:
+      parameters:
+        - id: templateString
+          type:
+            - string
+          description: ''
+        - id: replacementObject
+          type:
+            - any
+          description: ''
+      content: >-
+        function resolveTemplateString(templateString: string,
+        replacementObject: any)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.resolveUriTemplate
+    name: >-
+      resolveUriTemplate(templateString: string, replacementObject: any,
+      baseUri: string)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Processes a URI template string with the given replacement object and base
+      URI
+    syntax:
+      parameters:
+        - id: templateString
+          type:
+            - string
+          description: ''
+        - id: replacementObject
+          type:
+            - any
+          description: ''
+        - id: baseUri
+          type:
+            - string
+          description: ''
+      content: >-
+        function resolveUriTemplate(templateString: string, replacementObject:
+        any, baseUri: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.resolveUriTemplateProperty
+    name: >-
+      resolveUriTemplateProperty(contribution: Contribution, replacementObject:
+      any, propertyName?: string, baseUri?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get an absolute URI for a given property on a contribution and a
+      replacements object
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: ''
+        - id: replacementObject
+          type:
+            - any
+          description: ''
+        - id: propertyName
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: baseUri
+          type:
+            - string
+          description: ''
+          optional: true
+      content: >-
+        function resolveUriTemplateProperty(contribution: Contribution,
+        replacementObject: any, propertyName?: string, baseUri?: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method

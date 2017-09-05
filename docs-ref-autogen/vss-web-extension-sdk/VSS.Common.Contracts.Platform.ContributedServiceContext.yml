@@ -1,0 +1,151 @@
+### YamlMime:UniversalReference
+items:
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext
+    name: ContributedServiceContext
+    fullName: ContributedServiceContext
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.bundles
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.cssModulePrefixes
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.featureAvailability
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.moduleLoaderConfig
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.paths
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.serviceLocations
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.serviceRootUrl
+      - >-
+        vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.serviceTypeId
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Page context configuration that can be contributed by remote services
+      (different VSTS services delivering content to the page)
+    package: vss-web-extension-sdk
+    module: VSS.Common.Contracts.Platform
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.bundles
+    name: bundles
+    fullName: bundles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Dynamic bundles to include from this service
+    syntax:
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.Common.Contracts.Platform.DynamicBundlesCollection
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.cssModulePrefixes
+    name: cssModulePrefixes
+    fullName: cssModulePrefixes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Specifies the prefixes for CSS modules that should map to the current
+      service. e.g. "VSS/LoaderPlugins/Css!EMS:ExtensionManagement" would map to
+      ExtensionManagement.css under the themed content path of this service if
+      "EMS" is in the CSSModulePrefixes list.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.featureAvailability
+    name: featureAvailability
+    fullName: featureAvailability
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Feature flag states to include by default in page data (avoids AJAX
+      lookup)
+    syntax:
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.Common.Contracts.Platform.FeatureAvailabilityContext
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.moduleLoaderConfig
+    name: moduleLoaderConfig
+    fullName: moduleLoaderConfig
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Module loader configuration which may be merged-in with the parent host
+      (if injected into the DOM) Because the config may be merged with the host
+      config, each root area path must be explicitly defined here rather than
+      relying on basePath as a catch-all.
+    syntax:
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.Common.Contracts.Platform.ModuleLoaderConfiguration
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.paths
+    name: paths
+    fullName: paths
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Paths to resources on this service
+    syntax:
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContextPaths
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.serviceLocations
+    name: serviceLocations
+    fullName: serviceLocations
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Lookup of urls for different services (at different host levels)
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Common.Contracts.Platform.ServiceLocations
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.serviceRootUrl
+    name: serviceRootUrl
+    fullName: serviceRootUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The root url of the service that can be used to resolve relative links
+      when this content is hosted in another site.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext.serviceTypeId
+    name: serviceTypeId
+    fullName: serviceTypeId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Instance id of the service
+    syntax:
+      return:
+        type:
+          - string

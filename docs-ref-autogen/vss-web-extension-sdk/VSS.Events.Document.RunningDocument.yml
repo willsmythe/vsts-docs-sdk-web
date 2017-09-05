@@ -1,0 +1,62 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Events.Document.RunningDocument
+    name: RunningDocument
+    fullName: RunningDocument
+    children:
+      - vss-web-extension-sdk.VSS.Events.Document.RunningDocument.beginSave
+      - >-
+        vss-web-extension-sdk.VSS.Events.Document.RunningDocument.getDirtyDocumentTitles
+      - vss-web-extension-sdk.VSS.Events.Document.RunningDocument.isDirty
+    langs:
+      - typeScript
+    type: interface
+    summary: |-
+      Represents a document to a host.
+       A host can be tha browser, an IDE (e.g. Eclipse, Visual Studio)
+    package: vss-web-extension-sdk
+    module: VSS.Events.Document
+  - uid: vss-web-extension-sdk.VSS.Events.Document.RunningDocument.beginSave
+    name: beginSave
+    fullName: beginSave
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      (Optional) Callback method called before a save operation is performed on
+      the document service
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.Events.Document.RunningDocument.getDirtyDocumentTitles
+    name: getDirtyDocumentTitles
+    fullName: getDirtyDocumentTitles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      (Optional) Callback method called to get the titles of the currently dirty
+      items.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.Events.Document.RunningDocument.isDirty
+    name: isDirty()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Method which returns true if the document is currently in a dirty-state
+      which should block (prompt) attempts to navigate-away.
+    syntax:
+      parameters: []
+      content: function isDirty()
+      return:
+        type:
+          - boolean
+    type: method

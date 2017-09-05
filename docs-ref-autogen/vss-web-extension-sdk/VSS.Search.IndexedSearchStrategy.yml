@@ -1,0 +1,150 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy
+    name: IndexedSearchStrategy
+    fullName: IndexedSearchStrategy
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.clearStrategyStore
+      - vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.dataExists
+      - >-
+        vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.getIndexedItemsCount
+      - vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.getTerms
+      - vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.constructor
+      - vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.processItems
+      - vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.search
+      - vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy._options
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: vss-web-extension-sdk
+    module: VSS.Search
+  - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.clearStrategyStore
+    name: clearStrategyStore()
+    children: []
+    langs:
+      - typeScript
+    summary: Clears the items stored in the strategy.
+    syntax:
+      parameters: []
+      content: function clearStrategyStore()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.dataExists
+    name: dataExists()
+    children: []
+    langs:
+      - typeScript
+    summary: Checks whether data exists in the search strategy
+    syntax:
+      parameters: []
+      content: function dataExists()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.getIndexedItemsCount
+    name: getIndexedItemsCount()
+    children: []
+    langs:
+      - typeScript
+    summary: Return the total count of item indexed.
+    syntax:
+      parameters: []
+      content: function getIndexedItemsCount()
+      return:
+        type:
+          - number
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.getTerms
+    name: 'getTerms(searchText: function, delimiter?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Tokenizes the searchText into separate words using a regex. Empty terms
+      ("") will not be returned.
+    syntax:
+      parameters:
+        - id: searchText
+          type:
+            - function
+          description: The searchText to split up.
+        - id: delimiter
+          type:
+            - function
+          description: The string or regex delimiter to use to split up the search terms
+          optional: true
+      content: 'function getTerms(searchText: function, delimiter?: function)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.constructor
+    name: >-
+      IndexedSearchStrategy(store?: IndexedSearchStore, options?:
+      ISearchStrategyOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Search.IndexedSearchStore
+          type:
+            - IndexedSearchStore
+          description: ''
+          optional: true
+        - id: vss-web-extension-sdk.VSS.Search.ISearchStrategyOptions
+          type:
+            - ISearchStrategyOptions
+          description: ''
+          optional: true
+      content: >-
+        new IndexedSearchStrategy(store?: IndexedSearchStore, options?:
+        ISearchStrategyOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy
+    type: constructor
+  - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.processItems
+    name: 'processItems(searchableObjects: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Processes all SearchableObjects and adds them to the index
+    syntax:
+      parameters:
+        - id: searchableObjects
+          type:
+            - function
+          description: |
+            SearchableObjects to add
+      content: 'function processItems(searchableObjects: function)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.search
+    name: 'search(query: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Performs a search using the Indexer and then runs the resultHandler on the
+      results.
+    syntax:
+      parameters:
+        - id: query
+          type:
+            - string
+          description: Query to run search on
+      content: 'function search(query: string)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy._options
+    name: _options
+    fullName: _options
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Search.ISearchStrategyOptions

@@ -1,0 +1,75 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionEvents
+    name: ExtensionEvents
+    fullName: ExtensionEvents
+    children:
+      - vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionEvents.events
+      - vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionEvents.extensionId
+      - >-
+        vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionEvents.extensionName
+      - >-
+        vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionEvents.publisherName
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Container object for all extension events. Stores all install and
+      uninstall events related to an extension. The events container is generic
+      so can store data of any type of event. New event types can be added
+      without altering the contract.
+    package: vss-web-extension-sdk
+    module: VSS.Gallery.Contracts
+  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionEvents.events
+    name: events
+    fullName: events
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Generic container for events data. The dictionary key denotes the type of
+      event and the list contains properties related to that event
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionEvents.extensionId
+    name: extensionId
+    fullName: extensionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Id of the extension, this will never be sent back to the client. This
+      field will mainly be used when EMS calls into Gallery REST API to update
+      install/uninstall events for various extensions in one go.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionEvents.extensionName
+    name: extensionName
+    fullName: extensionName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Name of the extension
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionEvents.publisherName
+    name: publisherName
+    fullName: publisherName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Name of the publisher
+    syntax:
+      return:
+        type:
+          - string

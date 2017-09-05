@@ -1,0 +1,488 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions
+    name: IComboOptions
+    fullName: IComboOptions
+    children:
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.allowEdit
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.ariaAttributes
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.autoComplete
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.blur
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.change
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.compareInputToItem
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.cssClass
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.disabledCss
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.disableTextSelectOnFocus
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.dropButtonHoverCss
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.dropHide
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.dropOptions
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.dropWidth
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.enabled
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.enableFilter
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.errorMessage
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.focus
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.getItemText
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.iconCss
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.id
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.indexChanged
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.inputCss
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.invalidCss
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.label
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.maxAutoExpandDropWidth
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.mode
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.noDropButton
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.onKeyDown
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.placeholderText
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.setTitleOnlyOnOverflow
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.source
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.type
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.validator
+      - vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.value
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: vss-web-extension-sdk
+    module: VSS.Controls.Combos
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.allowEdit
+    name: allowEdit
+    fullName: allowEdit
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Specifies whether the combo can be edited or not. The difference from
+      enabled is items in the dropdown can be selected.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.ariaAttributes
+    name: ariaAttributes
+    fullName: ariaAttributes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Aria attributes
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Controls.AriaAttributes
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.autoComplete
+    name: autoComplete
+    fullName: autoComplete
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Enable or disable autocomplete
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.blur
+    name: blur
+    fullName: blur
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.change
+    name: change
+    fullName: change
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Called when the text of the combo changes.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.compareInputToItem
+    name: compareInputToItem
+    fullName: compareInputToItem
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Enable custom compare delegate for filtering and autocomplete behavior
+
+      if sorted, needs to implement -1 textInput for lower value, 0 for
+      matching, 1 for greater value
+
+      if not sorted, can return 0 for matching and not zero (-1 or 1) for not
+      matching.
+
+      Parameter matchPartial determines if the input text is to be compared with
+      full or part of the item text
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.cssClass
+    name: cssClass
+    fullName: cssClass
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Extra css class applied to combo.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.disabledCss
+    name: disabledCss
+    fullName: disabledCss
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Css class applied for disabled state.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.disableTextSelectOnFocus
+    name: disableTextSelectOnFocus
+    fullName: disableTextSelectOnFocus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Set to 'true' to disable selecting all text in the combobox when it gets
+      focus from another app
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.dropButtonHoverCss
+    name: dropButtonHoverCss
+    fullName: dropButtonHoverCss
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Css class applied to drop button when hovered.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.dropHide
+    name: dropHide
+    fullName: dropHide
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Called when the drop popup hides.
+      Return true to close drop popup.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.dropOptions
+    name: dropOptions
+    fullName: dropOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Options passed to the ComboDropPopup
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Controls.Combos.IComboDropOptions
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.dropWidth
+    name: dropWidth
+    fullName: dropWidth
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Obsolete, this is not being used.'
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.enabled
+    name: enabled
+    fullName: enabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Determines whether the combo is enabled or not.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.enableFilter
+    name: enableFilter
+    fullName: enableFilter
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Set to 'true' to enable filtering of dropdown items
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.errorMessage
+    name: errorMessage
+    fullName: errorMessage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Error message for accessibility purpose, i.e. for screen reader to
+      recognize the error message
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.focus
+    name: focus
+    fullName: focus
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.getItemText
+    name: getItemText
+    fullName: getItemText
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Override getItemText from datasource in combos
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.iconCss
+    name: iconCss
+    fullName: iconCss
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Css class for drop icon.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Id added to the underlying input for accessibility.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.indexChanged
+    name: indexChanged
+    fullName: indexChanged
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Called when selected item changes. Argument is the index of the selected
+      item.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.inputCss
+    name: inputCss
+    fullName: inputCss
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Css class for the input.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.invalidCss
+    name: invalidCss
+    fullName: invalidCss
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Css class applied for invalid state.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.label
+    name: label
+    fullName: label
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Allows screen readers to read combo value. Should be used along with id.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.maxAutoExpandDropWidth
+    name: maxAutoExpandDropWidth
+    fullName: maxAutoExpandDropWidth
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Specifies the max size when auto-expand drop bigger than combo
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.mode
+    name: mode
+    fullName: mode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Mode of the combo. It can be 'text' or 'drop'. Used by the combo of 'list'
+      type. Determines whether to show drop icon or not.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.noDropButton
+    name: noDropButton
+    fullName: noDropButton
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.onKeyDown
+    name: onKeyDown
+    fullName: onKeyDown
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.placeholderText
+    name: placeholderText
+    fullName: placeholderText
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Placeholder text shown on input.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.setTitleOnlyOnOverflow
+    name: setTitleOnlyOnOverflow
+    fullName: setTitleOnlyOnOverflow
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Obsolete. No effect.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.source
+    name: source
+    fullName: source
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Data source of the combo.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Type of the combo. It can be 'list', 'date-time', 'multi-value', 'tree' or
+      'treeSearch'.
+
+      Refer to ComboTypeOptionsConstants for type value.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.validator
+    name: validator
+    fullName: validator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.value
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Sets the initial value for the combo.
+    syntax:
+      return:
+        type:
+          - string

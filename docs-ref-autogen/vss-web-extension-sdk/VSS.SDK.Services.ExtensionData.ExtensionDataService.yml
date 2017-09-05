@@ -1,0 +1,469 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService
+    name: ExtensionDataService
+    fullName: ExtensionDataService
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.createDocument
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.deleteDocument
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.constructor
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.getDocument
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.getDocuments
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.getServiceInstance
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.getValue
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.getValues
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.queryCollectionNames
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.queryCollections
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.setDocument
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.setValue
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.setValues
+      - >-
+        vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.updateDocument
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Provides a wrapper around the REST client for getting and saving extension
+      setting values
+    package: vss-web-extension-sdk
+    module: VSS.SDK.Services.ExtensionData
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.createDocument
+    name: >-
+      createDocument(collectionName: string, doc: any, documentOptions?:
+      IDocumentOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: Returns a promise for creating a document in the provided collection
+    syntax:
+      parameters:
+        - id: collectionName
+          type:
+            - string
+          description: The name of the collection where the document lives
+        - id: doc
+          type:
+            - any
+          description: The document to store
+        - id: vss-web-extension-sdk.IDocumentOptions
+          type:
+            - IDocumentOptions
+          description: >
+            The scope in which the value is stored - default value is
+            account-wide
+          optional: true
+      content: >-
+        function createDocument(collectionName: string, doc: any,
+        documentOptions?: IDocumentOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.deleteDocument
+    name: >-
+      deleteDocument(collectionName: string, id: string, documentOptions?:
+      IDocumentOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Returns a promise for deleting the document at the provided scope,
+      collection and id
+    syntax:
+      parameters:
+        - id: collectionName
+          type:
+            - string
+          description: The name of the collection where the document lives
+        - id: id
+          type:
+            - string
+          description: The id of the document in the collection
+        - id: vss-web-extension-sdk.IDocumentOptions
+          type:
+            - IDocumentOptions
+          description: >
+            The scope in which the value is stored - default value is
+            account-wide
+          optional: true
+      content: >-
+        function deleteDocument(collectionName: string, id: string,
+        documentOptions?: IDocumentOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.constructor
+    name: >-
+      ExtensionDataService(publisherName: string, extensionName: string,
+      registrationId: string, webContext: WebContext)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: registrationId
+          type:
+            - string
+          description: ''
+        - id: vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext
+          type:
+            - WebContext
+          description: ''
+      content: >-
+        new ExtensionDataService(publisherName: string, extensionName: string,
+        registrationId: string, webContext: WebContext)
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService
+    type: constructor
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.getDocument
+    name: >-
+      getDocument(collectionName: string, id: string, documentOptions?:
+      IDocumentOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Returns a promise for getting a document with the provided id in the
+      provided collection
+    syntax:
+      parameters:
+        - id: collectionName
+          type:
+            - string
+          description: The name of the collection where the document lives
+        - id: id
+          type:
+            - string
+          description: The id of the document in the collection
+        - id: vss-web-extension-sdk.IDocumentOptions
+          type:
+            - IDocumentOptions
+          description: >
+            The scope in which the value is stored - default value is
+            account-wide
+          optional: true
+      content: >-
+        function getDocument(collectionName: string, id: string,
+        documentOptions?: IDocumentOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.getDocuments
+    name: 'getDocuments(collectionName: string, documentOptions?: IDocumentOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Returns a promise for getting all of the documents in the provided
+      collection
+    syntax:
+      parameters:
+        - id: collectionName
+          type:
+            - string
+          description: The name of the collection where the document lives
+        - id: vss-web-extension-sdk.IDocumentOptions
+          type:
+            - IDocumentOptions
+          description: >
+            The scope in which the value is stored - default value is
+            account-wide
+          optional: true
+      content: >-
+        function getDocuments(collectionName: string, documentOptions?:
+        IDocumentOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.getServiceInstance
+    name: >-
+      getServiceInstance(publisherName: string, extensionName: string,
+      registrationId: string, webContext?: WebContext)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Factory method for creating/getting an instance of the extension settings
+      service.
+    syntax:
+      parameters:
+        - id: publisherName
+          type:
+            - string
+          description: ''
+        - id: extensionName
+          type:
+            - string
+          description: ''
+        - id: registrationId
+          type:
+            - string
+          description: ''
+        - id: vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext
+          type:
+            - WebContext
+          description: ''
+          optional: true
+      content: >-
+        function getServiceInstance(publisherName: string, extensionName:
+        string, registrationId: string, webContext?: WebContext)
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.getValue
+    name: 'getValue(key: string, documentOptions?: IDocumentOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: Returns a promise for retrieving a setting at the provided key and scope
+    syntax:
+      parameters:
+        - id: key
+          type:
+            - string
+          description: The key to retrieve a value for
+        - id: vss-web-extension-sdk.IDocumentOptions
+          type:
+            - IDocumentOptions
+          description: >
+            The scope in which the value is stored - default value is
+            account-wide
+          optional: true
+      content: 'function getValue(key: string, documentOptions?: IDocumentOptions)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.getValues
+    name: 'getValues(keys: function, documentOptions?: IDocumentOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Returns a promise for retrieving a list of settings at the provided keys
+      and scope
+    syntax:
+      parameters:
+        - id: keys
+          type:
+            - function
+          description: The keys to retrieve values for
+        - id: vss-web-extension-sdk.IDocumentOptions
+          type:
+            - IDocumentOptions
+          description: >
+            The scope in which the values are stored - default value is
+            collection-wide
+          optional: true
+      content: 'function getValues(keys: function, documentOptions?: IDocumentOptions)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.queryCollectionNames
+    name: 'queryCollectionNames(collectionNames: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Returns a promise for querying a set of collections
+    syntax:
+      parameters:
+        - id: collectionNames
+          type:
+            - function
+          description: ''
+      content: 'function queryCollectionNames(collectionNames: function)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.queryCollections
+    name: 'queryCollections(collections: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Returns a promise for querying a set of collections
+    syntax:
+      parameters:
+        - id: collections
+          type:
+            - function
+          description: >
+            The list of collections to query. Each collection will contain its
+            collectionName, scopeType, and scopeValue
+      content: 'function queryCollections(collections: function)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.setDocument
+    name: >-
+      setDocument(collectionName: string, doc: any, documentOptions?:
+      IDocumentOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Returns a promise for setting a document in the provided collection
+
+      Creates the document if it does not exist, otherwise updates the existing
+      document with the id provided
+    syntax:
+      parameters:
+        - id: collectionName
+          type:
+            - string
+          description: The name of the collection where the document lives
+        - id: doc
+          type:
+            - any
+          description: The document to store
+        - id: vss-web-extension-sdk.IDocumentOptions
+          type:
+            - IDocumentOptions
+          description: >
+            The scope in which the value is stored - default value is
+            account-wide
+          optional: true
+      content: >-
+        function setDocument(collectionName: string, doc: any, documentOptions?:
+        IDocumentOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.setValue
+    name: 'setValue(key: string, value: T, documentOptions?: IDocumentOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: Returns a promise for saving a setting at the provided key and scope
+    syntax:
+      parameters:
+        - id: key
+          type:
+            - string
+          description: The key to save a value for
+        - id: value
+          type:
+            - T
+          description: The value to save
+        - id: vss-web-extension-sdk.IDocumentOptions
+          type:
+            - IDocumentOptions
+          description: >
+            The scope in which the value is stored - default value is
+            account-wide
+          optional: true
+      content: >-
+        function setValue(key: string, value: T, documentOptions?:
+        IDocumentOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.setValues
+    name: 'setValues(keyValuePairs: function, documentOptions?: IDocumentOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Returns a promise for saving a collection of settings at the provided keys
+      and scope
+    syntax:
+      parameters:
+        - id: keyValuePairs
+          type:
+            - function
+          description: A set of key/value pairs to set values for
+        - id: vss-web-extension-sdk.IDocumentOptions
+          type:
+            - IDocumentOptions
+          description: >
+            The scope in which the values are stored - default value is
+            collection-wide
+          optional: true
+      content: >-
+        function setValues(keyValuePairs: function, documentOptions?:
+        IDocumentOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.updateDocument
+    name: >-
+      updateDocument(collectionName: string, doc: any, documentOptions?:
+      IDocumentOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      Returns a promise for updating a document in the provided collection
+      A document with the id provided must exist
+    syntax:
+      parameters:
+        - id: collectionName
+          type:
+            - string
+          description: The name of the collection where the document lives
+        - id: doc
+          type:
+            - any
+          description: The document to store
+        - id: vss-web-extension-sdk.IDocumentOptions
+          type:
+            - IDocumentOptions
+          description: >
+            The scope in which the value is stored - default value is
+            account-wide
+          optional: true
+      content: >-
+        function updateDocument(collectionName: string, doc: any,
+        documentOptions?: IDocumentOptions)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method

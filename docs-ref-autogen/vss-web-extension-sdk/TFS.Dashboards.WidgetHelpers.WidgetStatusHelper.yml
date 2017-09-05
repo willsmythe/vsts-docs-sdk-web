@@ -1,0 +1,96 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TFS.Dashboards.WidgetHelpers.WidgetStatusHelper
+    name: WidgetStatusHelper
+    fullName: WidgetStatusHelper
+    children:
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.WidgetHelpers.WidgetStatusHelper.Failure
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.WidgetHelpers.WidgetStatusHelper.Success
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.WidgetHelpers.WidgetStatusHelper.Unconfigured
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: vss-web-extension-sdk
+    module: TFS.Dashboards.WidgetHelpers
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.WidgetHelpers.WidgetStatusHelper.Failure
+    name: 'Failure(message: string, isUserVisible?: boolean, isRichText?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      method to encapsulate a failed result for a widget loading operation
+      (load, reload, openLightbox etc)
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: message to display as part within the widget error experience.
+        - id: isUserVisible
+          type:
+            - boolean
+          description: >-
+            indicates whether the message should be displayed to the user or a
+            generic error message displayed. Defaults to true.
+          optional: true
+        - id: isRichText
+          type:
+            - boolean
+          description: >-
+            indicates whether the message is an html that can be rendered as a
+            rich experience. Defaults to false. Only trusted extensions are
+
+            allowed to set this to true. For any 3rd party widgets passing this
+            value as true, it will be ignored.
+          optional: true
+      content: >-
+        function Failure(message: string, isUserVisible?: boolean, isRichText?:
+        boolean)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.WidgetHelpers.WidgetStatusHelper.Success
+    name: 'Success(state?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      method to encapsulate a successful result for a widget loading operation
+      (load, reload, openLightbox etc)
+    syntax:
+      parameters:
+        - id: state
+          type:
+            - string
+          description: >-
+            any state information to be passed to the initiator of the loading
+            call.
+          optional: true
+      content: 'function Success(state?: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.WidgetHelpers.WidgetStatusHelper.Unconfigured
+    name: Unconfigured()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      method to encapsulate a result for a widget loading operation that results
+      in the widget being in an unconfigured state.
+    syntax:
+      parameters: []
+      content: function Unconfigured()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method

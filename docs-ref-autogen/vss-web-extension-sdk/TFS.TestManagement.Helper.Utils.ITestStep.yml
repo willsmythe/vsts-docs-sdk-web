@@ -1,0 +1,173 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep
+    name: ITestStep
+    fullName: ITestStep
+    children:
+      - >-
+        vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.attachments
+      - >-
+        vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.createAttachment
+      - >-
+        vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.description
+      - >-
+        vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.getExpectedResult
+      - vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.getTitle
+      - vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.id
+      - vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.owner
+      - >-
+        vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.setExpectedResult
+      - vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.setTitle
+      - vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.stepType
+    langs:
+      - typeScript
+    type: interface
+    summary: Interface for test step
+    package: vss-web-extension-sdk
+    module: TFS.TestManagement.Helper.Utils
+  - uid: >-
+      vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.attachments
+    name: attachments
+    fullName: attachments
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: array of attachments for test step
+    syntax:
+      return:
+        type:
+          - Array
+  - uid: >-
+      vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.createAttachment
+    name: 'createAttachment(url: string, name?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: create atatchment for test step
+    syntax:
+      parameters:
+        - id: url
+          type:
+            - string
+          description: '-- url of attachemnt'
+        - id: name
+          type:
+            - string
+          description: |
+            -- name for attachment
+          optional: true
+      content: 'function createAttachment(url: string, name?: string)'
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStepAttachment
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: description for teststep
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.getExpectedResult
+    name: getExpectedResult()
+    children: []
+    langs:
+      - typeScript
+    summary: get expectedresult for test step
+    syntax:
+      parameters: []
+      content: function getExpectedResult()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.getTitle
+    name: getTitle()
+    children: []
+    langs:
+      - typeScript
+    summary: get test step title/action
+    syntax:
+      parameters: []
+      content: function getTitle()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.owner
+    name: owner
+    fullName: owner
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestActionOwner
+  - uid: >-
+      vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.setExpectedResult
+    name: 'setExpectedResult(expectedResult: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: set expectedresult for test step
+    syntax:
+      parameters:
+        - id: expectedResult
+          type:
+            - string
+          description: ''
+      content: 'function setExpectedResult(expectedResult: string)'
+    type: method
+  - uid: vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.setTitle
+    name: 'setTitle(title: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: set title/action for test step
+    syntax:
+      parameters:
+        - id: title
+          type:
+            - string
+          description: ''
+      content: 'function setTitle(title: string)'
+    type: method
+  - uid: vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.stepType
+    name: stepType
+    fullName: stepType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      steptype use class TestStepType which is having static members
+      "ActionStep" or "ValidateStep"
+    syntax:
+      return:
+        type:
+          - string

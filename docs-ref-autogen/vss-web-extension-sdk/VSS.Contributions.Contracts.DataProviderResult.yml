@@ -1,0 +1,91 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult
+    name: DataProviderResult
+    fullName: DataProviderResult
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult.clientProviders
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult.data
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult.exceptions
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult.resolvedProviders
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult.sharedData
+    langs:
+      - typeScript
+    type: interface
+    summary: Result structure from calls to GetDataProviderData
+    package: vss-web-extension-sdk
+    module: VSS.Contributions.Contracts
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult.clientProviders
+    name: clientProviders
+    fullName: clientProviders
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This is the set of data providers that were requested, but either they
+      were defined as client providers, or as remote providers that failed and
+      may be retried by the client.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult.data
+    name: data
+    fullName: data
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Property bag of data keyed off of the data provider contribution id
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult.exceptions
+    name: exceptions
+    fullName: exceptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Set of exceptions that occurred resolving the data providers.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult.resolvedProviders
+    name: resolvedProviders
+    fullName: resolvedProviders
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of data providers resolved in the data-provider query
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult.sharedData
+    name: sharedData
+    fullName: sharedData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Property bag of shared data that was contributed to by any of the
+      individual data providers
+    syntax:
+      return:
+        type:
+          - union

@@ -1,0 +1,117 @@
+### YamlMime:UniversalReference
+items:
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags
+    name: ExtensionStateFlags
+    fullName: ExtensionStateFlags
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.None
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.Disabled
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.BuiltIn
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.MultiVersion
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.UnInstalled
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.VersionCheckError
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.Trusted
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.Error
+      - >-
+        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.NeedsReauthorization
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: vss-web-extension-sdk
+    module: VSS.ExtensionManagement.Contracts
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: No flags set
+    type: field
+    numericValue: 0
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.Disabled
+    name: Disabled
+    children: []
+    langs:
+      - typeScript
+    summary: Extension is disabled
+    type: field
+    numericValue: 1
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.BuiltIn
+    name: BuiltIn
+    children: []
+    langs:
+      - typeScript
+    summary: Extension is a built in
+    type: field
+    numericValue: 2
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.MultiVersion
+    name: MultiVersion
+    children: []
+    langs:
+      - typeScript
+    summary: Extension has multiple versions
+    type: field
+    numericValue: 4
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.UnInstalled
+    name: UnInstalled
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Extension is not installed.  This is for builtin extensions only and can
+      not otherwise be set.
+    type: field
+    numericValue: 8
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.VersionCheckError
+    name: VersionCheckError
+    children: []
+    langs:
+      - typeScript
+    summary: Error performing version check
+    type: field
+    numericValue: 16
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.Trusted
+    name: Trusted
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Trusted extensions are ones that are given special capabilities. These
+      tend to come from Microsoft and can't be published by the general public. 
+      Note: BuiltIn extensions are always trusted.
+    type: field
+    numericValue: 32
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.Error
+    name: Error
+    children: []
+    langs:
+      - typeScript
+    summary: Extension is currently in an error state
+    type: field
+    numericValue: 64
+  - uid: >-
+      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionStateFlags.NeedsReauthorization
+    name: NeedsReauthorization
+    children: []
+    langs:
+      - typeScript
+    summary: Extension scopes have changed and the extension requires re-authorization
+    type: field
+    numericValue: 128

@@ -1,0 +1,474 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService
+    name: ExtensionService
+    fullName: ExtensionService
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.constructor
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getBaseUri
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getConnection
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getContribution
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getContributions
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getContributionsForTarget
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getContributionsForTargets
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getFallbackUri
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getLoadedContributionsOfType
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getProviderDisplayName
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getProviderProperty
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getRegistrationId
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getServiceInstanceType
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getVersion
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.initializeConnection
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.isExtensionActive
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.queryContributions
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.registerContributionData
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.registerContributions
+    langs:
+      - typeScript
+    type: class
+    summary: Manages all RegisteredExtension instances and their contributions.
+    package: vss-web-extension-sdk
+    module: VSS.Contributions.Services
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.constructor
+    name: ExtensionService()
+    children: []
+    langs:
+      - typeScript
+    summary: Private constructor - do not call.
+    syntax:
+      parameters: []
+      content: new ExtensionService()
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService
+    type: constructor
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getBaseUri
+    name: 'getBaseUri(contribution: Contribution)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get the baseUri this contribution.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: |
+            The contribution whose baseUri is being requested
+      content: 'function getBaseUri(contribution: Contribution)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getConnection
+    name: getConnection()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the relative location for the service's connection
+    syntax:
+      parameters: []
+      content: function getConnection()
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Service.VssConnection
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getContribution
+    name: 'getContribution(id: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get the contribution with the given id.
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - string
+          description: Full id of the contribution to fetch
+      content: 'function getContribution(id: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getContributions
+    name: >-
+      getContributions(ids: function, includeRootItems: boolean,
+      includeChildren: boolean, recursive?: boolean, contributionType?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: Gets contributions for the given contribution ids.
+    syntax:
+      parameters:
+        - id: ids
+          type:
+            - function
+          description: Ids of the targeted contribution(s)
+        - id: includeRootItems
+          type:
+            - boolean
+          description: True to include the contributions with the specified ids
+        - id: includeChildren
+          type:
+            - boolean
+          description: True to include contributions that target the specified ids
+        - id: recursive
+          type:
+            - boolean
+          description: If true include targeting children recursively
+          optional: true
+        - id: contributionType
+          type:
+            - string
+          description: Optional type of contribution to filter by
+          optional: true
+      content: >-
+        function getContributions(ids: function, includeRootItems: boolean,
+        includeChildren: boolean, recursive?: boolean, contributionType?:
+        string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getContributionsForTarget
+    name: 'getContributionsForTarget(targetId: string, contributionType?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the contributions that target the given contribution ids
+    syntax:
+      parameters:
+        - id: targetId
+          type:
+            - string
+          description: ''
+        - id: contributionType
+          type:
+            - string
+          description: Optional type of contribution to filter by
+          optional: true
+      content: >-
+        function getContributionsForTarget(targetId: string, contributionType?:
+        string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getContributionsForTargets
+    name: 'getContributionsForTargets(targetIds: function, contributionType?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the contributions that target the given contribution ids
+    syntax:
+      parameters:
+        - id: targetIds
+          type:
+            - function
+          description: Ids of the targeted contribution(s)
+        - id: contributionType
+          type:
+            - string
+          description: Optional type of contribution to filter by
+          optional: true
+      content: >-
+        function getContributionsForTargets(targetIds: function,
+        contributionType?: string)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getFallbackUri
+    name: 'getFallbackUri(contribution: Contribution)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get the fallbackUri this contribution.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: |
+            The contribution whose fallbackUri is being requested
+      content: 'function getFallbackUri(contribution: Contribution)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getLoadedContributionsOfType
+    name: 'getLoadedContributionsOfType(contributionType: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Get contributions of the specified type that have already been loaded and
+      cached by this service.
+
+      This avoids a REST call to query contributions - only looking at
+      contributions seeded on the page
+
+      via JSON island data or those already fetched by a prior REST call.
+    syntax:
+      parameters:
+        - id: contributionType
+          type:
+            - string
+          description: |
+            The full id of the contribution type
+      content: 'function getLoadedContributionsOfType(contributionType: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getProviderDisplayName
+    name: 'getProviderDisplayName(contribution: Contribution)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get the version this contribution.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: |
+            The contribution whose version is being requested
+      content: 'function getProviderDisplayName(contribution: Contribution)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getProviderProperty
+    name: 'getProviderProperty(contribution: Contribution, propertyName: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get the specified provider property for this contribution.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: The contribution whose provider property is being requested
+        - id: propertyName
+          type:
+            - string
+          description: |
+            The property being requested
+      content: >-
+        function getProviderProperty(contribution: Contribution, propertyName:
+        string)
+      return:
+        type:
+          - string
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getRegistrationId
+    name: 'getRegistrationId(contribution: Contribution)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get the registrationId this contribution.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: |
+            The contribution whose registration is being requested
+      content: 'function getRegistrationId(contribution: Contribution)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getServiceInstanceType
+    name: 'getServiceInstanceType(contribution: Contribution)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get the ServiceInstanceTypeProperty for this contribution.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: |
+            The contribution whose fallbackUri is being requested
+      content: 'function getServiceInstanceType(contribution: Contribution)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getVersion
+    name: 'getVersion(contribution: Contribution)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get the version this contribution.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+          type:
+            - Contribution
+          description: |
+            The contribution whose version is being requested
+      content: 'function getVersion(contribution: Contribution)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.initializeConnection
+    name: 'initializeConnection(connection: VssConnection)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Ensures the page's Json Island has been processed if web context is the
+      default
+
+      Should be called by the Service factory.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Service.VssConnection
+          type:
+            - VssConnection
+          description: |
+            Service.VssConnection
+      content: 'function initializeConnection(connection: VssConnection)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.isExtensionActive
+    name: 'isExtensionActive(extensionId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Determines whether or not the provided extension id is currently active -
+      installed, licensed, and enabled.
+    syntax:
+      parameters:
+        - id: extensionId
+          type:
+            - string
+          description: |
+            The extension id (e.g. 'ms.vss-testmanager-web') to check
+      content: 'function isExtensionActive(extensionId: string)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.queryContributions
+    name: >-
+      queryContributions(ids: function, queryOptions: function,
+      contributionType?: string, queryCallback?: ContributionQueryCallback)
+    children: []
+    langs:
+      - typeScript
+    summary: Gets contributions for the given contribution ids.
+    syntax:
+      parameters:
+        - id: ids
+          type:
+            - function
+          description: Ids of the targeted contribution(s)
+        - id: queryOptions
+          type:
+            - function
+          description: Contribution query options
+        - id: contributionType
+          type:
+            - string
+          description: Optional type of contribution to filter by
+          optional: true
+        - id: >-
+            vss-web-extension-sdk.VSS.Contributions.Services.ContributionQueryCallback
+          type:
+            - ContributionQueryCallback
+          description: Optional method to filter contributions by
+          optional: true
+      content: >-
+        function queryContributions(ids: function, queryOptions: function,
+        contributionType?: string, queryCallback?: ContributionQueryCallback)
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.registerContributionData
+    name: >-
+      registerContributionData(contributionData: ContributionsPageData,
+      clearExisting?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Register the given contributions with this service instance, avoiding an
+      AJAX call for the specified contributions
+    syntax:
+      parameters:
+        - id: >-
+            vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributionsPageData
+          type:
+            - ContributionsPageData
+          description: The contribution data to register
+        - id: clearExisting
+          type:
+            - boolean
+          description: >
+            If true, clear any existing contribution hierarchy. If false, add to
+            it.
+          optional: true
+      content: >-
+        function registerContributionData(contributionData:
+        ContributionsPageData, clearExisting?: boolean)
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.registerContributions
+    name: 'registerContributions(contributions: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Register contributions
+    syntax:
+      parameters:
+        - id: contributions
+          type:
+            - function
+          description: ''
+      content: 'function registerContributions(contributions: function)'
+    type: method

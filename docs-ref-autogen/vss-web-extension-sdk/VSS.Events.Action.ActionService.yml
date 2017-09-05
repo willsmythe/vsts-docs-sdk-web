@@ -1,0 +1,185 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Events.Action.ActionService
+    name: ActionService
+    fullName: ActionService
+    children:
+      - vss-web-extension-sdk.VSS.Events.Action.ActionService.constructor
+      - vss-web-extension-sdk.VSS.Events.Action.ActionService.clearActionWorkers
+      - vss-web-extension-sdk.VSS.Events.Action.ActionService.MaxOrder
+      - vss-web-extension-sdk.VSS.Events.Action.ActionService.performAction
+      - >-
+        vss-web-extension-sdk.VSS.Events.Action.ActionService.registerActionWorker
+      - >-
+        vss-web-extension-sdk.VSS.Events.Action.ActionService.unregisterActionWorker
+      - >-
+        vss-web-extension-sdk.VSS.Events.Action.ActionService.unregisterActionWorkers
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: vss-web-extension-sdk
+    module: VSS.Events.Action
+  - uid: vss-web-extension-sdk.VSS.Events.Action.ActionService.constructor
+    name: ActionService()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Manage actions and the workers that are invoked when those actions are
+      performed.
+
+      Action workers register to handle specific actions. They take whatever
+      action they desire
+
+      and usually call the "next" handler in the chain (see the Chain of
+      Responsibility pattern).
+    syntax:
+      parameters: []
+      content: new ActionService()
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Events.Action.ActionService
+    type: constructor
+  - uid: vss-web-extension-sdk.VSS.Events.Action.ActionService.clearActionWorkers
+    name: clearActionWorkers()
+    children: []
+    langs:
+      - typeScript
+    summary: Clears all action workers
+    syntax:
+      parameters: []
+      content: function clearActionWorkers()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Events.Action.ActionService.MaxOrder
+    name: MaxOrder
+    fullName: MaxOrder
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.VSS.Events.Action.ActionService.performAction
+    name: 'performAction(action: string, actionArgs?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: Invoke the registered action workers for the an action
+    syntax:
+      parameters:
+        - id: action
+          type:
+            - string
+          description: The action identifier
+        - id: actionArgs
+          type:
+            - any
+          description: |
+            An object passed to the registered action workers.
+          optional: true
+      content: 'function performAction(action: string, actionArgs?: any)'
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Events.Action.ActionService.registerActionWorker
+    name: >-
+      registerActionWorker(action: string, actionWorker: IActionWorker, order?:
+      number)
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Register a handler for an action. The handler participates in the Chain of
+      Responsibility pattern.
+    syntax:
+      parameters:
+        - id: action
+          type:
+            - string
+          description: The action to register
+        - id: vss-web-extension-sdk.VSS.Events.Action.IActionWorker
+          type:
+            - IActionWorker
+          description: >
+            Function(actionArgs, next), The handler to invoke for the given
+            action when the performAction
+                operation is called for the registered action.
+                The function is passed the action arguments for next which it should call with the actionsArgs UNLESS
+                it explicitly wants to be the end of the chain.
+                e.g.
+                registerActionWorker('some.action', function (actionArgs, next) {
+                    if (iCanHandle(actionArgs)) {
+                        return doProcessing(actionArgs);
+                    }
+                    else {
+                        return next(actionArgs);
+                    }
+                }, 50);
+
+            if ActionWorker functions are asynchronous they can still
+            participate in the chain
+
+                registerActionWorker('some.async.action', function (actionArgs, next) {
+                    beginDoSomeStuff(function (result) {
+                        if (that.imDone(results)) {
+                            actionArgs.onSuccess.call(this, results);
+                        }
+                        else {
+                            next(actionArgs);
+                        }
+                    });
+                }, 50);
+        - id: order
+          type:
+            - number
+          description: |
+            The order of the action (default:100).
+                  Action workers are executed in increasing order. Order must be less than MaxOrder (inclusive)
+          optional: true
+      content: >-
+        function registerActionWorker(action: string, actionWorker:
+        IActionWorker, order?: number)
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Events.Action.ActionService.unregisterActionWorker
+    name: 'unregisterActionWorker(action: string, actionWorker: IActionWorker)'
+    children: []
+    langs:
+      - typeScript
+    summary: Un-Register a handler for an action.
+    syntax:
+      parameters:
+        - id: action
+          type:
+            - string
+          description: The action to un-register
+        - id: vss-web-extension-sdk.VSS.Events.Action.IActionWorker
+          type:
+            - IActionWorker
+          description: |
+            Function(actionArgs, next), The IActionWorker that was registered.
+      content: >-
+        function unregisterActionWorker(action: string, actionWorker:
+        IActionWorker)
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Events.Action.ActionService.unregisterActionWorkers
+    name: 'unregisterActionWorkers(action: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Un-Register all handlers for an action.
+    syntax:
+      parameters:
+        - id: action
+          type:
+            - string
+          description: |
+            The action to un-register
+      content: 'function unregisterActionWorkers(action: string)'
+    type: method

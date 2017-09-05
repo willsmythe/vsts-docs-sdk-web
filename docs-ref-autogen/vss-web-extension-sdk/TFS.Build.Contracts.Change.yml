@@ -1,0 +1,120 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TFS.Build.Contracts.Change
+    name: Change
+    fullName: Change
+    children:
+      - vss-web-extension-sdk.TFS.Build.Contracts.Change.author
+      - vss-web-extension-sdk.TFS.Build.Contracts.Change.displayUri
+      - vss-web-extension-sdk.TFS.Build.Contracts.Change.id
+      - vss-web-extension-sdk.TFS.Build.Contracts.Change.location
+      - vss-web-extension-sdk.TFS.Build.Contracts.Change.message
+      - vss-web-extension-sdk.TFS.Build.Contracts.Change.messageTruncated
+      - vss-web-extension-sdk.TFS.Build.Contracts.Change.timestamp
+      - vss-web-extension-sdk.TFS.Build.Contracts.Change.type
+    langs:
+      - typeScript
+    type: interface
+    summary: Represents a change associated with a build.
+    package: vss-web-extension-sdk
+    module: TFS.Build.Contracts
+  - uid: vss-web-extension-sdk.TFS.Build.Contracts.Change.author
+    name: author
+    fullName: author
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The author of the change.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+  - uid: vss-web-extension-sdk.TFS.Build.Contracts.Change.displayUri
+    name: displayUri
+    fullName: displayUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The location of a user-friendly representation of the resource.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TFS.Build.Contracts.Change.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Something that identifies the change. For a commit, this would be the
+      SHA1. For a TFVC changeset, this would be the changeset id.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TFS.Build.Contracts.Change.location
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The location of the full representation of the resource.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TFS.Build.Contracts.Change.message
+    name: message
+    fullName: message
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A description of the change. This might be a commit message or changeset
+      description.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TFS.Build.Contracts.Change.messageTruncated
+    name: messageTruncated
+    fullName: messageTruncated
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Indicates whether the message was truncated
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.TFS.Build.Contracts.Change.timestamp
+    name: timestamp
+    fullName: timestamp
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: A timestamp for the change.
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.TFS.Build.Contracts.Change.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'The type of change. "commit", "changeset", etc.'
+    syntax:
+      return:
+        type:
+          - string

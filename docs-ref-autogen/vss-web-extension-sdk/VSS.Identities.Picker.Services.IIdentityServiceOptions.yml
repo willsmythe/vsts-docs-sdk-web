@@ -1,0 +1,131 @@
+### YamlMime:UniversalReference
+items:
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
+    name: IIdentityServiceOptions
+    fullName: IIdentityServiceOptions
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions.extensionData
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions.getFilterByScope
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions.httpClient
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions.identityType
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions.maxResults
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions.minResults
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions.operationScope
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: vss-web-extension-sdk
+    module: VSS.Identities.Picker.Services
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions.extensionData
+    name: extensionData
+    fullName: extensionData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Details about the control's current environment that might help an
+      IEntityOperationsExtension in modifying requests.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Identities.Picker.Services.IExtensionData
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions.getFilterByScope
+    name: getFilterByScope
+    fullName: getFilterByScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      The scope over which the search and MRU results are filtered by.
+        A consumer must pass a delegate that returns a FilterByScope instance, which can be constructed by passing two arrays of strings
+        corresponding to Entity Ids and Ancestor Entity Ids
+        over which the scope is restricted.
+        Default null.
+        NOTE: Null scope and an empty scope (a scope which is not null but whose internal arrays are empty) are treated differently.
+              Null scope means no filtering will take place on entities, whereas empty scope means no entities would be returned.
+              So an empty FilterByScope will result in no search being issued.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions.httpClient
+    name: httpClient
+    fullName: httpClient
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The httpClient that should be used instead of the
+      CommonIdentityPickerHttpClient
+    syntax:
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.Identities.Picker.RestClient.AbstractIdentityPickerHttpClient
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions.identityType
+    name: identityType
+    fullName: identityType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: type of identities - one or more of User or Group
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Identities.Picker.Services.IEntityType
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions.maxResults
+    name: maxResults
+    fullName: maxResults
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The maximum results that need to be fetched
+    syntax:
+      return:
+        type:
+          - number
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions.minResults
+    name: minResults
+    fullName: minResults
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The minimum results that need to be fetched
+    syntax:
+      return:
+        type:
+          - number
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions.operationScope
+    name: operationScope
+    fullName: operationScope
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'scope - one or more of AAD, IMS, Source, AD, WMD'
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope

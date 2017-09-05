@@ -1,0 +1,170 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager
+    name: IShortcutManager
+    fullName: IShortcutManager
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.getShortcutGroups
+      - >-
+        vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.registerShortcut
+      - >-
+        vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.registerShortcuts
+      - >-
+        vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.removeShortcutGroup
+      - >-
+        vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.showShortcutDialog
+      - >-
+        vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.unRegisterShortcut
+    langs:
+      - typeScript
+    type: interface
+    summary: ShortcutManager handles registering multiple groups of keyboard shortcuts
+    package: vss-web-extension-sdk
+    module: VSS.Controls.KeyboardShortcuts
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.getShortcutGroups
+    name: getShortcutGroups()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the shortcut groups
+    syntax:
+      parameters: []
+      content: function getShortcutGroups()
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.registerShortcut
+    name: >-
+      registerShortcut(group: string, combo: string, description: string,
+      action: KeyboardAction, allowPropagation?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: Register a shortcut
+    syntax:
+      parameters:
+        - id: group
+          type:
+            - string
+          description: Name of a shortcut group.
+        - id: combo
+          type:
+            - string
+          description: Keyboard combination.
+        - id: description
+          type:
+            - string
+          description: Description of the shortcut
+        - id: action
+          type:
+            - KeyboardAction
+          description: Action which gets called when shortcut is pressed
+        - id: allowPropagation
+          type:
+            - boolean
+          description: >
+            Defaults to false. Use true in the rare case that you want the last
+            key of the chord to propagate to the focused element
+          optional: true
+      content: >-
+        function registerShortcut(group: string, combo: string, description:
+        string, action: KeyboardAction, allowPropagation?: boolean)
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.registerShortcuts
+    name: >-
+      registerShortcuts(group: string, combos: function, description: string,
+      action: KeyboardAction, allowPropagation?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: Register a group of shortcuts
+    syntax:
+      parameters:
+        - id: group
+          type:
+            - string
+          description: Name of a shortcut group.
+        - id: combos
+          type:
+            - function
+          description: Keyboard combinations that all map to same action.
+        - id: description
+          type:
+            - string
+          description: Description of the shortcut
+        - id: action
+          type:
+            - KeyboardAction
+          description: Action which gets called when shortcut is pressed
+        - id: allowPropagation
+          type:
+            - boolean
+          description: >
+            Defaults to false. Use true in the rare case that you want the last
+            key of the chord to propagate to the focused element
+          optional: true
+      content: >-
+        function registerShortcuts(group: string, combos: function, description:
+        string, action: KeyboardAction, allowPropagation?: boolean)
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.removeShortcutGroup
+    name: 'removeShortcutGroup(group: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      NOTE: This will remove all shortcuts for a given group regardless of where
+      they were registered from.
+    syntax:
+      parameters:
+        - id: group
+          type:
+            - string
+          description: |
+            Name of a shortcut group.
+      content: 'function removeShortcutGroup(group: string)'
+      return:
+        type:
+          - any
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.showShortcutDialog
+    name: showShortcutDialog()
+    children: []
+    langs:
+      - typeScript
+    summary: Show the shortcut dialog
+    syntax:
+      parameters: []
+      content: function showShortcutDialog()
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.unRegisterShortcut
+    name: 'unRegisterShortcut(group: string, combo: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Unregister a shortcut
+    syntax:
+      parameters:
+        - id: group
+          type:
+            - string
+          description: Name of a shortcut group.
+        - id: combo
+          type:
+            - string
+          description: Keyboard combination.
+      content: 'function unRegisterShortcut(group: string, combo: string)'
+    type: method

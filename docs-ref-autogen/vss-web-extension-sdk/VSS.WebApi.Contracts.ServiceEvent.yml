@@ -1,0 +1,83 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.ServiceEvent
+    name: ServiceEvent
+    fullName: ServiceEvent
+    children:
+      - vss-web-extension-sdk.VSS.WebApi.Contracts.ServiceEvent.eventType
+      - vss-web-extension-sdk.VSS.WebApi.Contracts.ServiceEvent.publisher
+      - vss-web-extension-sdk.VSS.WebApi.Contracts.ServiceEvent.resource
+      - >-
+        vss-web-extension-sdk.VSS.WebApi.Contracts.ServiceEvent.resourceContainers
+      - vss-web-extension-sdk.VSS.WebApi.Contracts.ServiceEvent.resourceVersion
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: vss-web-extension-sdk
+    module: VSS.WebApi.Contracts
+  - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.ServiceEvent.eventType
+    name: eventType
+    fullName: eventType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      This is the id of the type. Constants that will be used by subscribers to
+      identify/filter events being published on a topic.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.ServiceEvent.publisher
+    name: publisher
+    fullName: publisher
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: This is the service that published this event.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.WebApi.Contracts.Publisher
+  - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.ServiceEvent.resource
+    name: resource
+    fullName: resource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The resource object that carries specific information about the event. The
+      object must have the ServiceEventObject applied for
+      serialization/deserialization to work.
+    syntax:
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.ServiceEvent.resourceContainers
+    name: resourceContainers
+    fullName: resourceContainers
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: This dictionary carries the context descriptors along with their ids.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.ServiceEvent.resourceVersion
+    name: resourceVersion
+    fullName: resourceVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: This is the version of the resource.
+    syntax:
+      return:
+        type:
+          - string

@@ -1,0 +1,145 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions
+    name: IMenuPinningOptions
+    fullName: IMenuPinningOptions
+    children:
+      - vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.closeOnPin
+      - vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.groupId
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.hideEmptySourceMenu
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.hidePinnedItems
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.hideUnpinnedItems
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.isPinningSource
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.isPinningTarget
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.pinItemsToEnd
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Options for menus with pinnable items. This is intended to support the
+      case where there is a menu of
+
+      pinned items (the target menu), with a submenu that displays all items
+      (the source menu). Set
+
+      isPinnableTarget and hideUnpinnedItems on the target menu, set
+      isPinnableSource and optionally
+
+      hidePinnedItems on the source menu.
+
+      See also IMenuItemPinningOptions.
+    package: vss-web-extension-sdk
+    module: VSS.Controls.Menus
+  - uid: vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.closeOnPin
+    name: closeOnPin
+    fullName: closeOnPin
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'If true, close this menu when an item is pinned/unpinned.'
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.groupId
+    name: groupId
+    fullName: groupId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Unique identifier for a group of pinnable menu items.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.hideEmptySourceMenu
+    name: hideEmptySourceMenu
+    fullName: hideEmptySourceMenu
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Set on the target menu to hide the source menu when all items are pinned.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.hidePinnedItems
+    name: hidePinnedItems
+    fullName: hidePinnedItems
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Set to true to hide pinned items in this item's submenu.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.hideUnpinnedItems
+    name: hideUnpinnedItems
+    fullName: hideUnpinnedItems
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Set to true to hide unpinned items in this item's submenu.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.isPinningSource
+    name: isPinningSource
+    fullName: isPinningSource
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Set to true if this item's submenu is where all pinnable items are shown.
+      The pinning target should be the parent menu of this item.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.isPinningTarget
+    name: isPinningTarget
+    fullName: isPinningTarget
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Set to true if this item's submenu is the target pinned items are pinned
+      to. The pinning source should be a submenu of this item's submenu.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions.pinItemsToEnd
+    name: pinItemsToEnd
+    fullName: pinItemsToEnd
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Set to true on the pinning target if newly-pinned items should be moved to
+      be after every other pinnable item with the same group id.
+    syntax:
+      return:
+        type:
+          - boolean

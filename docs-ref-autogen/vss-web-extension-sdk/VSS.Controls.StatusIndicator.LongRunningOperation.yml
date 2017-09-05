@@ -1,0 +1,112 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation
+    name: LongRunningOperation
+    fullName: LongRunningOperation
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.beginOperation
+      - >-
+        vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.cancelOperation
+      - >-
+        vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.endOperation
+      - >-
+        vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.isCancelled
+      - >-
+        vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: vss-web-extension-sdk
+    module: VSS.Controls.StatusIndicator
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.beginOperation
+    name: 'beginOperation(operationCallback: IResultCallback)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Begins the long running operation, invoking the specified
+      operationCallback when necessary.
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.IResultCallback
+          type:
+            - IResultCallback
+          description: |
+            An operation that may take a long time to complete.
+      content: 'function beginOperation(operationCallback: IResultCallback)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.cancelOperation
+    name: cancelOperation()
+    children: []
+    langs:
+      - typeScript
+    summary: Cancels the current operation.
+    syntax:
+      parameters: []
+      content: function cancelOperation()
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.endOperation
+    name: endOperation()
+    children: []
+    langs:
+      - typeScript
+    summary: Signals the completion of a long running operation.
+    syntax:
+      parameters: []
+      content: function endOperation()
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.isCancelled
+    name: isCancelled()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Gets a boolean value indicating whether the current operation has a
+      pending cancel request.
+    syntax:
+      parameters: []
+      content: function isCancelled()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.constructor
+    name: 'LongRunningOperation(container: any, options?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Creates a new long running operation, showing a blocking indicator in a
+      cancellable means overtop the specified container until the operation has
+      completed.
+    syntax:
+      parameters:
+        - id: container
+          type:
+            - any
+          description: >-
+            A DOM object that contains the control on the page in which to
+            overlay the progress indicator.
+        - id: options
+          type:
+            - any
+          description: >+
+            A collection of configuration name/value pairs.  The following are
+            supported:
+                Name                  Type        Value
+                cancellable           boolean     Boolean value indicating whether the operation may be cancelled while it is running.
+
+          optional: true
+      content: 'new LongRunningOperation(container: any, options?: any)'
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation
+    type: constructor

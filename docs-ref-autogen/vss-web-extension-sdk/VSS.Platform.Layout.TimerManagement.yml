@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement
+    name: TimerManagement
+    fullName: TimerManagement
+    children:
+      - vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement.clearAllTimers
+      - vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement.clearInterval
+      - vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement.clearTimeout
+      - vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement.setInterval
+      - vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement.setTimeout
+    langs:
+      - typeScript
+    type: class
+    summary: The TimerManagement class is used to track a set of timers.
+    package: vss-web-extension-sdk
+    module: VSS.Platform.Layout
+  - uid: vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement.clearAllTimers
+    name: clearAllTimers()
+    children: []
+    langs:
+      - typeScript
+    summary: clearAllTimers is used to clear any active timers in the object.
+    syntax:
+      parameters: []
+      content: function clearAllTimers()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement.clearInterval
+    name: 'clearInterval(intervalId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      clearInterval is used to stop the series of callbacks that was setup
+      through setInterval.
+    syntax:
+      parameters:
+        - id: intervalId
+          type:
+            - number
+          description: |
+            The id returned from eh setInterval call that you want stopped.
+      content: 'function clearInterval(intervalId: number)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement.clearTimeout
+    name: 'clearTimeout(timeoutId: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      clearTimeout is used to stop a timeout callback that was setup through
+      setTimeout.
+    syntax:
+      parameters:
+        - id: timeoutId
+          type:
+            - number
+          description: |
+            The id returned from eh setTimeout call that you want stopped.
+      content: 'function clearTimeout(timeoutId: number)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement.setInterval
+    name: 'setInterval(callback: function, milliseconds: number, args: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: setInterval is used to setup a callback that is called on an interval.
+    syntax:
+      parameters:
+        - id: callback
+          type:
+            - function
+          description: |
+            The callback that should be called each interval time period.
+        - id: milliseconds
+          type:
+            - number
+          description: |
+            The number of milliseconds between each callback.
+        - id: args
+          type:
+            - function
+          description: |
+            Optional variable argument list passed to the callback.
+      content: >-
+        function setInterval(callback: function, milliseconds: number, args:
+        function)
+      return:
+        type:
+          - number
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement.setTimeout
+    name: 'setTimeout(callback: function, milliseconds?: number, args: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      setTimeout is used to setup a onetime callback that is called after the
+      specified timeout.
+    syntax:
+      parameters:
+        - id: callback
+          type:
+            - function
+          description: |
+            The callback that should be called when the time period has elapsed.
+        - id: milliseconds
+          type:
+            - number
+          description: |
+            The number of milliseconds before the callback should be called.
+             Even if a timeout of 0 is used the callback will be executed asynchronouly.
+          optional: true
+        - id: args
+          type:
+            - function
+          description: |
+            Optional variable argument list passed to the callback.
+      content: >-
+        function setTimeout(callback: function, milliseconds?: number, args:
+        function)
+      return:
+        type:
+          - number
+    type: method

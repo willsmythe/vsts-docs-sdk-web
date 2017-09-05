@@ -1,0 +1,59 @@
+### YamlMime:UniversalReference
+items:
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.VersionControlRecursionType
+    name: VersionControlRecursionType
+    fullName: VersionControlRecursionType
+    children:
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.VersionControlRecursionType.None
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.VersionControlRecursionType.OneLevel
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.VersionControlRecursionType.OneLevelPlusNestedEmptyFolders
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.VersionControlRecursionType.Full
+    langs:
+      - typeScript
+    type: enum
+    summary: ''
+    package: vss-web-extension-sdk
+    module: TFS.VersionControl.Contracts
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.VersionControlRecursionType.None
+    name: None
+    children: []
+    langs:
+      - typeScript
+    summary: Only return the specified item.
+    type: field
+    numericValue: 0
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.VersionControlRecursionType.OneLevel
+    name: OneLevel
+    children: []
+    langs:
+      - typeScript
+    summary: Return the specified item and its direct children.
+    type: field
+    numericValue: 1
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.VersionControlRecursionType.OneLevelPlusNestedEmptyFolders
+    name: OneLevelPlusNestedEmptyFolders
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Return the specified item and its direct children, as well as recursive
+      chains of nested child folders that only contain a single folder.
+    type: field
+    numericValue: 4
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.VersionControlRecursionType.Full
+    name: Full
+    children: []
+    langs:
+      - typeScript
+    summary: Return specified item and all descendants
+    type: field
+    numericValue: 120

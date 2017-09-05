@@ -1,0 +1,61 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.TelemetryAsyncHelper
+    name: TelemetryAsyncHelper
+    fullName: TelemetryAsyncHelper
+    children:
+      - vss-web-extension-sdk.VSS.Profile.Metrics.TelemetryAsyncHelper.publish
+      - >-
+        vss-web-extension-sdk.VSS.Profile.Metrics.TelemetryAsyncHelper.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: >-
+      Service used to report telemetry via CI events and app insights, derived
+      from VSS/Telemetry/Services
+    package: vss-web-extension-sdk
+    module: VSS.Profile.Metrics
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.TelemetryAsyncHelper.publish
+    name: 'publish(eventData: TelemetryEventData, publishImmediately?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: vss-web-extension-sdk.VSS.Telemetry.Services.TelemetryEventData
+          type:
+            - TelemetryEventData
+          description: ''
+        - id: publishImmediately
+          type:
+            - boolean
+          description: |
+            flush all currently queueed events and publish them immediately
+          optional: true
+      content: >-
+        function publish(eventData: TelemetryEventData, publishImmediately?:
+        boolean)
+      return:
+        type:
+          - Q.Promise
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.TelemetryAsyncHelper.constructor
+    name: 'TelemetryAsyncHelper(client?: CustomerIntelligenceHttpClient)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: >-
+            vss-web-extension-sdk.VSS.Telemetry.RestClient.CustomerIntelligenceHttpClient
+          type:
+            - CustomerIntelligenceHttpClient
+          description: ''
+          optional: true
+      content: 'new TelemetryAsyncHelper(client?: CustomerIntelligenceHttpClient)'
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Profile.Metrics.TelemetryAsyncHelper
+    type: constructor

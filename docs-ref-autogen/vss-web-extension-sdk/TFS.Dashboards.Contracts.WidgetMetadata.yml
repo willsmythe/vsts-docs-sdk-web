@@ -1,0 +1,341 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata
+    name: WidgetMetadata
+    fullName: WidgetMetadata
+    children:
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.allowedSizes
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.analyticsServiceRequired
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.catalogIconUrl
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.catalogInfoUrl
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.configurationContributionId
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.configurationContributionRelativeId
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.configurationRequired
+      - vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.contentUri
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.contributionId
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.defaultSettings
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.description
+      - vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.isEnabled
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.isNameConfigurable
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.isVisibleFromCatalog
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.lightboxOptions
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.loadingImageUrl
+      - vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.name
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.publisherName
+      - >-
+        vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.supportedScopes
+      - vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.targets
+      - vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.typeId
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      For V1, this is just a pool of definitions describing our possible
+      Widgets.
+    package: vss-web-extension-sdk
+    module: TFS.Dashboards.Contracts
+  - uid: vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.allowedSizes
+    name: allowedSizes
+    fullName: allowedSizes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Sizes supported by the Widget.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.analyticsServiceRequired
+    name: analyticsServiceRequired
+    fullName: analyticsServiceRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Opt-in boolean that indicates if the widget requires the Analytics Service
+      to function. Widgets requiring the analytics service are hidden from the
+      catalog if the Analytics Service is not available.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.catalogIconUrl
+    name: catalogIconUrl
+    fullName: catalogIconUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Resource for an icon in the widget catalog.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.catalogInfoUrl
+    name: catalogInfoUrl
+    fullName: catalogInfoUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Opt-in URL string pointing at widget information. Defaults to extension
+      marketplace URL if omitted
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.configurationContributionId
+    name: configurationContributionId
+    fullName: configurationContributionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The id of the underlying contribution defining the supplied Widget custom
+      configuration UI. Null if custom configuration UI is not available.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.configurationContributionRelativeId
+    name: configurationContributionRelativeId
+    fullName: configurationContributionRelativeId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The relative id of the underlying contribution defining the supplied
+      Widget custom configuration UI. Null if custom configuration UI is not
+      available.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.configurationRequired
+    name: configurationRequired
+    fullName: configurationRequired
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Indicates if the widget requires configuration before being added to
+      dashboard.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.contentUri
+    name: contentUri
+    fullName: contentUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uri for the WidgetFactory to get the widget
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.contributionId
+    name: contributionId
+    fullName: contributionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The id of the underlying contribution defining the supplied Widget.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.defaultSettings
+    name: defaultSettings
+    fullName: defaultSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Optional default settings to be copied into widget settings
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Summary information describing the widget.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.isEnabled
+    name: isEnabled
+    fullName: isEnabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Widgets can be disabled by the app store.  We'll need to gracefully handle
+      for: - persistence (Allow) - Requests (Tag as disabled, and provide
+      context)
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.isNameConfigurable
+    name: isNameConfigurable
+    fullName: isNameConfigurable
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Opt-out boolean that indicates if the widget supports widget name/title
+      configuration. Widgets ignoring the name should set it to false in the
+      manifest.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.isVisibleFromCatalog
+    name: isVisibleFromCatalog
+    fullName: isVisibleFromCatalog
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Opt-out boolean indicating if the widget is hidden from the catalog.  For
+      V1, only "pull" model widgets can be provided from the catalog.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.lightboxOptions
+    name: lightboxOptions
+    fullName: lightboxOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Opt-in lightbox properties
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.TFS.Dashboards.Contracts.LightboxOptions
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.loadingImageUrl
+    name: loadingImageUrl
+    fullName: loadingImageUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Resource for a loading placeholder image on dashboard
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      User facing name of the widget type. Each widget must use a unique value
+      here.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.publisherName
+    name: publisherName
+    fullName: publisherName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Publisher Name of this kind of widget.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.supportedScopes
+    name: supportedScopes
+    fullName: supportedScopes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Data contract required for the widget to function and to work in its
+      container.
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.targets
+    name: targets
+    fullName: targets
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Contribution target IDs
+    syntax:
+      return:
+        type:
+          - union
+  - uid: vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetMetadata.typeId
+    name: typeId
+    fullName: typeId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Dev-facing id of this kind of widget.
+    syntax:
+      return:
+        type:
+          - string

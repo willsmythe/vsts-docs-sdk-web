@@ -1,0 +1,179 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Plan
+    name: Plan
+    fullName: Plan
+    children:
+      - vss-web-extension-sdk.TFS.Work.Contracts.Plan.createdByIdentity
+      - vss-web-extension-sdk.TFS.Work.Contracts.Plan.createdDate
+      - vss-web-extension-sdk.TFS.Work.Contracts.Plan.description
+      - vss-web-extension-sdk.TFS.Work.Contracts.Plan.id
+      - vss-web-extension-sdk.TFS.Work.Contracts.Plan.modifiedByIdentity
+      - vss-web-extension-sdk.TFS.Work.Contracts.Plan.modifiedDate
+      - vss-web-extension-sdk.TFS.Work.Contracts.Plan.name
+      - vss-web-extension-sdk.TFS.Work.Contracts.Plan.properties
+      - vss-web-extension-sdk.TFS.Work.Contracts.Plan.revision
+      - vss-web-extension-sdk.TFS.Work.Contracts.Plan.type
+      - vss-web-extension-sdk.TFS.Work.Contracts.Plan.url
+      - vss-web-extension-sdk.TFS.Work.Contracts.Plan.userPermissions
+    langs:
+      - typeScript
+    type: interface
+    summary: Data contract for the plan definition
+    package: vss-web-extension-sdk
+    module: TFS.Work.Contracts
+  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Plan.createdByIdentity
+    name: createdByIdentity
+    fullName: createdByIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Identity that created this plan. Defaults to null for records before
+      upgrading to ScaledAgileViewComponent4.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Plan.createdDate
+    name: createdDate
+    fullName: createdDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Date when the plan was created
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Plan.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Description of the plan
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Plan.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Id of the plan
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Plan.modifiedByIdentity
+    name: modifiedByIdentity
+    fullName: modifiedByIdentity
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Identity that last modified this plan. Defaults to null for records before
+      upgrading to ScaledAgileViewComponent4.
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Plan.modifiedDate
+    name: modifiedDate
+    fullName: modifiedDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Date when the plan was last modified. Default to CreatedDate when the plan
+      is first created.
+    syntax:
+      return:
+        type:
+          - Date
+  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Plan.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Name of the plan
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Plan.properties
+    name: properties
+    fullName: properties
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The PlanPropertyCollection instance associated with the plan. These are
+      dependent on the type of the plan. For example, DeliveryTimelineView, it
+      would be of type DeliveryViewPropertyCollection.
+    syntax:
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Plan.revision
+    name: revision
+    fullName: revision
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Revision of the plan. Used to safeguard users from overwriting each
+      other's changes.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Plan.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Type of the plan
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.TFS.Work.Contracts.PlanType
+  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Plan.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The resource url to locate the plan via rest api
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Plan.userPermissions
+    name: userPermissions
+    fullName: userPermissions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Bit flag indicating set of permissions a user has to the plan.
+    syntax:
+      return:
+        type:
+          - union

@@ -1,0 +1,52 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TFS.VersionControl.Controls.IHistoryList
+    name: IHistoryList
+    fullName: IHistoryList
+    children:
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Controls.IHistoryList.createHistoryList
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: vss-web-extension-sdk
+    module: TFS.VersionControl.Controls
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Controls.IHistoryList.createHistoryList
+    name: >-
+      createHistoryList(itemPaths: function, fromVersion: string, toVersion:
+      string, repositoryId?: string)
+    children: []
+    langs:
+      - typeScript
+    summary: Query the history by providing certain searchCriteria
+    syntax:
+      parameters:
+        - id: itemPaths
+          type:
+            - function
+          description: >-
+            single or multiple itemPaths for control to search history in Git
+            and Tfvc
+        - id: fromVersion
+          type:
+            - string
+          description: fromId for control to search history in Git and Tfvc
+        - id: toVersion
+          type:
+            - string
+          description: toId for control to search history in Git and Tfvc
+        - id: repositoryId
+          type:
+            - string
+          description: |
+            Optional repository Id for control to search history in Git
+          optional: true
+      content: >-
+        function createHistoryList(itemPaths: function, fromVersion: string,
+        toVersion: string, repositoryId?: string)
+      return:
+        type:
+          - any
+    type: method

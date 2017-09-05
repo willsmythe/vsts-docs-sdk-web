@@ -1,0 +1,222 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus
+    name: GitRefUpdateStatus
+    fullName: GitRefUpdateStatus
+    children:
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.Succeeded
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.ForcePushRequired
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.StaleOldObjectId
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.InvalidRefName
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.Unprocessed
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.UnresolvableToCommit
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.WritePermissionRequired
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.ManageNotePermissionRequired
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.CreateBranchPermissionRequired
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.CreateTagPermissionRequired
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.RejectedByPlugin
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.Locked
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.RefNameConflict
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.RejectedByPolicy
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.SucceededNonExistentRef
+      - >-
+        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.SucceededCorruptRef
+    langs:
+      - typeScript
+    type: enum
+    summary: >-
+      Represents the possible outcomes from a request to update a ref in a
+      repository.
+    package: vss-web-extension-sdk
+    module: TFS.VersionControl.Contracts
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.Succeeded
+    name: Succeeded
+    children: []
+    langs:
+      - typeScript
+    summary: Indicates that the ref update request was completed successfully.
+    type: field
+    numericValue: 0
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.ForcePushRequired
+    name: ForcePushRequired
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates that the ref update request could not be completed because part
+      of the graph would be disconnected by this change, and the caller does not
+      have ForcePush permission on the repository.
+    type: field
+    numericValue: 1
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.StaleOldObjectId
+    name: StaleOldObjectId
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates that the ref update request could not be completed because the
+      old object ID presented in the request was not the object ID of the ref
+      when the database attempted the update. The most likely scenario is that
+      the caller lost a race to update the ref.
+    type: field
+    numericValue: 2
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.InvalidRefName
+    name: InvalidRefName
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates that the ref update request could not be completed because the
+      ref name presented in the request was not valid.
+    type: field
+    numericValue: 3
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.Unprocessed
+    name: Unprocessed
+    children: []
+    langs:
+      - typeScript
+    summary: The request was not processed
+    type: field
+    numericValue: 4
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.UnresolvableToCommit
+    name: UnresolvableToCommit
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update request could not be completed because the new object ID
+      for the ref could not be resolved to a commit object (potentially through
+      any number of tags)
+    type: field
+    numericValue: 5
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.WritePermissionRequired
+    name: WritePermissionRequired
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update request could not be completed because the user lacks write
+      permissions required to write this ref
+    type: field
+    numericValue: 6
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.ManageNotePermissionRequired
+    name: ManageNotePermissionRequired
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update request could not be completed because the user lacks note
+      creation permissions required to write this note
+    type: field
+    numericValue: 7
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.CreateBranchPermissionRequired
+    name: CreateBranchPermissionRequired
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update request could not be completed because the user lacks the
+      permission to create a branch
+    type: field
+    numericValue: 8
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.CreateTagPermissionRequired
+    name: CreateTagPermissionRequired
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update request could not be completed because the user lacks the
+      permission to create a tag
+    type: field
+    numericValue: 9
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.RejectedByPlugin
+    name: RejectedByPlugin
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update could not be completed because it was rejected by the
+      plugin.
+    type: field
+    numericValue: 10
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.Locked
+    name: Locked
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update could not be completed because the ref is locked by another
+      user.
+    type: field
+    numericValue: 11
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.RefNameConflict
+    name: RefNameConflict
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      The ref update could not be completed because, in case-insensitive mode,
+      the ref name conflicts with an existing, differently-cased ref name.
+    type: field
+    numericValue: 12
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.RejectedByPolicy
+    name: RejectedByPolicy
+    children: []
+    langs:
+      - typeScript
+    summary: The ref update could not be completed because it was rejected by policy.
+    type: field
+    numericValue: 13
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.SucceededNonExistentRef
+    name: SucceededNonExistentRef
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates that the ref update request was completed successfully, but the
+      ref doesn't actually exist so no changes were made.  This should only
+      happen during deletes.
+    type: field
+    numericValue: 14
+  - uid: >-
+      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateStatus.SucceededCorruptRef
+    name: SucceededCorruptRef
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Indicates that the ref update request was completed successfully, but the
+      passed-in ref was corrupt - as in, the old object ID was bad.  This should
+      only happen during deletes.
+    type: field
+    numericValue: 15

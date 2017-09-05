@@ -1,0 +1,78 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Authentication.Services.BasicAuthTokenManager
+    name: BasicAuthTokenManager
+    fullName: BasicAuthTokenManager
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Authentication.Services.BasicAuthTokenManager.constructor
+      - >-
+        vss-web-extension-sdk.VSS.Authentication.Services.BasicAuthTokenManager.getAuthorizationHeader
+      - >-
+        vss-web-extension-sdk.VSS.Authentication.Services.BasicAuthTokenManager.getAuthToken
+    langs:
+      - typeScript
+    type: class
+    summary: IAuthTokenManager for an explicit basic auth token.
+    package: vss-web-extension-sdk
+    module: VSS.Authentication.Services
+  - uid: >-
+      vss-web-extension-sdk.VSS.Authentication.Services.BasicAuthTokenManager.constructor
+    name: 'BasicAuthTokenManager(user: string, password: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: user
+          type:
+            - string
+          description: ''
+        - id: password
+          type:
+            - string
+          description: ''
+      content: 'new BasicAuthTokenManager(user: string, password: string)'
+      return:
+        type:
+          - >-
+            vss-web-extension-sdk.VSS.Authentication.Services.BasicAuthTokenManager
+    type: constructor
+  - uid: >-
+      vss-web-extension-sdk.VSS.Authentication.Services.BasicAuthTokenManager.getAuthorizationHeader
+    name: 'getAuthorizationHeader(sessionToken: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the authorization header to use in a request from the given token
+    syntax:
+      parameters:
+        - id: sessionToken
+          type:
+            - string
+          description: Used for token key.
+      content: 'function getAuthorizationHeader(sessionToken: string)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Authentication.Services.BasicAuthTokenManager.getAuthToken
+    name: 'getAuthToken(refresh?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get the auth token to use for this request.
+    syntax:
+      parameters:
+        - id: refresh
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: 'function getAuthToken(refresh?: boolean)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method

@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
+    name: IOperationScope
+    fullName: IOperationScope
+    children:
+      - vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope.AAD
+      - vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope.AD
+      - vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope.IMS
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope.Source
+      - vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope.WMD
+    langs:
+      - typeScript
+    type: interface
+    summary: Maps to static Directory in the DirectoryDiscoveryService
+    package: vss-web-extension-sdk
+    module: VSS.Identities.Picker.Services
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope.AAD
+    name: AAD
+    fullName: AAD
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Search the Azure Active Directory
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope.AD
+    name: AD
+    fullName: AD
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Search Active Directory
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope.IMS
+    name: IMS
+    fullName: IMS
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Search IMS (Identity service)
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope.Source
+    name: Source
+    fullName: Source
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Search the applicable source directory - AAD tenant-level for AAD-backed
+      accounts or IMS account-level for MSA accounts/on-premise TFS
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope.WMD
+    name: WMD
+    fullName: WMD
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Search Windows Machine Directory
+    syntax:
+      return:
+        type:
+          - boolean

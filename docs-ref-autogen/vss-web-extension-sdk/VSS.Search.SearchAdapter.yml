@@ -1,0 +1,132 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter
+    name: SearchAdapter
+    fullName: SearchAdapter
+    children:
+      - vss-web-extension-sdk.VSS.Search.SearchAdapter.addMoreItems
+      - vss-web-extension-sdk.VSS.Search.SearchAdapter.createSearchableObjects
+      - vss-web-extension-sdk.VSS.Search.SearchAdapter.handleClear
+      - vss-web-extension-sdk.VSS.Search.SearchAdapter.handleError
+      - vss-web-extension-sdk.VSS.Search.SearchAdapter.handleResults
+      - vss-web-extension-sdk.VSS.Search.SearchAdapter.isDataSetComplete
+      - vss-web-extension-sdk.VSS.Search.SearchAdapter.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: vss-web-extension-sdk
+    module: VSS.Search
+  - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.addMoreItems
+    name: 'addMoreItems(addItemsCallback: function, searchCallback: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Adds additional items to the search strategy
+    syntax:
+      parameters:
+        - id: addItemsCallback
+          type:
+            - function
+          description: The function which adds items to the search strategy.
+        - id: searchCallback
+          type:
+            - function
+          description: |
+            The function which searches the newly updated strategy.
+      content: >-
+        function addMoreItems(addItemsCallback: function, searchCallback:
+        function)
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.createSearchableObjects
+    name: createSearchableObjects()
+    children: []
+    langs:
+      - typeScript
+    summary: Creates SearchableObjects for all available work items
+    syntax:
+      parameters: []
+      content: function createSearchableObjects()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.handleClear
+    name: handleClear()
+    children: []
+    langs:
+      - typeScript
+    summary: Handles the search results being cleared and the view resetting to normal.
+    syntax:
+      parameters: []
+      content: function handleClear()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.handleError
+    name: 'handleError(message: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Handles an error being thrown in the search process.
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: |
+            Specific error message if provided.
+      content: 'function handleError(message: string)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.handleResults
+    name: 'handleResults(results: function, finished: boolean, query?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Handles the results in the UI by filtering through all available items to
+      the ones
+          provided in the results array.
+    syntax:
+      parameters:
+        - id: results
+          type:
+            - function
+          description: An array of items
+        - id: finished
+          type:
+            - boolean
+          description: Represents whether or not the search is finished
+        - id: query
+          type:
+            - string
+          description: |
+            search query
+          optional: true
+      content: >-
+        function handleResults(results: function, finished: boolean, query?:
+        string)
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.isDataSetComplete
+    name: isDataSetComplete()
+    children: []
+    langs:
+      - typeScript
+    summary: Returns whether or not there is more data to be loaded.
+    syntax:
+      parameters: []
+      content: function isDataSetComplete()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.constructor
+    name: SearchAdapter()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Abstract Class to inherit from in order to implement the UI methods for
+      search.
+    syntax:
+      parameters: []
+      content: new SearchAdapter()
+      return:
+        type:
+          - vss-web-extension-sdk.VSS.Search.SearchAdapter
+    type: constructor
