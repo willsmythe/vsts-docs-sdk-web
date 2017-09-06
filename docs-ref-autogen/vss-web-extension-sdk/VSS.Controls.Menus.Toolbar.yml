@@ -167,8 +167,7 @@ items:
     syntax:
       parameters:
         - id: controlType
-          type:
-            - function
+          type: []
           description: ''
         - id: container
           type:
@@ -269,7 +268,7 @@ items:
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Toolbar.enhance
     name: >-
-      enhance(type: function, element: function, options?: function,
+      enhance(type: function, element: Enhancement, options?: function,
       enhancementOptions?: EnhancementOptions)
     children: []
     langs:
@@ -278,12 +277,11 @@ items:
     syntax:
       parameters:
         - id: type
-          type:
-            - function
+          type: []
           description: ''
         - id: element
           type:
-            - function
+            - Enhancement
           description: ''
         - id: options
           type:
@@ -296,8 +294,8 @@ items:
           description: ''
           optional: true
       content: >-
-        function enhance(type: function, element: function, options?: function,
-        enhancementOptions?: EnhancementOptions)
+        function enhance(type: function, element: Enhancement, options?:
+        function, enhancementOptions?: EnhancementOptions)
       return:
         type:
           - vss-web-extension-sdk.VSS.Controls.Enhancement
@@ -835,8 +833,7 @@ items:
     syntax:
       parameters:
         - id: type
-          type:
-            - function
+          type: []
           description: ''
           optional: true
         - id: selector
@@ -973,7 +970,7 @@ items:
           - boolean
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Toolbar.setAttribute
-    name: 'setAttribute(attribute: string, value: function, element?: JQuery)'
+    name: 'setAttribute(attribute: string, value: string, element?: JQuery)'
     children: []
     langs:
       - typeScript
@@ -990,7 +987,7 @@ items:
           description: Attribute name to set value.
         - id: value
           type:
-            - function
+            - string
           description: Attribute value to set.
         - id: element
           type:
@@ -999,13 +996,13 @@ items:
             Element to apply the attribute (default is root element).
           optional: true
       content: >-
-        function setAttribute(attribute: string, value: function, element?:
+        function setAttribute(attribute: string, value: string, element?:
         JQuery)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Toolbar.setContributedItemOptions
     name: >-
       setContributedItemOptions(contributionIds: function, contributionType?:
-      string, contributionQueryOptions?: function)
+      string, contributionQueryOptions?: ContributionQueryOptions)
     children: []
     langs:
       - typeScript
@@ -1025,13 +1022,14 @@ items:
           optional: true
         - id: contributionQueryOptions
           type:
-            - function
+            - ContributionQueryOptions
           description: |
             Optional contribution query options
           optional: true
       content: >-
         function setContributedItemOptions(contributionIds: function,
-        contributionType?: string, contributionQueryOptions?: function)
+        contributionType?: string, contributionQueryOptions?:
+        ContributionQueryOptions)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Toolbar.setEnhancementOptions
     name: 'setEnhancementOptions(enhancementOptions: EnhancementOptions)'
@@ -1095,7 +1093,8 @@ items:
     children: []
     langs:
       - typeScript
-    summary: |-
+    summary: |
+      Show the menu.
       Options:
        immediate: whether to show the menu immediately or after a short delay (default false)
        showTimeout: optional number of milliseconds to wait before showing when immediate is false
@@ -1224,6 +1223,8 @@ items:
     langs:
       - typeScript
     summary: >-
+      Update contributed menu items that have already been added to this menu.
+
       Menu items must have an id set in order to be updated. Extensions can only
       update menu items that they contributed.
 
@@ -1310,7 +1311,7 @@ items:
     syntax:
       return:
         type:
-          - union
+          - function
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Toolbar._commandStates
     name: _commandStates
     fullName: _commandStates
@@ -1334,7 +1335,7 @@ items:
     syntax:
       return:
         type:
-          - union
+          - function
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Toolbar._contributionPromise
     name: _contributionPromise
     fullName: _contributionPromise
@@ -1526,8 +1527,7 @@ items:
             - number
           description: ''
         - id: options
-          type:
-            - function
+          type: []
           description: |+
 
           optional: true
@@ -1572,7 +1572,7 @@ items:
     syntax:
       return:
         type:
-          - union
+          - function
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Toolbar._options
     name: _options
     fullName: _options

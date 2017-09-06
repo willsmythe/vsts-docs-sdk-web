@@ -401,7 +401,9 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.setValues
-    name: 'setValues(keyValuePairs: function, documentOptions?: IDocumentOptions)'
+    name: >-
+      setValues(keyValuePairs: [key: string]: any, documentOptions?:
+      IDocumentOptions)
     children: []
     langs:
       - typeScript
@@ -412,7 +414,7 @@ items:
       parameters:
         - id: keyValuePairs
           type:
-            - function
+            - '[key: string]: any'
           description: A set of key/value pairs to set values for
         - id: documentOptions
           type:
@@ -422,7 +424,7 @@ items:
             collection-wide
           optional: true
       content: >-
-        function setValues(keyValuePairs: function, documentOptions?:
+        function setValues(keyValuePairs: [key: string]: any, documentOptions?:
         IDocumentOptions)
       return:
         type:

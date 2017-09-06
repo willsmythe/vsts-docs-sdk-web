@@ -690,8 +690,9 @@ items:
       vss-web-extension-sdk.VSS.Identities.RestClient.IdentitiesHttpClient.readIdentities
     name: >-
       readIdentities(descriptors?: string, identityIds?: string, searchFilter?:
-      string, filterValue?: string, queryMembership?: function, properties?:
-      string, includeRestrictedVisibility?: boolean, options?: function)
+      string, filterValue?: string, queryMembership?: QueryMembership,
+      properties?: string, includeRestrictedVisibility?: boolean, options?:
+      ReadIdentitiesOptions)
     children: []
     langs:
       - typeScript
@@ -720,7 +721,7 @@ items:
           optional: true
         - id: queryMembership
           type:
-            - function
+            - QueryMembership
           description: ''
           optional: true
         - id: properties
@@ -735,14 +736,14 @@ items:
           optional: true
         - id: options
           type:
-            - function
+            - ReadIdentitiesOptions
           description: ''
           optional: true
       content: >-
         function readIdentities(descriptors?: string, identityIds?: string,
-        searchFilter?: string, filterValue?: string, queryMembership?: function,
-        properties?: string, includeRestrictedVisibility?: boolean, options?:
-        function)
+        searchFilter?: string, filterValue?: string, queryMembership?:
+        QueryMembership, properties?: string, includeRestrictedVisibility?:
+        boolean, options?: ReadIdentitiesOptions)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -750,7 +751,7 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.IdentitiesHttpClient.readIdentitiesByScope
     name: >-
-      readIdentitiesByScope(scopeId: string, queryMembership?: function,
+      readIdentitiesByScope(scopeId: string, queryMembership?: QueryMembership,
       properties?: string)
     children: []
     langs:
@@ -764,7 +765,7 @@ items:
           description: ''
         - id: queryMembership
           type:
-            - function
+            - QueryMembership
           description: ''
           optional: true
         - id: properties
@@ -774,7 +775,7 @@ items:
           optional: true
       content: >-
         function readIdentitiesByScope(scopeId: string, queryMembership?:
-        function, properties?: string)
+        QueryMembership, properties?: string)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -782,8 +783,8 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.IdentitiesHttpClient.readIdentity
     name: >-
-      readIdentity(identityId: string, queryMembership?: function, properties?:
-      string)
+      readIdentity(identityId: string, queryMembership?: QueryMembership,
+      properties?: string)
     children: []
     langs:
       - typeScript
@@ -796,7 +797,7 @@ items:
           description: ''
         - id: queryMembership
           type:
-            - function
+            - QueryMembership
           description: ''
           optional: true
         - id: properties
@@ -805,8 +806,8 @@ items:
           description: ''
           optional: true
       content: >-
-        function readIdentity(identityId: string, queryMembership?: function,
-        properties?: string)
+        function readIdentity(identityId: string, queryMembership?:
+        QueryMembership, properties?: string)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -833,7 +834,7 @@ items:
       vss-web-extension-sdk.VSS.Identities.RestClient.IdentitiesHttpClient.readMember
     name: >-
       readMember(containerId: string, memberId: string, queryMembership?:
-      function)
+      QueryMembership)
     children: []
     langs:
       - typeScript
@@ -850,12 +851,12 @@ items:
           description: ''
         - id: queryMembership
           type:
-            - function
+            - QueryMembership
           description: ''
           optional: true
       content: >-
         function readMember(containerId: string, memberId: string,
-        queryMembership?: function)
+        queryMembership?: QueryMembership)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -864,7 +865,7 @@ items:
       vss-web-extension-sdk.VSS.Identities.RestClient.IdentitiesHttpClient.readMemberOf
     name: >-
       readMemberOf(memberId: string, containerId: string, queryMembership?:
-      function)
+      QueryMembership)
     children: []
     langs:
       - typeScript
@@ -881,19 +882,19 @@ items:
           description: ''
         - id: queryMembership
           type:
-            - function
+            - QueryMembership
           description: ''
           optional: true
       content: >-
         function readMemberOf(memberId: string, containerId: string,
-        queryMembership?: function)
+        queryMembership?: QueryMembership)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.IdentitiesHttpClient.readMembers
-    name: 'readMembers(containerId: string, queryMembership?: function)'
+    name: 'readMembers(containerId: string, queryMembership?: QueryMembership)'
     children: []
     langs:
       - typeScript
@@ -906,17 +907,19 @@ items:
           description: ''
         - id: queryMembership
           type:
-            - function
+            - QueryMembership
           description: ''
           optional: true
-      content: 'function readMembers(containerId: string, queryMembership?: function)'
+      content: >-
+        function readMembers(containerId: string, queryMembership?:
+        QueryMembership)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.IdentitiesHttpClient.readMembersOf
-    name: 'readMembersOf(memberId: string, queryMembership?: function)'
+    name: 'readMembersOf(memberId: string, queryMembership?: QueryMembership)'
     children: []
     langs:
       - typeScript
@@ -929,10 +932,12 @@ items:
           description: ''
         - id: queryMembership
           type:
-            - function
+            - QueryMembership
           description: ''
           optional: true
-      content: 'function readMembersOf(memberId: string, queryMembership?: function)'
+      content: >-
+        function readMembersOf(memberId: string, queryMembership?:
+        QueryMembership)
       return:
         type:
           - vss-web-extension-sdk.IPromise

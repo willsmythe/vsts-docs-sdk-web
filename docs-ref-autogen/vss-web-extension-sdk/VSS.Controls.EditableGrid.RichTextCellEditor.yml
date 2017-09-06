@@ -130,8 +130,7 @@ items:
     syntax:
       parameters:
         - id: controlType
-          type:
-            - function
+          type: []
           description: ''
         - id: container
           type:
@@ -242,11 +241,10 @@ items:
     summary: ''
     syntax:
       return:
-        type:
-          - union
+        type: []
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.RichTextCellEditor.enhance
     name: >-
-      enhance(type: function, element: function, options?: function,
+      enhance(type: function, element: Enhancement, options?: function,
       enhancementOptions?: EnhancementOptions)
     children: []
     langs:
@@ -255,12 +253,11 @@ items:
     syntax:
       parameters:
         - id: type
-          type:
-            - function
+          type: []
           description: ''
         - id: element
           type:
-            - function
+            - Enhancement
           description: ''
         - id: options
           type:
@@ -273,8 +270,8 @@ items:
           description: ''
           optional: true
       content: >-
-        function enhance(type: function, element: function, options?: function,
-        enhancementOptions?: EnhancementOptions)
+        function enhance(type: function, element: Enhancement, options?:
+        function, enhancementOptions?: EnhancementOptions)
       return:
         type:
           - vss-web-extension-sdk.VSS.Controls.Enhancement
@@ -559,8 +556,7 @@ items:
     syntax:
       parameters:
         - id: type
-          type:
-            - function
+          type: []
           description: ''
           optional: true
         - id: selector
@@ -642,7 +638,7 @@ items:
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.RichTextCellEditor.setAttribute
-    name: 'setAttribute(attribute: string, value: function, element?: JQuery)'
+    name: 'setAttribute(attribute: string, value: string, element?: JQuery)'
     children: []
     langs:
       - typeScript
@@ -659,7 +655,7 @@ items:
           description: Attribute name to set value.
         - id: value
           type:
-            - function
+            - string
           description: Attribute value to set.
         - id: element
           type:
@@ -668,7 +664,7 @@ items:
             Element to apply the attribute (default is root element).
           optional: true
       content: >-
-        function setAttribute(attribute: string, value: function, element?:
+        function setAttribute(attribute: string, value: string, element?:
         JQuery)
     type: method
   - uid: >-
@@ -725,8 +721,7 @@ items:
     summary: ''
     syntax:
       return:
-        type:
-          - union
+        type: []
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.RichTextCellEditor._bind
     name: '_bind(element?: any, eventType?: any, handler?: any, track?: any)'
     children: []

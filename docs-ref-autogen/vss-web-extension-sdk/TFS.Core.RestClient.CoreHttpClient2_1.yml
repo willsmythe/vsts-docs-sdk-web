@@ -287,7 +287,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Core.RestClient.CoreHttpClient2_1.getConnectedServices
-    name: 'getConnectedServices(projectId: string, kind?: function)'
+    name: 'getConnectedServices(projectId: string, kind?: ConnectedServiceKind)'
     children: []
     langs:
       - typeScript
@@ -300,10 +300,12 @@ items:
           description: ''
         - id: kind
           type:
-            - function
+            - ConnectedServiceKind
           description: ''
           optional: true
-      content: 'function getConnectedServices(projectId: string, kind?: function)'
+      content: >-
+        function getConnectedServices(projectId: string, kind?:
+        ConnectedServiceKind)
       return:
         type:
           - vss-web-extension-sdk.IPromise

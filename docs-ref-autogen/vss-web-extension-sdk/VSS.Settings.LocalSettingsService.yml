@@ -29,7 +29,7 @@ items:
       content: 'new LocalSettingsService(webContext?: WebContext)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Settings.LocalSettingsService.read
-    name: 'read(key: string, defaultValue?: T, scope?: function)'
+    name: 'read(key: string, defaultValue?: T, scope?: LocalSettingsScope)'
     children: []
     langs:
       - typeScript
@@ -49,18 +49,18 @@ items:
           optional: true
         - id: scope
           type:
-            - function
+            - LocalSettingsScope
           description: >-
             Scope for the setting to apply to. This will determine the prefix to
             use at the beginning of the setting key.
           optional: true
-      content: 'function read(key: string, defaultValue?: T, scope?: function)'
+      content: 'function read(key: string, defaultValue?: T, scope?: LocalSettingsScope)'
       return:
         type:
           - T
     type: method
   - uid: vss-web-extension-sdk.VSS.Settings.LocalSettingsService.write
-    name: 'write(key: string, value: any, scope?: function)'
+    name: 'write(key: string, value: any, scope?: LocalSettingsScope)'
     children: []
     langs:
       - typeScript
@@ -79,10 +79,10 @@ items:
           description: Value for the setting to be written
         - id: scope
           type:
-            - function
+            - LocalSettingsScope
           description: >
             Scope for the setting to apply to. This will determine the prefix to
             use at the beginning of the setting key.
           optional: true
-      content: 'function write(key: string, value: any, scope?: function)'
+      content: 'function write(key: string, value: any, scope?: LocalSettingsScope)'
     type: method

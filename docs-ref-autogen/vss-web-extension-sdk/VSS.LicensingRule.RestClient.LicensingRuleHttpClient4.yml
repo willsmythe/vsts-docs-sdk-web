@@ -63,7 +63,7 @@ items:
       vss-web-extension-sdk.VSS.LicensingRule.RestClient.LicensingRuleHttpClient4.addGroupLicensingRule
     name: >-
       addGroupLicensingRule(licensingRule: GroupLicensingRule, ruleOption?:
-      function)
+      RuleOption)
     children: []
     langs:
       - typeScript
@@ -77,19 +77,19 @@ items:
           description: The Licensing Rule
         - id: ruleOption
           type:
-            - function
+            - RuleOption
           description: Rule Option
           optional: true
       content: >-
         function addGroupLicensingRule(licensingRule: GroupLicensingRule,
-        ruleOption?: function)
+        ruleOption?: RuleOption)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.LicensingRule.RestClient.LicensingRuleHttpClient4.applyGroupLicensingRulesToAllUsers
-    name: 'applyGroupLicensingRulesToAllUsers(ruleOption?: function)'
+    name: 'applyGroupLicensingRulesToAllUsers(ruleOption?: RuleOption)'
     children: []
     langs:
       - typeScript
@@ -98,10 +98,10 @@ items:
       parameters:
         - id: ruleOption
           type:
-            - function
+            - RuleOption
           description: ''
           optional: true
-      content: 'function applyGroupLicensingRulesToAllUsers(ruleOption?: function)'
+      content: 'function applyGroupLicensingRulesToAllUsers(ruleOption?: RuleOption)'
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -139,7 +139,7 @@ items:
           - vss-web-extension-sdk.IAuthTokenManager
   - uid: >-
       vss-web-extension-sdk.VSS.LicensingRule.RestClient.LicensingRuleHttpClient4.deleteGroupLicenseRule
-    name: 'deleteGroupLicenseRule(subjectDescriptor: string, ruleOption?: function)'
+    name: 'deleteGroupLicenseRule(subjectDescriptor: string, ruleOption?: RuleOption)'
     children: []
     langs:
       - typeScript
@@ -152,12 +152,12 @@ items:
           description: subjectDescriptor
         - id: ruleOption
           type:
-            - function
+            - RuleOption
           description: Rule Option
           optional: true
       content: >-
         function deleteGroupLicenseRule(subjectDescriptor: string, ruleOption?:
-        function)
+        RuleOption)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -364,7 +364,7 @@ items:
       vss-web-extension-sdk.VSS.LicensingRule.RestClient.LicensingRuleHttpClient4.updateGroupLicensingRule
     name: >-
       updateGroupLicensingRule(licensingRuleUpdate: GroupLicensingRuleUpdate,
-      ruleOption?: function)
+      ruleOption?: RuleOption)
     children: []
     langs:
       - typeScript
@@ -378,12 +378,12 @@ items:
           description: The update model for the Licensing Rule
         - id: ruleOption
           type:
-            - function
+            - RuleOption
           description: Rule Option
           optional: true
       content: >-
         function updateGroupLicensingRule(licensingRuleUpdate:
-        GroupLicensingRuleUpdate, ruleOption?: function)
+        GroupLicensingRuleUpdate, ruleOption?: RuleOption)
       return:
         type:
           - vss-web-extension-sdk.IPromise

@@ -134,7 +134,7 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Locations.RestClient.CommonMethods2To3_1.getConnectionData
     name: >-
-      getConnectionData(connectOptions?: function, lastChangeId?: number,
+      getConnectionData(connectOptions?: ConnectOptions, lastChangeId?: number,
       lastChangeId64?: number)
     children: []
     langs:
@@ -146,7 +146,7 @@ items:
       parameters:
         - id: connectOptions
           type:
-            - function
+            - ConnectOptions
           description: ''
           optional: true
         - id: lastChangeId
@@ -160,8 +160,8 @@ items:
           description: Non-truncated 64-bit LastChangeId
           optional: true
       content: >-
-        function getConnectionData(connectOptions?: function, lastChangeId?:
-        number, lastChangeId64?: number)
+        function getConnectionData(connectOptions?: ConnectOptions,
+        lastChangeId?: number, lastChangeId64?: number)
       return:
         type:
           - vss-web-extension-sdk.IPromise

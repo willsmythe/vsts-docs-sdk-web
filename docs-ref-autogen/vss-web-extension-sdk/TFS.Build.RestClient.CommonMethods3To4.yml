@@ -1022,11 +1022,12 @@ items:
     name: >-
       getBuilds(project?: string, definitions?: function, queues?: function,
       buildNumber?: string, minFinishTime?: Date, maxFinishTime?: Date,
-      requestedFor?: string, reasonFilter?: function, statusFilter?: function,
-      resultFilter?: function, tagFilters?: function, properties?: function,
-      top?: number, continuationToken?: string, maxBuildsPerDefinition?: number,
-      deletedFilter?: function, queryOrder?: function, branchName?: string,
-      buildIds?: function, repositoryId?: string, repositoryType?: string)
+      requestedFor?: string, reasonFilter?: BuildReason, statusFilter?:
+      BuildStatus, resultFilter?: BuildResult, tagFilters?: function,
+      properties?: function, top?: number, continuationToken?: string,
+      maxBuildsPerDefinition?: number, deletedFilter?: QueryDeletedOption,
+      queryOrder?: BuildQueryOrder, branchName?: string, buildIds?: function,
+      repositoryId?: string, repositoryType?: string)
     children: []
     langs:
       - typeScript
@@ -1070,17 +1071,17 @@ items:
           optional: true
         - id: reasonFilter
           type:
-            - function
+            - BuildReason
           description: ''
           optional: true
         - id: statusFilter
           type:
-            - function
+            - BuildStatus
           description: ''
           optional: true
         - id: resultFilter
           type:
-            - function
+            - BuildResult
           description: ''
           optional: true
         - id: tagFilters
@@ -1110,12 +1111,12 @@ items:
           optional: true
         - id: deletedFilter
           type:
-            - function
+            - QueryDeletedOption
           description: ''
           optional: true
         - id: queryOrder
           type:
-            - function
+            - BuildQueryOrder
           description: ''
           optional: true
         - id: branchName
@@ -1141,12 +1142,12 @@ items:
       content: >-
         function getBuilds(project?: string, definitions?: function, queues?:
         function, buildNumber?: string, minFinishTime?: Date, maxFinishTime?:
-        Date, requestedFor?: string, reasonFilter?: function, statusFilter?:
-        function, resultFilter?: function, tagFilters?: function, properties?:
-        function, top?: number, continuationToken?: string,
-        maxBuildsPerDefinition?: number, deletedFilter?: function, queryOrder?:
-        function, branchName?: string, buildIds?: function, repositoryId?:
-        string, repositoryType?: string)
+        Date, requestedFor?: string, reasonFilter?: BuildReason, statusFilter?:
+        BuildStatus, resultFilter?: BuildResult, tagFilters?: function,
+        properties?: function, top?: number, continuationToken?: string,
+        maxBuildsPerDefinition?: number, deletedFilter?: QueryDeletedOption,
+        queryOrder?: BuildQueryOrder, branchName?: string, buildIds?: function,
+        repositoryId?: string, repositoryType?: string)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1356,7 +1357,7 @@ items:
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getDefinitions
     name: >-
       getDefinitions(project?: string, name?: string, repositoryId?: string,
-      repositoryType?: string, queryOrder?: function, top?: number,
+      repositoryType?: string, queryOrder?: DefinitionQueryOrder, top?: number,
       continuationToken?: string, minMetricsTime?: Date, definitionIds?:
       function, path?: string, builtAfter?: Date, notBuiltAfter?: Date,
       includeAllProperties?: boolean, includeLatestBuilds?: boolean,
@@ -1389,7 +1390,7 @@ items:
           optional: true
         - id: queryOrder
           type:
-            - function
+            - DefinitionQueryOrder
           description: ''
           optional: true
         - id: top
@@ -1444,17 +1445,17 @@ items:
           optional: true
       content: >-
         function getDefinitions(project?: string, name?: string, repositoryId?:
-        string, repositoryType?: string, queryOrder?: function, top?: number,
-        continuationToken?: string, minMetricsTime?: Date, definitionIds?:
-        function, path?: string, builtAfter?: Date, notBuiltAfter?: Date,
-        includeAllProperties?: boolean, includeLatestBuilds?: boolean,
-        taskIdFilter?: string)
+        string, repositoryType?: string, queryOrder?: DefinitionQueryOrder,
+        top?: number, continuationToken?: string, minMetricsTime?: Date,
+        definitionIds?: function, path?: string, builtAfter?: Date,
+        notBuiltAfter?: Date, includeAllProperties?: boolean,
+        includeLatestBuilds?: boolean, taskIdFilter?: string)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getFolders
-    name: 'getFolders(project: string, path?: string, queryOrder?: function)'
+    name: 'getFolders(project: string, path?: string, queryOrder?: FolderQueryOrder)'
     children: []
     langs:
       - typeScript
@@ -1472,12 +1473,12 @@ items:
           optional: true
         - id: queryOrder
           type:
-            - function
+            - FolderQueryOrder
           description: ''
           optional: true
       content: >-
         function getFolders(project: string, path?: string, queryOrder?:
-        function)
+        FolderQueryOrder)
       return:
         type:
           - vss-web-extension-sdk.IPromise

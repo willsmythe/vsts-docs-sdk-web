@@ -27,7 +27,9 @@ items:
     module: VSS/Navigation/NavigationHistoryService
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.NavigationHistoryService.INavigationHistoryService.generateUrl
-    name: 'generateUrl(state: function, mergeOptions?: function)'
+    name: >-
+      generateUrl(state: [key: string]: string, mergeOptions?:
+      StateMergeOptions)
     children: []
     langs:
       - typeScript
@@ -36,17 +38,19 @@ items:
       parameters:
         - id: state
           type:
-            - function
+            - '[key: string]: string'
           description: State values (query parameters and route values)
         - id: mergeOptions
           type:
-            - function
+            - StateMergeOptions
           description: >
             Options around whether the provided state just provides overrides
             for the current navigation
                    state or a full set of state values. The default is to merge with the current navigation state.
           optional: true
-      content: 'function generateUrl(state: function, mergeOptions?: function)'
+      content: >-
+        function generateUrl(state: [key: string]: string, mergeOptions?:
+        StateMergeOptions)
       return:
         type:
           - string
@@ -78,7 +82,7 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.NavigationHistoryService.INavigationHistoryService.pushState
     name: >-
-      pushState(state: function, url?: string, routeId?: string,
+      pushState(state: [key: string]: string, url?: string, routeId?: string,
       navigationElementId?: string)
     children: []
     langs:
@@ -88,7 +92,7 @@ items:
       parameters:
         - id: state
           type:
-            - function
+            - '[key: string]: string'
           description: >-
             Optional set of current URL state parameters (route values and query
             parameters). If not specified, computed from the given url.
@@ -114,8 +118,8 @@ items:
             not specified the current page's hub id is used.
           optional: true
       content: >-
-        function pushState(state: function, url?: string, routeId?: string,
-        navigationElementId?: string)
+        function pushState(state: [key: string]: string, url?: string, routeId?:
+        string, navigationElementId?: string)
       return:
         type:
           - any
@@ -123,7 +127,7 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.NavigationHistoryService.INavigationHistoryService.replaceState
     name: >-
-      replaceState(state: function, url?: string, routeId?: string,
+      replaceState(state: [key: string]: string, url?: string, routeId?: string,
       navigationElementId?: string)
     children: []
     langs:
@@ -135,7 +139,7 @@ items:
       parameters:
         - id: state
           type:
-            - function
+            - '[key: string]: string'
           description: >-
             Optional set of current URL state parameters (route values and query
             parameters). If not specified, computed from the given url.
@@ -161,8 +165,8 @@ items:
             not specified the current page's hub id is used.
           optional: true
       content: >-
-        function replaceState(state: function, url?: string, routeId?: string,
-        navigationElementId?: string)
+        function replaceState(state: [key: string]: string, url?: string,
+        routeId?: string, navigationElementId?: string)
       return:
         type:
           - any
@@ -181,8 +185,7 @@ items:
     syntax:
       parameters:
         - id: listener
-          type:
-            - function
+          type: []
           description: |
             Method invoked when a forward or back navigation has occurred.
       content: 'function subscribe(listener: function)'
@@ -200,8 +203,7 @@ items:
     syntax:
       parameters:
         - id: listener
-          type:
-            - function
+          type: []
           description: |
             Listener to remove.
       content: 'function unsubscribe(listener: function)'

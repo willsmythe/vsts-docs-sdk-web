@@ -112,12 +112,12 @@ items:
     syntax:
       return:
         type:
-          - union
+          - '[key: string]: any'
   - uid: >-
       vss-web-extension-sdk.VSS.Telemetry.Services.TelemetryEventData.constructor
     name: >-
-      TelemetryEventData(area: string, feature: string, properties: function,
-      startTime?: number, elapsedTime?: number)
+      TelemetryEventData(area: string, feature: string, properties: [key:
+      string]: any, startTime?: number, elapsedTime?: number)
     children: []
     langs:
       - typeScript
@@ -134,7 +134,7 @@ items:
           description: The feature name.
         - id: properties
           type:
-            - function
+            - '[key: string]: any'
           description: 'The key:value list of event properties.'
         - id: startTime
           type:
@@ -150,6 +150,6 @@ items:
             startTime is supplied.
           optional: true
       content: >-
-        new TelemetryEventData(area: string, feature: string, properties:
-        function, startTime?: number, elapsedTime?: number)
+        new TelemetryEventData(area: string, feature: string, properties: [key:
+        string]: any, startTime?: number, elapsedTime?: number)
     type: constructor

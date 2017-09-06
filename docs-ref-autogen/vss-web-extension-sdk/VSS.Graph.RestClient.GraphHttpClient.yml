@@ -319,8 +319,8 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.GraphHttpClient.findGroupsBySearchFactor
     name: >-
-      findGroupsBySearchFactor(searchFactor: function, searchValue?: string,
-      forceDomainQualification?: boolean)
+      findGroupsBySearchFactor(searchFactor: GraphMemberSearchFactor,
+      searchValue?: string, forceDomainQualification?: boolean)
     children: []
     langs:
       - typeScript
@@ -333,7 +333,7 @@ items:
       parameters:
         - id: searchFactor
           type:
-            - function
+            - GraphMemberSearchFactor
           description: The search factor for what it is that you are searching for
         - id: searchValue
           type:
@@ -349,8 +349,8 @@ items:
             domain qualified
           optional: true
       content: >-
-        function findGroupsBySearchFactor(searchFactor: function, searchValue?:
-        string, forceDomainQualification?: boolean)
+        function findGroupsBySearchFactor(searchFactor: GraphMemberSearchFactor,
+        searchValue?: string, forceDomainQualification?: boolean)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -358,8 +358,8 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.GraphHttpClient.findUsersBySearchFactor
     name: >-
-      findUsersBySearchFactor(searchFactor: function, searchValue?: string,
-      forceDomainQualification?: boolean)
+      findUsersBySearchFactor(searchFactor: GraphMemberSearchFactor,
+      searchValue?: string, forceDomainQualification?: boolean)
     children: []
     langs:
       - typeScript
@@ -372,7 +372,7 @@ items:
       parameters:
         - id: searchFactor
           type:
-            - function
+            - GraphMemberSearchFactor
           description: The search factor for what it is that you are searching for
         - id: searchValue
           type:
@@ -388,8 +388,8 @@ items:
             domain qualified
           optional: true
       content: >-
-        function findUsersBySearchFactor(searchFactor: function, searchValue?:
-        string, forceDomainQualification?: boolean)
+        function findUsersBySearchFactor(searchFactor: GraphMemberSearchFactor,
+        searchValue?: string, forceDomainQualification?: boolean)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -517,8 +517,8 @@ items:
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.GraphHttpClient.getMemberships
     name: >-
-      getMemberships(subjectDescriptor: string, direction?: function, depth?:
-      number)
+      getMemberships(subjectDescriptor: string, direction?:
+      GraphTraversalDirection, depth?: number)
     children: []
     langs:
       - typeScript
@@ -537,7 +537,7 @@ items:
           description: Fetch all direct memberships of this descriptor.
         - id: direction
           type:
-            - function
+            - GraphTraversalDirection
           description: Defaults to up.
           optional: true
         - id: depth
@@ -548,8 +548,8 @@ items:
             tree. Currently the only supported value is '1'.
           optional: true
       content: >-
-        function getMemberships(subjectDescriptor: string, direction?: function,
-        depth?: number)
+        function getMemberships(subjectDescriptor: string, direction?:
+        GraphTraversalDirection, depth?: number)
       return:
         type:
           - vss-web-extension-sdk.IPromise

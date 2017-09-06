@@ -132,7 +132,7 @@ items:
   - uid: vss-web-extension-sdk.TFS.Wiki.WikiRestClient.WikiHttpClient.getPages
     name: >-
       getPages(project: string, wikiId: string, path?: string, recursionLevel?:
-      function, versionDescriptor?: GitVersionDescriptor)
+      VersionControlRecursionType, versionDescriptor?: GitVersionDescriptor)
     children: []
     langs:
       - typeScript
@@ -156,7 +156,7 @@ items:
           optional: true
         - id: recursionLevel
           type:
-            - function
+            - VersionControlRecursionType
           description: Recusion level for the page retrieval. Defaults to None (Optional).
           optional: true
         - id: versionDescriptor
@@ -169,7 +169,8 @@ items:
           optional: true
       content: >-
         function getPages(project: string, wikiId: string, path?: string,
-        recursionLevel?: function, versionDescriptor?: GitVersionDescriptor)
+        recursionLevel?: VersionControlRecursionType, versionDescriptor?:
+        GitVersionDescriptor)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -177,7 +178,8 @@ items:
   - uid: vss-web-extension-sdk.TFS.Wiki.WikiRestClient.WikiHttpClient.getPageText
     name: >-
       getPageText(project: string, wikiId: string, path?: string,
-      recursionLevel?: function, versionDescriptor?: GitVersionDescriptor)
+      recursionLevel?: VersionControlRecursionType, versionDescriptor?:
+      GitVersionDescriptor)
     children: []
     langs:
       - typeScript
@@ -201,7 +203,7 @@ items:
           optional: true
         - id: recursionLevel
           type:
-            - function
+            - VersionControlRecursionType
           description: Recusion level for the page retrieval. Defaults to None (Optional).
           optional: true
         - id: versionDescriptor
@@ -214,7 +216,8 @@ items:
           optional: true
       content: >-
         function getPageText(project: string, wikiId: string, path?: string,
-        recursionLevel?: function, versionDescriptor?: GitVersionDescriptor)
+        recursionLevel?: VersionControlRecursionType, versionDescriptor?:
+        GitVersionDescriptor)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -222,7 +225,8 @@ items:
   - uid: vss-web-extension-sdk.TFS.Wiki.WikiRestClient.WikiHttpClient.getPageZip
     name: >-
       getPageZip(project: string, wikiId: string, path?: string,
-      recursionLevel?: function, versionDescriptor?: GitVersionDescriptor)
+      recursionLevel?: VersionControlRecursionType, versionDescriptor?:
+      GitVersionDescriptor)
     children: []
     langs:
       - typeScript
@@ -246,7 +250,7 @@ items:
           optional: true
         - id: recursionLevel
           type:
-            - function
+            - VersionControlRecursionType
           description: Recusion level for the page retrieval. Defaults to None (Optional).
           optional: true
         - id: versionDescriptor
@@ -259,7 +263,8 @@ items:
           optional: true
       content: >-
         function getPageZip(project: string, wikiId: string, path?: string,
-        recursionLevel?: function, versionDescriptor?: GitVersionDescriptor)
+        recursionLevel?: VersionControlRecursionType, versionDescriptor?:
+        GitVersionDescriptor)
       return:
         type:
           - vss-web-extension-sdk.IPromise

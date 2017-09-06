@@ -746,7 +746,7 @@ items:
       vss-web-extension-sdk.VSS.ExtensionManagement.RestClient.ExtensionManagementHttpClient2_3.resolveAllRequests
     name: >-
       resolveAllRequests(rejectMessage: string, publisherName: string,
-      extensionName: string, state: function)
+      extensionName: string, state: ExtensionRequestState)
     children: []
     langs:
       - typeScript
@@ -767,11 +767,11 @@ items:
           description: ''
         - id: state
           type:
-            - function
+            - ExtensionRequestState
           description: ''
       content: >-
         function resolveAllRequests(rejectMessage: string, publisherName:
-        string, extensionName: string, state: function)
+        string, extensionName: string, state: ExtensionRequestState)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -780,7 +780,7 @@ items:
       vss-web-extension-sdk.VSS.ExtensionManagement.RestClient.ExtensionManagementHttpClient2_3.resolveRequest
     name: >-
       resolveRequest(rejectMessage: string, publisherName: string,
-      extensionName: string, requesterId: string, state: function)
+      extensionName: string, requesterId: string, state: ExtensionRequestState)
     children: []
     langs:
       - typeScript
@@ -805,11 +805,12 @@ items:
           description: ''
         - id: state
           type:
-            - function
+            - ExtensionRequestState
           description: ''
       content: >-
         function resolveRequest(rejectMessage: string, publisherName: string,
-        extensionName: string, requesterId: string, state: function)
+        extensionName: string, requesterId: string, state:
+        ExtensionRequestState)
       return:
         type:
           - vss-web-extension-sdk.IPromise

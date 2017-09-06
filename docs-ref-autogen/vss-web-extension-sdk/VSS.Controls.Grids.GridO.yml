@@ -202,8 +202,7 @@ items:
 
           optional: true
         - id: formatterType
-          type:
-            - function
+          type: []
           description: ''
           optional: true
         - id: options
@@ -271,8 +270,7 @@ items:
     syntax:
       parameters:
         - id: controlType
-          type:
-            - function
+          type: []
           description: ''
         - id: container
           type:
@@ -427,7 +425,7 @@ items:
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.enhance
     name: >-
-      enhance(type: function, element: function, options?: function,
+      enhance(type: function, element: Enhancement, options?: function,
       enhancementOptions?: EnhancementOptions)
     children: []
     langs:
@@ -436,12 +434,11 @@ items:
     syntax:
       parameters:
         - id: type
-          type:
-            - function
+          type: []
           description: ''
         - id: element
           type:
-            - function
+            - Enhancement
           description: ''
         - id: options
           type:
@@ -454,8 +451,8 @@ items:
           description: ''
           optional: true
       content: >-
-        function enhance(type: function, element: function, options?: function,
-        enhancementOptions?: EnhancementOptions)
+        function enhance(type: function, element: Enhancement, options?:
+        function, enhancementOptions?: EnhancementOptions)
       return:
         type:
           - vss-web-extension-sdk.VSS.Controls.Enhancement
@@ -678,7 +675,7 @@ items:
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.getColumnValue
     name: >-
-      getColumnValue(dataIndex: number, columnIndex: function, columnOrder?:
+      getColumnValue(dataIndex: number, columnIndex: number, columnOrder?:
       number)
     children: []
     langs:
@@ -694,7 +691,7 @@ items:
           description: The index for the row data in the data source
         - id: columnIndex
           type:
-            - function
+            - number
           description: The index of the column's data in the row's data array
         - id: columnOrder
           type:
@@ -704,7 +701,7 @@ items:
             current visible order of the column
           optional: true
       content: >-
-        function getColumnValue(dataIndex: number, columnIndex: function,
+        function getColumnValue(dataIndex: number, columnIndex: number,
         columnOrder?: number)
       return:
         type:
@@ -715,7 +712,9 @@ items:
     children: []
     langs:
       - typeScript
-    summary: 'If no context menu is open, returns null.'
+    summary: |
+      Gets info about the row on which context menu is opened.
+      If no context menu is open, returns null.
     syntax:
       parameters: []
       content: function getContextMenuRowInfo()
@@ -786,7 +785,9 @@ items:
     children: []
     langs:
       - typeScript
-    summary: >-
+    summary: >
+      Gets the Focus Element for the Grid.
+
       This is the actual element that receives focus and that all the event
       bindings, like 'keydown', are bound to.
     syntax:
@@ -884,7 +885,9 @@ items:
     children: []
     langs:
       - typeScript
-    summary: >-
+    summary: >
+      Gets the information about a row associated with the given data index.
+
       Returns a rowInfo object containing rowIndex, dataIndex and a jQuery
       wrapper for the actual row.
     syntax:
@@ -1299,8 +1302,7 @@ items:
     syntax:
       parameters:
         - id: type
-          type:
-            - function
+          type: []
           description: ''
           optional: true
         - id: selector
@@ -1365,7 +1367,7 @@ items:
         widgetOptions?: TOptions, enhancementOptions?: EnhancementOptions)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.setAttribute
-    name: 'setAttribute(attribute: string, value: function, element?: JQuery)'
+    name: 'setAttribute(attribute: string, value: string, element?: JQuery)'
     children: []
     langs:
       - typeScript
@@ -1382,7 +1384,7 @@ items:
           description: Attribute name to set value.
         - id: value
           type:
-            - function
+            - string
           description: Attribute value to set.
         - id: element
           type:
@@ -1391,7 +1393,7 @@ items:
             Element to apply the attribute (default is root element).
           optional: true
       content: >-
-        function setAttribute(attribute: string, value: function, element?:
+        function setAttribute(attribute: string, value: string, element?:
         JQuery)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.setColumnOptions
@@ -1546,8 +1548,8 @@ items:
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.updateRow
     name: >-
-      updateRow(rowIndex: number, dataIndex?: number, columnsToUpdate?:
-      function)
+      updateRow(rowIndex: number, dataIndex?: number, columnsToUpdate?: [key:
+      number]: boolean)
     children: []
     langs:
       - typeScript
@@ -1565,14 +1567,14 @@ items:
           optional: true
         - id: columnsToUpdate
           type:
-            - function
+            - '[key: number]: boolean'
           description: |
             HashSet of column indices. If given,
             only columns in this set will be updated.
           optional: true
       content: >-
         function updateRow(rowIndex: number, dataIndex?: number,
-        columnsToUpdate?: function)
+        columnsToUpdate?: [key: number]: boolean)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO._active
     name: _active
@@ -1818,7 +1820,7 @@ items:
     syntax:
       return:
         type:
-          - union
+          - function
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO._contentSize
     name: _contentSize
     fullName: _contentSize
@@ -1930,7 +1932,7 @@ items:
     syntax:
       return:
         type:
-          - union
+          - function
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO._disposed
     name: _disposed
     fullName: _disposed
@@ -1974,7 +1976,9 @@ items:
     children: []
     langs:
       - typeScript
-    summary: >-
+    summary: >
+      Default implementation for creating the contents of a given cell.
+
       Custom Drawn Columns:
 
       If you want a custom drawn column, then the preferred method is to set a
@@ -2027,7 +2031,10 @@ items:
     children: []
     langs:
       - typeScript
-    summary: >-
+    summary: >
+      Default implementation for creating the element that represents content of
+      a header cell.
+
       Custom Drawn Column Header:
 
       If you want a custom drawn column header, then the preferred method is to
@@ -2135,7 +2142,7 @@ items:
     syntax:
       return:
         type:
-          - union
+          - function
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO._fire
     name: '_fire(element?: any, eventType?: any, args?: any)'
     children: []
@@ -2983,7 +2990,7 @@ items:
     syntax:
       return:
         type:
-          - union
+          - function
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO._trySorting
     name: '_trySorting(sortOrder: any, sortColumns?: any)'
     children: []
@@ -3099,4 +3106,4 @@ items:
     syntax:
       return:
         type:
-          - union
+          - function

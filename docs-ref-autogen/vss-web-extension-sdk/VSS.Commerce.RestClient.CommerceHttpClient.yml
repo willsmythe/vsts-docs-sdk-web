@@ -172,7 +172,7 @@ items:
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommerceHttpClient.changeSubscriptionAccount
     name: >-
       changeSubscriptionAccount(subscriptionId: string, providerNamespaceId:
-      function, accountId: string, hydrate?: boolean)
+      AccountProviderNamespace, accountId: string, hydrate?: boolean)
     children: []
     langs:
       - typeScript
@@ -185,7 +185,7 @@ items:
           description: The subscription identifier.
         - id: providerNamespaceId
           type:
-            - function
+            - AccountProviderNamespace
           description: The provider namespace identifier.
         - id: accountId
           type:
@@ -198,7 +198,8 @@ items:
           optional: true
       content: >-
         function changeSubscriptionAccount(subscriptionId: string,
-        providerNamespaceId: function, accountId: string, hydrate?: boolean)
+        providerNamespaceId: AccountProviderNamespace, accountId: string,
+        hydrate?: boolean)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -353,8 +354,9 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommerceHttpClient.decreaseResourceQuantity
     name: >-
-      decreaseResourceQuantity(offerMeterName: string, renewalGroup: function,
-      quantity: number, shouldBeImmediate: boolean, azureSubscriptionId: string)
+      decreaseResourceQuantity(offerMeterName: string, renewalGroup:
+      ResourceRenewalGroup, quantity: number, shouldBeImmediate: boolean,
+      azureSubscriptionId: string)
     children: []
     langs:
       - typeScript
@@ -367,7 +369,7 @@ items:
           description: ''
         - id: renewalGroup
           type:
-            - function
+            - ResourceRenewalGroup
           description: ''
         - id: quantity
           type:
@@ -383,7 +385,7 @@ items:
           description: ''
       content: >-
         function decreaseResourceQuantity(offerMeterName: string, renewalGroup:
-        function, quantity: number, shouldBeImmediate: boolean,
+        ResourceRenewalGroup, quantity: number, shouldBeImmediate: boolean,
         azureSubscriptionId: string)
       return:
         type:
@@ -393,7 +395,7 @@ items:
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommerceHttpClient.enableTrialOfferSubscriptionExtension
     name: >-
       enableTrialOfferSubscriptionExtension(offerMeterName: string,
-      renewalGroup: function, endDate: Date)
+      renewalGroup: ResourceRenewalGroup, endDate: Date)
     children: []
     langs:
       - typeScript
@@ -406,7 +408,7 @@ items:
           description: ''
         - id: renewalGroup
           type:
-            - function
+            - ResourceRenewalGroup
           description: ''
         - id: endDate
           type:
@@ -414,7 +416,7 @@ items:
           description: ''
       content: >-
         function enableTrialOfferSubscriptionExtension(offerMeterName: string,
-        renewalGroup: function, endDate: Date)
+        renewalGroup: ResourceRenewalGroup, endDate: Date)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -423,7 +425,7 @@ items:
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommerceHttpClient.enableTrialOrPreviewOfferSubscription
     name: >-
       enableTrialOrPreviewOfferSubscription(offerMeterName: string,
-      renewalGroup: function)
+      renewalGroup: ResourceRenewalGroup)
     children: []
     langs:
       - typeScript
@@ -436,11 +438,11 @@ items:
           description: Name of the offer meter.
         - id: renewalGroup
           type:
-            - function
+            - ResourceRenewalGroup
           description: The renewal group.
       content: >-
         function enableTrialOrPreviewOfferSubscription(offerMeterName: string,
-        renewalGroup: function)
+        renewalGroup: ResourceRenewalGroup)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -474,7 +476,9 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommerceHttpClient.getAccounts
-    name: 'getAccounts(subscriptionId: string, providerNamespaceId: function)'
+    name: >-
+      getAccounts(subscriptionId: string, providerNamespaceId:
+      AccountProviderNamespace)
     children: []
     langs:
       - typeScript
@@ -487,11 +491,11 @@ items:
           description: The subscription identifier.
         - id: providerNamespaceId
           type:
-            - function
+            - AccountProviderNamespace
           description: The provider namespace identifier.
       content: >-
         function getAccounts(subscriptionId: string, providerNamespaceId:
-        function)
+        AccountProviderNamespace)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -499,9 +503,10 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommerceHttpClient.getAccountsByIdentity
     name: >-
-      getAccountsByIdentity(providerNamespaceId: function, memberId: string,
-      queryOnlyOwnerAccounts: boolean, inlcudeDisabledAccounts: boolean,
-      includeMSAAccounts: boolean, serviceOwners: function)
+      getAccountsByIdentity(providerNamespaceId: AccountProviderNamespace,
+      memberId: string, queryOnlyOwnerAccounts: boolean,
+      inlcudeDisabledAccounts: boolean, includeMSAAccounts: boolean,
+      serviceOwners: function)
     children: []
     langs:
       - typeScript
@@ -510,7 +515,7 @@ items:
       parameters:
         - id: providerNamespaceId
           type:
-            - function
+            - AccountProviderNamespace
           description: The provider namespace identifier.
         - id: memberId
           type:
@@ -533,9 +538,10 @@ items:
             - function
           description: ''
       content: >-
-        function getAccountsByIdentity(providerNamespaceId: function, memberId:
-        string, queryOnlyOwnerAccounts: boolean, inlcudeDisabledAccounts:
-        boolean, includeMSAAccounts: boolean, serviceOwners: function)
+        function getAccountsByIdentity(providerNamespaceId:
+        AccountProviderNamespace, memberId: string, queryOnlyOwnerAccounts:
+        boolean, inlcudeDisabledAccounts: boolean, includeMSAAccounts: boolean,
+        serviceOwners: function)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -543,10 +549,11 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommerceHttpClient.getAccountsByIdentityForOfferId
     name: >-
-      getAccountsByIdentityForOfferId(providerNamespaceId: function, memberId:
-      string, queryOnlyOwnerAccounts: boolean, inlcudeDisabledAccounts: boolean,
-      includeMSAAccounts: boolean, serviceOwners: function, galleryId: string,
-      addUnlinkedSubscription?: boolean, queryAccountsByUpn?: boolean)
+      getAccountsByIdentityForOfferId(providerNamespaceId:
+      AccountProviderNamespace, memberId: string, queryOnlyOwnerAccounts:
+      boolean, inlcudeDisabledAccounts: boolean, includeMSAAccounts: boolean,
+      serviceOwners: function, galleryId: string, addUnlinkedSubscription?:
+      boolean, queryAccountsByUpn?: boolean)
     children: []
     langs:
       - typeScript
@@ -557,7 +564,7 @@ items:
       parameters:
         - id: providerNamespaceId
           type:
-            - function
+            - AccountProviderNamespace
           description: account provider namespace id
         - id: memberId
           type:
@@ -594,9 +601,9 @@ items:
           description: ''
           optional: true
       content: >-
-        function getAccountsByIdentityForOfferId(providerNamespaceId: function,
-        memberId: string, queryOnlyOwnerAccounts: boolean,
-        inlcudeDisabledAccounts: boolean, includeMSAAccounts: boolean,
+        function getAccountsByIdentityForOfferId(providerNamespaceId:
+        AccountProviderNamespace, memberId: string, queryOnlyOwnerAccounts:
+        boolean, inlcudeDisabledAccounts: boolean, includeMSAAccounts: boolean,
         serviceOwners: function, galleryId: string, addUnlinkedSubscription?:
         boolean, queryAccountsByUpn?: boolean)
       return:
@@ -699,7 +706,7 @@ items:
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommerceHttpClient.getAzureSubscriptions
     name: >-
       getAzureSubscriptions(subscriptionIds: function, providerNamespaceId:
-      function)
+      AccountProviderNamespace)
     children: []
     langs:
       - typeScript
@@ -712,11 +719,11 @@ items:
           description: List of Subscriptions.
         - id: providerNamespaceId
           type:
-            - function
+            - AccountProviderNamespace
           description: Namespace id.
       content: >-
         function getAzureSubscriptions(subscriptionIds: function,
-        providerNamespaceId: function)
+        providerNamespaceId: AccountProviderNamespace)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -834,7 +841,7 @@ items:
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommerceHttpClient.getOfferSubscriptionForRenewalGroup
     name: >-
       getOfferSubscriptionForRenewalGroup(galleryId: string, renewalGroup:
-      function, nextBillingPeriod?: boolean)
+      ResourceRenewalGroup, nextBillingPeriod?: boolean)
     children: []
     langs:
       - typeScript
@@ -849,7 +856,7 @@ items:
           description: Name of the resource
         - id: renewalGroup
           type:
-            - function
+            - ResourceRenewalGroup
           description: The renewal group.
         - id: nextBillingPeriod
           type:
@@ -858,7 +865,7 @@ items:
           optional: true
       content: >-
         function getOfferSubscriptionForRenewalGroup(galleryId: string,
-        renewalGroup: function, nextBillingPeriod?: boolean)
+        renewalGroup: ResourceRenewalGroup, nextBillingPeriod?: boolean)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1034,7 +1041,7 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommerceHttpClient.getResourceStatusByResourceName
     name: >-
-      getResourceStatusByResourceName(resourceName: function,
+      getResourceStatusByResourceName(resourceName: ResourceName,
       nextBillingPeriod?: boolean)
     children: []
     langs:
@@ -1046,7 +1053,7 @@ items:
       parameters:
         - id: resourceName
           type:
-            - function
+            - ResourceName
           description: Name of the resource
         - id: nextBillingPeriod
           type:
@@ -1054,7 +1061,7 @@ items:
           description: True to return next billing cycle committed quantity
           optional: true
       content: >-
-        function getResourceStatusByResourceName(resourceName: function,
+        function getResourceStatusByResourceName(resourceName: ResourceName,
         nextBillingPeriod?: boolean)
       return:
         type:
@@ -1062,7 +1069,9 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommerceHttpClient.getSubscriptionAccount
-    name: 'getSubscriptionAccount(providerNamespaceId: function, accountId: string)'
+    name: >-
+      getSubscriptionAccount(providerNamespaceId: AccountProviderNamespace,
+      accountId: string)
     children: []
     langs:
       - typeScript
@@ -1073,15 +1082,15 @@ items:
       parameters:
         - id: providerNamespaceId
           type:
-            - function
+            - AccountProviderNamespace
           description: ''
         - id: accountId
           type:
             - string
           description: ''
       content: >-
-        function getSubscriptionAccount(providerNamespaceId: function,
-        accountId: string)
+        function getSubscriptionAccount(providerNamespaceId:
+        AccountProviderNamespace, accountId: string)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1120,8 +1129,9 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommerceHttpClient.linkAccount
     name: >-
-      linkAccount(subscriptionId: string, providerNamespaceId: function,
-      accountId: string, ownerId: string, hydrate?: boolean)
+      linkAccount(subscriptionId: string, providerNamespaceId:
+      AccountProviderNamespace, accountId: string, ownerId: string, hydrate?:
+      boolean)
     children: []
     langs:
       - typeScript
@@ -1134,7 +1144,7 @@ items:
           description: The subscription identifier.
         - id: providerNamespaceId
           type:
-            - function
+            - AccountProviderNamespace
           description: The provider namespace identifier.
         - id: accountId
           type:
@@ -1151,7 +1161,8 @@ items:
           optional: true
       content: >-
         function linkAccount(subscriptionId: string, providerNamespaceId:
-        function, accountId: string, ownerId: string, hydrate?: boolean)
+        AccountProviderNamespace, accountId: string, ownerId: string, hydrate?:
+        boolean)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1281,8 +1292,8 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommerceHttpClient.unlinkAccount
     name: >-
-      unlinkAccount(subscriptionId: string, providerNamespaceId: function,
-      accountId: string, ownerId: string)
+      unlinkAccount(subscriptionId: string, providerNamespaceId:
+      AccountProviderNamespace, accountId: string, ownerId: string)
     children: []
     langs:
       - typeScript
@@ -1295,7 +1306,7 @@ items:
           description: The subscription identifier.
         - id: providerNamespaceId
           type:
-            - function
+            - AccountProviderNamespace
           description: The provider namespace identifier.
         - id: accountId
           type:
@@ -1307,7 +1318,7 @@ items:
           description: The account owner identifier.
       content: >-
         function unlinkAccount(subscriptionId: string, providerNamespaceId:
-        function, accountId: string, ownerId: string)
+        AccountProviderNamespace, accountId: string, ownerId: string)
       return:
         type:
           - vss-web-extension-sdk.IPromise

@@ -1976,7 +1976,7 @@ items:
       vss-web-extension-sdk.TFS.TestManagement.RestClient.TestHttpClient.getTestResultById
     name: >-
       getTestResultById(project: string, runId: number, testCaseResultId:
-      number, detailsToInclude?: function)
+      number, detailsToInclude?: ResultDetails)
     children: []
     langs:
       - typeScript
@@ -1997,12 +1997,12 @@ items:
           description: ''
         - id: detailsToInclude
           type:
-            - function
+            - ResultDetails
           description: ''
           optional: true
       content: >-
         function getTestResultById(project: string, runId: number,
-        testCaseResultId: number, detailsToInclude?: function)
+        testCaseResultId: number, detailsToInclude?: ResultDetails)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -2111,7 +2111,7 @@ items:
       vss-web-extension-sdk.TFS.TestManagement.RestClient.TestHttpClient.getTestResults
     name: >-
       getTestResults(project: string, runId: number, detailsToInclude?:
-      function, skip?: number, top?: number)
+      ResultDetails, skip?: number, top?: number)
     children: []
     langs:
       - typeScript
@@ -2128,7 +2128,7 @@ items:
           description: ''
         - id: detailsToInclude
           type:
-            - function
+            - ResultDetails
           description: ''
           optional: true
         - id: skip
@@ -2143,7 +2143,7 @@ items:
           optional: true
       content: >-
         function getTestResults(project: string, runId: number,
-        detailsToInclude?: function, skip?: number, top?: number)
+        detailsToInclude?: ResultDetails, skip?: number, top?: number)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -2415,7 +2415,7 @@ items:
       vss-web-extension-sdk.TFS.TestManagement.RestClient.TestHttpClient.getTestSessions
     name: >-
       getTestSessions(teamContext: TeamContext, period?: number, allSessions?:
-      boolean, includeAllProperties?: boolean, source?: function,
+      boolean, includeAllProperties?: boolean, source?: TestSessionSource,
       includeOnlyCompletedSessions?: boolean)
     children: []
     langs:
@@ -2444,7 +2444,7 @@ items:
           optional: true
         - id: source
           type:
-            - function
+            - TestSessionSource
           description: ''
           optional: true
         - id: includeOnlyCompletedSessions
@@ -2455,7 +2455,7 @@ items:
       content: >-
         function getTestSessions(teamContext: TeamContext, period?: number,
         allSessions?: boolean, includeAllProperties?: boolean, source?:
-        function, includeOnlyCompletedSessions?: boolean)
+        TestSessionSource, includeOnlyCompletedSessions?: boolean)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -2751,7 +2751,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.TestHttpClient.queryCustomFields
-    name: 'queryCustomFields(project: string, scopeFilter: function)'
+    name: 'queryCustomFields(project: string, scopeFilter: CustomTestFieldScope)'
     children: []
     langs:
       - typeScript
@@ -2764,9 +2764,11 @@ items:
           description: Project ID or project name
         - id: scopeFilter
           type:
-            - function
+            - CustomTestFieldScope
           description: ''
-      content: 'function queryCustomFields(project: string, scopeFilter: function)'
+      content: >-
+        function queryCustomFields(project: string, scopeFilter:
+        CustomTestFieldScope)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -3038,10 +3040,10 @@ items:
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.TestHttpClient.queryTestRuns
     name: >-
-      queryTestRuns(project: string, state: function, minCompletedDate?: Date,
-      maxCompletedDate?: Date, planId?: number, IsAutomated?: boolean,
-      publishContext?: function, buildId?: number, buildDefId?: number,
-      branchName?: string, releaseId?: number, releaseDefId?: number,
+      queryTestRuns(project: string, state: TestRunState, minCompletedDate?:
+      Date, maxCompletedDate?: Date, planId?: number, IsAutomated?: boolean,
+      publishContext?: TestRunPublishContext, buildId?: number, buildDefId?:
+      number, branchName?: string, releaseId?: number, releaseDefId?: number,
       releaseEnvId?: number, releaseEnvDefId?: number, runTitle?: string, skip?:
       number, top?: number)
     children: []
@@ -3056,7 +3058,7 @@ items:
           description: Project ID or project name
         - id: state
           type:
-            - function
+            - TestRunState
           description: ''
         - id: minCompletedDate
           type:
@@ -3080,7 +3082,7 @@ items:
           optional: true
         - id: publishContext
           type:
-            - function
+            - TestRunPublishContext
           description: ''
           optional: true
         - id: buildId
@@ -3134,10 +3136,10 @@ items:
           description: ''
           optional: true
       content: >-
-        function queryTestRuns(project: string, state: function,
+        function queryTestRuns(project: string, state: TestRunState,
         minCompletedDate?: Date, maxCompletedDate?: Date, planId?: number,
-        IsAutomated?: boolean, publishContext?: function, buildId?: number,
-        buildDefId?: number, branchName?: string, releaseId?: number,
+        IsAutomated?: boolean, publishContext?: TestRunPublishContext, buildId?:
+        number, buildDefId?: number, branchName?: string, releaseId?: number,
         releaseDefId?: number, releaseEnvId?: number, releaseEnvDefId?: number,
         runTitle?: string, skip?: number, top?: number)
       return:

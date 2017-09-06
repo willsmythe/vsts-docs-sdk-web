@@ -401,7 +401,7 @@ items:
         type:
           - string
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.deleteBuild
-    name: 'deleteBuild(buildId: number, project?: string, type?: function)'
+    name: 'deleteBuild(buildId: number, project?: string, type?: DefinitionType)'
     children: []
     langs:
       - typeScript
@@ -419,10 +419,12 @@ items:
           optional: true
         - id: type
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
-      content: 'function deleteBuild(buildId: number, project?: string, type?: function)'
+      content: >-
+        function deleteBuild(buildId: number, project?: string, type?:
+        DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -549,7 +551,7 @@ items:
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.getArtifact
     name: >-
       getArtifact(buildId: number, artifactName: string, project?: string,
-      definitionType?: function)
+      definitionType?: DefinitionType)
     children: []
     langs:
       - typeScript
@@ -571,12 +573,12 @@ items:
           optional: true
         - id: definitionType
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
       content: >-
         function getArtifact(buildId: number, artifactName: string, project?:
-        string, definitionType?: function)
+        string, definitionType?: DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -585,7 +587,7 @@ items:
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.getArtifactContentZip
     name: >-
       getArtifactContentZip(buildId: number, artifactName: string, project?:
-      string, definitionType?: function)
+      string, definitionType?: DefinitionType)
     children: []
     langs:
       - typeScript
@@ -607,18 +609,20 @@ items:
           optional: true
         - id: definitionType
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
       content: >-
         function getArtifactContentZip(buildId: number, artifactName: string,
-        project?: string, definitionType?: function)
+        project?: string, definitionType?: DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.getArtifacts
-    name: 'getArtifacts(buildId: number, project?: string, definitionType?: function)'
+    name: >-
+      getArtifacts(buildId: number, project?: string, definitionType?:
+      DefinitionType)
     children: []
     langs:
       - typeScript
@@ -636,12 +640,12 @@ items:
           optional: true
         - id: definitionType
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
       content: >-
         function getArtifacts(buildId: number, project?: string,
-        definitionType?: function)
+        definitionType?: DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -677,7 +681,7 @@ items:
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.getBuild
     name: >-
       getBuild(buildId: number, project?: string, propertyFilters?: string,
-      type?: function)
+      type?: DefinitionType)
     children: []
     langs:
       - typeScript
@@ -700,12 +704,12 @@ items:
           optional: true
         - id: type
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
       content: >-
         function getBuild(buildId: number, project?: string, propertyFilters?:
-        string, type?: function)
+        string, type?: DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -786,7 +790,8 @@ items:
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.getBuildChanges
     name: >-
       getBuildChanges(project: string, buildId: number, continuationToken?:
-      string, top?: number, includeSourceChange?: boolean, type?: function)
+      string, top?: number, includeSourceChange?: boolean, type?:
+      DefinitionType)
     children: []
     langs:
       - typeScript
@@ -818,13 +823,13 @@ items:
           optional: true
         - id: type
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
       content: >-
         function getBuildChanges(project: string, buildId: number,
         continuationToken?: string, top?: number, includeSourceChange?: boolean,
-        type?: function)
+        type?: DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -891,7 +896,7 @@ items:
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.getBuildLog
     name: >-
       getBuildLog(project: string, buildId: number, logId: number, startLine?:
-      number, endLine?: number, type?: function)
+      number, endLine?: number, type?: DefinitionType)
     children: []
     langs:
       - typeScript
@@ -922,18 +927,18 @@ items:
           optional: true
         - id: type
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
       content: >-
         function getBuildLog(project: string, buildId: number, logId: number,
-        startLine?: number, endLine?: number, type?: function)
+        startLine?: number, endLine?: number, type?: DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.getBuildLogs
-    name: 'getBuildLogs(project: string, buildId: number, type?: function)'
+    name: 'getBuildLogs(project: string, buildId: number, type?: DefinitionType)'
     children: []
     langs:
       - typeScript
@@ -950,17 +955,19 @@ items:
           description: ''
         - id: type
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
-      content: 'function getBuildLogs(project: string, buildId: number, type?: function)'
+      content: >-
+        function getBuildLogs(project: string, buildId: number, type?:
+        DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.getBuildLogsZip
-    name: 'getBuildLogsZip(project: string, buildId: number, type?: function)'
+    name: 'getBuildLogsZip(project: string, buildId: number, type?: DefinitionType)'
     children: []
     langs:
       - typeScript
@@ -977,12 +984,12 @@ items:
           description: ''
         - id: type
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
       content: >-
         function getBuildLogsZip(project: string, buildId: number, type?:
-        function)
+        DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1010,7 +1017,7 @@ items:
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.getBuildReport
     name: >-
       getBuildReport(project: string, buildId: number, type?: string,
-      definitionType?: function)
+      definitionType?: DefinitionType)
     children: []
     langs:
       - typeScript
@@ -1032,12 +1039,12 @@ items:
           optional: true
         - id: definitionType
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
       content: >-
         function getBuildReport(project: string, buildId: number, type?: string,
-        definitionType?: function)
+        definitionType?: DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1046,7 +1053,7 @@ items:
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.getBuildReportHtmlContent
     name: >-
       getBuildReportHtmlContent(project: string, buildId: number, type?: string,
-      definitionType?: function)
+      definitionType?: DefinitionType)
     children: []
     langs:
       - typeScript
@@ -1068,12 +1075,12 @@ items:
           optional: true
         - id: definitionType
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
       content: >-
         function getBuildReportHtmlContent(project: string, buildId: number,
-        type?: string, definitionType?: function)
+        type?: string, definitionType?: DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1082,11 +1089,12 @@ items:
     name: >-
       getBuilds(project?: string, definitions?: function, queues?: function,
       buildNumber?: string, minFinishTime?: Date, maxFinishTime?: Date,
-      requestedFor?: string, reasonFilter?: function, statusFilter?: function,
-      resultFilter?: function, tagFilters?: function, properties?: function,
-      type?: function, top?: number, continuationToken?: string,
-      maxBuildsPerDefinition?: number, deletedFilter?: function, queryOrder?:
-      function, branchName?: string)
+      requestedFor?: string, reasonFilter?: BuildReason, statusFilter?:
+      BuildStatus, resultFilter?: BuildResult, tagFilters?: function,
+      properties?: function, type?: DefinitionType, top?: number,
+      continuationToken?: string, maxBuildsPerDefinition?: number,
+      deletedFilter?: QueryDeletedOption, queryOrder?: BuildQueryOrder,
+      branchName?: string)
     children: []
     langs:
       - typeScript
@@ -1130,17 +1138,17 @@ items:
           optional: true
         - id: reasonFilter
           type:
-            - function
+            - BuildReason
           description: ''
           optional: true
         - id: statusFilter
           type:
-            - function
+            - BuildStatus
           description: ''
           optional: true
         - id: resultFilter
           type:
-            - function
+            - BuildResult
           description: ''
           optional: true
         - id: tagFilters
@@ -1155,7 +1163,7 @@ items:
           optional: true
         - id: type
           type:
-            - function
+            - DefinitionType
           description: The definition type
           optional: true
         - id: top
@@ -1175,12 +1183,12 @@ items:
           optional: true
         - id: deletedFilter
           type:
-            - function
+            - QueryDeletedOption
           description: ''
           optional: true
         - id: queryOrder
           type:
-            - function
+            - BuildQueryOrder
           description: ''
           optional: true
         - id: branchName
@@ -1191,11 +1199,12 @@ items:
       content: >-
         function getBuilds(project?: string, definitions?: function, queues?:
         function, buildNumber?: string, minFinishTime?: Date, maxFinishTime?:
-        Date, requestedFor?: string, reasonFilter?: function, statusFilter?:
-        function, resultFilter?: function, tagFilters?: function, properties?:
-        function, type?: function, top?: number, continuationToken?: string,
-        maxBuildsPerDefinition?: number, deletedFilter?: function, queryOrder?:
-        function, branchName?: string)
+        Date, requestedFor?: string, reasonFilter?: BuildReason, statusFilter?:
+        BuildStatus, resultFilter?: BuildResult, tagFilters?: function,
+        properties?: function, type?: DefinitionType, top?: number,
+        continuationToken?: string, maxBuildsPerDefinition?: number,
+        deletedFilter?: QueryDeletedOption, queryOrder?: BuildQueryOrder,
+        branchName?: string)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1280,7 +1289,7 @@ items:
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.getBuildWorkItemsRefs
     name: >-
       getBuildWorkItemsRefs(project: string, buildId: number, top?: number,
-      type?: function)
+      type?: DefinitionType)
     children: []
     langs:
       - typeScript
@@ -1302,12 +1311,12 @@ items:
           optional: true
         - id: type
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
       content: >-
         function getBuildWorkItemsRefs(project: string, buildId: number, top?:
-        number, type?: function)
+        number, type?: DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1316,7 +1325,7 @@ items:
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.getBuildWorkItemsRefsFromCommits
     name: >-
       getBuildWorkItemsRefsFromCommits(commitIds: function, project: string,
-      buildId: number, top?: number, type?: function)
+      buildId: number, top?: number, type?: DefinitionType)
     children: []
     langs:
       - typeScript
@@ -1344,12 +1353,12 @@ items:
           optional: true
         - id: type
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
       content: >-
         function getBuildWorkItemsRefsFromCommits(commitIds: function, project:
-        string, buildId: number, top?: number, type?: function)
+        string, buildId: number, top?: number, type?: DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1395,7 +1404,7 @@ items:
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.getDefinition
     name: >-
       getDefinition(definitionId: number, project?: string, revision?: number,
-      propertyFilters?: function, type?: function)
+      propertyFilters?: function, type?: DefinitionType)
     children: []
     langs:
       - typeScript
@@ -1423,12 +1432,12 @@ items:
           optional: true
         - id: type
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
       content: >-
         function getDefinition(definitionId: number, project?: string,
-        revision?: number, propertyFilters?: function, type?: function)
+        revision?: number, propertyFilters?: function, type?: DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1458,9 +1467,9 @@ items:
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.getDefinitions
     name: >-
-      getDefinitions(project?: string, name?: string, type?: function,
-      repositoryId?: string, repositoryType?: string, queryOrder?: function,
-      top?: number)
+      getDefinitions(project?: string, name?: string, type?: DefinitionType,
+      repositoryId?: string, repositoryType?: string, queryOrder?:
+      DefinitionQueryOrder, top?: number)
     children: []
     langs:
       - typeScript
@@ -1479,7 +1488,7 @@ items:
           optional: true
         - id: type
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
         - id: repositoryId
@@ -1494,7 +1503,7 @@ items:
           optional: true
         - id: queryOrder
           type:
-            - function
+            - DefinitionQueryOrder
           description: ''
           optional: true
         - id: top
@@ -1504,8 +1513,8 @@ items:
           optional: true
       content: >-
         function getDefinitions(project?: string, name?: string, type?:
-        function, repositoryId?: string, repositoryType?: string, queryOrder?:
-        function, top?: number)
+        DefinitionType, repositoryId?: string, repositoryType?: string,
+        queryOrder?: DefinitionQueryOrder, top?: number)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1650,7 +1659,7 @@ items:
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.queueBuild
     name: >-
       queueBuild(build: Build, project?: string, ignoreWarnings?: boolean,
-      checkInTicket?: string, type?: function)
+      checkInTicket?: string, type?: DefinitionType)
     children: []
     langs:
       - typeScript
@@ -1678,12 +1687,12 @@ items:
           optional: true
         - id: type
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
       content: >-
         function queueBuild(build: Build, project?: string, ignoreWarnings?:
-        boolean, checkInTicket?: string, type?: function)
+        boolean, checkInTicket?: string, type?: DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1825,7 +1834,7 @@ items:
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.updateBuild
     name: >-
       updateBuild(build: Build, buildId: number, project?: string, type?:
-      function)
+      DefinitionType)
     children: []
     langs:
       - typeScript
@@ -1847,12 +1856,12 @@ items:
           optional: true
         - id: type
           type:
-            - function
+            - DefinitionType
           description: ''
           optional: true
       content: >-
         function updateBuild(build: Build, buildId: number, project?: string,
-        type?: function)
+        type?: DefinitionType)
       return:
         type:
           - vss-web-extension-sdk.IPromise

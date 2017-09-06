@@ -35,8 +35,8 @@ items:
     name: >-
       MenuContributionProvider(menu: Menu, webContext: WebContext,
       contributionIds: function, contributionType: string,
-      contributionQueryOptions: function, getMenuActionContext: function,
-      options: MenuContributionProviderOptions)
+      contributionQueryOptions: ContributionQueryOptions, getMenuActionContext:
+      function, options: MenuContributionProviderOptions)
     children: []
     langs:
       - typeScript
@@ -61,11 +61,10 @@ items:
           description: ''
         - id: contributionQueryOptions
           type:
-            - function
+            - ContributionQueryOptions
           description: ''
         - id: getMenuActionContext
-          type:
-            - function
+          type: []
           description: ''
         - id: options
           type:
@@ -75,6 +74,7 @@ items:
       content: >-
         new MenuContributionProvider(menu: Menu, webContext: WebContext,
         contributionIds: function, contributionType: string,
-        contributionQueryOptions: function, getMenuActionContext: function,
-        options: MenuContributionProviderOptions)
+        contributionQueryOptions: ContributionQueryOptions,
+        getMenuActionContext: function, options:
+        MenuContributionProviderOptions)
     type: constructor

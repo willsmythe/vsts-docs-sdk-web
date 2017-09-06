@@ -58,7 +58,7 @@ items:
           - number
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.getTerms
-    name: 'getTerms(searchText: function, delimiter?: function)'
+    name: 'getTerms(searchText: function, delimiter?: string)'
     children: []
     langs:
       - typeScript
@@ -73,10 +73,10 @@ items:
           description: The searchText to split up.
         - id: delimiter
           type:
-            - function
+            - string
           description: The string or regex delimiter to use to split up the search terms
           optional: true
-      content: 'function getTerms(searchText: function, delimiter?: function)'
+      content: 'function getTerms(searchText: function, delimiter?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.constructor
     name: >-

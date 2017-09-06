@@ -691,7 +691,7 @@ items:
       vss-web-extension-sdk.VSS.Gallery.RestClient.GalleryHttpClient2_1.getExtension
     name: >-
       getExtension(publisherName: string, extensionName: string, version?:
-      string, flags?: function, accountToken?: string)
+      string, flags?: ExtensionQueryFlags, accountToken?: string)
     children: []
     langs:
       - typeScript
@@ -713,7 +713,7 @@ items:
           optional: true
         - id: flags
           type:
-            - function
+            - ExtensionQueryFlags
           description: ''
           optional: true
         - id: accountToken
@@ -723,14 +723,16 @@ items:
           optional: true
       content: >-
         function getExtension(publisherName: string, extensionName: string,
-        version?: string, flags?: function, accountToken?: string)
+        version?: string, flags?: ExtensionQueryFlags, accountToken?: string)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Gallery.RestClient.GalleryHttpClient2_1.getExtensionById
-    name: 'getExtensionById(extensionId: string, version?: string, flags?: function)'
+    name: >-
+      getExtensionById(extensionId: string, version?: string, flags?:
+      ExtensionQueryFlags)
     children: []
     langs:
       - typeScript
@@ -748,12 +750,12 @@ items:
           optional: true
         - id: flags
           type:
-            - function
+            - ExtensionQueryFlags
           description: ''
           optional: true
       content: >-
         function getExtensionById(extensionId: string, version?: string, flags?:
-        function)
+        ExtensionQueryFlags)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1145,7 +1147,7 @@ items:
       vss-web-extension-sdk.VSS.Gallery.RestClient.GalleryHttpClient2_1.updateExtensionProperties
     name: >-
       updateExtensionProperties(publisherName: string, extensionName: string,
-      flags: function)
+      flags: PublishedExtensionFlags)
     children: []
     langs:
       - typeScript
@@ -1162,11 +1164,11 @@ items:
           description: ''
         - id: flags
           type:
-            - function
+            - PublishedExtensionFlags
           description: ''
       content: >-
         function updateExtensionProperties(publisherName: string, extensionName:
-        string, flags: function)
+        string, flags: PublishedExtensionFlags)
       return:
         type:
           - vss-web-extension-sdk.IPromise

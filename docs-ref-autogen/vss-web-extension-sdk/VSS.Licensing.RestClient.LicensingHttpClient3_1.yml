@@ -542,7 +542,9 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.LicensingHttpClient3_1.getEligibleUsersForExtension
-    name: 'getEligibleUsersForExtension(extensionId: string, options: function)'
+    name: >-
+      getEligibleUsersForExtension(extensionId: string, options:
+      ExtensionFilterOptions)
     children: []
     langs:
       - typeScript
@@ -558,11 +560,11 @@ items:
           description: The extension to check the eligibility of the users for.
         - id: options
           type:
-            - function
+            - ExtensionFilterOptions
           description: The options to filter the list.
       content: >-
         function getEligibleUsersForExtension(extensionId: string, options:
-        function)
+        ExtensionFilterOptions)
       return:
         type:
           - vss-web-extension-sdk.IPromise

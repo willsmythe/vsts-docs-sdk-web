@@ -79,8 +79,8 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.DelegatedAuthorization.RestClient.DelegatedAuthorizationHttpClient2_1.authorize
     name: >-
-      authorize(responseType: function, clientId: string, redirectUri: string,
-      scopes: string, userId?: string)
+      authorize(responseType: ResponseType, clientId: string, redirectUri:
+      string, scopes: string, userId?: string)
     children: []
     langs:
       - typeScript
@@ -89,7 +89,7 @@ items:
       parameters:
         - id: responseType
           type:
-            - function
+            - ResponseType
           description: ''
         - id: clientId
           type:
@@ -109,7 +109,7 @@ items:
           description: ''
           optional: true
       content: >-
-        function authorize(responseType: function, clientId: string,
+        function authorize(responseType: ResponseType, clientId: string,
         redirectUri: string, scopes: string, userId?: string)
       return:
         type:
@@ -337,7 +337,7 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.DelegatedAuthorization.RestClient.DelegatedAuthorizationHttpClient2_1.initiateAuthorization
     name: >-
-      initiateAuthorization(responseType: function, clientId: string,
+      initiateAuthorization(responseType: ResponseType, clientId: string,
       redirectUri: string, scopes: string, userId?: string)
     children: []
     langs:
@@ -347,7 +347,7 @@ items:
       parameters:
         - id: responseType
           type:
-            - function
+            - ResponseType
           description: ''
         - id: clientId
           type:
@@ -367,8 +367,8 @@ items:
           description: ''
           optional: true
       content: >-
-        function initiateAuthorization(responseType: function, clientId: string,
-        redirectUri: string, scopes: string, userId?: string)
+        function initiateAuthorization(responseType: ResponseType, clientId:
+        string, redirectUri: string, scopes: string, userId?: string)
       return:
         type:
           - vss-web-extension-sdk.IPromise

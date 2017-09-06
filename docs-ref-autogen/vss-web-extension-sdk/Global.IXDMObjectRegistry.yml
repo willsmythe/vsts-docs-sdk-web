@@ -38,7 +38,7 @@ items:
           - T
     type: method
   - uid: vss-web-extension-sdk.IXDMObjectRegistry.register
-    name: 'register(instanceId: string, instance: function)'
+    name: 'register(instanceId: string, instance: Object)'
     children: []
     langs:
       - typeScript
@@ -53,11 +53,11 @@ items:
           description: unique id of the registered object
         - id: instance
           type:
-            - function
+            - Object
           description: >
             Either: (1) an object instance, or (2) a function that takes
             optional context data and returns an object instance.
-      content: 'function register(instanceId: string, instance: function)'
+      content: 'function register(instanceId: string, instance: Object)'
     type: method
   - uid: vss-web-extension-sdk.IXDMObjectRegistry.unregister
     name: 'unregister(instanceId: string)'

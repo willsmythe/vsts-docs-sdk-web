@@ -262,8 +262,8 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Organization.RestClient.OrganizationHttpClient3_2.getOrganizations
     name: >-
-      getOrganizations(searchKind: function, searchValue: string, isActivated?:
-      boolean)
+      getOrganizations(searchKind: OrganizationSearchKind, searchValue: string,
+      isActivated?: boolean)
     children: []
     langs:
       - typeScript
@@ -272,7 +272,7 @@ items:
       parameters:
         - id: searchKind
           type:
-            - function
+            - OrganizationSearchKind
           description: ''
         - id: searchValue
           type:
@@ -284,8 +284,8 @@ items:
           description: ''
           optional: true
       content: >-
-        function getOrganizations(searchKind: function, searchValue: string,
-        isActivated?: boolean)
+        function getOrganizations(searchKind: OrganizationSearchKind,
+        searchValue: string, isActivated?: boolean)
       return:
         type:
           - vss-web-extension-sdk.IPromise

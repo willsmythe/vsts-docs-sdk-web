@@ -457,7 +457,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3To4.deleteAgentRequest
     name: >-
       deleteAgentRequest(poolId: number, requestId: number, lockToken: string,
-      result?: function)
+      result?: TaskResult)
     children: []
     langs:
       - typeScript
@@ -478,12 +478,12 @@ items:
           description: ''
         - id: result
           type:
-            - function
+            - TaskResult
           description: ''
           optional: true
       content: >-
         function deleteAgentRequest(poolId: number, requestId: number,
-        lockToken: string, result?: function)
+        lockToken: string, result?: TaskResult)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -709,7 +709,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3To4.getAgentPool
     name: >-
       getAgentPool(poolId: number, properties?: function, actionFilter?:
-      function)
+      TaskAgentPoolActionFilter)
     children: []
     langs:
       - typeScript
@@ -727,12 +727,12 @@ items:
           optional: true
         - id: actionFilter
           type:
-            - function
+            - TaskAgentPoolActionFilter
           description: ''
           optional: true
       content: >-
         function getAgentPool(poolId: number, properties?: function,
-        actionFilter?: function)
+        actionFilter?: TaskAgentPoolActionFilter)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -760,7 +760,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3To4.getAgentPools
     name: >-
       getAgentPools(poolName?: string, properties?: function, poolType?:
-      function, actionFilter?: function)
+      TaskAgentPoolType, actionFilter?: TaskAgentPoolActionFilter)
     children: []
     langs:
       - typeScript
@@ -779,24 +779,26 @@ items:
           optional: true
         - id: poolType
           type:
-            - function
+            - TaskAgentPoolType
           description: ''
           optional: true
         - id: actionFilter
           type:
-            - function
+            - TaskAgentPoolActionFilter
           description: ''
           optional: true
       content: >-
         function getAgentPools(poolName?: string, properties?: function,
-        poolType?: function, actionFilter?: function)
+        poolType?: TaskAgentPoolType, actionFilter?: TaskAgentPoolActionFilter)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3To4.getAgentQueue
-    name: 'getAgentQueue(queueId: number, project?: string, actionFilter?: function)'
+    name: >-
+      getAgentQueue(queueId: number, project?: string, actionFilter?:
+      TaskAgentQueueActionFilter)
     children: []
     langs:
       - typeScript
@@ -814,12 +816,12 @@ items:
           optional: true
         - id: actionFilter
           type:
-            - function
+            - TaskAgentQueueActionFilter
           description: ''
           optional: true
       content: >-
         function getAgentQueue(queueId: number, project?: string, actionFilter?:
-        function)
+        TaskAgentQueueActionFilter)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -847,7 +849,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3To4.getAgentQueues
     name: >-
       getAgentQueues(project?: string, queueName?: string, actionFilter?:
-      function)
+      TaskAgentQueueActionFilter)
     children: []
     langs:
       - typeScript
@@ -866,12 +868,12 @@ items:
           optional: true
         - id: actionFilter
           type:
-            - function
+            - TaskAgentQueueActionFilter
           description: ''
           optional: true
       content: >-
         function getAgentQueues(project?: string, queueName?: string,
-        actionFilter?: function)
+        actionFilter?: TaskAgentQueueActionFilter)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1846,8 +1848,8 @@ items:
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3To4.updateAgentUserCapabilities
     name: >-
-      updateAgentUserCapabilities(userCapabilities: function, poolId: number,
-      agentId: number)
+      updateAgentUserCapabilities(userCapabilities: [key: string]: string,
+      poolId: number, agentId: number)
     children: []
     langs:
       - typeScript
@@ -1856,7 +1858,7 @@ items:
       parameters:
         - id: userCapabilities
           type:
-            - function
+            - '[key: string]: string'
           description: ''
         - id: poolId
           type:
@@ -1867,8 +1869,8 @@ items:
             - number
           description: ''
       content: >-
-        function updateAgentUserCapabilities(userCapabilities: function, poolId:
-        number, agentId: number)
+        function updateAgentUserCapabilities(userCapabilities: [key: string]:
+        string, poolId: number, agentId: number)
       return:
         type:
           - vss-web-extension-sdk.IPromise

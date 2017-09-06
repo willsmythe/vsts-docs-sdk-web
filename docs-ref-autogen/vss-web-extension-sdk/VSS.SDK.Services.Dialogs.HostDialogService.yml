@@ -25,8 +25,7 @@ items:
     summary: ''
     syntax:
       return:
-        type:
-          - union
+        type: []
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Dialogs.HostDialogService.openDialog
     name: >-
@@ -69,7 +68,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Dialogs.HostDialogService.openMessageDialog
-    name: 'openMessageDialog(message: function, options?: IOpenMessageDialogOptions)'
+    name: 'openMessageDialog(message: string, options?: IOpenMessageDialogOptions)'
     children: []
     langs:
       - typeScript
@@ -80,7 +79,7 @@ items:
       parameters:
         - id: message
           type:
-            - function
+            - string
           description: >-
             the message to display in the dialog. If it's a string, the message
             is displayed as plain text (no html). For HTML display, pass in a
@@ -91,7 +90,7 @@ items:
           description: ''
           optional: true
       content: >-
-        function openMessageDialog(message: function, options?:
+        function openMessageDialog(message: string, options?:
         IOpenMessageDialogOptions)
       return:
         type:

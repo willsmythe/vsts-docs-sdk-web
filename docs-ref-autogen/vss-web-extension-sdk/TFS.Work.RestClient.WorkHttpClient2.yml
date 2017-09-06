@@ -788,7 +788,9 @@ items:
         type:
           - string
   - uid: vss-web-extension-sdk.TFS.Work.RestClient.WorkHttpClient2.setBoardOptions
-    name: 'setBoardOptions(options: function, teamContext: TeamContext, id: string)'
+    name: >-
+      setBoardOptions(options: [key: string]: string, teamContext: TeamContext,
+      id: string)
     children: []
     langs:
       - typeScript
@@ -797,7 +799,7 @@ items:
       parameters:
         - id: options
           type:
-            - function
+            - '[key: string]: string'
           description: options to updated
         - id: teamContext
           type:
@@ -810,8 +812,8 @@ items:
             identifier for board, either category plural name (Eg:"Stories") or
             guid
       content: >-
-        function setBoardOptions(options: function, teamContext: TeamContext,
-        id: string)
+        function setBoardOptions(options: [key: string]: string, teamContext:
+        TeamContext, id: string)
       return:
         type:
           - vss-web-extension-sdk.IPromise

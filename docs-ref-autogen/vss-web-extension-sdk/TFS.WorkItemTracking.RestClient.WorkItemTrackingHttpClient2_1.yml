@@ -310,7 +310,7 @@ items:
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2_1.createOrUpdateClassificationNode
     name: >-
       createOrUpdateClassificationNode(postedNode: WorkItemClassificationNode,
-      project: string, structureGroup: function, path?: string)
+      project: string, structureGroup: TreeStructureGroup, path?: string)
     children: []
     langs:
       - typeScript
@@ -328,7 +328,7 @@ items:
           description: Project ID or project name
         - id: structureGroup
           type:
-            - function
+            - TreeStructureGroup
           description: ''
         - id: path
           type:
@@ -337,8 +337,8 @@ items:
           optional: true
       content: >-
         function createOrUpdateClassificationNode(postedNode:
-        WorkItemClassificationNode, project: string, structureGroup: function,
-        path?: string)
+        WorkItemClassificationNode, project: string, structureGroup:
+        TreeStructureGroup, path?: string)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -426,8 +426,8 @@ items:
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2_1.deleteClassificationNode
     name: >-
-      deleteClassificationNode(project: string, structureGroup: function, path?:
-      string, reclassifyId?: number)
+      deleteClassificationNode(project: string, structureGroup:
+      TreeStructureGroup, path?: string, reclassifyId?: number)
     children: []
     langs:
       - typeScript
@@ -440,7 +440,7 @@ items:
           description: Project ID or project name
         - id: structureGroup
           type:
-            - function
+            - TreeStructureGroup
           description: ''
         - id: path
           type:
@@ -454,7 +454,7 @@ items:
           optional: true
       content: >-
         function deleteClassificationNode(project: string, structureGroup:
-        function, path?: string, reclassifyId?: number)
+        TreeStructureGroup, path?: string, reclassifyId?: number)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -677,8 +677,8 @@ items:
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2_1.getClassificationNode
     name: >-
-      getClassificationNode(project: string, structureGroup: function, path?:
-      string, depth?: number)
+      getClassificationNode(project: string, structureGroup: TreeStructureGroup,
+      path?: string, depth?: number)
     children: []
     langs:
       - typeScript
@@ -691,7 +691,7 @@ items:
           description: Project ID or project name
         - id: structureGroup
           type:
-            - function
+            - TreeStructureGroup
           description: ''
         - id: path
           type:
@@ -705,7 +705,7 @@ items:
           optional: true
       content: >-
         function getClassificationNode(project: string, structureGroup:
-        function, path?: string, depth?: number)
+        TreeStructureGroup, path?: string, depth?: number)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -830,7 +830,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2_1.getFields
-    name: 'getFields(project?: string, expand?: function)'
+    name: 'getFields(project?: string, expand?: GetFieldsExpand)'
     children: []
     langs:
       - typeScript
@@ -844,13 +844,13 @@ items:
           optional: true
         - id: expand
           type:
-            - function
+            - GetFieldsExpand
           description: >-
             Use ExtensionFields to include extension fields, otherwise exclude
             them. Unless the feature flag for this parameter is enabled,
             extension fields are always included.
           optional: true
-      content: 'function getFields(project?: string, expand?: function)'
+      content: 'function getFields(project?: string, expand?: GetFieldsExpand)'
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -908,7 +908,7 @@ items:
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2_1.getQueries
     name: >-
-      getQueries(project: string, expand?: function, depth?: number,
+      getQueries(project: string, expand?: QueryExpand, depth?: number,
       includeDeleted?: boolean)
     children: []
     langs:
@@ -922,7 +922,7 @@ items:
           description: Project ID or project name
         - id: expand
           type:
-            - function
+            - QueryExpand
           description: ''
           optional: true
         - id: depth
@@ -936,8 +936,8 @@ items:
           description: ''
           optional: true
       content: >-
-        function getQueries(project: string, expand?: function, depth?: number,
-        includeDeleted?: boolean)
+        function getQueries(project: string, expand?: QueryExpand, depth?:
+        number, includeDeleted?: boolean)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -945,7 +945,7 @@ items:
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2_1.getQuery
     name: >-
-      getQuery(project: string, query: string, expand?: function, depth?:
+      getQuery(project: string, query: string, expand?: QueryExpand, depth?:
       number, includeDeleted?: boolean)
     children: []
     langs:
@@ -963,7 +963,7 @@ items:
           description: ''
         - id: expand
           type:
-            - function
+            - QueryExpand
           description: ''
           optional: true
         - id: depth
@@ -977,7 +977,7 @@ items:
           description: ''
           optional: true
       content: >-
-        function getQuery(project: string, query: string, expand?: function,
+        function getQuery(project: string, query: string, expand?: QueryExpand,
         depth?: number, includeDeleted?: boolean)
       return:
         type:
@@ -1099,7 +1099,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2_1.getRevision
-    name: 'getRevision(id: number, revisionNumber: number, expand?: function)'
+    name: 'getRevision(id: number, revisionNumber: number, expand?: WorkItemExpand)'
     children: []
     langs:
       - typeScript
@@ -1116,19 +1116,21 @@ items:
           description: ''
         - id: expand
           type:
-            - function
+            - WorkItemExpand
           description: ''
           optional: true
       content: >-
         function getRevision(id: number, revisionNumber: number, expand?:
-        function)
+        WorkItemExpand)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2_1.getRevisions
-    name: 'getRevisions(id: number, top?: number, skip?: number, expand?: function)'
+    name: >-
+      getRevisions(id: number, top?: number, skip?: number, expand?:
+      WorkItemExpand)
     children: []
     langs:
       - typeScript
@@ -1151,12 +1153,12 @@ items:
           optional: true
         - id: expand
           type:
-            - function
+            - WorkItemExpand
           description: ''
           optional: true
       content: >-
         function getRevisions(id: number, top?: number, skip?: number, expand?:
-        function)
+        WorkItemExpand)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1236,7 +1238,9 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2_1.getWorkItem
-    name: 'getWorkItem(id: number, fields?: function, asOf?: Date, expand?: function)'
+    name: >-
+      getWorkItem(id: number, fields?: function, asOf?: Date, expand?:
+      WorkItemExpand)
     children: []
     langs:
       - typeScript
@@ -1259,12 +1263,12 @@ items:
           optional: true
         - id: expand
           type:
-            - function
+            - WorkItemExpand
           description: ''
           optional: true
       content: >-
         function getWorkItem(id: number, fields?: function, asOf?: Date,
-        expand?: function)
+        expand?: WorkItemExpand)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1347,7 +1351,7 @@ items:
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2_1.getWorkItems
     name: >-
       getWorkItems(ids: function, fields?: function, asOf?: Date, expand?:
-      function, errorPolicy?: function)
+      WorkItemExpand, errorPolicy?: WorkItemErrorPolicy)
     children: []
     langs:
       - typeScript
@@ -1370,17 +1374,17 @@ items:
           optional: true
         - id: expand
           type:
-            - function
+            - WorkItemExpand
           description: ''
           optional: true
         - id: errorPolicy
           type:
-            - function
+            - WorkItemErrorPolicy
           description: ''
           optional: true
       content: >-
         function getWorkItems(ids: function, fields?: function, asOf?: Date,
-        expand?: function, errorPolicy?: function)
+        expand?: WorkItemExpand, errorPolicy?: WorkItemErrorPolicy)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1389,7 +1393,7 @@ items:
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2_1.getWorkItemTemplate
     name: >-
       getWorkItemTemplate(project: string, type: string, fields?: string, asOf?:
-      Date, expand?: function)
+      Date, expand?: WorkItemExpand)
     children: []
     langs:
       - typeScript
@@ -1416,12 +1420,12 @@ items:
           optional: true
         - id: expand
           type:
-            - function
+            - WorkItemExpand
           description: ''
           optional: true
       content: >-
         function getWorkItemTemplate(project: string, type: string, fields?:
-        string, asOf?: Date, expand?: function)
+        string, asOf?: Date, expand?: WorkItemExpand)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1810,7 +1814,7 @@ items:
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2_1.searchQueries
     name: >-
       searchQueries(project: string, filter: string, top?: number, expand?:
-      function, includeDeleted?: boolean)
+      QueryExpand, includeDeleted?: boolean)
     children: []
     langs:
       - typeScript
@@ -1832,7 +1836,7 @@ items:
           optional: true
         - id: expand
           type:
-            - function
+            - QueryExpand
           description: ''
           optional: true
         - id: includeDeleted
@@ -1842,7 +1846,7 @@ items:
           optional: true
       content: >-
         function searchQueries(project: string, filter: string, top?: number,
-        expand?: function, includeDeleted?: boolean)
+        expand?: QueryExpand, includeDeleted?: boolean)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1864,7 +1868,7 @@ items:
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2_1.updateClassificationNode
     name: >-
       updateClassificationNode(postedNode: WorkItemClassificationNode, project:
-      string, structureGroup: function, path?: string)
+      string, structureGroup: TreeStructureGroup, path?: string)
     children: []
     langs:
       - typeScript
@@ -1882,7 +1886,7 @@ items:
           description: Project ID or project name
         - id: structureGroup
           type:
-            - function
+            - TreeStructureGroup
           description: ''
         - id: path
           type:
@@ -1891,8 +1895,8 @@ items:
           optional: true
       content: >-
         function updateClassificationNode(postedNode:
-        WorkItemClassificationNode, project: string, structureGroup: function,
-        path?: string)
+        WorkItemClassificationNode, project: string, structureGroup:
+        TreeStructureGroup, path?: string)
       return:
         type:
           - vss-web-extension-sdk.IPromise

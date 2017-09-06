@@ -105,7 +105,7 @@ items:
     module: VSS/Controls/PopupContent
   - uid: vss-web-extension-sdk.VSS.Controls.PopupContent.RichContentTooltip.add
     name: >-
-      add(content: function, target: function, options?:
+      add(content: string, target: HTMLElement, options?:
       IRichContentTooltipOptions)
     children: []
     langs:
@@ -115,11 +115,11 @@ items:
       parameters:
         - id: content
           type:
-            - function
+            - string
           description: ''
         - id: target
           type:
-            - function
+            - HTMLElement
           description: ''
         - id: options
           type:
@@ -129,7 +129,7 @@ items:
 
           optional: true
       content: >-
-        function add(content: function, target: function, options?:
+        function add(content: string, target: HTMLElement, options?:
         IRichContentTooltipOptions)
       return:
         type:
@@ -138,7 +138,7 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.PopupContent.RichContentTooltip.addIfOverflow
     name: >-
-      addIfOverflow(content: function, target: function, options?:
+      addIfOverflow(content: string, target: HTMLElement, options?:
       IRichContentTooltipOptions)
     children: []
     langs:
@@ -152,11 +152,11 @@ items:
       parameters:
         - id: content
           type:
-            - function
+            - string
           description: text to place in the tooltip (html in the text will be escaped)
         - id: target
           type:
-            - function
+            - HTMLElement
           description: ''
         - id: options
           type:
@@ -166,7 +166,7 @@ items:
 
           optional: true
       content: >-
-        function addIfOverflow(content: function, target: function, options?:
+        function addIfOverflow(content: string, target: HTMLElement, options?:
         IRichContentTooltipOptions)
       return:
         type:
@@ -203,8 +203,7 @@ items:
     syntax:
       parameters:
         - id: controlType
-          type:
-            - function
+          type: []
           description: ''
         - id: container
           type:
@@ -307,7 +306,7 @@ items:
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.PopupContent.RichContentTooltip.enhance
     name: >-
-      enhance(type: function, element: function, options?: function,
+      enhance(type: function, element: Enhancement, options?: function,
       enhancementOptions?: EnhancementOptions)
     children: []
     langs:
@@ -316,12 +315,11 @@ items:
     syntax:
       parameters:
         - id: type
-          type:
-            - function
+          type: []
           description: ''
         - id: element
           type:
-            - function
+            - Enhancement
           description: ''
         - id: options
           type:
@@ -334,8 +332,8 @@ items:
           description: ''
           optional: true
       content: >-
-        function enhance(type: function, element: function, options?: function,
-        enhancementOptions?: EnhancementOptions)
+        function enhance(type: function, element: Enhancement, options?:
+        function, enhancementOptions?: EnhancementOptions)
       return:
         type:
           - vss-web-extension-sdk.VSS.Controls.Enhancement
@@ -613,8 +611,7 @@ items:
     syntax:
       parameters:
         - id: type
-          type:
-            - function
+          type: []
           description: ''
           optional: true
         - id: selector
@@ -698,7 +695,7 @@ items:
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.PopupContent.RichContentTooltip.setAttribute
-    name: 'setAttribute(attribute: string, value: function, element?: JQuery)'
+    name: 'setAttribute(attribute: string, value: string, element?: JQuery)'
     children: []
     langs:
       - typeScript
@@ -715,7 +712,7 @@ items:
           description: Attribute name to set value.
         - id: value
           type:
-            - function
+            - string
           description: Attribute value to set.
         - id: element
           type:
@@ -724,7 +721,7 @@ items:
             Element to apply the attribute (default is root element).
           optional: true
       content: >-
-        function setAttribute(attribute: string, value: function, element?:
+        function setAttribute(attribute: string, value: string, element?:
         JQuery)
     type: method
   - uid: >-

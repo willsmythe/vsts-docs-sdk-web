@@ -682,7 +682,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.TaskHttpClient3_1.getQueuedPlanGroups
     name: >-
       getQueuedPlanGroups(scopeIdentifier: string, hubName: string,
-      statusFilter?: function, count?: number)
+      statusFilter?: PlanGroupStatus, count?: number)
     children: []
     langs:
       - typeScript
@@ -701,7 +701,7 @@ items:
             the Release Management server
         - id: statusFilter
           type:
-            - function
+            - PlanGroupStatus
           description: ''
           optional: true
         - id: count
@@ -711,7 +711,7 @@ items:
           optional: true
       content: >-
         function getQueuedPlanGroups(scopeIdentifier: string, hubName: string,
-        statusFilter?: function, count?: number)
+        statusFilter?: PlanGroupStatus, count?: number)
       return:
         type:
           - vss-web-extension-sdk.IPromise

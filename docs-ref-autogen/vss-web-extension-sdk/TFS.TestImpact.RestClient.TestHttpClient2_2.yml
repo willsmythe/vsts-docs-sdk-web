@@ -202,7 +202,7 @@ items:
       vss-web-extension-sdk.TFS.TestImpact.RestClient.TestHttpClient2_2.queryImpactedTests
     name: >-
       queryImpactedTests(project: string, definitionRunInfo: DefinitionRunInfo,
-      currentTestRunId: number, typesToInclude?: function)
+      currentTestRunId: number, typesToInclude?: TestInclusionOptions)
     children: []
     langs:
       - typeScript
@@ -223,12 +223,13 @@ items:
           description: ''
         - id: typesToInclude
           type:
-            - function
+            - TestInclusionOptions
           description: ''
           optional: true
       content: >-
         function queryImpactedTests(project: string, definitionRunInfo:
-        DefinitionRunInfo, currentTestRunId: number, typesToInclude?: function)
+        DefinitionRunInfo, currentTestRunId: number, typesToInclude?:
+        TestInclusionOptions)
       return:
         type:
           - vss-web-extension-sdk.IPromise

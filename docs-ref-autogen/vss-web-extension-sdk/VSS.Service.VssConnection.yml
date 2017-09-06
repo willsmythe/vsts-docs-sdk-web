@@ -20,7 +20,7 @@ items:
     module: VSS/Service
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.beginGetServiceUrl
     name: >-
-      beginGetServiceUrl(serviceInstanceId: string, hostType?: function,
+      beginGetServiceUrl(serviceInstanceId: string, hostType?: ContextHostType,
       faultInMissingHost?: boolean)
     children: []
     langs:
@@ -34,7 +34,7 @@ items:
           description: Unique identifier of the VSTS service to get the url for
         - id: hostType
           type:
-            - function
+            - ContextHostType
           description: The type of host to get the url for
           optional: true
         - id: faultInMissingHost
@@ -46,13 +46,13 @@ items:
           optional: true
       content: >-
         function beginGetServiceUrl(serviceInstanceId: string, hostType?:
-        function, faultInMissingHost?: boolean)
+        ContextHostType, faultInMissingHost?: boolean)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getConnection
-    name: 'getConnection(webContext?: WebContext, hostType?: function)'
+    name: 'getConnection(webContext?: WebContext, hostType?: ContextHostType)'
     children: []
     langs:
       - typeScript
@@ -66,11 +66,13 @@ items:
           optional: true
         - id: hostType
           type:
-            - function
+            - ContextHostType
           description: |
             Host type to scope the connection to
           optional: true
-      content: 'function getConnection(webContext?: WebContext, hostType?: function)'
+      content: >-
+        function getConnection(webContext?: WebContext, hostType?:
+        ContextHostType)
       return:
         type:
           - vss-web-extension-sdk.VSS.Service.VssConnection
@@ -125,8 +127,7 @@ items:
     syntax:
       parameters:
         - id: httpClientType
-          type:
-            - function
+          type: []
           description: Type of requeested httpClient.
         - id: serviceInstanceId
           type:
@@ -160,8 +161,7 @@ items:
     syntax:
       parameters:
         - id: serviceType
-          type:
-            - function
+          type: []
           description: ''
         - id: useCached
           type:
@@ -174,7 +174,7 @@ items:
           - T
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.constructor
-    name: 'VssConnection(webContext: WebContext, hostType?: function)'
+    name: 'VssConnection(webContext: WebContext, hostType?: ContextHostType)'
     children: []
     langs:
       - typeScript
@@ -187,9 +187,9 @@ items:
           description: Specific web context to get the connection for
         - id: hostType
           type:
-            - function
+            - ContextHostType
           description: |
             Host type to scope the connection to
           optional: true
-      content: 'new VssConnection(webContext: WebContext, hostType?: function)'
+      content: 'new VssConnection(webContext: WebContext, hostType?: ContextHostType)'
     type: constructor

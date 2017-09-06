@@ -528,8 +528,8 @@ items:
       vss-web-extension-sdk.ReleaseManagement.Core.RestClient.CommonMethods2_2To4.getApprovals
     name: >-
       getApprovals(project: string, assignedToFilter?: string, statusFilter?:
-      function, releaseIdsFilter?: function, typeFilter?: function, top?:
-      number, continuationToken?: number, queryOrder?: function,
+      ApprovalStatus, releaseIdsFilter?: function, typeFilter?: ApprovalType,
+      top?: number, continuationToken?: number, queryOrder?: ReleaseQueryOrder,
       includeMyGroupApprovals?: boolean)
     children: []
     langs:
@@ -548,7 +548,7 @@ items:
           optional: true
         - id: statusFilter
           type:
-            - function
+            - ApprovalStatus
           description: Approvals with this status. Default is 'pending'.
           optional: true
         - id: releaseIdsFilter
@@ -561,7 +561,7 @@ items:
           optional: true
         - id: typeFilter
           type:
-            - function
+            - ApprovalType
           description: Approval with this type.
           optional: true
         - id: top
@@ -576,7 +576,7 @@ items:
           optional: true
         - id: queryOrder
           type:
-            - function
+            - ReleaseQueryOrder
           description: >-
             Gets the results in the defined order of created approvals. Default
             is 'descending'.
@@ -588,9 +588,9 @@ items:
           optional: true
       content: >-
         function getApprovals(project: string, assignedToFilter?: string,
-        statusFilter?: function, releaseIdsFilter?: function, typeFilter?:
-        function, top?: number, continuationToken?: number, queryOrder?:
-        function, includeMyGroupApprovals?: boolean)
+        statusFilter?: ApprovalStatus, releaseIdsFilter?: function, typeFilter?:
+        ApprovalType, top?: number, continuationToken?: number, queryOrder?:
+        ReleaseQueryOrder, includeMyGroupApprovals?: boolean)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -924,10 +924,11 @@ items:
       vss-web-extension-sdk.ReleaseManagement.Core.RestClient.CommonMethods2_2To4.getReleaseDefinitions
     name: >-
       getReleaseDefinitions(project: string, searchText?: string, expand?:
-      function, artifactType?: string, artifactSourceId?: string, top?: number,
-      continuationToken?: string, queryOrder?: function, path?: string,
-      isExactNameMatch?: boolean, tagFilter?: function, propertyFilters?:
-      function, definitionIdFilter?: function)
+      ReleaseDefinitionExpands, artifactType?: string, artifactSourceId?:
+      string, top?: number, continuationToken?: string, queryOrder?:
+      ReleaseDefinitionQueryOrder, path?: string, isExactNameMatch?: boolean,
+      tagFilter?: function, propertyFilters?: function, definitionIdFilter?:
+      function)
     children: []
     langs:
       - typeScript
@@ -945,7 +946,7 @@ items:
           optional: true
         - id: expand
           type:
-            - function
+            - ReleaseDefinitionExpands
           description: >-
             The properties that should be expanded in the list of Release
             definitions.
@@ -983,7 +984,7 @@ items:
           optional: true
         - id: queryOrder
           type:
-            - function
+            - ReleaseDefinitionQueryOrder
           description: Gets the results in the defined order. Default is 'IdAscending'.
           optional: true
         - id: path
@@ -1017,10 +1018,11 @@ items:
           optional: true
       content: >-
         function getReleaseDefinitions(project: string, searchText?: string,
-        expand?: function, artifactType?: string, artifactSourceId?: string,
-        top?: number, continuationToken?: string, queryOrder?: function, path?:
-        string, isExactNameMatch?: boolean, tagFilter?: function,
-        propertyFilters?: function, definitionIdFilter?: function)
+        expand?: ReleaseDefinitionExpands, artifactType?: string,
+        artifactSourceId?: string, top?: number, continuationToken?: string,
+        queryOrder?: ReleaseDefinitionQueryOrder, path?: string,
+        isExactNameMatch?: boolean, tagFilter?: function, propertyFilters?:
+        function, definitionIdFilter?: function)
       return:
         type:
           - vss-web-extension-sdk.IPromise

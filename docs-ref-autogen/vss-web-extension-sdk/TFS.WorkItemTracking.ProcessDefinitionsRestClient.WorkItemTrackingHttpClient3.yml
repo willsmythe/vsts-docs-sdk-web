@@ -902,7 +902,9 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.WorkItemTrackingHttpClient3.getWorkItemType
-    name: 'getWorkItemType(processId: string, witRefName: string, expand?: function)'
+    name: >-
+      getWorkItemType(processId: string, witRefName: string, expand?:
+      GetWorkItemTypeExpand)
     children: []
     langs:
       - typeScript
@@ -919,12 +921,12 @@ items:
           description: ''
         - id: expand
           type:
-            - function
+            - GetWorkItemTypeExpand
           description: ''
           optional: true
       content: >-
         function getWorkItemType(processId: string, witRefName: string, expand?:
-        function)
+        GetWorkItemTypeExpand)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -985,7 +987,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.WorkItemTrackingHttpClient3.getWorkItemTypes
-    name: 'getWorkItemTypes(processId: string, expand?: function)'
+    name: 'getWorkItemTypes(processId: string, expand?: GetWorkItemTypeExpand)'
     children: []
     langs:
       - typeScript
@@ -998,10 +1000,12 @@ items:
           description: ''
         - id: expand
           type:
-            - function
+            - GetWorkItemTypeExpand
           description: ''
           optional: true
-      content: 'function getWorkItemTypes(processId: string, expand?: function)'
+      content: >-
+        function getWorkItemTypes(processId: string, expand?:
+        GetWorkItemTypeExpand)
       return:
         type:
           - vss-web-extension-sdk.IPromise

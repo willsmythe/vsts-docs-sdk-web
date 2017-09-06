@@ -1749,9 +1749,9 @@ items:
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.GitHttpClient3.getItem
     name: >-
       getItem(repositoryId: string, path: string, project?: string, scopePath?:
-      string, recursionLevel?: function, includeContentMetadata?: boolean,
-      latestProcessedChange?: boolean, download?: boolean, versionDescriptor?:
-      GitVersionDescriptor)
+      string, recursionLevel?: VersionControlRecursionType,
+      includeContentMetadata?: boolean, latestProcessedChange?: boolean,
+      download?: boolean, versionDescriptor?: GitVersionDescriptor)
     children: []
     langs:
       - typeScript
@@ -1782,7 +1782,7 @@ items:
           optional: true
         - id: recursionLevel
           type:
-            - function
+            - VersionControlRecursionType
           description: ''
           optional: true
         - id: includeContentMetadata
@@ -1808,9 +1808,9 @@ items:
           optional: true
       content: >-
         function getItem(repositoryId: string, path: string, project?: string,
-        scopePath?: string, recursionLevel?: function, includeContentMetadata?:
-        boolean, latestProcessedChange?: boolean, download?: boolean,
-        versionDescriptor?: GitVersionDescriptor)
+        scopePath?: string, recursionLevel?: VersionControlRecursionType,
+        includeContentMetadata?: boolean, latestProcessedChange?: boolean,
+        download?: boolean, versionDescriptor?: GitVersionDescriptor)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1819,9 +1819,9 @@ items:
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.GitHttpClient3.getItemContent
     name: >-
       getItemContent(repositoryId: string, path: string, project?: string,
-      scopePath?: string, recursionLevel?: function, includeContentMetadata?:
-      boolean, latestProcessedChange?: boolean, download?: boolean,
-      versionDescriptor?: GitVersionDescriptor)
+      scopePath?: string, recursionLevel?: VersionControlRecursionType,
+      includeContentMetadata?: boolean, latestProcessedChange?: boolean,
+      download?: boolean, versionDescriptor?: GitVersionDescriptor)
     children: []
     langs:
       - typeScript
@@ -1852,7 +1852,7 @@ items:
           optional: true
         - id: recursionLevel
           type:
-            - function
+            - VersionControlRecursionType
           description: ''
           optional: true
         - id: includeContentMetadata
@@ -1878,9 +1878,10 @@ items:
           optional: true
       content: >-
         function getItemContent(repositoryId: string, path: string, project?:
-        string, scopePath?: string, recursionLevel?: function,
-        includeContentMetadata?: boolean, latestProcessedChange?: boolean,
-        download?: boolean, versionDescriptor?: GitVersionDescriptor)
+        string, scopePath?: string, recursionLevel?:
+        VersionControlRecursionType, includeContentMetadata?: boolean,
+        latestProcessedChange?: boolean, download?: boolean, versionDescriptor?:
+        GitVersionDescriptor)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1889,9 +1890,9 @@ items:
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.GitHttpClient3.getItems
     name: >-
       getItems(repositoryId: string, project?: string, scopePath?: string,
-      recursionLevel?: function, includeContentMetadata?: boolean,
-      latestProcessedChange?: boolean, download?: boolean, includeLinks?:
-      boolean, versionDescriptor?: GitVersionDescriptor)
+      recursionLevel?: VersionControlRecursionType, includeContentMetadata?:
+      boolean, latestProcessedChange?: boolean, download?: boolean,
+      includeLinks?: boolean, versionDescriptor?: GitVersionDescriptor)
     children: []
     langs:
       - typeScript
@@ -1918,7 +1919,7 @@ items:
           optional: true
         - id: recursionLevel
           type:
-            - function
+            - VersionControlRecursionType
           description: ''
           optional: true
         - id: includeContentMetadata
@@ -1949,9 +1950,10 @@ items:
           optional: true
       content: >-
         function getItems(repositoryId: string, project?: string, scopePath?:
-        string, recursionLevel?: function, includeContentMetadata?: boolean,
-        latestProcessedChange?: boolean, download?: boolean, includeLinks?:
-        boolean, versionDescriptor?: GitVersionDescriptor)
+        string, recursionLevel?: VersionControlRecursionType,
+        includeContentMetadata?: boolean, latestProcessedChange?: boolean,
+        download?: boolean, includeLinks?: boolean, versionDescriptor?:
+        GitVersionDescriptor)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1994,9 +1996,9 @@ items:
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.GitHttpClient3.getItemText
     name: >-
       getItemText(repositoryId: string, path: string, project?: string,
-      scopePath?: string, recursionLevel?: function, includeContentMetadata?:
-      boolean, latestProcessedChange?: boolean, download?: boolean,
-      versionDescriptor?: GitVersionDescriptor)
+      scopePath?: string, recursionLevel?: VersionControlRecursionType,
+      includeContentMetadata?: boolean, latestProcessedChange?: boolean,
+      download?: boolean, versionDescriptor?: GitVersionDescriptor)
     children: []
     langs:
       - typeScript
@@ -2027,7 +2029,7 @@ items:
           optional: true
         - id: recursionLevel
           type:
-            - function
+            - VersionControlRecursionType
           description: ''
           optional: true
         - id: includeContentMetadata
@@ -2053,9 +2055,10 @@ items:
           optional: true
       content: >-
         function getItemText(repositoryId: string, path: string, project?:
-        string, scopePath?: string, recursionLevel?: function,
-        includeContentMetadata?: boolean, latestProcessedChange?: boolean,
-        download?: boolean, versionDescriptor?: GitVersionDescriptor)
+        string, scopePath?: string, recursionLevel?:
+        VersionControlRecursionType, includeContentMetadata?: boolean,
+        latestProcessedChange?: boolean, download?: boolean, versionDescriptor?:
+        GitVersionDescriptor)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -2064,9 +2067,9 @@ items:
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.GitHttpClient3.getItemZip
     name: >-
       getItemZip(repositoryId: string, path: string, project?: string,
-      scopePath?: string, recursionLevel?: function, includeContentMetadata?:
-      boolean, latestProcessedChange?: boolean, download?: boolean,
-      versionDescriptor?: GitVersionDescriptor)
+      scopePath?: string, recursionLevel?: VersionControlRecursionType,
+      includeContentMetadata?: boolean, latestProcessedChange?: boolean,
+      download?: boolean, versionDescriptor?: GitVersionDescriptor)
     children: []
     langs:
       - typeScript
@@ -2097,7 +2100,7 @@ items:
           optional: true
         - id: recursionLevel
           type:
-            - function
+            - VersionControlRecursionType
           description: ''
           optional: true
         - id: includeContentMetadata
@@ -2123,9 +2126,10 @@ items:
           optional: true
       content: >-
         function getItemZip(repositoryId: string, path: string, project?:
-        string, scopePath?: string, recursionLevel?: function,
-        includeContentMetadata?: boolean, latestProcessedChange?: boolean,
-        download?: boolean, versionDescriptor?: GitVersionDescriptor)
+        string, scopePath?: string, recursionLevel?:
+        VersionControlRecursionType, includeContentMetadata?: boolean,
+        latestProcessedChange?: boolean, download?: boolean, versionDescriptor?:
+        GitVersionDescriptor)
       return:
         type:
           - vss-web-extension-sdk.IPromise

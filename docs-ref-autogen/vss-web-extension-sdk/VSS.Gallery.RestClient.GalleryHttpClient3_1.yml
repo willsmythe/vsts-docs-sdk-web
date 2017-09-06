@@ -1113,7 +1113,7 @@ items:
       vss-web-extension-sdk.VSS.Gallery.RestClient.GalleryHttpClient3_1.getExtension
     name: >-
       getExtension(publisherName: string, extensionName: string, version?:
-      string, flags?: function, accountToken?: string)
+      string, flags?: ExtensionQueryFlags, accountToken?: string)
     children: []
     langs:
       - typeScript
@@ -1135,7 +1135,7 @@ items:
           optional: true
         - id: flags
           type:
-            - function
+            - ExtensionQueryFlags
           description: ''
           optional: true
         - id: accountToken
@@ -1145,14 +1145,16 @@ items:
           optional: true
       content: >-
         function getExtension(publisherName: string, extensionName: string,
-        version?: string, flags?: function, accountToken?: string)
+        version?: string, flags?: ExtensionQueryFlags, accountToken?: string)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Gallery.RestClient.GalleryHttpClient3_1.getExtensionById
-    name: 'getExtensionById(extensionId: string, version?: string, flags?: function)'
+    name: >-
+      getExtensionById(extensionId: string, version?: string, flags?:
+      ExtensionQueryFlags)
     children: []
     langs:
       - typeScript
@@ -1170,12 +1172,12 @@ items:
           optional: true
         - id: flags
           type:
-            - function
+            - ExtensionQueryFlags
           description: ''
           optional: true
       content: >-
         function getExtensionById(extensionId: string, version?: string, flags?:
-        function)
+        ExtensionQueryFlags)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1446,7 +1448,7 @@ items:
       vss-web-extension-sdk.VSS.Gallery.RestClient.GalleryHttpClient3_1.getReviews
     name: >-
       getReviews(publisherName: string, extensionName: string, count?: number,
-      filterOptions?: function, beforeDate?: Date, afterDate?: Date)
+      filterOptions?: ReviewFilterOptions, beforeDate?: Date, afterDate?: Date)
     children: []
     langs:
       - typeScript
@@ -1468,7 +1470,7 @@ items:
           optional: true
         - id: filterOptions
           type:
-            - function
+            - ReviewFilterOptions
           description: 'FilterOptions to filter out empty reviews etcetera, defaults to none'
           optional: true
         - id: beforeDate
@@ -1487,8 +1489,8 @@ items:
           optional: true
       content: >-
         function getReviews(publisherName: string, extensionName: string,
-        count?: number, filterOptions?: function, beforeDate?: Date, afterDate?:
-        Date)
+        count?: number, filterOptions?: ReviewFilterOptions, beforeDate?: Date,
+        afterDate?: Date)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1814,7 +1816,7 @@ items:
           - string
   - uid: >-
       vss-web-extension-sdk.VSS.Gallery.RestClient.GalleryHttpClient3_1.setGalleryUserSettings
-    name: 'setGalleryUserSettings(entries: function, userScope: string)'
+    name: 'setGalleryUserSettings(entries: [key: string]: any, userScope: string)'
     children: []
     langs:
       - typeScript
@@ -1823,7 +1825,7 @@ items:
       parameters:
         - id: entries
           type:
-            - function
+            - '[key: string]: any'
           description: A key-value pair of all settings that need to be set
         - id: userScope
           type:
@@ -1831,7 +1833,9 @@ items:
           description: >-
             User-Scope at which to get the value. Should be "me" for the current
             user or "host" for all users.
-      content: 'function setGalleryUserSettings(entries: function, userScope: string)'
+      content: >-
+        function setGalleryUserSettings(entries: [key: string]: any, userScope:
+        string)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -2065,7 +2069,7 @@ items:
       vss-web-extension-sdk.VSS.Gallery.RestClient.GalleryHttpClient3_1.updateExtensionProperties
     name: >-
       updateExtensionProperties(publisherName: string, extensionName: string,
-      flags: function)
+      flags: PublishedExtensionFlags)
     children: []
     langs:
       - typeScript
@@ -2082,11 +2086,11 @@ items:
           description: ''
         - id: flags
           type:
-            - function
+            - PublishedExtensionFlags
           description: ''
       content: >-
         function updateExtensionProperties(publisherName: string, extensionName:
-        string, flags: function)
+        string, flags: PublishedExtensionFlags)
       return:
         type:
           - vss-web-extension-sdk.IPromise

@@ -634,7 +634,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.createAadOAuthRequest
     name: >-
       createAadOAuthRequest(tenantId: string, redirectUri: string,
-      promptOption?: function, completeCallbackPayload?: string)
+      promptOption?: AadLoginPromptOption, completeCallbackPayload?: string)
     children: []
     langs:
       - typeScript
@@ -651,7 +651,7 @@ items:
           description: ''
         - id: promptOption
           type:
-            - function
+            - AadLoginPromptOption
           description: ''
           optional: true
         - id: completeCallbackPayload
@@ -661,7 +661,7 @@ items:
           optional: true
       content: >-
         function createAadOAuthRequest(tenantId: string, redirectUri: string,
-        promptOption?: function, completeCallbackPayload?: string)
+        promptOption?: AadLoginPromptOption, completeCallbackPayload?: string)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -873,7 +873,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.deleteAgentRequest
     name: >-
       deleteAgentRequest(poolId: number, requestId: number, lockToken: string,
-      result?: function)
+      result?: TaskResult)
     children: []
     langs:
       - typeScript
@@ -894,12 +894,12 @@ items:
           description: ''
         - id: result
           type:
-            - function
+            - TaskResult
           description: ''
           optional: true
       content: >-
         function deleteAgentRequest(poolId: number, requestId: number,
-        lockToken: string, result?: function)
+        lockToken: string, result?: TaskResult)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1415,7 +1415,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.getAgentPool
     name: >-
       getAgentPool(poolId: number, properties?: function, actionFilter?:
-      function)
+      TaskAgentPoolActionFilter)
     children: []
     langs:
       - typeScript
@@ -1433,12 +1433,12 @@ items:
           optional: true
         - id: actionFilter
           type:
-            - function
+            - TaskAgentPoolActionFilter
           description: ''
           optional: true
       content: >-
         function getAgentPool(poolId: number, properties?: function,
-        actionFilter?: function)
+        actionFilter?: TaskAgentPoolActionFilter)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1577,7 +1577,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.getAgentPools
     name: >-
       getAgentPools(poolName?: string, properties?: function, poolType?:
-      function, actionFilter?: function)
+      TaskAgentPoolType, actionFilter?: TaskAgentPoolActionFilter)
     children: []
     langs:
       - typeScript
@@ -1596,24 +1596,26 @@ items:
           optional: true
         - id: poolType
           type:
-            - function
+            - TaskAgentPoolType
           description: ''
           optional: true
         - id: actionFilter
           type:
-            - function
+            - TaskAgentPoolActionFilter
           description: ''
           optional: true
       content: >-
         function getAgentPools(poolName?: string, properties?: function,
-        poolType?: function, actionFilter?: function)
+        poolType?: TaskAgentPoolType, actionFilter?: TaskAgentPoolActionFilter)
       return:
         type:
           - vss-web-extension-sdk.IPromise
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.getAgentQueue
-    name: 'getAgentQueue(queueId: number, project?: string, actionFilter?: function)'
+    name: >-
+      getAgentQueue(queueId: number, project?: string, actionFilter?:
+      TaskAgentQueueActionFilter)
     children: []
     langs:
       - typeScript
@@ -1631,12 +1633,12 @@ items:
           optional: true
         - id: actionFilter
           type:
-            - function
+            - TaskAgentQueueActionFilter
           description: ''
           optional: true
       content: >-
         function getAgentQueue(queueId: number, project?: string, actionFilter?:
-        function)
+        TaskAgentQueueActionFilter)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1664,7 +1666,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.getAgentQueues
     name: >-
       getAgentQueues(project?: string, queueName?: string, actionFilter?:
-      function)
+      TaskAgentQueueActionFilter)
     children: []
     langs:
       - typeScript
@@ -1683,12 +1685,12 @@ items:
           optional: true
         - id: actionFilter
           type:
-            - function
+            - TaskAgentQueueActionFilter
           description: ''
           optional: true
       content: >-
         function getAgentQueues(project?: string, queueName?: string,
-        actionFilter?: function)
+        actionFilter?: TaskAgentQueueActionFilter)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1947,7 +1949,8 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.getDeploymentGroup
     name: >-
       getDeploymentGroup(project: string, deploymentGroupId: number,
-      actionFilter?: function, expand?: function)
+      actionFilter?: DeploymentGroupActionFilter, expand?:
+      DeploymentGroupExpands)
     children: []
     langs:
       - typeScript
@@ -1964,17 +1967,18 @@ items:
           description: ''
         - id: actionFilter
           type:
-            - function
+            - DeploymentGroupActionFilter
           description: ''
           optional: true
         - id: expand
           type:
-            - function
+            - DeploymentGroupExpands
           description: ''
           optional: true
       content: >-
         function getDeploymentGroup(project: string, deploymentGroupId: number,
-        actionFilter?: function, expand?: function)
+        actionFilter?: DeploymentGroupActionFilter, expand?:
+        DeploymentGroupExpands)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -1983,7 +1987,8 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.getDeploymentGroups
     name: >-
       getDeploymentGroups(project: string, name?: string, actionFilter?:
-      function, expand?: function, continuationToken?: string, top?: number)
+      DeploymentGroupActionFilter, expand?: DeploymentGroupExpands,
+      continuationToken?: string, top?: number)
     children: []
     langs:
       - typeScript
@@ -2001,12 +2006,12 @@ items:
           optional: true
         - id: actionFilter
           type:
-            - function
+            - DeploymentGroupActionFilter
           description: ''
           optional: true
         - id: expand
           type:
-            - function
+            - DeploymentGroupExpands
           description: ''
           optional: true
         - id: continuationToken
@@ -2021,8 +2026,8 @@ items:
           optional: true
       content: >-
         function getDeploymentGroups(project: string, name?: string,
-        actionFilter?: function, expand?: function, continuationToken?: string,
-        top?: number)
+        actionFilter?: DeploymentGroupActionFilter, expand?:
+        DeploymentGroupExpands, continuationToken?: string, top?: number)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -2031,7 +2036,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.getDeploymentMachine
     name: >-
       getDeploymentMachine(project: string, deploymentGroupId: number,
-      machineId: number, expand?: function)
+      machineId: number, expand?: DeploymentMachineExpands)
     children: []
     langs:
       - typeScript
@@ -2052,12 +2057,12 @@ items:
           description: ''
         - id: expand
           type:
-            - function
+            - DeploymentMachineExpands
           description: ''
           optional: true
       content: >-
         function getDeploymentMachine(project: string, deploymentGroupId:
-        number, machineId: number, expand?: function)
+        number, machineId: number, expand?: DeploymentMachineExpands)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -2066,7 +2071,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.getDeploymentMachineGroup
     name: >-
       getDeploymentMachineGroup(project: string, machineGroupId: number,
-      actionFilter?: function)
+      actionFilter?: MachineGroupActionFilter)
     children: []
     langs:
       - typeScript
@@ -2083,12 +2088,12 @@ items:
           description: ''
         - id: actionFilter
           type:
-            - function
+            - MachineGroupActionFilter
           description: ''
           optional: true
       content: >-
         function getDeploymentMachineGroup(project: string, machineGroupId:
-        number, actionFilter?: function)
+        number, actionFilter?: MachineGroupActionFilter)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -2128,7 +2133,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.getDeploymentMachineGroups
     name: >-
       getDeploymentMachineGroups(project: string, machineGroupName?: string,
-      actionFilter?: function)
+      actionFilter?: MachineGroupActionFilter)
     children: []
     langs:
       - typeScript
@@ -2146,12 +2151,12 @@ items:
           optional: true
         - id: actionFilter
           type:
-            - function
+            - MachineGroupActionFilter
           description: ''
           optional: true
       content: >-
         function getDeploymentMachineGroups(project: string, machineGroupName?:
-        string, actionFilter?: function)
+        string, actionFilter?: MachineGroupActionFilter)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -2160,7 +2165,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.getDeploymentMachines
     name: >-
       getDeploymentMachines(project: string, deploymentGroupId: number, tags?:
-      function, name?: string, expand?: function)
+      function, name?: string, expand?: DeploymentMachineExpands)
     children: []
     langs:
       - typeScript
@@ -2187,12 +2192,13 @@ items:
           optional: true
         - id: expand
           type:
-            - function
+            - DeploymentMachineExpands
           description: ''
           optional: true
       content: >-
         function getDeploymentMachines(project: string, deploymentGroupId:
-        number, tags?: function, name?: string, expand?: function)
+        number, tags?: function, name?: string, expand?:
+        DeploymentMachineExpands)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -2322,7 +2328,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.getSecureFiles
     name: >-
       getSecureFiles(project: string, namePattern?: string,
-      includeDownloadTickets?: boolean, actionFilter?: function)
+      includeDownloadTickets?: boolean, actionFilter?: SecureFileActionFilter)
     children: []
     langs:
       - typeScript
@@ -2349,14 +2355,14 @@ items:
           optional: true
         - id: actionFilter
           type:
-            - function
+            - SecureFileActionFilter
           description: >-
             Filter by secure file permissions for View, Manage or Use action.
             Defaults to View.
           optional: true
       content: >-
         function getSecureFiles(project: string, namePattern?: string,
-        includeDownloadTickets?: boolean, actionFilter?: function)
+        includeDownloadTickets?: boolean, actionFilter?: SecureFileActionFilter)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -2771,7 +2777,7 @@ items:
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.getVariableGroups
     name: >-
       getVariableGroups(project: string, groupName?: string, actionFilter?:
-      function)
+      VariableGroupActionFilter)
     children: []
     langs:
       - typeScript
@@ -2789,12 +2795,12 @@ items:
           optional: true
         - id: actionFilter
           type:
-            - function
+            - VariableGroupActionFilter
           description: ''
           optional: true
       content: >-
         function getVariableGroups(project: string, groupName?: string,
-        actionFilter?: function)
+        actionFilter?: VariableGroupActionFilter)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -3610,8 +3616,8 @@ items:
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.updateAgentUserCapabilities
     name: >-
-      updateAgentUserCapabilities(userCapabilities: function, poolId: number,
-      agentId: number)
+      updateAgentUserCapabilities(userCapabilities: [key: string]: string,
+      poolId: number, agentId: number)
     children: []
     langs:
       - typeScript
@@ -3620,7 +3626,7 @@ items:
       parameters:
         - id: userCapabilities
           type:
-            - function
+            - '[key: string]: string'
           description: ''
         - id: poolId
           type:
@@ -3631,8 +3637,8 @@ items:
             - number
           description: ''
       content: >-
-        function updateAgentUserCapabilities(userCapabilities: function, poolId:
-        number, agentId: number)
+        function updateAgentUserCapabilities(userCapabilities: [key: string]:
+        string, poolId: number, agentId: number)
       return:
         type:
           - vss-web-extension-sdk.IPromise

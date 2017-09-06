@@ -40,7 +40,7 @@ items:
       vss-web-extension-sdk.VSS.UserMapping.RestClient.CommonMethods3_1To4.activateUserAccountMapping
     name: >-
       activateUserAccountMapping(userId: string, accountId: string, userType?:
-      function)
+      UserType)
     children: []
     langs:
       - typeScript
@@ -57,12 +57,12 @@ items:
           description: ''
         - id: userType
           type:
-            - function
+            - UserType
           description: ''
           optional: true
       content: >-
         function activateUserAccountMapping(userId: string, accountId: string,
-        userType?: function)
+        userType?: UserType)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -120,7 +120,7 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.UserMapping.RestClient.CommonMethods3_1To4.queryAccountIds
     name: >-
-      queryAccountIds(userId: string, userType: function,
+      queryAccountIds(userId: string, userType: UserType,
       useEqualsCheckForUserTypeMatch?: boolean, includeDeletedAccounts?:
       boolean)
     children: []
@@ -135,7 +135,7 @@ items:
           description: ''
         - id: userType
           type:
-            - function
+            - UserType
           description: ''
         - id: useEqualsCheckForUserTypeMatch
           type:
@@ -148,7 +148,7 @@ items:
           description: ''
           optional: true
       content: >-
-        function queryAccountIds(userId: string, userType: function,
+        function queryAccountIds(userId: string, userType: UserType,
         useEqualsCheckForUserTypeMatch?: boolean, includeDeletedAccounts?:
         boolean)
       return:

@@ -220,7 +220,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Settings.RestClient.SettingsHttpClient3_1.setEntries
-    name: 'setEntries(entries: function, userScope: string)'
+    name: 'setEntries(entries: [key: string]: any, userScope: string)'
     children: []
     langs:
       - typeScript
@@ -231,7 +231,7 @@ items:
       parameters:
         - id: entries
           type:
-            - function
+            - '[key: string]: any'
           description: The entries to set
         - id: userScope
           type:
@@ -239,7 +239,7 @@ items:
           description: >-
             User-Scope at which to set the values. Should be "me" for the
             current user or "host" for all users.
-      content: 'function setEntries(entries: function, userScope: string)'
+      content: 'function setEntries(entries: [key: string]: any, userScope: string)'
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -247,8 +247,8 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Settings.RestClient.SettingsHttpClient3_1.setEntriesForScope
     name: >-
-      setEntriesForScope(entries: function, userScope: string, scopeName:
-      string, scopeValue: string)
+      setEntriesForScope(entries: [key: string]: any, userScope: string,
+      scopeName: string, scopeValue: string)
     children: []
     langs:
       - typeScript
@@ -257,7 +257,7 @@ items:
       parameters:
         - id: entries
           type:
-            - function
+            - '[key: string]: any'
           description: The entries to set
         - id: userScope
           type:
@@ -274,8 +274,8 @@ items:
             - string
           description: Value of the scope (e.g. the project or team id)
       content: >-
-        function setEntriesForScope(entries: function, userScope: string,
-        scopeName: string, scopeValue: string)
+        function setEntriesForScope(entries: [key: string]: any, userScope:
+        string, scopeName: string, scopeValue: string)
       return:
         type:
           - vss-web-extension-sdk.IPromise

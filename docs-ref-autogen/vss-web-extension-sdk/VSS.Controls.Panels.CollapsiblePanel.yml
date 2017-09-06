@@ -83,7 +83,7 @@ items:
     package: vss-web-extension-sdk
     module: VSS/Controls/Panels
   - uid: vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel.appendContent
-    name: 'appendContent(element: function)'
+    name: 'appendContent(element: string)'
     children: []
     langs:
       - typeScript
@@ -92,15 +92,15 @@ items:
       parameters:
         - id: element
           type:
-            - function
+            - string
           description: ''
-      content: 'function appendContent(element: function)'
+      content: 'function appendContent(element: string)'
       return:
         type:
           - vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel.appendHeader
-    name: 'appendHeader(element: function)'
+    name: 'appendHeader(element: string)'
     children: []
     langs:
       - typeScript
@@ -111,11 +111,11 @@ items:
       parameters:
         - id: element
           type:
-            - function
+            - string
           description: >-
             Content to append to the header section (JQuery object or HTML
             string)
-      content: 'function appendHeader(element: function)'
+      content: 'function appendHeader(element: string)'
       return:
         type:
           - vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel
@@ -187,8 +187,7 @@ items:
     syntax:
       parameters:
         - id: controlType
-          type:
-            - function
+          type: []
           description: ''
         - id: container
           type:
@@ -289,7 +288,7 @@ items:
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel.enhance
     name: >-
-      enhance(type: function, element: function, options?: function,
+      enhance(type: function, element: Enhancement, options?: function,
       enhancementOptions?: EnhancementOptions)
     children: []
     langs:
@@ -298,12 +297,11 @@ items:
     syntax:
       parameters:
         - id: type
-          type:
-            - function
+          type: []
           description: ''
         - id: element
           type:
-            - function
+            - Enhancement
           description: ''
         - id: options
           type:
@@ -316,8 +314,8 @@ items:
           description: ''
           optional: true
       content: >-
-        function enhance(type: function, element: function, options?: function,
-        enhancementOptions?: EnhancementOptions)
+        function enhance(type: function, element: Enhancement, options?:
+        function, enhancementOptions?: EnhancementOptions)
       return:
         type:
           - vss-web-extension-sdk.VSS.Controls.Enhancement
@@ -632,7 +630,7 @@ items:
         type:
           - string
   - uid: vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel.prependHeader
-    name: 'prependHeader(element: function)'
+    name: 'prependHeader(element: string)'
     children: []
     langs:
       - typeScript
@@ -643,11 +641,11 @@ items:
       parameters:
         - id: element
           type:
-            - function
+            - string
           description: >-
             Content to prepend to the header section (JQuery object or HTML
             string)
-      content: 'function prependHeader(element: function)'
+      content: 'function prependHeader(element: string)'
       return:
         type:
           - vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel
@@ -665,8 +663,7 @@ items:
     syntax:
       parameters:
         - id: type
-          type:
-            - function
+          type: []
           description: ''
           optional: true
         - id: selector
@@ -752,7 +749,7 @@ items:
           - JQuery
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel.setAttribute
-    name: 'setAttribute(attribute: string, value: function, element?: JQuery)'
+    name: 'setAttribute(attribute: string, value: string, element?: JQuery)'
     children: []
     langs:
       - typeScript
@@ -769,7 +766,7 @@ items:
           description: Attribute name to set value.
         - id: value
           type:
-            - function
+            - string
           description: Attribute value to set.
         - id: element
           type:
@@ -778,7 +775,7 @@ items:
             Element to apply the attribute (default is root element).
           optional: true
       content: >-
-        function setAttribute(attribute: string, value: function, element?:
+        function setAttribute(attribute: string, value: string, element?:
         JQuery)
     type: method
   - uid: >-

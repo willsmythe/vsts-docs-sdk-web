@@ -560,7 +560,7 @@ items:
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.TfvcHttpClient2_3.getItem
     name: >-
       getItem(path: string, project?: string, fileName?: string, download?:
-      boolean, scopePath?: string, recursionLevel?: function,
+      boolean, scopePath?: string, recursionLevel?: VersionControlRecursionType,
       versionDescriptor?: TfvcVersionDescriptor)
     children: []
     langs:
@@ -598,7 +598,7 @@ items:
           optional: true
         - id: recursionLevel
           type:
-            - function
+            - VersionControlRecursionType
           description: ''
           optional: true
         - id: versionDescriptor
@@ -609,8 +609,8 @@ items:
           optional: true
       content: >-
         function getItem(path: string, project?: string, fileName?: string,
-        download?: boolean, scopePath?: string, recursionLevel?: function,
-        versionDescriptor?: TfvcVersionDescriptor)
+        download?: boolean, scopePath?: string, recursionLevel?:
+        VersionControlRecursionType, versionDescriptor?: TfvcVersionDescriptor)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -619,8 +619,8 @@ items:
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.TfvcHttpClient2_3.getItemContent
     name: >-
       getItemContent(path: string, project?: string, fileName?: string,
-      download?: boolean, scopePath?: string, recursionLevel?: function,
-      versionDescriptor?: TfvcVersionDescriptor)
+      download?: boolean, scopePath?: string, recursionLevel?:
+      VersionControlRecursionType, versionDescriptor?: TfvcVersionDescriptor)
     children: []
     langs:
       - typeScript
@@ -657,7 +657,7 @@ items:
           optional: true
         - id: recursionLevel
           type:
-            - function
+            - VersionControlRecursionType
           description: ''
           optional: true
         - id: versionDescriptor
@@ -669,7 +669,7 @@ items:
       content: >-
         function getItemContent(path: string, project?: string, fileName?:
         string, download?: boolean, scopePath?: string, recursionLevel?:
-        function, versionDescriptor?: TfvcVersionDescriptor)
+        VersionControlRecursionType, versionDescriptor?: TfvcVersionDescriptor)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -677,8 +677,9 @@ items:
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.TfvcHttpClient2_3.getItems
     name: >-
-      getItems(project?: string, scopePath?: string, recursionLevel?: function,
-      includeLinks?: boolean, versionDescriptor?: TfvcVersionDescriptor)
+      getItems(project?: string, scopePath?: string, recursionLevel?:
+      VersionControlRecursionType, includeLinks?: boolean, versionDescriptor?:
+      TfvcVersionDescriptor)
     children: []
     langs:
       - typeScript
@@ -697,7 +698,7 @@ items:
           optional: true
         - id: recursionLevel
           type:
-            - function
+            - VersionControlRecursionType
           description: ''
           optional: true
         - id: includeLinks
@@ -713,7 +714,7 @@ items:
           optional: true
       content: >-
         function getItems(project?: string, scopePath?: string, recursionLevel?:
-        function, includeLinks?: boolean, versionDescriptor?:
+        VersionControlRecursionType, includeLinks?: boolean, versionDescriptor?:
         TfvcVersionDescriptor)
       return:
         type:
@@ -781,7 +782,7 @@ items:
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.TfvcHttpClient2_3.getItemText
     name: >-
       getItemText(path: string, project?: string, fileName?: string, download?:
-      boolean, scopePath?: string, recursionLevel?: function,
+      boolean, scopePath?: string, recursionLevel?: VersionControlRecursionType,
       versionDescriptor?: TfvcVersionDescriptor)
     children: []
     langs:
@@ -819,7 +820,7 @@ items:
           optional: true
         - id: recursionLevel
           type:
-            - function
+            - VersionControlRecursionType
           description: ''
           optional: true
         - id: versionDescriptor
@@ -830,8 +831,8 @@ items:
           optional: true
       content: >-
         function getItemText(path: string, project?: string, fileName?: string,
-        download?: boolean, scopePath?: string, recursionLevel?: function,
-        versionDescriptor?: TfvcVersionDescriptor)
+        download?: boolean, scopePath?: string, recursionLevel?:
+        VersionControlRecursionType, versionDescriptor?: TfvcVersionDescriptor)
       return:
         type:
           - vss-web-extension-sdk.IPromise
@@ -840,7 +841,7 @@ items:
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.TfvcHttpClient2_3.getItemZip
     name: >-
       getItemZip(path: string, project?: string, fileName?: string, download?:
-      boolean, scopePath?: string, recursionLevel?: function,
+      boolean, scopePath?: string, recursionLevel?: VersionControlRecursionType,
       versionDescriptor?: TfvcVersionDescriptor)
     children: []
     langs:
@@ -878,7 +879,7 @@ items:
           optional: true
         - id: recursionLevel
           type:
-            - function
+            - VersionControlRecursionType
           description: ''
           optional: true
         - id: versionDescriptor
@@ -889,8 +890,8 @@ items:
           optional: true
       content: >-
         function getItemZip(path: string, project?: string, fileName?: string,
-        download?: boolean, scopePath?: string, recursionLevel?: function,
-        versionDescriptor?: TfvcVersionDescriptor)
+        download?: boolean, scopePath?: string, recursionLevel?:
+        VersionControlRecursionType, versionDescriptor?: TfvcVersionDescriptor)
       return:
         type:
           - vss-web-extension-sdk.IPromise
