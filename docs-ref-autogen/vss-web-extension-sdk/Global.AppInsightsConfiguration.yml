@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.AppInsightsConfiguration
+    name: AppInsightsConfiguration
+    fullName: AppInsightsConfiguration
+    children:
+      - vss-web-extension-sdk.AppInsightsConfiguration.autoTrackPage
+      - vss-web-extension-sdk.AppInsightsConfiguration.customTrackPageData
+      - vss-web-extension-sdk.AppInsightsConfiguration.enabled
+      - vss-web-extension-sdk.AppInsightsConfiguration.insightsScriptUrl
+      - vss-web-extension-sdk.AppInsightsConfiguration.instrumentationKey
+      - vss-web-extension-sdk.AppInsightsConfiguration.trackProjectInfo
+    langs:
+      - typeScript
+    type: interface
+    summary: Model used to configure how TFS reports usage data to Application Insights
+    package: vss-web-extension-sdk
+    module: Global
+  - uid: vss-web-extension-sdk.AppInsightsConfiguration.autoTrackPage
+    name: autoTrackPage
+    fullName: autoTrackPage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'If true, automatically call "trackPage" when the page is loaded'
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.AppInsightsConfiguration.customTrackPageData
+    name: customTrackPageData
+    fullName: customTrackPageData
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Optional data used to override the default values sent to trackPage
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.AppInsightsCustomTrackPageData
+  - uid: vss-web-extension-sdk.AppInsightsConfiguration.enabled
+    name: enabled
+    fullName: enabled
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Set to false if app insights reporting is not enabled/configured
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.AppInsightsConfiguration.insightsScriptUrl
+    name: insightsScriptUrl
+    fullName: insightsScriptUrl
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The url from which to retrieve app insights scripts
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.AppInsightsConfiguration.instrumentationKey
+    name: instrumentationKey
+    fullName: instrumentationKey
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The instrumentation key used to track this deployment's usage
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.AppInsightsConfiguration.trackProjectInfo
+    name: trackProjectInfo
+    fullName: trackProjectInfo
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'If true, include collection, project, and team info in the track-page urls'
+    syntax:
+      return:
+        type:
+          - boolean

@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IVssAjaxOptions
+    name: IVssAjaxOptions
+    fullName: IVssAjaxOptions
+    children:
+      - vss-web-extension-sdk.IVssAjaxOptions.authTokenManager
+      - vss-web-extension-sdk.IVssAjaxOptions.command
+      - vss-web-extension-sdk.IVssAjaxOptions.sessionId
+      - vss-web-extension-sdk.IVssAjaxOptions.showProgressIndicator
+      - vss-web-extension-sdk.IVssAjaxOptions.useAjaxResult
+    langs:
+      - typeScript
+    type: interface
+    summary: VSS-specific options for VSS ajax requests
+    package: vss-web-extension-sdk
+    module: Global
+  - uid: vss-web-extension-sdk.IVssAjaxOptions.authTokenManager
+    name: authTokenManager
+    fullName: authTokenManager
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - vss-web-extension-sdk.IAuthTokenManager
+  - uid: vss-web-extension-sdk.IVssAjaxOptions.command
+    name: command
+    fullName: command
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Current command for activity logging.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IVssAjaxOptions.sessionId
+    name: sessionId
+    fullName: sessionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Current session id. Defaults to pageContext.diagnostics.sessionId.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.IVssAjaxOptions.showProgressIndicator
+    name: showProgressIndicator
+    fullName: showProgressIndicator
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If true, the progress indicator will be shown while the request is
+      executing. Defaults to true.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IVssAjaxOptions.useAjaxResult
+    name: useAjaxResult
+    fullName: useAjaxResult
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      If true, textStatus and jqXHR are added to the success callback. In this
+      case, spread (instead of then) needs to be used (default false).
+    syntax:
+      return:
+        type:
+          - boolean

@@ -1,0 +1,53 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IAuthTokenManager
+    name: IAuthTokenManager
+    fullName: IAuthTokenManager
+    children:
+      - vss-web-extension-sdk.IAuthTokenManager.getAuthorizationHeader
+      - vss-web-extension-sdk.IAuthTokenManager.getAuthToken
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Interface for a class that can fetch auth tokens to be used in AJAX
+      requests.
+    package: vss-web-extension-sdk
+    module: Global
+  - uid: vss-web-extension-sdk.IAuthTokenManager.getAuthorizationHeader
+    name: 'getAuthorizationHeader(sessionToken: TToken)'
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the authorization header to use in a request from the given token
+    syntax:
+      parameters:
+        - id: sessionToken
+          type:
+            - TToken
+          description: Used for token key.
+      content: 'function getAuthorizationHeader(sessionToken: TToken)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.IAuthTokenManager.getAuthToken
+    name: 'getAuthToken(refresh?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: Get the auth token to use for this request.
+    syntax:
+      parameters:
+        - id: refresh
+          type:
+            - boolean
+          description: >
+            If true refresh the token (i.e. request a new one - don't use a
+            cached token)
+          optional: true
+      content: 'function getAuthToken(refresh?: boolean)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method

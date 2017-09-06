@@ -1,0 +1,88 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IExternalDialog
+    name: IExternalDialog
+    fullName: IExternalDialog
+    children:
+      - vss-web-extension-sdk.IExternalDialog.close
+      - vss-web-extension-sdk.IExternalDialog.getContributionInstance
+      - vss-web-extension-sdk.IExternalDialog.setTitle
+      - vss-web-extension-sdk.IExternalDialog.updateOkButton
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: vss-web-extension-sdk
+    module: Global
+  - uid: vss-web-extension-sdk.IExternalDialog.close
+    name: close()
+    children: []
+    langs:
+      - typeScript
+    summary: Close the dialog
+    syntax:
+      parameters: []
+      content: function close()
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.IExternalDialog.getContributionInstance
+    name: 'getContributionInstance(instanceId: string, contextData?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: Gets an object registered in the dialog's contribution control.
+    syntax:
+      parameters:
+        - id: instanceId
+          type:
+            - string
+          description: Id of the instance to get
+        - id: contextData
+          type:
+            - any
+          description: >-
+            Optional data to pass to the extension for it to use when creating
+            the instance
+          optional: true
+      content: 'function getContributionInstance(instanceId: string, contextData?: any)'
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IExternalDialog.setTitle
+    name: 'setTitle(title: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Update the title of the dialog
+    syntax:
+      parameters:
+        - id: title
+          type:
+            - string
+          description: |
+            New dialog title
+      content: 'function setTitle(title: string)'
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.IExternalDialog.updateOkButton
+    name: 'updateOkButton(enabled: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: Update the enablement of the OK button
+    syntax:
+      parameters:
+        - id: enabled
+          type:
+            - boolean
+          description: ''
+      content: 'function updateOkButton(enabled: boolean)'
+      return:
+        type:
+          - any
+    type: method

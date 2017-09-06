@@ -1,0 +1,80 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IHostNavigationService
+    name: IHostNavigationService
+    fullName: IHostNavigationService
+    children:
+      - vss-web-extension-sdk.IHostNavigationService.getHash
+      - vss-web-extension-sdk.IHostNavigationService.onHashChanged
+      - vss-web-extension-sdk.IHostNavigationService.reload
+      - vss-web-extension-sdk.IHostNavigationService.setHash
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Service which allows interaction with the browser location and navigation
+      of the host frame
+    package: vss-web-extension-sdk
+    module: Global
+  - uid: vss-web-extension-sdk.IHostNavigationService.getHash
+    name: getHash()
+    children: []
+    langs:
+      - typeScript
+    summary: Gets the current hash.
+    syntax:
+      parameters: []
+      content: function getHash()
+      return:
+        type:
+          - vss-web-extension-sdk.IPromise
+    type: method
+  - uid: vss-web-extension-sdk.IHostNavigationService.onHashChanged
+    name: 'onHashChanged(callback: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Add a callback to be invoked each time the hash navigation has changed
+    syntax:
+      parameters:
+        - id: callback
+          type:
+            - function
+          description: |
+            Method invoked on each navigation hash change
+      content: 'function onHashChanged(callback: function)'
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.IHostNavigationService.reload
+    name: reload()
+    children: []
+    langs:
+      - typeScript
+    summary: Reloads the parent frame
+    syntax:
+      parameters: []
+      content: function reload()
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.IHostNavigationService.setHash
+    name: 'setHash(hash: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Sets the provided hash from the hosted content.
+    syntax:
+      parameters:
+        - id: hash
+          type:
+            - string
+          description: |
+            The new hash string to
+      content: 'function setHash(hash: string)'
+      return:
+        type:
+          - any
+    type: method
