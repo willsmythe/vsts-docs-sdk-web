@@ -27,7 +27,6 @@ items:
       ```ts
         import { YamlModel } from './interfaces/YamlModel';
         import { UidMapping } from './interfaces/UidMapping';
-
         export function resolveIds(elements: Array<YamlModel>, uidMapping: UidMapping): void {
             if (elements) {
                 elements.forEach(element => {
@@ -41,7 +40,6 @@ items:
                                     p.typeId = undefined;
                                 });
                             }
-
                             if (child.syntax.return) {
                                 if (uidMapping[child.syntax.return.typeId]) {
                                     child.syntax.return.type[0] = uidMapping[child.syntax.return.typeId];
@@ -54,15 +52,11 @@ items:
             }
         }
       ```
-
       pinned items (the target menu), with a submenu that displays all items
       (the source menu). Set
-
       isPinnableTarget and hideUnpinnedItems on the target menu, set
       isPinnableSource and optionally
-
       hidePinnedItems on the source menu.
-
       See also IMenuItemPinningOptions.
     package: vss-web-extension-sdk
     module: VSS/Controls/Menus
