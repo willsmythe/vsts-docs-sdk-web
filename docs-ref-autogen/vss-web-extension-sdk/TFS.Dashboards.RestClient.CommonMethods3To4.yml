@@ -5,21 +5,15 @@ items:
     fullName: CommonMethods3To4
     children:
       - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.authTokenManager
-      - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.constructor
       - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.createDashboard
       - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.createWidget
       - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.dashboardsApiVersion
-      - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.deleteDashboard
       - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.deleteWidget
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.forceOptionsCallForAutoNegotiate
       - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.getDashboard
       - >-
@@ -27,11 +21,7 @@ items:
       - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.getWidget
       - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.getWidgetMetadata
-      - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.getWidgets
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.getWidgetTypes
       - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.replaceDashboard
       - >-
@@ -44,41 +34,14 @@ items:
         vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.updateWidget
       - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.updateWidgets
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.widgetsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.widgetTypesApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4._beginGetLocation
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4._beginRequest
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4._beginRequestWithAjaxResult
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4._issueAjaxRequest
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4._rootRequestPath
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods2To4'
     package: vss-web-extension-sdk
     module: TFS/Dashboards/RestClient
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.constructor
     name: >-
@@ -96,7 +59,7 @@ items:
           description: ''
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
       content: >-
@@ -114,16 +77,17 @@ items:
       parameters:
         - id: dashboard
           type:
-            - vss-web-extension-sdk.TFS.Dashboards.Contracts.Dashboard
+            - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.Dashboard'
           description: ''
         - id: teamContext
           type:
-            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+            - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
       content: 'function createDashboard(dashboard: Dashboard, teamContext: TeamContext)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.Dashboard>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.createWidget
@@ -138,11 +102,11 @@ items:
       parameters:
         - id: widget
           type:
-            - vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget
+            - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget'
           description: ''
         - id: teamContext
           type:
-            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+            - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
         - id: dashboardId
           type:
@@ -153,21 +117,9 @@ items:
         dashboardId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.dashboardsApiVersion
-    name: dashboardsApiVersion
-    fullName: dashboardsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.deleteDashboard
     name: 'deleteDashboard(teamContext: TeamContext, dashboardId: string)'
@@ -179,7 +131,7 @@ items:
       parameters:
         - id: teamContext
           type:
-            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+            - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
         - id: dashboardId
           type:
@@ -188,7 +140,7 @@ items:
       content: 'function deleteDashboard(teamContext: TeamContext, dashboardId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.deleteWidget
@@ -203,7 +155,7 @@ items:
       parameters:
         - id: teamContext
           type:
-            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+            - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
         - id: dashboardId
           type:
@@ -218,21 +170,9 @@ items:
         widgetId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.Dashboard>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.getDashboard
     name: 'getDashboard(teamContext: TeamContext, dashboardId: string)'
@@ -244,7 +184,7 @@ items:
       parameters:
         - id: teamContext
           type:
-            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+            - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
         - id: dashboardId
           type:
@@ -253,7 +193,8 @@ items:
       content: 'function getDashboard(teamContext: TeamContext, dashboardId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.Dashboard>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.getDashboards
@@ -266,12 +207,13 @@ items:
       parameters:
         - id: teamContext
           type:
-            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+            - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
       content: 'function getDashboards(teamContext: TeamContext)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.DashboardGroup>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.getWidget
@@ -284,7 +226,7 @@ items:
       parameters:
         - id: teamContext
           type:
-            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+            - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
         - id: dashboardId
           type:
@@ -299,25 +241,8 @@ items:
         widgetId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.getWidgetMetadata
-    name: 'getWidgetMetadata(contributionId: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: '[Preview API]'
-    syntax:
-      parameters:
-        - id: contributionId
-          type:
-            - string
-          description: ''
-      content: 'function getWidgetMetadata(contributionId: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.getWidgets
@@ -330,7 +255,7 @@ items:
       parameters:
         - id: teamContext
           type:
-            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+            - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
         - id: dashboardId
           type:
@@ -346,25 +271,8 @@ items:
         eTag?: String)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.getWidgetTypes
-    name: 'getWidgetTypes(scope: WidgetScope)'
-    children: []
-    langs:
-      - typeScript
-    summary: '[Preview API] Returns available widgets in alphabetical order.'
-    syntax:
-      parameters:
-        - id: scope
-          type:
-            - WidgetScope
-          description: ''
-      content: 'function getWidgetTypes(scope: WidgetScope)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetsVersionedList>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.replaceDashboard
@@ -379,11 +287,11 @@ items:
       parameters:
         - id: dashboard
           type:
-            - vss-web-extension-sdk.TFS.Dashboards.Contracts.Dashboard
+            - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.Dashboard'
           description: ''
         - id: teamContext
           type:
-            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+            - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
         - id: dashboardId
           type:
@@ -394,7 +302,8 @@ items:
         TeamContext, dashboardId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.Dashboard>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.replaceDashboards
@@ -407,18 +316,19 @@ items:
       parameters:
         - id: group
           type:
-            - vss-web-extension-sdk.TFS.Dashboards.Contracts.DashboardGroup
+            - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.DashboardGroup'
           description: ''
         - id: teamContext
           type:
-            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+            - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
       content: >-
         function replaceDashboards(group: DashboardGroup, teamContext:
         TeamContext)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.DashboardGroup>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.replaceWidget
@@ -433,11 +343,11 @@ items:
       parameters:
         - id: widget
           type:
-            - vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget
+            - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget'
           description: ''
         - id: teamContext
           type:
-            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+            - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
         - id: dashboardId
           type:
@@ -452,12 +362,13 @@ items:
         dashboardId: string, widgetId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.replaceWidgets
     name: >-
-      replaceWidgets(widgets: function, teamContext: TeamContext, dashboardId:
+      replaceWidgets(widgets: Widget[], teamContext: TeamContext, dashboardId:
       string, eTag?: String)
     children: []
     langs:
@@ -467,11 +378,11 @@ items:
       parameters:
         - id: widgets
           type:
-            - function
+            - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget[]'
           description: ''
         - id: teamContext
           type:
-            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+            - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
         - id: dashboardId
           type:
@@ -483,11 +394,12 @@ items:
           description: Dashboard Widgets Version
           optional: true
       content: >-
-        function replaceWidgets(widgets: function, teamContext: TeamContext,
+        function replaceWidgets(widgets: Widget[], teamContext: TeamContext,
         dashboardId: string, eTag?: String)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetsVersionedList>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.updateWidget
@@ -502,11 +414,11 @@ items:
       parameters:
         - id: widget
           type:
-            - vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget
+            - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget'
           description: ''
         - id: teamContext
           type:
-            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+            - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
         - id: dashboardId
           type:
@@ -521,12 +433,13 @@ items:
         dashboardId: string, widgetId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.updateWidgets
     name: >-
-      updateWidgets(widgets: function, teamContext: TeamContext, dashboardId:
+      updateWidgets(widgets: Widget[], teamContext: TeamContext, dashboardId:
       string, eTag?: String)
     children: []
     langs:
@@ -536,11 +449,11 @@ items:
       parameters:
         - id: widgets
           type:
-            - function
+            - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget[]'
           description: ''
         - id: teamContext
           type:
-            - vss-web-extension-sdk.TFS.Core.Contracts.TeamContext
+            - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
         - id: dashboardId
           type:
@@ -552,188 +465,10 @@ items:
           description: Dashboard Widgets Version
           optional: true
       content: >-
-        function updateWidgets(widgets: function, teamContext: TeamContext,
+        function updateWidgets(widgets: Widget[], teamContext: TeamContext,
         dashboardId: string, eTag?: String)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.widgetsApiVersion
-    name: widgetsApiVersion
-    fullName: widgetsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.widgetTypesApiVersion
-    name: widgetTypesApiVersion
-    fullName: widgetTypesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4._beginGetLocation
-    name: '_beginGetLocation(area: string, locationId: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Gets information about an API resource location (route template, supported
-      versions, etc.)
-    syntax:
-      parameters:
-        - id: area
-          type:
-            - string
-          description: resource area name
-        - id: locationId
-          type:
-            - string
-          description: |
-            Guid of the location to get
-      content: 'function _beginGetLocation(area: string, locationId: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4._beginRequest
-    name: >-
-      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
-      boolean)
-    children: []
-    langs:
-      - typeScript
-    summary: Issue a request to a VSS REST endpoint.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >-
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used
-          optional: true
-      content: >-
-        function _beginRequest(requestParams: VssApiResourceRequestParams,
-        useAjaxResult?: boolean)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4._beginRequestWithAjaxResult
-    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue a request to a VSS REST endpoint and makes sure the result contains
-      jqXHR. Use spread to access jqXHR.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-      content: >-
-        function _beginRequestWithAjaxResult(requestParams:
-        VssApiResourceRequestParams)
-      return:
-        type:
-          - Q.Promise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4._issueAjaxRequest
-    name: >-
-      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
-      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue an AJAX request. This is a wrapper around jquery's ajax method that
-      handles VSS authentication
-
-      and triggers events that can be listened to by other modules.
-    syntax:
-      parameters:
-        - id: requestUrl
-          type:
-            - string
-          description: Url to send the request to
-        - id: ajaxOptions
-          type:
-            - JQueryAjaxSettings
-          description: jQuery.ajax options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used.
-          optional: true
-        - id: vssRequestOptions
-          type:
-            - vss-web-extension-sdk.IVssAjaxOptions
-          description: ''
-          optional: true
-      content: >-
-        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
-        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
-        IVssAjaxOptions)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4._setInitializationPromise
-    name: '_setInitializationPromise(promise: IPromise)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Sets a promise that is waited on before any requests are issued. Can be
-      used to asynchronously
-
-      set the request url and auth token manager.
-    syntax:
-      parameters:
-        - id: promise
-          type:
-            - vss-web-extension-sdk.IPromise
-          description: ''
-      content: 'function _setInitializationPromise(promise: IPromise)'
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetsVersionedList>
     type: method

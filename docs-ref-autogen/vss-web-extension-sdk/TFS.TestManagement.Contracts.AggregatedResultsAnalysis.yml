@@ -48,7 +48,9 @@ items:
     syntax:
       return:
         type:
-          - '[key: number]: AggregatedResultsByOutcome'
+          - >-
+            [key: number]:
+            @vss-web-extension-sdk.TFS.TestManagement.Contracts.AggregatedResultsByOutcome
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Contracts.AggregatedResultsAnalysis.previousContext
     name: previousContext
@@ -62,7 +64,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.TestManagement.Contracts.TestResultsContext
+            @vss-web-extension-sdk.TFS.TestManagement.Contracts.TestResultsContext
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Contracts.AggregatedResultsAnalysis.resultsByOutcome
     name: resultsByOutcome
@@ -75,7 +77,9 @@ items:
     syntax:
       return:
         type:
-          - '[key: number]: AggregatedResultsByOutcome'
+          - >-
+            [key: number]:
+            @vss-web-extension-sdk.TFS.TestManagement.Contracts.AggregatedResultsByOutcome
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Contracts.AggregatedResultsAnalysis.resultsDifference
     name: resultsDifference
@@ -89,7 +93,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.TestManagement.Contracts.AggregatedResultsDifference
+            @vss-web-extension-sdk.TFS.TestManagement.Contracts.AggregatedResultsDifference
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Contracts.AggregatedResultsAnalysis.totalTests
     name: totalTests

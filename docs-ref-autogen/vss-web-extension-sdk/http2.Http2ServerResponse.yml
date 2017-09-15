@@ -1,0 +1,472 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse
+    name: Http2ServerResponse
+    fullName: Http2ServerResponse
+    children:
+      - vss-web-extension-sdk.http2.Http2ServerResponse.addListener
+      - vss-web-extension-sdk.http2.Http2ServerResponse.addTrailers
+      - vss-web-extension-sdk.http2.Http2ServerResponse.connection
+      - vss-web-extension-sdk.http2.Http2ServerResponse.createPushResponse
+      - vss-web-extension-sdk.http2.Http2ServerResponse.emit
+      - vss-web-extension-sdk.http2.Http2ServerResponse.end
+      - vss-web-extension-sdk.http2.Http2ServerResponse.finished
+      - vss-web-extension-sdk.http2.Http2ServerResponse.getHeader
+      - vss-web-extension-sdk.http2.Http2ServerResponse.getHeaderNames
+      - vss-web-extension-sdk.http2.Http2ServerResponse.getHeaders
+      - vss-web-extension-sdk.http2.Http2ServerResponse.hasHeader
+      - vss-web-extension-sdk.http2.Http2ServerResponse.headersSent
+      - vss-web-extension-sdk.http2.Http2ServerResponse.on
+      - vss-web-extension-sdk.http2.Http2ServerResponse.once
+      - vss-web-extension-sdk.http2.Http2ServerResponse.prependListener
+      - vss-web-extension-sdk.http2.Http2ServerResponse.prependOnceListener
+      - vss-web-extension-sdk.http2.Http2ServerResponse.removeHeader
+      - vss-web-extension-sdk.http2.Http2ServerResponse.sendDate
+      - vss-web-extension-sdk.http2.Http2ServerResponse.setHeader
+      - vss-web-extension-sdk.http2.Http2ServerResponse.setTimeout
+      - vss-web-extension-sdk.http2.Http2ServerResponse.socket
+      - vss-web-extension-sdk.http2.Http2ServerResponse.statusCode
+      - vss-web-extension-sdk.http2.Http2ServerResponse.statusMessage
+      - vss-web-extension-sdk.http2.Http2ServerResponse.stream
+      - vss-web-extension-sdk.http2.Http2ServerResponse.write
+      - vss-web-extension-sdk.http2.Http2ServerResponse.writeContinue
+      - vss-web-extension-sdk.http2.Http2ServerResponse.writeHead
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      - '@vss-web-extension-sdk.events.internal.EventEmitter'
+    package: vss-web-extension-sdk
+    module: http2
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.addListener
+    name: 'addListener(event: string, listener: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: listener
+          type:
+            - function
+          description: ''
+      content: 'function addListener(event: string, listener: function)'
+      return:
+        type:
+          - this
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.addTrailers
+    name: 'addTrailers(trailers: OutgoingHttpHeaders)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: trailers
+          type:
+            - '@vss-web-extension-sdk.http.OutgoingHttpHeaders'
+          description: ''
+      content: 'function addTrailers(trailers: OutgoingHttpHeaders)'
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.connection
+    name: connection
+    fullName: connection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - Socket
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.createPushResponse
+    name: 'createPushResponse(headers: OutgoingHttpHeaders, callback?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: headers
+          type:
+            - '@vss-web-extension-sdk.http.OutgoingHttpHeaders'
+          description: ''
+        - id: callback
+          type:
+            - function
+          description: ''
+          optional: true
+      content: >-
+        function createPushResponse(headers: OutgoingHttpHeaders, callback?:
+        function)
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.emit
+    name: 'emit(event: string, args: any[])'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: args
+          type:
+            - 'any[]'
+          description: ''
+      content: 'function emit(event: string, args: any[])'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.end
+    name: 'end(callback?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: callback
+          type:
+            - function
+          description: ''
+          optional: true
+      content: 'function end(callback?: function)'
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.finished
+    name: finished
+    fullName: finished
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.getHeader
+    name: 'getHeader(name: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: name
+          type:
+            - string
+          description: ''
+      content: 'function getHeader(name: string)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.getHeaderNames
+    name: getHeaderNames()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getHeaderNames()
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.getHeaders
+    name: getHeaders()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getHeaders()
+      return:
+        type:
+          - '@vss-web-extension-sdk.http.OutgoingHttpHeaders'
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.hasHeader
+    name: 'hasHeader(name: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: name
+          type:
+            - string
+          description: ''
+      content: 'function hasHeader(name: string)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.headersSent
+    name: headersSent
+    fullName: headersSent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.on
+    name: 'on(event: string, listener: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: listener
+          type:
+            - function
+          description: ''
+      content: 'function on(event: string, listener: function)'
+      return:
+        type:
+          - this
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.once
+    name: 'once(event: string, listener: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: listener
+          type:
+            - function
+          description: ''
+      content: 'function once(event: string, listener: function)'
+      return:
+        type:
+          - this
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.prependListener
+    name: 'prependListener(event: string, listener: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: listener
+          type:
+            - function
+          description: ''
+      content: 'function prependListener(event: string, listener: function)'
+      return:
+        type:
+          - this
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.prependOnceListener
+    name: 'prependOnceListener(event: string, listener: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: listener
+          type:
+            - function
+          description: ''
+      content: 'function prependOnceListener(event: string, listener: function)'
+      return:
+        type:
+          - this
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.removeHeader
+    name: 'removeHeader(name: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: name
+          type:
+            - string
+          description: ''
+      content: 'function removeHeader(name: string)'
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.sendDate
+    name: sendDate
+    fullName: sendDate
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.setHeader
+    name: 'setHeader(name: string, value: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: name
+          type:
+            - string
+          description: ''
+        - id: value
+          type:
+            - number
+          description: ''
+      content: 'function setHeader(name: string, value: number)'
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.setTimeout
+    name: 'setTimeout(msecs: number, callback?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: msecs
+          type:
+            - number
+          description: ''
+        - id: callback
+          type:
+            - function
+          description: ''
+          optional: true
+      content: 'function setTimeout(msecs: number, callback?: function)'
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.socket
+    name: socket
+    fullName: socket
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - Socket
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.statusCode
+    name: statusCode
+    fullName: statusCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.statusMessage
+    name: statusMessage
+    fullName: statusMessage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - function
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.stream
+    name: stream
+    fullName: stream
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.http2.ServerHttp2Stream'
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.write
+    name: 'write(chunk: string, callback?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: chunk
+          type:
+            - string
+          description: ''
+        - id: callback
+          type:
+            - function
+          description: ''
+          optional: true
+      content: 'function write(chunk: string, callback?: function)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.writeContinue
+    name: writeContinue()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function writeContinue()
+    type: method
+  - uid: vss-web-extension-sdk.http2.Http2ServerResponse.writeHead
+    name: 'writeHead(statusCode: number, headers?: OutgoingHttpHeaders)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: statusCode
+          type:
+            - number
+          description: ''
+        - id: headers
+          type:
+            - '@vss-web-extension-sdk.http.OutgoingHttpHeaders'
+          description: ''
+          optional: true
+      content: 'function writeHead(statusCode: number, headers?: OutgoingHttpHeaders)'
+    type: method

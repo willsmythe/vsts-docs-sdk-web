@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.inspector.Runtime.StackTrace
+    name: StackTrace
+    fullName: StackTrace
+    children:
+      - vss-web-extension-sdk.inspector.Runtime.StackTrace.callFrames
+      - vss-web-extension-sdk.inspector.Runtime.StackTrace.description
+      - vss-web-extension-sdk.inspector.Runtime.StackTrace.parent
+      - vss-web-extension-sdk.inspector.Runtime.StackTrace.promiseCreationFrame
+    langs:
+      - typeScript
+    type: interface
+    summary: Call frames for assertions or error messages.
+    package: vss-web-extension-sdk
+    module: Runtime
+  - uid: vss-web-extension-sdk.inspector.Runtime.StackTrace.callFrames
+    name: callFrames
+    fullName: callFrames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: JavaScript function name.
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Runtime.CallFrame[]'
+  - uid: vss-web-extension-sdk.inspector.Runtime.StackTrace.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      String label of this stack trace. For async traces this may be a name of
+      the function that initiated the async call.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.inspector.Runtime.StackTrace.parent
+    name: parent
+    fullName: parent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Asynchronous JavaScript stack trace that preceded this stack, if
+      available.
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Runtime.StackTrace'
+  - uid: vss-web-extension-sdk.inspector.Runtime.StackTrace.promiseCreationFrame
+    name: promiseCreationFrame
+    fullName: promiseCreationFrame
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Creation frame of the Promise which produced the next synchronous trace
+      when resolved, if available.
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Runtime.CallFrame'

@@ -91,7 +91,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.attachNavigate
-    name: 'attachNavigate(handler: IFunctionPPR, checkCurrentState?: boolean)'
+    name: 'attachNavigate(handler: IFunctionPPR<any>, checkCurrentState?: boolean)'
     children: []
     langs:
       - typeScript
@@ -100,7 +100,7 @@ items:
       parameters:
         - id: handler
           type:
-            - vss-web-extension-sdk.IFunctionPPR
+            - '@vss-web-extension-sdk.IFunctionPPR<any>'
           description: The method called whenever a navigation event occurs
         - id: checkCurrentState
           type:
@@ -109,7 +109,7 @@ items:
             If true, immediately invoke the handler
           optional: true
       content: >-
-        function attachNavigate(handler: IFunctionPPR, checkCurrentState?:
+        function attachNavigate(handler: IFunctionPPR<any>, checkCurrentState?:
         boolean)
     type: method
   - uid: >-
@@ -129,11 +129,11 @@ items:
       content: 'function deserializeState(state: string)'
       return:
         type:
-          - vss-web-extension-sdk.IDictionaryStringTo
+          - '@vss-web-extension-sdk.IDictionaryStringTo<any>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.detachNavigate
-    name: 'detachNavigate(handler: IFunctionPPR)'
+    name: 'detachNavigate(handler: IFunctionPPR<any>)'
     children: []
     langs:
       - typeScript
@@ -142,10 +142,10 @@ items:
       parameters:
         - id: handler
           type:
-            - vss-web-extension-sdk.IFunctionPPR
+            - '@vss-web-extension-sdk.IFunctionPPR<any>'
           description: |
             The global navigate handler method to remove
-      content: 'function detachNavigate(handler: IFunctionPPR)'
+      content: 'function detachNavigate(handler: IFunctionPPR<any>)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.getCurrentFragment
@@ -330,7 +330,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.serializeState
-    name: 'serializeState(state: IDictionaryStringTo)'
+    name: 'serializeState(state: IDictionaryStringTo<any>)'
     children: []
     langs:
       - typeScript
@@ -341,10 +341,10 @@ items:
       parameters:
         - id: state
           type:
-            - vss-web-extension-sdk.IDictionaryStringTo
+            - '@vss-web-extension-sdk.IDictionaryStringTo<any>'
           description: |
             The navigation state dictionary to convert
-      content: 'function serializeState(state: IDictionaryStringTo)'
+      content: 'function serializeState(state: IDictionaryStringTo<any>)'
       return:
         type:
           - string
@@ -352,7 +352,7 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.updateHistoryEntry
     name: >-
-      updateHistoryEntry(action: string, data?: IDictionaryStringTo,
+      updateHistoryEntry(action: string, data?: IDictionaryStringTo<any>,
       replaceHistoryEntry?: boolean, mergeWithCurrentState?: boolean,
       windowTitle?: string, suppressNavigate?: boolean)
     children: []
@@ -369,7 +369,7 @@ items:
             "action" in the current state dictionary
         - id: data
           type:
-            - vss-web-extension-sdk.IDictionaryStringTo
+            - '@vss-web-extension-sdk.IDictionaryStringTo<any>'
           description: The history entry's new state key/value pairs
           optional: true
         - id: replaceHistoryEntry
@@ -401,7 +401,8 @@ items:
             due to this update.
           optional: true
       content: >-
-        function updateHistoryEntry(action: string, data?: IDictionaryStringTo,
-        replaceHistoryEntry?: boolean, mergeWithCurrentState?: boolean,
-        windowTitle?: string, suppressNavigate?: boolean)
+        function updateHistoryEntry(action: string, data?:
+        IDictionaryStringTo<any>, replaceHistoryEntry?: boolean,
+        mergeWithCurrentState?: boolean, windowTitle?: string,
+        suppressNavigate?: boolean)
     type: method

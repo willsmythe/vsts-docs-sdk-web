@@ -10,15 +10,14 @@ items:
       - >-
         vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTaskLogUpdatedEvent.lines
       - >-
-        vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTaskLogUpdatedEvent.projectId
-      - >-
-        vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTaskLogUpdatedEvent.releaseId
-      - >-
         vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTaskLogUpdatedEvent.timelineRecordId
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.RealtimeReleaseEvent
     package: vss-web-extension-sdk
     module: ReleaseManagement/Core/Contracts
   - uid: >-
@@ -46,33 +45,7 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: >-
-      vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTaskLogUpdatedEvent.projectId
-    name: projectId
-    fullName: projectId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTaskLogUpdatedEvent.releaseId
-    name: releaseId
-    fullName: releaseId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
+          - 'string[]'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTaskLogUpdatedEvent.timelineRecordId
     name: timelineRecordId

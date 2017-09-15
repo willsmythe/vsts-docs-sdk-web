@@ -27,7 +27,6 @@ items:
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflict.resolvedDate
       - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflict.url
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflict._links
     langs:
       - typeScript
     type: interface
@@ -84,7 +83,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef
+          - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef'
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflict.mergeOrigin
     name: mergeOrigin
     fullName: mergeOrigin
@@ -96,7 +95,8 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitMergeOriginRef
+          - >-
+            @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitMergeOriginRef
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflict.mergeSourceCommit
     name: mergeSourceCommit
@@ -109,7 +109,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef
+          - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef'
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflict.mergeTargetCommit
     name: mergeTargetCommit
@@ -122,7 +122,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef
+          - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef'
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflict.resolutionError
     name: resolutionError
@@ -160,7 +160,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflict.resolvedDate
     name: resolvedDate
@@ -186,15 +186,3 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflict._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

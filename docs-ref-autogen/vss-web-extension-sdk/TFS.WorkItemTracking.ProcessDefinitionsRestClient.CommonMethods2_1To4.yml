@@ -16,13 +16,7 @@ items:
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.addPage
       - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.authTokenManager
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.behaviorsApiVersion
-      - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.constructor
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.controlsApiVersion
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.createBehavior
       - >-
@@ -47,10 +41,6 @@ items:
         vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.editGroup
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.editPage
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.fieldsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.forceOptionsCallForAutoNegotiate
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.getBehavior
       - >-
@@ -78,17 +68,7 @@ items:
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.getWorkItemTypes
       - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.groupsApiVersion
-      - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.hideStateDefinition
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.layoutApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.listsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.listsApiVersion_b45cc931
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.pagesApiVersion
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.removeBehaviorFromWorkItemType
       - >-
@@ -110,8 +90,6 @@ items:
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.setGroupInSection
       - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.statesApiVersion
-      - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.updateBehaviorToWorkItemType
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.updateField
@@ -121,28 +99,12 @@ items:
         vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.updateStateDefinition
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.updateWorkItemType
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.workItemTypesApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.workItemTypesApiVersion_921dfb88
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.workItemTypesFieldsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4._beginGetLocation
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4._beginRequest
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4._beginRequestWithAjaxResult
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4._issueAjaxRequest
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4._rootRequestPath
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     package: vss-web-extension-sdk
     module: TFS/WorkItemTracking/ProcessDefinitionsRestClient
   - uid: >-
@@ -159,7 +121,7 @@ items:
         - id: behavior
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeBehavior
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeBehavior
           description: ''
         - id: processId
           type:
@@ -174,7 +136,8 @@ items:
         processId: string, witRefNameForBehaviors: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeBehavior>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.addControlToGroup
@@ -193,7 +156,7 @@ items:
         - id: control
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Control
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Control
           description: ''
         - id: processId
           type:
@@ -212,7 +175,8 @@ items:
         witRefName: string, groupId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Control>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.addFieldToWorkItemType
@@ -228,7 +192,7 @@ items:
         - id: field
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeFieldModel
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeFieldModel
           description: ''
         - id: processId
           type:
@@ -243,7 +207,8 @@ items:
         processId: string, witRefNameForFields: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeFieldModel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.addGroup
@@ -259,7 +224,7 @@ items:
         - id: group
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Group
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Group
           description: ''
         - id: processId
           type:
@@ -282,7 +247,8 @@ items:
         pageId: string, sectionId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Group>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.addPage
@@ -296,7 +262,7 @@ items:
         - id: page
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Page
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Page
           description: ''
         - id: processId
           type:
@@ -309,34 +275,9 @@ items:
       content: 'function addPage(page: Page, processId: string, witRefName: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Page>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.behaviorsApiVersion
-    name: behaviorsApiVersion
-    fullName: behaviorsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.constructor
     name: >-
@@ -354,26 +295,13 @@ items:
           description: ''
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
       content: >-
         new CommonMethods2_1To4(rootRequestPath: string, options?:
         IVssHttpClientOptions)
     type: constructor
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.controlsApiVersion
-    name: controlsApiVersion
-    fullName: controlsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.createBehavior
     name: 'createBehavior(behavior: BehaviorCreateModel, processId: string)'
@@ -386,7 +314,7 @@ items:
         - id: behavior
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.BehaviorCreateModel
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.BehaviorCreateModel
           description: ''
         - id: processId
           type:
@@ -397,7 +325,8 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.BehaviorModel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.createField
@@ -411,7 +340,7 @@ items:
         - id: field
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.FieldModel
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.FieldModel
           description: ''
         - id: processId
           type:
@@ -420,7 +349,8 @@ items:
       content: 'function createField(field: FieldModel, processId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.FieldModel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.createList
@@ -434,12 +364,13 @@ items:
         - id: picklist
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.PickListModel
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.PickListModel
           description: ''
       content: 'function createList(picklist: PickListModel)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.PickListModel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.createStateDefinition
@@ -455,7 +386,7 @@ items:
         - id: stateModel
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemStateInputModel
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemStateInputModel
           description: ''
         - id: processId
           type:
@@ -470,7 +401,8 @@ items:
         processId: string, witRefName: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemStateResultModel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.createWorkItemType
@@ -484,7 +416,7 @@ items:
         - id: workItemType
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeModel
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeModel
           description: ''
         - id: processId
           type:
@@ -495,7 +427,8 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeModel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.deleteBehavior
@@ -517,7 +450,7 @@ items:
       content: 'function deleteBehavior(processId: string, behaviorId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.deleteList
@@ -535,7 +468,7 @@ items:
       content: 'function deleteList(listId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.deleteStateDefinition
@@ -565,7 +498,7 @@ items:
         stateId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.deleteWorkItemType
@@ -587,7 +520,7 @@ items:
       content: 'function deleteWorkItemType(processId: string, witRefName: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.editControl
@@ -603,7 +536,7 @@ items:
         - id: control
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Control
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Control
           description: ''
         - id: processId
           type:
@@ -626,7 +559,8 @@ items:
         string, groupId: string, controlId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Control>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.editGroup
@@ -642,7 +576,7 @@ items:
         - id: group
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Group
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Group
           description: ''
         - id: processId
           type:
@@ -669,7 +603,8 @@ items:
         pageId: string, sectionId: string, groupId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Group>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.editPage
@@ -683,7 +618,7 @@ items:
         - id: page
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Page
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Page
           description: ''
         - id: processId
           type:
@@ -696,34 +631,9 @@ items:
       content: 'function editPage(page: Page, processId: string, witRefName: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Page>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.fieldsApiVersion
-    name: fieldsApiVersion
-    fullName: fieldsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.getBehavior
     name: 'getBehavior(processId: string, behaviorId: string)'
@@ -744,7 +654,8 @@ items:
       content: 'function getBehavior(processId: string, behaviorId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.BehaviorModel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.getBehaviorForWorkItemType
@@ -774,7 +685,8 @@ items:
         witRefNameForBehaviors: string, behaviorRefName: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeBehavior>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.getBehaviors
@@ -792,7 +704,8 @@ items:
       content: 'function getBehaviors(processId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.BehaviorModel[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.getBehaviorsForWorkItemType
@@ -818,7 +731,8 @@ items:
         witRefNameForBehaviors: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeBehavior[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.getFormLayout
@@ -840,7 +754,8 @@ items:
       content: 'function getFormLayout(processId: string, witRefName: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.FormLayout>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.getList
@@ -858,7 +773,8 @@ items:
       content: 'function getList(listId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.PickListModel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.getListsMetadata
@@ -872,7 +788,8 @@ items:
       content: function getListsMetadata()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.PickListMetadataModel[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.getStateDefinition
@@ -900,7 +817,8 @@ items:
         stateId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemStateResultModel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.getStateDefinitions
@@ -922,7 +840,8 @@ items:
       content: 'function getStateDefinitions(processId: string, witRefName: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemStateResultModel[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.getWorkItemType
@@ -953,7 +872,8 @@ items:
         GetWorkItemTypeExpand)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeModel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.getWorkItemTypeField
@@ -983,7 +903,8 @@ items:
         string, fieldRefName: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeFieldModel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.getWorkItemTypeFields
@@ -1007,7 +928,8 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeFieldModel[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.getWorkItemTypes
@@ -1032,21 +954,9 @@ items:
         GetWorkItemTypeExpand)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeModel[]>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.groupsApiVersion
-    name: groupsApiVersion
-    fullName: groupsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.hideStateDefinition
     name: >-
@@ -1061,7 +971,7 @@ items:
         - id: hideStateModel
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.HideStateModel
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.HideStateModel
           description: ''
         - id: processId
           type:
@@ -1080,60 +990,9 @@ items:
         string, witRefName: string, stateId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemStateResultModel>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.layoutApiVersion
-    name: layoutApiVersion
-    fullName: layoutApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.listsApiVersion
-    name: listsApiVersion
-    fullName: listsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.listsApiVersion_b45cc931
-    name: listsApiVersion_b45cc931
-    fullName: listsApiVersion_b45cc931
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.pagesApiVersion
-    name: pagesApiVersion
-    fullName: pagesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.removeBehaviorFromWorkItemType
     name: >-
@@ -1162,7 +1021,7 @@ items:
         witRefNameForBehaviors: string, behaviorRefName: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.removeControlFromGroup
@@ -1196,7 +1055,7 @@ items:
         groupId: string, controlId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.removeFieldFromWorkItemType
@@ -1226,7 +1085,7 @@ items:
         witRefNameForFields: string, fieldRefName: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.removeGroup
@@ -1264,7 +1123,7 @@ items:
         string, sectionId: string, groupId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.removePage
@@ -1292,7 +1151,7 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.replaceBehavior
@@ -1308,7 +1167,7 @@ items:
         - id: behaviorData
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.BehaviorReplaceModel
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.BehaviorReplaceModel
           description: ''
         - id: processId
           type:
@@ -1323,7 +1182,8 @@ items:
         string, behaviorId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.BehaviorModel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.serviceInstanceId
@@ -1354,7 +1214,7 @@ items:
         - id: control
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Control
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Control
           description: ''
         - id: processId
           type:
@@ -1383,7 +1243,8 @@ items:
         removeFromGroupId?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Control>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.setGroupInPage
@@ -1400,7 +1261,7 @@ items:
         - id: group
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Group
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Group
           description: ''
         - id: processId
           type:
@@ -1436,7 +1297,8 @@ items:
         removeFromPageId: string, removeFromSectionId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Group>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.setGroupInSection
@@ -1453,7 +1315,7 @@ items:
         - id: group
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Group
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Group
           description: ''
         - id: processId
           type:
@@ -1485,21 +1347,9 @@ items:
         removeFromSectionId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.Group>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.statesApiVersion
-    name: statesApiVersion
-    fullName: statesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.updateBehaviorToWorkItemType
     name: >-
@@ -1514,7 +1364,7 @@ items:
         - id: behavior
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeBehavior
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeBehavior
           description: ''
         - id: processId
           type:
@@ -1529,7 +1379,8 @@ items:
         processId: string, witRefNameForBehaviors: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeBehavior>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.updateField
@@ -1543,7 +1394,7 @@ items:
         - id: field
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.FieldUpdate
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.FieldUpdate
           description: ''
         - id: processId
           type:
@@ -1552,7 +1403,8 @@ items:
       content: 'function updateField(field: FieldUpdate, processId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.FieldModel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.updateList
@@ -1566,7 +1418,7 @@ items:
         - id: picklist
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.PickListModel
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.PickListModel
           description: ''
         - id: listId
           type:
@@ -1575,7 +1427,8 @@ items:
       content: 'function updateList(picklist: PickListModel, listId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.PickListModel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.updateStateDefinition
@@ -1591,7 +1444,7 @@ items:
         - id: stateModel
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemStateInputModel
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemStateInputModel
           description: ''
         - id: processId
           type:
@@ -1610,7 +1463,8 @@ items:
         processId: string, witRefName: string, stateId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemStateResultModel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.updateWorkItemType
@@ -1626,7 +1480,7 @@ items:
         - id: workItemTypeUpdate
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeUpdateModel
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeUpdateModel
           description: ''
         - id: processId
           type:
@@ -1641,197 +1495,6 @@ items:
         processId: string, witRefName: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.workItemTypesApiVersion
-    name: workItemTypesApiVersion
-    fullName: workItemTypesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.workItemTypesApiVersion_921dfb88
-    name: workItemTypesApiVersion_921dfb88
-    fullName: workItemTypesApiVersion_921dfb88
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.workItemTypesFieldsApiVersion
-    name: workItemTypesFieldsApiVersion
-    fullName: workItemTypesFieldsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4._beginGetLocation
-    name: '_beginGetLocation(area: string, locationId: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Gets information about an API resource location (route template, supported
-      versions, etc.)
-    syntax:
-      parameters:
-        - id: area
-          type:
-            - string
-          description: resource area name
-        - id: locationId
-          type:
-            - string
-          description: |
-            Guid of the location to get
-      content: 'function _beginGetLocation(area: string, locationId: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4._beginRequest
-    name: >-
-      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
-      boolean)
-    children: []
-    langs:
-      - typeScript
-    summary: Issue a request to a VSS REST endpoint.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >-
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used
-          optional: true
-      content: >-
-        function _beginRequest(requestParams: VssApiResourceRequestParams,
-        useAjaxResult?: boolean)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4._beginRequestWithAjaxResult
-    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue a request to a VSS REST endpoint and makes sure the result contains
-      jqXHR. Use spread to access jqXHR.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-      content: >-
-        function _beginRequestWithAjaxResult(requestParams:
-        VssApiResourceRequestParams)
-      return:
-        type:
-          - Q.Promise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4._issueAjaxRequest
-    name: >-
-      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
-      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue an AJAX request. This is a wrapper around jquery's ajax method that
-      handles VSS authentication
-
-      and triggers events that can be listened to by other modules.
-    syntax:
-      parameters:
-        - id: requestUrl
-          type:
-            - string
-          description: Url to send the request to
-        - id: ajaxOptions
-          type:
-            - JQueryAjaxSettings
-          description: jQuery.ajax options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used.
-          optional: true
-        - id: vssRequestOptions
-          type:
-            - vss-web-extension-sdk.IVssAjaxOptions
-          description: ''
-          optional: true
-      content: >-
-        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
-        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
-        IVssAjaxOptions)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4._setInitializationPromise
-    name: '_setInitializationPromise(promise: IPromise)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Sets a promise that is waited on before any requests are issued. Can be
-      used to asynchronously
-
-      set the request url and auth token manager.
-    syntax:
-      parameters:
-        - id: promise
-          type:
-            - vss-web-extension-sdk.IPromise
-          description: ''
-      content: 'function _setInitializationPromise(promise: IPromise)'
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WorkItemTypeModel>
     type: method

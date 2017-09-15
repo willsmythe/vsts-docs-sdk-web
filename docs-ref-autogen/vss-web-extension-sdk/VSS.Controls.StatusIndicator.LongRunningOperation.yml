@@ -11,6 +11,8 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.endOperation
       - >-
+        vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.getWaitControl
+      - >-
         vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.isCancelled
       - >-
         vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.constructor
@@ -33,7 +35,7 @@ items:
       parameters:
         - id: operationCallback
           type:
-            - vss-web-extension-sdk.IResultCallback
+            - '@vss-web-extension-sdk.IResultCallback'
           description: |
             An operation that may take a long time to complete.
       content: 'function beginOperation(operationCallback: IResultCallback)'
@@ -59,6 +61,20 @@ items:
     syntax:
       parameters: []
       content: function endOperation()
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.getWaitControl
+    name: getWaitControl()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getWaitControl()
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControl'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.isCancelled

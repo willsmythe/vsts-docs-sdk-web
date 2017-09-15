@@ -4,10 +4,12 @@ items:
     name: XDMChannel
     fullName: XDMChannel
     children:
+      - vss-web-extension-sdk.XDM.XDMChannel.error
       - vss-web-extension-sdk.XDM.XDMChannel.getObjectRegistry
       - vss-web-extension-sdk.XDM.XDMChannel.getRemoteObjectProxy
       - vss-web-extension-sdk.XDM.XDMChannel.invokeRemoteMethod
       - vss-web-extension-sdk.XDM.XDMChannel.onMessage
+      - vss-web-extension-sdk.XDM.XDMChannel.owns
       - vss-web-extension-sdk.XDM.XDMChannel.constructor
     langs:
       - typeScript
@@ -17,6 +19,24 @@ items:
       Stays "alive" across multiple funtion\method calls
     package: vss-web-extension-sdk
     module: XDM
+  - uid: vss-web-extension-sdk.XDM.XDMChannel.error
+    name: 'error(data: any, errorObj: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: data
+          type:
+            - any
+          description: ''
+        - id: errorObj
+          type:
+            - any
+          description: ''
+      content: 'function error(data: any, errorObj: any)'
+    type: method
   - uid: vss-web-extension-sdk.XDM.XDMChannel.getObjectRegistry
     name: getObjectRegistry()
     children: []
@@ -31,7 +51,7 @@ items:
       content: function getObjectRegistry()
       return:
         type:
-          - vss-web-extension-sdk.IXDMObjectRegistry
+          - '@vss-web-extension-sdk.IXDMObjectRegistry'
     type: method
   - uid: vss-web-extension-sdk.XDM.XDMChannel.getRemoteObjectProxy
     name: 'getRemoteObjectProxy(instanceId: string, contextData?: Object)'
@@ -57,12 +77,12 @@ items:
       content: 'function getRemoteObjectProxy(instanceId: string, contextData?: Object)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<T>'
     type: method
   - uid: vss-web-extension-sdk.XDM.XDMChannel.invokeRemoteMethod
     name: >-
-      invokeRemoteMethod(methodName: string, instanceId: string, params?:
-      function, instanceContextData?: Object, serializationSettings?:
+      invokeRemoteMethod(methodName: string, instanceId: string, params?: any[],
+      instanceContextData?: Object, serializationSettings?:
       ISerializationSettings)
     children: []
     langs:
@@ -82,7 +102,7 @@ items:
           description: unique id of the registered object
         - id: params
           type:
-            - function
+            - 'any[]'
           description: Arguments to the method to invoke
           optional: true
         - id: instanceContextData
@@ -94,17 +114,17 @@ items:
           optional: true
         - id: serializationSettings
           type:
-            - vss-web-extension-sdk.XDM.ISerializationSettings
+            - '@vss-web-extension-sdk.XDM.ISerializationSettings'
           description: |
             Optional serialization settings
           optional: true
       content: >-
         function invokeRemoteMethod(methodName: string, instanceId: string,
-        params?: function, instanceContextData?: Object, serializationSettings?:
+        params?: any[], instanceContextData?: Object, serializationSettings?:
         ISerializationSettings)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<T>'
     type: method
   - uid: vss-web-extension-sdk.XDM.XDMChannel.onMessage
     name: 'onMessage(data: any, origin: string)'
@@ -125,6 +145,31 @@ items:
             - string
           description: Origin of the frame that sent the message
       content: 'function onMessage(data: any, origin: string)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.XDM.XDMChannel.owns
+    name: 'owns(source: Window, origin: string, data: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: source
+          type:
+            - Window
+          description: ''
+        - id: origin
+          type:
+            - string
+          description: ''
+        - id: data
+          type:
+            - any
+          description: ''
+      content: 'function owns(source: Window, origin: string, data: any)'
       return:
         type:
           - boolean

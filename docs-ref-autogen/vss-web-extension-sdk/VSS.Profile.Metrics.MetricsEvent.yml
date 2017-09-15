@@ -3,10 +3,64 @@ items:
   - uid: vss-web-extension-sdk.VSS.Profile.Metrics.MetricsEvent
     name: MetricsEvent
     fullName: MetricsEvent
-    children: []
+    children:
+      - vss-web-extension-sdk.VSS.Profile.Metrics.MetricsEvent.close
+      - vss-web-extension-sdk.VSS.Profile.Metrics.MetricsEvent.inner
+      - vss-web-extension-sdk.VSS.Profile.Metrics.MetricsEvent.setValue
     langs:
       - typeScript
     type: interface
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Profile/Metrics
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.MetricsEvent.close
+    name: close()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function close()
+      return:
+        type:
+          - Promise<void>
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.MetricsEvent.inner
+    name: 'inner(feature: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: feature
+          type:
+            - string
+          description: ''
+      content: 'function inner(feature: string)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Profile.Metrics.MetricsEvent'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.MetricsEvent.setValue
+    name: 'setValue(key: string, value: T)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: key
+          type:
+            - string
+          description: ''
+        - id: value
+          type:
+            - T
+          description: ''
+      content: 'function setValue(key: string, value: T)'
+      return:
+        type:
+          - any
+    type: method

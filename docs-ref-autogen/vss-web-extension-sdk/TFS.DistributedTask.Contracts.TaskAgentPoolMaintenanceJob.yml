@@ -130,7 +130,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPoolReference
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPoolReference
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPoolMaintenanceJob.queueTime
     name: queueTime
@@ -156,7 +156,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPoolMaintenanceJob.result
     name: result
@@ -208,7 +208,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPoolMaintenanceJobTargetAgent[]
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPoolMaintenanceJob.warningCount
     name: warningCount

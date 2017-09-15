@@ -3,10 +3,46 @@ items:
   - uid: vss-web-extension-sdk.VSS.Events.Document.Document
     name: Document
     fullName: Document
-    children: []
+    children:
+      - vss-web-extension-sdk.VSS.Events.Document.Document.getMoniker
+      - vss-web-extension-sdk.VSS.Events.Document.Document.save
     langs:
       - typeScript
     type: interface
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Events/Document
+  - uid: vss-web-extension-sdk.VSS.Events.Document.Document.getMoniker
+    name: getMoniker()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getMoniker()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Events.Document.Document.save
+    name: 'save(successCallback: IResultCallback, errorCallback?: IErrorCallback)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: successCallback
+          type:
+            - '@vss-web-extension-sdk.IResultCallback'
+          description: ''
+        - id: errorCallback
+          type:
+            - '@vss-web-extension-sdk.IErrorCallback'
+          description: ''
+          optional: true
+      content: >-
+        function save(successCallback: IResultCallback, errorCallback?:
+        IErrorCallback)
+    type: method

@@ -7,14 +7,15 @@ items:
     children:
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemFieldChangedArgs.changedFields
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemFieldChangedArgs.id
     langs:
       - typeScript
     type: interface
     summary: >-
       Interface defining the arguments for the 'onFieldChanged' notification
       sent by the ActiveWorkItemService
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemChangedArgs
     package: vss-web-extension-sdk
     module: TFS/WorkItemTracking/ExtensionContracts
   - uid: >-
@@ -30,16 +31,3 @@ items:
       return:
         type:
           - '[key: string]: any'
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemFieldChangedArgs.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Id of the work item.
-    syntax:
-      return:
-        type:
-          - number

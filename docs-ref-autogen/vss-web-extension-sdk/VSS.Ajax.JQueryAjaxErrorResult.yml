@@ -5,12 +5,12 @@ items:
     fullName: JQueryAjaxErrorResult
     children:
       - vss-web-extension-sdk.VSS.Ajax.JQueryAjaxErrorResult.errorThrown
-      - vss-web-extension-sdk.VSS.Ajax.JQueryAjaxErrorResult.jqXHR
-      - vss-web-extension-sdk.VSS.Ajax.JQueryAjaxErrorResult.textStatus
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Ajax.JQueryAjaxResult'
     package: vss-web-extension-sdk
     module: VSS/Ajax
   - uid: vss-web-extension-sdk.VSS.Ajax.JQueryAjaxErrorResult.errorThrown
@@ -25,27 +25,3 @@ items:
       return:
         type:
           - any
-  - uid: vss-web-extension-sdk.VSS.Ajax.JQueryAjaxErrorResult.jqXHR
-    name: jqXHR
-    fullName: jqXHR
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQueryXHR
-  - uid: vss-web-extension-sdk.VSS.Ajax.JQueryAjaxErrorResult.textStatus
-    name: textStatus
-    fullName: textStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string

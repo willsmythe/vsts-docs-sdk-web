@@ -5,18 +5,18 @@ items:
     fullName: TaskLog
     children:
       - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog.createdOn
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog.id
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog.indexLocation
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog.lastChangedOn
       - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog.lineCount
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog.location
       - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog.path
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLogReference'
     package: vss-web-extension-sdk
     module: TFS/DistributedTask/Contracts
   - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog.createdOn
@@ -31,18 +31,6 @@ items:
       return:
         type:
           - Date
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
   - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog.indexLocation
     name: indexLocation
     fullName: indexLocation
@@ -79,18 +67,6 @@ items:
       return:
         type:
           - number
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog.location
-    name: location
-    fullName: location
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog.path
     name: path
     fullName: path

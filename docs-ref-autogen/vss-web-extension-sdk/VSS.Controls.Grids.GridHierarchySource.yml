@@ -4,29 +4,30 @@ items:
     name: GridHierarchySource
     fullName: GridHierarchySource
     children:
-      - vss-web-extension-sdk.VSS.Controls.Grids.GridHierarchySource.grid
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Grids.GridHierarchySource.getExpandStates
       - vss-web-extension-sdk.VSS.Controls.Grids.GridHierarchySource.constructor
-      - vss-web-extension-sdk.VSS.Controls.Grids.GridHierarchySource._source
     langs:
       - typeScript
     type: class
     summary: Hierarchical datasource implementation.
+    extends:
+      - '@vss-web-extension-sdk.VSS.Controls.Grids.GridDefaultSource'
     package: vss-web-extension-sdk
     module: VSS/Controls/Grids
-  - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridHierarchySource.grid
-    name: grid
-    fullName: grid
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Grids.GridHierarchySource.getExpandStates
+    name: getExpandStates()
     children: []
     langs:
       - typeScript
-    type: property
     summary: ''
     syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Controls.Grids.Grid
+      parameters: []
+      content: function getExpandStates()
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridHierarchySource.constructor
-    name: 'GridHierarchySource(items: function)'
+    name: 'GridHierarchySource(items: IGridHierarchyItem[])'
     children: []
     langs:
       - typeScript
@@ -35,19 +36,7 @@ items:
       parameters:
         - id: items
           type:
-            - function
+            - '@vss-web-extension-sdk.VSS.Controls.Grids.IGridHierarchyItem[]'
           description: ''
-      content: 'new GridHierarchySource(items: function)'
+      content: 'new GridHierarchySource(items: IGridHierarchyItem[])'
     type: constructor
-  - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridHierarchySource._source
-    name: _source
-    fullName: _source
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - function

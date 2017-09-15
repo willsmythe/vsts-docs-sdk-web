@@ -6,16 +6,13 @@ items:
     children:
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionRename1to2.action
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionRename1to2.mergeType
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionRename1to2.userMergedBlob
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionRename1to2.userMergedContent
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionMergeContent
     package: vss-web-extension-sdk
     module: TFS/VersionControl/Contracts
   - uid: >-
@@ -31,42 +28,3 @@ items:
       return:
         type:
           - GitResolutionRename1to2Action
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionRename1to2.mergeType
-    name: mergeType
-    fullName: mergeType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - GitResolutionMergeType
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionRename1to2.userMergedBlob
-    name: userMergedBlob
-    fullName: userMergedBlob
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitBlobRef
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionRename1to2.userMergedContent
-    name: userMergedContent
-    fullName: userMergedContent
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - function

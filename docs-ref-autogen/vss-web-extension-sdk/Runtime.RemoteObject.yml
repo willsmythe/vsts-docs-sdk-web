@@ -1,0 +1,137 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.inspector.Runtime.RemoteObject
+    name: RemoteObject
+    fullName: RemoteObject
+    children:
+      - vss-web-extension-sdk.inspector.Runtime.RemoteObject.className
+      - vss-web-extension-sdk.inspector.Runtime.RemoteObject.customPreview
+      - vss-web-extension-sdk.inspector.Runtime.RemoteObject.description
+      - vss-web-extension-sdk.inspector.Runtime.RemoteObject.objectId
+      - vss-web-extension-sdk.inspector.Runtime.RemoteObject.preview
+      - vss-web-extension-sdk.inspector.Runtime.RemoteObject.subtype
+      - vss-web-extension-sdk.inspector.Runtime.RemoteObject.type
+      - vss-web-extension-sdk.inspector.Runtime.RemoteObject.unserializableValue
+      - vss-web-extension-sdk.inspector.Runtime.RemoteObject.value
+    langs:
+      - typeScript
+    type: interface
+    summary: Mirror object referencing original JavaScript object.
+    package: vss-web-extension-sdk
+    module: Runtime
+  - uid: vss-web-extension-sdk.inspector.Runtime.RemoteObject.className
+    name: className
+    fullName: className
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Object class (constructor) name. Specified for <code>object</code> type
+      values only.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.inspector.Runtime.RemoteObject.customPreview
+    name: customPreview
+    fullName: customPreview
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Runtime.CustomPreview'
+  - uid: vss-web-extension-sdk.inspector.Runtime.RemoteObject.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: String representation of the object.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.inspector.Runtime.RemoteObject.objectId
+    name: objectId
+    fullName: objectId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Unique object identifier (for non-primitive values).
+    syntax:
+      return:
+        type:
+          - RemoteObjectId
+  - uid: vss-web-extension-sdk.inspector.Runtime.RemoteObject.preview
+    name: preview
+    fullName: preview
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Preview containing abbreviated property values. Specified for
+      <code>object</code> type values only.
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Runtime.ObjectPreview'
+  - uid: vss-web-extension-sdk.inspector.Runtime.RemoteObject.subtype
+    name: subtype
+    fullName: subtype
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Object subtype hint. Specified for <code>object</code> type values only.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.inspector.Runtime.RemoteObject.type
+    name: type
+    fullName: type
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Object type.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.inspector.Runtime.RemoteObject.unserializableValue
+    name: unserializableValue
+    fullName: unserializableValue
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Primitive value which can not be JSON-stringified does not have
+      <code>value</code>, but gets this property.
+    syntax:
+      return:
+        type:
+          - UnserializableValue
+  - uid: vss-web-extension-sdk.inspector.Runtime.RemoteObject.value
+    name: value
+    fullName: value
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Remote object value in case of primitive values or JSON values (if it was
+      requested).
+    syntax:
+      return:
+        type:
+          - any

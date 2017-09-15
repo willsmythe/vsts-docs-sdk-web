@@ -1,0 +1,74 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.http.AgentOptions
+    name: AgentOptions
+    fullName: AgentOptions
+    children:
+      - vss-web-extension-sdk.http.AgentOptions.keepAlive
+      - vss-web-extension-sdk.http.AgentOptions.keepAliveMsecs
+      - vss-web-extension-sdk.http.AgentOptions.maxFreeSockets
+      - vss-web-extension-sdk.http.AgentOptions.maxSockets
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: vss-web-extension-sdk
+    module: http
+  - uid: vss-web-extension-sdk.http.AgentOptions.keepAlive
+    name: keepAlive
+    fullName: keepAlive
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Keep sockets around in a pool to be used by other requests in the future.
+      Default = false
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.http.AgentOptions.keepAliveMsecs
+    name: keepAliveMsecs
+    fullName: keepAliveMsecs
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      When using HTTP KeepAlive, how often to send TCP KeepAlive packets over
+      sockets being kept alive. Default = 1000.
+
+      Only relevant if keepAlive is set to true.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.http.AgentOptions.maxFreeSockets
+    name: maxFreeSockets
+    fullName: maxFreeSockets
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Maximum number of sockets to leave open in a free state. Only relevant if
+      keepAlive is set to true. Default = 256.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.http.AgentOptions.maxSockets
+    name: maxSockets
+    fullName: maxSockets
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Maximum number of sockets to allow per host. Default for Node 0.10 is 5,
+      default for Node 0.12 is Infinity
+    syntax:
+      return:
+        type:
+          - number

@@ -5,25 +5,13 @@ items:
     fullName: ICollapsiblePanelOptions
     children:
       - >-
-        vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.ariaAttributes
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.ariaLabel
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.change
-      - >-
         vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.collapseCss
       - >-
         vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.collapsed
       - >-
         vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.contentCss
       - >-
-        vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.coreCssClass
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.cssClass
-      - >-
         vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.customToggleIcon
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.earlyInitialize
       - >-
         vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.expandCss
       - >-
@@ -37,8 +25,6 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.headingLevel
       - >-
-        vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.height
-      - >-
         vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.hoverCss
       - >-
         vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.iconCollapseCss
@@ -46,60 +32,16 @@ items:
         vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.iconCss
       - >-
         vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.iconExpandCss
-      - vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.id
       - >-
         vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.onToggleCallback
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.prepend
-      - vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.role
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.tagName
-      - vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.title
-      - vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.width
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
     package: vss-web-extension-sdk
     module: VSS/Controls/Panels
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.ariaAttributes
-    name: ariaAttributes
-    fullName: ariaAttributes
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Add these aria attributes to the Enhancement.
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Controls.AriaAttributes
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.ariaLabel
-    name: ariaLabel
-    fullName: ariaLabel
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Legacy option. Superseded by ariaAttributes property.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.change
-    name: change
-    fullName: change
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - Function
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.collapseCss
     name: collapseCss
@@ -140,32 +82,6 @@ items:
         type:
           - string
   - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.coreCssClass
-    name: coreCssClass
-    fullName: coreCssClass
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.cssClass
-    name: cssClass
-    fullName: cssClass
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
       vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.customToggleIcon
     name: customToggleIcon
     fullName: customToggleIcon
@@ -178,19 +94,6 @@ items:
       return:
         type:
           - JQuery
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.earlyInitialize
-    name: earlyInitialize
-    fullName: earlyInitialize
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.expandCss
     name: expandCss
@@ -283,18 +186,6 @@ items:
       return:
         type:
           - number
-  - uid: vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.height
-    name: height
-    fullName: height
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.hoverCss
     name: hoverCss
@@ -346,18 +237,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.onToggleCallback
     name: onToggleCallback
@@ -371,63 +250,3 @@ items:
       return:
         type:
           - Function
-  - uid: vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.prepend
-    name: prepend
-    fullName: prepend
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.role
-    name: role
-    fullName: role
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.tagName
-    name: tagName
-    fullName: tagName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.title
-    name: title
-    fullName: title
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions.width
-    name: width
-    fullName: width
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number

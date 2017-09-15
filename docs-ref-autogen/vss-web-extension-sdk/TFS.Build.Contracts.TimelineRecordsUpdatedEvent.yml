@@ -5,28 +5,15 @@ items:
     fullName: TimelineRecordsUpdatedEvent
     children:
       - >-
-        vss-web-extension-sdk.TFS.Build.Contracts.TimelineRecordsUpdatedEvent.buildId
-      - >-
         vss-web-extension-sdk.TFS.Build.Contracts.TimelineRecordsUpdatedEvent.timelineRecords
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.Build.Contracts.RealtimeBuildEvent'
     package: vss-web-extension-sdk
     module: TFS/Build/Contracts
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.Contracts.TimelineRecordsUpdatedEvent.buildId
-    name: buildId
-    fullName: buildId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
   - uid: >-
       vss-web-extension-sdk.TFS.Build.Contracts.TimelineRecordsUpdatedEvent.timelineRecords
     name: timelineRecords
@@ -39,4 +26,4 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.TFS.Build.Contracts.TimelineRecord[]'

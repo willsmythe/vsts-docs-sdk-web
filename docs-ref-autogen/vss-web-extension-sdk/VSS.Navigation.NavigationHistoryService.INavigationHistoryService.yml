@@ -185,7 +185,8 @@ items:
     syntax:
       parameters:
         - id: listener
-          type: []
+          type:
+            - function
           description: |
             Method invoked when a forward or back navigation has occurred.
       content: 'function subscribe(listener: function)'
@@ -203,7 +204,8 @@ items:
     syntax:
       parameters:
         - id: listener
-          type: []
+          type:
+            - function
           description: |
             Listener to remove.
       content: 'function unsubscribe(listener: function)'

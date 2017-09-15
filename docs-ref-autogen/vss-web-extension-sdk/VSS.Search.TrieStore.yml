@@ -5,17 +5,20 @@ items:
     fullName: TrieStore
     children:
       - vss-web-extension-sdk.VSS.Search.TrieStore.addToIndex
+      - vss-web-extension-sdk.VSS.Search.TrieStore.clearStrategyStore
+      - vss-web-extension-sdk.VSS.Search.TrieStore.getStoreTotalSize
+      - vss-web-extension-sdk.VSS.Search.TrieStore.search
       - vss-web-extension-sdk.VSS.Search.TrieStore.constructor
-      - vss-web-extension-sdk.VSS.Search.TrieStore._comparer
-      - vss-web-extension-sdk.VSS.Search.TrieStore._options
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Search.IndexedSearchStore<T>'
     package: vss-web-extension-sdk
     module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.TrieStore.addToIndex
-    name: 'addToIndex(item: T, tokens: function)'
+    name: 'addToIndex(item: T, tokens: string[])'
     children: []
     langs:
       - typeScript
@@ -28,15 +31,52 @@ items:
           description: The item to add to the index.
         - id: tokens
           type:
-            - function
+            - 'string[]'
           description: The tokens to add the item under.
-      content: 'function addToIndex(item: T, tokens: function)'
+      content: 'function addToIndex(item: T, tokens: string[])'
       return:
         type:
           - boolean
     type: method
+  - uid: vss-web-extension-sdk.VSS.Search.TrieStore.clearStrategyStore
+    name: clearStrategyStore()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function clearStrategyStore()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Search.TrieStore.getStoreTotalSize
+    name: getStoreTotalSize()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getStoreTotalSize()
+      return:
+        type:
+          - number
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Search.TrieStore.search
+    name: 'search(query: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: query
+          type:
+            - string
+          description: ''
+      content: 'function search(query: string)'
+    type: method
   - uid: vss-web-extension-sdk.VSS.Search.TrieStore.constructor
-    name: 'TrieStore(options?: IndexedSearchStoreOptions)'
+    name: 'TrieStore(options?: IndexedSearchStoreOptions<T>)'
     children: []
     langs:
       - typeScript
@@ -45,32 +85,8 @@ items:
       parameters:
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.Search.IndexedSearchStoreOptions
+            - '@vss-web-extension-sdk.VSS.Search.IndexedSearchStoreOptions<T>'
           description: ''
           optional: true
-      content: 'new TrieStore(options?: IndexedSearchStoreOptions)'
+      content: 'new TrieStore(options?: IndexedSearchStoreOptions<T>)'
     type: constructor
-  - uid: vss-web-extension-sdk.VSS.Search.TrieStore._comparer
-    name: _comparer
-    fullName: _comparer
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IComparer
-  - uid: vss-web-extension-sdk.VSS.Search.TrieStore._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Search.IndexedSearchStoreOptions

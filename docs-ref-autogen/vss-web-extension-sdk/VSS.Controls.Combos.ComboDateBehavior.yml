@@ -4,50 +4,49 @@ items:
     name: ComboDateBehavior
     fullName: ComboDateBehavior
     children:
-      - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.combo
+      - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.canType
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.constructor
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.downKey
       - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getAriaAutocomplete
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getAriaDescription
+      - >-
         vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getDropOptions
-      - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getItemText
+      - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getDropWidth
       - >-
         vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getSelectedDate
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getSelectedIndex
-      - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getText
+      - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getValue
+      - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.initialize
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.keyDown
-      - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.keyPress
-      - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.keyUp
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.leftKey
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.onForceHideDropPopup
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.pageDownKey
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.pageUpKey
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.rightKey
       - >-
         vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.setSelectedDate
-      - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.setText
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.upKey
-      - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior._dataSource
-      - vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior._options
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior'
     package: vss-web-extension-sdk
     module: VSS/Controls/Combos
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.combo
-    name: combo
-    fullName: combo
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.canType
+    name: canType()
     children: []
     langs:
       - typeScript
-    type: property
     summary: ''
     syntax:
+      parameters: []
+      content: function canType()
       return:
         type:
-          - vss-web-extension-sdk.VSS.Controls.Combos.Combo
+          - boolean
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.constructor
     name: 'ComboDateBehavior(combo: any, options?: any)'
     children: []
@@ -85,6 +84,34 @@ items:
         type:
           - any
     type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getAriaAutocomplete
+    name: getAriaAutocomplete()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getAriaAutocomplete()
+      return:
+        type:
+          - string
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getAriaDescription
+    name: getAriaDescription()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getAriaDescription()
+      return:
+        type:
+          - string
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getDropOptions
     name: getDropOptions()
     children: []
@@ -98,32 +125,18 @@ items:
         type:
           - any
     type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getItemText
-    name: 'getItemText(index: number, all?: boolean)'
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getDropWidth
+    name: getDropWidth()
     children: []
     langs:
       - typeScript
-    summary: >-
-      Gets the text of the given index based on allItems in datasource. Default
-      behavior returns datasource getItemText
-
-      Can be overridden by the getItemText option
+    summary: ''
     syntax:
-      parameters:
-        - id: index
-          type:
-            - number
-          description: ''
-        - id: all
-          type:
-            - boolean
-          description: |
-            Search allItems from data source
-          optional: true
-      content: 'function getItemText(index: number, all?: boolean)'
+      parameters: []
+      content: function getDropWidth()
       return:
         type:
-          - string
+          - number
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getSelectedDate
@@ -139,32 +152,28 @@ items:
         type:
           - Date
     type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getSelectedIndex
-    name: getSelectedIndex()
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getValue
+    name: getValue()
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
       parameters: []
-      content: function getSelectedIndex()
+      content: function getValue()
       return:
         type:
-          - number
+          - Date
     type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.getText
-    name: getText()
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.initialize
+    name: initialize()
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
       parameters: []
-      content: function getText()
-      return:
-        type:
-          - string
+      content: function initialize()
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.keyDown
     name: 'keyDown(e?: JQueryEventObject)'
@@ -184,42 +193,6 @@ items:
         type:
           - any
     type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.keyPress
-    name: 'keyPress(e?: JQueryEventObject)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: e
-          type:
-            - JQueryEventObject
-          description: ''
-          optional: true
-      content: 'function keyPress(e?: JQueryEventObject)'
-      return:
-        type:
-          - any
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.keyUp
-    name: 'keyUp(e?: JQueryEventObject)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: e
-          type:
-            - JQueryEventObject
-          description: ''
-          optional: true
-      content: 'function keyUp(e?: JQueryEventObject)'
-      return:
-        type:
-          - any
-    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.leftKey
     name: 'leftKey(e?: JQueryEventObject)'
     children: []
@@ -234,25 +207,6 @@ items:
           description: ''
           optional: true
       content: 'function leftKey(e?: JQueryEventObject)'
-      return:
-        type:
-          - any
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.onForceHideDropPopup
-    name: 'onForceHideDropPopup(e?: JQueryEventObject)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: e
-          type:
-            - JQueryEventObject
-          description: ''
-          optional: true
-      content: 'function onForceHideDropPopup(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -332,26 +286,6 @@ items:
           optional: true
       content: 'function setSelectedDate(selectedDate: Date, fireChange?: boolean)'
     type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.setText
-    name: 'setText(value: string, fireEvent?: boolean)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: value
-          type:
-            - string
-          description: ''
-        - id: fireEvent
-          type:
-            - boolean
-          description: |+
-
-          optional: true
-      content: 'function setText(value: string, fireEvent?: boolean)'
-    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.upKey
     name: 'upKey(e?: JQueryEventObject)'
     children: []
@@ -370,27 +304,3 @@ items:
         type:
           - any
     type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior._dataSource
-    name: _dataSource
-    fullName: _dataSource
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Controls.BaseDataSource
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

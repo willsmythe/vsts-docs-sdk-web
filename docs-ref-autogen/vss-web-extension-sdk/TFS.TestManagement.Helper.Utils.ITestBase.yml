@@ -30,7 +30,8 @@ items:
     syntax:
       return:
         type:
-          - Array
+          - >-
+            Array<@vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestAction>
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.createTestStep
     name: createTestStep()
@@ -43,7 +44,7 @@ items:
       content: function createTestStep()
       return:
         type:
-          - vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep
+          - '@vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.generateXmlFromActions
@@ -61,7 +62,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.loadActions
-    name: 'loadActions(xmString: string, links: function)'
+    name: 'loadActions(xmString: string, links: ITestAttachmentLink[])'
     children: []
     langs:
       - typeScript
@@ -74,9 +75,10 @@ items:
           description: ''
         - id: links
           type:
-            - function
+            - >-
+              @vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestAttachmentLink[]
           description: ''
-      content: 'function loadActions(xmString: string, links: function)'
+      content: 'function loadActions(xmString: string, links: ITestAttachmentLink[])'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.saveActions
@@ -92,10 +94,10 @@ items:
       parameters:
         - id: json
           type:
-            - vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument
+            - '@vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument'
           description: ''
       content: 'function saveActions(json: JsonPatchDocument)'
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument'
     type: method

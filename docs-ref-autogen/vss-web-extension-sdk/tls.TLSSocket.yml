@@ -1,0 +1,460 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.tls.TLSSocket
+    name: TLSSocket
+    fullName: TLSSocket
+    children:
+      - vss-web-extension-sdk.tls.TLSSocket.addListener
+      - vss-web-extension-sdk.tls.TLSSocket.address
+      - vss-web-extension-sdk.tls.TLSSocket.authorizationError
+      - vss-web-extension-sdk.tls.TLSSocket.authorized
+      - vss-web-extension-sdk.tls.TLSSocket.emit
+      - vss-web-extension-sdk.tls.TLSSocket.encrypted
+      - vss-web-extension-sdk.tls.TLSSocket.getCipher
+      - vss-web-extension-sdk.tls.TLSSocket.getPeerCertificate
+      - vss-web-extension-sdk.tls.TLSSocket.getSession
+      - vss-web-extension-sdk.tls.TLSSocket.getTLSTicket
+      - vss-web-extension-sdk.tls.TLSSocket.localAddress
+      - vss-web-extension-sdk.tls.TLSSocket.localPort
+      - vss-web-extension-sdk.tls.TLSSocket.on
+      - vss-web-extension-sdk.tls.TLSSocket.once
+      - vss-web-extension-sdk.tls.TLSSocket.prependListener
+      - vss-web-extension-sdk.tls.TLSSocket.prependOnceListener
+      - vss-web-extension-sdk.tls.TLSSocket.remoteAddress
+      - vss-web-extension-sdk.tls.TLSSocket.remoteFamily
+      - vss-web-extension-sdk.tls.TLSSocket.remotePort
+      - vss-web-extension-sdk.tls.TLSSocket.renegotiate
+      - vss-web-extension-sdk.tls.TLSSocket.setMaxSendFragment
+      - vss-web-extension-sdk.tls.TLSSocket.Socket
+      - vss-web-extension-sdk.tls.TLSSocket.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      - '@vss-web-extension-sdk.net.Socket'
+    package: vss-web-extension-sdk
+    module: tls
+  - uid: vss-web-extension-sdk.tls.TLSSocket.addListener
+    name: 'addListener(event: string, listener: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      events.EventEmitter
+      1. OCSPResponse
+      2. secureConnect
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: listener
+          type:
+            - function
+          description: ''
+      content: 'function addListener(event: string, listener: function)'
+      return:
+        type:
+          - this
+    type: method
+  - uid: vss-web-extension-sdk.tls.TLSSocket.address
+    name: address()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Returns the bound address, the address family name and port of the
+      underlying socket as reported by
+
+      the operating system.
+    syntax:
+      parameters: []
+      content: function address()
+    type: method
+  - uid: vss-web-extension-sdk.tls.TLSSocket.authorizationError
+    name: authorizationError
+    fullName: authorizationError
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      The reason why the peer's certificate has not been verified.
+      This property becomes available only when tlsSocket.authorized === false.
+    syntax:
+      return:
+        type:
+          - Error
+  - uid: vss-web-extension-sdk.tls.TLSSocket.authorized
+    name: authorized
+    fullName: authorized
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      A boolean that is true if the peer certificate was signed by one of the
+      specified CAs, otherwise false.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.tls.TLSSocket.emit
+    name: 'emit(event: string, args: any[])'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: args
+          type:
+            - 'any[]'
+          description: ''
+      content: 'function emit(event: string, args: any[])'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.tls.TLSSocket.encrypted
+    name: encrypted
+    fullName: encrypted
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Static boolean value, always true.
+      May be used to distinguish TLS sockets from regular ones.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.tls.TLSSocket.getCipher
+    name: getCipher()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Returns an object representing the cipher name and the SSL/TLS protocol
+      version of the current connection.
+    syntax:
+      parameters: []
+      content: function getCipher()
+      return:
+        type:
+          - '@vss-web-extension-sdk.tls.CipherNameAndProtocol'
+    type: method
+  - uid: vss-web-extension-sdk.tls.TLSSocket.getPeerCertificate
+    name: 'getPeerCertificate(detailed: true)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Returns an object representing the peer's certificate.
+
+      The returned object has some properties corresponding to the field of the
+      certificate.
+
+      If detailed argument is true the full chain with issuer property will be
+      returned,
+
+      if false only the top certificate without issuer property.
+
+      If the peer does not provide a certificate, it returns null or an empty
+      object.
+    syntax:
+      parameters:
+        - id: detailed
+          type:
+            - 'true'
+          description: If true; the full chain with issuer property will be returned.
+      content: 'function getPeerCertificate(detailed: true)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.tls.DetailedPeerCertificate'
+    type: method
+  - uid: vss-web-extension-sdk.tls.TLSSocket.getSession
+    name: getSession()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Could be used to speed up handshake establishment when reconnecting to the
+      server.
+    syntax:
+      parameters: []
+      content: function getSession()
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.tls.TLSSocket.getTLSTicket
+    name: getTLSTicket()
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      NOTE: Works only with client TLS sockets.
+
+      Useful only for debugging, for session reuse provide session option to
+      tls.connect().
+    syntax:
+      parameters: []
+      content: function getTLSTicket()
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.tls.TLSSocket.localAddress
+    name: localAddress
+    fullName: localAddress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The string representation of the local IP address.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.tls.TLSSocket.localPort
+    name: localPort
+    fullName: localPort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The numeric representation of the local port.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.tls.TLSSocket.on
+    name: 'on(event: string, listener: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: listener
+          type:
+            - function
+          description: ''
+      content: 'function on(event: string, listener: function)'
+      return:
+        type:
+          - this
+    type: method
+  - uid: vss-web-extension-sdk.tls.TLSSocket.once
+    name: 'once(event: string, listener: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: listener
+          type:
+            - function
+          description: ''
+      content: 'function once(event: string, listener: function)'
+      return:
+        type:
+          - this
+    type: method
+  - uid: vss-web-extension-sdk.tls.TLSSocket.prependListener
+    name: 'prependListener(event: string, listener: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: listener
+          type:
+            - function
+          description: ''
+      content: 'function prependListener(event: string, listener: function)'
+      return:
+        type:
+          - this
+    type: method
+  - uid: vss-web-extension-sdk.tls.TLSSocket.prependOnceListener
+    name: 'prependOnceListener(event: string, listener: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: listener
+          type:
+            - function
+          description: ''
+      content: 'function prependOnceListener(event: string, listener: function)'
+      return:
+        type:
+          - this
+    type: method
+  - uid: vss-web-extension-sdk.tls.TLSSocket.remoteAddress
+    name: remoteAddress
+    fullName: remoteAddress
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      The string representation of the remote IP address.
+      For example, '74.125.127.100' or '2001:4860:a005::68'.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.tls.TLSSocket.remoteFamily
+    name: remoteFamily
+    fullName: remoteFamily
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The string representation of the remote IP family. 'IPv4' or 'IPv6'.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.tls.TLSSocket.remotePort
+    name: remotePort
+    fullName: remotePort
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'The numeric representation of the remote port. For example, 443.'
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.tls.TLSSocket.renegotiate
+    name: 'renegotiate(options: TlsOptions, callback: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Initiate TLS renegotiation process.
+
+      NOTE: Can be used to request peer's certificate after the secure
+      connection has been established.
+
+      ANOTHER NOTE: When running as the server, socket will be destroyed with an
+      error after handshakeTimeout timeout.
+    syntax:
+      parameters:
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.tls.TlsOptions'
+          description: |-
+            The options may contain the following fields: rejectUnauthorized,
+            requestCert (See tls.createServer() for details).
+        - id: callback
+          type:
+            - function
+          description: >
+            callback(err) will be executed with null as err, once the
+            renegotiation
+
+            is successfully completed.
+      content: 'function renegotiate(options: TlsOptions, callback: function)'
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.tls.TLSSocket.setMaxSendFragment
+    name: 'setMaxSendFragment(size: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Set maximum TLS fragment size (default and maximum value is: 16384,
+      minimum is: 512).
+
+      Smaller fragment size decreases buffering latency on the client: large
+      fragments are buffered by
+
+      the TLS layer until the entire fragment is received and its integrity is
+      verified;
+
+      large fragments can span multiple roundtrips, and their processing can be
+      delayed due to packet
+
+      loss or reordering. However, smaller fragments add extra TLS framing bytes
+      and CPU overhead,
+
+      which may decrease overall server throughput.
+    syntax:
+      parameters:
+        - id: size
+          type:
+            - number
+          description: >-
+            TLS fragment size (default and maximum value is: 16384, minimum is:
+            512).
+      content: 'function setMaxSendFragment(size: number)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.tls.TLSSocket.Socket
+    name: Socket
+    fullName: Socket
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - function
+  - uid: vss-web-extension-sdk.tls.TLSSocket.constructor
+    name: 'TLSSocket(socket: Socket, options?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Construct a new tls.TLSSocket object from an existing TCP socket.
+    syntax:
+      parameters:
+        - id: socket
+          type:
+            - '@vss-web-extension-sdk.net.Socket'
+          description: ''
+        - id: options
+          type:
+            - function
+          description: ''
+          optional: true
+      content: 'new TLSSocket(socket: Socket, options?: function)'
+    type: constructor

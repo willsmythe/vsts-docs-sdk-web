@@ -89,7 +89,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TimelineReference
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TimelineReference
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TimelineRecord.errorCount
     name: errorCount
@@ -139,7 +139,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.Issue[]'
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TimelineRecord.lastModified
     name: lastModified
@@ -177,7 +177,8 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLogReference
+          - >-
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLogReference
   - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TimelineRecord.name
     name: name
     fullName: name
@@ -301,7 +302,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskReference
+          - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskReference'
   - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TimelineRecord.type
     name: type
     fullName: type
@@ -326,7 +327,9 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: VariableValue'
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableValue
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TimelineRecord.warningCount
     name: warningCount

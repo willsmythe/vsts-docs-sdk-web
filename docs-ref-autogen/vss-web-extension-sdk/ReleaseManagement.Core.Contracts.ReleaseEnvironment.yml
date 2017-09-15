@@ -84,7 +84,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseCondition[]
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment.createdOn
     name: createdOn
@@ -123,7 +124,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'any[]'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment.deployPhasesSnapshot
     name: deployPhasesSnapshot
@@ -136,7 +137,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeployPhase[]
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment.deploySteps
     name: deploySteps
@@ -149,7 +151,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeploymentAttempt[]
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment.environmentOptions
     name: environmentOptions
@@ -163,7 +166,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.EnvironmentOptions
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.EnvironmentOptions
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment.id
     name: id
@@ -228,7 +231,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment.postApprovalsSnapshot
     name: postApprovalsSnapshot
@@ -242,7 +245,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionApprovals
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionApprovals
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment.postDeployApprovals
     name: postDeployApprovals
@@ -255,7 +258,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval[]
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment.preApprovalsSnapshot
     name: preApprovalsSnapshot
@@ -269,7 +273,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionApprovals
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionApprovals
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment.preDeployApprovals
     name: preDeployApprovals
@@ -282,7 +286,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval[]
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment.processParameters
     name: processParameters
@@ -337,7 +342,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseShallowReference
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseShallowReference
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment.releaseCreatedBy
     name: releaseCreatedBy
@@ -350,7 +355,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment.releaseDefinition
     name: releaseDefinition
@@ -366,7 +371,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionShallowReference
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionShallowReference
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment.releaseDescription
     name: releaseDescription
@@ -418,7 +423,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseSchedule[]
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment.status
     name: status
@@ -470,7 +476,9 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: ConfigurationVariableValue'
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ConfigurationVariableValue
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment.workflowTasks
     name: workflowTasks
@@ -483,4 +491,5 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.WorkflowTask[]

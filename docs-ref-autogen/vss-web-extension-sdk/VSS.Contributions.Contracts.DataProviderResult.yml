@@ -35,7 +35,9 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: ClientDataProviderQuery'
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.VSS.Contributions.Contracts.ClientDataProviderQuery
   - uid: vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult.data
     name: data
     fullName: data
@@ -60,7 +62,9 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: DataProviderExceptionDetails'
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderExceptionDetails
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult.resolvedProviders
     name: resolvedProviders
@@ -73,7 +77,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.VSS.Contributions.Contracts.ResolvedDataProvider[]
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult.sharedData
     name: sharedData

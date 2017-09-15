@@ -5,8 +5,6 @@ items:
     fullName: TfsError
     children:
       - vss-web-extension-sdk.TfsError.Error
-      - vss-web-extension-sdk.TfsError.message
-      - vss-web-extension-sdk.TfsError.name
       - vss-web-extension-sdk.TfsError.serverError
       - vss-web-extension-sdk.TfsError.stack
       - vss-web-extension-sdk.TfsError.status
@@ -14,6 +12,8 @@ items:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - Error
     package: vss-web-extension-sdk
     module: Global
   - uid: vss-web-extension-sdk.TfsError.Error
@@ -28,30 +28,6 @@ items:
       return:
         type:
           - ErrorConstructor
-  - uid: vss-web-extension-sdk.TfsError.message
-    name: message
-    fullName: message
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TfsError.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TfsError.serverError
     name: serverError
     fullName: serverError
@@ -63,7 +39,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.ServerError
+          - '@vss-web-extension-sdk.ServerError'
   - uid: vss-web-extension-sdk.TfsError.stack
     name: stack
     fullName: stack

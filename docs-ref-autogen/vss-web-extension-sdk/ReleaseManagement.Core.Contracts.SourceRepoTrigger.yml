@@ -8,12 +8,13 @@ items:
         vss-web-extension-sdk.ReleaseManagement.Core.Contracts.SourceRepoTrigger.alias
       - >-
         vss-web-extension-sdk.ReleaseManagement.Core.Contracts.SourceRepoTrigger.branchFilters
-      - >-
-        vss-web-extension-sdk.ReleaseManagement.Core.Contracts.SourceRepoTrigger.triggerType
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTriggerBase
     package: vss-web-extension-sdk
     module: ReleaseManagement/Core/Contracts
   - uid: >-
@@ -41,17 +42,4 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: >-
-      vss-web-extension-sdk.ReleaseManagement.Core.Contracts.SourceRepoTrigger.triggerType
-    name: triggerType
-    fullName: triggerType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - ReleaseTriggerType
+          - 'string[]'

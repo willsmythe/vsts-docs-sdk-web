@@ -1,0 +1,369 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.Command
+    name: Command
+    fullName: Command
+    children:
+      - vss-web-extension-sdk.Command.action
+      - vss-web-extension-sdk.Command.alias
+      - vss-web-extension-sdk.Command.allowUnknownOption
+      - vss-web-extension-sdk.Command.args
+      - vss-web-extension-sdk.Command.arguments
+      - vss-web-extension-sdk.Command.command
+      - vss-web-extension-sdk.Command.constructor
+      - vss-web-extension-sdk.Command.description
+      - vss-web-extension-sdk.Command.help
+      - vss-web-extension-sdk.Command.name
+      - vss-web-extension-sdk.Command.option
+      - vss-web-extension-sdk.Command.opts
+      - vss-web-extension-sdk.Command.outputHelp
+      - vss-web-extension-sdk.Command.parse
+      - vss-web-extension-sdk.Command.parseExpectedArgs
+      - vss-web-extension-sdk.Command.parseOptions
+      - vss-web-extension-sdk.Command.usage
+      - vss-web-extension-sdk.Command.version
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      - '@vss-web-extension-sdk.NodeJS.EventEmitter'
+    package: vss-web-extension-sdk
+    module: Global
+  - uid: vss-web-extension-sdk.Command.action
+    name: 'action(fn: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Register callback `fn` for the command.
+    syntax:
+      parameters:
+        - id: fn
+          type:
+            - function
+          description: ''
+      content: 'function action(fn: function)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.Command'
+    type: method
+  - uid: vss-web-extension-sdk.Command.alias
+    name: 'alias(alias: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Set an alias for the command.
+    syntax:
+      parameters:
+        - id: alias
+          type:
+            - string
+          description: ''
+      content: 'function alias(alias: string)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.Command'
+    type: method
+  - uid: vss-web-extension-sdk.Command.allowUnknownOption
+    name: 'allowUnknownOption(arg?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: Allow unknown options on the command line.
+    syntax:
+      parameters:
+        - id: arg
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: 'function allowUnknownOption(arg?: boolean)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.Command'
+    type: method
+  - uid: vss-web-extension-sdk.Command.args
+    name: args
+    fullName: args
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - 'string[]'
+  - uid: vss-web-extension-sdk.Command.arguments
+    name: 'arguments(desc: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Define argument syntax for the top-level command.
+    syntax:
+      parameters:
+        - id: desc
+          type:
+            - string
+          description: ''
+      content: 'function arguments(desc: string)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.Command'
+    type: method
+  - uid: vss-web-extension-sdk.Command.command
+    name: 'command(name: string, desc?: string, opts?: CommandOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: |
+      Add command `name`.
+      The `.action()` callback is invoked when the
+      command `name` is specified via __ARGV__,
+      and the remaining arguments are applied to the
+      function for access.
+
+      When the `name` is "*" an un-matched command
+      will be passed as the first arg, followed by
+      the rest of __ARGV__ remaining.
+    syntax:
+      parameters:
+        - id: name
+          type:
+            - string
+          description: ''
+        - id: desc
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: opts
+          type:
+            - '@vss-web-extension-sdk.commander.CommandOptions'
+          description: ''
+          optional: true
+      content: 'function command(name: string, desc?: string, opts?: CommandOptions)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.Command'
+    type: method
+  - uid: vss-web-extension-sdk.Command.constructor
+    name: 'Command(name?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Initialize a new `Command`.
+    syntax:
+      parameters:
+        - id: name
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'new Command(name?: string)'
+    type: constructor
+  - uid: vss-web-extension-sdk.Command.description
+    name: 'description(str: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Set the description to `str`.
+    syntax:
+      parameters:
+        - id: str
+          type:
+            - string
+          description: ''
+      content: 'function description(str: string)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.Command'
+    type: method
+  - uid: vss-web-extension-sdk.Command.help
+    name: help()
+    children: []
+    langs:
+      - typeScript
+    summary: Output help information and exit.
+    syntax:
+      parameters: []
+      content: function help()
+    type: method
+  - uid: vss-web-extension-sdk.Command.name
+    name: name()
+    children: []
+    langs:
+      - typeScript
+    summary: Get the name of the command.
+    syntax:
+      parameters: []
+      content: function name()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.Command.option
+    name: >-
+      option(flags: string, description?: string, fn?: function, defaultValue?:
+      any)
+    children: []
+    langs:
+      - typeScript
+    summary: |
+      Define option with `flags`, `description` and optional
+      coercion `fn`.
+      The `flags` string should contain both the short and long flags,
+      separated by comma, a pipe or space. The following are all valid
+      all will output this way when `--help` is used.
+
+         "-p, --pepper"
+         "-p|--pepper"
+         "-p --pepper"
+    syntax:
+      parameters:
+        - id: flags
+          type:
+            - string
+          description: ''
+        - id: description
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: fn
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: defaultValue
+          type:
+            - any
+          description: ''
+          optional: true
+      content: >-
+        function option(flags: string, description?: string, fn?: function,
+        defaultValue?: any)
+      return:
+        type:
+          - '@vss-web-extension-sdk.Command'
+    type: method
+  - uid: vss-web-extension-sdk.Command.opts
+    name: opts()
+    children: []
+    langs:
+      - typeScript
+    summary: Return an object containing options as key-value pairs
+    syntax:
+      parameters: []
+      content: function opts()
+    type: method
+  - uid: vss-web-extension-sdk.Command.outputHelp
+    name: 'outputHelp(cb?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: Output help information for this command.
+    syntax:
+      parameters:
+        - id: cb
+          type:
+            - function
+          description: ''
+          optional: true
+      content: 'function outputHelp(cb?: function)'
+    type: method
+  - uid: vss-web-extension-sdk.Command.parse
+    name: 'parse(argv: string[])'
+    children: []
+    langs:
+      - typeScript
+    summary: 'Parse `argv`, settings options and invoking commands when defined.'
+    syntax:
+      parameters:
+        - id: argv
+          type:
+            - 'string[]'
+          description: ''
+      content: 'function parse(argv: string[])'
+      return:
+        type:
+          - '@vss-web-extension-sdk.Command'
+    type: method
+  - uid: vss-web-extension-sdk.Command.parseExpectedArgs
+    name: 'parseExpectedArgs(args: string[])'
+    children: []
+    langs:
+      - typeScript
+    summary: |
+      Parse expected `args`.
+      For example `["[type]"]` becomes `[{ required: false, name: 'type' }]`.
+    syntax:
+      parameters:
+        - id: args
+          type:
+            - 'string[]'
+          description: ''
+      content: 'function parseExpectedArgs(args: string[])'
+      return:
+        type:
+          - '@vss-web-extension-sdk.Command'
+    type: method
+  - uid: vss-web-extension-sdk.Command.parseOptions
+    name: 'parseOptions(argv: string[])'
+    children: []
+    langs:
+      - typeScript
+    summary: Parse options from `argv` returning `argv` void of these options.
+    syntax:
+      parameters:
+        - id: argv
+          type:
+            - 'string[]'
+          description: ''
+      content: 'function parseOptions(argv: string[])'
+      return:
+        type:
+          - '@vss-web-extension-sdk.commander.ParseOptionsResult'
+    type: method
+  - uid: vss-web-extension-sdk.Command.usage
+    name: 'usage(str: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: Set or get the command usage.
+    syntax:
+      parameters:
+        - id: str
+          type:
+            - string
+          description: ''
+      content: 'function usage(str: string)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.Command'
+    type: method
+  - uid: vss-web-extension-sdk.Command.version
+    name: 'version(str: string, flags?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: |
+      Set the program version to `str`.
+      This method auto-registers the "-V, --version" flag
+      which will print the version number when passed.
+    syntax:
+      parameters:
+        - id: str
+          type:
+            - string
+          description: ''
+        - id: flags
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'function version(str: string, flags?: string)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.Command'
+    type: method

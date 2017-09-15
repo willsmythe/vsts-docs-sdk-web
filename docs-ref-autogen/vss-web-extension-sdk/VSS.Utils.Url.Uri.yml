@@ -134,14 +134,14 @@ items:
           description: Uri string to parse
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.Utils.Url.IUriParseOptions
+            - '@vss-web-extension-sdk.VSS.Utils.Url.IUriParseOptions'
           description: |
             Options for parsing the uri string
           optional: true
       content: 'function parse(uri: string, options?: IUriParseOptions)'
       return:
         type:
-          - vss-web-extension-sdk.VSS.Utils.Url.Uri
+          - '@vss-web-extension-sdk.VSS.Utils.Url.Uri'
     type: method
   - uid: vss-web-extension-sdk.VSS.Utils.Url.Uri.path
     name: path
@@ -180,7 +180,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.VSS.Utils.Url.IQueryParameter[]'
   - uid: vss-web-extension-sdk.VSS.Utils.Url.Uri.queryString
     name: queryString
     fullName: queryString

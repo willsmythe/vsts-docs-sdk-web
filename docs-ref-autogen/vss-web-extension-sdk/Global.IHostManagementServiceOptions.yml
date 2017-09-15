@@ -4,31 +4,17 @@ items:
     name: IHostManagementServiceOptions
     fullName: IHostManagementServiceOptions
     children:
-      - vss-web-extension-sdk.IHostManagementServiceOptions.baseUri
       - vss-web-extension-sdk.IHostManagementServiceOptions.contributionId
-      - vss-web-extension-sdk.IHostManagementServiceOptions.extensionId
       - vss-web-extension-sdk.IHostManagementServiceOptions.initialConfig
-      - vss-web-extension-sdk.IHostManagementServiceOptions.publisherId
       - vss-web-extension-sdk.IHostManagementServiceOptions.registrationId
-      - vss-web-extension-sdk.IHostManagementServiceOptions.version
     langs:
       - typeScript
     type: interface
     summary: Options passed to the host management service
+    extends:
+      - '@vss-web-extension-sdk.IExtensionContext'
     package: vss-web-extension-sdk
     module: Global
-  - uid: vss-web-extension-sdk.IHostManagementServiceOptions.baseUri
-    name: baseUri
-    fullName: baseUri
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The base uri to be used with relative urls in contribution properties
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.IHostManagementServiceOptions.contributionId
     name: contributionId
     fullName: contributionId
@@ -37,18 +23,6 @@ items:
       - typeScript
     type: property
     summary: The contribution id
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.IHostManagementServiceOptions.extensionId
-    name: extensionId
-    fullName: extensionId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Friendly id of the extension (unique within the publisher)
     syntax:
       return:
         type:
@@ -65,18 +39,6 @@ items:
       return:
         type:
           - any
-  - uid: vss-web-extension-sdk.IHostManagementServiceOptions.publisherId
-    name: publisherId
-    fullName: publisherId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Friendly unique id of the publisher
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.IHostManagementServiceOptions.registrationId
     name: registrationId
     fullName: registrationId
@@ -85,18 +47,6 @@ items:
       - typeScript
     type: property
     summary: The registered VSS auth application id
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.IHostManagementServiceOptions.version
-    name: version
-    fullName: version
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Version of the extension
     syntax:
       return:
         type:

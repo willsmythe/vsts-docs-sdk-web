@@ -5,11 +5,13 @@ items:
     fullName: DefaultStore
     children:
       - vss-web-extension-sdk.VSS.Flux.Store.DefaultStore.constructor
-      - vss-web-extension-sdk.VSS.Flux.Store.DefaultStore._value
+      - vss-web-extension-sdk.VSS.Flux.Store.DefaultStore.getValue
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Flux.Store.Store'
     package: vss-web-extension-sdk
     module: VSS/Flux/Store
   - uid: vss-web-extension-sdk.VSS.Flux.Store.DefaultStore.constructor
@@ -22,15 +24,16 @@ items:
       parameters: []
       content: new DefaultStore()
     type: constructor
-  - uid: vss-web-extension-sdk.VSS.Flux.Store.DefaultStore._value
-    name: _value
-    fullName: _value
+  - uid: vss-web-extension-sdk.VSS.Flux.Store.DefaultStore.getValue
+    name: getValue()
     children: []
     langs:
       - typeScript
-    type: property
     summary: ''
     syntax:
+      parameters: []
+      content: function getValue()
       return:
         type:
           - T
+    type: method

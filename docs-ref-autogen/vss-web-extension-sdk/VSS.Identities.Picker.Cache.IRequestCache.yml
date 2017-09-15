@@ -5,6 +5,8 @@ items:
     fullName: IRequestCache
     children:
       - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Cache.IRequestCache.configure
+      - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Cache.IRequestCache.getPromise
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Cache.IRequestCache.setPromise
@@ -14,6 +16,21 @@ items:
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/Cache
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.IRequestCache.configure
+    name: 'configure(config: IRequestCacheConfiguration)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: config
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Cache.IRequestCacheConfiguration
+          description: ''
+      content: 'function configure(config: IRequestCacheConfiguration)'
+    type: method
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.IRequestCache.getPromise
     name: 'getPromise(request: string)'
     children: []
@@ -29,10 +46,10 @@ items:
       content: 'function getPromise(request: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<T>'
     type: method
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.IRequestCache.setPromise
-    name: 'setPromise(request: string, promise: IPromise)'
+    name: 'setPromise(request: string, promise: IPromise<T>)'
     children: []
     langs:
       - typeScript
@@ -45,7 +62,7 @@ items:
           description: ''
         - id: promise
           type:
-            - vss-web-extension-sdk.IPromise
+            - '@vss-web-extension-sdk.IPromise<T>'
           description: ''
-      content: 'function setPromise(request: string, promise: IPromise)'
+      content: 'function setPromise(request: string, promise: IPromise<T>)'
     type: method

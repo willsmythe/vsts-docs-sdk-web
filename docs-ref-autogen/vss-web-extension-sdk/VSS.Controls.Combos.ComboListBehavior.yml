@@ -4,61 +4,37 @@ items:
     name: ComboListBehavior
     fullName: ComboListBehavior
     children:
-      - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.combo
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.constructor
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.downKey
       - >-
-        vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getAriaAutocomplete
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getAriaDescription
-      - >-
         vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getDropOptions
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getDropWidth
-      - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getItemText
       - >-
         vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getMaxItemLength
       - >-
         vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getSelectedIndex
-      - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getText
+      - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getValue
+      - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.initialize
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.keyDown
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.keyPress
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.keyUp
-      - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.leftKey
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.onForceHideDropPopup
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.pageDownKey
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.pageUpKey
-      - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.rightKey
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.selectNext
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.selectPrev
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.setSelectedIndex
+      - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.setSource
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.setText
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.upKey
-      - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior._dataSource
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior._dropSelectionChanged
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior._maxItemLength
-      - vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior._options
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior._setSelectedIndex
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior'
     package: vss-web-extension-sdk
     module: VSS/Controls/Combos
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.combo
-    name: combo
-    fullName: combo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Controls.Combos.Combo
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.constructor
     name: 'ComboListBehavior(combo: any, options?: any)'
     children: []
@@ -96,34 +72,6 @@ items:
         type:
           - any
     type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getAriaAutocomplete
-    name: getAriaAutocomplete()
-    children: []
-    langs:
-      - typeScript
-    summary: Get value for aria-autocomplete attribute of parent.
-    syntax:
-      parameters: []
-      content: function getAriaAutocomplete()
-      return:
-        type:
-          - string
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getAriaDescription
-    name: getAriaDescription()
-    children: []
-    langs:
-      - typeScript
-    summary: Get additional text to use to label the control for screen reader users.
-    syntax:
-      parameters: []
-      content: function getAriaDescription()
-      return:
-        type:
-          - string
-    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getDropOptions
     name: getDropOptions()
     children: []
@@ -149,33 +97,6 @@ items:
       return:
         type:
           - number
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getItemText
-    name: 'getItemText(index: number, all?: boolean)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Gets the text of the given index based on allItems in datasource. Default
-      behavior returns datasource getItemText
-
-      Can be overridden by the getItemText option
-    syntax:
-      parameters:
-        - id: index
-          type:
-            - number
-          description: ''
-        - id: all
-          type:
-            - boolean
-          description: |
-            Search allItems from data source
-          optional: true
-      content: 'function getItemText(index: number, all?: boolean)'
-      return:
-        type:
-          - string
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getMaxItemLength
@@ -215,18 +136,28 @@ items:
         type:
           - number
     type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getText
-    name: getText()
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.getValue
+    name: getValue()
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
       parameters: []
-      content: function getText()
+      content: function getValue()
       return:
         type:
-          - string
+          - TValue
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.initialize
+    name: initialize()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function initialize()
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.keyDown
     name: 'keyDown(e?: JQueryEventObject)'
@@ -282,43 +213,6 @@ items:
         type:
           - any
     type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.leftKey
-    name: 'leftKey(e?: JQueryEventObject)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: e
-          type:
-            - JQueryEventObject
-          description: ''
-          optional: true
-      content: 'function leftKey(e?: JQueryEventObject)'
-      return:
-        type:
-          - any
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.onForceHideDropPopup
-    name: 'onForceHideDropPopup(e?: JQueryEventObject)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: e
-          type:
-            - JQueryEventObject
-          description: ''
-          optional: true
-      content: 'function onForceHideDropPopup(e?: JQueryEventObject)'
-      return:
-        type:
-          - any
-    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.pageDownKey
     name: 'pageDownKey(e?: JQueryEventObject)'
     children: []
@@ -351,24 +245,6 @@ items:
           description: ''
           optional: true
       content: 'function pageUpKey(e?: JQueryEventObject)'
-      return:
-        type:
-          - any
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.rightKey
-    name: 'rightKey(e?: JQueryEventObject)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: e
-          type:
-            - JQueryEventObject
-          description: ''
-          optional: true
-      content: 'function rightKey(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -409,6 +285,40 @@ items:
         type:
           - boolean
     type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.setSelectedIndex
+    name: 'setSelectedIndex(selectedIndex: number, fireEvent?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: selectedIndex
+          type:
+            - number
+          description: ''
+        - id: fireEvent
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: 'function setSelectedIndex(selectedIndex: number, fireEvent?: boolean)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.setSource
+    name: 'setSource(source: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: source
+          type:
+            - any
+          description: ''
+      content: 'function setSource(source: any)'
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.setText
     name: 'setText(value: string, fireEvent?: boolean)'
     children: []
@@ -446,81 +356,4 @@ items:
       return:
         type:
           - any
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior._dataSource
-    name: _dataSource
-    fullName: _dataSource
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Controls.BaseDataSource
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior._dropSelectionChanged
-    name: '_dropSelectionChanged(selectedIndex: any, accept: any)'
-    children: []
-    langs:
-      - typeScript
-    summary: Called on drop selection changed
-    syntax:
-      parameters:
-        - id: selectedIndex
-          type:
-            - any
-          description: Represents index in datasource._items
-        - id: accept
-          type:
-            - any
-          description: |
-            User has performed a click action
-      content: 'function _dropSelectionChanged(selectedIndex: any, accept: any)'
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior._maxItemLength
-    name: _maxItemLength
-    fullName: _maxItemLength
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior._setSelectedIndex
-    name: '_setSelectedIndex(selectedIndex: number, fireEvent?: boolean)'
-    children: []
-    langs:
-      - typeScript
-    summary: Set selected index
-    syntax:
-      parameters:
-        - id: selectedIndex
-          type:
-            - number
-          description: new selected index
-        - id: fireEvent
-          type:
-            - boolean
-          description: |
-            flag to whether to fire index changed
-          optional: true
-      content: 'function _setSelectedIndex(selectedIndex: number, fireEvent?: boolean)'
     type: method

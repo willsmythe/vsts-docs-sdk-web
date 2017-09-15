@@ -6,6 +6,8 @@ items:
     children:
       - vss-web-extension-sdk.VSS.Events.Services.EventService.attachEvent
       - vss-web-extension-sdk.VSS.Events.Services.EventService.detachEvent
+      - vss-web-extension-sdk.VSS.Events.Services.EventService.disposeScope
+      - vss-web-extension-sdk.VSS.Events.Services.EventService.fire
     langs:
       - typeScript
     type: class
@@ -26,7 +28,7 @@ items:
           description: The event name.
         - id: handler
           type:
-            - vss-web-extension-sdk.IEventHandler
+            - '@vss-web-extension-sdk.IEventHandler'
           description: The handler to attach.
         - id: scope
           type:
@@ -52,7 +54,7 @@ items:
           description: The event name.
         - id: handler
           type:
-            - vss-web-extension-sdk.IEventHandler
+            - '@vss-web-extension-sdk.IEventHandler'
           description: The handler to detach.
         - id: scope
           type:
@@ -63,4 +65,52 @@ items:
       content: >-
         function detachEvent(eventName: string, handler: IEventHandler, scope?:
         string)
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Events.Services.EventService.disposeScope
+    name: 'disposeScope(scope: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: scope
+          type:
+            - string
+          description: ''
+      content: 'function disposeScope(scope: string)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Events.Services.EventService.fire
+    name: 'fire(eventName: string, sender?: any, eventArgs?: any, scope?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: eventName
+          type:
+            - string
+          description: ''
+        - id: sender
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: eventArgs
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: scope
+          type:
+            - string
+          description: ''
+          optional: true
+      content: >-
+        function fire(eventName: string, sender?: any, eventArgs?: any, scope?:
+        string)
+      return:
+        type:
+          - boolean
     type: method

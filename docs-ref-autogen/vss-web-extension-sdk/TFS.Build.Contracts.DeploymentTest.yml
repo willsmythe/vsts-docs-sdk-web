@@ -5,11 +5,12 @@ items:
     fullName: DeploymentTest
     children:
       - vss-web-extension-sdk.TFS.Build.Contracts.DeploymentTest.runId
-      - vss-web-extension-sdk.TFS.Build.Contracts.DeploymentTest.type
     langs:
       - typeScript
     type: interface
     summary: Deployment information for type "Test"
+    extends:
+      - '@vss-web-extension-sdk.TFS.Build.Contracts.Deployment'
     package: vss-web-extension-sdk
     module: TFS/Build/Contracts
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.DeploymentTest.runId
@@ -24,15 +25,3 @@ items:
       return:
         type:
           - number
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.DeploymentTest.type
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string

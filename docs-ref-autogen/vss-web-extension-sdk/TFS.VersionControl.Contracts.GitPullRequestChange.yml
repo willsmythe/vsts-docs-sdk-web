@@ -5,42 +5,15 @@ items:
     fullName: GitPullRequestChange
     children:
       - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.changeId
-      - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.changeTrackingId
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.changeType
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.item
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.newContent
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.newContentTemplate
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.originalPath
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.sourceServerItem
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.url
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange'
     package: vss-web-extension-sdk
     module: TFS/VersionControl/Contracts
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.changeId
-    name: changeId
-    fullName: changeId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: 'Id of the change within the group.  For example, within the iteration'
-    syntax:
-      return:
-        type:
-          - number
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.changeTrackingId
     name: changeTrackingId
@@ -54,94 +27,3 @@ items:
       return:
         type:
           - number
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.changeType
-    name: changeType
-    fullName: changeType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - VersionControlChangeType
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.item
-    name: item
-    fullName: item
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitItem
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.newContent
-    name: newContent
-    fullName: newContent
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.ItemContent
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.newContentTemplate
-    name: newContentTemplate
-    fullName: newContentTemplate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: New Content template to be used
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitTemplate
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.originalPath
-    name: originalPath
-    fullName: originalPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Original path of item if different from current path
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.sourceServerItem
-    name: sourceServerItem
-    fullName: sourceServerItem
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string

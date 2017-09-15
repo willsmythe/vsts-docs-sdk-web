@@ -1,0 +1,158 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.http2.ServerHttp2Stream
+    name: ServerHttp2Stream
+    fullName: ServerHttp2Stream
+    children:
+      - vss-web-extension-sdk.http2.ServerHttp2Stream.additionalHeaders
+      - vss-web-extension-sdk.http2.ServerHttp2Stream.headersSent
+      - vss-web-extension-sdk.http2.ServerHttp2Stream.pushAllowed
+      - vss-web-extension-sdk.http2.ServerHttp2Stream.pushStream
+      - vss-web-extension-sdk.http2.ServerHttp2Stream.respond
+      - vss-web-extension-sdk.http2.ServerHttp2Stream.respondWithFD
+      - vss-web-extension-sdk.http2.ServerHttp2Stream.respondWithFile
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      - '@vss-web-extension-sdk.http2.Http2Stream'
+    package: vss-web-extension-sdk
+    module: http2
+  - uid: vss-web-extension-sdk.http2.ServerHttp2Stream.additionalHeaders
+    name: 'additionalHeaders(headers: OutgoingHttpHeaders)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: headers
+          type:
+            - '@vss-web-extension-sdk.http.OutgoingHttpHeaders'
+          description: ''
+      content: 'function additionalHeaders(headers: OutgoingHttpHeaders)'
+    type: method
+  - uid: vss-web-extension-sdk.http2.ServerHttp2Stream.headersSent
+    name: headersSent
+    fullName: headersSent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.http2.ServerHttp2Stream.pushAllowed
+    name: pushAllowed
+    fullName: pushAllowed
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.http2.ServerHttp2Stream.pushStream
+    name: 'pushStream(headers: OutgoingHttpHeaders, callback?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: headers
+          type:
+            - '@vss-web-extension-sdk.http.OutgoingHttpHeaders'
+          description: ''
+        - id: callback
+          type:
+            - function
+          description: ''
+          optional: true
+      content: 'function pushStream(headers: OutgoingHttpHeaders, callback?: function)'
+    type: method
+  - uid: vss-web-extension-sdk.http2.ServerHttp2Stream.respond
+    name: >-
+      respond(headers?: OutgoingHttpHeaders, options?:
+      ServerStreamResponseOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: headers
+          type:
+            - '@vss-web-extension-sdk.http.OutgoingHttpHeaders'
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.http2.ServerStreamResponseOptions'
+          description: ''
+          optional: true
+      content: >-
+        function respond(headers?: OutgoingHttpHeaders, options?:
+        ServerStreamResponseOptions)
+    type: method
+  - uid: vss-web-extension-sdk.http2.ServerHttp2Stream.respondWithFD
+    name: >-
+      respondWithFD(fd: number, headers?: OutgoingHttpHeaders, options?:
+      ServerStreamFileResponseOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: fd
+          type:
+            - number
+          description: ''
+        - id: headers
+          type:
+            - '@vss-web-extension-sdk.http.OutgoingHttpHeaders'
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.http2.ServerStreamFileResponseOptions'
+          description: ''
+          optional: true
+      content: >-
+        function respondWithFD(fd: number, headers?: OutgoingHttpHeaders,
+        options?: ServerStreamFileResponseOptions)
+    type: method
+  - uid: vss-web-extension-sdk.http2.ServerHttp2Stream.respondWithFile
+    name: >-
+      respondWithFile(path: string, headers?: OutgoingHttpHeaders, options?:
+      ServerStreamFileResponseOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: path
+          type:
+            - string
+          description: ''
+        - id: headers
+          type:
+            - '@vss-web-extension-sdk.http.OutgoingHttpHeaders'
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.http2.ServerStreamFileResponseOptions'
+          description: ''
+          optional: true
+      content: >-
+        function respondWithFile(path: string, headers?: OutgoingHttpHeaders,
+        options?: ServerStreamFileResponseOptions)
+    type: method

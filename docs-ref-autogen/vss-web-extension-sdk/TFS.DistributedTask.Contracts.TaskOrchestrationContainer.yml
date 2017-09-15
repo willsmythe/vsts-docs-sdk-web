@@ -12,8 +12,6 @@ items:
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationContainer.data
       - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationContainer.itemType
-      - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationContainer.maxConcurrency
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationContainer.parallel
@@ -23,6 +21,9 @@ items:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationItem
     package: vss-web-extension-sdk
     module: TFS/DistributedTask/Contracts
   - uid: >-
@@ -37,7 +38,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationItem[]
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationContainer.continueOnError
     name: continueOnError
@@ -64,19 +66,6 @@ items:
       return:
         type:
           - '[key: string]: string'
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationContainer.itemType
-    name: itemType
-    fullName: itemType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - TaskOrchestrationItemType
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationContainer.maxConcurrency
     name: maxConcurrency
@@ -116,4 +105,4 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationContainer
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationContainer

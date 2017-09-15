@@ -1,0 +1,79 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.inspector.Profiler.Profile
+    name: Profile
+    fullName: Profile
+    children:
+      - vss-web-extension-sdk.inspector.Profiler.Profile.endTime
+      - vss-web-extension-sdk.inspector.Profiler.Profile.nodes
+      - vss-web-extension-sdk.inspector.Profiler.Profile.samples
+      - vss-web-extension-sdk.inspector.Profiler.Profile.startTime
+      - vss-web-extension-sdk.inspector.Profiler.Profile.timeDeltas
+    langs:
+      - typeScript
+    type: interface
+    summary: Profile.
+    package: vss-web-extension-sdk
+    module: Profiler
+  - uid: vss-web-extension-sdk.inspector.Profiler.Profile.endTime
+    name: endTime
+    fullName: endTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Profiling end timestamp in microseconds.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.inspector.Profiler.Profile.nodes
+    name: nodes
+    fullName: nodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The list of profile nodes. First item is the root node.
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Profiler.ProfileNode[]'
+  - uid: vss-web-extension-sdk.inspector.Profiler.Profile.samples
+    name: samples
+    fullName: samples
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Ids of samples top nodes.
+    syntax:
+      return:
+        type:
+          - 'number[]'
+  - uid: vss-web-extension-sdk.inspector.Profiler.Profile.startTime
+    name: startTime
+    fullName: startTime
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Profiling start timestamp in microseconds.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.inspector.Profiler.Profile.timeDeltas
+    name: timeDeltas
+    fullName: timeDeltas
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Time intervals between adjacent samples in microseconds. The first delta
+      is relative to the profile startTime.
+    syntax:
+      return:
+        type:
+          - 'number[]'

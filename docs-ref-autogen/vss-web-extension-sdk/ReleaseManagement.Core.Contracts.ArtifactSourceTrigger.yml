@@ -9,12 +9,13 @@ items:
         vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ArtifactSourceTrigger.artifactAlias
       - >-
         vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ArtifactSourceTrigger.triggerConditions
-      - >-
-        vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ArtifactSourceTrigger.triggerType
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTriggerBase
     package: vss-web-extension-sdk
     module: ReleaseManagement/Core/Contracts
   - uid: >-
@@ -42,17 +43,5 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: >-
-      vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ArtifactSourceTrigger.triggerType
-    name: triggerType
-    fullName: triggerType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - ReleaseTriggerType
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ArtifactFilter[]

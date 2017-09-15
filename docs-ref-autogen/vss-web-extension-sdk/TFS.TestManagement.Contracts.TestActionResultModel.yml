@@ -7,21 +7,9 @@ items:
       - >-
         vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.actionPath
       - >-
-        vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.comment
-      - >-
-        vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.completedDate
-      - >-
-        vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.durationInMs
-      - >-
-        vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.errorMessage
-      - >-
         vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.iterationId
       - >-
-        vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.outcome
-      - >-
         vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.sharedStepModel
-      - >-
-        vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.startedDate
       - >-
         vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.stepIdentifier
       - >-
@@ -30,64 +18,14 @@ items:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.TestResultModelBase'
     package: vss-web-extension-sdk
     module: TFS/TestManagement/Contracts
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.actionPath
     name: actionPath
     fullName: actionPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.comment
-    name: comment
-    fullName: comment
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.completedDate
-    name: completedDate
-    fullName: completedDate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - Date
-  - uid: >-
-      vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.durationInMs
-    name: durationInMs
-    fullName: durationInMs
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
-  - uid: >-
-      vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.errorMessage
-    name: errorMessage
-    fullName: errorMessage
     children: []
     langs:
       - typeScript
@@ -111,19 +49,6 @@ items:
         type:
           - number
   - uid: >-
-      vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.outcome
-    name: outcome
-    fullName: outcome
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.sharedStepModel
     name: sharedStepModel
     fullName: sharedStepModel
@@ -135,20 +60,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.TestManagement.Contracts.SharedStepModel
-  - uid: >-
-      vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.startedDate
-    name: startedDate
-    fullName: startedDate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - Date
+          - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.SharedStepModel'
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Contracts.TestActionResultModel.stepIdentifier
     name: stepIdentifier

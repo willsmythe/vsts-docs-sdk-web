@@ -39,7 +39,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableGroup.createdOn
     name: createdOn
@@ -90,7 +90,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableGroup.modifiedOn
     name: modifiedOn
@@ -129,7 +129,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableGroupProviderData
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableGroupProviderData
   - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableGroup.type
     name: type
     fullName: type
@@ -154,4 +154,6 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: VariableValue'
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableValue

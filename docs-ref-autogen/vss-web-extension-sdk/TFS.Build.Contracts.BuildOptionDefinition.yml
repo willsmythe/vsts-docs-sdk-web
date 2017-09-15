@@ -7,7 +7,6 @@ items:
       - >-
         vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionDefinition.description
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionDefinition.groups
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionDefinition.id
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionDefinition.inputs
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionDefinition.name
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionDefinition.ordinal
@@ -15,6 +14,9 @@ items:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionDefinitionReference
     package: vss-web-extension-sdk
     module: TFS/Build/Contracts
   - uid: >-
@@ -41,19 +43,8 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionDefinition.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
+          - >-
+            @vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionGroupDefinition[]
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionDefinition.inputs
     name: inputs
     fullName: inputs
@@ -65,7 +56,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionInputDefinition[]
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionDefinition.name
     name: name
     fullName: name

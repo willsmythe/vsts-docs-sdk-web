@@ -125,7 +125,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTask
+          - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTask'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeploymentAttempt.lastModifiedBy
     name: lastModifiedBy
@@ -138,7 +138,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeploymentAttempt.lastModifiedOn
     name: lastModifiedOn
@@ -203,7 +203,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDeployPhase[]
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeploymentAttempt.requestedBy
     name: requestedBy
@@ -216,7 +217,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeploymentAttempt.requestedFor
     name: requestedFor
@@ -229,7 +230,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeploymentAttempt.runPlanId
     name: runPlanId
@@ -268,4 +269,5 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTask[]

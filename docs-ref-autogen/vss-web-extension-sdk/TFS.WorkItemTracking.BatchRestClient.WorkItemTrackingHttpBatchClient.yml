@@ -6,15 +6,11 @@ items:
     fullName: WorkItemTrackingHttpBatchClient
     children:
       - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.authTokenManager
-      - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.createWorkItemsBatch
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.deleteWorkItemsBatch
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.destroyWorkItemsBatch
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.forceOptionsCallForAutoNegotiate
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.getQueriesBatch
       - >-
@@ -25,40 +21,19 @@ items:
         vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.updateWorkItemsBatch
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.constructor
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient._beginGetLocation
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient._beginRequest
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient._beginRequestWithAjaxResult
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient._issueAjaxRequest
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient._rootRequestPath
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     package: vss-web-extension-sdk
     module: TFS/WorkItemTracking/BatchRestClient
   - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
-  - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.createWorkItemsBatch
-    name: 'createWorkItemsBatch(documents: function, project: string, type: string)'
+    name: >-
+      createWorkItemsBatch(documents: JsonPatchDocument[], project: string,
+      type: string)
     children: []
     langs:
       - typeScript
@@ -67,7 +42,7 @@ items:
       parameters:
         - id: documents
           type:
-            - function
+            - '@vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument[]'
           description: ''
         - id: project
           type:
@@ -78,15 +53,16 @@ items:
             - string
           description: ''
       content: >-
-        function createWorkItemsBatch(documents: function, project: string,
-        type: string)
+        function createWorkItemsBatch(documents: JsonPatchDocument[], project:
+        string, type: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.JsonHttpBatchResponse>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.deleteWorkItemsBatch
-    name: 'deleteWorkItemsBatch(ids: function)'
+    name: 'deleteWorkItemsBatch(ids: number[])'
     children: []
     langs:
       - typeScript
@@ -95,16 +71,17 @@ items:
       parameters:
         - id: ids
           type:
-            - function
+            - 'number[]'
           description: ''
-      content: 'function deleteWorkItemsBatch(ids: function)'
+      content: 'function deleteWorkItemsBatch(ids: number[])'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.JsonHttpBatchResponse>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.destroyWorkItemsBatch
-    name: 'destroyWorkItemsBatch(ids: function)'
+    name: 'destroyWorkItemsBatch(ids: number[])'
     children: []
     langs:
       - typeScript
@@ -113,29 +90,17 @@ items:
       parameters:
         - id: ids
           type:
-            - function
+            - 'number[]'
           description: ''
-      content: 'function destroyWorkItemsBatch(ids: function)'
+      content: 'function destroyWorkItemsBatch(ids: number[])'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.JsonHttpBatchResponse>
     type: method
   - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.getQueriesBatch
-    name: 'getQueriesBatch(ids: function)'
+    name: 'getQueriesBatch(ids: string[])'
     children: []
     langs:
       - typeScript
@@ -144,16 +109,17 @@ items:
       parameters:
         - id: ids
           type:
-            - function
+            - 'string[]'
           description: ''
-      content: 'function getQueriesBatch(ids: function)'
+      content: 'function getQueriesBatch(ids: string[])'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.JsonHttpBatchResponse>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.restoreWorkItemsBatch
-    name: 'restoreWorkItemsBatch(ids: function)'
+    name: 'restoreWorkItemsBatch(ids: number[])'
     children: []
     langs:
       - typeScript
@@ -162,12 +128,13 @@ items:
       parameters:
         - id: ids
           type:
-            - function
+            - 'number[]'
           description: ''
-      content: 'function restoreWorkItemsBatch(ids: function)'
+      content: 'function restoreWorkItemsBatch(ids: number[])'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.JsonHttpBatchResponse>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.serviceInstanceId
@@ -184,7 +151,7 @@ items:
           - string
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.updateWorkItemsBatch
-    name: 'updateWorkItemsBatch(updateDocuments: function)'
+    name: 'updateWorkItemsBatch(updateDocuments: function[])'
     children: []
     langs:
       - typeScript
@@ -193,12 +160,13 @@ items:
       parameters:
         - id: updateDocuments
           type:
-            - function
+            - 'function[]'
           description: ''
-      content: 'function updateWorkItemsBatch(updateDocuments: function)'
+      content: 'function updateWorkItemsBatch(updateDocuments: function[])'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.JsonHttpBatchResponse>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient.constructor
@@ -215,156 +183,3 @@ items:
           description: ''
       content: 'new WorkItemTrackingHttpBatchClient(rootRequestPath: string)'
     type: constructor
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient._beginGetLocation
-    name: '_beginGetLocation(area: string, locationId: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Gets information about an API resource location (route template, supported
-      versions, etc.)
-    syntax:
-      parameters:
-        - id: area
-          type:
-            - string
-          description: resource area name
-        - id: locationId
-          type:
-            - string
-          description: |
-            Guid of the location to get
-      content: 'function _beginGetLocation(area: string, locationId: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient._beginRequest
-    name: >-
-      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
-      boolean)
-    children: []
-    langs:
-      - typeScript
-    summary: Issue a request to a VSS REST endpoint.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >-
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used
-          optional: true
-      content: >-
-        function _beginRequest(requestParams: VssApiResourceRequestParams,
-        useAjaxResult?: boolean)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient._beginRequestWithAjaxResult
-    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue a request to a VSS REST endpoint and makes sure the result contains
-      jqXHR. Use spread to access jqXHR.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-      content: >-
-        function _beginRequestWithAjaxResult(requestParams:
-        VssApiResourceRequestParams)
-      return:
-        type:
-          - Q.Promise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient._issueAjaxRequest
-    name: >-
-      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
-      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue an AJAX request. This is a wrapper around jquery's ajax method that
-      handles VSS authentication
-
-      and triggers events that can be listened to by other modules.
-    syntax:
-      parameters:
-        - id: requestUrl
-          type:
-            - string
-          description: Url to send the request to
-        - id: ajaxOptions
-          type:
-            - JQueryAjaxSettings
-          description: jQuery.ajax options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used.
-          optional: true
-        - id: vssRequestOptions
-          type:
-            - vss-web-extension-sdk.IVssAjaxOptions
-          description: ''
-          optional: true
-      content: >-
-        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
-        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
-        IVssAjaxOptions)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.WorkItemTrackingHttpBatchClient._setInitializationPromise
-    name: '_setInitializationPromise(promise: IPromise)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Sets a promise that is waited on before any requests are issued. Can be
-      used to asynchronously
-
-      set the request url and auth token manager.
-    syntax:
-      parameters:
-        - id: promise
-          type:
-            - vss-web-extension-sdk.IPromise
-          description: ''
-      content: 'function _setInitializationPromise(promise: IPromise)'
-    type: method

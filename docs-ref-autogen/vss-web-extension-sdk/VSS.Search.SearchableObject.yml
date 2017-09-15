@@ -43,7 +43,7 @@ items:
         type:
           - T
   - uid: vss-web-extension-sdk.VSS.Search.SearchableObject.constructor
-    name: 'SearchableObject(item: T, terms: function)'
+    name: 'SearchableObject(item: T, terms: string[])'
     children: []
     langs:
       - typeScript
@@ -56,13 +56,13 @@ items:
           description: The item to be added
         - id: terms
           type:
-            - function
+            - 'string[]'
           description: |
             The terms associated to the item.
-      content: 'new SearchableObject(item: T, terms: function)'
+      content: 'new SearchableObject(item: T, terms: string[])'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Search.SearchableObject.setTerms
-    name: 'setTerms(terms: function)'
+    name: 'setTerms(terms: string[])'
     children: []
     langs:
       - typeScript
@@ -71,10 +71,10 @@ items:
       parameters:
         - id: terms
           type:
-            - function
+            - 'string[]'
           description: |
             The new terms
-      content: 'function setTerms(terms: function)'
+      content: 'function setTerms(terms: string[])'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchableObject.terms
     name: terms
@@ -87,4 +87,4 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'string[]'

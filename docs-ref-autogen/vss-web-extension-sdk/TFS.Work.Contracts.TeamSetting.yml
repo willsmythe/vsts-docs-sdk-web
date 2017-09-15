@@ -10,13 +10,13 @@ items:
       - vss-web-extension-sdk.TFS.Work.Contracts.TeamSetting.defaultIteration
       - >-
         vss-web-extension-sdk.TFS.Work.Contracts.TeamSetting.defaultIterationMacro
-      - vss-web-extension-sdk.TFS.Work.Contracts.TeamSetting.url
       - vss-web-extension-sdk.TFS.Work.Contracts.TeamSetting.workingDays
-      - vss-web-extension-sdk.TFS.Work.Contracts.TeamSetting._links
     langs:
       - typeScript
     type: interface
     summary: Data contract for TeamSettings
+    extends:
+      - '@vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsDataContractBase'
     package: vss-web-extension-sdk
     module: TFS/Work/Contracts
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.TeamSetting.backlogIteration
@@ -30,7 +30,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration
+          - '@vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration'
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.TeamSetting.backlogVisibilities
     name: backlogVisibilities
     fullName: backlogVisibilities
@@ -68,7 +68,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration
+          - '@vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration'
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.TeamSetting.defaultIterationMacro
     name: defaultIterationMacro
     fullName: defaultIterationMacro
@@ -77,18 +77,6 @@ items:
       - typeScript
     type: property
     summary: Default Iteration macro (if any)
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.Work.Contracts.TeamSetting.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Full http link to the resource
     syntax:
       return:
         type:
@@ -104,16 +92,4 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: vss-web-extension-sdk.TFS.Work.Contracts.TeamSetting._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Collection of links relevant to resource
-    syntax:
-      return:
-        type:
-          - any
+          - 'DayOfWeek[]'

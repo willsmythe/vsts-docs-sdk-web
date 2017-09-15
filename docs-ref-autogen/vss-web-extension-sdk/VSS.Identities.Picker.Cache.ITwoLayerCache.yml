@@ -4,6 +4,10 @@ items:
     name: ITwoLayerCache
     fullName: ITwoLayerCache
     children:
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCache.addRedirector
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCache.configure
       - vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCache.get
       - vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCache.set
     langs:
@@ -12,6 +16,43 @@ items:
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/Cache
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCache.addRedirector
+    name: 'addRedirector(cacheType: CacheableTypes, cache?: ICache<string>)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: cacheType
+          type:
+            - CacheableTypes
+          description: ''
+        - id: cache
+          type:
+            - '@vss-web-extension-sdk.VSS.Identities.Picker.Cache.ICache<string>'
+          description: ''
+          optional: true
+      content: >-
+        function addRedirector(cacheType: CacheableTypes, cache?:
+        ICache<string>)
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCache.configure
+    name: 'configure(config: ITwoLayerCacheConfiguration<V>)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: config
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCacheConfiguration<V>
+          description: ''
+      content: 'function configure(config: ITwoLayerCacheConfiguration<V>)'
+    type: method
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCache.get
     name: 'get(key: string, cacheTypeHint?: string)'
     children: []

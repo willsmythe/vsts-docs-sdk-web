@@ -26,8 +26,6 @@ items:
         vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseReference.url
       - >-
         vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseReference.webAccessUri
-      - >-
-        vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseReference._links
     langs:
       - typeScript
     type: interface
@@ -46,7 +44,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Artifact[]'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseReference.createdBy
     name: createdBy
@@ -59,7 +57,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseReference.createdOn
     name: createdOn
@@ -110,7 +108,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseReference.name
     name: name
@@ -150,7 +148,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionShallowReference
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionShallowReference
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseReference.url
     name: url
@@ -177,16 +175,3 @@ items:
       return:
         type:
           - string
-  - uid: >-
-      vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseReference._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets links to access the release.
-    syntax:
-      return:
-        type:
-          - any

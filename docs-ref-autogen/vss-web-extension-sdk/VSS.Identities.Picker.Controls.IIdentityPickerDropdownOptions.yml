@@ -8,37 +8,21 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.alignment
       - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.consumerId
-      - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.coreCssClass
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.dialogAppendTo
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.eventOptions
       - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.extensionData
-      - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.focusElementOnContactCardClose
-      - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.getFilterByScope
-      - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.httpClient
-      - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.identityType
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.loadOnCreate
       - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.maxResults
-      - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.minimumPrefixSize
-      - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.minResults
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.onHide
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.onItemSelect
-      - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.operationScope
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.pageSize
       - >-
@@ -59,6 +43,9 @@ items:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/Controls
   - uid: >-
@@ -76,22 +63,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.VSS.Identities.Picker.Controls.IControlAlignmentOptions
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.consumerId
-    name: consumerId
-    fullName: consumerId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      The source of the request - please update the Common Identity Picker wiki
-      with your consumer GUID
-    syntax:
-      return:
-        type:
-          - string
+            @vss-web-extension-sdk.VSS.Identities.Picker.Controls.IControlAlignmentOptions
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.coreCssClass
     name: coreCssClass
@@ -138,22 +110,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownEventOptions
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.extensionData
-    name: extensionData
-    fullName: extensionData
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Details about the control's current environment that might help an
-      IEntityOperationsExtension in modifying requests.
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Identities.Picker.Services.IExtensionData
+            @vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownEventOptions
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.focusElementOnContactCardClose
     name: focusElementOnContactCardClose
@@ -170,55 +127,6 @@ items:
         type:
           - JQuery
   - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.getFilterByScope
-    name: getFilterByScope
-    fullName: getFilterByScope
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      The scope over which the search and MRU results are filtered by.
-        A consumer must pass a delegate that returns a FilterByScope instance, which can be constructed by passing two arrays of strings
-        corresponding to Entity Ids and Ancestor Entity Ids
-        over which the scope is restricted.
-        Default null.
-        NOTE: Null scope and an empty scope (a scope which is not null but whose internal arrays are empty) are treated differently.
-              Null scope means no filtering will take place on entities, whereas empty scope means no entities would be returned.
-              So an empty FilterByScope will result in no search being issued.
-    syntax:
-      return:
-        type: []
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.httpClient
-    name: httpClient
-    fullName: httpClient
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      The httpClient that should be used instead of the
-      CommonIdentityPickerHttpClient
-    syntax:
-      return:
-        type:
-          - >-
-            vss-web-extension-sdk.VSS.Identities.Picker.RestClient.AbstractIdentityPickerHttpClient
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.identityType
-    name: identityType
-    fullName: identityType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: type of identities - one or more of User or Group
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Identities.Picker.Services.IEntityType
-  - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.loadOnCreate
     name: loadOnCreate
     fullName: loadOnCreate
@@ -231,19 +139,6 @@ items:
       return:
         type:
           - boolean
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.maxResults
-    name: maxResults
-    fullName: maxResults
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The maximum results that need to be fetched
-    syntax:
-      return:
-        type:
-          - number
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.minimumPrefixSize
     name: minimumPrefixSize
@@ -260,19 +155,6 @@ items:
         type:
           - number
   - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.minResults
-    name: minResults
-    fullName: minResults
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The minimum results that need to be fetched
-    syntax:
-      return:
-        type:
-          - number
-  - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.onHide
     name: onHide
     fullName: onHide
@@ -283,7 +165,8 @@ items:
     summary: what action should execute when identity dropdown is hidden
     syntax:
       return:
-        type: []
+        type:
+          - function
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.onItemSelect
     name: onItemSelect
@@ -297,20 +180,8 @@ items:
       dropdown is selected
     syntax:
       return:
-        type: []
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.operationScope
-    name: operationScope
-    fullName: operationScope
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: 'scope - one or more of AAD, IMS, Source, AD, WMD'
-    syntax:
-      return:
         type:
-          - vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
+          - function
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.pageSize
     name: pageSize
@@ -338,7 +209,8 @@ items:
       returning the new list
     syntax:
       return:
-        type: []
+        type:
+          - function
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions.showContactCard
     name: showContactCard

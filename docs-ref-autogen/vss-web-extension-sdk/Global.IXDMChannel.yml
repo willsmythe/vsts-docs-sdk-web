@@ -27,7 +27,7 @@ items:
       content: function getObjectRegistry()
       return:
         type:
-          - vss-web-extension-sdk.IXDMObjectRegistry
+          - '@vss-web-extension-sdk.IXDMObjectRegistry'
     type: method
   - uid: vss-web-extension-sdk.IXDMChannel.getRemoteObjectProxy
     name: 'getRemoteObjectProxy(instanceId: string, contextData?: Object)'
@@ -53,12 +53,12 @@ items:
       content: 'function getRemoteObjectProxy(instanceId: string, contextData?: Object)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<T>'
     type: method
   - uid: vss-web-extension-sdk.IXDMChannel.invokeRemoteMethod
     name: >-
-      invokeRemoteMethod(methodName: string, instanceId: string, params?:
-      function, instanceContextData?: Object)
+      invokeRemoteMethod(methodName: string, instanceId: string, params?: any[],
+      instanceContextData?: Object)
     children: []
     langs:
       - typeScript
@@ -77,7 +77,7 @@ items:
           description: unique id of the registered object
         - id: params
           type:
-            - function
+            - 'any[]'
           description: Arguments to the method to invoke
           optional: true
         - id: instanceContextData
@@ -89,8 +89,8 @@ items:
           optional: true
       content: >-
         function invokeRemoteMethod(methodName: string, instanceId: string,
-        params?: function, instanceContextData?: Object)
+        params?: any[], instanceContextData?: Object)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<T>'
     type: method

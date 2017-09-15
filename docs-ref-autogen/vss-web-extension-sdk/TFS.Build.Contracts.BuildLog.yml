@@ -5,15 +5,14 @@ items:
     fullName: BuildLog
     children:
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildLog.createdOn
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildLog.id
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildLog.lastChangedOn
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildLog.lineCount
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildLog.type
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildLog.url
     langs:
       - typeScript
     type: interface
     summary: Represents a build log.
+    extends:
+      - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildLogReference'
     package: vss-web-extension-sdk
     module: TFS/Build/Contracts
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildLog.createdOn
@@ -28,18 +27,6 @@ items:
       return:
         type:
           - Date
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildLog.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The id of the log.
-    syntax:
-      return:
-        type:
-          - number
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildLog.lastChangedOn
     name: lastChangedOn
     fullName: lastChangedOn
@@ -64,27 +51,3 @@ items:
       return:
         type:
           - number
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildLog.type
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The type of the log location.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildLog.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Full link to the log resource.
-    syntax:
-      return:
-        type:
-          - string

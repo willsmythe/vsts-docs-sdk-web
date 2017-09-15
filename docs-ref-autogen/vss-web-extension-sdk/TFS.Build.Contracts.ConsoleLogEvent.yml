@@ -4,7 +4,6 @@ items:
     name: ConsoleLogEvent
     fullName: ConsoleLogEvent
     children:
-      - vss-web-extension-sdk.TFS.Build.Contracts.ConsoleLogEvent.buildId
       - vss-web-extension-sdk.TFS.Build.Contracts.ConsoleLogEvent.lines
       - vss-web-extension-sdk.TFS.Build.Contracts.ConsoleLogEvent.timelineId
       - >-
@@ -13,20 +12,10 @@ items:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.Build.Contracts.RealtimeBuildEvent'
     package: vss-web-extension-sdk
     module: TFS/Build/Contracts
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.ConsoleLogEvent.buildId
-    name: buildId
-    fullName: buildId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.ConsoleLogEvent.lines
     name: lines
     fullName: lines
@@ -38,7 +27,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'string[]'
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.ConsoleLogEvent.timelineId
     name: timelineId
     fullName: timelineId

@@ -4,8 +4,11 @@ items:
     name: TreeNode
     fullName: TreeNode
     children:
+      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.add
+      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.addRange
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.application
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.children
+      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.clear
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.config
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.create
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.definition
@@ -14,6 +17,10 @@ items:
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.expanded
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.findNode
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.folder
+      - >-
+        vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.getContributionContext
+      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.getHtmlId
+      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.hasChildren
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.hasExpanded
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.icon
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.id
@@ -21,6 +28,7 @@ items:
         vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.isEmptyFolderChildNode
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.isSearchHit
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.iterationPath
+      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.level
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.link
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.linkDelegate
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.moveTo
@@ -29,8 +37,11 @@ items:
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.noTreeIcon
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.owner
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.parent
+      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.path
+      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.remove
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.root
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.selected
+      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.sort
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.tag
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.text
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.title
@@ -42,6 +53,34 @@ items:
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Controls/TreeView
+  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.add
+    name: 'add(node: TreeNode)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: node
+          type:
+            - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode'
+          description: ''
+      content: 'function add(node: TreeNode)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.addRange
+    name: 'addRange(nodes: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: nodes
+          type:
+            - any
+          description: ''
+      content: 'function addRange(nodes: any)'
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.application
     name: application
     fullName: application
@@ -65,7 +104,17 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode[]'
+  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.clear
+    name: clear()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function clear()
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.config
     name: config
     fullName: config
@@ -79,7 +128,7 @@ items:
         type:
           - any
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.create
-    name: 'create(text: string, config?: any, children?: function)'
+    name: 'create(text: string, config?: any, children?: TreeNode[])'
     children: []
     langs:
       - typeScript
@@ -97,13 +146,13 @@ items:
           optional: true
         - id: children
           type:
-            - function
+            - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode[]'
           description: ''
           optional: true
-      content: 'function create(text: string, config?: any, children?: function)'
+      content: 'function create(text: string, config?: any, children?: TreeNode[])'
       return:
         type:
-          - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
+          - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.definition
     name: definition
@@ -171,7 +220,8 @@ items:
           description: 'Path separator, if not given default will be used'
           optional: true
         - id: comparer
-          type: []
+          type:
+            - function
           description: >
             Comparer used to compare nodes in the path, if not given default
             will be used
@@ -179,7 +229,7 @@ items:
       content: 'function findNode(path: string, sepChar?: string, comparer?: function)'
       return:
         type:
-          - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
+          - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.folder
     name: folder
@@ -193,6 +243,46 @@ items:
       return:
         type:
           - any
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.getContributionContext
+    name: getContributionContext()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getContributionContext()
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.getHtmlId
+    name: getHtmlId()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getHtmlId()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.hasChildren
+    name: hasChildren()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function hasChildren()
+      return:
+        type:
+          - boolean
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.hasExpanded
     name: hasExpanded
     fullName: hasExpanded
@@ -266,6 +356,23 @@ items:
       return:
         type:
           - string
+  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.level
+    name: 'level(noRoot: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: noRoot
+          type:
+            - any
+          description: ''
+      content: 'function level(noRoot: any)'
+      return:
+        type:
+          - number
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.link
     name: link
     fullName: link
@@ -364,7 +471,38 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode
+          - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode'
+  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.path
+    name: 'path(includeRoot: any, sepChar: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: includeRoot
+          type:
+            - any
+          description: ''
+        - id: sepChar
+          type:
+            - any
+          description: ''
+      content: 'function path(includeRoot: any, sepChar: any)'
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.remove
+    name: remove()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function remove()
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.root
     name: root
     fullName: root
@@ -389,6 +527,24 @@ items:
       return:
         type:
           - boolean
+  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.sort
+    name: 'sort(recursive: any, treeNodeComparer: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: recursive
+          type:
+            - any
+          description: ''
+        - id: treeNodeComparer
+          type:
+            - any
+          description: ''
+      content: 'function sort(recursive: any, treeNodeComparer: any)'
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.tag
     name: tag
     fullName: tag
@@ -426,7 +582,7 @@ items:
         type:
           - string
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.constructor
-    name: 'TreeNode(text: string, config?: any, children?: function, id?: string)'
+    name: 'TreeNode(text: string, config?: any, children?: TreeNode[], id?: string)'
     children: []
     langs:
       - typeScript
@@ -444,7 +600,7 @@ items:
           optional: true
         - id: children
           type:
-            - function
+            - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode[]'
           description: ''
           optional: true
         - id: id
@@ -454,7 +610,7 @@ items:
 
           optional: true
       content: >-
-        new TreeNode(text: string, config?: any, children?: function, id?:
+        new TreeNode(text: string, config?: any, children?: TreeNode[], id?:
         string)
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.type

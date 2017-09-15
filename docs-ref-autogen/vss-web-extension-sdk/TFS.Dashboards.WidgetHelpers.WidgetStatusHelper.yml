@@ -53,7 +53,8 @@ items:
         boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.WidgetStatus>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.WidgetHelpers.WidgetStatusHelper.Success
@@ -76,7 +77,8 @@ items:
       content: 'function Success(state?: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.WidgetStatus>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.WidgetHelpers.WidgetStatusHelper.Unconfigured
@@ -92,5 +94,6 @@ items:
       content: function Unconfigured()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.WidgetStatus>
     type: method

@@ -3,10 +3,78 @@ items:
   - uid: vss-web-extension-sdk.VSS.Flux.Store.Store
     name: Store
     fullName: Store
-    children: []
+    children:
+      - vss-web-extension-sdk.VSS.Flux.Store.Store.addChangedListener
+      - vss-web-extension-sdk.VSS.Flux.Store.Store.addListener
+      - vss-web-extension-sdk.VSS.Flux.Store.Store.removeChangedListener
+      - vss-web-extension-sdk.VSS.Flux.Store.Store.removeListener
     langs:
       - typeScript
     type: class
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Flux/Store
+  - uid: vss-web-extension-sdk.VSS.Flux.Store.Store.addChangedListener
+    name: 'addChangedListener(handler: IEventHandler)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: handler
+          type:
+            - '@vss-web-extension-sdk.IEventHandler'
+          description: ''
+      content: 'function addChangedListener(handler: IEventHandler)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Flux.Store.Store.addListener
+    name: 'addListener(eventName: string, handler: IEventHandler)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: eventName
+          type:
+            - string
+          description: ''
+        - id: handler
+          type:
+            - '@vss-web-extension-sdk.IEventHandler'
+          description: ''
+      content: 'function addListener(eventName: string, handler: IEventHandler)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Flux.Store.Store.removeChangedListener
+    name: 'removeChangedListener(handler: IEventHandler)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: handler
+          type:
+            - '@vss-web-extension-sdk.IEventHandler'
+          description: ''
+      content: 'function removeChangedListener(handler: IEventHandler)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Flux.Store.Store.removeListener
+    name: 'removeListener(eventName: string, handler: IEventHandler)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: eventName
+          type:
+            - string
+          description: ''
+        - id: handler
+          type:
+            - '@vss-web-extension-sdk.IEventHandler'
+          description: ''
+      content: 'function removeListener(eventName: string, handler: IEventHandler)'
+    type: method

@@ -5,11 +5,12 @@ items:
     fullName: BuildDeletedEvent
     children:
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDeletedEvent.build
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDeletedEvent.buildId
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.Build.Contracts.RealtimeBuildEvent'
     package: vss-web-extension-sdk
     module: TFS/Build/Contracts
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDeletedEvent.build
@@ -23,16 +24,4 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Build.Contracts.Build
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDeletedEvent.buildId
-    name: buildId
-    fullName: buildId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
+          - '@vss-web-extension-sdk.TFS.Build.Contracts.Build'

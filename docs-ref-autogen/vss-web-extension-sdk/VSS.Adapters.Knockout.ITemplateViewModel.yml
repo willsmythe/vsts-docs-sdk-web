@@ -3,10 +3,23 @@ items:
   - uid: vss-web-extension-sdk.VSS.Adapters.Knockout.ITemplateViewModel
     name: ITemplateViewModel
     fullName: ITemplateViewModel
-    children: []
+    children:
+      - vss-web-extension-sdk.VSS.Adapters.Knockout.ITemplateViewModel.dispose
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.IDisposable'
     package: vss-web-extension-sdk
     module: VSS/Adapters/Knockout
+  - uid: vss-web-extension-sdk.VSS.Adapters.Knockout.ITemplateViewModel.dispose
+    name: dispose()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function dispose()
+    type: method

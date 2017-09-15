@@ -14,17 +14,10 @@ items:
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.createdOn
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.groupScopeId
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.id
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.isHosted
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.name
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.poolType
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.properties
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.provisioned
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.scope
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.serviceAccountsGroup
       - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.size
@@ -32,6 +25,9 @@ items:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPoolReference
     package: vss-web-extension-sdk
     module: TFS/DistributedTask/Contracts
   - uid: >-
@@ -46,7 +42,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.autoProvision
     name: autoProvision
@@ -77,7 +73,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.createdOn
     name: createdOn
@@ -104,56 +100,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.isHosted
-    name: isHosted
-    fullName: isHosted
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Gets or sets a value indicating whether or not this pool is managed by the
-      service.
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.poolType
-    name: poolType
-    fullName: poolType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets or sets the type of the pool
-    syntax:
-      return:
-        type:
-          - TaskAgentPoolType
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.properties
     name: properties
@@ -182,18 +128,6 @@ items:
       return:
         type:
           - boolean
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.scope
-    name: scope
-    fullName: scope
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.serviceAccountsGroup
     name: serviceAccountsGroup
@@ -206,7 +140,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool.size
     name: size
     fullName: size

@@ -5,58 +5,17 @@ items:
     fullName: IServiceContribution
     children:
       - >-
-        vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.constraints
-      - >-
-        vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.description
-      - >-
         vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.getInstance
-      - vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.id
-      - >-
-        vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.includes
-      - >-
-        vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.properties
-      - >-
-        vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.targets
-      - >-
-        vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.type
-      - >-
-        vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.visibleTo
     langs:
       - typeScript
     type: interface
     summary: >-
       Information about an individual contribution that contributes one or more
       services registered by id.
+    extends:
+      - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
     package: vss-web-extension-sdk
     module: VSS/Contributions/Services
-  - uid: >-
-      vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.constraints
-    name: constraints
-    fullName: constraints
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      List of constraints (filters) that should be applied to the availability
-      of this contribution
-    syntax:
-      return:
-        type:
-          - function
-  - uid: >-
-      vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.description
-    name: description
-    fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Description of the contribution/type
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.getInstance
     name: 'getInstance(objectId?: string, context?: any)'
@@ -82,90 +41,5 @@ items:
       content: 'function getInstance(objectId?: string, context?: any)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<T>'
     type: method
-  - uid: vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Fully qualified identifier of the contribution/type
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.includes
-    name: includes
-    fullName: includes
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Includes is a set of contributions that should have this contribution
-      included in their targets list.
-    syntax:
-      return:
-        type:
-          - function
-  - uid: >-
-      vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.properties
-    name: properties
-    fullName: properties
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Properties/attributes of this contribution
-    syntax:
-      return:
-        type:
-          - any
-  - uid: >-
-      vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.targets
-    name: targets
-    fullName: targets
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      The ids of the contribution(s) that this contribution targets. (parent
-      contributions)
-    syntax:
-      return:
-        type:
-          - function
-  - uid: vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.type
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Id of the Contribution Type
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.visibleTo
-    name: visibleTo
-    fullName: visibleTo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      VisibleTo can be used to restrict whom can reference a given
-      contribution/type. This value should be a list of publishers or extensions
-      access is restricted too.  Examples: "ms" - Means only the "ms" publisher
-      can reference this. "ms.vss-web" - Means only the "vss-web" extension from
-      the "ms" publisher can reference this.
-    syntax:
-      return:
-        type:
-          - function

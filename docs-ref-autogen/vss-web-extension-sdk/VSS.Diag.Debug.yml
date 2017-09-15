@@ -33,6 +33,8 @@ items:
       - vss-web-extension-sdk.VSS.Diag.Debug.assertParamIsType
       - vss-web-extension-sdk.VSS.Diag.Debug.fail
       - vss-web-extension-sdk.VSS.Diag.Debug.getTypeName
+      - vss-web-extension-sdk.VSS.Diag.Debug.logInfo
+      - vss-web-extension-sdk.VSS.Diag.Debug.logVerbose
       - vss-web-extension-sdk.VSS.Diag.Debug.setDisplayCallers
     langs:
       - typeScript
@@ -687,6 +689,34 @@ items:
       return:
         type:
           - string
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Diag.Debug.logInfo
+    name: 'logInfo(message: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+      content: 'function logInfo(message: string)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Diag.Debug.logVerbose
+    name: 'logVerbose(message: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+      content: 'function logVerbose(message: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.setDisplayCallers
     name: 'setDisplayCallers(showCallers: boolean)'

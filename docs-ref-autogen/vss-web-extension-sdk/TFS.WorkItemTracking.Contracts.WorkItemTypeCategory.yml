@@ -11,15 +11,14 @@ items:
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeCategory.referenceName
       - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeCategory.url
-      - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeCategory.workItemTypes
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeCategory._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTrackingResource
     package: vss-web-extension-sdk
     module: TFS/WorkItemTracking/Contracts
   - uid: >-
@@ -35,7 +34,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeReference
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeReference
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeCategory.name
     name: name
@@ -63,19 +62,6 @@ items:
         type:
           - string
   - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeCategory.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeCategory.workItemTypes
     name: workItemTypes
     fullName: workItemTypes
@@ -87,17 +73,5 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeCategory._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
+          - >-
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeReference[]

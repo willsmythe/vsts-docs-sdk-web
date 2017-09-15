@@ -33,7 +33,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.VersionControl.Controls.IGitVersionSelectorItem
+            @vss-web-extension-sdk.TFS.VersionControl.Controls.IGitVersionSelectorItem
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Controls.IGitVersionSelector.setRepositoryId
@@ -51,7 +51,8 @@ items:
       content: 'function setRepositoryId(repositoryId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Controls.IGitVersionSelector.setSelectedVersion
@@ -67,7 +68,7 @@ items:
         - id: item
           type:
             - >-
-              vss-web-extension-sdk.TFS.VersionControl.Controls.IGitVersionSelectorItem
+              @vss-web-extension-sdk.TFS.VersionControl.Controls.IGitVersionSelectorItem
           description: ''
       content: 'function setSelectedVersion(item: IGitVersionSelectorItem)'
       return:

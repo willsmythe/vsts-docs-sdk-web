@@ -25,12 +25,12 @@ items:
       parameters:
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.Locations.MvcRouteOptions
+            - '@vss-web-extension-sdk.VSS.Locations.MvcRouteOptions'
           description: Url generation options
       content: 'function beginGetMvcUrl(options: MvcRouteOptions)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string>'
     type: method
   - uid: vss-web-extension-sdk.VSS.Locations.UrlHelper.getContentUrl
     name: 'getContentUrl(options: ContentLocationOptions)'
@@ -44,7 +44,7 @@ items:
       parameters:
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.Locations.ContentLocationOptions
+            - '@vss-web-extension-sdk.VSS.Locations.ContentLocationOptions'
           description: Url generation options
       content: 'function getContentUrl(options: ContentLocationOptions)'
       return:
@@ -63,7 +63,7 @@ items:
       parameters:
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.Locations.MvcRouteOptions
+            - '@vss-web-extension-sdk.VSS.Locations.MvcRouteOptions'
           description: Url generation options
       content: 'function getMvcUrl(options: MvcRouteOptions)'
       return:

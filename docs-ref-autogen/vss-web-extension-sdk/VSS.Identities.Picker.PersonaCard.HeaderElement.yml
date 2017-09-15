@@ -6,10 +6,15 @@ items:
     children:
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.HeaderElement.constructor
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.HeaderElement.render
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.HeaderElement<@vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.HeaderElementProps>
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/PersonaCard
   - uid: >-
@@ -24,7 +29,21 @@ items:
         - id: props
           type:
             - >-
-              vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.HeaderElementProps
+              @vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.HeaderElementProps
           description: ''
       content: 'new HeaderElement(props: HeaderElementProps)'
     type: constructor
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.HeaderElement.render
+    name: render()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function render()
+      return:
+        type:
+          - Element
+    type: method

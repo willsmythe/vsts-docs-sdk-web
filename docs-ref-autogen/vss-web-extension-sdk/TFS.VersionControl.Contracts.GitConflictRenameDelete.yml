@@ -7,41 +7,17 @@ items:
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.baseBlob
       - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.conflictId
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.conflictPath
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.conflictType
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.mergeBaseCommit
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.mergeOrigin
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.mergeSourceCommit
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.mergeTargetCommit
-      - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.resolution
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.resolutionError
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.resolutionStatus
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.resolvedBy
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.resolvedDate
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.sourceBlob
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.sourceNewPath
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.url
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete._links
     langs:
       - typeScript
     type: interface
     summary: Data object for DeleteRename conflict
+    extends:
+      - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflict'
     package: vss-web-extension-sdk
     module: TFS/VersionControl/Contracts
   - uid: >-
@@ -56,98 +32,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitBlobRef
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.conflictId
-    name: conflictId
-    fullName: conflictId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.conflictPath
-    name: conflictPath
-    fullName: conflictPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.conflictType
-    name: conflictType
-    fullName: conflictType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - GitConflictType
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.mergeBaseCommit
-    name: mergeBaseCommit
-    fullName: mergeBaseCommit
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.mergeOrigin
-    name: mergeOrigin
-    fullName: mergeOrigin
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitMergeOriginRef
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.mergeSourceCommit
-    name: mergeSourceCommit
-    fullName: mergeSourceCommit
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.mergeTargetCommit
-    name: mergeTargetCommit
-    fullName: mergeTargetCommit
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef
+          - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitBlobRef'
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.resolution
     name: resolution
@@ -161,59 +46,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionPickOneAction
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.resolutionError
-    name: resolutionError
-    fullName: resolutionError
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - GitResolutionError
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.resolutionStatus
-    name: resolutionStatus
-    fullName: resolutionStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - GitResolutionStatus
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.resolvedBy
-    name: resolvedBy
-    fullName: resolvedBy
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.resolvedDate
-    name: resolvedDate
-    fullName: resolvedDate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - Date
+            @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolutionPickOneAction
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.sourceBlob
     name: sourceBlob
@@ -226,7 +59,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitBlobRef
+          - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitBlobRef'
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.sourceNewPath
     name: sourceNewPath
@@ -240,29 +73,3 @@ items:
       return:
         type:
           - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitConflictRenameDelete._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

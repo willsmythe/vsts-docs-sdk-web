@@ -24,7 +24,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<T>'
   - uid: vss-web-extension-sdk.XDM.IDeferred.reject
     name: reject
     fullName: reject
@@ -35,7 +35,8 @@ items:
     summary: ''
     syntax:
       return:
-        type: []
+        type:
+          - function
   - uid: vss-web-extension-sdk.XDM.IDeferred.resolve
     name: resolve
     fullName: resolve
@@ -46,4 +47,5 @@ items:
     summary: ''
     syntax:
       return:
-        type: []
+        type:
+          - function

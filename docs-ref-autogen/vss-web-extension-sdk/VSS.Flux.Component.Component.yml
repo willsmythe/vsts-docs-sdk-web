@@ -5,10 +5,14 @@ items:
     fullName: Component
     children:
       - vss-web-extension-sdk.VSS.Flux.Component.Component.constructor
+      - vss-web-extension-sdk.VSS.Flux.Component.Component.componentDidMount
+      - vss-web-extension-sdk.VSS.Flux.Component.Component.componentWillUnmount
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Flux.Component.Component<TProps>'
     package: vss-web-extension-sdk
     module: VSS/Flux/Component
   - uid: vss-web-extension-sdk.VSS.Flux.Component.Component.constructor
@@ -26,3 +30,23 @@ items:
           optional: true
       content: 'new Component(props?: TProps)'
     type: constructor
+  - uid: vss-web-extension-sdk.VSS.Flux.Component.Component.componentDidMount
+    name: componentDidMount()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function componentDidMount()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Flux.Component.Component.componentWillUnmount
+    name: componentWillUnmount()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function componentWillUnmount()
+    type: method

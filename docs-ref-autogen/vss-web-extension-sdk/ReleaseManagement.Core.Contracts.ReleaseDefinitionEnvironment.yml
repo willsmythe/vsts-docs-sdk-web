@@ -61,7 +61,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Condition[]'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironment.demands
     name: demands
@@ -74,7 +74,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'any[]'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironment.deployPhases
     name: deployPhases
@@ -87,7 +87,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeployPhase[]
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironment.deployStep
     name: deployStep
@@ -101,7 +102,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionDeployStep
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionDeployStep
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironment.environmentOptions
     name: environmentOptions
@@ -115,7 +116,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.EnvironmentOptions
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.EnvironmentOptions
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironment.executionPolicy
     name: executionPolicy
@@ -129,7 +130,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.EnvironmentExecutionPolicy
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.EnvironmentExecutionPolicy
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironment.id
     name: id
@@ -168,7 +169,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironment.postDeployApprovals
     name: postDeployApprovals
@@ -182,7 +183,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionApprovals
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionApprovals
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironment.preDeployApprovals
     name: preDeployApprovals
@@ -196,7 +197,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionApprovals
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionApprovals
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironment.processParameters
     name: processParameters
@@ -262,7 +263,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.EnvironmentRetentionPolicy
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.EnvironmentRetentionPolicy
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironment.runOptions
     name: runOptions
@@ -288,7 +289,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseSchedule[]
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironment.variables
     name: variables
@@ -301,4 +303,6 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: ConfigurationVariableValue'
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ConfigurationVariableValue

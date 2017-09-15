@@ -10,14 +10,12 @@ items:
         vss-web-extension-sdk.TFS.Core.Contracts.WebApiConnectedServiceDetails.credentialsXml
       - >-
         vss-web-extension-sdk.TFS.Core.Contracts.WebApiConnectedServiceDetails.endPoint
-      - >-
-        vss-web-extension-sdk.TFS.Core.Contracts.WebApiConnectedServiceDetails.id
-      - >-
-        vss-web-extension-sdk.TFS.Core.Contracts.WebApiConnectedServiceDetails.url
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.Core.Contracts.WebApiConnectedServiceRef'
     package: vss-web-extension-sdk
     module: TFS/Core/Contracts
   - uid: >-
@@ -32,7 +30,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Core.Contracts.WebApiConnectedService
+          - '@vss-web-extension-sdk.TFS.Core.Contracts.WebApiConnectedService'
   - uid: >-
       vss-web-extension-sdk.TFS.Core.Contracts.WebApiConnectedServiceDetails.credentialsXml
     name: credentialsXml
@@ -57,30 +55,6 @@ items:
     summary: >-
       Optional uri to connect directly to the service such as
       https://windows.azure.com
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.WebApiConnectedServiceDetails.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.WebApiConnectedServiceDetails.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
     syntax:
       return:
         type:

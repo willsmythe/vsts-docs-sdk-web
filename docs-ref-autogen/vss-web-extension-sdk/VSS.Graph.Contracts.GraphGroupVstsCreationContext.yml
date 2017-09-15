@@ -16,14 +16,14 @@ items:
         vss-web-extension-sdk.VSS.Graph.Contracts.GraphGroupVstsCreationContext.restrictedVisibility
       - >-
         vss-web-extension-sdk.VSS.Graph.Contracts.GraphGroupVstsCreationContext.specialGroupType
-      - >-
-        vss-web-extension-sdk.VSS.Graph.Contracts.GraphGroupVstsCreationContext.storageKey
     langs:
       - typeScript
     type: interface
     summary: >-
       Use this type to create a new Vsts group that is not backed by an external
       provider.
+    extends:
+      - '@vss-web-extension-sdk.VSS.Graph.Contracts.GraphGroupCreationContext'
     package: vss-web-extension-sdk
     module: VSS/Graph/Contracts
   - uid: >-
@@ -104,21 +104,6 @@ items:
       - typeScript
     type: property
     summary: For internal use only in back compat scenarios.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.Contracts.GraphGroupVstsCreationContext.storageKey
-    name: storageKey
-    fullName: storageKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Optional: If provided, we will use this identifier for the storage key of
-      the created group
     syntax:
       return:
         type:

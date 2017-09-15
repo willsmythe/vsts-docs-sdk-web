@@ -18,6 +18,8 @@ items:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Search.SearchAdapter<any>'
     package: vss-web-extension-sdk
     module: VSS/Controls/Grids
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.addMoreItems
@@ -33,7 +35,8 @@ items:
             - Function
           description: The function which adds items to the search strategy.
         - id: searchCallback
-          type: []
+          type:
+            - function
           description: |
             The function which searches the newly updated strategy.
       content: >-
@@ -53,7 +56,7 @@ items:
       parameters:
         - id: grid
           type:
-            - vss-web-extension-sdk.VSS.Controls.Grids.Grid
+            - '@vss-web-extension-sdk.VSS.Controls.Grids.Grid'
           description: |
             The grid to get data from
       content: 'function attachGrid(grid: Grid)'
@@ -105,7 +108,7 @@ items:
       content: 'function handleError(message: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.handleResults
-    name: 'handleResults(results: function, finished: boolean)'
+    name: 'handleResults(results: any[], finished: boolean)'
     children: []
     langs:
       - typeScript
@@ -117,14 +120,14 @@ items:
       parameters:
         - id: results
           type:
-            - function
+            - 'any[]'
           description: An array of items
         - id: finished
           type:
             - boolean
           description: |
             Represents whether or not the search is finished
-      content: 'function handleResults(results: function, finished: boolean)'
+      content: 'function handleResults(results: any[], finished: boolean)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.isDataSetComplete

@@ -1,0 +1,81 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.inspector.Debugger.PausedEventDataType
+    name: PausedEventDataType
+    fullName: PausedEventDataType
+    children:
+      - >-
+        vss-web-extension-sdk.inspector.Debugger.PausedEventDataType.asyncStackTrace
+      - vss-web-extension-sdk.inspector.Debugger.PausedEventDataType.callFrames
+      - vss-web-extension-sdk.inspector.Debugger.PausedEventDataType.data
+      - >-
+        vss-web-extension-sdk.inspector.Debugger.PausedEventDataType.hitBreakpoints
+      - vss-web-extension-sdk.inspector.Debugger.PausedEventDataType.reason
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: vss-web-extension-sdk
+    module: Debugger
+  - uid: >-
+      vss-web-extension-sdk.inspector.Debugger.PausedEventDataType.asyncStackTrace
+    name: asyncStackTrace
+    fullName: asyncStackTrace
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'Async stack trace, if any.'
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Runtime.StackTrace'
+  - uid: vss-web-extension-sdk.inspector.Debugger.PausedEventDataType.callFrames
+    name: callFrames
+    fullName: callFrames
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Call stack the virtual machine stopped on.
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Debugger.CallFrame[]'
+  - uid: vss-web-extension-sdk.inspector.Debugger.PausedEventDataType.data
+    name: data
+    fullName: data
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Object containing break-specific auxiliary properties.
+    syntax:
+      return:
+        type:
+          - __type
+  - uid: >-
+      vss-web-extension-sdk.inspector.Debugger.PausedEventDataType.hitBreakpoints
+    name: hitBreakpoints
+    fullName: hitBreakpoints
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Hit breakpoints IDs
+    syntax:
+      return:
+        type:
+          - 'string[]'
+  - uid: vss-web-extension-sdk.inspector.Debugger.PausedEventDataType.reason
+    name: reason
+    fullName: reason
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Pause reason.
+    syntax:
+      return:
+        type:
+          - string

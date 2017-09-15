@@ -60,7 +60,7 @@ items:
       content: 'function clearTimeout(timeoutId: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement.setInterval
-    name: 'setInterval(callback: function, milliseconds: number, args: function)'
+    name: 'setInterval(callback: function, milliseconds: number, args: any[])'
     children: []
     langs:
       - typeScript
@@ -68,7 +68,8 @@ items:
     syntax:
       parameters:
         - id: callback
-          type: []
+          type:
+            - function
           description: |
             The callback that should be called each interval time period.
         - id: milliseconds
@@ -78,18 +79,18 @@ items:
             The number of milliseconds between each callback.
         - id: args
           type:
-            - function
+            - 'any[]'
           description: |
             Optional variable argument list passed to the callback.
       content: >-
         function setInterval(callback: function, milliseconds: number, args:
-        function)
+        any[])
       return:
         type:
           - number
     type: method
   - uid: vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement.setTimeout
-    name: 'setTimeout(callback: function, milliseconds?: number, args: function)'
+    name: 'setTimeout(callback: function, milliseconds?: number, args: any[])'
     children: []
     langs:
       - typeScript
@@ -99,7 +100,8 @@ items:
     syntax:
       parameters:
         - id: callback
-          type: []
+          type:
+            - function
           description: |
             The callback that should be called when the time period has elapsed.
         - id: milliseconds
@@ -111,12 +113,12 @@ items:
           optional: true
         - id: args
           type:
-            - function
+            - 'any[]'
           description: |
             Optional variable argument list passed to the callback.
       content: >-
         function setTimeout(callback: function, milliseconds?: number, args:
-        function)
+        any[])
       return:
         type:
           - number

@@ -6,9 +6,6 @@ items:
     children:
       - >-
         vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.allowInteraction
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.ariaAttributes
-      - vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.ariaLabel
       - vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.barCount
       - >-
         vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.barGenerator
@@ -17,29 +14,18 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.barSpacing
       - vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.barWidth
-      - vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.change
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.coreCssClass
-      - vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.cssClass
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.earlyInitialize
-      - vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.height
       - >-
         vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.hoverState
-      - vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.id
-      - vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.prepend
       - >-
         vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.renderDefaultBars
-      - vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.role
       - >-
         vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.selectedState
-      - vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.tagName
-      - vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.title
-      - vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.width
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
     package: vss-web-extension-sdk
     module: VSS/Controls/Histogram
   - uid: >-
@@ -55,31 +41,6 @@ items:
       return:
         type:
           - boolean
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.ariaAttributes
-    name: ariaAttributes
-    fullName: ariaAttributes
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Add these aria attributes to the Enhancement.
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Controls.AriaAttributes
-  - uid: vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.ariaLabel
-    name: ariaLabel
-    fullName: ariaLabel
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Legacy option. Superseded by ariaAttributes property.
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.barCount
     name: barCount
     fullName: barCount
@@ -103,7 +64,8 @@ items:
     summary: A generator function to return a list of bars to display in the histogram.
     syntax:
       return:
-        type: []
+        type:
+          - function
   - uid: vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.barHeight
     name: barHeight
     fullName: barHeight
@@ -127,7 +89,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.VSS.Controls.Histogram.HistogramBarData[]'
   - uid: vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.barSpacing
     name: barSpacing
     fullName: barSpacing
@@ -152,68 +114,6 @@ items:
       return:
         type:
           - number
-  - uid: vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.change
-    name: change
-    fullName: change
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - Function
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.coreCssClass
-    name: coreCssClass
-    fullName: coreCssClass
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.cssClass
-    name: cssClass
-    fullName: cssClass
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.earlyInitialize
-    name: earlyInitialize
-    fullName: earlyInitialize
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.height
-    name: height
-    fullName: height
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
   - uid: vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.hoverState
     name: hoverState
     fullName: hoverState
@@ -226,30 +126,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
-  - uid: vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.prepend
-    name: prepend
-    fullName: prepend
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.renderDefaultBars
     name: renderDefaultBars
@@ -263,18 +139,6 @@ items:
       return:
         type:
           - boolean
-  - uid: vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.role
-    name: role
-    fullName: role
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.selectedState
     name: selectedState
@@ -288,39 +152,3 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.tagName
-    name: tagName
-    fullName: tagName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.title
-    name: title
-    fullName: title
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions.width
-    name: width
-    fullName: width
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number

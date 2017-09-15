@@ -4,39 +4,15 @@ items:
     name: TaskEvent
     fullName: TaskEvent
     children:
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskEvent.jobId
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskEvent.name
       - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskEvent.taskId
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobEvent'
     package: vss-web-extension-sdk
     module: TFS/DistributedTask/Contracts
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskEvent.jobId
-    name: jobId
-    fullName: jobId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskEvent.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskEvent.taskId
     name: taskId
     fullName: taskId

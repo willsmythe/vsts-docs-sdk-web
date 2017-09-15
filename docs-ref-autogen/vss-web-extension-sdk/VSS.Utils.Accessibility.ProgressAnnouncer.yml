@@ -57,7 +57,7 @@ items:
       content: function announceError()
     type: method
   - uid: vss-web-extension-sdk.VSS.Utils.Accessibility.ProgressAnnouncer.forPromise
-    name: 'forPromise(promise: IPromise, options: ProgressAnnouncerOptions)'
+    name: 'forPromise(promise: IPromise<T>, options: ProgressAnnouncerOptions)'
     children: []
     langs:
       - typeScript
@@ -68,16 +68,16 @@ items:
       parameters:
         - id: promise
           type:
-            - vss-web-extension-sdk.IPromise
+            - '@vss-web-extension-sdk.IPromise<T>'
           description: ''
         - id: options
           type:
             - >-
-              vss-web-extension-sdk.VSS.Utils.Accessibility.ProgressAnnouncerOptions
+              @vss-web-extension-sdk.VSS.Utils.Accessibility.ProgressAnnouncerOptions
           description: |+
 
       content: >-
-        function forPromise(promise: IPromise, options:
+        function forPromise(promise: IPromise<T>, options:
         ProgressAnnouncerOptions)
     type: method
   - uid: >-
@@ -92,7 +92,7 @@ items:
         - id: options
           type:
             - >-
-              vss-web-extension-sdk.VSS.Utils.Accessibility.ProgressAnnouncerOptions
+              @vss-web-extension-sdk.VSS.Utils.Accessibility.ProgressAnnouncerOptions
           description: ''
       content: 'new ProgressAnnouncer(options: ProgressAnnouncerOptions)'
     type: constructor

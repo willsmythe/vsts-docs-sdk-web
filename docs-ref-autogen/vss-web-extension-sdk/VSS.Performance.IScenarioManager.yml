@@ -57,7 +57,7 @@ items:
       content: function addAjaxCallStart()
       return:
         type:
-          - vss-web-extension-sdk.VSS.Performance.IEndAjaxCallTiming
+          - '@vss-web-extension-sdk.VSS.Performance.IEndAjaxCallTiming'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Performance.IScenarioManager.addScenarioCompletedListener
@@ -70,7 +70,7 @@ items:
       parameters:
         - id: callback
           type:
-            - vss-web-extension-sdk.VSS.Performance.IPerfScenarioEventCallback
+            - '@vss-web-extension-sdk.VSS.Performance.IPerfScenarioEventCallback'
           description: |
             Method invoked when a perf scenario has been marked as completed
       content: >-
@@ -208,7 +208,7 @@ items:
         number, isPageInteractive?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor
+          - '@vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Performance.IScenarioManager.startScenarioFromNavigation
@@ -241,5 +241,5 @@ items:
         isPageInteractive?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor
+          - '@vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor'
     type: method

@@ -5,7 +5,6 @@ items:
     fullName: VariableGroup
     children:
       - vss-web-extension-sdk.TFS.Build.Contracts.VariableGroup.description
-      - vss-web-extension-sdk.TFS.Build.Contracts.VariableGroup.id
       - vss-web-extension-sdk.TFS.Build.Contracts.VariableGroup.name
       - vss-web-extension-sdk.TFS.Build.Contracts.VariableGroup.type
       - vss-web-extension-sdk.TFS.Build.Contracts.VariableGroup.variables
@@ -13,6 +12,8 @@ items:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.Build.Contracts.VariableGroupReference'
     package: vss-web-extension-sdk
     module: TFS/Build/Contracts
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.VariableGroup.description
@@ -27,18 +28,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.VariableGroup.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.VariableGroup.name
     name: name
     fullName: name
@@ -74,4 +63,6 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: BuildDefinitionVariable'
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionVariable

@@ -9,12 +9,12 @@ items:
       - vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration.id
       - vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration.name
       - vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration.path
-      - vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration.url
-      - vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration._links
     langs:
       - typeScript
     type: interface
     summary: Represents a shallow ref for a single iteration
+    extends:
+      - '@vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsDataContractBase'
     package: vss-web-extension-sdk
     module: TFS/Work/Contracts
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration.attributes
@@ -28,7 +28,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Work.Contracts.TeamIterationAttributes
+          - '@vss-web-extension-sdk.TFS.Work.Contracts.TeamIterationAttributes'
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration.id
     name: id
     fullName: id
@@ -65,27 +65,3 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Full http link to the resource
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Collection of links relevant to resource
-    syntax:
-      return:
-        type:
-          - any

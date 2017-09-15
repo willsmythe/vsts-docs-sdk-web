@@ -4,10 +4,6 @@ items:
     name: DeviceTypeService
     fullName: DeviceTypeService
     children:
-      - >-
-        vss-web-extension-sdk.VSS.DeviceTypeService.DeviceTypeService.getConnection
-      - >-
-        vss-web-extension-sdk.VSS.DeviceTypeService.DeviceTypeService.initializeConnection
       - vss-web-extension-sdk.VSS.DeviceTypeService.DeviceTypeService.isMobile
       - >-
         vss-web-extension-sdk.VSS.DeviceTypeService.DeviceTypeService.isMobileDevice
@@ -19,38 +15,10 @@ items:
     summary: >-
       This is a client side wrapper for server side data provider contribution,
       device-type-data.
+    extends:
+      - '@vss-web-extension-sdk.VSS.Service.VssService'
     package: vss-web-extension-sdk
     module: VSS/DeviceTypeService
-  - uid: >-
-      vss-web-extension-sdk.VSS.DeviceTypeService.DeviceTypeService.getConnection
-    name: getConnection()
-    children: []
-    langs:
-      - typeScript
-    summary: Gets the relative location for the service's connection
-    syntax:
-      parameters: []
-      content: function getConnection()
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Service.VssConnection
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.DeviceTypeService.DeviceTypeService.initializeConnection
-    name: 'initializeConnection(connection: VssConnection)'
-    children: []
-    langs:
-      - typeScript
-    summary: Sets the VssConnection to use for this service
-    syntax:
-      parameters:
-        - id: connection
-          type:
-            - vss-web-extension-sdk.VSS.Service.VssConnection
-          description: |
-            VssConnection used by this service
-      content: 'function initializeConnection(connection: VssConnection)'
-    type: method
   - uid: vss-web-extension-sdk.VSS.DeviceTypeService.DeviceTypeService.isMobile
     name: isMobile()
     children: []

@@ -7,10 +7,6 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.addMembership
       - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.authTokenManager
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.cachepoliciesApiVersion
-      - >-
         vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.checkMembershipExistence
       - >-
         vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.constructor
@@ -23,15 +19,9 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.deleteUser
       - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.descriptorsApiVersion
-      - >-
         vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.findGroupsBySearchFactor
       - >-
         vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.findUsersBySearchFactor
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.forceOptionsCallForAutoNegotiate
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getDescriptor
       - vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getGroup
       - vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getGroups
       - >-
@@ -45,61 +35,17 @@ items:
       - vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getUser
       - vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getUsers
       - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.graphGlobalExtendedPropertyBatchApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.groupsApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.idsApiVersion
-      - >-
         vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.lookupSubjects
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.memberlookupApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.membersApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.membersApiVersion_42939f1e
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.membersApiVersion_8b9ecdb2
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.membershipsApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.membershipsbatchApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.membershipstatesApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.membershipTraversalsApiVersion
       - >-
         vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.removeMembership
       - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.scopesApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.shardingstateApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.storagekeysApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.subjectlookupApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.subjectsApiVersion
-      - >-
         vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.updateGroup
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.usersApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4._beginGetLocation
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4._beginRequest
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4._beginRequestWithAjaxResult
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4._issueAjaxRequest
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4._rootRequestPath
-      - >-
-        vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_1To4'
     package: vss-web-extension-sdk
     module: VSS/Graph/RestClient
   - uid: >-
@@ -128,34 +74,9 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphMembership>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.cachepoliciesApiVersion
-    name: cachepoliciesApiVersion
-    fullName: cachepoliciesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.checkMembershipExistence
     name: >-
@@ -182,7 +103,7 @@ items:
         containerDescriptor: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<boolean>'
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.constructor
     name: >-
@@ -200,7 +121,7 @@ items:
           description: ''
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
       content: >-
@@ -210,7 +131,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.createGroup
     name: >-
       createGroup(creationContext: GraphGroupCreationContext, scopeDescriptor?:
-      string, groupDescriptors?: function)
+      string, groupDescriptors?: SubjectDescriptor[])
     children: []
     langs:
       - typeScript
@@ -231,7 +152,7 @@ items:
         - id: creationContext
           type:
             - >-
-              vss-web-extension-sdk.VSS.Graph.Contracts.GraphGroupCreationContext
+              @vss-web-extension-sdk.VSS.Graph.Contracts.GraphGroupCreationContext
           description: >-
             The subset of the full graph group used to uniquely find the graph
             subject in an external provider.
@@ -242,22 +163,23 @@ items:
           optional: true
         - id: groupDescriptors
           type:
-            - function
+            - '@vss-web-extension-sdk.VSS.Graph.Contracts.SubjectDescriptor[]'
           description: >-
             A comma separated list of descriptors referencing groups you want
             the graph group to join
           optional: true
       content: >-
         function createGroup(creationContext: GraphGroupCreationContext,
-        scopeDescriptor?: string, groupDescriptors?: function)
+        scopeDescriptor?: string, groupDescriptors?: SubjectDescriptor[])
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphGroup>
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.createUser
     name: >-
       createUser(creationContext: GraphUserCreationContext, groupDescriptors?:
-      function)
+      SubjectDescriptor[])
     children: []
     langs:
       - typeScript
@@ -280,23 +202,25 @@ items:
       parameters:
         - id: creationContext
           type:
-            - vss-web-extension-sdk.VSS.Graph.Contracts.GraphUserCreationContext
+            - >-
+              @vss-web-extension-sdk.VSS.Graph.Contracts.GraphUserCreationContext
           description: >-
             The subset of the full graph user used to uniquely find the graph
             subject in an external provider.
         - id: groupDescriptors
           type:
-            - function
+            - '@vss-web-extension-sdk.VSS.Graph.Contracts.SubjectDescriptor[]'
           description: >-
             A comma separated list of descriptors of groups you want the graph
             user to join
           optional: true
       content: >-
         function createUser(creationContext: GraphUserCreationContext,
-        groupDescriptors?: function)
+        groupDescriptors?: SubjectDescriptor[])
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphUser>
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.deleteGroup
     name: 'deleteGroup(groupDescriptor: string)'
@@ -316,7 +240,7 @@ items:
       content: 'function deleteGroup(groupDescriptor: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.deleteUser
     name: 'deleteUser(userDescriptor: string)'
@@ -337,21 +261,8 @@ items:
       content: 'function deleteUser(userDescriptor: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.descriptorsApiVersion
-    name: descriptorsApiVersion
-    fullName: descriptorsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.findGroupsBySearchFactor
     name: >-
@@ -389,7 +300,8 @@ items:
         searchValue?: string, forceDomainQualification?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphGroup[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.findUsersBySearchFactor
@@ -428,38 +340,8 @@ items:
         searchValue?: string, forceDomainQualification?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getDescriptor
-    name: 'getDescriptor(storageKey: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: '[Preview API] Resolve a storage key to a descriptor'
-    syntax:
-      parameters:
-        - id: storageKey
-          type:
-            - string
-          description: 'Storage key of the subject (user, group, scope, etc.) to resolve'
-      content: 'function getDescriptor(storageKey: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphUser[]>
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getGroup
     name: 'getGroup(groupDescriptor: string)'
@@ -479,11 +361,12 @@ items:
       content: 'function getGroup(groupDescriptor: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphGroup>
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getGroups
     name: >-
-      getGroups(scopeDescriptor?: string, subjectTypes?: function,
+      getGroups(scopeDescriptor?: string, subjectTypes?: string[],
       continuationToken?: string)
     children: []
     langs:
@@ -505,7 +388,7 @@ items:
           optional: true
         - id: subjectTypes
           type:
-            - function
+            - 'string[]'
           description: >-
             A comma separated list of user subject subtypes to reduce the
             retrieved results, e.g.
@@ -521,11 +404,12 @@ items:
             continuation token.
           optional: true
       content: >-
-        function getGroups(scopeDescriptor?: string, subjectTypes?: function,
+        function getGroups(scopeDescriptor?: string, subjectTypes?: string[],
         continuationToken?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.PagedGraphGroups>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getMembership
@@ -551,7 +435,8 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphMembership>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getMemberships
@@ -591,7 +476,8 @@ items:
         GraphTraversalDirection, depth?: number)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphMembership[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getMembershipState
@@ -609,7 +495,8 @@ items:
       content: 'function getMembershipState(subjectDescriptor: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphMembershipState>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getStorageKey
@@ -627,7 +514,8 @@ items:
       content: 'function getStorageKey(descriptor: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphStorageKeyResult>
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getUser
     name: 'getUser(userDescriptor: string)'
@@ -644,10 +532,11 @@ items:
       content: 'function getUser(userDescriptor: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphUser>
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getUsers
-    name: 'getUsers(subjectTypes?: function, continuationToken?: string)'
+    name: 'getUsers(subjectTypes?: string[], continuationToken?: string)'
     children: []
     langs:
       - typeScript
@@ -661,7 +550,7 @@ items:
       parameters:
         - id: subjectTypes
           type:
-            - function
+            - 'string[]'
           description: >-
             A comma separated list of user subject subtypes to reduce the
             retrieved results, e.g.
@@ -676,50 +565,12 @@ items:
             way to know if there is more data left is the presence of a
             continuation token.
           optional: true
-      content: 'function getUsers(subjectTypes?: function, continuationToken?: string)'
+      content: 'function getUsers(subjectTypes?: string[], continuationToken?: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.PagedGraphUsers>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.graphGlobalExtendedPropertyBatchApiVersion
-    name: graphGlobalExtendedPropertyBatchApiVersion
-    fullName: graphGlobalExtendedPropertyBatchApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.groupsApiVersion
-    name: groupsApiVersion
-    fullName: groupsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.idsApiVersion
-    name: idsApiVersion
-    fullName: idsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.lookupSubjects
     name: 'lookupSubjects(subjectLookup: GraphSubjectLookup)'
@@ -731,117 +582,13 @@ items:
       parameters:
         - id: subjectLookup
           type:
-            - vss-web-extension-sdk.VSS.Graph.Contracts.GraphSubjectLookup
+            - '@vss-web-extension-sdk.VSS.Graph.Contracts.GraphSubjectLookup'
           description: ''
       content: 'function lookupSubjects(subjectLookup: GraphSubjectLookup)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<GraphSubject>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.memberlookupApiVersion
-    name: memberlookupApiVersion
-    fullName: memberlookupApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.membersApiVersion
-    name: membersApiVersion
-    fullName: membersApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.membersApiVersion_42939f1e
-    name: membersApiVersion_42939f1e
-    fullName: membersApiVersion_42939f1e
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.membersApiVersion_8b9ecdb2
-    name: membersApiVersion_8b9ecdb2
-    fullName: membersApiVersion_8b9ecdb2
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.membershipsApiVersion
-    name: membershipsApiVersion
-    fullName: membershipsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.membershipsbatchApiVersion
-    name: membershipsbatchApiVersion
-    fullName: membershipsbatchApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.membershipstatesApiVersion
-    name: membershipstatesApiVersion
-    fullName: membershipstatesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.membershipTraversalsApiVersion
-    name: membershipTraversalsApiVersion
-    fullName: membershipTraversalsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.removeMembership
     name: 'removeMembership(subjectDescriptor: string, containerDescriptor: string)'
@@ -866,73 +613,8 @@ items:
         containerDescriptor: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.scopesApiVersion
-    name: scopesApiVersion
-    fullName: scopesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.shardingstateApiVersion
-    name: shardingstateApiVersion
-    fullName: shardingstateApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.storagekeysApiVersion
-    name: storagekeysApiVersion
-    fullName: storagekeysApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.subjectlookupApiVersion
-    name: subjectlookupApiVersion
-    fullName: subjectlookupApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.subjectsApiVersion
-    name: subjectsApiVersion
-    fullName: subjectsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.updateGroup
     name: 'updateGroup(groupDescriptor: string, patchDocument: JsonPatchDocument)'
     children: []
@@ -949,178 +631,13 @@ items:
           description: The descriptor of the group to modify.
         - id: patchDocument
           type:
-            - vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument
+            - '@vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument'
           description: The JSON+Patch document containing the fields to alter.
       content: >-
         function updateGroup(groupDescriptor: string, patchDocument:
         JsonPatchDocument)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.usersApiVersion
-    name: usersApiVersion
-    fullName: usersApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4._beginGetLocation
-    name: '_beginGetLocation(area: string, locationId: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Gets information about an API resource location (route template, supported
-      versions, etc.)
-    syntax:
-      parameters:
-        - id: area
-          type:
-            - string
-          description: resource area name
-        - id: locationId
-          type:
-            - string
-          description: |
-            Guid of the location to get
-      content: 'function _beginGetLocation(area: string, locationId: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4._beginRequest
-    name: >-
-      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
-      boolean)
-    children: []
-    langs:
-      - typeScript
-    summary: Issue a request to a VSS REST endpoint.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >-
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used
-          optional: true
-      content: >-
-        function _beginRequest(requestParams: VssApiResourceRequestParams,
-        useAjaxResult?: boolean)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4._beginRequestWithAjaxResult
-    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue a request to a VSS REST endpoint and makes sure the result contains
-      jqXHR. Use spread to access jqXHR.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-      content: >-
-        function _beginRequestWithAjaxResult(requestParams:
-        VssApiResourceRequestParams)
-      return:
-        type:
-          - Q.Promise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4._issueAjaxRequest
-    name: >-
-      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
-      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue an AJAX request. This is a wrapper around jquery's ajax method that
-      handles VSS authentication
-
-      and triggers events that can be listened to by other modules.
-    syntax:
-      parameters:
-        - id: requestUrl
-          type:
-            - string
-          description: Url to send the request to
-        - id: ajaxOptions
-          type:
-            - JQueryAjaxSettings
-          description: jQuery.ajax options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used.
-          optional: true
-        - id: vssRequestOptions
-          type:
-            - vss-web-extension-sdk.IVssAjaxOptions
-          description: ''
-          optional: true
-      content: >-
-        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
-        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
-        IVssAjaxOptions)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4._setInitializationPromise
-    name: '_setInitializationPromise(promise: IPromise)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Sets a promise that is waited on before any requests are issued. Can be
-      used to asynchronously
-
-      set the request url and auth token manager.
-    syntax:
-      parameters:
-        - id: promise
-          type:
-            - vss-web-extension-sdk.IPromise
-          description: ''
-      content: 'function _setInitializationPromise(promise: IPromise)'
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphGroup>
     type: method

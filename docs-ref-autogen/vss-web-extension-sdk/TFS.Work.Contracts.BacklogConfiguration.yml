@@ -37,7 +37,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Work.Contracts.BacklogFields
+          - '@vss-web-extension-sdk.TFS.Work.Contracts.BacklogFields'
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.BacklogConfiguration.bugsBehavior
     name: bugsBehavior
     fullName: bugsBehavior
@@ -62,7 +62,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'string[]'
   - uid: >-
       vss-web-extension-sdk.TFS.Work.Contracts.BacklogConfiguration.portfolioBacklogs
     name: portfolioBacklogs
@@ -75,7 +75,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.Work.Contracts.BacklogLevelConfiguration[]
   - uid: >-
       vss-web-extension-sdk.TFS.Work.Contracts.BacklogConfiguration.requirementBacklog
     name: requirementBacklog
@@ -88,7 +89,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Work.Contracts.BacklogLevelConfiguration
+          - '@vss-web-extension-sdk.TFS.Work.Contracts.BacklogLevelConfiguration'
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.BacklogConfiguration.taskBacklog
     name: taskBacklog
     fullName: taskBacklog
@@ -100,7 +101,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Work.Contracts.BacklogLevelConfiguration
+          - '@vss-web-extension-sdk.TFS.Work.Contracts.BacklogLevelConfiguration'
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.BacklogConfiguration.url
     name: url
     fullName: url
@@ -125,4 +126,4 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.TFS.Work.Contracts.WorkItemTypeStateInfo[]'

@@ -6,8 +6,6 @@ items:
     fullName: TaskAgentMinAgentVersionRequiredUpdate
     children:
       - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentMinAgentVersionRequiredUpdate.code
-      - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentMinAgentVersionRequiredUpdate.jobDefinition
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentMinAgentVersionRequiredUpdate.jobOwner
@@ -17,21 +15,11 @@ items:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentUpdateReason
     package: vss-web-extension-sdk
     module: TFS/DistributedTask/Contracts
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentMinAgentVersionRequiredUpdate.code
-    name: code
-    fullName: code
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - TaskAgentUpdateReasonType
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentMinAgentVersionRequiredUpdate.jobDefinition
     name: jobDefinition
@@ -45,7 +33,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationOwner
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationOwner
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentMinAgentVersionRequiredUpdate.jobOwner
     name: jobOwner
@@ -59,7 +47,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationOwner
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationOwner
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentMinAgentVersionRequiredUpdate.minAgentVersion
     name: minAgentVersion

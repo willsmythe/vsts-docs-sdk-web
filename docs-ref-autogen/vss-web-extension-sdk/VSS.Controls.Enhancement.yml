@@ -6,6 +6,8 @@ items:
     children:
       - vss-web-extension-sdk.VSS.Controls.Enhancement.cancelDelayedFunction
       - vss-web-extension-sdk.VSS.Controls.Enhancement.delayExecute
+      - vss-web-extension-sdk.VSS.Controls.Enhancement.dispose
+      - vss-web-extension-sdk.VSS.Controls.Enhancement.enhance
       - vss-web-extension-sdk.VSS.Controls.Enhancement.enhance
       - vss-web-extension-sdk.VSS.Controls.Enhancement.constructor
       - vss-web-extension-sdk.VSS.Controls.Enhancement.ENHANCEMENTS_DATA_KEY
@@ -18,29 +20,18 @@ items:
       - vss-web-extension-sdk.VSS.Controls.Enhancement.getEnhancementOptions
       - vss-web-extension-sdk.VSS.Controls.Enhancement.getId
       - vss-web-extension-sdk.VSS.Controls.Enhancement.getInstance
+      - vss-web-extension-sdk.VSS.Controls.Enhancement.getInstanceO
       - vss-web-extension-sdk.VSS.Controls.Enhancement.getOptionPrefix
+      - vss-web-extension-sdk.VSS.Controls.Enhancement.getType
       - vss-web-extension-sdk.VSS.Controls.Enhancement.getTypeName
       - vss-web-extension-sdk.VSS.Controls.Enhancement.getTypeName
+      - vss-web-extension-sdk.VSS.Controls.Enhancement.initialize
       - vss-web-extension-sdk.VSS.Controls.Enhancement.initializeOptions
       - vss-web-extension-sdk.VSS.Controls.Enhancement.isDisposed
       - vss-web-extension-sdk.VSS.Controls.Enhancement.optionsPrefix
       - vss-web-extension-sdk.VSS.Controls.Enhancement.registerEnhancement
       - vss-web-extension-sdk.VSS.Controls.Enhancement.registerJQueryWidget
       - vss-web-extension-sdk.VSS.Controls.Enhancement.setEnhancementOptions
-      - vss-web-extension-sdk.VSS.Controls.Enhancement._bind
-      - vss-web-extension-sdk.VSS.Controls.Enhancement._disposed
-      - vss-web-extension-sdk.VSS.Controls.Enhancement._element
-      - vss-web-extension-sdk.VSS.Controls.Enhancement._enhance
-      - vss-web-extension-sdk.VSS.Controls.Enhancement._enhancementOptions
-      - vss-web-extension-sdk.VSS.Controls.Enhancement._ensureInitialized
-      - vss-web-extension-sdk.VSS.Controls.Enhancement._fire
-      - vss-web-extension-sdk.VSS.Controls.Enhancement._getEventNameSpace
-      - vss-web-extension-sdk.VSS.Controls.Enhancement._getUniqueId
-      - vss-web-extension-sdk.VSS.Controls.Enhancement._initialized
-      - vss-web-extension-sdk.VSS.Controls.Enhancement._options
-      - vss-web-extension-sdk.VSS.Controls.Enhancement._setElement
-      - vss-web-extension-sdk.VSS.Controls.Enhancement._setId
-      - vss-web-extension-sdk.VSS.Controls.Enhancement._unbind
     langs:
       - typeScript
     type: class
@@ -106,6 +97,30 @@ items:
         function delayExecute(name?: string, msDelay?: number,
         cancelPendingOps?: boolean, func?: Function)
     type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.dispose
+    name: dispose()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function dispose()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.enhance
+    name: 'enhance($element: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: $element
+          type:
+            - any
+          description: ''
+      content: 'function enhance($element: any)'
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.enhance
     name: >-
       enhance(type: function, element: Enhancement, options?: function,
@@ -117,7 +132,8 @@ items:
     syntax:
       parameters:
         - id: type
-          type: []
+          type:
+            - function
           description: ''
         - id: element
           type:
@@ -130,7 +146,7 @@ items:
           optional: true
         - id: enhancementOptions
           type:
-            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+            - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
           description: ''
           optional: true
       content: >-
@@ -138,7 +154,7 @@ items:
         function, enhancementOptions?: EnhancementOptions)
       return:
         type:
-          - vss-web-extension-sdk.VSS.Controls.Enhancement
+          - '@vss-web-extension-sdk.VSS.Controls.Enhancement<TOptions>'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.constructor
     name: 'Enhancement(options?: TOptions, enhancementOptions?: EnhancementOptions)'
@@ -156,7 +172,7 @@ items:
           optional: true
         - id: enhancementOptions
           type:
-            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+            - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
           description: ''
           optional: true
       content: >-
@@ -228,7 +244,7 @@ items:
         any)
       return:
         type:
-          - vss-web-extension-sdk.VSS.Controls.Enhancement
+          - '@vss-web-extension-sdk.VSS.Controls.Enhancement<any>'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.ensureEnhancements
     name: 'ensureEnhancements(type?: any, context?: any, errorCallback?: any)'
@@ -326,7 +342,30 @@ items:
       content: 'function getInstance(type?: any, element?: any)'
       return:
         type:
-          - vss-web-extension-sdk.VSS.Controls.Enhancement
+          - '@vss-web-extension-sdk.VSS.Controls.Enhancement<any>'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.getInstanceO
+    name: 'getInstanceO(type?: any, element?: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: element
+          type:
+            - any
+          description: ''
+          optional: true
+      content: 'function getInstanceO(type?: any, element?: any)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Controls.Enhancement<TOptions>'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.getOptionPrefix
     name: 'getOptionPrefix(type: any)'
@@ -344,6 +383,19 @@ items:
       return:
         type:
           - string
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.getType
+    name: getType()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getType()
+      return:
+        type:
+          - Function
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.getTypeName
     name: getTypeName()
@@ -375,6 +427,16 @@ items:
       return:
         type:
           - string
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.initialize
+    name: initialize()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function initialize()
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.initializeOptions
     name: 'initializeOptions(options?: TOptions)'
@@ -429,7 +491,8 @@ items:
     syntax:
       parameters:
         - id: type
-          type: []
+          type:
+            - function
           description: ''
           optional: true
         - id: selector
@@ -444,13 +507,13 @@ items:
           optional: true
         - id: errorCallback
           type:
-            - vss-web-extension-sdk.IErrorCallback
+            - '@vss-web-extension-sdk.IErrorCallback'
           description: |+
 
           optional: true
         - id: enhancementOptions
           type:
-            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+            - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
           description: ''
           optional: true
       content: >-
@@ -486,7 +549,7 @@ items:
           optional: true
         - id: enhancementOptions
           type:
-            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+            - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
           description: ''
           optional: true
       content: >-
@@ -507,252 +570,7 @@ items:
       parameters:
         - id: enhancementOptions
           type:
-            - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
+            - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
           description: ''
       content: 'function setEnhancementOptions(enhancementOptions: EnhancementOptions)'
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement._bind
-    name: '_bind(element?: any, eventType?: any, handler?: any, track?: any)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: element
-          type:
-            - any
-          description: ''
-          optional: true
-        - id: eventType
-          type:
-            - any
-          description: ''
-          optional: true
-        - id: handler
-          type:
-            - any
-          description: ''
-          optional: true
-        - id: track
-          type:
-            - any
-          description: |+
-
-          optional: true
-      content: >-
-        function _bind(element?: any, eventType?: any, handler?: any, track?:
-        any)
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Controls.Enhancement
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement._disposed
-    name: _disposed
-    fullName: _disposed
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement._element
-    name: _element
-    fullName: _element
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - JQuery
-  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement._enhance
-    name: '_enhance(element: JQuery)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: element
-          type:
-            - JQuery
-          description: |+
-
-      content: 'function _enhance(element: JQuery)'
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement._enhancementOptions
-    name: _enhancementOptions
-    fullName: _enhancementOptions
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Controls.EnhancementOptions
-  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement._ensureInitialized
-    name: _ensureInitialized()
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters: []
-      content: function _ensureInitialized()
-      return:
-        type:
-          - boolean
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement._fire
-    name: '_fire(element?: any, eventType?: any, args?: any)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: element
-          type:
-            - any
-          description: ''
-          optional: true
-        - id: eventType
-          type:
-            - any
-          description: ''
-          optional: true
-        - id: args
-          type:
-            - any
-          description: |+
-
-          optional: true
-      content: 'function _fire(element?: any, eventType?: any, args?: any)'
-      return:
-        type:
-          - any
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement._getEventNameSpace
-    name: _getEventNameSpace()
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters: []
-      content: function _getEventNameSpace()
-      return:
-        type:
-          - string
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement._getUniqueId
-    name: _getUniqueId()
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters: []
-      content: function _getUniqueId()
-      return:
-        type:
-          - string
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement._initialized
-    name: _initialized
-    fullName: _initialized
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - TOptions
-  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement._setElement
-    name: '_setElement(element: JQuery)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: element
-          type:
-            - JQuery
-          description: |+
-
-      content: 'function _setElement(element: JQuery)'
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement._setId
-    name: '_setId(id: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: id
-          type:
-            - string
-          description: |+
-
-      content: 'function _setId(id: string)'
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Enhancement._unbind
-    name: '_unbind(element?: any, eventType?: any, handler?: any, track?: any)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: element
-          type:
-            - any
-          description: ''
-          optional: true
-        - id: eventType
-          type:
-            - any
-          description: ''
-          optional: true
-        - id: handler
-          type:
-            - any
-          description: ''
-          optional: true
-        - id: track
-          type:
-            - any
-          description: |+
-
-          optional: true
-      content: >-
-        function _unbind(element?: any, eventType?: any, handler?: any, track?:
-        any)
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Controls.Enhancement
     type: method

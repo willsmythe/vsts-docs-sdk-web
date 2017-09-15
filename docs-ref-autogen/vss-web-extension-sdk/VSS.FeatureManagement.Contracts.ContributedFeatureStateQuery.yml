@@ -31,7 +31,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'string[]'
   - uid: >-
       vss-web-extension-sdk.VSS.FeatureManagement.Contracts.ContributedFeatureStateQuery.featureStates
     name: featureStates
@@ -46,7 +46,9 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: ContributedFeatureState'
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.VSS.FeatureManagement.Contracts.ContributedFeatureState
   - uid: >-
       vss-web-extension-sdk.VSS.FeatureManagement.Contracts.ContributedFeatureStateQuery.scopeValues
     name: scopeValues

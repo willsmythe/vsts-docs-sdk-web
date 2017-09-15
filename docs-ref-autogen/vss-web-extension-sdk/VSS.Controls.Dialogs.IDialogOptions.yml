@@ -7,7 +7,6 @@ items:
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.attachResize
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.bowtieVersion
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.buttons
-      - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.cache
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.close
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.closeText
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.content
@@ -17,7 +16,6 @@ items:
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.dialogClass
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.disposeOnClose
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.dynamicSize
-      - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.error
       - >-
         vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.hasProgressElement
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.height
@@ -37,15 +35,9 @@ items:
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.position
       - >-
         vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.preventAutoResize
-      - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.replaceContent
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.resizable
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.showStatusIndicator
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.subtitle
-      - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.success
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.title
-      - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.url
-      - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.urlParams
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.useBowtieStyle
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.useLegacyStyle
       - vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.width
@@ -54,6 +46,8 @@ items:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Controls.Panels.IAjaxPanelOptions'
     package: vss-web-extension-sdk
     module: VSS/Controls/Dialogs
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.attachResize
@@ -99,18 +93,6 @@ items:
       return:
         type:
           - any
-  - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.cache
-    name: cache
-    fullName: cache
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.close
     name: close
     fullName: close
@@ -121,7 +103,8 @@ items:
     summary: Delegate to be executed when the dialog is closed.
     syntax:
       return:
-        type: []
+        type:
+          - function
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.closeText
     name: closeText
     fullName: closeText
@@ -222,18 +205,6 @@ items:
       return:
         type:
           - boolean
-  - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.error
-    name: error
-    fullName: error
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Callback executed if the load fails.
-    syntax:
-      return:
-        type:
-          - Function
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.hasProgressElement
     name: hasProgressElement
@@ -312,7 +283,8 @@ items:
       (including sizing and positioning).
     syntax:
       return:
-        type: []
+        type:
+          - function
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.maxHeight
     name: maxHeight
     fullName: maxHeight
@@ -399,7 +371,8 @@ items:
     summary: Delegate to be executed when the dialog is opened.
     syntax:
       return:
-        type: []
+        type:
+          - function
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.position
     name: position
     fullName: position
@@ -428,18 +401,6 @@ items:
       return:
         type:
           - boolean
-  - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.replaceContent
-    name: replaceContent
-    fullName: replaceContent
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.resizable
     name: resizable
     fullName: resizable
@@ -448,19 +409,6 @@ items:
       - typeScript
     type: property
     summary: Indicates whether the dialog is resizable or not.
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.showStatusIndicator
-    name: showStatusIndicator
-    fullName: showStatusIndicator
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Determines whether status indicator is displayed or not.
     syntax:
       return:
         type:
@@ -477,18 +425,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.success
-    name: success
-    fullName: success
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Callback executed if the load succeeds.
-    syntax:
-      return:
-        type:
-          - Function
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.title
     name: title
     fullName: title
@@ -501,30 +437,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Url to load the content from.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.urlParams
-    name: urlParams
-    fullName: urlParams
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Url request paremeters.
-    syntax:
-      return:
-        type:
-          - any
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.useBowtieStyle
     name: useBowtieStyle
     fullName: useBowtieStyle

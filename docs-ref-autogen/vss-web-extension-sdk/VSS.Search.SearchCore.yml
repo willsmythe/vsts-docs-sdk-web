@@ -16,7 +16,7 @@ items:
     package: vss-web-extension-sdk
     module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchCore.addItems
-    name: 'addItems(items: function)'
+    name: 'addItems(items: SearchableObject<T>[])'
     children: []
     langs:
       - typeScript
@@ -25,10 +25,10 @@ items:
       parameters:
         - id: items
           type:
-            - function
+            - '@vss-web-extension-sdk.VSS.Search.SearchableObject<T>[]'
           description: |
             Items to add
-      content: 'function addItems(items: function)'
+      content: 'function addItems(items: SearchableObject<T>[])'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchCore.beginSearch
     name: 'beginSearch(query: string)'
@@ -68,10 +68,10 @@ items:
       content: function getStrategy()
       return:
         type:
-          - vss-web-extension-sdk.VSS.Search.SearchStrategy
+          - '@vss-web-extension-sdk.VSS.Search.SearchStrategy<T>'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchCore.constructor
-    name: 'SearchCore(strategy: SearchStrategy, adapter: SearchAdapter)'
+    name: 'SearchCore(strategy: SearchStrategy<T>, adapter: SearchAdapter<T>)'
     children: []
     langs:
       - typeScript
@@ -82,12 +82,12 @@ items:
       parameters:
         - id: strategy
           type:
-            - vss-web-extension-sdk.VSS.Search.SearchStrategy
+            - '@vss-web-extension-sdk.VSS.Search.SearchStrategy<T>'
           description: The search strategy to use.
         - id: adapter
           type:
-            - vss-web-extension-sdk.VSS.Search.SearchAdapter
+            - '@vss-web-extension-sdk.VSS.Search.SearchAdapter<T>'
           description: |
             The search adapter to use.
-      content: 'new SearchCore(strategy: SearchStrategy, adapter: SearchAdapter)'
+      content: 'new SearchCore(strategy: SearchStrategy<T>, adapter: SearchAdapter<T>)'
     type: constructor

@@ -5,8 +5,6 @@ items:
     fullName: DashboardHttpClient2_2
     children:
       - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.authTokenManager
-      - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.createDashboard
       - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.createWidget
@@ -15,56 +13,25 @@ items:
       - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.deleteDashboard
       - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.forceOptionsCallForAutoNegotiate
-      - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.getDashboard
       - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.getDashboardGroup
       - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.getWidget
       - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.getWidgetMetadata
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.getWidgetTypes
-      - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.replaceDashboard
       - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.replaceDashboardGroup
       - >-
         vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.updateWidget
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.widgetTypesApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2._beginGetLocation
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2._beginRequest
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2._beginRequestWithAjaxResult
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2._issueAjaxRequest
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2._rootRequestPath
-      - >-
-        vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods2To4'
     package: vss-web-extension-sdk
     module: TFS/Dashboards/RestClient
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.createDashboard
     name: >-
@@ -78,7 +45,8 @@ items:
       parameters:
         - id: entry
           type:
-            - vss-web-extension-sdk.TFS.Dashboards.Contracts.DashboardGroupEntry
+            - >-
+              @vss-web-extension-sdk.TFS.Dashboards.Contracts.DashboardGroupEntry
           description: ''
         - id: groupId
           type:
@@ -94,7 +62,8 @@ items:
         project?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.DashboardGroupEntryResponse>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.createWidget
@@ -109,7 +78,7 @@ items:
       parameters:
         - id: widget
           type:
-            - vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget
+            - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget'
           description: ''
         - id: groupId
           type:
@@ -129,7 +98,8 @@ items:
         string, project?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetResponse>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.constructor
@@ -148,7 +118,7 @@ items:
           description: ''
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
       content: >-
@@ -182,21 +152,8 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.getDashboard
     name: 'getDashboard(groupId: string, dashboardId: string, project?: string)'
@@ -224,7 +181,8 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.DashboardResponse>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.getDashboardGroup
@@ -247,7 +205,8 @@ items:
       content: 'function getDashboardGroup(groupId: string, project?: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.DashboardGroup>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.getWidget
@@ -282,43 +241,8 @@ items:
         string, project?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.getWidgetMetadata
-    name: 'getWidgetMetadata(contributionId: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: '[Preview API]'
-    syntax:
-      parameters:
-        - id: contributionId
-          type:
-            - string
-          description: ''
-      content: 'function getWidgetMetadata(contributionId: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.getWidgetTypes
-    name: 'getWidgetTypes(scope: WidgetScope)'
-    children: []
-    langs:
-      - typeScript
-    summary: '[Preview API] Returns available widgets in alphabetical order.'
-    syntax:
-      parameters:
-        - id: scope
-          type:
-            - WidgetScope
-          description: ''
-      content: 'function getWidgetTypes(scope: WidgetScope)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetResponse>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.replaceDashboard
@@ -333,7 +257,7 @@ items:
       parameters:
         - id: dashboard
           type:
-            - vss-web-extension-sdk.TFS.Dashboards.Contracts.Dashboard
+            - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.Dashboard'
           description: ''
         - id: groupId
           type:
@@ -353,7 +277,8 @@ items:
         dashboardId: string, project?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.DashboardResponse>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.replaceDashboardGroup
@@ -368,7 +293,7 @@ items:
       parameters:
         - id: group
           type:
-            - vss-web-extension-sdk.TFS.Dashboards.Contracts.DashboardGroup
+            - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.DashboardGroup'
           description: ''
         - id: groupId
           type:
@@ -384,7 +309,8 @@ items:
         project?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.DashboardGroup>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.updateWidget
@@ -399,7 +325,7 @@ items:
       parameters:
         - id: widget
           type:
-            - vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget
+            - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.Widget'
           description: ''
         - id: groupId
           type:
@@ -423,171 +349,6 @@ items:
         string, widgetId: string, project?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2.widgetTypesApiVersion
-    name: widgetTypesApiVersion
-    fullName: widgetTypesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2._beginGetLocation
-    name: '_beginGetLocation(area: string, locationId: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Gets information about an API resource location (route template, supported
-      versions, etc.)
-    syntax:
-      parameters:
-        - id: area
-          type:
-            - string
-          description: resource area name
-        - id: locationId
-          type:
-            - string
-          description: |
-            Guid of the location to get
-      content: 'function _beginGetLocation(area: string, locationId: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2._beginRequest
-    name: >-
-      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
-      boolean)
-    children: []
-    langs:
-      - typeScript
-    summary: Issue a request to a VSS REST endpoint.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >-
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used
-          optional: true
-      content: >-
-        function _beginRequest(requestParams: VssApiResourceRequestParams,
-        useAjaxResult?: boolean)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2._beginRequestWithAjaxResult
-    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue a request to a VSS REST endpoint and makes sure the result contains
-      jqXHR. Use spread to access jqXHR.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-      content: >-
-        function _beginRequestWithAjaxResult(requestParams:
-        VssApiResourceRequestParams)
-      return:
-        type:
-          - Q.Promise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2._issueAjaxRequest
-    name: >-
-      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
-      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue an AJAX request. This is a wrapper around jquery's ajax method that
-      handles VSS authentication
-
-      and triggers events that can be listened to by other modules.
-    syntax:
-      parameters:
-        - id: requestUrl
-          type:
-            - string
-          description: Url to send the request to
-        - id: ajaxOptions
-          type:
-            - JQueryAjaxSettings
-          description: jQuery.ajax options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used.
-          optional: true
-        - id: vssRequestOptions
-          type:
-            - vss-web-extension-sdk.IVssAjaxOptions
-          description: ''
-          optional: true
-      content: >-
-        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
-        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
-        IVssAjaxOptions)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2_2._setInitializationPromise
-    name: '_setInitializationPromise(promise: IPromise)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Sets a promise that is waited on before any requests are issued. Can be
-      used to asynchronously
-
-      set the request url and auth token manager.
-    syntax:
-      parameters:
-        - id: promise
-          type:
-            - vss-web-extension-sdk.IPromise
-          description: ''
-      content: 'function _setInitializationPromise(promise: IPromise)'
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetResponse>
     type: method

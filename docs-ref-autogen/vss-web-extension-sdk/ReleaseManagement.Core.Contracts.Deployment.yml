@@ -40,7 +40,6 @@ items:
         vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment.scheduledDeploymentTime
       - >-
         vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment.startedOn
-      - vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment._links
     langs:
       - typeScript
     type: interface
@@ -71,7 +70,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Condition[]'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment.definitionEnvironmentId
     name: definitionEnvironmentId
@@ -122,7 +121,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment.lastModifiedOn
     name: lastModifiedOn
@@ -161,7 +160,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval[]
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment.preDeployApprovals
     name: preDeployApprovals
@@ -174,7 +174,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval[]
   - uid: vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment.queuedOn
     name: queuedOn
     fullName: queuedOn
@@ -211,7 +212,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseReference
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseReference
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment.releaseDefinition
     name: releaseDefinition
@@ -225,7 +226,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionShallowReference
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionShallowReference
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment.releaseEnvironment
     name: releaseEnvironment
@@ -239,7 +240,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironmentShallowReference
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironmentShallowReference
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment.requestedBy
     name: requestedBy
@@ -252,7 +253,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment.requestedFor
     name: requestedFor
@@ -265,7 +266,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment.scheduledDeploymentTime
     name: scheduledDeploymentTime
@@ -292,15 +293,3 @@ items:
       return:
         type:
           - Date
-  - uid: vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

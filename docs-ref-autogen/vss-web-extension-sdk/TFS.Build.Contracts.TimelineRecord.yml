@@ -27,7 +27,6 @@ items:
       - vss-web-extension-sdk.TFS.Build.Contracts.TimelineRecord.url
       - vss-web-extension-sdk.TFS.Build.Contracts.TimelineRecord.warningCount
       - vss-web-extension-sdk.TFS.Build.Contracts.TimelineRecord.workerName
-      - vss-web-extension-sdk.TFS.Build.Contracts.TimelineRecord._links
     langs:
       - typeScript
     type: interface
@@ -69,7 +68,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Build.Contracts.TimelineReference
+          - '@vss-web-extension-sdk.TFS.Build.Contracts.TimelineReference'
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.TimelineRecord.errorCount
     name: errorCount
     fullName: errorCount
@@ -117,7 +116,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.TFS.Build.Contracts.Issue[]'
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.TimelineRecord.lastModified
     name: lastModified
     fullName: lastModified
@@ -141,7 +140,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Build.Contracts.BuildLogReference
+          - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildLogReference'
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.TimelineRecord.name
     name: name
     fullName: name
@@ -249,7 +248,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Build.Contracts.TaskReference
+          - '@vss-web-extension-sdk.TFS.Build.Contracts.TaskReference'
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.TimelineRecord.type
     name: type
     fullName: type
@@ -298,15 +297,3 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.TimelineRecord._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

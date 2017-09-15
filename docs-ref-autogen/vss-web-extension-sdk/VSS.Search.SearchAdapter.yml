@@ -26,10 +26,12 @@ items:
     syntax:
       parameters:
         - id: addItemsCallback
-          type: []
+          type:
+            - function
           description: The function which adds items to the search strategy.
         - id: searchCallback
-          type: []
+          type:
+            - function
           description: |
             The function which searches the newly updated strategy.
       content: >-
@@ -72,7 +74,7 @@ items:
       content: 'function handleError(message: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.handleResults
-    name: 'handleResults(results: function, finished: boolean, query?: string)'
+    name: 'handleResults(results: T[], finished: boolean, query?: string)'
     children: []
     langs:
       - typeScript
@@ -84,7 +86,7 @@ items:
       parameters:
         - id: results
           type:
-            - function
+            - 'T[]'
           description: An array of items
         - id: finished
           type:
@@ -96,9 +98,7 @@ items:
           description: |
             search query
           optional: true
-      content: >-
-        function handleResults(results: function, finished: boolean, query?:
-        string)
+      content: 'function handleResults(results: T[], finished: boolean, query?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.isDataSetComplete
     name: isDataSetComplete()

@@ -12,12 +12,6 @@ items:
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.addAgentQueue
       - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.agentsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.authTokenManager
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.azurermsubscriptionsApiVersion
-      - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.constructor
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.createAgentSession
@@ -35,10 +29,6 @@ items:
         vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.deleteAgentSession
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.deleteMessage
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.endpointApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.getAgent
       - >-
@@ -66,17 +56,9 @@ items:
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.getServiceEndpointTypes
       - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.jobrequestsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.messagesApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.poolsApiVersion
-      - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.queryEndpoint
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.queueAgentRequest
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.queuesApiVersion
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.refreshAgent
       - >-
@@ -86,10 +68,6 @@ items:
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.sendMessage
       - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.serviceendpointtypesApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.sessionsApiVersion
-      - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.updateAgent
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.updateAgentPool
@@ -97,24 +75,12 @@ items:
         vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.updateAgentRequest
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.updateAgentUserCapabilities
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.usercapabilitiesApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4._beginGetLocation
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4._beginRequest
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4._beginRequestWithAjaxResult
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4._issueAjaxRequest
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4._rootRequestPath
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     package: vss-web-extension-sdk
     module: TFS/DistributedTask/TaskAgentRestClient
   - uid: >-
@@ -128,7 +94,7 @@ items:
       parameters:
         - id: agent
           type:
-            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent
+            - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent'
           description: ''
         - id: poolId
           type:
@@ -137,7 +103,8 @@ items:
       content: 'function addAgent(agent: TaskAgent, poolId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.addAgentPool
@@ -150,12 +117,13 @@ items:
       parameters:
         - id: pool
           type:
-            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool
+            - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool'
           description: ''
       content: 'function addAgentPool(pool: TaskAgentPool)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.addAgentQueue
@@ -168,7 +136,8 @@ items:
       parameters:
         - id: queue
           type:
-            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentQueue
+            - >-
+              @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentQueue
           description: ''
         - id: project
           type:
@@ -178,47 +147,9 @@ items:
       content: 'function addAgentQueue(queue: TaskAgentQueue, project?: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentQueue>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.agentsApiVersion
-    name: agentsApiVersion
-    fullName: agentsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.azurermsubscriptionsApiVersion
-    name: azurermsubscriptionsApiVersion
-    fullName: azurermsubscriptionsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.constructor
     name: >-
@@ -236,7 +167,7 @@ items:
           description: ''
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
       content: >-
@@ -255,7 +186,7 @@ items:
         - id: session
           type:
             - >-
-              vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentSession
+              @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentSession
           description: ''
         - id: poolId
           type:
@@ -264,7 +195,8 @@ items:
       content: 'function createAgentSession(session: TaskAgentSession, poolId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentSession>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.createTeamProject
@@ -283,7 +215,7 @@ items:
       content: 'function createTeamProject(project?: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.deleteAgent
@@ -305,7 +237,7 @@ items:
       content: 'function deleteAgent(poolId: number, agentId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.deleteAgentPool
@@ -323,7 +255,7 @@ items:
       content: 'function deleteAgentPool(poolId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.deleteAgentQueue
@@ -346,7 +278,7 @@ items:
       content: 'function deleteAgentQueue(queueId: number, project?: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.deleteAgentRequest
@@ -381,7 +313,7 @@ items:
         lockToken: string, result?: TaskResult)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.deleteAgentSession
@@ -403,7 +335,7 @@ items:
       content: 'function deleteAgentSession(poolId: number, sessionId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.deleteMessage
@@ -431,39 +363,13 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.endpointApiVersion
-    name: endpointApiVersion
-    fullName: endpointApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.getAgent
     name: >-
       getAgent(poolId: number, agentId: number, includeCapabilities?: boolean,
-      includeAssignedRequest?: boolean, propertyFilters?: function)
+      includeAssignedRequest?: boolean, propertyFilters?: string[])
     children: []
     langs:
       - typeScript
@@ -490,20 +396,21 @@ items:
           optional: true
         - id: propertyFilters
           type:
-            - function
+            - 'string[]'
           description: ''
           optional: true
       content: >-
         function getAgent(poolId: number, agentId: number, includeCapabilities?:
-        boolean, includeAssignedRequest?: boolean, propertyFilters?: function)
+        boolean, includeAssignedRequest?: boolean, propertyFilters?: string[])
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.getAgentPool
     name: >-
-      getAgentPool(poolId: number, properties?: function, actionFilter?:
+      getAgentPool(poolId: number, properties?: string[], actionFilter?:
       TaskAgentPoolActionFilter)
     children: []
     langs:
@@ -517,7 +424,7 @@ items:
           description: ''
         - id: properties
           type:
-            - function
+            - 'string[]'
           description: ''
           optional: true
         - id: actionFilter
@@ -526,16 +433,17 @@ items:
           description: ''
           optional: true
       content: >-
-        function getAgentPool(poolId: number, properties?: function,
+        function getAgentPool(poolId: number, properties?: string[],
         actionFilter?: TaskAgentPoolActionFilter)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.getAgentPools
     name: >-
-      getAgentPools(poolName?: string, properties?: function, poolType?:
+      getAgentPools(poolName?: string, properties?: string[], poolType?:
       TaskAgentPoolType, actionFilter?: TaskAgentPoolActionFilter)
     children: []
     langs:
@@ -550,7 +458,7 @@ items:
           optional: true
         - id: properties
           type:
-            - function
+            - 'string[]'
           description: ''
           optional: true
         - id: poolType
@@ -564,11 +472,12 @@ items:
           description: ''
           optional: true
       content: >-
-        function getAgentPools(poolName?: string, properties?: function,
+        function getAgentPools(poolName?: string, properties?: string[],
         poolType?: TaskAgentPoolType, actionFilter?: TaskAgentPoolActionFilter)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.getAgentQueue
@@ -600,7 +509,8 @@ items:
         TaskAgentQueueActionFilter)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentQueue>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.getAgentQueues
@@ -633,7 +543,8 @@ items:
         actionFilter?: TaskAgentQueueActionFilter)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentQueue[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.getAgentRequest
@@ -655,7 +566,8 @@ items:
       content: 'function getAgentRequest(poolId: number, requestId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.getAgentRequestsForAgent
@@ -686,12 +598,13 @@ items:
         completedRequestCount?: number)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.getAgentRequestsForAgents
     name: >-
-      getAgentRequestsForAgents(poolId: number, agentIds?: function,
+      getAgentRequestsForAgents(poolId: number, agentIds?: number[],
       completedRequestCount?: number)
     children: []
     langs:
@@ -705,7 +618,7 @@ items:
           description: ''
         - id: agentIds
           type:
-            - function
+            - 'number[]'
           description: ''
           optional: true
         - id: completedRequestCount
@@ -714,11 +627,12 @@ items:
           description: ''
           optional: true
       content: >-
-        function getAgentRequestsForAgents(poolId: number, agentIds?: function,
+        function getAgentRequestsForAgents(poolId: number, agentIds?: number[],
         completedRequestCount?: number)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.getAgentRequestsForPlan
@@ -747,14 +661,15 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.getAgents
     name: >-
       getAgents(poolId: number, agentName?: string, includeCapabilities?:
-      boolean, includeAssignedRequest?: boolean, propertyFilters?: function,
-      demands?: function)
+      boolean, includeAssignedRequest?: boolean, propertyFilters?: string[],
+      demands?: string[])
     children: []
     langs:
       - typeScript
@@ -782,21 +697,22 @@ items:
           optional: true
         - id: propertyFilters
           type:
-            - function
+            - 'string[]'
           description: ''
           optional: true
         - id: demands
           type:
-            - function
+            - 'string[]'
           description: ''
           optional: true
       content: >-
         function getAgents(poolId: number, agentName?: string,
         includeCapabilities?: boolean, includeAssignedRequest?: boolean,
-        propertyFilters?: function, demands?: function)
+        propertyFilters?: string[], demands?: string[])
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.getAzureSubscriptions
@@ -810,7 +726,8 @@ items:
       content: function getAzureSubscriptions()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.AzureSubscriptionQueryResult>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.getMessage
@@ -839,7 +756,8 @@ items:
         number)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentMessage>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.getServiceEndpointTypes
@@ -863,47 +781,9 @@ items:
       content: 'function getServiceEndpointTypes(type?: string, scheme?: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.ServiceEndpointType[]>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.jobrequestsApiVersion
-    name: jobrequestsApiVersion
-    fullName: jobrequestsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.messagesApiVersion
-    name: messagesApiVersion
-    fullName: messagesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.poolsApiVersion
-    name: poolsApiVersion
-    fullName: poolsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.queryEndpoint
     name: 'queryEndpoint(endpoint: TaskDefinitionEndpoint)'
@@ -919,12 +799,12 @@ items:
         - id: endpoint
           type:
             - >-
-              vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskDefinitionEndpoint
+              @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskDefinitionEndpoint
           description: Describes the URL to fetch.
       content: 'function queryEndpoint(endpoint: TaskDefinitionEndpoint)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string[]>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.queueAgentRequest
@@ -938,7 +818,7 @@ items:
         - id: request
           type:
             - >-
-              vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest
+              @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest
           description: ''
         - id: poolId
           type:
@@ -947,21 +827,9 @@ items:
       content: 'function queueAgentRequest(request: TaskAgentJobRequest, poolId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.queuesApiVersion
-    name: queuesApiVersion
-    fullName: queuesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.refreshAgent
     name: 'refreshAgent(poolId: number, agentId: number)'
@@ -982,7 +850,7 @@ items:
       content: 'function refreshAgent(poolId: number, agentId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.refreshAgents
@@ -1000,7 +868,7 @@ items:
       content: 'function refreshAgents(poolId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.replaceAgent
@@ -1013,7 +881,7 @@ items:
       parameters:
         - id: agent
           type:
-            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent
+            - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent'
           description: ''
         - id: poolId
           type:
@@ -1026,7 +894,8 @@ items:
       content: 'function replaceAgent(agent: TaskAgent, poolId: number, agentId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.sendMessage
@@ -1040,7 +909,7 @@ items:
         - id: message
           type:
             - >-
-              vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentMessage
+              @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentMessage
           description: ''
         - id: poolId
           type:
@@ -1055,34 +924,8 @@ items:
         requestId: number)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.serviceendpointtypesApiVersion
-    name: serviceendpointtypesApiVersion
-    fullName: serviceendpointtypesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.sessionsApiVersion
-    name: sessionsApiVersion
-    fullName: sessionsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.updateAgent
     name: 'updateAgent(agent: TaskAgent, poolId: number, agentId: number)'
@@ -1094,7 +937,7 @@ items:
       parameters:
         - id: agent
           type:
-            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent
+            - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent'
           description: ''
         - id: poolId
           type:
@@ -1107,7 +950,8 @@ items:
       content: 'function updateAgent(agent: TaskAgent, poolId: number, agentId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.updateAgentPool
@@ -1120,7 +964,7 @@ items:
       parameters:
         - id: pool
           type:
-            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool
+            - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool'
           description: ''
         - id: poolId
           type:
@@ -1129,7 +973,8 @@ items:
       content: 'function updateAgentPool(pool: TaskAgentPool, poolId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.updateAgentRequest
@@ -1145,7 +990,7 @@ items:
         - id: request
           type:
             - >-
-              vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest
+              @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest
           description: ''
         - id: poolId
           type:
@@ -1164,7 +1009,8 @@ items:
         number, requestId: number, lockToken: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.updateAgentUserCapabilities
@@ -1194,171 +1040,6 @@ items:
         string, poolId: number, agentId: number)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.usercapabilitiesApiVersion
-    name: usercapabilitiesApiVersion
-    fullName: usercapabilitiesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4._beginGetLocation
-    name: '_beginGetLocation(area: string, locationId: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Gets information about an API resource location (route template, supported
-      versions, etc.)
-    syntax:
-      parameters:
-        - id: area
-          type:
-            - string
-          description: resource area name
-        - id: locationId
-          type:
-            - string
-          description: |
-            Guid of the location to get
-      content: 'function _beginGetLocation(area: string, locationId: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4._beginRequest
-    name: >-
-      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
-      boolean)
-    children: []
-    langs:
-      - typeScript
-    summary: Issue a request to a VSS REST endpoint.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >-
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used
-          optional: true
-      content: >-
-        function _beginRequest(requestParams: VssApiResourceRequestParams,
-        useAjaxResult?: boolean)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4._beginRequestWithAjaxResult
-    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue a request to a VSS REST endpoint and makes sure the result contains
-      jqXHR. Use spread to access jqXHR.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-      content: >-
-        function _beginRequestWithAjaxResult(requestParams:
-        VssApiResourceRequestParams)
-      return:
-        type:
-          - Q.Promise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4._issueAjaxRequest
-    name: >-
-      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
-      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue an AJAX request. This is a wrapper around jquery's ajax method that
-      handles VSS authentication
-
-      and triggers events that can be listened to by other modules.
-    syntax:
-      parameters:
-        - id: requestUrl
-          type:
-            - string
-          description: Url to send the request to
-        - id: ajaxOptions
-          type:
-            - JQueryAjaxSettings
-          description: jQuery.ajax options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used.
-          optional: true
-        - id: vssRequestOptions
-          type:
-            - vss-web-extension-sdk.IVssAjaxOptions
-          description: ''
-          optional: true
-      content: >-
-        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
-        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
-        IVssAjaxOptions)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4._setInitializationPromise
-    name: '_setInitializationPromise(promise: IPromise)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Sets a promise that is waited on before any requests are issued. Can be
-      used to asynchronously
-
-      set the request url and auth token manager.
-    syntax:
-      parameters:
-        - id: promise
-          type:
-            - vss-web-extension-sdk.IPromise
-          description: ''
-      content: 'function _setInitializationPromise(promise: IPromise)'
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent>
     type: method

@@ -7,10 +7,6 @@ items:
       - >-
         vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionState.extensionName
       - >-
-        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionState.flags
-      - >-
-        vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionState.lastUpdated
-      - >-
         vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionState.lastVersionCheck
       - >-
         vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionState.publisherName
@@ -20,6 +16,9 @@ items:
       - typeScript
     type: interface
     summary: The state of an extension
+    extends:
+      - >-
+        @vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtensionState
     package: vss-web-extension-sdk
     module: VSS/ExtensionManagement/Contracts
   - uid: >-
@@ -35,32 +34,6 @@ items:
       return:
         type:
           - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionState.flags
-    name: flags
-    fullName: flags
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: States of an installed extension
-    syntax:
-      return:
-        type:
-          - ExtensionStateFlags
-  - uid: >-
-      vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionState.lastUpdated
-    name: lastUpdated
-    fullName: lastUpdated
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The time at which this installation was last updated
-    syntax:
-      return:
-        type:
-          - Date
   - uid: >-
       vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionState.lastVersionCheck
     name: lastVersionCheck

@@ -8,17 +8,15 @@ items:
       - vss-web-extension-sdk.TFS.Work.Contracts.Board.canEdit
       - vss-web-extension-sdk.TFS.Work.Contracts.Board.columns
       - vss-web-extension-sdk.TFS.Work.Contracts.Board.fields
-      - vss-web-extension-sdk.TFS.Work.Contracts.Board.id
       - vss-web-extension-sdk.TFS.Work.Contracts.Board.isValid
-      - vss-web-extension-sdk.TFS.Work.Contracts.Board.name
       - vss-web-extension-sdk.TFS.Work.Contracts.Board.revision
       - vss-web-extension-sdk.TFS.Work.Contracts.Board.rows
-      - vss-web-extension-sdk.TFS.Work.Contracts.Board.url
-      - vss-web-extension-sdk.TFS.Work.Contracts.Board._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.Work.Contracts.BoardReference'
     package: vss-web-extension-sdk
     module: TFS/Work/Contracts
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.Board.allowedMappings
@@ -32,7 +30,7 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: undefined'
+          - '[key: string]: function'
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.Board.canEdit
     name: canEdit
     fullName: canEdit
@@ -56,7 +54,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.TFS.Work.Contracts.BoardColumn[]'
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.Board.fields
     name: fields
     fullName: fields
@@ -68,19 +66,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Work.Contracts.BoardFields
-  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Board.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Id of the resource
-    syntax:
-      return:
-        type:
-          - string
+          - '@vss-web-extension-sdk.TFS.Work.Contracts.BoardFields'
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.Board.isValid
     name: isValid
     fullName: isValid
@@ -93,18 +79,6 @@ items:
       return:
         type:
           - boolean
-  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Board.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Name of the resource
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.Board.revision
     name: revision
     fullName: revision
@@ -128,28 +102,4 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Board.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Full http link to the resource
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.Work.Contracts.Board._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
+          - '@vss-web-extension-sdk.TFS.Work.Contracts.BoardRow[]'

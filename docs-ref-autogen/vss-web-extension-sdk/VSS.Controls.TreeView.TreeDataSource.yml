@@ -4,68 +4,51 @@ items:
     name: TreeDataSource
     fullName: TreeDataSource
     children:
-      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.getCount
-      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.getItem
+      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.collapseNode
+      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.expandNode
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.getItemIndex
-      - >-
-        vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.getItemIndexes
-      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.getItems
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.getItemText
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.prepareSource
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.root
-      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.setItems
+      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.setSource
       - vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.constructor
       - >-
         vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.updateItemsFromSource
-      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource._options
-      - vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource._source
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Controls.BaseDataSource'
     package: vss-web-extension-sdk
     module: VSS/Controls/TreeView
-  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.getCount
-    name: 'getCount(all?: any)'
+  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.collapseNode
+    name: 'collapseNode(node: any)'
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
       parameters:
-        - id: all
-          type:
-            - any
-          description: |+
-
-          optional: true
-      content: 'function getCount(all?: any)'
-      return:
-        type:
-          - any
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.getItem
-    name: 'getItem(index: any, all?: any)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: index
+        - id: node
           type:
             - any
           description: ''
-        - id: all
+      content: 'function collapseNode(node: any)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.expandNode
+    name: 'expandNode(node: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: node
           type:
             - any
-          description: |+
-
-          optional: true
-      content: 'function getItem(index: any, all?: any)'
-      return:
-        type:
-          - any
+          description: ''
+      content: 'function expandNode(node: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.getItemIndex
     name: 'getItemIndex(itemText: any, startsWith?: any, all?: any)'
@@ -91,52 +74,6 @@ items:
 
           optional: true
       content: 'function getItemIndex(itemText: any, startsWith?: any, all?: any)'
-      return:
-        type:
-          - any
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.getItemIndexes
-    name: 'getItemIndexes(itemText: string, startsWith?: boolean, all?: boolean)'
-    children: []
-    langs:
-      - typeScript
-    summary: Returns an array of all indexes that match the search criteria
-    syntax:
-      parameters:
-        - id: itemText
-          type:
-            - string
-          description: ''
-        - id: startsWith
-          type:
-            - boolean
-          description: ''
-          optional: true
-        - id: all
-          type:
-            - boolean
-          description: |+
-
-          optional: true
-      content: >-
-        function getItemIndexes(itemText: string, startsWith?: boolean, all?:
-        boolean)
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.getItems
-    name: 'getItems(all?: any)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: all
-          type:
-            - any
-          description: |+
-
-          optional: true
-      content: 'function getItems(all?: any)'
       return:
         type:
           - any
@@ -196,25 +133,19 @@ items:
       return:
         type:
           - any
-  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.setItems
-    name: 'setItems(items: any, allItems?: any)'
+  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.setSource
+    name: 'setSource(source: any)'
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
       parameters:
-        - id: items
+        - id: source
           type:
             - any
           description: ''
-        - id: allItems
-          type:
-            - any
-          description: |+
-
-          optional: true
-      content: 'function setItems(items: any, allItems?: any)'
+      content: 'function setSource(source: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.constructor
     name: 'TreeDataSource(options?: any)'
@@ -242,27 +173,3 @@ items:
       parameters: []
       content: function updateItemsFromSource()
     type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
-  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource._source
-    name: _source
-    fullName: _source
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

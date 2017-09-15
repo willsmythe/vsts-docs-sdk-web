@@ -11,15 +11,11 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getCachedPageData
       - >-
-        vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getConnection
-      - >-
         vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageData
       - >-
         vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageDataByDataType
       - >-
         vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageDataSource
-      - >-
-        vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.initializeConnection
       - >-
         vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.invalidateCachedProviderData
       - >-
@@ -34,6 +30,8 @@ items:
       - typeScript
     type: class
     summary: Service for obtaining web page data from contributed data providers
+    extends:
+      - '@vss-web-extension-sdk.VSS.Service.VssService'
     package: vss-web-extension-sdk
     module: VSS/Contributions/Services
   - uid: >-
@@ -56,7 +54,7 @@ items:
         - id: handler
           type:
             - >-
-              vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataResolutionPlugin
+              @vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataResolutionPlugin
           description: |
             Function called whenever data with the given key has been provided
       content: >-
@@ -66,8 +64,8 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.ensureDataProvidersResolved
     name: >-
-      ensureDataProvidersResolved(contributions: function, refreshIfExpired?:
-      boolean, properties?: any)
+      ensureDataProvidersResolved(contributions: Contribution[],
+      refreshIfExpired?: boolean, properties?: any)
     children: []
     langs:
       - typeScript
@@ -78,7 +76,7 @@ items:
       parameters:
         - id: contributions
           type:
-            - function
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution[]'
           description: The data provider contributions to resolve
         - id: refreshIfExpired
           type:
@@ -93,11 +91,11 @@ items:
           description: ''
           optional: true
       content: >-
-        function ensureDataProvidersResolved(contributions: function,
+        function ensureDataProvidersResolved(contributions: Contribution[],
         refreshIfExpired?: boolean, properties?: any)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<any>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getCachedPageData
@@ -135,14 +133,14 @@ items:
           optional: true
         - id: contractMetadata
           type:
-            - vss-web-extension-sdk.VSS.Serialization.ContractMetadata
+            - '@vss-web-extension-sdk.VSS.Serialization.ContractMetadata'
           description: >
             Optional contract metadata to use when deserializing the JSON island
             data
           optional: true
         - id: reloadCallback
           type:
-            - vss-web-extension-sdk.IResultCallback
+            - '@vss-web-extension-sdk.IResultCallback'
           description: ''
           optional: true
       content: >-
@@ -152,20 +150,6 @@ items:
       return:
         type:
           - T
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getConnection
-    name: getConnection()
-    children: []
-    langs:
-      - typeScript
-    summary: Gets the relative location for the service's connection
-    syntax:
-      parameters: []
-      content: function getConnection()
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Service.VssConnection
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageData
@@ -182,7 +166,7 @@ items:
           description: The data provider key
         - id: contractMetadata
           type:
-            - vss-web-extension-sdk.VSS.Serialization.ContractMetadata
+            - '@vss-web-extension-sdk.VSS.Serialization.ContractMetadata'
           description: |
             Optional contract metadata to use to deserialize the object
           optional: true
@@ -214,7 +198,7 @@ items:
             properties
         - id: contractMetadata
           type:
-            - vss-web-extension-sdk.VSS.Serialization.ContractMetadata
+            - '@vss-web-extension-sdk.VSS.Serialization.ContractMetadata'
           description: >
             Optional contract metadata to use to deserialize the returned
             values.
@@ -224,7 +208,7 @@ items:
         ContractMetadata)
       return:
         type:
-          - vss-web-extension-sdk.IDictionaryStringTo
+          - '@vss-web-extension-sdk.IDictionaryStringTo<T>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageDataSource
@@ -242,22 +226,6 @@ items:
             - string
           description: ''
       content: 'function getPageDataSource(contributionId: string)'
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.initializeConnection
-    name: 'initializeConnection(connection: VssConnection)'
-    children: []
-    langs:
-      - typeScript
-    summary: Sets the VssConnection to use for this service
-    syntax:
-      parameters:
-        - id: connection
-          type:
-            - vss-web-extension-sdk.VSS.Service.VssConnection
-          description: |
-            VssConnection used by this service
-      content: 'function initializeConnection(connection: VssConnection)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.invalidateCachedProviderData
@@ -286,13 +254,13 @@ items:
         string, reloadDataNow?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<any>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.registerProviderData
     name: >-
-      registerProviderData(result: DataProviderResult, contributions: function,
-      clearExisting?: boolean)
+      registerProviderData(result: DataProviderResult, contributions:
+      Contribution[], clearExisting?: boolean)
     children: []
     langs:
       - typeScript
@@ -304,11 +272,11 @@ items:
         - id: result
           type:
             - >-
-              vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult
+              @vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderResult
           description: Data provider result to merge-in
         - id: contributions
           type:
-            - function
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution[]'
           description: Contributions to leverage when resolving provider data
         - id: clearExisting
           type:
@@ -318,10 +286,10 @@ items:
           optional: true
       content: >-
         function registerProviderData(result: DataProviderResult, contributions:
-        function, clearExisting?: boolean)
+        Contribution[], clearExisting?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<any>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.reloadCachedProviderData
@@ -340,7 +308,7 @@ items:
           description: Id of the data provider
         - id: reloadCallback
           type:
-            - vss-web-extension-sdk.IResultCallback
+            - '@vss-web-extension-sdk.IResultCallback'
           description: ''
           optional: true
         - id: properties

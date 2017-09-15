@@ -5,6 +5,8 @@ items:
     fullName: XDMChannelManager
     children:
       - vss-web-extension-sdk.XDM.XDMChannelManager.addChannel
+      - vss-web-extension-sdk.XDM.XDMChannelManager.get
+      - vss-web-extension-sdk.XDM.XDMChannelManager.removeChannel
       - vss-web-extension-sdk.XDM.XDMChannelManager.constructor
     langs:
       - typeScript
@@ -33,7 +35,34 @@ items:
       content: 'function addChannel(window: Window, targetOrigin?: string)'
       return:
         type:
-          - vss-web-extension-sdk.IXDMChannel
+          - '@vss-web-extension-sdk.IXDMChannel'
+    type: method
+  - uid: vss-web-extension-sdk.XDM.XDMChannelManager.get
+    name: get()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function get()
+      return:
+        type:
+          - '@vss-web-extension-sdk.XDM.XDMChannelManager'
+    type: method
+  - uid: vss-web-extension-sdk.XDM.XDMChannelManager.removeChannel
+    name: 'removeChannel(channel: IXDMChannel)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: channel
+          type:
+            - '@vss-web-extension-sdk.IXDMChannel'
+          description: ''
+      content: 'function removeChannel(channel: IXDMChannel)'
     type: method
   - uid: vss-web-extension-sdk.XDM.XDMChannelManager.constructor
     name: XDMChannelManager()

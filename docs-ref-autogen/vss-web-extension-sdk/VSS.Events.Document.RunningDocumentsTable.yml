@@ -6,6 +6,10 @@ items:
     children:
       - vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTable.add
       - >-
+        vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTable.beginSave
+      - >-
+        vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTable.getUnsavedItemsMessage
+      - >-
         vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTable.isModified
       - vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTable.remove
       - >-
@@ -32,12 +36,48 @@ items:
           description: Name for this document type
         - id: document
           type:
-            - vss-web-extension-sdk.VSS.Events.Document.RunningDocument
+            - '@vss-web-extension-sdk.VSS.Events.Document.RunningDocument'
           description: Object that will be called to determine state (e.g. dirty//modified)
       content: 'function add(moniker: string, document: RunningDocument)'
       return:
         type:
-          - vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTableEntry
+          - >-
+            @vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTableEntry
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTable.beginSave
+    name: 'beginSave(callback: IResultCallback, errorCallback?: IErrorCallback)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: callback
+          type:
+            - '@vss-web-extension-sdk.IResultCallback'
+          description: ''
+        - id: errorCallback
+          type:
+            - '@vss-web-extension-sdk.IErrorCallback'
+          description: ''
+          optional: true
+      content: >-
+        function beginSave(callback: IResultCallback, errorCallback?:
+        IErrorCallback)
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTable.getUnsavedItemsMessage
+    name: getUnsavedItemsMessage()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getUnsavedItemsMessage()
+      return:
+        type:
+          - string
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTable.isModified
     name: 'isModified(moniker?: string)'
@@ -71,7 +111,7 @@ items:
         - id: entry
           type:
             - >-
-              vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTableEntry
+              @vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTableEntry
           description: >
             The handle to the entry that will be removed. The handle is returned
             from the add function

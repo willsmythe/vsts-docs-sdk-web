@@ -14,14 +14,15 @@ items:
       - vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemType.name
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemType.transitions
-      - vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemType.url
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemType.xmlForm
-      - vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemType._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTrackingResource
     package: vss-web-extension-sdk
     module: TFS/WorkItemTracking/Contracts
   - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemType.color
@@ -61,7 +62,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeFieldInstance[]
   - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemType.fields
     name: fields
     fullName: fields
@@ -73,7 +75,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeFieldInstance[]
   - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemType.icon
     name: icon
     fullName: icon
@@ -85,7 +88,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemIcon
+          - '@vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemIcon'
   - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemType.name
     name: name
     fullName: name
@@ -110,19 +113,7 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: undefined'
-  - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemType.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
+          - '[key: string]: function'
   - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemType.xmlForm
     name: xmlForm
     fullName: xmlForm
@@ -135,15 +126,3 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemType._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

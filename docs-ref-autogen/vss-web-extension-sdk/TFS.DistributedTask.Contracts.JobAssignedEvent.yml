@@ -5,41 +5,15 @@ items:
     fullName: JobAssignedEvent
     children:
       - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobAssignedEvent.jobId
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobAssignedEvent.name
-      - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobAssignedEvent.request
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobEvent'
     package: vss-web-extension-sdk
     module: TFS/DistributedTask/Contracts
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobAssignedEvent.jobId
-    name: jobId
-    fullName: jobId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobAssignedEvent.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobAssignedEvent.request
     name: request
@@ -53,4 +27,4 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest

@@ -39,7 +39,7 @@ items:
       content: function getLoadPromise()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<any>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Controls.IExtensionHost.getRegisteredInstance
@@ -64,5 +64,5 @@ items:
       content: 'function getRegisteredInstance(instanceId: string, contextData?: any)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<T>'
     type: method

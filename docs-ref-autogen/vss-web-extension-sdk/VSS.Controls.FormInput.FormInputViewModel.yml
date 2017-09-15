@@ -5,28 +5,45 @@ items:
     fullName: FormInputViewModel
     children:
       - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.addInputsViewModel
+      - >-
         vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.constructor
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.inputsAreValid
+      - vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.isDirty
       - >-
         vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.mapInputIdToComboControl
       - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel._dependentInputsLoadedCallback
+        vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.onInputValuesChanged
       - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel._dependentInputsLoadingCallback
-      - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel._inputsViewModels
-      - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel._inputValidChangedCallback
-      - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel._inputValuesChangedCallback
-      - vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel._isDirty
-      - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel._queryForValuesCallback
+        vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.queryInputValues
     langs:
       - typeScript
     type: class
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Controls/FormInput
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.addInputsViewModel
+    name: 'addInputsViewModel(key: string, inputsViewModel: InputsViewModel)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: key
+          type:
+            - string
+          description: ''
+        - id: inputsViewModel
+          type:
+            - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel'
+          description: ''
+      content: >-
+        function addInputsViewModel(key: string, inputsViewModel:
+        InputsViewModel)
+    type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.constructor
     name: >-
@@ -66,6 +83,37 @@ items:
         inputValuesChangedCallback: any, queryForValuesCallback?: any)
     type: constructor
   - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.inputsAreValid
+    name: 'inputsAreValid(inputsKey: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: inputsKey
+          type:
+            - string
+          description: ''
+      content: 'function inputsAreValid(inputsKey: string)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.isDirty
+    name: isDirty()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function isDirty()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.mapInputIdToComboControl
     name: mapInputIdToComboControl
     fullName: mapInputIdToComboControl
@@ -77,94 +125,50 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: Combo'
+          - '[key: string]: @vss-web-extension-sdk.VSS.Controls.Combos.Combo'
   - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel._dependentInputsLoadedCallback
-    name: _dependentInputsLoadedCallback
-    fullName: _dependentInputsLoadedCallback
+      vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.onInputValuesChanged
+    name: 'onInputValuesChanged(inputViewModel: InputViewModel)'
     children: []
     langs:
       - typeScript
-    type: property
     summary: ''
     syntax:
-      return:
-        type:
-          - any
+      parameters:
+        - id: inputViewModel
+          type:
+            - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel'
+          description: ''
+      content: 'function onInputValuesChanged(inputViewModel: InputViewModel)'
+    type: method
   - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel._dependentInputsLoadingCallback
-    name: _dependentInputsLoadingCallback
-    fullName: _dependentInputsLoadingCallback
+      vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.queryInputValues
+    name: >-
+      queryInputValues(inputsViewModel: InputsViewModel, inputsToQuery:
+      InputViewModel[], callback: any, callbackContext: any)
     children: []
     langs:
       - typeScript
-    type: property
     summary: ''
     syntax:
-      return:
-        type:
-          - any
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel._inputsViewModels
-    name: _inputsViewModels
-    fullName: _inputsViewModels
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - '[key: string]: InputsViewModel'
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel._inputValidChangedCallback
-    name: _inputValidChangedCallback
-    fullName: _inputValidChangedCallback
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel._inputValuesChangedCallback
-    name: _inputValuesChangedCallback
-    fullName: _inputValuesChangedCallback
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
-  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel._isDirty
-    name: _isDirty
-    fullName: _isDirty
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel._queryForValuesCallback
-    name: _queryForValuesCallback
-    fullName: _queryForValuesCallback
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
+      parameters:
+        - id: inputsViewModel
+          type:
+            - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel'
+          description: ''
+        - id: inputsToQuery
+          type:
+            - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel[]'
+          description: ''
+        - id: callback
+          type:
+            - any
+          description: ''
+        - id: callbackContext
+          type:
+            - any
+          description: ''
+      content: >-
+        function queryInputValues(inputsViewModel: InputsViewModel,
+        inputsToQuery: InputViewModel[], callback: any, callbackContext: any)
+    type: method

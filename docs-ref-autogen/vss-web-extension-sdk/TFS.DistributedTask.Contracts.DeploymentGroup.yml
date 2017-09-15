@@ -6,19 +6,17 @@ items:
     children:
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentGroup.description
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentGroup.id
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentGroup.machineCount
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentGroup.machines
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentGroup.name
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentGroup.pool
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentGroup.project
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentGroupReference
     package: vss-web-extension-sdk
     module: TFS/DistributedTask/Contracts
   - uid: >-
@@ -34,18 +32,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentGroup.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentGroup.machineCount
     name: machineCount
@@ -71,42 +57,5 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentGroup.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentGroup.pool
-    name: pool
-    fullName: pool
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
           - >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPoolReference
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentGroup.project
-    name: project
-    fullName: project
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.DistributedTask.Contracts.ProjectReference
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.DeploymentMachine[]

@@ -6,35 +6,25 @@ items:
     children:
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.accountId
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.author
       - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.changes
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.changesetId
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.checkedInBy
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.checkinNotes
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.collectionId
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.comment
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.commentTruncated
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.createdDate
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.hasMoreChanges
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.policyOverride
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.teamProjectIds
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.url
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.workItems
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetRef'
     package: vss-web-extension-sdk
     module: TFS/VersionControl/Contracts
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.accountId
@@ -49,18 +39,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.author
-    name: author
-    fullName: author
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.changes
     name: changes
     fullName: changes
@@ -72,33 +50,7 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.changesetId
-    name: changesetId
-    fullName: changesetId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.checkedInBy
-    name: checkedInBy
-    fullName: checkedInBy
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChange[]'
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.checkinNotes
     name: checkinNotes
@@ -111,7 +63,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.CheckinNote[]'
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.collectionId
     name: collectionId
@@ -125,44 +77,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.comment
-    name: comment
-    fullName: comment
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.commentTruncated
-    name: commentTruncated
-    fullName: commentTruncated
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.createdDate
-    name: createdDate
-    fullName: createdDate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - Date
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.hasMoreChanges
     name: hasMoreChanges
@@ -189,7 +103,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcPolicyOverrideInfo
+            @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcPolicyOverrideInfo
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.teamProjectIds
     name: teamProjectIds
@@ -202,19 +116,7 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
+          - 'string[]'
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset.workItems
     name: workItems
     fullName: workItems
@@ -226,16 +128,5 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
+          - >-
+            @vss-web-extension-sdk.TFS.VersionControl.Contracts.AssociatedWorkItem[]

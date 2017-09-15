@@ -5,10 +5,6 @@ items:
     fullName: JobCompletedEvent
     children:
       - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobCompletedEvent.jobId
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobCompletedEvent.name
-      - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobCompletedEvent.outputVariables
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobCompletedEvent.requestId
@@ -18,33 +14,10 @@ items:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobEvent'
     package: vss-web-extension-sdk
     module: TFS/DistributedTask/Contracts
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobCompletedEvent.jobId
-    name: jobId
-    fullName: jobId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobCompletedEvent.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobCompletedEvent.outputVariables
     name: outputVariables
@@ -57,7 +30,9 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: VariableValue'
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableValue
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobCompletedEvent.requestId
     name: requestId

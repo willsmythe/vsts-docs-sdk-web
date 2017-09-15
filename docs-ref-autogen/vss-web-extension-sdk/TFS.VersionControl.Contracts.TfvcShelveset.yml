@@ -5,25 +5,17 @@ items:
     fullName: TfvcShelveset
     children:
       - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.changes
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.comment
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.commentTruncated
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.createdDate
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.id
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.name
       - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.notes
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.owner
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.policyOverride
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.url
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.workItems
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset._links
     langs:
       - typeScript
     type: interface
     summary: This is the deep shelveset class
+    extends:
+      - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelvesetRef'
     package: vss-web-extension-sdk
     module: TFS/VersionControl/Contracts
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.changes
@@ -37,69 +29,7 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.comment
-    name: comment
-    fullName: comment
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.commentTruncated
-    name: commentTruncated
-    fullName: commentTruncated
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.createdDate
-    name: createdDate
-    fullName: createdDate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - Date
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
+          - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChange[]'
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.notes
     name: notes
     fullName: notes
@@ -111,19 +41,7 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.owner
-    name: owner
-    fullName: owner
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.CheckinNote[]'
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.policyOverride
     name: policyOverride
@@ -137,19 +55,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcPolicyOverrideInfo
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
+            @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcPolicyOverrideInfo
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset.workItems
     name: workItems
     fullName: workItems
@@ -161,16 +67,5 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
+          - >-
+            @vss-web-extension-sdk.TFS.VersionControl.Contracts.AssociatedWorkItem[]

@@ -89,7 +89,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationOwner
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationOwner
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest.demands
     name: demands
@@ -102,7 +102,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'any[]'
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest.finishTime
     name: finishTime
@@ -180,7 +180,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentReference[]
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest.owner
     name: owner
@@ -194,7 +195,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationOwner
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationOwner
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest.planId
     name: planId
@@ -273,7 +274,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentReference
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentReference
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentJobRequest.result
     name: result

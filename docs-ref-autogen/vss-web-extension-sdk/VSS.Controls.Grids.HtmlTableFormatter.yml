@@ -4,18 +4,56 @@ items:
     name: HtmlTableFormatter
     fullName: HtmlTableFormatter
     children:
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter.getFormattedColumnValue
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter.getTableFromSelectedItems
       - vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter.constructor
       - vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter.includesHtml
       - >-
-        vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter._getJQTableFromSelectedItems
-      - vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter._grid
-      - vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter._options
+        vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter.processColumns
     langs:
       - typeScript
     type: class
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Controls/Grids
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter.getFormattedColumnValue
+    name: 'getFormattedColumnValue(column: any, value: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: column
+          type:
+            - any
+          description: ''
+        - id: value
+          type:
+            - string
+          description: ''
+      content: 'function getFormattedColumnValue(column: any, value: string)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter.getTableFromSelectedItems
+    name: getTableFromSelectedItems()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getTableFromSelectedItems()
+      return:
+        type:
+          - string
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter.constructor
     name: 'HtmlTableFormatter(grid: Grid, options?: any)'
     children: []
@@ -26,7 +64,7 @@ items:
       parameters:
         - id: grid
           type:
-            - vss-web-extension-sdk.VSS.Controls.Grids.Grid
+            - '@vss-web-extension-sdk.VSS.Controls.Grids.Grid'
           description: ''
         - id: options
           type:
@@ -47,43 +85,17 @@ items:
       return:
         type:
           - boolean
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter._getJQTableFromSelectedItems
-    name: _getJQTableFromSelectedItems()
+  - uid: vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter.processColumns
+    name: 'processColumns(columns: any[])'
     children: []
     langs:
       - typeScript
-    summary: >-
-      Iterates through the selected rows and builds a HTML table containing the
-      results.
+    summary: ''
     syntax:
-      parameters: []
-      content: function _getJQTableFromSelectedItems()
-      return:
-        type:
-          - JQuery
+      parameters:
+        - id: columns
+          type:
+            - 'any[]'
+          description: ''
+      content: 'function processColumns(columns: any[])'
     type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter._grid
-    name: _grid
-    fullName: _grid
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Controls.Grids.Grid
-  - uid: vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

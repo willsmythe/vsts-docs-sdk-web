@@ -5,21 +5,76 @@ items:
     fullName: MruService
     children:
       - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Services.MruService.addMruIdentities
+      - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Services.MruService.DEFAULT_FEATURE_ID
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Services.MruService.DEFAULT_IDENTITY_ID
       - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Services.MruService.getConnection
+        vss-web-extension-sdk.VSS.Identities.Picker.Services.MruService.getMruIdentities
       - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Services.MruService.initializeConnection
+        vss-web-extension-sdk.VSS.Identities.Picker.Services.MruService.removeMruIdentities
     langs:
       - typeScript
     type: class
     summary: >-
       This client service is meant to be used only by the framework identity
       picker controls and should not be used elsewhere.
+    extends:
+      - '@vss-web-extension-sdk.VSS.Service.VssService'
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/Services
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Services.MruService.addMruIdentities
+    name: >-
+      addMruIdentities(objectIds: string[], operationScope: IOperationScope,
+      identityId?: string, featureId?: string, options?: IMruServiceOptions,
+      extensionOptions?: IIdentityPickerExtensionOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: objectIds
+          type:
+            - 'string[]'
+          description: ''
+        - id: operationScope
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
+          description: ''
+        - id: identityId
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: featureId
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IMruServiceOptions
+          description: ''
+          optional: true
+        - id: extensionOptions
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityPickerExtensionOptions
+          description: ''
+          optional: true
+      content: >-
+        function addMruIdentities(objectIds: string[], operationScope:
+        IOperationScope, identityId?: string, featureId?: string, options?:
+        IMruServiceOptions, extensionOptions?: IIdentityPickerExtensionOptions)
+      return:
+        type:
+          - '@vss-web-extension-sdk.IPromise<boolean>'
+    type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Services.MruService.DEFAULT_FEATURE_ID
     name: DEFAULT_FEATURE_ID
@@ -47,32 +102,101 @@ items:
         type:
           - string
   - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Services.MruService.getConnection
-    name: getConnection()
+      vss-web-extension-sdk.VSS.Identities.Picker.Services.MruService.getMruIdentities
+    name: >-
+      getMruIdentities(operationScope: IOperationScope, identityId?: string,
+      featureId?: string, options?: IMruServiceOptions, extensionOptions?:
+      IIdentityPickerExtensionOptions)
     children: []
     langs:
       - typeScript
-    summary: Gets the relative location for the service's connection
-    syntax:
-      parameters: []
-      content: function getConnection()
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Service.VssConnection
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Services.MruService.initializeConnection
-    name: 'initializeConnection(connection: VssConnection)'
-    children: []
-    langs:
-      - typeScript
-    summary: Sets the VssConnection to use for this service
+    summary: ''
     syntax:
       parameters:
-        - id: connection
+        - id: operationScope
           type:
-            - vss-web-extension-sdk.VSS.Service.VssConnection
-          description: |
-            VssConnection used by this service
-      content: 'function initializeConnection(connection: VssConnection)'
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
+          description: ''
+        - id: identityId
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: featureId
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IMruServiceOptions
+          description: ''
+          optional: true
+        - id: extensionOptions
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityPickerExtensionOptions
+          description: ''
+          optional: true
+      content: >-
+        function getMruIdentities(operationScope: IOperationScope, identityId?:
+        string, featureId?: string, options?: IMruServiceOptions,
+        extensionOptions?: IIdentityPickerExtensionOptions)
+      return:
+        type:
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity[]>
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Services.MruService.removeMruIdentities
+    name: >-
+      removeMruIdentities(objectIds: string[], operationScope: IOperationScope,
+      identityId?: string, featureId?: string, options?: IMruServiceOptions,
+      extensionOptions?: IIdentityPickerExtensionOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: objectIds
+          type:
+            - 'string[]'
+          description: ''
+        - id: operationScope
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
+          description: ''
+        - id: identityId
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: featureId
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IMruServiceOptions
+          description: ''
+          optional: true
+        - id: extensionOptions
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityPickerExtensionOptions
+          description: ''
+          optional: true
+      content: >-
+        function removeMruIdentities(objectIds: string[], operationScope:
+        IOperationScope, identityId?: string, featureId?: string, options?:
+        IMruServiceOptions, extensionOptions?: IIdentityPickerExtensionOptions)
+      return:
+        type:
+          - '@vss-web-extension-sdk.IPromise<boolean>'
     type: method

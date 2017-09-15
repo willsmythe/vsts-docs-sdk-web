@@ -6,29 +6,13 @@ items:
     fullName: IIdentityDisplayOptions
     children:
       - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.consumerId
-      - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.dialogAppendTo
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.displayType
       - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.extensionData
-      - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.friendlyDisplayName
       - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.getFilterByScope
-      - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.httpClient
-      - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.identityType
-      - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.item
-      - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.maxResults
-      - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.minResults
-      - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.operationScope
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.size
       - >-
@@ -37,23 +21,11 @@ items:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/Controls
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.consumerId
-    name: consumerId
-    fullName: consumerId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      The source of the request - please update the Common Identity Picker wiki
-      with your consumer GUID
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.dialogAppendTo
     name: dialogAppendTo
@@ -86,21 +58,6 @@ items:
         type:
           - EDisplayControlType
   - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.extensionData
-    name: extensionData
-    fullName: extensionData
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Details about the control's current environment that might help an
-      IEntityOperationsExtension in modifying requests.
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Identities.Picker.Services.IExtensionData
-  - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.friendlyDisplayName
     name: friendlyDisplayName
     fullName: friendlyDisplayName
@@ -113,55 +70,6 @@ items:
       return:
         type:
           - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.getFilterByScope
-    name: getFilterByScope
-    fullName: getFilterByScope
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: |-
-      The scope over which the search and MRU results are filtered by.
-        A consumer must pass a delegate that returns a FilterByScope instance, which can be constructed by passing two arrays of strings
-        corresponding to Entity Ids and Ancestor Entity Ids
-        over which the scope is restricted.
-        Default null.
-        NOTE: Null scope and an empty scope (a scope which is not null but whose internal arrays are empty) are treated differently.
-              Null scope means no filtering will take place on entities, whereas empty scope means no entities would be returned.
-              So an empty FilterByScope will result in no search being issued.
-    syntax:
-      return:
-        type: []
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.httpClient
-    name: httpClient
-    fullName: httpClient
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      The httpClient that should be used instead of the
-      CommonIdentityPickerHttpClient
-    syntax:
-      return:
-        type:
-          - >-
-            vss-web-extension-sdk.VSS.Identities.Picker.RestClient.AbstractIdentityPickerHttpClient
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.identityType
-    name: identityType
-    fullName: identityType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: type of identities - one or more of User or Group
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Identities.Picker.Services.IEntityType
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.item
     name: item
@@ -178,45 +86,6 @@ items:
       return:
         type:
           - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.maxResults
-    name: maxResults
-    fullName: maxResults
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The maximum results that need to be fetched
-    syntax:
-      return:
-        type:
-          - number
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.minResults
-    name: minResults
-    fullName: minResults
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The minimum results that need to be fetched
-    syntax:
-      return:
-        type:
-          - number
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.operationScope
-    name: operationScope
-    fullName: operationScope
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: 'scope - one or more of AAD, IMS, Source, AD, WMD'
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions.size
     name: size

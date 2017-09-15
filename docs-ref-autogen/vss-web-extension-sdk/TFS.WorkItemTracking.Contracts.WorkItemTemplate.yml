@@ -5,37 +5,16 @@ items:
     fullName: WorkItemTemplate
     children:
       - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate.description
-      - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate.fields
-      - vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate.id
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate.name
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate.url
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate.workItemTypeName
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplateReference
     package: vss-web-extension-sdk
     module: TFS/WorkItemTracking/Contracts
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate.description
-    name: description
-    fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate.fields
     name: fields
@@ -49,65 +28,3 @@ items:
       return:
         type:
           - '[key: string]: string'
-  - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate.workItemTypeName
-    name: workItemTypeName
-    fullName: workItemTypeName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplate._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

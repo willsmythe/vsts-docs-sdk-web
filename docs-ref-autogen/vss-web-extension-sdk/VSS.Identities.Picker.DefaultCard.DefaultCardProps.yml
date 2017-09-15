@@ -5,8 +5,6 @@ items:
     fullName: DefaultCardProps
     children:
       - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.DefaultCard.DefaultCardProps.cssClass
-      - >-
         vss-web-extension-sdk.VSS.Identities.Picker.DefaultCard.DefaultCardProps.identity
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.DefaultCard.DefaultCardProps.isPreviousHeader
@@ -22,21 +20,10 @@ items:
       - typeScript
     type: interface
     summary: Definitions for DefaultCard.
+    extends:
+      - '@vss-web-extension-sdk.VSS.Flux.Component.Props'
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/DefaultCard
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.DefaultCard.DefaultCardProps.cssClass
-    name: cssClass
-    fullName: cssClass
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.DefaultCard.DefaultCardProps.identity
     name: identity
@@ -49,7 +36,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity
+          - '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity'
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.DefaultCard.DefaultCardProps.isPreviousHeader
     name: isPreviousHeader
@@ -75,7 +62,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity
+          - '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity'
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.DefaultCard.DefaultCardProps.onClickEntity
     name: onClickEntity
@@ -87,7 +74,8 @@ items:
     summary: Method to handle identity click.
     syntax:
       return:
-        type: []
+        type:
+          - function
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.DefaultCard.DefaultCardProps.showContactCard
     name: showContactCard
@@ -99,7 +87,8 @@ items:
     summary: Method to show contact card.
     syntax:
       return:
-        type: []
+        type:
+          - function
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.DefaultCard.DefaultCardProps.showOrganizationCard
     name: showOrganizationCard
@@ -111,4 +100,5 @@ items:
     summary: Method to show organization card.
     syntax:
       return:
-        type: []
+        type:
+          - function

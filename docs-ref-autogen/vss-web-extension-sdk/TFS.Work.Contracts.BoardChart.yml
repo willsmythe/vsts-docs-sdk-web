@@ -4,28 +4,15 @@ items:
     name: BoardChart
     fullName: BoardChart
     children:
-      - vss-web-extension-sdk.TFS.Work.Contracts.BoardChart.name
       - vss-web-extension-sdk.TFS.Work.Contracts.BoardChart.settings
-      - vss-web-extension-sdk.TFS.Work.Contracts.BoardChart.url
-      - vss-web-extension-sdk.TFS.Work.Contracts.BoardChart._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.Work.Contracts.BoardChartReference'
     package: vss-web-extension-sdk
     module: TFS/Work/Contracts
-  - uid: vss-web-extension-sdk.TFS.Work.Contracts.BoardChart.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Name of the resource
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.BoardChart.settings
     name: settings
     fullName: settings
@@ -38,27 +25,3 @@ items:
       return:
         type:
           - '[key: string]: any'
-  - uid: vss-web-extension-sdk.TFS.Work.Contracts.BoardChart.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Full http link to the resource
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.Work.Contracts.BoardChart._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The links for the resource
-    syntax:
-      return:
-        type:
-          - any

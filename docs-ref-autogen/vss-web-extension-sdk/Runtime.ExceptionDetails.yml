@@ -1,0 +1,137 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.inspector.Runtime.ExceptionDetails
+    name: ExceptionDetails
+    fullName: ExceptionDetails
+    children:
+      - vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.columnNumber
+      - vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.exception
+      - vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.exceptionId
+      - >-
+        vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.executionContextId
+      - vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.lineNumber
+      - vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.scriptId
+      - vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.stackTrace
+      - vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.text
+      - vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.url
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Detailed information about exception (or error) that was thrown during
+      script compilation or execution.
+    package: vss-web-extension-sdk
+    module: Runtime
+  - uid: vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.columnNumber
+    name: columnNumber
+    fullName: columnNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Column number of the exception location (0-based).
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.exception
+    name: exception
+    fullName: exception
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Exception object if available.
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Runtime.RemoteObject'
+  - uid: vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.exceptionId
+    name: exceptionId
+    fullName: exceptionId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Exception id.
+    syntax:
+      return:
+        type:
+          - number
+  - uid: >-
+      vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.executionContextId
+    name: executionContextId
+    fullName: executionContextId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Identifier of the context where exception happened.
+    syntax:
+      return:
+        type:
+          - ExecutionContextId
+  - uid: vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.lineNumber
+    name: lineNumber
+    fullName: lineNumber
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Line number of the exception location (0-based).
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.scriptId
+    name: scriptId
+    fullName: scriptId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Script ID of the exception location.
+    syntax:
+      return:
+        type:
+          - ScriptId
+  - uid: vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.stackTrace
+    name: stackTrace
+    fullName: stackTrace
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: JavaScript stack trace if available.
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Runtime.StackTrace'
+  - uid: vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.text
+    name: text
+    fullName: text
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Exception text, which should be used together with exception object when
+      available.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.inspector.Runtime.ExceptionDetails.url
+    name: url
+    fullName: url
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      URL of the exception location, to be used when the script was not
+      reported.
+    syntax:
+      return:
+        type:
+          - string

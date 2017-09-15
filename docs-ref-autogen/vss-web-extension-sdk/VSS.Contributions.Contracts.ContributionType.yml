@@ -5,46 +5,18 @@ items:
     fullName: ContributionType
     children:
       - >-
-        vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionType.description
-      - vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionType.id
-      - >-
         vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionType.indexed
       - vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionType.name
       - >-
         vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionType.properties
-      - >-
-        vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionType.visibleTo
     langs:
       - typeScript
     type: interface
     summary: 'A contribution type, given by a json schema'
+    extends:
+      - '@vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionBase'
     package: vss-web-extension-sdk
     module: VSS/Contributions/Contracts
-  - uid: >-
-      vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionType.description
-    name: description
-    fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Description of the contribution/type
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionType.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Fully qualified identifier of the contribution/type
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionType.indexed
     name: indexed
     fullName: indexed
@@ -85,22 +57,6 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: ContributionPropertyDescription'
-  - uid: >-
-      vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionType.visibleTo
-    name: visibleTo
-    fullName: visibleTo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      VisibleTo can be used to restrict whom can reference a given
-      contribution/type. This value should be a list of publishers or extensions
-      access is restricted too.  Examples: "ms" - Means only the "ms" publisher
-      can reference this. "ms.vss-web" - Means only the "vss-web" extension from
-      the "ms" publisher can reference this.
-    syntax:
-      return:
-        type:
-          - function
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionPropertyDescription

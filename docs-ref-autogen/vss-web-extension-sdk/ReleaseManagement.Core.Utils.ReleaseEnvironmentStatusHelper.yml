@@ -4,10 +4,31 @@ items:
       vss-web-extension-sdk.ReleaseManagement.Core.Utils.ReleaseEnvironmentStatusHelper
     name: ReleaseEnvironmentStatusHelper
     fullName: ReleaseEnvironmentStatusHelper
-    children: []
+    children:
+      - >-
+        vss-web-extension-sdk.ReleaseManagement.Core.Utils.ReleaseEnvironmentStatusHelper.isEnvironmentCompleted
     langs:
       - typeScript
     type: class
     summary: ''
     package: vss-web-extension-sdk
     module: ReleaseManagement/Core/Utils
+  - uid: >-
+      vss-web-extension-sdk.ReleaseManagement.Core.Utils.ReleaseEnvironmentStatusHelper.isEnvironmentCompleted
+    name: 'isEnvironmentCompleted(environment: ReleaseEnvironment)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: environment
+          type:
+            - >-
+              @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment
+          description: ''
+      content: 'function isEnvironmentCompleted(environment: ReleaseEnvironment)'
+      return:
+        type:
+          - boolean
+    type: method

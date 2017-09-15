@@ -6,11 +6,6 @@ items:
     children:
       - >-
         vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionState.extensionName
-      - vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionState.flags
-      - >-
-        vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionState.installationIssues
-      - >-
-        vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionState.lastUpdated
       - >-
         vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionState.lastVersionCheck
       - >-
@@ -20,6 +15,9 @@ items:
       - typeScript
     type: interface
     summary: The state of an extension
+    extends:
+      - >-
+        @vss-web-extension-sdk.VSS.Contributions.Contracts.InstalledExtensionState
     package: vss-web-extension-sdk
     module: VSS/Contributions/Contracts
   - uid: >-
@@ -35,44 +33,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionState.flags
-    name: flags
-    fullName: flags
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: States of an installed extension
-    syntax:
-      return:
-        type:
-          - ExtensionStateFlags
-  - uid: >-
-      vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionState.installationIssues
-    name: installationIssues
-    fullName: installationIssues
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: List of installation issues
-    syntax:
-      return:
-        type:
-          - function
-  - uid: >-
-      vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionState.lastUpdated
-    name: lastUpdated
-    fullName: lastUpdated
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The time at which this installation was last updated
-    syntax:
-      return:
-        type:
-          - Date
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionState.lastVersionCheck
     name: lastVersionCheck

@@ -4,44 +4,19 @@ items:
     name: Timeline
     fullName: Timeline
     children:
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline.changeId
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline.id
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline.lastChangedBy
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline.lastChangedOn
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline.location
       - vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline.records
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TimelineReference'
     package: vss-web-extension-sdk
     module: TFS/DistributedTask/Contracts
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline.changeId
-    name: changeId
-    fullName: changeId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline.lastChangedBy
     name: lastChangedBy
     fullName: lastChangedBy
@@ -66,18 +41,6 @@ items:
       return:
         type:
           - Date
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline.location
-    name: location
-    fullName: location
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline.records
     name: records
     fullName: records
@@ -89,4 +52,5 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TimelineRecord[]

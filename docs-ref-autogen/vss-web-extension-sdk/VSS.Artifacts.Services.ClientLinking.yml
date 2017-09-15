@@ -4,18 +4,57 @@ items:
     name: ClientLinking
     fullName: ClientLinking
     children:
-      - vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.constructor
-      - vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.getConnection
       - >-
-        vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.initializeConnection
+        vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.beginResolveArtifacts
+      - vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.constructor
+      - >-
+        vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.getArtifactResolver
       - >-
         vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.MODE_TRANSLATEURL
+      - >-
+        vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.registerArtifactResolver
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Service.VssService'
     package: vss-web-extension-sdk
     module: VSS/Artifacts/Services
+  - uid: >-
+      vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.beginResolveArtifacts
+    name: >-
+      beginResolveArtifacts(artifactUris: string[], options?: any, callback?:
+      IResultCallback, errorCallback?: IErrorCallback)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: artifactUris
+          type:
+            - 'string[]'
+          description: ''
+        - id: options
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: callback
+          type:
+            - '@vss-web-extension-sdk.IResultCallback'
+          description: ''
+          optional: true
+        - id: errorCallback
+          type:
+            - '@vss-web-extension-sdk.IErrorCallback'
+          description: ''
+          optional: true
+      content: >-
+        function beginResolveArtifacts(artifactUris: string[], options?: any,
+        callback?: IResultCallback, errorCallback?: IErrorCallback)
+    type: method
   - uid: vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.constructor
     name: ClientLinking()
     children: []
@@ -26,34 +65,23 @@ items:
       parameters: []
       content: new ClientLinking()
     type: constructor
-  - uid: vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.getConnection
-    name: getConnection()
-    children: []
-    langs:
-      - typeScript
-    summary: Gets the relative location for the service's connection
-    syntax:
-      parameters: []
-      content: function getConnection()
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Service.VssConnection
-    type: method
   - uid: >-
-      vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.initializeConnection
-    name: 'initializeConnection(connection: VssConnection)'
+      vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.getArtifactResolver
+    name: 'getArtifactResolver(toolName: string)'
     children: []
     langs:
       - typeScript
-    summary: Sets the VssConnection to use for this service
+    summary: ''
     syntax:
       parameters:
-        - id: connection
+        - id: toolName
           type:
-            - vss-web-extension-sdk.VSS.Service.VssConnection
-          description: |
-            VssConnection used by this service
-      content: 'function initializeConnection(connection: VssConnection)'
+            - string
+          description: ''
+      content: 'function getArtifactResolver(toolName: string)'
+      return:
+        type:
+          - any
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.MODE_TRANSLATEURL
@@ -68,3 +96,22 @@ items:
       return:
         type:
           - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.registerArtifactResolver
+    name: 'registerArtifactResolver(toolName: string, resolver: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: toolName
+          type:
+            - string
+          description: ''
+        - id: resolver
+          type:
+            - any
+          description: ''
+      content: 'function registerArtifactResolver(toolName: string, resolver: any)'
+    type: method

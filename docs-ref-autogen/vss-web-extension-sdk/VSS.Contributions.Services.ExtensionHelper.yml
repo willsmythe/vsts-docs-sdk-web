@@ -43,7 +43,7 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose extension is being requested
       content: 'function getExtensionId(contribution: Contribution)'
@@ -62,7 +62,7 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution to get the id of
       content: 'function getFullContributionId(contribution: Contribution)'
@@ -81,7 +81,7 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose publisher is being requested
       content: 'function getPublisherId(contribution: Contribution)'
@@ -100,7 +100,7 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: The contribution whose properties to check
         - id: uriProperty
           type:
@@ -126,7 +126,7 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose properties to check
       content: 'function hasInternalContent(contribution: Contribution)'
@@ -145,7 +145,7 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: The contribution whose type to check
         - id: contributionType
           type:
@@ -170,7 +170,7 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose trust to check
       content: 'function isContributionTrusted(contribution: Contribution)'
@@ -191,7 +191,7 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: ''
         - id: data
           type:
@@ -229,7 +229,7 @@ items:
         replacementObject: any)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.resolveUriTemplate
@@ -261,7 +261,7 @@ items:
         any, baseUri: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.resolveUriTemplateProperty
@@ -278,7 +278,7 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: ''
         - id: replacementObject
           type:
@@ -299,5 +299,5 @@ items:
         replacementObject: any, propertyName?: string, baseUri?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string>'
     type: method

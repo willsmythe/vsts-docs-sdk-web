@@ -60,7 +60,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.TabContent.TabControlsRegistration.registerTab
-    name: 'registerTab(registration: ITabRegistration)'
+    name: 'registerTab(registration: ITabRegistration<T>)'
     children: []
     langs:
       - typeScript
@@ -78,9 +78,9 @@ items:
       parameters:
         - id: registration
           type:
-            - vss-web-extension-sdk.VSS.Controls.TabContent.ITabRegistration
+            - '@vss-web-extension-sdk.VSS.Controls.TabContent.ITabRegistration<T>'
           description: a tab and group
-      content: 'function registerTab(registration: ITabRegistration)'
+      content: 'function registerTab(registration: ITabRegistration<T>)'
       return:
         type:
           - string
@@ -99,7 +99,7 @@ items:
         - id: groupRegistration
           type:
             - >-
-              vss-web-extension-sdk.VSS.Controls.TabContent.ITabGroupRegistration
+              @vss-web-extension-sdk.VSS.Controls.TabContent.ITabGroupRegistration
           description: |
             The group that needs to be registered
       content: 'function registerTabGroup(groupRegistration: ITabGroupRegistration)'

@@ -8,8 +8,6 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.DefaultCard.DefaultCardContactLineProps.content
       - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.DefaultCard.DefaultCardContactLineProps.cssClass
-      - >-
         vss-web-extension-sdk.VSS.Identities.Picker.DefaultCard.DefaultCardContactLineProps.iconClass
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.DefaultCard.DefaultCardContactLineProps.link
@@ -17,6 +15,8 @@ items:
       - typeScript
     type: interface
     summary: Definitions for DefaultCardContactLine (used by DefaultCard).
+    extends:
+      - '@vss-web-extension-sdk.VSS.Flux.Component.Props'
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/DefaultCard
   - uid: >-
@@ -28,19 +28,6 @@ items:
       - typeScript
     type: property
     summary: Content for line.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.DefaultCard.DefaultCardContactLineProps.cssClass
-    name: cssClass
-    fullName: cssClass
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
     syntax:
       return:
         type:

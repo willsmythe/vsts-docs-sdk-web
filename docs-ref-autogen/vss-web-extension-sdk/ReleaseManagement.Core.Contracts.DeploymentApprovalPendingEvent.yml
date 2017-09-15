@@ -42,7 +42,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeploymentApprovalPendingEvent.approvalOptions
     name: approvalOptions
@@ -56,7 +56,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ApprovalOptions
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ApprovalOptions
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeploymentApprovalPendingEvent.completedApprovals
     name: completedApprovals
@@ -69,7 +69,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval[]
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeploymentApprovalPendingEvent.data
     name: data
@@ -95,7 +96,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment
+          - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeploymentApprovalPendingEvent.isMultipleRankApproval
     name: isMultipleRankApproval
@@ -121,7 +122,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval[]
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeploymentApprovalPendingEvent.project
     name: project
@@ -135,7 +137,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ProjectReference
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ProjectReference
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeploymentApprovalPendingEvent.release
     name: release
@@ -148,4 +150,4 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release
+          - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release'

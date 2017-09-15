@@ -1,0 +1,130 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.http.ServerResponse
+    name: ServerResponse
+    fullName: ServerResponse
+    children:
+      - vss-web-extension-sdk.http.ServerResponse.assignSocket
+      - vss-web-extension-sdk.http.ServerResponse.detachSocket
+      - vss-web-extension-sdk.http.ServerResponse.constructor
+      - vss-web-extension-sdk.http.ServerResponse.statusCode
+      - vss-web-extension-sdk.http.ServerResponse.statusMessage
+      - vss-web-extension-sdk.http.ServerResponse.writeContinue
+      - vss-web-extension-sdk.http.ServerResponse.writeHead
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    extends:
+      - '@vss-web-extension-sdk.http.OutgoingMessage'
+    package: vss-web-extension-sdk
+    module: http
+  - uid: vss-web-extension-sdk.http.ServerResponse.assignSocket
+    name: 'assignSocket(socket: Socket)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: socket
+          type:
+            - '@vss-web-extension-sdk.net.Socket'
+          description: ''
+      content: 'function assignSocket(socket: Socket)'
+    type: method
+  - uid: vss-web-extension-sdk.http.ServerResponse.detachSocket
+    name: 'detachSocket(socket: Socket)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: socket
+          type:
+            - '@vss-web-extension-sdk.net.Socket'
+          description: ''
+      content: 'function detachSocket(socket: Socket)'
+    type: method
+  - uid: vss-web-extension-sdk.http.ServerResponse.constructor
+    name: 'ServerResponse(req: IncomingMessage)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: req
+          type:
+            - '@vss-web-extension-sdk.http.IncomingMessage'
+          description: ''
+      content: 'new ServerResponse(req: IncomingMessage)'
+    type: constructor
+  - uid: vss-web-extension-sdk.http.ServerResponse.statusCode
+    name: statusCode
+    fullName: statusCode
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.http.ServerResponse.statusMessage
+    name: statusMessage
+    fullName: statusMessage
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.http.ServerResponse.writeContinue
+    name: 'writeContinue(callback?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: callback
+          type:
+            - function
+          description: ''
+          optional: true
+      content: 'function writeContinue(callback?: function)'
+    type: method
+  - uid: vss-web-extension-sdk.http.ServerResponse.writeHead
+    name: >-
+      writeHead(statusCode: number, reasonPhrase?: string, headers?:
+      OutgoingHttpHeaders)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: statusCode
+          type:
+            - number
+          description: ''
+        - id: reasonPhrase
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: headers
+          type:
+            - '@vss-web-extension-sdk.http.OutgoingHttpHeaders'
+          description: ''
+          optional: true
+      content: >-
+        function writeHead(statusCode: number, reasonPhrase?: string, headers?:
+        OutgoingHttpHeaders)
+    type: method

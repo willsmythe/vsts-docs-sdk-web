@@ -28,14 +28,16 @@ items:
     syntax:
       parameters:
         - id: onFulfill
-          type: []
+          type:
+            - function
           description: ''
         - id: onReject
-          type: []
+          type:
+            - function
           description: ''
           optional: true
       content: 'function then(onFulfill: function, onReject?: function)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<U>'
     type: method

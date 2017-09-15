@@ -7,8 +7,6 @@ items:
     children:
       - >-
         vss-web-extension-sdk.VSS.Graph.Contracts.GraphUserPrincipalNameCreationContext.principalName
-      - >-
-        vss-web-extension-sdk.VSS.Graph.Contracts.GraphUserPrincipalNameCreationContext.storageKey
     langs:
       - typeScript
     type: interface
@@ -18,6 +16,8 @@ items:
       the subset of GraphUser fields required for creation of a GraphUser for
       the AD and AAD use case when looking up the user by its principal name in
       the backing provider.
+    extends:
+      - '@vss-web-extension-sdk.VSS.Graph.Contracts.GraphUserCreationContext'
     package: vss-web-extension-sdk
     module: VSS/Graph/Contracts
   - uid: >-
@@ -32,21 +32,6 @@ items:
       This should be the principal name or upn of the user in the source AD or
       AAD provider. Example: jamal@contoso.com Team Services will communicate
       with the source provider to fill all other fields on creation.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Graph.Contracts.GraphUserPrincipalNameCreationContext.storageKey
-    name: storageKey
-    fullName: storageKey
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Optional: If provided, we will use this identifier for the storage key of
-      the created user
     syntax:
       return:
         type:

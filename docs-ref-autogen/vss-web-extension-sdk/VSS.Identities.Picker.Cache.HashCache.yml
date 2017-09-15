@@ -4,14 +4,42 @@ items:
     name: HashCache
     fullName: HashCache
     children:
+      - vss-web-extension-sdk.VSS.Identities.Picker.Cache.HashCache.clear
+      - vss-web-extension-sdk.VSS.Identities.Picker.Cache.HashCache.configure
       - vss-web-extension-sdk.VSS.Identities.Picker.Cache.HashCache.get
       - vss-web-extension-sdk.VSS.Identities.Picker.Cache.HashCache.constructor
+      - vss-web-extension-sdk.VSS.Identities.Picker.Cache.HashCache.set
     langs:
       - typeScript
     type: class
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/Cache
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.HashCache.clear
+    name: clear()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function clear()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.HashCache.configure
+    name: 'configure(config: ICacheConfiguration)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: config
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Cache.ICacheConfiguration
+          description: ''
+      content: 'function configure(config: ICacheConfiguration)'
+    type: method
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.HashCache.get
     name: 'get(key: string)'
     children: []
@@ -39,3 +67,21 @@ items:
       parameters: []
       content: new HashCache()
     type: constructor
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.HashCache.set
+    name: 'set(key: string, value: V)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: key
+          type:
+            - string
+          description: ''
+        - id: value
+          type:
+            - V
+          description: ''
+      content: 'function set(key: string, value: V)'
+    type: method

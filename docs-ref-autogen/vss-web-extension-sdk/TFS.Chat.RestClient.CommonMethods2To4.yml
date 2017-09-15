@@ -4,8 +4,6 @@ items:
     name: CommonMethods2To4
     fullName: CommonMethods2To4
     children:
-      - >-
-        vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.authTokenManager
       - vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.constructor
       - >-
         vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.createChatRoom
@@ -13,8 +11,6 @@ items:
         vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.deleteChatRoom
       - >-
         vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.deleteMessage
-      - >-
-        vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
       - >-
         vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.getAllChatRoomMessages
       - >-
@@ -29,10 +25,6 @@ items:
       - vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.joinRoom
       - vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.leaveRoom
       - >-
-        vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.messagesApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.roomsApiVersion
-      - >-
         vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.sendMessageToRoom
       - >-
         vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.serviceInstanceId
@@ -40,39 +32,14 @@ items:
         vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.updateChatMessage
       - >-
         vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.updateChatRoom
-      - >-
-        vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.usersApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4._beginGetLocation
-      - >-
-        vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4._beginRequest
-      - >-
-        vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4._beginRequestWithAjaxResult
-      - >-
-        vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4._issueAjaxRequest
-      - >-
-        vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4._rootRequestPath
-      - >-
-        vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     package: vss-web-extension-sdk
     module: TFS/Chat/RestClient
-  - uid: >-
-      vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.constructor
     name: >-
       CommonMethods2To4(rootRequestPath: string, options?:
@@ -89,7 +56,7 @@ items:
           description: ''
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
       content: >-
@@ -106,12 +73,13 @@ items:
       parameters:
         - id: roomUpdate
           type:
-            - vss-web-extension-sdk.TFS.Chat.Contracts.RoomData
+            - '@vss-web-extension-sdk.TFS.Chat.Contracts.RoomData'
           description: Information to create the room
       content: 'function createChatRoom(roomUpdate: RoomData)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Room>
     type: method
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.deleteChatRoom
     name: 'deleteChatRoom(roomId: number)'
@@ -128,7 +96,7 @@ items:
       content: 'function deleteChatRoom(roomId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.deleteMessage
     name: 'deleteMessage(roomId: number, messageId: number)'
@@ -149,21 +117,8 @@ items:
       content: 'function deleteMessage(roomId: number, messageId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: >-
       vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.getAllChatRoomMessages
     name: 'getAllChatRoomMessages(roomId: number)'
@@ -180,7 +135,8 @@ items:
       content: 'function getAllChatRoomMessages(roomId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Message[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.getAllChatRoomUsers
@@ -198,7 +154,8 @@ items:
       content: 'function getAllChatRoomUsers(roomId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.User[]>
     type: method
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.getAllRooms
     name: getAllRooms()
@@ -211,7 +168,8 @@ items:
       content: function getAllRooms()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Room[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.getChatRoomById
@@ -229,7 +187,8 @@ items:
       content: 'function getChatRoomById(roomId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Room>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.getChatRoomMessageById
@@ -251,7 +210,8 @@ items:
       content: 'function getChatRoomMessageById(roomId: number, messageId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Message>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.getChatRoomUserById
@@ -273,7 +233,8 @@ items:
       content: 'function getChatRoomUserById(roomId: number, userId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.User>
     type: method
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.joinRoom
     name: 'joinRoom(userUpdate: UserData, roomId: number, userId: string)'
@@ -285,7 +246,7 @@ items:
       parameters:
         - id: userUpdate
           type:
-            - vss-web-extension-sdk.TFS.Chat.Contracts.UserData
+            - '@vss-web-extension-sdk.TFS.Chat.Contracts.UserData'
           description: user model information
         - id: roomId
           type:
@@ -298,7 +259,7 @@ items:
       content: 'function joinRoom(userUpdate: UserData, roomId: number, userId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.leaveRoom
     name: 'leaveRoom(roomId: number, userId: string)'
@@ -319,34 +280,8 @@ items:
       content: 'function leaveRoom(roomId: number, userId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.messagesApiVersion
-    name: messagesApiVersion
-    fullName: messagesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.roomsApiVersion
-    name: roomsApiVersion
-    fullName: roomsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.sendMessageToRoom
     name: 'sendMessageToRoom(messageUpdate: MessageData, roomId: number)'
@@ -358,7 +293,7 @@ items:
       parameters:
         - id: messageUpdate
           type:
-            - vss-web-extension-sdk.TFS.Chat.Contracts.MessageData
+            - '@vss-web-extension-sdk.TFS.Chat.Contracts.MessageData'
           description: Content of the message to post
         - id: roomId
           type:
@@ -367,7 +302,8 @@ items:
       content: 'function sendMessageToRoom(messageUpdate: MessageData, roomId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Message>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.serviceInstanceId
@@ -395,7 +331,7 @@ items:
       parameters:
         - id: messageUpdate
           type:
-            - vss-web-extension-sdk.TFS.Chat.Contracts.MessageData
+            - '@vss-web-extension-sdk.TFS.Chat.Contracts.MessageData'
           description: New message content
         - id: roomId
           type:
@@ -410,7 +346,8 @@ items:
         messageId: number)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Message>
     type: method
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.updateChatRoom
     name: 'updateChatRoom(roomUpdate: RoomData, roomId: number)'
@@ -422,7 +359,7 @@ items:
       parameters:
         - id: roomUpdate
           type:
-            - vss-web-extension-sdk.TFS.Chat.Contracts.RoomData
+            - '@vss-web-extension-sdk.TFS.Chat.Contracts.RoomData'
           description: Room information
         - id: roomId
           type:
@@ -431,170 +368,6 @@ items:
       content: 'function updateChatRoom(roomUpdate: RoomData, roomId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.usersApiVersion
-    name: usersApiVersion
-    fullName: usersApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4._beginGetLocation
-    name: '_beginGetLocation(area: string, locationId: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Gets information about an API resource location (route template, supported
-      versions, etc.)
-    syntax:
-      parameters:
-        - id: area
-          type:
-            - string
-          description: resource area name
-        - id: locationId
-          type:
-            - string
-          description: |
-            Guid of the location to get
-      content: 'function _beginGetLocation(area: string, locationId: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4._beginRequest
-    name: >-
-      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
-      boolean)
-    children: []
-    langs:
-      - typeScript
-    summary: Issue a request to a VSS REST endpoint.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >-
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used
-          optional: true
-      content: >-
-        function _beginRequest(requestParams: VssApiResourceRequestParams,
-        useAjaxResult?: boolean)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4._beginRequestWithAjaxResult
-    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue a request to a VSS REST endpoint and makes sure the result contains
-      jqXHR. Use spread to access jqXHR.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-      content: >-
-        function _beginRequestWithAjaxResult(requestParams:
-        VssApiResourceRequestParams)
-      return:
-        type:
-          - Q.Promise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4._issueAjaxRequest
-    name: >-
-      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
-      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue an AJAX request. This is a wrapper around jquery's ajax method that
-      handles VSS authentication
-
-      and triggers events that can be listened to by other modules.
-    syntax:
-      parameters:
-        - id: requestUrl
-          type:
-            - string
-          description: Url to send the request to
-        - id: ajaxOptions
-          type:
-            - JQueryAjaxSettings
-          description: jQuery.ajax options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used.
-          optional: true
-        - id: vssRequestOptions
-          type:
-            - vss-web-extension-sdk.IVssAjaxOptions
-          description: ''
-          optional: true
-      content: >-
-        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
-        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
-        IVssAjaxOptions)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4._setInitializationPromise
-    name: '_setInitializationPromise(promise: IPromise)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Sets a promise that is waited on before any requests are issued. Can be
-      used to asynchronously
-
-      set the request url and auth token manager.
-    syntax:
-      parameters:
-        - id: promise
-          type:
-            - vss-web-extension-sdk.IPromise
-          description: ''
-      content: 'function _setInitializationPromise(promise: IPromise)'
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Room>
     type: method

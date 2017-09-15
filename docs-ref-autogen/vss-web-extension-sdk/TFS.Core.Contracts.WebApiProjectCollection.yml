@@ -5,32 +5,16 @@ items:
     fullName: WebApiProjectCollection
     children:
       - >-
-        vss-web-extension-sdk.TFS.Core.Contracts.WebApiProjectCollection.collectionUrl
-      - >-
         vss-web-extension-sdk.TFS.Core.Contracts.WebApiProjectCollection.description
-      - vss-web-extension-sdk.TFS.Core.Contracts.WebApiProjectCollection.id
-      - vss-web-extension-sdk.TFS.Core.Contracts.WebApiProjectCollection.name
       - vss-web-extension-sdk.TFS.Core.Contracts.WebApiProjectCollection.state
-      - vss-web-extension-sdk.TFS.Core.Contracts.WebApiProjectCollection.url
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.Core.Contracts.WebApiProjectCollectionRef'
     package: vss-web-extension-sdk
     module: TFS/Core/Contracts
-  - uid: >-
-      vss-web-extension-sdk.TFS.Core.Contracts.WebApiProjectCollection.collectionUrl
-    name: collectionUrl
-    fullName: collectionUrl
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Collection Tfs Url (Host Url)
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.Core.Contracts.WebApiProjectCollection.description
     name: description
@@ -44,30 +28,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.WebApiProjectCollection.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Collection Guid
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.WebApiProjectCollection.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Collection Name
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TFS.Core.Contracts.WebApiProjectCollection.state
     name: state
     fullName: state
@@ -76,18 +36,6 @@ items:
       - typeScript
     type: property
     summary: Project collection state
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.WebApiProjectCollection.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Collection REST Url
     syntax:
       return:
         type:

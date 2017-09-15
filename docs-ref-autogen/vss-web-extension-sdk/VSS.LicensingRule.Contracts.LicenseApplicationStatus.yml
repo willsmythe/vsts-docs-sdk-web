@@ -7,17 +7,14 @@ items:
       - >-
         vss-web-extension-sdk.VSS.LicensingRule.Contracts.LicenseApplicationStatus.accountUserLicense
       - >-
-        vss-web-extension-sdk.VSS.LicensingRule.Contracts.LicenseApplicationStatus.assigned
-      - >-
-        vss-web-extension-sdk.VSS.LicensingRule.Contracts.LicenseApplicationStatus.failed
-      - >-
-        vss-web-extension-sdk.VSS.LicensingRule.Contracts.LicenseApplicationStatus.insufficientResources
-      - >-
         vss-web-extension-sdk.VSS.LicensingRule.Contracts.LicenseApplicationStatus.license
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.VSS.LicensingRule.Contracts.LicensingApplicationStatus
     package: vss-web-extension-sdk
     module: VSS/LicensingRule/Contracts
   - uid: >-
@@ -32,46 +29,8 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.LicensingRule.Contracts.AccountUserLicense
-  - uid: >-
-      vss-web-extension-sdk.VSS.LicensingRule.Contracts.LicenseApplicationStatus.assigned
-    name: assigned
-    fullName: assigned
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
-  - uid: >-
-      vss-web-extension-sdk.VSS.LicensingRule.Contracts.LicenseApplicationStatus.failed
-    name: failed
-    fullName: failed
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
-  - uid: >-
-      vss-web-extension-sdk.VSS.LicensingRule.Contracts.LicenseApplicationStatus.insufficientResources
-    name: insufficientResources
-    fullName: insufficientResources
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
+          - >-
+            @vss-web-extension-sdk.VSS.LicensingRule.Contracts.AccountUserLicense
   - uid: >-
       vss-web-extension-sdk.VSS.LicensingRule.Contracts.LicenseApplicationStatus.license
     name: license
@@ -84,4 +43,4 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.LicensingRule.Contracts.License
+          - '@vss-web-extension-sdk.VSS.LicensingRule.Contracts.License'

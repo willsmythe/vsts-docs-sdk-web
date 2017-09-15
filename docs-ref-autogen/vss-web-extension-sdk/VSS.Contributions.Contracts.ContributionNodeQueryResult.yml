@@ -29,7 +29,9 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: SerializedContributionNode'
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.VSS.Contributions.Contracts.SerializedContributionNode
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionNodeQueryResult.providerDetails
     name: providerDetails
@@ -42,4 +44,6 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: ContributionProviderDetails'
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionProviderDetails

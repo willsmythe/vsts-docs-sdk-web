@@ -23,7 +23,7 @@ items:
       content: function getHandlers()
       return:
         type:
-          - vss-web-extension-sdk.VSS.Events.Handlers.EventHandlerList
+          - '@vss-web-extension-sdk.VSS.Events.Handlers.EventHandlerList<TSender>'
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.Event.invokeHandlers
     name: >-
@@ -44,7 +44,8 @@ items:
             - TEventArgs
           description: Event-specific arguments
         - id: handlerResultFilter
-          type: []
+          type:
+            - function
           description: >
             Optional callback method to be able to break out of the handler
             invocation loop based on the return value of a handler. The filter

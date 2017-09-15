@@ -9,15 +9,16 @@ items:
       - vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.dataExists
       - >-
         vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.getIndexedItemsCount
-      - vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.getTerms
+      - vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.getIndexTotalSize
       - vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.constructor
       - vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.processItems
       - vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.search
-      - vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy._options
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Search.SearchStrategy<T>'
     package: vss-web-extension-sdk
     module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.clearStrategyStore
@@ -57,31 +58,23 @@ items:
         type:
           - number
     type: method
-  - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.getTerms
-    name: 'getTerms(searchText: function, delimiter?: string)'
+  - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.getIndexTotalSize
+    name: getIndexTotalSize()
     children: []
     langs:
       - typeScript
-    summary: >-
-      Tokenizes the searchText into separate words using a regex. Empty terms
-      ("") will not be returned.
+    summary: ''
     syntax:
-      parameters:
-        - id: searchText
-          type:
-            - function
-          description: The searchText to split up.
-        - id: delimiter
-          type:
-            - string
-          description: The string or regex delimiter to use to split up the search terms
-          optional: true
-      content: 'function getTerms(searchText: function, delimiter?: string)'
+      parameters: []
+      content: function getIndexTotalSize()
+      return:
+        type:
+          - number
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.constructor
     name: >-
-      IndexedSearchStrategy(store?: IndexedSearchStore, options?:
-      ISearchStrategyOptions)
+      IndexedSearchStrategy(store?: IndexedSearchStore<T>, options?:
+      ISearchStrategyOptions<T>)
     children: []
     langs:
       - typeScript
@@ -90,20 +83,20 @@ items:
       parameters:
         - id: store
           type:
-            - vss-web-extension-sdk.VSS.Search.IndexedSearchStore
+            - '@vss-web-extension-sdk.VSS.Search.IndexedSearchStore<T>'
           description: ''
           optional: true
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.Search.ISearchStrategyOptions
+            - '@vss-web-extension-sdk.VSS.Search.ISearchStrategyOptions<T>'
           description: ''
           optional: true
       content: >-
-        new IndexedSearchStrategy(store?: IndexedSearchStore, options?:
-        ISearchStrategyOptions)
+        new IndexedSearchStrategy(store?: IndexedSearchStore<T>, options?:
+        ISearchStrategyOptions<T>)
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.processItems
-    name: 'processItems(searchableObjects: function)'
+    name: 'processItems(searchableObjects: SearchableObject<T>[])'
     children: []
     langs:
       - typeScript
@@ -112,10 +105,10 @@ items:
       parameters:
         - id: searchableObjects
           type:
-            - function
+            - '@vss-web-extension-sdk.VSS.Search.SearchableObject<T>[]'
           description: |
             SearchableObjects to add
-      content: 'function processItems(searchableObjects: function)'
+      content: 'function processItems(searchableObjects: SearchableObject<T>[])'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy.search
     name: 'search(query: string)'
@@ -133,15 +126,3 @@ items:
           description: Query to run search on
       content: 'function search(query: string)'
     type: method
-  - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Search.ISearchStrategyOptions

@@ -4,6 +4,8 @@ items:
     name: ICache
     fullName: ICache
     children:
+      - vss-web-extension-sdk.VSS.Identities.Picker.Cache.ICache.clear
+      - vss-web-extension-sdk.VSS.Identities.Picker.Cache.ICache.configure
       - vss-web-extension-sdk.VSS.Identities.Picker.Cache.ICache.get
       - vss-web-extension-sdk.VSS.Identities.Picker.Cache.ICache.set
     langs:
@@ -12,6 +14,31 @@ items:
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/Cache
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.ICache.clear
+    name: clear()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function clear()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.ICache.configure
+    name: 'configure(config: ICacheConfiguration)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: config
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Cache.ICacheConfiguration
+          description: ''
+      content: 'function configure(config: ICacheConfiguration)'
+    type: method
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.ICache.get
     name: 'get(key: string)'
     children: []

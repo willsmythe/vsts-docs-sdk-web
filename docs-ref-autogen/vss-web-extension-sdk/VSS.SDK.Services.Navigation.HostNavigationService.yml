@@ -39,8 +39,8 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.attachNavigate
     name: >-
-      attachNavigate(action: string, handler: IFunctionPPR, checkCurrentState?:
-      boolean)
+      attachNavigate(action: string, handler: IFunctionPPR<any>,
+      checkCurrentState?: boolean)
     children: []
     langs:
       - typeScript
@@ -55,7 +55,7 @@ items:
             events)
         - id: handler
           type:
-            - vss-web-extension-sdk.IFunctionPPR
+            - '@vss-web-extension-sdk.IFunctionPPR<any>'
           description: >-
             The method called whenever a navigation event occurs with the
             matching action value
@@ -67,12 +67,12 @@ items:
             appropriate (has the matching action value)
           optional: true
       content: >-
-        function attachNavigate(action: string, handler: IFunctionPPR,
+        function attachNavigate(action: string, handler: IFunctionPPR<any>,
         checkCurrentState?: boolean)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.detachNavigate
-    name: 'detachNavigate(action: string, handler?: IFunctionPPR)'
+    name: 'detachNavigate(action: string, handler?: IFunctionPPR<any>)'
     children: []
     langs:
       - typeScript
@@ -85,12 +85,12 @@ items:
           description: The action that the handler applies to (or null for global handlers)
         - id: handler
           type:
-            - vss-web-extension-sdk.IFunctionPPR
+            - '@vss-web-extension-sdk.IFunctionPPR<any>'
           description: >
             The method called whenever a navigation event occurs with the
             matching action value
           optional: true
-      content: 'function detachNavigate(action: string, handler?: IFunctionPPR)'
+      content: 'function detachNavigate(action: string, handler?: IFunctionPPR<any>)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.getCurrentState
@@ -120,7 +120,7 @@ items:
       content: function getHash()
       return:
         type:
-          - Q.Promise
+          - Promise<string>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.navigate
@@ -148,7 +148,8 @@ items:
     syntax:
       parameters:
         - id: callback
-          type: []
+          type:
+            - function
           description: |
             Method invoked on each navigation hash change
       content: 'function onHashChanged(callback: function)'
@@ -234,7 +235,7 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.updateHistoryEntry
     name: >-
-      updateHistoryEntry(action: string, data?: IDictionaryStringTo,
+      updateHistoryEntry(action: string, data?: IDictionaryStringTo<any>,
       replaceHistoryEntry?: boolean, mergeWithCurrentState?: boolean,
       windowTitle?: string, suppressNavigate?: boolean)
     children: []
@@ -251,7 +252,7 @@ items:
             "action" in the current state dictionary
         - id: data
           type:
-            - vss-web-extension-sdk.IDictionaryStringTo
+            - '@vss-web-extension-sdk.IDictionaryStringTo<any>'
           description: The history entry's new state key/value pairs
           optional: true
         - id: replaceHistoryEntry
@@ -283,7 +284,8 @@ items:
             due to this update.
           optional: true
       content: >-
-        function updateHistoryEntry(action: string, data?: IDictionaryStringTo,
-        replaceHistoryEntry?: boolean, mergeWithCurrentState?: boolean,
-        windowTitle?: string, suppressNavigate?: boolean)
+        function updateHistoryEntry(action: string, data?:
+        IDictionaryStringTo<any>, replaceHistoryEntry?: boolean,
+        mergeWithCurrentState?: boolean, windowTitle?: string,
+        suppressNavigate?: boolean)
     type: method

@@ -11,6 +11,7 @@ items:
       - vss-web-extension-sdk.VSS.Service.VssConnection.getHostUrl
       - vss-web-extension-sdk.VSS.Service.VssConnection.getHttpClient
       - vss-web-extension-sdk.VSS.Service.VssConnection.getService
+      - vss-web-extension-sdk.VSS.Service.VssConnection.getWebContext
       - vss-web-extension-sdk.VSS.Service.VssConnection.constructor
     langs:
       - typeScript
@@ -49,7 +50,7 @@ items:
         ContextHostType, faultInMissingHost?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string>'
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getConnection
     name: 'getConnection(webContext?: WebContext, hostType?: ContextHostType)'
@@ -61,7 +62,7 @@ items:
       parameters:
         - id: webContext
           type:
-            - vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
           description: Specific web context to get the connection for
           optional: true
         - id: hostType
@@ -75,7 +76,7 @@ items:
         ContextHostType)
       return:
         type:
-          - vss-web-extension-sdk.VSS.Service.VssConnection
+          - '@vss-web-extension-sdk.VSS.Service.VssConnection'
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getHostContext
     name: getHostContext()
@@ -88,7 +89,7 @@ items:
       content: function getHostContext()
       return:
         type:
-          - vss-web-extension-sdk.VSS.Common.Contracts.Platform.HostContext
+          - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.HostContext'
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getHostType
     name: getHostType()
@@ -118,7 +119,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getHttpClient
     name: >-
       getHttpClient(httpClientType: function, serviceInstanceId?: string,
-      authTokenManager?: IAuthTokenManager, clientOptions?:
+      authTokenManager?: IAuthTokenManager<any>, clientOptions?:
       IVssHttpClientOptions)
     children: []
     langs:
@@ -127,7 +128,8 @@ items:
     syntax:
       parameters:
         - id: httpClientType
-          type: []
+          type:
+            - function
           description: Type of requeested httpClient.
         - id: serviceInstanceId
           type:
@@ -136,17 +138,17 @@ items:
           optional: true
         - id: authTokenManager
           type:
-            - vss-web-extension-sdk.IAuthTokenManager
+            - '@vss-web-extension-sdk.IAuthTokenManager<any>'
           description: ''
           optional: true
         - id: clientOptions
           type:
-            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
       content: >-
         function getHttpClient(httpClientType: function, serviceInstanceId?:
-        string, authTokenManager?: IAuthTokenManager, clientOptions?:
+        string, authTokenManager?: IAuthTokenManager<any>, clientOptions?:
         IVssHttpClientOptions)
       return:
         type:
@@ -161,7 +163,8 @@ items:
     syntax:
       parameters:
         - id: serviceType
-          type: []
+          type:
+            - function
           description: ''
         - id: useCached
           type:
@@ -173,6 +176,19 @@ items:
         type:
           - T
     type: method
+  - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getWebContext
+    name: getWebContext()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getWebContext()
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+    type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.constructor
     name: 'VssConnection(webContext: WebContext, hostType?: ContextHostType)'
     children: []
@@ -183,7 +199,7 @@ items:
       parameters:
         - id: webContext
           type:
-            - vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
           description: Specific web context to get the connection for
         - id: hostType
           type:

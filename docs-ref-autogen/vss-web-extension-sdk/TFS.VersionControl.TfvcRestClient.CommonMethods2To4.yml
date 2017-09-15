@@ -5,23 +5,9 @@ items:
     fullName: CommonMethods2To4
     children:
       - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.authTokenManager
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.branchesApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.changesetChangesApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.changesetsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.changesetsBatchApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.changesetWorkItemsApiVersion
-      - >-
         vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.constructor
       - >-
         vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.createChangeset
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
       - >-
         vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getBatchedChangesets
       - >-
@@ -65,117 +51,15 @@ items:
       - >-
         vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getShelvesetWorkItems
       - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.itemBatchApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.itemsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.labelItemsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.labelsApiVersion
-      - >-
         vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.serviceInstanceId
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.shelvesetChangesApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.shelvesetsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.shelvesetWorkItemsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4._beginGetLocation
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4._beginRequest
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4._beginRequestWithAjaxResult
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4._issueAjaxRequest
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4._rootRequestPath
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     package: vss-web-extension-sdk
     module: TFS/VersionControl/TfvcRestClient
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.branchesApiVersion
-    name: branchesApiVersion
-    fullName: branchesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.changesetChangesApiVersion
-    name: changesetChangesApiVersion
-    fullName: changesetChangesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.changesetsApiVersion
-    name: changesetsApiVersion
-    fullName: changesetsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.changesetsBatchApiVersion
-    name: changesetsBatchApiVersion
-    fullName: changesetsBatchApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.changesetWorkItemsApiVersion
-    name: changesetWorkItemsApiVersion
-    fullName: changesetWorkItemsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.constructor
     name: >-
@@ -193,7 +77,7 @@ items:
           description: ''
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
       content: >-
@@ -211,7 +95,7 @@ items:
       parameters:
         - id: changeset
           type:
-            - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset
+            - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset'
           description: ''
         - id: project
           type:
@@ -221,21 +105,9 @@ items:
       content: 'function createChangeset(changeset: TfvcChangeset, project?: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetRef>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getBatchedChangesets
     name: 'getBatchedChangesets(changesetsRequestData: TfvcChangesetsRequestData)'
@@ -248,14 +120,15 @@ items:
         - id: changesetsRequestData
           type:
             - >-
-              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetsRequestData
+              @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetsRequestData
           description: ''
       content: >-
         function getBatchedChangesets(changesetsRequestData:
         TfvcChangesetsRequestData)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetRef[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getBranch
@@ -294,7 +167,8 @@ items:
         boolean, includeChildren?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcBranch>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getBranches
@@ -340,7 +214,8 @@ items:
         boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcBranch[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getBranchRefs
@@ -377,7 +252,8 @@ items:
         includeDeleted?: boolean, includeLinks?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcBranchRef[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getChangeset
@@ -444,7 +320,7 @@ items:
         - id: searchCriteria
           type:
             - >-
-              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetSearchCriteria
+              @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetSearchCriteria
           description: ''
           optional: true
       content: >-
@@ -455,7 +331,8 @@ items:
         TfvcChangesetSearchCriteria)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangeset>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getChangesetChanges
@@ -484,7 +361,8 @@ items:
       content: 'function getChangesetChanges(id?: number, skip?: number, top?: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChange[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getChangesetWorkItems
@@ -503,7 +381,8 @@ items:
       content: 'function getChangesetWorkItems(id?: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.AssociatedWorkItem[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getItem
@@ -553,7 +432,7 @@ items:
         - id: versionDescriptor
           type:
             - >-
-              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
+              @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -562,7 +441,8 @@ items:
         VersionControlRecursionType, versionDescriptor?: TfvcVersionDescriptor)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcItem>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getItemContent
@@ -612,7 +492,7 @@ items:
         - id: versionDescriptor
           type:
             - >-
-              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
+              @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -621,7 +501,7 @@ items:
         VersionControlRecursionType, versionDescriptor?: TfvcVersionDescriptor)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getItems
@@ -658,7 +538,7 @@ items:
         - id: versionDescriptor
           type:
             - >-
-              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
+              @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -667,7 +547,8 @@ items:
         TfvcVersionDescriptor)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcItem[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getItemsBatch
@@ -684,7 +565,7 @@ items:
         - id: itemRequestData
           type:
             - >-
-              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcItemRequestData
+              @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcItemRequestData
           description: ''
         - id: project
           type:
@@ -696,7 +577,8 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcItem[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getItemsBatchZip
@@ -713,7 +595,7 @@ items:
         - id: itemRequestData
           type:
             - >-
-              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcItemRequestData
+              @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcItemRequestData
           description: ''
         - id: project
           type:
@@ -725,7 +607,7 @@ items:
         project?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getItemText
@@ -775,7 +657,7 @@ items:
         - id: versionDescriptor
           type:
             - >-
-              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
+              @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -784,7 +666,7 @@ items:
         VersionControlRecursionType, versionDescriptor?: TfvcVersionDescriptor)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getItemZip
@@ -834,7 +716,7 @@ items:
         - id: versionDescriptor
           type:
             - >-
-              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
+              @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcVersionDescriptor
           description: ''
           optional: true
       content: >-
@@ -843,7 +725,7 @@ items:
         VersionControlRecursionType, versionDescriptor?: TfvcVersionDescriptor)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getLabel
@@ -863,7 +745,7 @@ items:
         - id: requestData
           type:
             - >-
-              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcLabelRequestData
+              @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcLabelRequestData
           description: maxItemCount
         - id: project
           type:
@@ -875,7 +757,8 @@ items:
         project?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcLabel>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getLabelItems
@@ -903,7 +786,8 @@ items:
       content: 'function getLabelItems(labelId: string, top?: number, skip?: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcItem[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getLabels
@@ -919,7 +803,7 @@ items:
         - id: requestData
           type:
             - >-
-              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcLabelRequestData
+              @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcLabelRequestData
           description: 'labelScope, name, owner, and itemLabelFilter'
         - id: project
           type:
@@ -941,7 +825,8 @@ items:
         top?: number, skip?: number)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcLabelRef[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getShelveset
@@ -959,7 +844,7 @@ items:
         - id: requestData
           type:
             - >-
-              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelvesetRequestData
+              @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelvesetRequestData
           description: >-
             includeDetails, includeWorkItems, maxChangeCount, and
             maxCommentLength
@@ -969,7 +854,8 @@ items:
         TfvcShelvesetRequestData)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelveset>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getShelvesetChanges
@@ -999,7 +885,8 @@ items:
         number)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChange[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getShelvesets
@@ -1015,7 +902,7 @@ items:
         - id: requestData
           type:
             - >-
-              vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelvesetRequestData
+              @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelvesetRequestData
           description: 'name, owner, and maxCommentLength'
           optional: true
         - id: top
@@ -1033,7 +920,8 @@ items:
         number, skip?: number)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelvesetRef[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.getShelvesetWorkItems
@@ -1051,60 +939,9 @@ items:
       content: 'function getShelvesetWorkItems(shelvesetId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.AssociatedWorkItem[]>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.itemBatchApiVersion
-    name: itemBatchApiVersion
-    fullName: itemBatchApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.itemsApiVersion
-    name: itemsApiVersion
-    fullName: itemsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.labelItemsApiVersion
-    name: labelItemsApiVersion
-    fullName: labelItemsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.labelsApiVersion
-    name: labelsApiVersion
-    fullName: labelsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.serviceInstanceId
     name: serviceInstanceId
@@ -1118,195 +955,3 @@ items:
       return:
         type:
           - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.shelvesetChangesApiVersion
-    name: shelvesetChangesApiVersion
-    fullName: shelvesetChangesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.shelvesetsApiVersion
-    name: shelvesetsApiVersion
-    fullName: shelvesetsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4.shelvesetWorkItemsApiVersion
-    name: shelvesetWorkItemsApiVersion
-    fullName: shelvesetWorkItemsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4._beginGetLocation
-    name: '_beginGetLocation(area: string, locationId: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Gets information about an API resource location (route template, supported
-      versions, etc.)
-    syntax:
-      parameters:
-        - id: area
-          type:
-            - string
-          description: resource area name
-        - id: locationId
-          type:
-            - string
-          description: |
-            Guid of the location to get
-      content: 'function _beginGetLocation(area: string, locationId: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4._beginRequest
-    name: >-
-      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
-      boolean)
-    children: []
-    langs:
-      - typeScript
-    summary: Issue a request to a VSS REST endpoint.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >-
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used
-          optional: true
-      content: >-
-        function _beginRequest(requestParams: VssApiResourceRequestParams,
-        useAjaxResult?: boolean)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4._beginRequestWithAjaxResult
-    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue a request to a VSS REST endpoint and makes sure the result contains
-      jqXHR. Use spread to access jqXHR.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-      content: >-
-        function _beginRequestWithAjaxResult(requestParams:
-        VssApiResourceRequestParams)
-      return:
-        type:
-          - Q.Promise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4._issueAjaxRequest
-    name: >-
-      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
-      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue an AJAX request. This is a wrapper around jquery's ajax method that
-      handles VSS authentication
-
-      and triggers events that can be listened to by other modules.
-    syntax:
-      parameters:
-        - id: requestUrl
-          type:
-            - string
-          description: Url to send the request to
-        - id: ajaxOptions
-          type:
-            - JQueryAjaxSettings
-          description: jQuery.ajax options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used.
-          optional: true
-        - id: vssRequestOptions
-          type:
-            - vss-web-extension-sdk.IVssAjaxOptions
-          description: ''
-          optional: true
-      content: >-
-        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
-        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
-        IVssAjaxOptions)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4._setInitializationPromise
-    name: '_setInitializationPromise(promise: IPromise)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Sets a promise that is waited on before any requests are issued. Can be
-      used to asynchronously
-
-      set the request url and auth token manager.
-    syntax:
-      parameters:
-        - id: promise
-          type:
-            - vss-web-extension-sdk.IPromise
-          description: ''
-      content: 'function _setInitializationPromise(promise: IPromise)'
-    type: method

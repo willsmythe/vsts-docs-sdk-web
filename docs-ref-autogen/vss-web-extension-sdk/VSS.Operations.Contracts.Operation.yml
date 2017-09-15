@@ -4,29 +4,15 @@ items:
     name: Operation
     fullName: Operation
     children:
-      - vss-web-extension-sdk.VSS.Operations.Contracts.Operation.id
       - vss-web-extension-sdk.VSS.Operations.Contracts.Operation.resultMessage
-      - vss-web-extension-sdk.VSS.Operations.Contracts.Operation.status
-      - vss-web-extension-sdk.VSS.Operations.Contracts.Operation.url
-      - vss-web-extension-sdk.VSS.Operations.Contracts.Operation._links
     langs:
       - typeScript
     type: interface
     summary: Represents an async operation and its progress or result information.
+    extends:
+      - '@vss-web-extension-sdk.VSS.Operations.Contracts.OperationReference'
     package: vss-web-extension-sdk
     module: VSS/Operations/Contracts
-  - uid: vss-web-extension-sdk.VSS.Operations.Contracts.Operation.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The identifier for this operation.
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.VSS.Operations.Contracts.Operation.resultMessage
     name: resultMessage
     fullName: resultMessage
@@ -39,39 +25,3 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.VSS.Operations.Contracts.Operation.status
-    name: status
-    fullName: status
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The current status of the operation.
-    syntax:
-      return:
-        type:
-          - OperationStatus
-  - uid: vss-web-extension-sdk.VSS.Operations.Contracts.Operation.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Url to get the full object.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Operations.Contracts.Operation._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The links to other objects related to this object.
-    syntax:
-      return:
-        type:
-          - any

@@ -7,10 +7,15 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.ACTION_ARTIFACT_EXECUTE
       - vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.constructor
+      - vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.execute
+      - vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.getError
+      - vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.getId
       - vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.getTitle
+      - vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.getTool
+      - vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.getType
+      - vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.getUri
       - vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.getUrl
-      - vss-web-extension-sdk.VSS.Artifacts.Services.Artifact._data
-      - vss-web-extension-sdk.VSS.Artifacts.Services.Artifact._error
+      - vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.setError
     langs:
       - typeScript
     type: class
@@ -40,10 +45,53 @@ items:
       parameters:
         - id: data
           type:
-            - vss-web-extension-sdk.VSS.Artifacts.Services.IArtifactData
+            - '@vss-web-extension-sdk.VSS.Artifacts.Services.IArtifactData'
           description: ''
       content: 'new Artifact(data: IArtifactData)'
     type: constructor
+  - uid: vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.execute
+    name: 'execute(webContext: WebContext)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: ''
+      content: 'function execute(webContext: WebContext)'
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.getError
+    name: getError()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getError()
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.getId
+    name: getId()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getId()
+      return:
+        type:
+          - string
+    type: method
   - uid: vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.getTitle
     name: getTitle()
     children: []
@@ -53,6 +101,45 @@ items:
     syntax:
       parameters: []
       content: function getTitle()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.getTool
+    name: getTool()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getTool()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.getType
+    name: getType()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getType()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.getUri
+    name: getUri()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getUri()
       return:
         type:
           - string
@@ -67,34 +154,24 @@ items:
       parameters:
         - id: webContext
           type:
-            - vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
           description: ''
       content: 'function getUrl(webContext: WebContext)'
       return:
         type:
           - string
     type: method
-  - uid: vss-web-extension-sdk.VSS.Artifacts.Services.Artifact._data
-    name: _data
-    fullName: _data
+  - uid: vss-web-extension-sdk.VSS.Artifacts.Services.Artifact.setError
+    name: 'setError(error: any)'
     children: []
     langs:
       - typeScript
-    type: property
     summary: ''
     syntax:
-      return:
-        type:
-          - any
-  - uid: vss-web-extension-sdk.VSS.Artifacts.Services.Artifact._error
-    name: _error
-    fullName: _error
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
+      parameters:
+        - id: error
+          type:
+            - any
+          description: ''
+      content: 'function setError(error: any)'
+    type: method

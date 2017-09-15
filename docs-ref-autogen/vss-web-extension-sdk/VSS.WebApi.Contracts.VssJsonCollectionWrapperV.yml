@@ -5,8 +5,6 @@ items:
     fullName: VssJsonCollectionWrapperV
     children:
       - >-
-        vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV.count
-      - >-
         vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV.value
     langs:
       - typeScript
@@ -15,20 +13,10 @@ items:
       This class is used to serialized collections as a single JSON object on
       the wire, to avoid serializing JSON arrays directly to the client, which
       can be a security hole
+    extends:
+      - '@vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperBase'
     package: vss-web-extension-sdk
     module: VSS/WebApi/Contracts
-  - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV.count
-    name: count
-    fullName: count
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
   - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV.value
     name: value
     fullName: value

@@ -10,15 +10,14 @@ items:
       - >-
         vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSessionExploredWorkItemReference.endTime
       - >-
-        vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSessionExploredWorkItemReference.id
-      - >-
         vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSessionExploredWorkItemReference.startTime
-      - >-
-        vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSessionExploredWorkItemReference.type
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSessionWorkItemReference
     package: vss-web-extension-sdk
     module: TFS/TestManagement/Contracts
   - uid: >-
@@ -35,7 +34,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSessionWorkItemReference[]
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSessionExploredWorkItemReference.endTime
     name: endTime
@@ -50,19 +50,6 @@ items:
         type:
           - Date
   - uid: >-
-      vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSessionExploredWorkItemReference.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Id of the workitem
-    syntax:
-      return:
-        type:
-          - number
-  - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSessionExploredWorkItemReference.startTime
     name: startTime
     fullName: startTime
@@ -75,16 +62,3 @@ items:
       return:
         type:
           - Date
-  - uid: >-
-      vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSessionExploredWorkItemReference.type
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Type of the workitem
-    syntax:
-      return:
-        type:
-          - string

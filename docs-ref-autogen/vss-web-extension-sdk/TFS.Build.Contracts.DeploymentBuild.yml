@@ -5,11 +5,12 @@ items:
     fullName: DeploymentBuild
     children:
       - vss-web-extension-sdk.TFS.Build.Contracts.DeploymentBuild.buildId
-      - vss-web-extension-sdk.TFS.Build.Contracts.DeploymentBuild.type
     langs:
       - typeScript
     type: interface
     summary: Deployment information for type "Build"
+    extends:
+      - '@vss-web-extension-sdk.TFS.Build.Contracts.Deployment'
     package: vss-web-extension-sdk
     module: TFS/Build/Contracts
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.DeploymentBuild.buildId
@@ -24,15 +25,3 @@ items:
       return:
         type:
           - number
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.DeploymentBuild.type
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string

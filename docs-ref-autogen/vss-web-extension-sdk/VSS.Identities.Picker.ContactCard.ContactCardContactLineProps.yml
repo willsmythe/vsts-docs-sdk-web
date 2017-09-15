@@ -8,8 +8,6 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.ContactCard.ContactCardContactLineProps.content
       - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.ContactCard.ContactCardContactLineProps.cssClass
-      - >-
         vss-web-extension-sdk.VSS.Identities.Picker.ContactCard.ContactCardContactLineProps.label
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.ContactCard.ContactCardContactLineProps.link
@@ -19,6 +17,8 @@ items:
       - typeScript
     type: interface
     summary: Definitions for ContactCardContactLine used by ContactCard.
+    extends:
+      - '@vss-web-extension-sdk.VSS.Flux.Component.Props'
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/ContactCard
   - uid: >-
@@ -30,19 +30,6 @@ items:
       - typeScript
     type: property
     summary: Content for line.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.ContactCard.ContactCardContactLineProps.cssClass
-    name: cssClass
-    fullName: cssClass
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
     syntax:
       return:
         type:

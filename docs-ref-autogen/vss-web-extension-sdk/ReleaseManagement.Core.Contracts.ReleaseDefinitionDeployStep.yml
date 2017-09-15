@@ -6,28 +6,16 @@ items:
     fullName: ReleaseDefinitionDeployStep
     children:
       - >-
-        vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionDeployStep.id
-      - >-
         vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionDeployStep.tasks
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironmentStep
     package: vss-web-extension-sdk
     module: ReleaseManagement/Core/Contracts
-  - uid: >-
-      vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionDeployStep.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionDeployStep.tasks
     name: tasks
@@ -40,4 +28,5 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.WorkflowTask[]

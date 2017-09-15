@@ -1,0 +1,105 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.inspector.Debugger.CallFrame
+    name: CallFrame
+    fullName: CallFrame
+    children:
+      - vss-web-extension-sdk.inspector.Debugger.CallFrame.callFrameId
+      - vss-web-extension-sdk.inspector.Debugger.CallFrame.functionLocation
+      - vss-web-extension-sdk.inspector.Debugger.CallFrame.functionName
+      - vss-web-extension-sdk.inspector.Debugger.CallFrame.location
+      - vss-web-extension-sdk.inspector.Debugger.CallFrame.returnValue
+      - vss-web-extension-sdk.inspector.Debugger.CallFrame.scopeChain
+      - vss-web-extension-sdk.inspector.Debugger.CallFrame.this
+    langs:
+      - typeScript
+    type: interface
+    summary: JavaScript call frame. Array of call frames form the call stack.
+    package: vss-web-extension-sdk
+    module: Debugger
+  - uid: vss-web-extension-sdk.inspector.Debugger.CallFrame.callFrameId
+    name: callFrameId
+    fullName: callFrameId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Call frame identifier. This identifier is only valid while the virtual
+      machine is paused.
+    syntax:
+      return:
+        type:
+          - CallFrameId
+  - uid: vss-web-extension-sdk.inspector.Debugger.CallFrame.functionLocation
+    name: functionLocation
+    fullName: functionLocation
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Location in the source code.
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Debugger.Location'
+  - uid: vss-web-extension-sdk.inspector.Debugger.CallFrame.functionName
+    name: functionName
+    fullName: functionName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Name of the JavaScript function called on this call frame.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.inspector.Debugger.CallFrame.location
+    name: location
+    fullName: location
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Location in the source code.
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Debugger.Location'
+  - uid: vss-web-extension-sdk.inspector.Debugger.CallFrame.returnValue
+    name: returnValue
+    fullName: returnValue
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'The value being returned, if the function is at return point.'
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Runtime.RemoteObject'
+  - uid: vss-web-extension-sdk.inspector.Debugger.CallFrame.scopeChain
+    name: scopeChain
+    fullName: scopeChain
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Scope chain for this call frame.
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Debugger.Scope[]'
+  - uid: vss-web-extension-sdk.inspector.Debugger.CallFrame.this
+    name: this
+    fullName: this
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: <code>this</code> object for this call frame.
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Runtime.RemoteObject'

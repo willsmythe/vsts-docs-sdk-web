@@ -38,7 +38,7 @@ items:
           description: The document to store
         - id: documentOptions
           type:
-            - vss-web-extension-sdk.IDocumentOptions
+            - '@vss-web-extension-sdk.IDocumentOptions'
           description: >
             The scope in which the value is stored - default value is
             account-wide
@@ -48,7 +48,7 @@ items:
         documentOptions?: IDocumentOptions)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<any>'
     type: method
   - uid: vss-web-extension-sdk.IExtensionDataService.deleteDocument
     name: >-
@@ -72,7 +72,7 @@ items:
           description: The id of the document in the collection
         - id: documentOptions
           type:
-            - vss-web-extension-sdk.IDocumentOptions
+            - '@vss-web-extension-sdk.IDocumentOptions'
           description: >
             The scope in which the value is stored - default value is
             account-wide
@@ -82,7 +82,7 @@ items:
         documentOptions?: IDocumentOptions)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: vss-web-extension-sdk.IExtensionDataService.getDocument
     name: >-
@@ -106,7 +106,7 @@ items:
           description: The id of the document in the collection
         - id: documentOptions
           type:
-            - vss-web-extension-sdk.IDocumentOptions
+            - '@vss-web-extension-sdk.IDocumentOptions'
           description: >
             The scope in which the value is stored - default value is
             account-wide
@@ -116,7 +116,7 @@ items:
         documentOptions?: IDocumentOptions)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<any>'
     type: method
   - uid: vss-web-extension-sdk.IExtensionDataService.getDocuments
     name: 'getDocuments(collectionName: string, documentOptions?: IDocumentOptions)'
@@ -134,7 +134,7 @@ items:
           description: The name of the collection where the document lives
         - id: documentOptions
           type:
-            - vss-web-extension-sdk.IDocumentOptions
+            - '@vss-web-extension-sdk.IDocumentOptions'
           description: >
             The scope in which the value is stored - default value is
             account-wide
@@ -144,7 +144,7 @@ items:
         IDocumentOptions)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<any[]>'
     type: method
   - uid: vss-web-extension-sdk.IExtensionDataService.getValue
     name: 'getValue(key: string, documentOptions?: IDocumentOptions)'
@@ -160,7 +160,7 @@ items:
           description: The key to retrieve a value for
         - id: documentOptions
           type:
-            - vss-web-extension-sdk.IDocumentOptions
+            - '@vss-web-extension-sdk.IDocumentOptions'
           description: >
             The scope in which the value is stored - default value is
             account-wide
@@ -168,7 +168,7 @@ items:
       content: 'function getValue(key: string, documentOptions?: IDocumentOptions)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<T>'
     type: method
   - uid: vss-web-extension-sdk.IExtensionDataService.setDocument
     name: >-
@@ -194,7 +194,7 @@ items:
           description: The document to store
         - id: documentOptions
           type:
-            - vss-web-extension-sdk.IDocumentOptions
+            - '@vss-web-extension-sdk.IDocumentOptions'
           description: >
             The scope in which the value is stored - default value is
             account-wide
@@ -204,7 +204,7 @@ items:
         IDocumentOptions)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<any>'
     type: method
   - uid: vss-web-extension-sdk.IExtensionDataService.setValue
     name: 'setValue(key: string, value: T, documentOptions?: IDocumentOptions)'
@@ -224,7 +224,7 @@ items:
           description: The value to save
         - id: documentOptions
           type:
-            - vss-web-extension-sdk.IDocumentOptions
+            - '@vss-web-extension-sdk.IDocumentOptions'
           description: >
             The scope in which the value is stored - default value is
             account-wide
@@ -234,7 +234,7 @@ items:
         IDocumentOptions)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<T>'
     type: method
   - uid: vss-web-extension-sdk.IExtensionDataService.updateDocument
     name: >-
@@ -258,7 +258,7 @@ items:
           description: The document to store
         - id: documentOptions
           type:
-            - vss-web-extension-sdk.IDocumentOptions
+            - '@vss-web-extension-sdk.IDocumentOptions'
           description: >
             The scope in which the value is stored - default value is
             account-wide
@@ -268,5 +268,5 @@ items:
         documentOptions?: IDocumentOptions)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<any>'
     type: method

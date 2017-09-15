@@ -5,20 +5,17 @@ items:
     fullName: GitChange
     children:
       - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.changeId
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.changeType
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.item
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.newContent
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.newContentTemplate
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.originalPath
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.sourceServerItem
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.url
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.Change<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitItem>
     package: vss-web-extension-sdk
     module: TFS/VersionControl/Contracts
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.changeId
@@ -33,42 +30,6 @@ items:
       return:
         type:
           - number
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.changeType
-    name: changeType
-    fullName: changeType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - VersionControlChangeType
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.item
-    name: item
-    fullName: item
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitItem
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.newContent
-    name: newContent
-    fullName: newContent
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.ItemContent
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.newContentTemplate
     name: newContentTemplate
@@ -81,7 +42,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitTemplate
+          - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitTemplate'
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.originalPath
     name: originalPath
     fullName: originalPath
@@ -90,31 +51,6 @@ items:
       - typeScript
     type: property
     summary: Original path of item if different from current path
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.sourceServerItem
-    name: sourceServerItem
-    fullName: sourceServerItem
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
     syntax:
       return:
         type:

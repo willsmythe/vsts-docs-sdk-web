@@ -18,6 +18,8 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.getPinnedHubsByGroupId
       - >-
+        vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.getPinningPreferences
+      - >-
         vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.getSelectedHubGroupId
       - >-
         vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.getSelectedHubId
@@ -48,7 +50,7 @@ items:
     module: VSS/Navigation/HubsService
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.getDefaultHubForHubGroup
-    name: 'getDefaultHubForHubGroup(hubGroup: HubGroup, hubGroupHubs?: function)'
+    name: 'getDefaultHubForHubGroup(hubGroup: HubGroup, hubGroupHubs?: Hub[])'
     children: []
     langs:
       - typeScript
@@ -57,20 +59,20 @@ items:
       parameters:
         - id: hubGroup
           type:
-            - vss-web-extension-sdk.HubGroup
+            - '@vss-web-extension-sdk.HubGroup'
           description: The hub group whose default hub to return
         - id: hubGroupHubs
           type:
-            - function
+            - '@vss-web-extension-sdk.Hub[]'
           description: |
             Optional list of the hubs to consider for the group.
           optional: true
       content: >-
         function getDefaultHubForHubGroup(hubGroup: HubGroup, hubGroupHubs?:
-        function)
+        Hub[])
       return:
         type:
-          - vss-web-extension-sdk.Hub
+          - '@vss-web-extension-sdk.Hub'
     type: method
   - uid: vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.getHubById
     name: 'getHubById(id: string)'
@@ -88,7 +90,7 @@ items:
       content: 'function getHubById(id: string)'
       return:
         type:
-          - vss-web-extension-sdk.Hub
+          - '@vss-web-extension-sdk.Hub'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.getHubGroupById
@@ -106,7 +108,7 @@ items:
       content: 'function getHubGroupById(id: string)'
       return:
         type:
-          - vss-web-extension-sdk.HubGroup
+          - '@vss-web-extension-sdk.HubGroup'
     type: method
   - uid: vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.getHubGroups
     name: getHubGroups()
@@ -192,6 +194,20 @@ items:
       content: 'function getPinnedHubsByGroupId(hubGroupId: string)'
     type: method
   - uid: >-
+      vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.getPinningPreferences
+    name: getPinningPreferences()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getPinningPreferences()
+      return:
+        type:
+          - '@vss-web-extension-sdk.PinningPreferences'
+    type: method
+  - uid: >-
       vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.getSelectedHubGroupId
     name: getSelectedHubGroupId()
     children: []
@@ -240,7 +256,7 @@ items:
       parameters:
         - id: hubGroup
           type:
-            - vss-web-extension-sdk.HubGroup
+            - '@vss-web-extension-sdk.HubGroup'
           description: |
             The hub group to check
       content: 'function isHubGroupPinned(hubGroup: HubGroup)'
@@ -259,7 +275,7 @@ items:
       parameters:
         - id: hubGroup
           type:
-            - vss-web-extension-sdk.HubGroup
+            - '@vss-web-extension-sdk.HubGroup'
           description: |
             Hub group to check
       content: 'function isHubGroupUnpinned(hubGroup: HubGroup)'
@@ -279,7 +295,7 @@ items:
       parameters:
         - id: hub
           type:
-            - vss-web-extension-sdk.Hub
+            - '@vss-web-extension-sdk.Hub'
           description: |
             The hub to check
       content: 'function isHubPinned(hub: Hub)'
@@ -318,7 +334,7 @@ items:
       parameters:
         - id: hub
           type:
-            - vss-web-extension-sdk.Hub
+            - '@vss-web-extension-sdk.Hub'
           description: |
             Hub to pin
       content: 'function pinHub(hub: Hub)'
@@ -333,7 +349,7 @@ items:
       parameters:
         - id: hubGroup
           type:
-            - vss-web-extension-sdk.HubGroup
+            - '@vss-web-extension-sdk.HubGroup'
           description: |
             Hub group to pin
       content: 'function pinHubGroup(hubGroup: HubGroup)'
@@ -414,7 +430,7 @@ items:
       parameters:
         - id: hub
           type:
-            - vss-web-extension-sdk.Hub
+            - '@vss-web-extension-sdk.Hub'
           description: |
             Hub to unpin
       content: 'function unpinHub(hub: Hub)'
@@ -429,7 +445,7 @@ items:
       parameters:
         - id: hubGroup
           type:
-            - vss-web-extension-sdk.HubGroup
+            - '@vss-web-extension-sdk.HubGroup'
           description: |
             Hub group to unpin
       content: 'function unpinHubGroup(hubGroup: HubGroup)'

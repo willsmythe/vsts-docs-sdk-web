@@ -6,38 +6,20 @@ items:
     children:
       - vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.align
       - >-
-        vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.ariaAttributes
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.ariaLabel
-      - >-
         vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.behavior
-      - vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.change
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.coreCssClass
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.cssClass
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.earlyInitialize
       - >-
         vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.encoded
-      - vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.height
-      - vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.id
       - vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.items
       - vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.name
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.prepend
-      - vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.role
-      - >-
-        vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.tagName
       - vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.text
-      - vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.title
       - >-
         vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.useBowtieStyle
-      - vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.width
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
     package: vss-web-extension-sdk
     module: VSS/Controls/Navigation
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.align
@@ -52,32 +34,6 @@ items:
       return:
         type:
           - any
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.ariaAttributes
-    name: ariaAttributes
-    fullName: ariaAttributes
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Add these aria attributes to the Enhancement.
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Controls.AriaAttributes
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.ariaLabel
-    name: ariaLabel
-    fullName: ariaLabel
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Legacy option. Superseded by ariaAttributes property.
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.behavior
     name: behavior
     fullName: behavior
@@ -90,56 +46,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.change
-    name: change
-    fullName: change
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - Function
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.coreCssClass
-    name: coreCssClass
-    fullName: coreCssClass
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.cssClass
-    name: cssClass
-    fullName: cssClass
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.earlyInitialize
-    name: earlyInitialize
-    fullName: earlyInitialize
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.encoded
     name: encoded
     fullName: encoded
@@ -152,30 +58,6 @@ items:
       return:
         type:
           - boolean
-  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.height
-    name: height
-    fullName: height
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
-  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.items
     name: items
     fullName: items
@@ -187,7 +69,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterItem[]'
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.name
     name: name
     fullName: name
@@ -200,57 +82,9 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.prepend
-    name: prepend
-    fullName: prepend
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.role
-    name: role
-    fullName: role
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.tagName
-    name: tagName
-    fullName: tagName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.text
     name: text
     fullName: text
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.title
-    name: title
-    fullName: title
     children: []
     langs:
       - typeScript
@@ -273,15 +107,3 @@ items:
       return:
         type:
           - any
-  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions.width
-    name: width
-    fullName: width
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number

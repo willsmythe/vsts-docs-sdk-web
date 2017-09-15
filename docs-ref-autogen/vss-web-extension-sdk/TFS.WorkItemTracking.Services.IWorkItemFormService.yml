@@ -65,7 +65,7 @@ items:
     module: TFS/WorkItemTracking/Services
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.addWorkItemRelations
-    name: 'addWorkItemRelations(workItemRelations: function)'
+    name: 'addWorkItemRelations(workItemRelations: WorkItemRelation[])'
     children: []
     langs:
       - typeScript
@@ -76,12 +76,13 @@ items:
       parameters:
         - id: workItemRelations
           type:
-            - function
+            - >-
+              @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemRelation[]
           description: Work item links to add.
-      content: 'function addWorkItemRelations(workItemRelations: function)'
+      content: 'function addWorkItemRelations(workItemRelations: WorkItemRelation[])'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.beginSaveWorkItem
@@ -93,17 +94,19 @@ items:
     syntax:
       parameters:
         - id: successCallback
-          type: []
+          type:
+            - function
           description: ''
         - id: errorCallback
-          type: []
+          type:
+            - function
           description: ''
       content: >-
         function beginSaveWorkItem(successCallback: function, errorCallback:
         function)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.clearError
@@ -119,7 +122,7 @@ items:
       content: function clearError()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.getAllowedFieldValues
@@ -137,7 +140,7 @@ items:
       content: 'function getAllowedFieldValues(fieldReferenceName: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<Object[]>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.getFields
@@ -151,7 +154,8 @@ items:
       content: function getFields()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemField[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.getFieldValue
@@ -176,12 +180,12 @@ items:
         boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<Object>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.getFieldValues
     name: >-
-      getFieldValues(fieldReferenceNames: function, returnOriginalValue?:
+      getFieldValues(fieldReferenceNames: string[], returnOriginalValue?:
       boolean)
     children: []
     langs:
@@ -191,7 +195,7 @@ items:
       parameters:
         - id: fieldReferenceNames
           type:
-            - function
+            - 'string[]'
           description: An arrary of field reference names
         - id: returnOriginalValue
           type:
@@ -199,11 +203,12 @@ items:
           description: '(Optional) If false, gets unsaved field values. Default is false.'
           optional: true
       content: >-
-        function getFieldValues(fieldReferenceNames: function,
+        function getFieldValues(fieldReferenceNames: string[],
         returnOriginalValue?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.IDictionaryStringTo<Object>>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.getId
@@ -217,7 +222,7 @@ items:
       content: function getId()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<number>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.getInvalidFields
@@ -233,7 +238,8 @@ items:
       content: function getInvalidFields()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemField[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.getRevision
@@ -247,7 +253,7 @@ items:
       content: function getRevision()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<number>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.getWorkItemRelations
@@ -264,7 +270,8 @@ items:
       content: function getWorkItemRelations()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemRelation[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.getWorkItemRelationTypes
@@ -278,7 +285,8 @@ items:
       content: function getWorkItemRelationTypes()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemRelationType[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.getWorkItemResourceUrl
@@ -296,7 +304,7 @@ items:
       content: 'function getWorkItemResourceUrl(workItemId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.hasActiveWorkItem
@@ -310,7 +318,7 @@ items:
       content: function hasActiveWorkItem()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<boolean>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.isDirty
@@ -324,7 +332,7 @@ items:
       content: function isDirty()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<boolean>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.isNew
@@ -338,7 +346,7 @@ items:
       content: function isNew()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<boolean>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.isValid
@@ -352,7 +360,7 @@ items:
       content: function isValid()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<boolean>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.refresh
@@ -368,11 +376,11 @@ items:
       content: function refresh()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.removeWorkItemRelations
-    name: 'removeWorkItemRelations(workItemRelations: function)'
+    name: 'removeWorkItemRelations(workItemRelations: WorkItemRelation[])'
     children: []
     langs:
       - typeScript
@@ -384,12 +392,13 @@ items:
       parameters:
         - id: workItemRelations
           type:
-            - function
+            - >-
+              @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemRelation[]
           description: Work item links to remove.
-      content: 'function removeWorkItemRelations(workItemRelations: function)'
+      content: 'function removeWorkItemRelations(workItemRelations: WorkItemRelation[])'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.reset
@@ -405,7 +414,7 @@ items:
       content: function reset()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.save
@@ -419,7 +428,7 @@ items:
       content: function save()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.setError
@@ -441,7 +450,7 @@ items:
       content: 'function setError(errorMessage: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.setFieldValue
@@ -463,11 +472,11 @@ items:
       content: 'function setFieldValue(fieldReferenceName: string, value: Object)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<boolean>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.setFieldValues
-    name: 'setFieldValues(fields: IDictionaryStringTo)'
+    name: 'setFieldValues(fields: IDictionaryStringTo<Object>)'
     children: []
     langs:
       - typeScript
@@ -476,10 +485,11 @@ items:
       parameters:
         - id: fields
           type:
-            - vss-web-extension-sdk.IDictionaryStringTo
+            - '@vss-web-extension-sdk.IDictionaryStringTo<Object>'
           description: A dictionary of field refName/values
-      content: 'function setFieldValues(fields: IDictionaryStringTo)'
+      content: 'function setFieldValues(fields: IDictionaryStringTo<Object>)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.IDictionaryStringTo<boolean>>
     type: method

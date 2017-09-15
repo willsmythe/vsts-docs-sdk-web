@@ -5,10 +5,6 @@ items:
     fullName: ClientDataProviderQuery
     children:
       - >-
-        vss-web-extension-sdk.VSS.Contributions.Contracts.ClientDataProviderQuery.context
-      - >-
-        vss-web-extension-sdk.VSS.Contributions.Contracts.ClientDataProviderQuery.contributionIds
-      - >-
         vss-web-extension-sdk.VSS.Contributions.Contracts.ClientDataProviderQuery.queryServiceInstanceType
     langs:
       - typeScript
@@ -16,35 +12,10 @@ items:
     summary: >-
       A client data provider are the details needed to make the data provider
       request from the client.
+    extends:
+      - '@vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderQuery'
     package: vss-web-extension-sdk
     module: VSS/Contributions/Contracts
-  - uid: >-
-      vss-web-extension-sdk.VSS.Contributions.Contracts.ClientDataProviderQuery.context
-    name: context
-    fullName: context
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Contextual information to pass to the data providers
-    syntax:
-      return:
-        type:
-          - >-
-            vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderContext
-  - uid: >-
-      vss-web-extension-sdk.VSS.Contributions.Contracts.ClientDataProviderQuery.contributionIds
-    name: contributionIds
-    fullName: contributionIds
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The contribution ids of the data providers to resolve
-    syntax:
-      return:
-        type:
-          - function
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Contracts.ClientDataProviderQuery.queryServiceInstanceType
     name: queryServiceInstanceType

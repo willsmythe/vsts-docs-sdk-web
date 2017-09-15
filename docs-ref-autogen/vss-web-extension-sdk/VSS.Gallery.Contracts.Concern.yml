@@ -5,18 +5,14 @@ items:
     fullName: Concern
     children:
       - vss-web-extension-sdk.VSS.Gallery.Contracts.Concern.category
-      - vss-web-extension-sdk.VSS.Gallery.Contracts.Concern.createdDate
-      - vss-web-extension-sdk.VSS.Gallery.Contracts.Concern.id
-      - vss-web-extension-sdk.VSS.Gallery.Contracts.Concern.status
-      - vss-web-extension-sdk.VSS.Gallery.Contracts.Concern.text
-      - vss-web-extension-sdk.VSS.Gallery.Contracts.Concern.updatedDate
-      - vss-web-extension-sdk.VSS.Gallery.Contracts.Concern.user
     langs:
       - typeScript
     type: interface
     summary: >-
       The structure of a Concern Rather than defining a separate data structure
       having same fields as QnAItem, we are inheriting from the QnAItem.
+    extends:
+      - '@vss-web-extension-sdk.VSS.Gallery.Contracts.QnAItem'
     package: vss-web-extension-sdk
     module: VSS/Gallery/Contracts
   - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.Concern.category
@@ -31,75 +27,3 @@ items:
       return:
         type:
           - ConcernCategory
-  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.Concern.createdDate
-    name: createdDate
-    fullName: createdDate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Time when the review was first created
-    syntax:
-      return:
-        type:
-          - Date
-  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.Concern.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Unique identifier of a QnA item
-    syntax:
-      return:
-        type:
-          - number
-  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.Concern.status
-    name: status
-    fullName: status
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Get status of item
-    syntax:
-      return:
-        type:
-          - QnAItemStatus
-  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.Concern.text
-    name: text
-    fullName: text
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Text description of the QnA item
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.Concern.updatedDate
-    name: updatedDate
-    fullName: updatedDate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Time when the review was edited/updated
-    syntax:
-      return:
-        type:
-          - Date
-  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.Concern.user
-    name: user
-    fullName: user
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: User details for the item.
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Gallery.Contracts.UserIdentityRef

@@ -7,10 +7,6 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.addMember
       - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.authTokenManager
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.claimsApiVersion
-      - >-
         vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.constructor
       - >-
         vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.createGroups
@@ -24,10 +20,6 @@ items:
         vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.deleteGroup
       - >-
         vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.deleteScope
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.descriptorsApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
       - >-
         vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.getDescriptorById
       - >-
@@ -51,25 +43,7 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.getUserIdentityIdsByDomainId
       - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.groupsApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.identitiesApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.identityApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.identityBatchApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.identitySnapshotApiVersion
-      - >-
         vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.listGroups
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.maxSequenceIdApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.meApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.membersApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.membersOfApiVersion
       - >-
         vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.readIdentities
       - >-
@@ -91,33 +65,15 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.renameScope
       - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.scopesApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.signedInTokenApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.signoutTokenApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.tenantApiVersion
-      - >-
         vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.updateIdentities
       - >-
         vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.updateIdentity
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4._beginGetLocation
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4._beginRequest
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4._beginRequestWithAjaxResult
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4._issueAjaxRequest
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4._rootRequestPath
-      - >-
-        vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     package: vss-web-extension-sdk
     module: VSS/Identities/RestClient
   - uid: >-
@@ -140,34 +96,8 @@ items:
       content: 'function addMember(containerId: string, memberId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<boolean>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.claimsApiVersion
-    name: claimsApiVersion
-    fullName: claimsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.constructor
     name: >-
@@ -185,7 +115,7 @@ items:
           description: ''
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
       content: >-
@@ -208,7 +138,8 @@ items:
       content: 'function createGroups(container: any)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.Identity[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.createIdentity
@@ -222,12 +153,13 @@ items:
         - id: frameworkIdentityInfo
           type:
             - >-
-              vss-web-extension-sdk.VSS.Identities.Contracts.FrameworkIdentityInfo
+              @vss-web-extension-sdk.VSS.Identities.Contracts.FrameworkIdentityInfo
           description: ''
       content: 'function createIdentity(frameworkIdentityInfo: FrameworkIdentityInfo)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.Identity>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.createOrBindWithClaims
@@ -240,12 +172,13 @@ items:
       parameters:
         - id: sourceIdentity
           type:
-            - vss-web-extension-sdk.VSS.Identities.Contracts.Identity
+            - '@vss-web-extension-sdk.VSS.Identities.Contracts.Identity'
           description: ''
       content: 'function createOrBindWithClaims(sourceIdentity: Identity)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.Identity>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.createScope
@@ -258,7 +191,7 @@ items:
       parameters:
         - id: info
           type:
-            - vss-web-extension-sdk.VSS.Identities.Contracts.CreateScopeInfo
+            - '@vss-web-extension-sdk.VSS.Identities.Contracts.CreateScopeInfo'
           description: ''
         - id: scopeId
           type:
@@ -267,7 +200,8 @@ items:
       content: 'function createScope(info: CreateScopeInfo, scopeId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.IdentityScope>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.deleteGroup
@@ -285,7 +219,7 @@ items:
       content: 'function deleteGroup(groupId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.deleteScope
@@ -303,34 +237,8 @@ items:
       content: 'function deleteScope(scopeId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.descriptorsApiVersion
-    name: descriptorsApiVersion
-    fullName: descriptorsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.getDescriptorById
     name: 'getDescriptorById(id: string, isMasterId?: boolean)'
@@ -352,7 +260,8 @@ items:
       content: 'function getDescriptorById(id: string, isMasterId?: boolean)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.IdentityDescriptor>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.getIdentityChanges
@@ -383,7 +292,8 @@ items:
         number, scopeId?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.ChangedIdentities>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.getIdentitySnapshot
@@ -401,7 +311,8 @@ items:
       content: 'function getIdentitySnapshot(scopeId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.IdentitySnapshot>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.getMaxSequenceId
@@ -415,7 +326,7 @@ items:
       content: function getMaxSequenceId()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<number>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.getScopeById
@@ -433,7 +344,8 @@ items:
       content: 'function getScopeById(scopeId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.IdentityScope>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.getScopeByName
@@ -451,7 +363,8 @@ items:
       content: 'function getScopeByName(scopeName: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.IdentityScope>
     type: method
   - uid: vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.getSelf
     name: getSelf()
@@ -464,7 +377,8 @@ items:
       content: function getSelf()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.IdentitySelf>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.getSignedInToken
@@ -478,7 +392,8 @@ items:
       content: function getSignedInToken()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.DelegatedAuthorization.Contracts.AccessTokenResult>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.getSignoutToken
@@ -492,7 +407,8 @@ items:
       content: function getSignoutToken()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.DelegatedAuthorization.Contracts.AccessTokenResult>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.getTenant
@@ -510,7 +426,8 @@ items:
       content: 'function getTenant(tenantId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.TenantInfo>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.getUserIdentityIdsByDomainId
@@ -528,73 +445,8 @@ items:
       content: 'function getUserIdentityIdsByDomainId(domainId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string[]>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.groupsApiVersion
-    name: groupsApiVersion
-    fullName: groupsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.identitiesApiVersion
-    name: identitiesApiVersion
-    fullName: identitiesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.identityApiVersion
-    name: identityApiVersion
-    fullName: identityApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.identityBatchApiVersion
-    name: identityBatchApiVersion
-    fullName: identityBatchApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.identitySnapshotApiVersion
-    name: identitySnapshotApiVersion
-    fullName: identitySnapshotApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.listGroups
     name: >-
@@ -631,60 +483,9 @@ items:
         boolean, properties?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.Identity[]>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.maxSequenceIdApiVersion
-    name: maxSequenceIdApiVersion
-    fullName: maxSequenceIdApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.meApiVersion
-    name: meApiVersion
-    fullName: meApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.membersApiVersion
-    name: membersApiVersion
-    fullName: membersApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.membersOfApiVersion
-    name: membersOfApiVersion
-    fullName: membersOfApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.readIdentities
     name: >-
@@ -745,7 +546,8 @@ items:
         boolean, options?: ReadIdentitiesOptions)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.Identity[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.readIdentitiesByScope
@@ -777,7 +579,8 @@ items:
         QueryMembership, properties?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.Identity[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.readIdentity
@@ -809,7 +612,8 @@ items:
         QueryMembership, properties?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.Identity>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.readIdentityBatch
@@ -822,12 +626,13 @@ items:
       parameters:
         - id: batchInfo
           type:
-            - vss-web-extension-sdk.VSS.Identities.Contracts.IdentityBatchInfo
+            - '@vss-web-extension-sdk.VSS.Identities.Contracts.IdentityBatchInfo'
           description: ''
       content: 'function readIdentityBatch(batchInfo: IdentityBatchInfo)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.Identity[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.readMember
@@ -858,7 +663,8 @@ items:
         queryMembership?: QueryMembership)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.IdentityDescriptor>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.readMemberOf
@@ -889,7 +695,8 @@ items:
         queryMembership?: QueryMembership)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.IdentityDescriptor>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.readMembers
@@ -914,7 +721,8 @@ items:
         QueryMembership)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.IdentityDescriptor[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.readMembersOf
@@ -939,7 +747,8 @@ items:
         QueryMembership)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.IdentityDescriptor[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.removeMember
@@ -961,7 +770,7 @@ items:
       content: 'function removeMember(containerId: string, memberId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<boolean>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.renameScope
@@ -974,7 +783,7 @@ items:
       parameters:
         - id: renameScope
           type:
-            - vss-web-extension-sdk.VSS.Identities.Contracts.IdentityScope
+            - '@vss-web-extension-sdk.VSS.Identities.Contracts.IdentityScope'
           description: ''
         - id: scopeId
           type:
@@ -983,63 +792,11 @@ items:
       content: 'function renameScope(renameScope: IdentityScope, scopeId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.scopesApiVersion
-    name: scopesApiVersion
-    fullName: scopesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.signedInTokenApiVersion
-    name: signedInTokenApiVersion
-    fullName: signedInTokenApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.signoutTokenApiVersion
-    name: signoutTokenApiVersion
-    fullName: signoutTokenApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.tenantApiVersion
-    name: tenantApiVersion
-    fullName: tenantApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.updateIdentities
-    name: 'updateIdentities(identities: VssJsonCollectionWrapperV)'
+    name: 'updateIdentities(identities: VssJsonCollectionWrapperV<Identity[]>)'
     children: []
     langs:
       - typeScript
@@ -1049,12 +806,15 @@ items:
         - id: identities
           type:
             - >-
-              vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV
+              @vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV<@vss-web-extension-sdk.VSS.Identities.Contracts.Identity[]>
           description: ''
-      content: 'function updateIdentities(identities: VssJsonCollectionWrapperV)'
+      content: >-
+        function updateIdentities(identities:
+        VssJsonCollectionWrapperV<Identity[]>)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Contracts.IdentityUpdateData[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.updateIdentity
@@ -1067,7 +827,7 @@ items:
       parameters:
         - id: identity
           type:
-            - vss-web-extension-sdk.VSS.Identities.Contracts.Identity
+            - '@vss-web-extension-sdk.VSS.Identities.Contracts.Identity'
           description: ''
         - id: identityId
           type:
@@ -1076,158 +836,5 @@ items:
       content: 'function updateIdentity(identity: Identity, identityId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4._beginGetLocation
-    name: '_beginGetLocation(area: string, locationId: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Gets information about an API resource location (route template, supported
-      versions, etc.)
-    syntax:
-      parameters:
-        - id: area
-          type:
-            - string
-          description: resource area name
-        - id: locationId
-          type:
-            - string
-          description: |
-            Guid of the location to get
-      content: 'function _beginGetLocation(area: string, locationId: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4._beginRequest
-    name: >-
-      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
-      boolean)
-    children: []
-    langs:
-      - typeScript
-    summary: Issue a request to a VSS REST endpoint.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >-
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used
-          optional: true
-      content: >-
-        function _beginRequest(requestParams: VssApiResourceRequestParams,
-        useAjaxResult?: boolean)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4._beginRequestWithAjaxResult
-    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue a request to a VSS REST endpoint and makes sure the result contains
-      jqXHR. Use spread to access jqXHR.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-      content: >-
-        function _beginRequestWithAjaxResult(requestParams:
-        VssApiResourceRequestParams)
-      return:
-        type:
-          - Q.Promise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4._issueAjaxRequest
-    name: >-
-      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
-      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue an AJAX request. This is a wrapper around jquery's ajax method that
-      handles VSS authentication
-
-      and triggers events that can be listened to by other modules.
-    syntax:
-      parameters:
-        - id: requestUrl
-          type:
-            - string
-          description: Url to send the request to
-        - id: ajaxOptions
-          type:
-            - JQueryAjaxSettings
-          description: jQuery.ajax options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used.
-          optional: true
-        - id: vssRequestOptions
-          type:
-            - vss-web-extension-sdk.IVssAjaxOptions
-          description: ''
-          optional: true
-      content: >-
-        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
-        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
-        IVssAjaxOptions)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4._setInitializationPromise
-    name: '_setInitializationPromise(promise: IPromise)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Sets a promise that is waited on before any requests are issued. Can be
-      used to asynchronously
-
-      set the request url and auth token manager.
-    syntax:
-      parameters:
-        - id: promise
-          type:
-            - vss-web-extension-sdk.IPromise
-          description: ''
-      content: 'function _setInitializationPromise(promise: IPromise)'
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method

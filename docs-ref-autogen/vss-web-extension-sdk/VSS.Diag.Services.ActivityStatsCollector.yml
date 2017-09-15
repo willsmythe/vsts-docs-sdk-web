@@ -5,19 +5,78 @@ items:
     fullName: ActivityStatsCollector
     children:
       - >-
+        vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.actionCompleted
+      - >-
+        vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.actionStarted
+      - >-
         vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.constructor
       - >-
         vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.ACTIVITY_COLLECTION_STATUS
       - >-
         vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.ACTIVITY_ID_STORAGE_ITEM
       - >-
+        vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.addActivtyStatsCollectionAllowedCallback
+      - >-
+        vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.clearStats
+      - >-
+        vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.collectStats
+      - >-
         vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.CURRENT_PAGE
+      - >-
+        vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.getActivityStatistics
+      - >-
+        vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.getCurrentPage
+      - >-
+        vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.initialize
+      - >-
+        vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.isCollectingStats
+      - >-
+        vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.logActivity
+      - >-
+        vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.setCurrentPage
     langs:
       - typeScript
     type: class
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Diag/Services
+  - uid: >-
+      vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.actionCompleted
+    name: 'actionCompleted(id: number, jqXHR: JQueryXHR)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - number
+          description: ''
+        - id: jqXHR
+          type:
+            - JQueryXHR
+          description: ''
+      content: 'function actionCompleted(id: number, jqXHR: JQueryXHR)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.actionStarted
+    name: 'actionStarted(name: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: name
+          type:
+            - string
+          description: ''
+      content: 'function actionStarted(name: string)'
+      return:
+        type:
+          - number
+    type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.constructor
     name: ActivityStatsCollector()
     children: []
@@ -55,6 +114,51 @@ items:
         type:
           - string
   - uid: >-
+      vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.addActivtyStatsCollectionAllowedCallback
+    name: >-
+      addActivtyStatsCollectionAllowedCallback(callback:
+      ActivtyStatsCollectionAllowedCallback)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: callback
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Diag.Services.ActivtyStatsCollectionAllowedCallback
+          description: ''
+      content: >-
+        function addActivtyStatsCollectionAllowedCallback(callback:
+        ActivtyStatsCollectionAllowedCallback)
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.clearStats
+    name: clearStats()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function clearStats()
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.collectStats
+    name: 'collectStats(shouldCollect: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: shouldCollect
+          type:
+            - boolean
+          description: ''
+      content: 'function collectStats(shouldCollect: boolean)'
+    type: method
+  - uid: >-
       vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.CURRENT_PAGE
     name: CURRENT_PAGE
     fullName: CURRENT_PAGE
@@ -67,3 +171,85 @@ items:
       return:
         type:
           - string
+  - uid: >-
+      vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.getActivityStatistics
+    name: getActivityStatistics()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getActivityStatistics()
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.getCurrentPage
+    name: getCurrentPage()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getCurrentPage()
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Diag.Services.ActivityStatistic'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.initialize
+    name: initialize()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function initialize()
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.isCollectingStats
+    name: isCollectingStats()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function isCollectingStats()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.logActivity
+    name: 'logActivity(activityId: string, page: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: activityId
+          type:
+            - string
+          description: ''
+        - id: page
+          type:
+            - string
+          description: ''
+      content: 'function logActivity(activityId: string, page: string)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.setCurrentPage
+    name: 'setCurrentPage(currentPage: ActivityStatistic)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: currentPage
+          type:
+            - '@vss-web-extension-sdk.VSS.Diag.Services.ActivityStatistic'
+          description: ''
+      content: 'function setCurrentPage(currentPage: ActivityStatistic)'
+    type: method

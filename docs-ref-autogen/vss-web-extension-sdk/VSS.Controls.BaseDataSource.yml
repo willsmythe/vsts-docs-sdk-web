@@ -5,16 +5,19 @@ items:
     fullName: BaseDataSource
     children:
       - vss-web-extension-sdk.VSS.Controls.BaseDataSource.constructor
+      - vss-web-extension-sdk.VSS.Controls.BaseDataSource.ensureItems
+      - vss-web-extension-sdk.VSS.Controls.BaseDataSource.getComparer
       - vss-web-extension-sdk.VSS.Controls.BaseDataSource.getCount
       - vss-web-extension-sdk.VSS.Controls.BaseDataSource.getItem
       - vss-web-extension-sdk.VSS.Controls.BaseDataSource.getItemIndex
       - vss-web-extension-sdk.VSS.Controls.BaseDataSource.getItemIndexes
       - vss-web-extension-sdk.VSS.Controls.BaseDataSource.getItems
       - vss-web-extension-sdk.VSS.Controls.BaseDataSource.getItemText
+      - vss-web-extension-sdk.VSS.Controls.BaseDataSource.getSource
+      - vss-web-extension-sdk.VSS.Controls.BaseDataSource.nextIndex
       - vss-web-extension-sdk.VSS.Controls.BaseDataSource.prepareSource
       - vss-web-extension-sdk.VSS.Controls.BaseDataSource.setItems
-      - vss-web-extension-sdk.VSS.Controls.BaseDataSource._options
-      - vss-web-extension-sdk.VSS.Controls.BaseDataSource._source
+      - vss-web-extension-sdk.VSS.Controls.BaseDataSource.setSource
     langs:
       - typeScript
     type: class
@@ -36,6 +39,29 @@ items:
           optional: true
       content: 'new BaseDataSource(options?: any)'
     type: constructor
+  - uid: vss-web-extension-sdk.VSS.Controls.BaseDataSource.ensureItems
+    name: ensureItems()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function ensureItems()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.BaseDataSource.getComparer
+    name: getComparer()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getComparer()
+      return:
+        type:
+          - any
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.BaseDataSource.getCount
     name: 'getCount(all?: any)'
     children: []
@@ -179,6 +205,44 @@ items:
         type:
           - string
     type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.BaseDataSource.getSource
+    name: getSource()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getSource()
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.BaseDataSource.nextIndex
+    name: 'nextIndex(selectedIndex: any, delta: any, all: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: selectedIndex
+          type:
+            - any
+          description: ''
+        - id: delta
+          type:
+            - any
+          description: ''
+        - id: all
+          type:
+            - any
+          description: ''
+      content: 'function nextIndex(selectedIndex: any, delta: any, all: any)'
+      return:
+        type:
+          - number
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.BaseDataSource.prepareSource
     name: 'prepareSource(source?: any)'
     children: []
@@ -215,27 +279,17 @@ items:
           optional: true
       content: 'function setItems(items: any, allItems?: any)'
     type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.BaseDataSource._options
-    name: _options
-    fullName: _options
+  - uid: vss-web-extension-sdk.VSS.Controls.BaseDataSource.setSource
+    name: 'setSource(source: any)'
     children: []
     langs:
       - typeScript
-    type: property
     summary: ''
     syntax:
-      return:
-        type:
-          - any
-  - uid: vss-web-extension-sdk.VSS.Controls.BaseDataSource._source
-    name: _source
-    fullName: _source
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
+      parameters:
+        - id: source
+          type:
+            - any
+          description: ''
+      content: 'function setSource(source: any)'
+    type: method

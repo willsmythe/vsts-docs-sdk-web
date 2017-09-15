@@ -1,0 +1,102 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.vm.Script
+    name: Script
+    fullName: Script
+    children:
+      - vss-web-extension-sdk.vm.Script.runInContext
+      - vss-web-extension-sdk.vm.Script.runInNewContext
+      - vss-web-extension-sdk.vm.Script.runInThisContext
+      - vss-web-extension-sdk.vm.Script.constructor
+    langs:
+      - typeScript
+    type: class
+    summary: ''
+    package: vss-web-extension-sdk
+    module: vm
+  - uid: vss-web-extension-sdk.vm.Script.runInContext
+    name: 'runInContext(contextifiedSandbox: Context, options?: RunningScriptOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: contextifiedSandbox
+          type:
+            - '@vss-web-extension-sdk.vm.Context'
+          description: ''
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.vm.RunningScriptOptions'
+          description: ''
+          optional: true
+      content: >-
+        function runInContext(contextifiedSandbox: Context, options?:
+        RunningScriptOptions)
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.vm.Script.runInNewContext
+    name: 'runInNewContext(sandbox?: Context, options?: RunningScriptOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: sandbox
+          type:
+            - '@vss-web-extension-sdk.vm.Context'
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.vm.RunningScriptOptions'
+          description: ''
+          optional: true
+      content: >-
+        function runInNewContext(sandbox?: Context, options?:
+        RunningScriptOptions)
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.vm.Script.runInThisContext
+    name: 'runInThisContext(options?: RunningScriptOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.vm.RunningScriptOptions'
+          description: ''
+          optional: true
+      content: 'function runInThisContext(options?: RunningScriptOptions)'
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.vm.Script.constructor
+    name: 'Script(code: string, options?: ScriptOptions)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: code
+          type:
+            - string
+          description: ''
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.vm.ScriptOptions'
+          description: ''
+          optional: true
+      content: 'new Script(code: string, options?: ScriptOptions)'
+    type: constructor

@@ -5,59 +5,17 @@ items:
     fullName: IdentityReference
     children:
       - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.directoryAlias
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.displayName
-      - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.id
       - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.imageUrl
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.inactive
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.isAadIdentity
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.isContainer
-      - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.name
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.profileUrl
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.uniqueName
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.url
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
     package: vss-web-extension-sdk
     module: TFS/WorkItemTracking/Contracts
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.directoryAlias
-    name: directoryAlias
-    fullName: directoryAlias
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.displayName
-    name: displayName
-    fullName: displayName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.id
     name: id
     fullName: id
@@ -71,58 +29,6 @@ items:
         type:
           - string
   - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.imageUrl
-    name: imageUrl
-    fullName: imageUrl
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.inactive
-    name: inactive
-    fullName: inactive
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.isAadIdentity
-    name: isAadIdentity
-    fullName: isAadIdentity
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.isContainer
-    name: isContainer
-    fullName: isContainer
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.name
     name: name
     fullName: name
@@ -134,44 +40,6 @@ items:
       Legacy back-compat property. This has been the WIT specific value from
       Constants. Will be hidden (but exists) on the client unless they are
       targeting the newest version
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.profileUrl
-    name: profileUrl
-    fullName: profileUrl
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.uniqueName
-    name: uniqueName
-    fullName: uniqueName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
     syntax:
       return:
         type:

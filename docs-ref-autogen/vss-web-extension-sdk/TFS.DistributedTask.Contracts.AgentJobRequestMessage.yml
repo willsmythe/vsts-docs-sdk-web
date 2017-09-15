@@ -5,85 +5,21 @@ items:
     fullName: AgentJobRequestMessage
     children:
       - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.environment
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.jobId
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.jobName
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.jobRefName
-      - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.lockedUntil
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.lockToken
       - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.messageType
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.plan
-      - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.requestId
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.tasks
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.timeline
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobRequestMessage'
     package: vss-web-extension-sdk
     module: TFS/DistributedTask/Contracts
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.environment
-    name: environment
-    fullName: environment
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobEnvironment
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.jobId
-    name: jobId
-    fullName: jobId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.jobName
-    name: jobName
-    fullName: jobName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.jobRefName
-    name: jobRefName
-    fullName: jobRefName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.lockedUntil
     name: lockedUntil
@@ -111,33 +47,6 @@ items:
         type:
           - string
   - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.messageType
-    name: messageType
-    fullName: messageType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.plan
-    name: plan
-    fullName: plan
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationPlanReference
-  - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.requestId
     name: requestId
     fullName: requestId
@@ -162,18 +71,4 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.Contracts.AgentJobRequestMessage.timeline
-    name: timeline
-    fullName: timeline
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TimelineReference
+          - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance[]'

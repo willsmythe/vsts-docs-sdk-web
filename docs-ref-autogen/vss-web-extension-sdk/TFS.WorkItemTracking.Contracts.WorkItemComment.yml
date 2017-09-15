@@ -12,13 +12,13 @@ items:
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemComment.revision
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemComment.text
-      - vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemComment.url
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemComment._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTrackingResource
     package: vss-web-extension-sdk
     module: TFS/WorkItemTracking/Contracts
   - uid: >-
@@ -34,7 +34,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemComment.revisedDate
     name: revisedDate
@@ -73,28 +73,3 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemComment.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemComment._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

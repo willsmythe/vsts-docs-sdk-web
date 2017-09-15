@@ -36,7 +36,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationOwner
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationOwner
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationQueuedPlanGroup.owner
     name: owner
@@ -50,7 +50,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationOwner
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationOwner
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationQueuedPlanGroup.planGroup
     name: planGroup
@@ -76,7 +76,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationQueuedPlan[]
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationQueuedPlanGroup.project
     name: project
@@ -89,7 +90,8 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.DistributedTask.Contracts.ProjectReference
+          - >-
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.ProjectReference
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationQueuedPlanGroup.queuePosition
     name: queuePosition

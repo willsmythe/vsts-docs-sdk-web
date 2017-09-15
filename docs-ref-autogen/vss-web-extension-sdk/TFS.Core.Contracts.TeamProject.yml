@@ -4,35 +4,16 @@ items:
     name: TeamProject
     fullName: TeamProject
     children:
-      - vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.abbreviation
       - vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.capabilities
       - vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.defaultTeam
-      - vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.description
-      - vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.id
-      - vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.name
-      - vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.revision
-      - vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.state
-      - vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.url
-      - vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.visibility
-      - vss-web-extension-sdk.TFS.Core.Contracts.TeamProject._links
     langs:
       - typeScript
     type: interface
     summary: Represents a Team Project object.
+    extends:
+      - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference'
     package: vss-web-extension-sdk
     module: TFS/Core/Contracts
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.abbreviation
-    name: abbreviation
-    fullName: abbreviation
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Project abbreviation.
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.capabilities
     name: capabilities
     fullName: capabilities
@@ -46,7 +27,7 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: undefined'
+          - '[key: string]: function'
   - uid: vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.defaultTeam
     name: defaultTeam
     fullName: defaultTeam
@@ -58,100 +39,4 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Core.Contracts.WebApiTeamRef
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.description
-    name: description
-    fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The project's description (if any).
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Project identifier.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Project name.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.revision
-    name: revision
-    fullName: revision
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Project revision.
-    syntax:
-      return:
-        type:
-          - number
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.state
-    name: state
-    fullName: state
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Project state.
-    syntax:
-      return:
-        type:
-          - any
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Url to the full version of the object.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.TeamProject.visibility
-    name: visibility
-    fullName: visibility
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Project visibility.
-    syntax:
-      return:
-        type:
-          - ProjectVisibility
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.TeamProject._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The links to other objects related to this object.
-    syntax:
-      return:
-        type:
-          - any
+          - '@vss-web-extension-sdk.TFS.Core.Contracts.WebApiTeamRef'

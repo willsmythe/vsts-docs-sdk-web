@@ -5,8 +5,6 @@ items:
     fullName: PersonaCardProps
     children:
       - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.PersonaCardProps.cssClass
-      - >-
         vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.PersonaCardProps.entityOperationsFacade
       - >-
         vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.PersonaCardProps.identity
@@ -20,21 +18,10 @@ items:
       - typeScript
     type: interface
     summary: Definitions for PersonaCard.
+    extends:
+      - '@vss-web-extension-sdk.VSS.Flux.Component.Props'
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/PersonaCard
-  - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.PersonaCardProps.cssClass
-    name: cssClass
-    fullName: cssClass
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.PersonaCardProps.entityOperationsFacade
     name: entityOperationsFacade
@@ -60,7 +47,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity
+          - '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity'
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.PersonaCardProps.onDismissCallback
     name: onDismissCallback
@@ -72,7 +59,8 @@ items:
     summary: Optional callback when card is dismissed.
     syntax:
       return:
-        type: []
+        type:
+          - function
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.PersonaCardProps.referenceHTMLComponent
     name: referenceHTMLComponent

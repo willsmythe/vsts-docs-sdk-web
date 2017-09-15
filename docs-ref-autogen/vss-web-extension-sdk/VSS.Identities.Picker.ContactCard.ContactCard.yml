@@ -3,10 +3,28 @@ items:
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.ContactCard.ContactCard
     name: ContactCard
     fullName: ContactCard
-    children: []
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.ContactCard.ContactCard.render
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.VSS.Identities.Picker.ContactCard.ContactCard<@vss-web-extension-sdk.VSS.Identities.Picker.ContactCard.ContactCardProps>
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/ContactCard
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.ContactCard.ContactCard.render
+    name: render()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function render()
+      return:
+        type:
+          - Element
+    type: method

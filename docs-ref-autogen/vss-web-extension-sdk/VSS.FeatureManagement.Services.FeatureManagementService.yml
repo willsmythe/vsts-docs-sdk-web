@@ -6,47 +6,15 @@ items:
     fullName: FeatureManagementService
     children:
       - >-
-        vss-web-extension-sdk.VSS.FeatureManagement.Services.FeatureManagementService.getConnection
-      - >-
-        vss-web-extension-sdk.VSS.FeatureManagement.Services.FeatureManagementService.initializeConnection
-      - >-
         vss-web-extension-sdk.VSS.FeatureManagement.Services.FeatureManagementService.isFeatureEnabled
     langs:
       - typeScript
     type: class
     summary: Service to manage feature availability data
+    extends:
+      - '@vss-web-extension-sdk.VSS.Service.VssService'
     package: vss-web-extension-sdk
     module: VSS/FeatureManagement/Services
-  - uid: >-
-      vss-web-extension-sdk.VSS.FeatureManagement.Services.FeatureManagementService.getConnection
-    name: getConnection()
-    children: []
-    langs:
-      - typeScript
-    summary: Gets the relative location for the service's connection
-    syntax:
-      parameters: []
-      content: function getConnection()
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Service.VssConnection
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.FeatureManagement.Services.FeatureManagementService.initializeConnection
-    name: 'initializeConnection(connection: VssConnection)'
-    children: []
-    langs:
-      - typeScript
-    summary: Sets the VssConnection to use for this service
-    syntax:
-      parameters:
-        - id: connection
-          type:
-            - vss-web-extension-sdk.VSS.Service.VssConnection
-          description: |
-            VssConnection used by this service
-      content: 'function initializeConnection(connection: VssConnection)'
-    type: method
   - uid: >-
       vss-web-extension-sdk.VSS.FeatureManagement.Services.FeatureManagementService.isFeatureEnabled
     name: 'isFeatureEnabled(featureId: string)'

@@ -16,12 +16,12 @@ items:
         vss-web-extension-sdk.TFS.Build.Contracts.ContinuousIntegrationTrigger.pollingInterval
       - >-
         vss-web-extension-sdk.TFS.Build.Contracts.ContinuousIntegrationTrigger.pollingJobId
-      - >-
-        vss-web-extension-sdk.TFS.Build.Contracts.ContinuousIntegrationTrigger.triggerType
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildTrigger'
     package: vss-web-extension-sdk
     module: TFS/Build/Contracts
   - uid: >-
@@ -49,7 +49,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'string[]'
   - uid: >-
       vss-web-extension-sdk.TFS.Build.Contracts.ContinuousIntegrationTrigger.maxConcurrentBuildsPerBranch
     name: maxConcurrentBuildsPerBranch
@@ -75,7 +75,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'string[]'
   - uid: >-
       vss-web-extension-sdk.TFS.Build.Contracts.ContinuousIntegrationTrigger.pollingInterval
     name: pollingInterval
@@ -104,16 +104,3 @@ items:
       return:
         type:
           - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.Contracts.ContinuousIntegrationTrigger.triggerType
-    name: triggerType
-    fullName: triggerType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - DefinitionTriggerType

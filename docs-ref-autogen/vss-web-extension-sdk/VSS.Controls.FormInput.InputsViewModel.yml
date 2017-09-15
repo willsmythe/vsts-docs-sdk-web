@@ -4,20 +4,160 @@ items:
     name: InputsViewModel
     fullName: InputsViewModel
     children:
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.addInputViewModel
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.allDependentsSatisfied
+      - vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.areDirty
+      - vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.areValid
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.getInputsAsDictionary
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.getInputViewModelById
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.getInputViewModels
       - vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.constructor
       - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel._satisfiedDependentInputs
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.removeInputViewModel
     langs:
       - typeScript
     type: class
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Controls/FormInput
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.addInputViewModel
+    name: >-
+      addInputViewModel(inputDescriptor: ExtendedInputDescriptor, inputValue?:
+      any, inputValidChangedCallback?: InputViewModelDelegate<void>,
+      valuesChangedCallback?: InputViewModelDelegate<void>)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: inputDescriptor
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor
+          description: ''
+        - id: inputValue
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: inputValidChangedCallback
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<void>
+          description: ''
+          optional: true
+        - id: valuesChangedCallback
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<void>
+          description: ''
+          optional: true
+      content: >-
+        function addInputViewModel(inputDescriptor: ExtendedInputDescriptor,
+        inputValue?: any, inputValidChangedCallback?:
+        InputViewModelDelegate<void>, valuesChangedCallback?:
+        InputViewModelDelegate<void>)
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.allDependentsSatisfied
+    name: 'allDependentsSatisfied(inputViewModel: InputViewModel)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: inputViewModel
+          type:
+            - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel'
+          description: ''
+      content: 'function allDependentsSatisfied(inputViewModel: InputViewModel)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.areDirty
+    name: areDirty()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function areDirty()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.areValid
+    name: areValid()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function areValid()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.getInputsAsDictionary
+    name: getInputsAsDictionary()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getInputsAsDictionary()
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.getInputViewModelById
+    name: 'getInputViewModelById(id: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: id
+          type:
+            - string
+          description: ''
+      content: 'function getInputViewModelById(id: string)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.getInputViewModels
+    name: getInputViewModels()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getInputViewModels()
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.constructor
     name: >-
       InputsViewModel(formInputViewModel: FormInputViewModel, inputDescriptors:
-      function, inputValues: [key: string]: any, inputValidChangedCallback:
-      InputViewModelDelegate, valuesChangedCallback: InputViewModelDelegate)
+      InputDescriptor[], inputValues: [key: string]: any,
+      inputValidChangedCallback: InputViewModelDelegate<void>,
+      valuesChangedCallback: InputViewModelDelegate<void>)
     children: []
     langs:
       - typeScript
@@ -26,11 +166,12 @@ items:
       parameters:
         - id: formInputViewModel
           type:
-            - vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel
+            - '@vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel'
           description: ''
         - id: inputDescriptors
           type:
-            - function
+            - >-
+              @vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputDescriptor[]
           description: ''
         - id: inputValues
           type:
@@ -39,29 +180,31 @@ items:
         - id: inputValidChangedCallback
           type:
             - >-
-              vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate
+              @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<void>
           description: ''
         - id: valuesChangedCallback
           type:
             - >-
-              vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate
+              @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<void>
           description: ''
       content: >-
         new InputsViewModel(formInputViewModel: FormInputViewModel,
-        inputDescriptors: function, inputValues: [key: string]: any,
-        inputValidChangedCallback: InputViewModelDelegate,
-        valuesChangedCallback: InputViewModelDelegate)
+        inputDescriptors: InputDescriptor[], inputValues: [key: string]: any,
+        inputValidChangedCallback: InputViewModelDelegate<void>,
+        valuesChangedCallback: InputViewModelDelegate<void>)
     type: constructor
   - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel._satisfiedDependentInputs
-    name: _satisfiedDependentInputs
-    fullName: _satisfiedDependentInputs
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel.removeInputViewModel
+    name: 'removeInputViewModel(inputViewModel: InputViewModel)'
     children: []
     langs:
       - typeScript
-    type: property
     summary: ''
     syntax:
-      return:
-        type:
-          - function
+      parameters:
+        - id: inputViewModel
+          type:
+            - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel'
+          description: ''
+      content: 'function removeInputViewModel(inputViewModel: InputViewModel)'
+    type: method

@@ -27,7 +27,7 @@ items:
       content: function getHash()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string>'
     type: method
   - uid: vss-web-extension-sdk.IHostNavigationService.onHashChanged
     name: 'onHashChanged(callback: function)'
@@ -38,7 +38,8 @@ items:
     syntax:
       parameters:
         - id: callback
-          type: []
+          type:
+            - function
           description: |
             Method invoked on each navigation hash change
       content: 'function onHashChanged(callback: function)'

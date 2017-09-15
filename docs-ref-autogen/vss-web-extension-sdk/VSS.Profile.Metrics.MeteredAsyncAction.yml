@@ -4,9 +4,6 @@ items:
     name: MeteredAsyncAction
     fullName: MeteredAsyncAction
     children:
-      - vss-web-extension-sdk.VSS.Profile.Metrics.MeteredAsyncAction.action
-      - >-
-        vss-web-extension-sdk.VSS.Profile.Metrics.MeteredAsyncAction.createMetrics
       - vss-web-extension-sdk.VSS.Profile.Metrics.MeteredAsyncAction.enact
       - vss-web-extension-sdk.VSS.Profile.Metrics.MeteredAsyncAction.constructor
     langs:
@@ -19,45 +16,6 @@ items:
       Change to abstract class when using ts-api-checker supports it
     package: vss-web-extension-sdk
     module: VSS/Profile/Metrics
-  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.MeteredAsyncAction.action
-    name: 'action(metrics: MetricsEvent)'
-    children: []
-    langs:
-      - typeScript
-    summary: |-
-      Action implementation
-      Abstract method, must be overriden
-    syntax:
-      parameters:
-        - id: metrics
-          type:
-            - vss-web-extension-sdk.VSS.Profile.Metrics.MetricsEvent
-          description: |+
-
-      content: 'function action(metrics: MetricsEvent)'
-      return:
-        type:
-          - Q.Promise
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.MeteredAsyncAction.createMetrics
-    name: createMetrics()
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Creates metrics to be consumed, no direct passing metrics object from
-      outside of the class, so the metrics lives only in the scope of this class
-
-      Creates child metrics if parent metrics and feature are specified
-
-      Override with method returning arbitrary IntervalMetricsEvent
-    syntax:
-      parameters: []
-      content: function createMetrics()
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Profile.Metrics.IntervalMetricsEvent
-    type: method
   - uid: vss-web-extension-sdk.VSS.Profile.Metrics.MeteredAsyncAction.enact
     name: enact()
     children: []
@@ -69,7 +27,7 @@ items:
       content: function enact()
       return:
         type:
-          - Q.Promise
+          - Promise<T>
     type: method
   - uid: vss-web-extension-sdk.VSS.Profile.Metrics.MeteredAsyncAction.constructor
     name: 'MeteredAsyncAction(metrics?: IntervalMetricsEvent, feature?: string)'
@@ -81,7 +39,7 @@ items:
       parameters:
         - id: metrics
           type:
-            - vss-web-extension-sdk.VSS.Profile.Metrics.IntervalMetricsEvent
+            - '@vss-web-extension-sdk.VSS.Profile.Metrics.IntervalMetricsEvent'
           description: |
             parent metrics to put the metrics of this enaction into.
           optional: true

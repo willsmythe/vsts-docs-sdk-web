@@ -3,10 +3,157 @@ items:
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityService
     name: IIdentityService
     fullName: IIdentityService
-    children: []
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityService.getIdentities
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityService.getIdentityConnections
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityService.getIdentityImages
     langs:
       - typeScript
     type: interface
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/Services
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityService.getIdentities
+    name: >-
+      getIdentities(prefix: string, operationScope: IOperationScope,
+      identityType: IEntityType, options?: IIdentityServiceOptions,
+      queryTypeHint?: IQueryTypeHint, extensionOptions?:
+      IIdentityPickerExtensionOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: prefix
+          type:
+            - string
+          description: ''
+        - id: operationScope
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
+          description: ''
+        - id: identityType
+          type:
+            - '@vss-web-extension-sdk.VSS.Identities.Picker.Services.IEntityType'
+          description: ''
+        - id: options
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
+          description: ''
+          optional: true
+        - id: queryTypeHint
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IQueryTypeHint
+          description: ''
+          optional: true
+        - id: extensionOptions
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityPickerExtensionOptions
+          description: ''
+          optional: true
+      content: >-
+        function getIdentities(prefix: string, operationScope: IOperationScope,
+        identityType: IEntityType, options?: IIdentityServiceOptions,
+        queryTypeHint?: IQueryTypeHint, extensionOptions?:
+        IIdentityPickerExtensionOptions)
+      return:
+        type:
+          - >-
+            @vss-web-extension-sdk.IDictionaryStringTo<@vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.QueryTokenResultModel>>
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityService.getIdentityConnections
+    name: >-
+      getIdentityConnections(identity: IEntity, operationScope: IOperationScope,
+      identityType: IEntityType, connectionType: IConnectionType, options?:
+      IIdentityServiceOptions, extensionOptions?:
+      IIdentityPickerExtensionOptions, depth?: number)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: identity
+          type:
+            - '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity'
+          description: ''
+        - id: operationScope
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
+          description: ''
+        - id: identityType
+          type:
+            - '@vss-web-extension-sdk.VSS.Identities.Picker.Services.IEntityType'
+          description: ''
+        - id: connectionType
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IConnectionType
+          description: ''
+        - id: options
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
+          description: ''
+          optional: true
+        - id: extensionOptions
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityPickerExtensionOptions
+          description: ''
+          optional: true
+        - id: depth
+          type:
+            - number
+          description: ''
+          optional: true
+      content: >-
+        function getIdentityConnections(identity: IEntity, operationScope:
+        IOperationScope, identityType: IEntityType, connectionType:
+        IConnectionType, options?: IIdentityServiceOptions, extensionOptions?:
+        IIdentityPickerExtensionOptions, depth?: number)
+      return:
+        type:
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IdentitiesGetConnectionsResponseModel>
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityService.getIdentityImages
+    name: >-
+      getIdentityImages(identities: IEntity[], options?:
+      IIdentityServiceOptions)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: identities
+          type:
+            - '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity[]'
+          description: ''
+        - id: options
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
+          description: ''
+          optional: true
+      content: >-
+        function getIdentityImages(identities: IEntity[], options?:
+        IIdentityServiceOptions)
+      return:
+        type:
+          - >-
+            @vss-web-extension-sdk.IDictionaryStringTo<@vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.IDictionaryStringTo<string>>>
+    type: method

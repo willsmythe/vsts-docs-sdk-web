@@ -7,9 +7,11 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Navigation.HubsProvider.HubsProvider.getCachedPageData
       - >-
-        vss-web-extension-sdk.VSS.Navigation.HubsProvider.HubsProvider.getRootContributedHub
+        vss-web-extension-sdk.VSS.Navigation.HubsProvider.HubsProvider.getContainerHub
       - >-
         vss-web-extension-sdk.VSS.Navigation.HubsProvider.HubsProvider.constructor
+      - >-
+        vss-web-extension-sdk.VSS.Navigation.HubsProvider.HubsProvider.invokeRefreshCallbacks
       - >-
         vss-web-extension-sdk.VSS.Navigation.HubsProvider.HubsProvider.reloadCachedProviderData
     langs:
@@ -54,7 +56,7 @@ items:
           optional: true
         - id: contractMetadata
           type:
-            - vss-web-extension-sdk.VSS.Serialization.ContractMetadata
+            - '@vss-web-extension-sdk.VSS.Serialization.ContractMetadata'
           description: >
             Optional contract metadata to use when deserializing the JSON island
             data
@@ -68,20 +70,23 @@ items:
           - T
     type: method
   - uid: >-
-      vss-web-extension-sdk.VSS.Navigation.HubsProvider.HubsProvider.getRootContributedHub
-    name: 'getRootContributedHub(context: IHubsProviderContext)'
+      vss-web-extension-sdk.VSS.Navigation.HubsProvider.HubsProvider.getContainerHub
+    name: 'getContainerHub(context: IHubsProviderContext)'
     children: []
     langs:
       - typeScript
-    summary: Get the root contributed hub for this provider
+    summary: ''
     syntax:
       parameters:
         - id: context
           type:
-            - vss-web-extension-sdk.IHubsProviderContext
-          description: |
-            hubs provider context
-      content: 'function getRootContributedHub(context: IHubsProviderContext)'
+            - '@vss-web-extension-sdk.IHubsProviderContext'
+          description: ''
+      content: 'function getContainerHub(context: IHubsProviderContext)'
+      return:
+        type:
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.IContributedHub>
     type: method
   - uid: vss-web-extension-sdk.VSS.Navigation.HubsProvider.HubsProvider.constructor
     name: 'HubsProvider(variesByOwner: boolean)'
@@ -97,6 +102,17 @@ items:
           description: ''
       content: 'new HubsProvider(variesByOwner: boolean)'
     type: constructor
+  - uid: >-
+      vss-web-extension-sdk.VSS.Navigation.HubsProvider.HubsProvider.invokeRefreshCallbacks
+    name: invokeRefreshCallbacks()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function invokeRefreshCallbacks()
+    type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.HubsProvider.HubsProvider.reloadCachedProviderData
     name: >-

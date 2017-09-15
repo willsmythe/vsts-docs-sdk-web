@@ -58,7 +58,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.constructor
     name: >-
       DelayedFunction(instance: any, ms: number, name: string, method: Function,
-      data?: function)
+      data?: any[])
     children: []
     langs:
       - typeScript
@@ -83,13 +83,13 @@ items:
           description: Method to execute
         - id: data
           type:
-            - function
+            - 'any[]'
           description: |
             Arguments to pass to the method
           optional: true
       content: >-
         new DelayedFunction(instance: any, ms: number, name: string, method:
-        Function, data?: function)
+        Function, data?: any[])
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.extendCooldown
     name: extendCooldown()
@@ -178,7 +178,7 @@ items:
       content: 'function setDelay(ms: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.setMethod
-    name: 'setMethod(instance: any, method: Function, data?: function)'
+    name: 'setMethod(instance: any, method: Function, data?: any[])'
     children: []
     langs:
       - typeScript
@@ -195,11 +195,11 @@ items:
           description: Method to execute
         - id: data
           type:
-            - function
+            - 'any[]'
           description: |
             (Optional) arguments to pass to the method
           optional: true
-      content: 'function setMethod(instance: any, method: Function, data?: function)'
+      content: 'function setMethod(instance: any, method: Function, data?: any[])'
     type: method
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.start
     name: start()

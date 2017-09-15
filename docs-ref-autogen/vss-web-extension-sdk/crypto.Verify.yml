@@ -1,0 +1,54 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.crypto.Verify
+    name: Verify
+    fullName: Verify
+    children:
+      - vss-web-extension-sdk.crypto.Verify.update
+      - vss-web-extension-sdk.crypto.Verify.verify
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      - '@vss-web-extension-sdk.NodeJS.WritableStream'
+    package: vss-web-extension-sdk
+    module: crypto
+  - uid: vss-web-extension-sdk.crypto.Verify.update
+    name: 'update(data: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: data
+          type:
+            - string
+          description: ''
+      content: 'function update(data: string)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.crypto.Verify'
+    type: method
+  - uid: vss-web-extension-sdk.crypto.Verify.verify
+    name: 'verify(object: string, signature: Buffer)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: object
+          type:
+            - string
+          description: ''
+        - id: signature
+          type:
+            - Buffer
+          description: ''
+      content: 'function verify(object: string, signature: Buffer)'
+      return:
+        type:
+          - boolean
+    type: method

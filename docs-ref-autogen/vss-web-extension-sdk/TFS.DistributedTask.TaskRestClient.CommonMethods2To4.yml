@@ -9,8 +9,6 @@ items:
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.appendTimelineRecordFeed
       - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.authTokenManager
-      - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.constructor
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.createLog
@@ -18,10 +16,6 @@ items:
         vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.createTimeline
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.deleteTimeline
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.feedApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.getLog
       - >-
@@ -35,31 +29,13 @@ items:
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.getTimelines
       - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.logsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.plansApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.recordsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.timelinesApiVersion
-      - >-
         vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.updateRecords
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4._beginGetLocation
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4._beginRequest
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4._beginRequestWithAjaxResult
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4._issueAjaxRequest
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4._rootRequestPath
-      - >-
-        vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     package: vss-web-extension-sdk
     module: TFS/DistributedTask/TaskRestClient
   - uid: >-
@@ -100,12 +76,13 @@ items:
         hubName: string, planId: string, logId: number)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.appendTimelineRecordFeed
     name: >-
-      appendTimelineRecordFeed(lines: VssJsonCollectionWrapperV,
+      appendTimelineRecordFeed(lines: VssJsonCollectionWrapperV<string[]>,
       scopeIdentifier: string, hubName: string, planId: string, timelineId:
       string, recordId: string)
     children: []
@@ -117,7 +94,7 @@ items:
         - id: lines
           type:
             - >-
-              vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV
+              @vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV<string[]>
           description: ''
         - id: scopeIdentifier
           type:
@@ -142,26 +119,13 @@ items:
             - string
           description: ''
       content: >-
-        function appendTimelineRecordFeed(lines: VssJsonCollectionWrapperV,
-        scopeIdentifier: string, hubName: string, planId: string, timelineId:
-        string, recordId: string)
+        function appendTimelineRecordFeed(lines:
+        VssJsonCollectionWrapperV<string[]>, scopeIdentifier: string, hubName:
+        string, planId: string, timelineId: string, recordId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.constructor
     name: >-
@@ -179,7 +143,7 @@ items:
           description: ''
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
       content: >-
@@ -199,7 +163,7 @@ items:
       parameters:
         - id: log
           type:
-            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog
+            - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog'
           description: ''
         - id: scopeIdentifier
           type:
@@ -220,7 +184,8 @@ items:
         string, planId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.createTimeline
@@ -235,7 +200,7 @@ items:
       parameters:
         - id: timeline
           type:
-            - vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline
+            - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline'
           description: ''
         - id: scopeIdentifier
           type:
@@ -256,7 +221,8 @@ items:
         hubName: string, planId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.deleteTimeline
@@ -292,34 +258,8 @@ items:
         planId: string, timelineId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.feedApiVersion
-    name: feedApiVersion
-    fullName: feedApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.getLog
     name: >-
@@ -364,7 +304,7 @@ items:
         string, logId: number, startLine?: number, endLine?: number)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string[]>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.getLogs
@@ -394,7 +334,8 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLog[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.getPlan
@@ -424,7 +365,8 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationPlan>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.getRecords
@@ -465,7 +407,8 @@ items:
         string, timelineId: string, changeId?: number)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TimelineRecord[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.getTimeline
@@ -511,7 +454,8 @@ items:
         string, timelineId: string, changeId?: number, includeRecords?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.getTimelines
@@ -541,65 +485,15 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.Timeline[]>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.logsApiVersion
-    name: logsApiVersion
-    fullName: logsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.plansApiVersion
-    name: plansApiVersion
-    fullName: plansApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.recordsApiVersion
-    name: recordsApiVersion
-    fullName: recordsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.timelinesApiVersion
-    name: timelinesApiVersion
-    fullName: timelinesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.updateRecords
     name: >-
-      updateRecords(records: VssJsonCollectionWrapperV, scopeIdentifier: string,
-      hubName: string, planId: string, timelineId: string)
+      updateRecords(records: VssJsonCollectionWrapperV<TimelineRecord[]>,
+      scopeIdentifier: string, hubName: string, planId: string, timelineId:
+      string)
     children: []
     langs:
       - typeScript
@@ -609,7 +503,7 @@ items:
         - id: records
           type:
             - >-
-              vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV
+              @vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TimelineRecord[]>
           description: ''
         - id: scopeIdentifier
           type:
@@ -630,163 +524,11 @@ items:
             - string
           description: ''
       content: >-
-        function updateRecords(records: VssJsonCollectionWrapperV,
-        scopeIdentifier: string, hubName: string, planId: string, timelineId:
-        string)
+        function updateRecords(records:
+        VssJsonCollectionWrapperV<TimelineRecord[]>, scopeIdentifier: string,
+        hubName: string, planId: string, timelineId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4._beginGetLocation
-    name: '_beginGetLocation(area: string, locationId: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Gets information about an API resource location (route template, supported
-      versions, etc.)
-    syntax:
-      parameters:
-        - id: area
-          type:
-            - string
-          description: resource area name
-        - id: locationId
-          type:
-            - string
-          description: |
-            Guid of the location to get
-      content: 'function _beginGetLocation(area: string, locationId: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4._beginRequest
-    name: >-
-      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
-      boolean)
-    children: []
-    langs:
-      - typeScript
-    summary: Issue a request to a VSS REST endpoint.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >-
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used
-          optional: true
-      content: >-
-        function _beginRequest(requestParams: VssApiResourceRequestParams,
-        useAjaxResult?: boolean)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4._beginRequestWithAjaxResult
-    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue a request to a VSS REST endpoint and makes sure the result contains
-      jqXHR. Use spread to access jqXHR.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-      content: >-
-        function _beginRequestWithAjaxResult(requestParams:
-        VssApiResourceRequestParams)
-      return:
-        type:
-          - Q.Promise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4._issueAjaxRequest
-    name: >-
-      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
-      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue an AJAX request. This is a wrapper around jquery's ajax method that
-      handles VSS authentication
-
-      and triggers events that can be listened to by other modules.
-    syntax:
-      parameters:
-        - id: requestUrl
-          type:
-            - string
-          description: Url to send the request to
-        - id: ajaxOptions
-          type:
-            - JQueryAjaxSettings
-          description: jQuery.ajax options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used.
-          optional: true
-        - id: vssRequestOptions
-          type:
-            - vss-web-extension-sdk.IVssAjaxOptions
-          description: ''
-          optional: true
-      content: >-
-        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
-        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
-        IVssAjaxOptions)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4._setInitializationPromise
-    name: '_setInitializationPromise(promise: IPromise)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Sets a promise that is waited on before any requests are issued. Can be
-      used to asynchronously
-
-      set the request url and auth token manager.
-    syntax:
-      parameters:
-        - id: promise
-          type:
-            - vss-web-extension-sdk.IPromise
-          description: ''
-      content: 'function _setInitializationPromise(promise: IPromise)'
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TimelineRecord[]>
     type: method

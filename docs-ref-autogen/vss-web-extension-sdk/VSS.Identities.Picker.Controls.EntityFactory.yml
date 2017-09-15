@@ -5,6 +5,12 @@ items:
     fullName: EntityFactory
     children:
       - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Controls.EntityFactory.createStringEntity
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Controls.EntityFactory.isStringEntityId
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Controls.EntityFactory.isStringPrefixedLocalId
+      - >-
         vss-web-extension-sdk.VSS.Identities.Picker.Controls.EntityFactory.STRING_ENTITY_TYPE
     langs:
       - typeScript
@@ -15,6 +21,65 @@ items:
         isStringEntity and isStringEntityId are publicly supported.
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/Controls
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Controls.EntityFactory.createStringEntity
+    name: 'createStringEntity(displayName: string, imageUrl?: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: displayName
+          type:
+            - string
+          description: ''
+        - id: imageUrl
+          type:
+            - string
+          description: ''
+          optional: true
+      content: 'function createStringEntity(displayName: string, imageUrl?: string)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Controls.EntityFactory.isStringEntityId
+    name: 'isStringEntityId(entityId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: entityId
+          type:
+            - string
+          description: ''
+      content: 'function isStringEntityId(entityId: string)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Controls.EntityFactory.isStringPrefixedLocalId
+    name: 'isStringPrefixedLocalId(localId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: localId
+          type:
+            - string
+          description: ''
+      content: 'function isStringPrefixedLocalId(localId: string)'
+      return:
+        type:
+          - boolean
+    type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.EntityFactory.STRING_ENTITY_TYPE
     name: STRING_ENTITY_TYPE

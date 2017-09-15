@@ -9,8 +9,6 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getBaseUri
       - >-
-        vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getConnection
-      - >-
         vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getContribution
       - >-
         vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getContributions
@@ -46,6 +44,8 @@ items:
       - typeScript
     type: class
     summary: Manages all RegisteredExtension instances and their contributions.
+    extends:
+      - '@vss-web-extension-sdk.VSS.Service.VssService'
     package: vss-web-extension-sdk
     module: VSS/Contributions/Services
   - uid: >-
@@ -70,27 +70,13 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose baseUri is being requested
       content: 'function getBaseUri(contribution: Contribution)'
       return:
         type:
           - string
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getConnection
-    name: getConnection()
-    children: []
-    langs:
-      - typeScript
-    summary: Gets the relative location for the service's connection
-    syntax:
-      parameters: []
-      content: function getConnection()
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Service.VssConnection
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getContribution
@@ -108,12 +94,13 @@ items:
       content: 'function getContribution(id: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getContributions
     name: >-
-      getContributions(ids: function, includeRootItems: boolean,
+      getContributions(ids: string[], includeRootItems: boolean,
       includeChildren: boolean, recursive?: boolean, contributionType?: string)
     children: []
     langs:
@@ -123,7 +110,7 @@ items:
       parameters:
         - id: ids
           type:
-            - function
+            - 'string[]'
           description: Ids of the targeted contribution(s)
         - id: includeRootItems
           type:
@@ -144,12 +131,13 @@ items:
           description: Optional type of contribution to filter by
           optional: true
       content: >-
-        function getContributions(ids: function, includeRootItems: boolean,
+        function getContributions(ids: string[], includeRootItems: boolean,
         includeChildren: boolean, recursive?: boolean, contributionType?:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getContributionsForTarget
@@ -174,11 +162,12 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getContributionsForTargets
-    name: 'getContributionsForTargets(targetIds: function, contributionType?: string)'
+    name: 'getContributionsForTargets(targetIds: string[], contributionType?: string)'
     children: []
     langs:
       - typeScript
@@ -187,7 +176,7 @@ items:
       parameters:
         - id: targetIds
           type:
-            - function
+            - 'string[]'
           description: Ids of the targeted contribution(s)
         - id: contributionType
           type:
@@ -195,11 +184,12 @@ items:
           description: Optional type of contribution to filter by
           optional: true
       content: >-
-        function getContributionsForTargets(targetIds: function,
+        function getContributionsForTargets(targetIds: string[],
         contributionType?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getFallbackUri
@@ -212,7 +202,7 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose fallbackUri is being requested
       content: 'function getFallbackUri(contribution: Contribution)'
@@ -244,7 +234,8 @@ items:
       content: 'function getLoadedContributionsOfType(contributionType: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getProviderDisplayName
@@ -257,7 +248,7 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose version is being requested
       content: 'function getProviderDisplayName(contribution: Contribution)'
@@ -276,7 +267,7 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: The contribution whose provider property is being requested
         - id: propertyName
           type:
@@ -301,7 +292,7 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose registration is being requested
       content: 'function getRegistrationId(contribution: Contribution)'
@@ -320,7 +311,7 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose fallbackUri is being requested
       content: 'function getServiceInstanceType(contribution: Contribution)'
@@ -339,7 +330,7 @@ items:
       parameters:
         - id: contribution
           type:
-            - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose version is being requested
       content: 'function getVersion(contribution: Contribution)'
@@ -362,7 +353,7 @@ items:
       parameters:
         - id: connection
           type:
-            - vss-web-extension-sdk.VSS.Service.VssConnection
+            - '@vss-web-extension-sdk.VSS.Service.VssConnection'
           description: |
             Service.VssConnection
       content: 'function initializeConnection(connection: VssConnection)'
@@ -386,12 +377,12 @@ items:
       content: 'function isExtensionActive(extensionId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<boolean>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.queryContributions
     name: >-
-      queryContributions(ids: function, queryOptions: ContributionQueryOptions,
+      queryContributions(ids: string[], queryOptions: ContributionQueryOptions,
       contributionType?: string, queryCallback?: ContributionQueryCallback)
     children: []
     langs:
@@ -401,7 +392,7 @@ items:
       parameters:
         - id: ids
           type:
-            - function
+            - 'string[]'
           description: Ids of the targeted contribution(s)
         - id: queryOptions
           type:
@@ -415,16 +406,17 @@ items:
         - id: queryCallback
           type:
             - >-
-              vss-web-extension-sdk.VSS.Contributions.Services.ContributionQueryCallback
+              @vss-web-extension-sdk.VSS.Contributions.Services.ContributionQueryCallback
           description: Optional method to filter contributions by
           optional: true
       content: >-
-        function queryContributions(ids: function, queryOptions:
+        function queryContributions(ids: string[], queryOptions:
         ContributionQueryOptions, contributionType?: string, queryCallback?:
         ContributionQueryCallback)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.registerContributionData
@@ -442,7 +434,7 @@ items:
         - id: contributionData
           type:
             - >-
-              vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributionsPageData
+              @vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributionsPageData
           description: The contribution data to register
         - id: clearExisting
           type:
@@ -457,7 +449,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.registerContributions
-    name: 'registerContributions(contributions: function)'
+    name: 'registerContributions(contributions: Contribution[])'
     children: []
     langs:
       - typeScript
@@ -466,7 +458,7 @@ items:
       parameters:
         - id: contributions
           type:
-            - function
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution[]'
           description: ''
-      content: 'function registerContributions(contributions: function)'
+      content: 'function registerContributions(contributions: Contribution[])'
     type: method

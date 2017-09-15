@@ -11,13 +11,13 @@ items:
       - >-
         vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcBranchRef.isDeleted
       - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcBranchRef.owner
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcBranchRef.path
       - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcBranchRef.url
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcBranchRef._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShallowBranchRef'
     package: vss-web-extension-sdk
     module: TFS/VersionControl/Contracts
   - uid: >-
@@ -69,19 +69,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcBranchRef.path
-    name: path
-    fullName: path
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcBranchRef.url
     name: url
     fullName: url
@@ -94,15 +82,3 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcBranchRef._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

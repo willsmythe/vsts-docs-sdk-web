@@ -15,19 +15,17 @@ items:
       - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance.enabled
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance.environment
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance.id
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance.inputs
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance.instanceId
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance.name
       - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance.refName
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance.timeoutInMinutes
-      - vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance.version
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskReference'
     package: vss-web-extension-sdk
     module: TFS/DistributedTask/Contracts
   - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance.alwaysRun
@@ -105,46 +103,10 @@ items:
       return:
         type:
           - '[key: string]: string'
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance.inputs
-    name: inputs
-    fullName: inputs
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - '[key: string]: string'
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance.instanceId
     name: instanceId
     fullName: instanceId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance.name
-    name: name
-    fullName: name
     children: []
     langs:
       - typeScript
@@ -179,15 +141,3 @@ items:
       return:
         type:
           - number
-  - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance.version
-    name: version
-    fullName: version
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string

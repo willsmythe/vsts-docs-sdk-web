@@ -12,15 +12,14 @@ items:
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplateReference.name
       - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplateReference.url
-      - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplateReference.workItemTypeName
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplateReference._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTrackingResource
     package: vss-web-extension-sdk
     module: TFS/WorkItemTracking/Contracts
   - uid: >-
@@ -63,19 +62,6 @@ items:
         type:
           - string
   - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplateReference.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplateReference.workItemTypeName
     name: workItemTypeName
     fullName: workItemTypeName
@@ -88,16 +74,3 @@ items:
       return:
         type:
           - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTemplateReference._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

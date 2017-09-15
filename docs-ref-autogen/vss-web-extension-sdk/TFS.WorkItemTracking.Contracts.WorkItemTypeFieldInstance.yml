@@ -11,16 +11,13 @@ items:
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeFieldInstance.field
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeFieldInstance.helpText
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeFieldInstance.name
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeFieldInstance.referenceName
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeFieldInstance.url
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemFieldReference
     package: vss-web-extension-sdk
     module: TFS/WorkItemTracking/Contracts
   - uid: >-
@@ -49,50 +46,11 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemFieldReference
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemFieldReference
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeFieldInstance.helpText
     name: helpText
     fullName: helpText
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeFieldInstance.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeFieldInstance.referenceName
-    name: referenceName
-    fullName: referenceName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeFieldInstance.url
-    name: url
-    fullName: url
     children: []
     langs:
       - typeScript

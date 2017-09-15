@@ -59,7 +59,8 @@ items:
           description: Event-specific arguments
           optional: true
         - id: handlerResultFilter
-          type: []
+          type:
+            - function
           description: >
             Optional callback method to be able to break out of the handler
             invocation loop based on the return value of a handler. The filter
@@ -70,7 +71,7 @@ items:
         TEventArgs, handlerResultFilter?: function)
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.NamedEventCollection.subscribe
-    name: 'subscribe(eventName: string, handler: IFunctionPPR)'
+    name: 'subscribe(eventName: string, handler: IFunctionPPR<TSender>)'
     children: []
     langs:
       - typeScript
@@ -83,13 +84,13 @@ items:
           description: the name of the event to subscribe to
         - id: handler
           type:
-            - vss-web-extension-sdk.IFunctionPPR
+            - '@vss-web-extension-sdk.IFunctionPPR<TSender>'
           description: |
             Event handler method to register
-      content: 'function subscribe(eventName: string, handler: IFunctionPPR)'
+      content: 'function subscribe(eventName: string, handler: IFunctionPPR<TSender>)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.NamedEventCollection.unsubscribe
-    name: 'unsubscribe(eventName: string, handler: IFunctionPPR)'
+    name: 'unsubscribe(eventName: string, handler: IFunctionPPR<TSender>)'
     children: []
     langs:
       - typeScript
@@ -102,10 +103,10 @@ items:
           description: The name of the event to unsubscribe to
         - id: handler
           type:
-            - vss-web-extension-sdk.IFunctionPPR
+            - '@vss-web-extension-sdk.IFunctionPPR<TSender>'
           description: |
             Event handler method to remove
-      content: 'function unsubscribe(eventName: string, handler: IFunctionPPR)'
+      content: 'function unsubscribe(eventName: string, handler: IFunctionPPR<TSender>)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Handlers.NamedEventCollection.unsubscribeAll

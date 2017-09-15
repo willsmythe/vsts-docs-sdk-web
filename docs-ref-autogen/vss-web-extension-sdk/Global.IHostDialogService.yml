@@ -23,7 +23,8 @@ items:
     summary: ''
     syntax:
       return:
-        type: []
+        type:
+          - function
   - uid: vss-web-extension-sdk.IHostDialogService.openDialog
     name: >-
       openDialog(contributionId: string, dialogOptions: IHostDialogOptions,
@@ -42,7 +43,7 @@ items:
           description: The id of the control contribution to host in the dialog
         - id: dialogOptions
           type:
-            - vss-web-extension-sdk.IHostDialogOptions
+            - '@vss-web-extension-sdk.IHostDialogOptions'
           description: options.title - title of dialog
         - id: contributionConfig
           type:
@@ -61,7 +62,8 @@ items:
         IHostDialogOptions, contributionConfig?: Object, postContent?: Object)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.IExternalDialog>
     type: method
   - uid: vss-web-extension-sdk.IHostDialogService.openMessageDialog
     name: 'openMessageDialog(message: string, options?: IOpenMessageDialogOptions)'
@@ -79,7 +81,7 @@ items:
           description: the message to display in the dialog.
         - id: options
           type:
-            - vss-web-extension-sdk.IOpenMessageDialogOptions
+            - '@vss-web-extension-sdk.IOpenMessageDialogOptions'
           description: ''
           optional: true
       content: >-
@@ -87,5 +89,6 @@ items:
         IOpenMessageDialogOptions)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.IMessageDialogResult>
     type: method

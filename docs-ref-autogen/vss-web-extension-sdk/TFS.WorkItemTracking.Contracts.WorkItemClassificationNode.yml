@@ -17,14 +17,13 @@ items:
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemClassificationNode.name
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemClassificationNode.structureType
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemClassificationNode.url
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemClassificationNode._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTrackingResource
     package: vss-web-extension-sdk
     module: TFS/WorkItemTracking/Contracts
   - uid: >-
@@ -52,7 +51,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemClassificationNode[]
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemClassificationNode.id
     name: id
@@ -105,29 +105,3 @@ items:
       return:
         type:
           - TreeNodeStructureType
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemClassificationNode.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemClassificationNode._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

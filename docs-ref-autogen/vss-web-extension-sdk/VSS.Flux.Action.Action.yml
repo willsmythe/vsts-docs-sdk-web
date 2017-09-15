@@ -5,6 +5,7 @@ items:
     fullName: Action
     children:
       - vss-web-extension-sdk.VSS.Flux.Action.Action.addListener
+      - vss-web-extension-sdk.VSS.Flux.Action.Action.invoke
       - vss-web-extension-sdk.VSS.Flux.Action.Action.removeListener
     langs:
       - typeScript
@@ -21,7 +22,8 @@ items:
     syntax:
       parameters:
         - id: listener
-          type: []
+          type:
+            - function
           description: Listener to add
         - id: context
           type:
@@ -29,6 +31,20 @@ items:
           description: Optional context to bind to listener
           optional: true
       content: 'function addListener(listener: function, context?: any)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Flux.Action.Action.invoke
+    name: 'invoke(payload: T)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: payload
+          type:
+            - T
+          description: ''
+      content: 'function invoke(payload: T)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Flux.Action.Action.removeListener
     name: 'removeListener(listener: function)'
@@ -39,7 +55,8 @@ items:
     syntax:
       parameters:
         - id: listener
-          type: []
+          type:
+            - function
           description: |
             Listener to remove
       content: 'function removeListener(listener: function)'

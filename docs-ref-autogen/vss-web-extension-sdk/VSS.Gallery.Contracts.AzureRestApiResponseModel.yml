@@ -5,109 +5,15 @@ items:
     fullName: AzureRestApiResponseModel
     children:
       - >-
-        vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.assetDetails
-      - >-
-        vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.assetId
-      - >-
-        vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.assetVersion
-      - >-
-        vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.customerSupportEmail
-      - >-
-        vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.integrationContactEmail
-      - >-
-        vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.operation
-      - >-
         vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.operationStatus
-      - >-
-        vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.planId
-      - >-
-        vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.publisherId
-      - >-
-        vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.type
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiRequestModel'
     package: vss-web-extension-sdk
     module: VSS/Gallery/Contracts
-  - uid: >-
-      vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.assetDetails
-    name: assetDetails
-    fullName: assetDetails
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets or sets the Asset details
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Gallery.Contracts.AssetDetails
-  - uid: >-
-      vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.assetId
-    name: assetId
-    fullName: assetId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets or sets the asset id
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.assetVersion
-    name: assetVersion
-    fullName: assetVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets or sets the asset version
-    syntax:
-      return:
-        type:
-          - number
-  - uid: >-
-      vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.customerSupportEmail
-    name: customerSupportEmail
-    fullName: customerSupportEmail
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets or sets the customer support email
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.integrationContactEmail
-    name: integrationContactEmail
-    fullName: integrationContactEmail
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets or sets the integration contact email
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.operation
-    name: operation
-    fullName: operation
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets or sets the asset version
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.operationStatus
     name: operationStatus
@@ -121,42 +27,4 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.VSS.Gallery.Contracts.RestApiResponseStatusModel
-  - uid: >-
-      vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.planId
-    name: planId
-    fullName: planId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets or sets the plan identifier if any.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.publisherId
-    name: publisherId
-    fullName: publisherId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets or sets the publisher id
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiResponseModel.type
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets or sets the resource type
-    syntax:
-      return:
-        type:
-          - string
+            @vss-web-extension-sdk.VSS.Gallery.Contracts.RestApiResponseStatusModel

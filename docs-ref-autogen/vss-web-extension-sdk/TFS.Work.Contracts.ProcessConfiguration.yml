@@ -31,7 +31,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Work.Contracts.CategoryConfiguration
+          - '@vss-web-extension-sdk.TFS.Work.Contracts.CategoryConfiguration'
   - uid: >-
       vss-web-extension-sdk.TFS.Work.Contracts.ProcessConfiguration.portfolioBacklogs
     name: portfolioBacklogs
@@ -44,7 +44,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.TFS.Work.Contracts.CategoryConfiguration[]'
   - uid: >-
       vss-web-extension-sdk.TFS.Work.Contracts.ProcessConfiguration.requirementBacklog
     name: requirementBacklog
@@ -57,7 +57,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Work.Contracts.CategoryConfiguration
+          - '@vss-web-extension-sdk.TFS.Work.Contracts.CategoryConfiguration'
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.ProcessConfiguration.taskBacklog
     name: taskBacklog
     fullName: taskBacklog
@@ -69,7 +69,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Work.Contracts.CategoryConfiguration
+          - '@vss-web-extension-sdk.TFS.Work.Contracts.CategoryConfiguration'
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.ProcessConfiguration.typeFields
     name: typeFields
     fullName: typeFields
@@ -81,7 +81,9 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: WorkItemFieldReference'
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemFieldReference
   - uid: vss-web-extension-sdk.TFS.Work.Contracts.ProcessConfiguration.url
     name: url
     fullName: url

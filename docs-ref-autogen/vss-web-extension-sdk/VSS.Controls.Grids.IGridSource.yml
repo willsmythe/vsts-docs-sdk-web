@@ -47,9 +47,9 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.Controls.Grids.Grid
+          - '@vss-web-extension-sdk.VSS.Controls.Grids.Grid'
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.IGridSource.update
-    name: 'update(items: function)'
+    name: 'update(items: IGridSourceItem[])'
     children: []
     langs:
       - typeScript
@@ -58,9 +58,9 @@ items:
       parameters:
         - id: items
           type:
-            - function
+            - '@vss-web-extension-sdk.VSS.Controls.Grids.IGridSourceItem[]'
           description: ''
-      content: 'function update(items: function)'
+      content: 'function update(items: IGridSourceItem[])'
       return:
         type:
           - any

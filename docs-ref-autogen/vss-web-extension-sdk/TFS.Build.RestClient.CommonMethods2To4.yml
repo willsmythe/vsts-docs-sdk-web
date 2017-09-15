@@ -7,29 +7,15 @@ items:
       - vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.addBuildTag
       - >-
         vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.addBuildTags
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.artifactsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.authTokenManager
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.badgeApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.buildbadgeApiVersion
       - vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.constructor
       - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.controllersApiVersion
-      - >-
         vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.createArtifact
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.definitionsApiVersion
       - >-
         vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.deleteBuildTag
       - >-
         vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.deleteDefinition
       - >-
         vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.deleteTemplate
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
       - vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getBadge
       - >-
         vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getBuildBadge
@@ -53,41 +39,15 @@ items:
         vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getResourceUsage
       - vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getTags
       - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.optionsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.resourceUsageApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.revisionsApiVersion
-      - >-
         vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.serviceInstanceId
       - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.settingsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.tagsApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.tagsApiVersion_6e6114b2
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.templatesApiVersion
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.timelineApiVersion
-      - >-
         vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.updateBuildSettings
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4._beginGetLocation
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4._beginRequest
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4._beginRequestWithAjaxResult
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4._issueAjaxRequest
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4._rootRequestPath
-      - >-
-        vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     package: vss-web-extension-sdk
     module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.addBuildTag
@@ -113,10 +73,10 @@ items:
       content: 'function addBuildTag(project: string, buildId: number, tag: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string[]>'
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.addBuildTags
-    name: 'addBuildTags(tags: function, project: string, buildId: number)'
+    name: 'addBuildTags(tags: string[], project: string, buildId: number)'
     children: []
     langs:
       - typeScript
@@ -125,7 +85,7 @@ items:
       parameters:
         - id: tags
           type:
-            - function
+            - 'string[]'
           description: ''
         - id: project
           type:
@@ -135,63 +95,11 @@ items:
           type:
             - number
           description: ''
-      content: 'function addBuildTags(tags: function, project: string, buildId: number)'
+      content: 'function addBuildTags(tags: string[], project: string, buildId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string[]>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.artifactsApiVersion
-    name: artifactsApiVersion
-    fullName: artifactsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.badgeApiVersion
-    name: badgeApiVersion
-    fullName: badgeApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.buildbadgeApiVersion
-    name: buildbadgeApiVersion
-    fullName: buildbadgeApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.constructor
     name: >-
       CommonMethods2To4(rootRequestPath: string, options?:
@@ -208,26 +116,13 @@ items:
           description: ''
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
       content: >-
         new CommonMethods2To4(rootRequestPath: string, options?:
         IVssHttpClientOptions)
     type: constructor
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.controllersApiVersion
-    name: controllersApiVersion
-    fullName: controllersApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.createArtifact
     name: 'createArtifact(artifact: BuildArtifact, buildId: number, project?: string)'
@@ -239,7 +134,7 @@ items:
       parameters:
         - id: artifact
           type:
-            - vss-web-extension-sdk.TFS.Build.Contracts.BuildArtifact
+            - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildArtifact'
           description: ''
         - id: buildId
           type:
@@ -255,21 +150,9 @@ items:
         project?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildArtifact>
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.definitionsApiVersion
-    name: definitionsApiVersion
-    fullName: definitionsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.deleteBuildTag
     name: 'deleteBuildTag(project: string, buildId: number, tag: string)'
@@ -294,7 +177,7 @@ items:
       content: 'function deleteBuildTag(project: string, buildId: number, tag: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string[]>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.deleteDefinition
@@ -317,7 +200,7 @@ items:
       content: 'function deleteDefinition(definitionId: number, project?: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.deleteTemplate
@@ -339,21 +222,8 @@ items:
       content: 'function deleteTemplate(project: string, templateId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getBadge
     name: 'getBadge(project: string, definitionId: number, branchName?: string)'
     children: []
@@ -380,7 +250,7 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string>'
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getBuildBadge
     name: >-
@@ -415,7 +285,8 @@ items:
         string, branchName?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildBadge>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getBuildBadgeData
@@ -451,7 +322,7 @@ items:
         string, branchName?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getBuildController
@@ -469,7 +340,8 @@ items:
       content: 'function getBuildController(controllerId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildController>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getBuildControllers
@@ -488,7 +360,8 @@ items:
       content: 'function getBuildControllers(name?: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildController[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getBuildOptionDefinitions
@@ -507,7 +380,8 @@ items:
       content: 'function getBuildOptionDefinitions(project?: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionDefinition[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getBuildSettings
@@ -521,7 +395,8 @@ items:
       content: function getBuildSettings()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildSettings>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getBuildTags
     name: 'getBuildTags(project: string, buildId: number)'
@@ -542,7 +417,7 @@ items:
       content: 'function getBuildTags(project: string, buildId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string[]>'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getBuildTimeline
@@ -583,7 +458,8 @@ items:
         string, changeId?: number, planId?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Timeline>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getDefinitionRevisions
@@ -605,7 +481,8 @@ items:
       content: 'function getDefinitionRevisions(project: string, definitionId: number)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionRevision[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getResourceUsage
@@ -619,7 +496,8 @@ items:
       content: function getResourceUsage()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildResourceUsage>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.getTags
     name: 'getTags(project: string)'
@@ -636,116 +514,12 @@ items:
       content: 'function getTags(project: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<string[]>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.optionsApiVersion
-    name: optionsApiVersion
-    fullName: optionsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.resourceUsageApiVersion
-    name: resourceUsageApiVersion
-    fullName: resourceUsageApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.revisionsApiVersion
-    name: revisionsApiVersion
-    fullName: revisionsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.serviceInstanceId
     name: serviceInstanceId
     fullName: serviceInstanceId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.settingsApiVersion
-    name: settingsApiVersion
-    fullName: settingsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.tagsApiVersion
-    name: tagsApiVersion
-    fullName: tagsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.tagsApiVersion_6e6114b2
-    name: tagsApiVersion_6e6114b2
-    fullName: tagsApiVersion_6e6114b2
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.templatesApiVersion
-    name: templatesApiVersion
-    fullName: templatesApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4.timelineApiVersion
-    name: timelineApiVersion
-    fullName: timelineApiVersion
     children: []
     langs:
       - typeScript
@@ -766,162 +540,11 @@ items:
       parameters:
         - id: settings
           type:
-            - vss-web-extension-sdk.TFS.Build.Contracts.BuildSettings
+            - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildSettings'
           description: ''
       content: 'function updateBuildSettings(settings: BuildSettings)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4._beginGetLocation
-    name: '_beginGetLocation(area: string, locationId: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Gets information about an API resource location (route template, supported
-      versions, etc.)
-    syntax:
-      parameters:
-        - id: area
-          type:
-            - string
-          description: resource area name
-        - id: locationId
-          type:
-            - string
-          description: |
-            Guid of the location to get
-      content: 'function _beginGetLocation(area: string, locationId: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4._beginRequest
-    name: >-
-      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
-      boolean)
-    children: []
-    langs:
-      - typeScript
-    summary: Issue a request to a VSS REST endpoint.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >-
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used
-          optional: true
-      content: >-
-        function _beginRequest(requestParams: VssApiResourceRequestParams,
-        useAjaxResult?: boolean)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4._beginRequestWithAjaxResult
-    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue a request to a VSS REST endpoint and makes sure the result contains
-      jqXHR. Use spread to access jqXHR.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-      content: >-
-        function _beginRequestWithAjaxResult(requestParams:
-        VssApiResourceRequestParams)
-      return:
-        type:
-          - Q.Promise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4._issueAjaxRequest
-    name: >-
-      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
-      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue an AJAX request. This is a wrapper around jquery's ajax method that
-      handles VSS authentication
-
-      and triggers events that can be listened to by other modules.
-    syntax:
-      parameters:
-        - id: requestUrl
-          type:
-            - string
-          description: Url to send the request to
-        - id: ajaxOptions
-          type:
-            - JQueryAjaxSettings
-          description: jQuery.ajax options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used.
-          optional: true
-        - id: vssRequestOptions
-          type:
-            - vss-web-extension-sdk.IVssAjaxOptions
-          description: ''
-          optional: true
-      content: >-
-        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
-        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
-        IVssAjaxOptions)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4._setInitializationPromise
-    name: '_setInitializationPromise(promise: IPromise)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Sets a promise that is waited on before any requests are issued. Can be
-      used to asynchronously
-
-      set the request url and auth token manager.
-    syntax:
-      parameters:
-        - id: promise
-          type:
-            - vss-web-extension-sdk.IPromise
-          description: ''
-      content: 'function _setInitializationPromise(promise: IPromise)'
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildSettings>
     type: method

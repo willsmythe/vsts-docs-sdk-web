@@ -33,7 +33,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.ServiceEndpoint[]
   - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobEnvironment.mask
     name: mask
     fullName: mask
@@ -45,7 +46,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.MaskHint[]'
   - uid: vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobEnvironment.options
     name: options
     fullName: options
@@ -57,7 +58,9 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: JobOption'
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobOption
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobEnvironment.secureFiles
     name: secureFiles
@@ -70,7 +73,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.SecureFile[]'
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobEnvironment.systemConnection
     name: systemConnection
@@ -85,7 +88,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.DistributedTask.Contracts.ServiceEndpoint
+          - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.ServiceEndpoint'
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobEnvironment.variables
     name: variables

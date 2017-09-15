@@ -4,8 +4,15 @@ items:
     name: IBaseComboDropPopup
     fullName: IBaseComboDropPopup
     children:
+      - vss-web-extension-sdk.VSS.Controls.Combos.IBaseComboDropPopup.dispose
       - >-
         vss-web-extension-sdk.VSS.Controls.Combos.IBaseComboDropPopup.getSelectedIndex
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.IBaseComboDropPopup.getSelectedValue
+      - vss-web-extension-sdk.VSS.Controls.Combos.IBaseComboDropPopup.selectNext
+      - vss-web-extension-sdk.VSS.Controls.Combos.IBaseComboDropPopup.selectPrev
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.IBaseComboDropPopup.setSelectedValue
       - vss-web-extension-sdk.VSS.Controls.Combos.IBaseComboDropPopup.update
     langs:
       - typeScript
@@ -13,6 +20,19 @@ items:
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Controls/Combos
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IBaseComboDropPopup.dispose
+    name: dispose()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function dispose()
+      return:
+        type:
+          - any
+    type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Combos.IBaseComboDropPopup.getSelectedIndex
     name: getSelectedIndex()
@@ -28,6 +48,71 @@ items:
       return:
         type:
           - number
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Combos.IBaseComboDropPopup.getSelectedValue
+    name: getSelectedValue()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getSelectedValue()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IBaseComboDropPopup.selectNext
+    name: 'selectNext(page?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: page
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: 'function selectNext(page?: boolean)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.IBaseComboDropPopup.selectPrev
+    name: 'selectPrev(page?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: page
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: 'function selectPrev(page?: boolean)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Combos.IBaseComboDropPopup.setSelectedValue
+    name: 'setSelectedValue(value: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: value
+          type:
+            - string
+          description: ''
+      content: 'function setSelectedValue(value: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.IBaseComboDropPopup.update
     name: update()

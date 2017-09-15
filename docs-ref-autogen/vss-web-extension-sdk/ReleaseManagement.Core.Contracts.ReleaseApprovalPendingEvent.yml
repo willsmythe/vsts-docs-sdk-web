@@ -52,7 +52,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApprovalPendingEvent.approvalOptions
     name: approvalOptions
@@ -66,7 +66,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ApprovalOptions
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ApprovalOptions
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApprovalPendingEvent.completedApprovals
     name: completedApprovals
@@ -79,7 +79,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval[]
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApprovalPendingEvent.definitionName
     name: definitionName
@@ -105,7 +106,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment
+          - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApprovalPendingEvent.environmentId
     name: environmentId
@@ -144,7 +145,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment[]
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApprovalPendingEvent.isMultipleRankApproval
     name: isMultipleRankApproval
@@ -170,7 +172,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval[]
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApprovalPendingEvent.releaseCreator
     name: releaseCreator

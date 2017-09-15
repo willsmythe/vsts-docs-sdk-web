@@ -1,0 +1,227 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.tls.Server
+    name: Server
+    fullName: Server
+    children:
+      - vss-web-extension-sdk.tls.Server.addContext
+      - vss-web-extension-sdk.tls.Server.addListener
+      - vss-web-extension-sdk.tls.Server.address
+      - vss-web-extension-sdk.tls.Server.close
+      - vss-web-extension-sdk.tls.Server.connections
+      - vss-web-extension-sdk.tls.Server.emit
+      - vss-web-extension-sdk.tls.Server.maxConnections
+      - vss-web-extension-sdk.tls.Server.on
+      - vss-web-extension-sdk.tls.Server.once
+      - vss-web-extension-sdk.tls.Server.prependListener
+      - vss-web-extension-sdk.tls.Server.prependOnceListener
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    extends:
+      - '@vss-web-extension-sdk.net.Server'
+    package: vss-web-extension-sdk
+    module: tls
+  - uid: vss-web-extension-sdk.tls.Server.addContext
+    name: 'addContext(hostName: string, credentials: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: hostName
+          type:
+            - string
+          description: ''
+        - id: credentials
+          type:
+            - function
+          description: ''
+      content: 'function addContext(hostName: string, credentials: function)'
+    type: method
+  - uid: vss-web-extension-sdk.tls.Server.addListener
+    name: 'addListener(event: string, listener: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: |-
+      events.EventEmitter
+      1. tlsClientError
+      2. newSession
+      3. OCSPRequest
+      4. resumeSession
+      5. secureConnection
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: listener
+          type:
+            - function
+          description: ''
+      content: 'function addListener(event: string, listener: function)'
+      return:
+        type:
+          - this
+    type: method
+  - uid: vss-web-extension-sdk.tls.Server.address
+    name: address()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function address()
+    type: method
+  - uid: vss-web-extension-sdk.tls.Server.close
+    name: 'close(callback?: Function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: callback
+          type:
+            - Function
+          description: ''
+          optional: true
+      content: 'function close(callback?: Function)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.tls.Server'
+    type: method
+  - uid: vss-web-extension-sdk.tls.Server.connections
+    name: connections
+    fullName: connections
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.tls.Server.emit
+    name: 'emit(event: string, args: any[])'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: args
+          type:
+            - 'any[]'
+          description: ''
+      content: 'function emit(event: string, args: any[])'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.tls.Server.maxConnections
+    name: maxConnections
+    fullName: maxConnections
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      return:
+        type:
+          - number
+  - uid: vss-web-extension-sdk.tls.Server.on
+    name: 'on(event: string, listener: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: listener
+          type:
+            - function
+          description: ''
+      content: 'function on(event: string, listener: function)'
+      return:
+        type:
+          - this
+    type: method
+  - uid: vss-web-extension-sdk.tls.Server.once
+    name: 'once(event: string, listener: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: listener
+          type:
+            - function
+          description: ''
+      content: 'function once(event: string, listener: function)'
+      return:
+        type:
+          - this
+    type: method
+  - uid: vss-web-extension-sdk.tls.Server.prependListener
+    name: 'prependListener(event: string, listener: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: listener
+          type:
+            - function
+          description: ''
+      content: 'function prependListener(event: string, listener: function)'
+      return:
+        type:
+          - this
+    type: method
+  - uid: vss-web-extension-sdk.tls.Server.prependOnceListener
+    name: 'prependOnceListener(event: string, listener: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: event
+          type:
+            - string
+          description: ''
+        - id: listener
+          type:
+            - function
+          description: ''
+      content: 'function prependOnceListener(event: string, listener: function)'
+      return:
+        type:
+          - this
+    type: method

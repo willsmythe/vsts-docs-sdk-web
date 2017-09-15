@@ -1,0 +1,139 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType
+    name: CallFunctionOnParameterType
+    fullName: CallFunctionOnParameterType
+    children:
+      - >-
+        vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.arguments
+      - >-
+        vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.awaitPromise
+      - >-
+        vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.functionDeclaration
+      - >-
+        vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.generatePreview
+      - >-
+        vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.objectId
+      - >-
+        vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.returnByValue
+      - >-
+        vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.silent
+      - >-
+        vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.userGesture
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    package: vss-web-extension-sdk
+    module: Runtime
+  - uid: >-
+      vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.arguments
+    name: arguments
+    fullName: arguments
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Call arguments. All call arguments must belong to the same JavaScript
+      world as the target object.
+    syntax:
+      return:
+        type:
+          - '@vss-web-extension-sdk.inspector.Runtime.CallArgument[]'
+  - uid: >-
+      vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.awaitPromise
+    name: awaitPromise
+    fullName: awaitPromise
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Whether execution should wait for promise to be resolved. If the result of
+      evaluation is not a Promise, it's considered to be an error.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.functionDeclaration
+    name: functionDeclaration
+    fullName: functionDeclaration
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Declaration of the function to call.
+    syntax:
+      return:
+        type:
+          - string
+  - uid: >-
+      vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.generatePreview
+    name: generatePreview
+    fullName: generatePreview
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether preview should be generated for the result.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.objectId
+    name: objectId
+    fullName: objectId
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Identifier of the object to call function on.
+    syntax:
+      return:
+        type:
+          - RemoteObjectId
+  - uid: >-
+      vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.returnByValue
+    name: returnByValue
+    fullName: returnByValue
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Whether the result is expected to be a JSON object which should be sent by
+      value.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.silent
+    name: silent
+    fullName: silent
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      In silent mode exceptions thrown during evaluation are not reported and do
+      not pause execution. Overrides <code>setPauseOnException</code> state.
+    syntax:
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.inspector.Runtime.CallFunctionOnParameterType.userGesture
+    name: userGesture
+    fullName: userGesture
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Whether execution should be treated as initiated by user in the UI.
+    syntax:
+      return:
+        type:
+          - boolean

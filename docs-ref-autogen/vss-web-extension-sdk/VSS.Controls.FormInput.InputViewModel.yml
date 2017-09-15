@@ -4,20 +4,349 @@ items:
     name: InputViewModel
     fullName: InputViewModel
     children:
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addDeleteCallback
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addDependenciesSatisfiedCallback
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addDependency
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addValidityFollower
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addValueChangedCallback
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.checkDependenciesSatisfied
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.deleteViewModel
+      - vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.dependsOn
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getDependenciesSatisfied
+      - vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getId
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getInputDescriptor
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getPossibleValueAtIndex
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getSelectedIndex
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getValidationMessage
+      - vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getValue
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.inputDependenciesSatisfied
       - vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.constructor
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.invalidateOnDependencyChange
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.invalidateValues
+      - vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isDirty
+      - vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isDropList
+      - vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isEmpty
+      - vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isRequired
+      - vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isValid
+      - vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.onBlur
+      - vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.refresh
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.removeValidityFollower
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.removeValueChangedCallback
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.setSelectedIndex
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.setValidityDelegate
+      - vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.setValue
+      - >-
+        vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.suppressValidityChangeNotifications
+      - vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.updateValues
+      - vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.validate
     langs:
       - typeScript
     type: class
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Controls/FormInput
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addDeleteCallback
+    name: 'addDeleteCallback(callback: function, addToFront?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: callback
+          type:
+            - function
+          description: ''
+        - id: addToFront
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: 'function addDeleteCallback(callback: function, addToFront?: boolean)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addDependenciesSatisfiedCallback
+    name: 'addDependenciesSatisfiedCallback(callback: function, addToFront?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: callback
+          type:
+            - function
+          description: ''
+        - id: addToFront
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: >-
+        function addDependenciesSatisfiedCallback(callback: function,
+        addToFront?: boolean)
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addDependency
+    name: >-
+      addDependency(dependency: InputViewModelDelegate<boolean>, addToFront?:
+      boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: dependency
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<boolean>
+          description: ''
+        - id: addToFront
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: >-
+        function addDependency(dependency: InputViewModelDelegate<boolean>,
+        addToFront?: boolean)
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addValidityFollower
+    name: 'addValidityFollower(follower: InputViewModel, addToFront?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: follower
+          type:
+            - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel'
+          description: ''
+        - id: addToFront
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: >-
+        function addValidityFollower(follower: InputViewModel, addToFront?:
+        boolean)
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addValueChangedCallback
+    name: >-
+      addValueChangedCallback(callback: InputViewModelDelegate<void>,
+      addToFront?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: callback
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<void>
+          description: ''
+        - id: addToFront
+          type:
+            - boolean
+          description: ''
+          optional: true
+      content: >-
+        function addValueChangedCallback(callback: InputViewModelDelegate<void>,
+        addToFront?: boolean)
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.checkDependenciesSatisfied
+    name: checkDependenciesSatisfied()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function checkDependenciesSatisfied()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.deleteViewModel
+    name: deleteViewModel()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function deleteViewModel()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.dependsOn
+    name: 'dependsOn(inputValueId: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: inputValueId
+          type:
+            - string
+          description: ''
+      content: 'function dependsOn(inputValueId: string)'
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getDependenciesSatisfied
+    name: getDependenciesSatisfied()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getDependenciesSatisfied()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getId
+    name: getId()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getId()
+      return:
+        type:
+          - string
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getInputDescriptor
+    name: getInputDescriptor()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getInputDescriptor()
+      return:
+        type:
+          - >-
+            @vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getPossibleValueAtIndex
+    name: 'getPossibleValueAtIndex(index: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: index
+          type:
+            - number
+          description: ''
+      content: 'function getPossibleValueAtIndex(index: number)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputValue'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getSelectedIndex
+    name: getSelectedIndex()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getSelectedIndex()
+      return:
+        type:
+          - number
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getValidationMessage
+    name: getValidationMessage()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getValidationMessage()
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getValue
+    name: getValue()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getValue()
+      return:
+        type:
+          - any
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.inputDependenciesSatisfied
+    name: 'inputDependenciesSatisfied(satisfied: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: satisfied
+          type:
+            - boolean
+          description: ''
+      content: 'function inputDependenciesSatisfied(satisfied: boolean)'
+      return:
+        type:
+          - boolean
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.constructor
     name: >-
       InputViewModel(inputDescriptor: InputDescriptor, inputValue: any,
-      inputValidChangedCallback: InputViewModelDelegate, blurCallback:
-      InputViewModelDelegate, valueChangedCallbacks: function,
-      valuesChangedCallback: InputViewModelDelegate, dependencies?: function,
-      dependenciesSatisfiedCallbacks?: function, deleteCallbacks?: function)
+      inputValidChangedCallback: InputViewModelDelegate<void>, blurCallback:
+      InputViewModelDelegate<void>, valueChangedCallbacks:
+      InputViewModelDelegate<void>[], valuesChangedCallback:
+      InputViewModelDelegate<void>, dependencies?:
+      InputViewModelDelegate<boolean>[], dependenciesSatisfiedCallbacks?:
+      function[], deleteCallbacks?: function[])
     children: []
     langs:
       - typeScript
@@ -27,7 +356,7 @@ items:
         - id: inputDescriptor
           type:
             - >-
-              vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputDescriptor
+              @vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputDescriptor
           description: ''
         - id: inputValue
           type:
@@ -36,41 +365,274 @@ items:
         - id: inputValidChangedCallback
           type:
             - >-
-              vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate
+              @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<void>
           description: ''
         - id: blurCallback
           type:
             - >-
-              vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate
+              @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<void>
           description: ''
         - id: valueChangedCallbacks
           type:
-            - function
+            - >-
+              @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<void>[]
           description: ''
         - id: valuesChangedCallback
           type:
             - >-
-              vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate
+              @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<void>
           description: ''
         - id: dependencies
           type:
-            - function
+            - >-
+              @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<boolean>[]
           description: ''
           optional: true
         - id: dependenciesSatisfiedCallbacks
           type:
-            - function
+            - 'function[]'
           description: ''
           optional: true
         - id: deleteCallbacks
           type:
-            - function
+            - 'function[]'
           description: ''
           optional: true
       content: >-
         new InputViewModel(inputDescriptor: InputDescriptor, inputValue: any,
-        inputValidChangedCallback: InputViewModelDelegate, blurCallback:
-        InputViewModelDelegate, valueChangedCallbacks: function,
-        valuesChangedCallback: InputViewModelDelegate, dependencies?: function,
-        dependenciesSatisfiedCallbacks?: function, deleteCallbacks?: function)
+        inputValidChangedCallback: InputViewModelDelegate<void>, blurCallback:
+        InputViewModelDelegate<void>, valueChangedCallbacks:
+        InputViewModelDelegate<void>[], valuesChangedCallback:
+        InputViewModelDelegate<void>, dependencies?:
+        InputViewModelDelegate<boolean>[], dependenciesSatisfiedCallbacks?:
+        function[], deleteCallbacks?: function[])
     type: constructor
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.invalidateOnDependencyChange
+    name: invalidateOnDependencyChange()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function invalidateOnDependencyChange()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.invalidateValues
+    name: invalidateValues()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function invalidateValues()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isDirty
+    name: isDirty()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function isDirty()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isDropList
+    name: isDropList()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function isDropList()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isEmpty
+    name: isEmpty()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function isEmpty()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isRequired
+    name: isRequired()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function isRequired()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isValid
+    name: isValid()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function isValid()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.onBlur
+    name: onBlur()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function onBlur()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.refresh
+    name: refresh()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function refresh()
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.removeValidityFollower
+    name: 'removeValidityFollower(follower: InputViewModel)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: follower
+          type:
+            - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel'
+          description: ''
+      content: 'function removeValidityFollower(follower: InputViewModel)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.removeValueChangedCallback
+    name: 'removeValueChangedCallback(callback: InputViewModelDelegate<void>)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: callback
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<void>
+          description: ''
+      content: >-
+        function removeValueChangedCallback(callback:
+        InputViewModelDelegate<void>)
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.setSelectedIndex
+    name: 'setSelectedIndex(index: number)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: index
+          type:
+            - number
+          description: ''
+      content: 'function setSelectedIndex(index: number)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.setValidityDelegate
+    name: 'setValidityDelegate(validityDelegate: InputViewModel)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: validityDelegate
+          type:
+            - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel'
+          description: ''
+      content: 'function setValidityDelegate(validityDelegate: InputViewModel)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.setValue
+    name: 'setValue(value: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: value
+          type:
+            - any
+          description: ''
+      content: 'function setValue(value: any)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.suppressValidityChangeNotifications
+    name: 'suppressValidityChangeNotifications(suppress: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: suppress
+          type:
+            - boolean
+          description: ''
+      content: 'function suppressValidityChangeNotifications(suppress: boolean)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.updateValues
+    name: 'updateValues(values: InputValues)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: values
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputValues'
+          description: ''
+      content: 'function updateValues(values: InputValues)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.validate
+    name: validate()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function validate()
+    type: method

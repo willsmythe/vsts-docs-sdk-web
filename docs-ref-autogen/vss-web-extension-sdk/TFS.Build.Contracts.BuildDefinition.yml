@@ -4,17 +4,13 @@ items:
     name: BuildDefinition
     fullName: BuildDefinition
     children:
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.authoredBy
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.badgeEnabled
       - >-
         vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.buildNumberFormat
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.comment
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.createdDate
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.demands
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.description
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.draftOf
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.dropLocation
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.id
       - >-
         vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.jobAuthorizationScope
       - >-
@@ -24,47 +20,25 @@ items:
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.latestBuild
       - >-
         vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.latestCompletedBuild
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.metrics
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.name
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.options
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.path
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.process
       - >-
         vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.processParameters
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.project
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.properties
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.quality
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.queue
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.queueStatus
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.repository
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.retentionRules
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.revision
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.tags
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.triggers
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.type
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.uri
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.url
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.variableGroups
       - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.variables
-      - vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionReference'
     package: vss-web-extension-sdk
     module: TFS/Build/Contracts
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.authoredBy
-    name: authoredBy
-    fullName: authoredBy
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The author of the definition.
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.badgeEnabled
     name: badgeEnabled
     fullName: badgeEnabled
@@ -102,18 +76,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.createdDate
-    name: createdDate
-    fullName: createdDate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The date the definition was created
-    syntax:
-      return:
-        type:
-          - Date
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.demands
     name: demands
     fullName: demands
@@ -125,7 +87,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'any[]'
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.description
     name: description
     fullName: description
@@ -138,18 +100,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.draftOf
-    name: draftOf
-    fullName: draftOf
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: 'If this is a draft definition, it might have a parent'
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.Build.Contracts.DefinitionReference
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.dropLocation
     name: dropLocation
     fullName: dropLocation
@@ -162,18 +112,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Id of the resource
-    syntax:
-      return:
-        type:
-          - number
   - uid: >-
       vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.jobAuthorizationScope
     name: jobAuthorizationScope
@@ -230,7 +168,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Build.Contracts.Build
+          - '@vss-web-extension-sdk.TFS.Build.Contracts.Build'
   - uid: >-
       vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.latestCompletedBuild
     name: latestCompletedBuild
@@ -243,31 +181,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Build.Contracts.Build
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.metrics
-    name: metrics
-    fullName: metrics
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - function
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: 'Name of the linked resource (definition name, controller name, etc.)'
-    syntax:
-      return:
-        type:
-          - string
+          - '@vss-web-extension-sdk.TFS.Build.Contracts.Build'
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.options
     name: options
     fullName: options
@@ -279,19 +193,7 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.path
-    name: path
-    fullName: path
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The path this definitions belongs to
-    syntax:
-      return:
-        type:
-          - string
+          - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildOption[]'
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.process
     name: process
     fullName: process
@@ -303,7 +205,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Build.Contracts.BuildProcess
+          - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildProcess'
   - uid: >-
       vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.processParameters
     name: processParameters
@@ -317,18 +219,6 @@ items:
       return:
         type:
           - ProcessParameters
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.project
-    name: project
-    fullName: project
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The project.
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.properties
     name: properties
     fullName: properties
@@ -341,42 +231,6 @@ items:
       return:
         type:
           - any
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.quality
-    name: quality
-    fullName: quality
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: 'The quality of the definition document (draft, etc.)'
-    syntax:
-      return:
-        type:
-          - DefinitionQuality
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.queue
-    name: queue
-    fullName: queue
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The default queue which should be used for requests.
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.queueStatus
-    name: queueStatus
-    fullName: queueStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: If builds can be queued from this definition
-    syntax:
-      return:
-        type:
-          - DefinitionQueueStatus
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.repository
     name: repository
     fullName: repository
@@ -388,7 +242,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.Build.Contracts.BuildRepository
+          - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildRepository'
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.retentionRules
     name: retentionRules
     fullName: retentionRules
@@ -400,19 +254,7 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.revision
-    name: revision
-    fullName: revision
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The definition revision number.
-    syntax:
-      return:
-        type:
-          - number
+          - '@vss-web-extension-sdk.TFS.Build.Contracts.RetentionPolicy[]'
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.tags
     name: tags
     fullName: tags
@@ -424,7 +266,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'string[]'
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.triggers
     name: triggers
     fullName: triggers
@@ -436,43 +278,7 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.type
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The type of the definition.
-    syntax:
-      return:
-        type:
-          - DefinitionType
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.uri
-    name: uri
-    fullName: uri
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The Uri of the definition
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Full http link to the resource
-    syntax:
-      return:
-        type:
-          - string
+          - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildTrigger[]'
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.variableGroups
     name: variableGroups
     fullName: variableGroups
@@ -484,7 +290,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.TFS.Build.Contracts.VariableGroup[]'
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition.variables
     name: variables
     fullName: variables
@@ -496,16 +302,6 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: BuildDefinitionVariable'
-  - uid: vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionVariable

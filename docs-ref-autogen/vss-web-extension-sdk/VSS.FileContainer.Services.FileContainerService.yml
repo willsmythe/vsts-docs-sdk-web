@@ -7,15 +7,13 @@ items:
       - >-
         vss-web-extension-sdk.VSS.FileContainer.Services.FileContainerService.beginGetItems
       - >-
-        vss-web-extension-sdk.VSS.FileContainer.Services.FileContainerService.getConnection
-      - >-
-        vss-web-extension-sdk.VSS.FileContainer.Services.FileContainerService.initializeConnection
-      - >-
         vss-web-extension-sdk.VSS.FileContainer.Services.FileContainerService.parseContainerPath
     langs:
       - typeScript
     type: class
     summary: Service to manage file container data
+    extends:
+      - '@vss-web-extension-sdk.VSS.Service.VssService'
     package: vss-web-extension-sdk
     module: VSS/FileContainer/Services
   - uid: >-
@@ -45,37 +43,8 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.FileContainer.Services.FileContainerService.getConnection
-    name: getConnection()
-    children: []
-    langs:
-      - typeScript
-    summary: Gets the relative location for the service's connection
-    syntax:
-      parameters: []
-      content: function getConnection()
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Service.VssConnection
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.FileContainer.Services.FileContainerService.initializeConnection
-    name: 'initializeConnection(connection: VssConnection)'
-    children: []
-    langs:
-      - typeScript
-    summary: Sets the VssConnection to use for this service
-    syntax:
-      parameters:
-        - id: connection
-          type:
-            - vss-web-extension-sdk.VSS.Service.VssConnection
-          description: |
-            VssConnection used by this service
-      content: 'function initializeConnection(connection: VssConnection)'
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.FileContainer.Contracts.FileContainerItem[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.FileContainer.Services.FileContainerService.parseContainerPath
@@ -95,5 +64,5 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.VSS.FileContainer.Services.FileContainerPathInfo
+            @vss-web-extension-sdk.VSS.FileContainer.Services.FileContainerPathInfo
     type: method

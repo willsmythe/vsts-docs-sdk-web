@@ -5,18 +5,29 @@ items:
     fullName: BaseComboBehavior
     children:
       - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.constructor
+      - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.canType
       - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.combo
+      - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.dispose
       - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.downKey
       - >-
         vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getAriaAutocomplete
       - >-
         vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getAriaDescription
       - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getDataSource
+      - >-
         vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getDropOptions
-      - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getItemText
+      - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getDropPopup
+      - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getDropWidth
       - >-
         vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getSelectedIndex
       - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getText
+      - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getValue
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.hideDropPopup
+      - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.initialize
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.isDropVisible
       - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.keyDown
       - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.keyPress
       - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.keyUp
@@ -26,10 +37,16 @@ items:
       - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.pageDownKey
       - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.pageUpKey
       - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.rightKey
+      - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.setMode
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.setSelectedIndex
+      - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.setSource
       - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.setText
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.showDropPopup
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.toggleDropDown
       - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.upKey
-      - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior._dataSource
-      - vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior._options
     langs:
       - typeScript
     type: class
@@ -55,6 +72,19 @@ items:
           optional: true
       content: 'new BaseComboBehavior(combo: any, options?: any)'
     type: constructor
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.canType
+    name: canType()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function canType()
+      return:
+        type:
+          - boolean
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.combo
     name: combo
     fullName: combo
@@ -66,7 +96,17 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.Controls.Combos.Combo
+          - '@vss-web-extension-sdk.VSS.Controls.Combos.Combo'
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.dispose
+    name: dispose()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function dispose()
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.downKey
     name: 'downKey(e?: JQueryEventObject)'
     children: []
@@ -113,6 +153,19 @@ items:
         type:
           - string
     type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getDataSource
+    name: getDataSource()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getDataSource()
+      return:
+        type:
+          - TDataSource
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getDropOptions
     name: getDropOptions()
     children: []
@@ -126,32 +179,31 @@ items:
         type:
           - any
     type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getItemText
-    name: 'getItemText(index: number, all?: boolean)'
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getDropPopup
+    name: getDropPopup()
     children: []
     langs:
       - typeScript
-    summary: >-
-      Gets the text of the given index based on allItems in datasource. Default
-      behavior returns datasource getItemText
-
-      Can be overridden by the getItemText option
+    summary: ''
     syntax:
-      parameters:
-        - id: index
-          type:
-            - number
-          description: ''
-        - id: all
-          type:
-            - boolean
-          description: |
-            Search allItems from data source
-          optional: true
-      content: 'function getItemText(index: number, all?: boolean)'
+      parameters: []
+      content: function getDropPopup()
       return:
         type:
-          - string
+          - TDropPopup
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getDropWidth
+    name: getDropWidth()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getDropWidth()
+      return:
+        type:
+          - number
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getSelectedIndex
@@ -179,6 +231,55 @@ items:
       return:
         type:
           - string
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.getValue
+    name: getValue()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getValue()
+      return:
+        type:
+          - TValue
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.hideDropPopup
+    name: hideDropPopup()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function hideDropPopup()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.initialize
+    name: initialize()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function initialize()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.isDropVisible
+    name: isDropVisible()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function isDropVisible()
+      return:
+        type:
+          - boolean
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.keyDown
     name: 'keyDown(e?: JQueryEventObject)'
@@ -325,6 +426,53 @@ items:
         type:
           - any
     type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.setMode
+    name: 'setMode(value: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: value
+          type:
+            - any
+          description: ''
+      content: 'function setMode(value: any)'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.setSelectedIndex
+    name: 'setSelectedIndex(selectedIndex: any, fireEvent: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: selectedIndex
+          type:
+            - any
+          description: ''
+        - id: fireEvent
+          type:
+            - any
+          description: ''
+      content: 'function setSelectedIndex(selectedIndex: any, fireEvent: any)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.setSource
+    name: 'setSource(source: any)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: source
+          type:
+            - any
+          description: ''
+      content: 'function setSource(source: any)'
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.setText
     name: 'setText(value: string, fireEvent?: boolean)'
     children: []
@@ -345,6 +493,29 @@ items:
           optional: true
       content: 'function setText(value: string, fireEvent?: boolean)'
     type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.showDropPopup
+    name: showDropPopup()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function showDropPopup()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.toggleDropDown
+    name: toggleDropDown()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function toggleDropDown()
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior.upKey
     name: 'upKey(e?: JQueryEventObject)'
     children: []
@@ -363,27 +534,3 @@ items:
         type:
           - any
     type: method
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior._dataSource
-    name: _dataSource
-    fullName: _dataSource
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Controls.BaseDataSource
-  - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

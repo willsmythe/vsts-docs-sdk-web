@@ -9,12 +9,12 @@ items:
         vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ParallelExecutionInputBase.continueOnError
       - >-
         vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ParallelExecutionInputBase.maxNumberOfAgents
-      - >-
-        vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ParallelExecutionInputBase.parallelExecutionType
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ExecutionInput'
     package: vss-web-extension-sdk
     module: ReleaseManagement/Core/Contracts
   - uid: >-
@@ -43,16 +43,3 @@ items:
       return:
         type:
           - number
-  - uid: >-
-      vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ParallelExecutionInputBase.parallelExecutionType
-    name: parallelExecutionType
-    fullName: parallelExecutionType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - ParallelExecutionTypes

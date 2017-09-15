@@ -4,9 +4,12 @@ items:
     name: GridDefaultSource
     fullName: GridDefaultSource
     children:
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Grids.GridDefaultSource.getExpandStates
+      - vss-web-extension-sdk.VSS.Controls.Grids.GridDefaultSource.getSource
       - vss-web-extension-sdk.VSS.Controls.Grids.GridDefaultSource.grid
       - vss-web-extension-sdk.VSS.Controls.Grids.GridDefaultSource.constructor
-      - vss-web-extension-sdk.VSS.Controls.Grids.GridDefaultSource._source
+      - vss-web-extension-sdk.VSS.Controls.Grids.GridDefaultSource.update
     langs:
       - typeScript
     type: class
@@ -15,6 +18,26 @@ items:
       list.
     package: vss-web-extension-sdk
     module: VSS/Controls/Grids
+  - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridDefaultSource.getExpandStates
+    name: getExpandStates()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getExpandStates()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridDefaultSource.getSource
+    name: getSource()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getSource()
+    type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridDefaultSource.grid
     name: grid
     fullName: grid
@@ -26,9 +49,9 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.Controls.Grids.Grid
+          - '@vss-web-extension-sdk.VSS.Controls.Grids.Grid'
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridDefaultSource.constructor
-    name: 'GridDefaultSource(items: function)'
+    name: 'GridDefaultSource(items: IGridSourceItem[])'
     children: []
     langs:
       - typeScript
@@ -37,19 +60,21 @@ items:
       parameters:
         - id: items
           type:
-            - function
+            - '@vss-web-extension-sdk.VSS.Controls.Grids.IGridSourceItem[]'
           description: ''
-      content: 'new GridDefaultSource(items: function)'
+      content: 'new GridDefaultSource(items: IGridSourceItem[])'
     type: constructor
-  - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridDefaultSource._source
-    name: _source
-    fullName: _source
+  - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridDefaultSource.update
+    name: 'update(items: IGridSourceItem[])'
     children: []
     langs:
       - typeScript
-    type: property
     summary: ''
     syntax:
-      return:
-        type:
-          - function
+      parameters:
+        - id: items
+          type:
+            - '@vss-web-extension-sdk.VSS.Controls.Grids.IGridSourceItem[]'
+          description: ''
+      content: 'function update(items: IGridSourceItem[])'
+    type: method

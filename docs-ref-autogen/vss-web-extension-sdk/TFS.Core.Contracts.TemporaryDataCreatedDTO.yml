@@ -6,18 +6,16 @@ items:
     children:
       - >-
         vss-web-extension-sdk.TFS.Core.Contracts.TemporaryDataCreatedDTO.expirationDate
-      - >-
-        vss-web-extension-sdk.TFS.Core.Contracts.TemporaryDataCreatedDTO.expirationSeconds
       - vss-web-extension-sdk.TFS.Core.Contracts.TemporaryDataCreatedDTO.id
-      - vss-web-extension-sdk.TFS.Core.Contracts.TemporaryDataCreatedDTO.origin
       - vss-web-extension-sdk.TFS.Core.Contracts.TemporaryDataCreatedDTO.url
-      - vss-web-extension-sdk.TFS.Core.Contracts.TemporaryDataCreatedDTO.value
     langs:
       - typeScript
     type: interface
     summary: >-
       A data transfer object that stores the metadata associated with the
       creation of temporary data.
+    extends:
+      - '@vss-web-extension-sdk.TFS.Core.Contracts.TemporaryDataDTO'
     package: vss-web-extension-sdk
     module: TFS/Core/Contracts
   - uid: >-
@@ -33,34 +31,9 @@ items:
       return:
         type:
           - Date
-  - uid: >-
-      vss-web-extension-sdk.TFS.Core.Contracts.TemporaryDataCreatedDTO.expirationSeconds
-    name: expirationSeconds
-    fullName: expirationSeconds
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
   - uid: vss-web-extension-sdk.TFS.Core.Contracts.TemporaryDataCreatedDTO.id
     name: id
     fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.TemporaryDataCreatedDTO.origin
-    name: origin
-    fullName: origin
     children: []
     langs:
       - typeScript
@@ -82,15 +55,3 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.Core.Contracts.TemporaryDataCreatedDTO.value
-    name: value
-    fullName: value
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

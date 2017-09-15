@@ -5,8 +5,6 @@ items:
     fullName: CommonMethods2To4
     children:
       - >-
-        vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.authTokenManager
-      - >-
         vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.cancelOfferSubscription
       - >-
         vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.changeSubscriptionAccount
@@ -22,8 +20,6 @@ items:
         vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.enableTrialOfferSubscriptionExtension
       - >-
         vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.enableTrialOrPreviewOfferSubscription
-      - >-
-        vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
       - >-
         vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getAccountRegions
       - >-
@@ -66,60 +62,23 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.linkAccount
       - >-
-        vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.metersApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.offerMeterApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.offerMeterPriceApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.offerSubscriptionApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.regionsApiVersion
-      - >-
         vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.reportUsage
       - >-
         vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.serviceInstanceId
-      - >-
-        vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.subscriptionApiVersion
       - >-
         vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.unlinkAccount
       - >-
         vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.updateMeter
       - >-
         vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.updateOfferSubscription
-      - >-
-        vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.usageEventsApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4._beginGetLocation
-      - >-
-        vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4._beginRequest
-      - >-
-        vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4._beginRequestWithAjaxResult
-      - >-
-        vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4._issueAjaxRequest
-      - >-
-        vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4._rootRequestPath
-      - >-
-        vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     package: vss-web-extension-sdk
     module: VSS/Commerce/RestClient
-  - uid: >-
-      vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.cancelOfferSubscription
     name: >-
@@ -133,7 +92,7 @@ items:
       parameters:
         - id: offerSubscription
           type:
-            - vss-web-extension-sdk.VSS.Commerce.Contracts.OfferSubscription
+            - '@vss-web-extension-sdk.VSS.Commerce.Contracts.OfferSubscription'
           description: ''
         - id: cancelReason
           type:
@@ -149,7 +108,7 @@ items:
         cancelReason: string, billingTarget?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.changeSubscriptionAccount
@@ -185,7 +144,7 @@ items:
         hydrate?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.constructor
@@ -204,7 +163,7 @@ items:
           description: ''
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
       content: >-
@@ -222,12 +181,12 @@ items:
       parameters:
         - id: offerConfig
           type:
-            - vss-web-extension-sdk.VSS.Commerce.Contracts.OfferMeter
+            - '@vss-web-extension-sdk.VSS.Commerce.Contracts.OfferMeter'
           description: ''
       content: 'function createOfferMeterDefinition(offerConfig: OfferMeter)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.createOfferSubscription
@@ -242,7 +201,7 @@ items:
       parameters:
         - id: offerSubscription
           type:
-            - vss-web-extension-sdk.VSS.Commerce.Contracts.OfferSubscription
+            - '@vss-web-extension-sdk.VSS.Commerce.Contracts.OfferSubscription'
           description: ''
         - id: offerCode
           type:
@@ -270,7 +229,7 @@ items:
         billingTarget?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.decreaseResourceQuantity
@@ -310,7 +269,7 @@ items:
         azureSubscriptionId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.enableTrialOfferSubscriptionExtension
@@ -340,7 +299,7 @@ items:
         renewalGroup: ResourceRenewalGroup, endDate: Date)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.enableTrialOrPreviewOfferSubscription
@@ -366,21 +325,8 @@ items:
         renewalGroup: ResourceRenewalGroup)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getAccountRegions
     name: getAccountRegions()
@@ -393,7 +339,8 @@ items:
       content: function getAccountRegions()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.AzureRegion[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getAccounts
@@ -419,7 +366,8 @@ items:
         AccountProviderNamespace)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionAccount[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getAccountsByIdentity
@@ -427,7 +375,7 @@ items:
       getAccountsByIdentity(providerNamespaceId: AccountProviderNamespace,
       memberId: string, queryOnlyOwnerAccounts: boolean,
       inlcudeDisabledAccounts: boolean, includeMSAAccounts: boolean,
-      serviceOwners: function)
+      serviceOwners: string[])
     children: []
     langs:
       - typeScript
@@ -456,16 +404,17 @@ items:
           description: ''
         - id: serviceOwners
           type:
-            - function
+            - 'string[]'
           description: ''
       content: >-
         function getAccountsByIdentity(providerNamespaceId:
         AccountProviderNamespace, memberId: string, queryOnlyOwnerAccounts:
         boolean, inlcudeDisabledAccounts: boolean, includeMSAAccounts: boolean,
-        serviceOwners: function)
+        serviceOwners: string[])
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionAccount[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getAccountsByIdentityForOfferId
@@ -473,7 +422,7 @@ items:
       getAccountsByIdentityForOfferId(providerNamespaceId:
       AccountProviderNamespace, memberId: string, queryOnlyOwnerAccounts:
       boolean, inlcudeDisabledAccounts: boolean, includeMSAAccounts: boolean,
-      serviceOwners: function, galleryId: string, addUnlinkedSubscription?:
+      serviceOwners: string[], galleryId: string, addUnlinkedSubscription?:
       boolean, queryAccountsByUpn?: boolean)
     children: []
     langs:
@@ -505,7 +454,7 @@ items:
           description: 'if set to true [inlcude MSA accounts].'
         - id: serviceOwners
           type:
-            - function
+            - 'string[]'
           description: ''
         - id: galleryId
           type:
@@ -525,11 +474,12 @@ items:
         function getAccountsByIdentityForOfferId(providerNamespaceId:
         AccountProviderNamespace, memberId: string, queryOnlyOwnerAccounts:
         boolean, inlcudeDisabledAccounts: boolean, includeMSAAccounts: boolean,
-        serviceOwners: function, galleryId: string, addUnlinkedSubscription?:
+        serviceOwners: string[], galleryId: string, addUnlinkedSubscription?:
         boolean, queryAccountsByUpn?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionAccount[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getAllOfferSubscriptionsForUser
@@ -557,7 +507,8 @@ items:
         boolean, nextBillingPeriod: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.IOfferSubscription[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getAzureSubscriptionForPurchase
@@ -591,7 +542,8 @@ items:
         galleryItemId: string, accountId?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionAccount>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getAzureSubscriptionForUser
@@ -621,12 +573,13 @@ items:
         queryAcrossTenants?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionAccount[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getAzureSubscriptions
     name: >-
-      getAzureSubscriptions(subscriptionIds: function, providerNamespaceId:
+      getAzureSubscriptions(subscriptionIds: string[], providerNamespaceId:
       AccountProviderNamespace)
     children: []
     langs:
@@ -636,18 +589,19 @@ items:
       parameters:
         - id: subscriptionIds
           type:
-            - function
+            - 'string[]'
           description: List of Subscriptions.
         - id: providerNamespaceId
           type:
             - AccountProviderNamespace
           description: Namespace id.
       content: >-
-        function getAzureSubscriptions(subscriptionIds: function,
+        function getAzureSubscriptions(subscriptionIds: string[],
         providerNamespaceId: AccountProviderNamespace)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.IAzureSubscription[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getOfferMeter
@@ -673,7 +627,8 @@ items:
         string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.OfferMeter>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getOfferMeterPrice
@@ -693,7 +648,8 @@ items:
       content: 'function getOfferMeterPrice(galleryId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.OfferMeterPrice[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getOfferMeters
@@ -710,7 +666,8 @@ items:
       content: function getOfferMeters()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.OfferMeter[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getOfferSubscription
@@ -737,7 +694,8 @@ items:
         boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.IOfferSubscription>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getOfferSubscriptionForRenewalGroup
@@ -770,7 +728,8 @@ items:
         renewalGroup: ResourceRenewalGroup, nextBillingPeriod?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.IOfferSubscription>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getOfferSubscriptions
@@ -791,7 +750,8 @@ items:
       content: 'function getOfferSubscriptions(nextBillingPeriod?: boolean)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.IOfferSubscription[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getOfferSubscriptionsForGalleryItem
@@ -824,7 +784,8 @@ items:
         azureSubscriptionId: string, nextBillingPeriod?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.IOfferSubscription[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getPurchasableOfferMeter
@@ -878,7 +839,8 @@ items:
         objectId?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.PurchasableOfferMeter>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getResourceStatus
@@ -899,7 +861,8 @@ items:
       content: 'function getResourceStatus(nextBillingPeriod?: boolean)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getResourceStatusByResourceName
@@ -928,7 +891,8 @@ items:
         nextBillingPeriod?: boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionResource>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getSubscriptionAccount
@@ -956,7 +920,8 @@ items:
         AccountProviderNamespace, accountId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.ISubscriptionAccount>
     type: method
   - uid: vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.getUsage
     name: 'getUsage(startTime: Date, endTime: Date, timeSpan: any)'
@@ -987,7 +952,8 @@ items:
       content: 'function getUsage(startTime: Date, endTime: Date, timeSpan: any)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Commerce.Contracts.IUsageEventAggregate[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.linkAccount
@@ -1028,73 +994,8 @@ items:
         boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.metersApiVersion
-    name: metersApiVersion
-    fullName: metersApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.offerMeterApiVersion
-    name: offerMeterApiVersion
-    fullName: offerMeterApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.offerMeterPriceApiVersion
-    name: offerMeterPriceApiVersion
-    fullName: offerMeterPriceApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.offerSubscriptionApiVersion
-    name: offerSubscriptionApiVersion
-    fullName: offerSubscriptionApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.regionsApiVersion
-    name: regionsApiVersion
-    fullName: regionsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.reportUsage
     name: 'reportUsage(usageEvent: UsageEvent)'
@@ -1106,30 +1007,17 @@ items:
       parameters:
         - id: usageEvent
           type:
-            - vss-web-extension-sdk.VSS.Commerce.Contracts.UsageEvent
+            - '@vss-web-extension-sdk.VSS.Commerce.Contracts.UsageEvent'
           description: Detailed usage event
       content: 'function reportUsage(usageEvent: UsageEvent)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.serviceInstanceId
     name: serviceInstanceId
     fullName: serviceInstanceId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.subscriptionApiVersion
-    name: subscriptionApiVersion
-    fullName: subscriptionApiVersion
     children: []
     langs:
       - typeScript
@@ -1171,7 +1059,7 @@ items:
         AccountProviderNamespace, accountId: string, ownerId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.updateMeter
@@ -1184,12 +1072,12 @@ items:
       parameters:
         - id: meter
           type:
-            - vss-web-extension-sdk.VSS.Commerce.Contracts.SubscriptionResource
+            - '@vss-web-extension-sdk.VSS.Commerce.Contracts.SubscriptionResource'
           description: ''
       content: 'function updateMeter(meter: SubscriptionResource)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.updateOfferSubscription
@@ -1202,176 +1090,10 @@ items:
       parameters:
         - id: offerSubscription
           type:
-            - vss-web-extension-sdk.VSS.Commerce.Contracts.OfferSubscription
+            - '@vss-web-extension-sdk.VSS.Commerce.Contracts.OfferSubscription'
           description: ''
       content: 'function updateOfferSubscription(offerSubscription: OfferSubscription)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.usageEventsApiVersion
-    name: usageEventsApiVersion
-    fullName: usageEventsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4._beginGetLocation
-    name: '_beginGetLocation(area: string, locationId: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Gets information about an API resource location (route template, supported
-      versions, etc.)
-    syntax:
-      parameters:
-        - id: area
-          type:
-            - string
-          description: resource area name
-        - id: locationId
-          type:
-            - string
-          description: |
-            Guid of the location to get
-      content: 'function _beginGetLocation(area: string, locationId: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4._beginRequest
-    name: >-
-      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
-      boolean)
-    children: []
-    langs:
-      - typeScript
-    summary: Issue a request to a VSS REST endpoint.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >-
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used
-          optional: true
-      content: >-
-        function _beginRequest(requestParams: VssApiResourceRequestParams,
-        useAjaxResult?: boolean)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4._beginRequestWithAjaxResult
-    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue a request to a VSS REST endpoint and makes sure the result contains
-      jqXHR. Use spread to access jqXHR.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-      content: >-
-        function _beginRequestWithAjaxResult(requestParams:
-        VssApiResourceRequestParams)
-      return:
-        type:
-          - Q.Promise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4._issueAjaxRequest
-    name: >-
-      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
-      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue an AJAX request. This is a wrapper around jquery's ajax method that
-      handles VSS authentication
-
-      and triggers events that can be listened to by other modules.
-    syntax:
-      parameters:
-        - id: requestUrl
-          type:
-            - string
-          description: Url to send the request to
-        - id: ajaxOptions
-          type:
-            - JQueryAjaxSettings
-          description: jQuery.ajax options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used.
-          optional: true
-        - id: vssRequestOptions
-          type:
-            - vss-web-extension-sdk.IVssAjaxOptions
-          description: ''
-          optional: true
-      content: >-
-        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
-        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
-        IVssAjaxOptions)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4._setInitializationPromise
-    name: '_setInitializationPromise(promise: IPromise)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Sets a promise that is waited on before any requests are issued. Can be
-      used to asynchronously
-
-      set the request url and auth token manager.
-    syntax:
-      parameters:
-        - id: promise
-          type:
-            - vss-web-extension-sdk.IPromise
-          description: ''
-      content: 'function _setInitializationPromise(promise: IPromise)'
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method

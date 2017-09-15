@@ -3,10 +3,67 @@ items:
   - uid: vss-web-extension-sdk.VSS.VSS.GlobalMessageIndicator
     name: GlobalMessageIndicator
     fullName: GlobalMessageIndicator
-    children: []
+    children:
+      - vss-web-extension-sdk.VSS.VSS.GlobalMessageIndicator.clearGlobalMessages
+      - >-
+        vss-web-extension-sdk.VSS.VSS.GlobalMessageIndicator.updateGlobalMessageIfEmpty
     langs:
       - typeScript
     type: class
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.GlobalMessageIndicator.clearGlobalMessages
+    name: clearGlobalMessages()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function clearGlobalMessages()
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.VSS.GlobalMessageIndicator.updateGlobalMessageIfEmpty
+    name: >-
+      updateGlobalMessageIfEmpty(message: string, messageLevel?: string,
+      customIcon?: string, onDismiss?: function, position?:
+      GlobalMessagePosition)
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+        - id: messageLevel
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: customIcon
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: onDismiss
+          type:
+            - function
+          description: ''
+          optional: true
+        - id: position
+          type:
+            - GlobalMessagePosition
+          description: ''
+          optional: true
+      content: >-
+        function updateGlobalMessageIfEmpty(message: string, messageLevel?:
+        string, customIcon?: string, onDismiss?: function, position?:
+        GlobalMessagePosition)
+      return:
+        type:
+          - HTMLElement
+    type: method

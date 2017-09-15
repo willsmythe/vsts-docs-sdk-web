@@ -5,37 +5,48 @@ items:
     fullName: CommonHelpers
     children:
       - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Common.CommonHelpers._hashSeed
+        vss-web-extension-sdk.VSS.Identities.Picker.Common.CommonHelpers.GetStringHashCode
       - >-
-        vss-web-extension-sdk.VSS.Identities.Picker.Common.CommonHelpers._stringListHashPrime
+        vss-web-extension-sdk.VSS.Identities.Picker.Common.CommonHelpers.GetStringListHashCode
     langs:
       - typeScript
     type: class
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/Common
-  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Common.CommonHelpers._hashSeed
-    name: _hashSeed
-    fullName: _hashSeed
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - number
   - uid: >-
-      vss-web-extension-sdk.VSS.Identities.Picker.Common.CommonHelpers._stringListHashPrime
-    name: _stringListHashPrime
-    fullName: _stringListHashPrime
+      vss-web-extension-sdk.VSS.Identities.Picker.Common.CommonHelpers.GetStringHashCode
+    name: 'GetStringHashCode(str: string)'
     children: []
     langs:
       - typeScript
-    type: property
     summary: ''
     syntax:
+      parameters:
+        - id: str
+          type:
+            - string
+          description: ''
+      content: 'function GetStringHashCode(str: string)'
       return:
         type:
           - number
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Common.CommonHelpers.GetStringListHashCode
+    name: 'GetStringListHashCode(strings: string[])'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: strings
+          type:
+            - 'string[]'
+          description: ''
+      content: 'function GetStringListHashCode(strings: string[])'
+      return:
+        type:
+          - number
+    type: method

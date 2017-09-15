@@ -4,46 +4,15 @@ items:
     name: GitRevert
     fullName: GitRevert
     children:
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRevert.detailedStatus
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRevert.parameters
       - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRevert.revertId
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRevert.status
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRevert.url
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRevert._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperation'
     package: vss-web-extension-sdk
     module: TFS/VersionControl/Contracts
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRevert.detailedStatus
-    name: detailedStatus
-    fullName: detailedStatus
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationDetail
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRevert.parameters
-    name: parameters
-    fullName: parameters
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationParameters
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRevert.revertId
     name: revertId
     fullName: revertId
@@ -56,39 +25,3 @@ items:
       return:
         type:
           - number
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRevert.status
-    name: status
-    fullName: status
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - GitAsyncOperationStatus
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRevert.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRevert._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

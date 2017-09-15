@@ -39,7 +39,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.IFunctionPR
+          - '@vss-web-extension-sdk.IFunctionPR<void>'
   - uid: vss-web-extension-sdk.VSS.VSS.IQueueCallbacksResult.error
     name: error
     fullName: error
@@ -51,7 +51,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.IArgsFunctionR
+          - '@vss-web-extension-sdk.IArgsFunctionR<void>'
   - uid: vss-web-extension-sdk.VSS.VSS.IQueueCallbacksResult.finish
     name: finish
     fullName: finish
@@ -63,7 +63,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.IArgsFunctionR
+          - '@vss-web-extension-sdk.IArgsFunctionR<void>'
   - uid: vss-web-extension-sdk.VSS.VSS.IQueueCallbacksResult.register
     name: register
     fullName: register
@@ -74,7 +74,8 @@ items:
     summary: ''
     syntax:
       return:
-        type: []
+        type:
+          - function
   - uid: vss-web-extension-sdk.VSS.VSS.IQueueCallbacksResult.unregister
     name: unregister
     fullName: unregister
@@ -85,4 +86,5 @@ items:
     summary: ''
     syntax:
       return:
-        type: []
+        type:
+          - function

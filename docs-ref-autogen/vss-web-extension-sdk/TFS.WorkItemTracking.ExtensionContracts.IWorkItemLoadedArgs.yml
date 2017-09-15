@@ -6,8 +6,6 @@ items:
     fullName: IWorkItemLoadedArgs
     children:
       - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemLoadedArgs.id
-      - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemLoadedArgs.isNew
     langs:
       - typeScript
@@ -15,21 +13,11 @@ items:
     summary: >-
       Interface defining the arguments for the 'onLoaded' notification sent by
       the ActiveWorkItemService
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemChangedArgs
     package: vss-web-extension-sdk
     module: TFS/WorkItemTracking/ExtensionContracts
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemLoadedArgs.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Id of the work item.
-    syntax:
-      return:
-        type:
-          - number
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemLoadedArgs.isNew
     name: isNew

@@ -47,15 +47,14 @@ items:
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem.targetClauses
       - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem.url
-      - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem.wiql
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTrackingResource
     package: vss-web-extension-sdk
     module: TFS/WorkItemTracking/Contracts
   - uid: >-
@@ -70,7 +69,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem[]
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem.clauses
     name: clauses
@@ -84,7 +84,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemQueryClause
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemQueryClause
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem.columns
     name: columns
@@ -97,7 +97,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemFieldReference[]
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem.createdBy
     name: createdBy
@@ -111,7 +112,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem.createdDate
     name: createdDate
@@ -228,7 +229,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem.lastModifiedDate
     name: lastModifiedDate
@@ -255,7 +256,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemQueryClause
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemQueryClause
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem.name
     name: name
@@ -307,7 +308,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemQuerySortColumn[]
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem.sourceClauses
     name: sourceClauses
@@ -321,7 +323,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemQueryClause
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemQueryClause
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem.targetClauses
     name: targetClauses
@@ -335,20 +337,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemQueryClause
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemQueryClause
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem.wiql
     name: wiql
@@ -362,16 +351,3 @@ items:
       return:
         type:
           - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

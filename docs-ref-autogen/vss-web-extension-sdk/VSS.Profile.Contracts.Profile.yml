@@ -27,7 +27,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.Profile.Contracts.AttributesContainer
+          - '@vss-web-extension-sdk.VSS.Profile.Contracts.AttributesContainer'
   - uid: vss-web-extension-sdk.VSS.Profile.Contracts.Profile.coreAttributes
     name: coreAttributes
     fullName: coreAttributes
@@ -39,7 +39,9 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: CoreProfileAttribute'
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.VSS.Profile.Contracts.CoreProfileAttribute
   - uid: vss-web-extension-sdk.VSS.Profile.Contracts.Profile.coreRevision
     name: coreRevision
     fullName: coreRevision

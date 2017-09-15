@@ -3,10 +3,41 @@ items:
   - uid: vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.IXmlStorage
     name: IXmlStorage
     fullName: IXmlStorage
-    children: []
+    children:
+      - >-
+        vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.IXmlStorage.fromXml
+      - vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.IXmlStorage.toXml
     langs:
       - typeScript
     type: interface
     summary: Interface for XmlStorage
     package: vss-web-extension-sdk
     module: TFS/TestManagement/Helper/Utils
+  - uid: vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.IXmlStorage.fromXml
+    name: 'fromXml($stepsXmlDom: JQuery)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: $stepsXmlDom
+          type:
+            - JQuery
+          description: ''
+      content: 'function fromXml($stepsXmlDom: JQuery)'
+    type: method
+  - uid: vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.IXmlStorage.toXml
+    name: 'toXml($stepsXmlDom: JQuery)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: $stepsXmlDom
+          type:
+            - JQuery
+          description: ''
+      content: 'function toXml($stepsXmlDom: JQuery)'
+    type: method

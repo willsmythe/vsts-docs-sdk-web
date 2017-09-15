@@ -4,13 +4,157 @@ items:
     name: PerfTracePointCollector
     fullName: PerfTracePointCollector
     children:
+      - vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.dumpTracePoints
+      - vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.getActiveCount
+      - vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.getLastTracePoint
+      - >-
+        vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.getLastTracePointTime
+      - vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.getModuleInitTime
+      - vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.getOverallCount
+      - >-
+        vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.getTracePointCountData
+      - vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.getTracePoints
       - vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.constructor
+      - vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.register
+      - vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.resetActiveCount
+      - vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.resetActiveCounts
     langs:
       - typeScript
     type: class
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.dumpTracePoints
+    name: 'dumpTracePoints(activeOnly: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: activeOnly
+          type:
+            - boolean
+          description: ''
+      content: 'function dumpTracePoints(activeOnly: boolean)'
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.getActiveCount
+    name: 'getActiveCount(tracePointName: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: tracePointName
+          type:
+            - string
+          description: ''
+      content: 'function getActiveCount(tracePointName: string)'
+      return:
+        type:
+          - number
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.getLastTracePoint
+    name: 'getLastTracePoint(tracePointName: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: tracePointName
+          type:
+            - string
+          description: ''
+      content: 'function getLastTracePoint(tracePointName: string)'
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Diag.ITracePoint'
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.getLastTracePointTime
+    name: 'getLastTracePointTime(tracePointName: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: tracePointName
+          type:
+            - string
+          description: ''
+      content: 'function getLastTracePointTime(tracePointName: string)'
+      return:
+        type:
+          - number
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.getModuleInitTime
+    name: getModuleInitTime()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getModuleInitTime()
+      return:
+        type:
+          - number
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.getOverallCount
+    name: 'getOverallCount(tracePointName: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: tracePointName
+          type:
+            - string
+          description: ''
+      content: 'function getOverallCount(tracePointName: string)'
+      return:
+        type:
+          - number
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.getTracePointCountData
+    name: 'getTracePointCountData(tracePointNames: string[])'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: tracePointNames
+          type:
+            - 'string[]'
+          description: ''
+      content: 'function getTracePointCountData(tracePointNames: string[])'
+      return:
+        type:
+          - string
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.getTracePoints
+    name: 'getTracePoints(activeOnly: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: activeOnly
+          type:
+            - boolean
+          description: ''
+      content: 'function getTracePoints(activeOnly: boolean)'
+    type: method
   - uid: vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.constructor
     name: PerfTracePointCollector()
     children: []
@@ -21,3 +165,37 @@ items:
       parameters: []
       content: new PerfTracePointCollector()
     type: constructor
+  - uid: vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.register
+    name: register()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function register()
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.resetActiveCount
+    name: 'resetActiveCount(tracePointName: string)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: tracePointName
+          type:
+            - string
+          description: ''
+      content: 'function resetActiveCount(tracePointName: string)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.resetActiveCounts
+    name: resetActiveCounts()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function resetActiveCounts()
+    type: method

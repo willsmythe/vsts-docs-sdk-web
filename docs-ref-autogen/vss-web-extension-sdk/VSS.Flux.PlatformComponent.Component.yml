@@ -4,37 +4,21 @@ items:
     name: Component
     fullName: Component
     children:
-      - vss-web-extension-sdk.VSS.Flux.PlatformComponent.Component.constructor
       - >-
         vss-web-extension-sdk.VSS.Flux.PlatformComponent.Component.componentWillUnmount
-      - vss-web-extension-sdk.VSS.Flux.PlatformComponent.Component.createControl
-      - vss-web-extension-sdk.VSS.Flux.PlatformComponent.Component.getTagName
+      - vss-web-extension-sdk.VSS.Flux.PlatformComponent.Component.render
       - >-
         vss-web-extension-sdk.VSS.Flux.PlatformComponent.Component.shouldComponentUpdate
-      - vss-web-extension-sdk.VSS.Flux.PlatformComponent.Component._control
     langs:
       - typeScript
     type: class
     summary: >-
       This a base component which wraps an existing legacy platform control like
       grid, treeview, splitter.
+    extends:
+      - '@vss-web-extension-sdk.VSS.Flux.Component.Component<TProps>'
     package: vss-web-extension-sdk
     module: VSS/Flux/PlatformComponent
-  - uid: vss-web-extension-sdk.VSS.Flux.PlatformComponent.Component.constructor
-    name: 'Component(props?: TProps)'
-    children: []
-    langs:
-      - typeScript
-    summary: ''
-    syntax:
-      parameters:
-        - id: props
-          type:
-            - TProps
-          description: ''
-          optional: true
-      content: 'new Component(props?: TProps)'
-    type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Flux.PlatformComponent.Component.componentWillUnmount
     name: componentWillUnmount()
@@ -46,37 +30,18 @@ items:
       parameters: []
       content: function componentWillUnmount()
     type: method
-  - uid: vss-web-extension-sdk.VSS.Flux.PlatformComponent.Component.createControl
-    name: 'createControl(element: JQuery)'
+  - uid: vss-web-extension-sdk.VSS.Flux.PlatformComponent.Component.render
+    name: render()
     children: []
     langs:
       - typeScript
-    summary: >-
-      Components will override this method, generate the platform control and
-      return it.
-    syntax:
-      parameters:
-        - id: element
-          type:
-            - JQuery
-          description: JQuery element.
-      content: 'function createControl(element: JQuery)'
-      return:
-        type:
-          - TControl
-    type: method
-  - uid: vss-web-extension-sdk.VSS.Flux.PlatformComponent.Component.getTagName
-    name: getTagName()
-    children: []
-    langs:
-      - typeScript
-    summary: Gets the name of the tag for the React element.
+    summary: ''
     syntax:
       parameters: []
-      content: function getTagName()
+      content: function render()
       return:
         type:
-          - string
+          - Element
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Flux.PlatformComponent.Component.shouldComponentUpdate
@@ -101,15 +66,3 @@ items:
         type:
           - boolean
     type: method
-  - uid: vss-web-extension-sdk.VSS.Flux.PlatformComponent.Component._control
-    name: _control
-    fullName: _control
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - TControl

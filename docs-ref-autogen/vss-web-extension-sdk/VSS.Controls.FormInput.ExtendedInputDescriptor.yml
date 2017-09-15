@@ -11,46 +11,23 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.dependenciesSatisfiedCallbacks
       - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.dependencyInputIds
-      - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.description
-      - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.groupName
-      - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.hasDynamicValueInformation
-      - >-
         vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.hideUntilSatisfied
-      - vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.id
-      - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.inputMode
-      - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.isConfidential
       - >-
         vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.isDeletable
-      - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.name
       - >-
         vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.noInvalidateOnDependencyChange
       - >-
         vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.noValidIcon
       - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.properties
-      - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.type
-      - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.useInDefaultDescription
-      - >-
         vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.validation
       - >-
         vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.valueChangedCallbacks
-      - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.valueHint
-      - >-
-        vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.values
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputDescriptor'
     package: vss-web-extension-sdk
     module: VSS/Controls/FormInput
   - uid: >-
@@ -65,7 +42,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'function[]'
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.dependencies
     name: dependencies
@@ -80,7 +57,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<boolean>[]
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.dependenciesSatisfiedCallbacks
     name: dependenciesSatisfiedCallbacks
@@ -95,63 +73,7 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.dependencyInputIds
-    name: dependencyInputIds
-    fullName: dependencyInputIds
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: The ids of all inputs that the value of this input is dependent on.
-    syntax:
-      return:
-        type:
-          - function
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.description
-    name: description
-    fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Description of what this input is used for
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.groupName
-    name: groupName
-    fullName: groupName
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      The group localized name to which this input belongs and can be shown as a
-      header for the container that will include all the inputs in the group.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.hasDynamicValueInformation
-    name: hasDynamicValueInformation
-    fullName: hasDynamicValueInformation
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      If true, the value information for this input is dynamic and should be
-      fetched when the value of dependency inputs change.
-    syntax:
-      return:
-        type:
-          - boolean
+          - 'function[]'
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.hideUntilSatisfied
     name: hideUntilSatisfied
@@ -163,46 +85,6 @@ items:
     summary: >-
       Gets whether this input should be invisible until all of its dependencies
       are satisfied or not.
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Identifier for the subscription input
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.inputMode
-    name: inputMode
-    fullName: inputMode
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Mode in which the value of this input should be entered
-    syntax:
-      return:
-        type:
-          - InputMode
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.isConfidential
-    name: isConfidential
-    fullName: isConfidential
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Gets whether this input is confidential, such as for a password or
-      application key
     syntax:
       return:
         type:
@@ -220,18 +102,6 @@ items:
       return:
         type:
           - boolean
-  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.name
-    name: name
-    fullName: name
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Localized name which can be shown as a label for the subscription input
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.noInvalidateOnDependencyChange
     name: noInvalidateOnDependencyChange
@@ -264,48 +134,6 @@ items:
         type:
           - boolean
   - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.properties
-    name: properties
-    fullName: properties
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Custom properties for the input which can be used by the service provider
-    syntax:
-      return:
-        type:
-          - '[key: string]: any'
-  - uid: vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.type
-    name: type
-    fullName: type
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Underlying data type for the input value. When this value is specified,
-      InputMode, Validation and Values are optional.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.useInDefaultDescription
-    name: useInDefaultDescription
-    fullName: useInDefaultDescription
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      Gets whether this input is included in the default generated action
-      description.
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.validation
     name: validation
     fullName: validation
@@ -317,7 +145,8 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputValidation
+          - >-
+            @vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputValidation
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.valueChangedCallbacks
     name: valueChangedCallbacks
@@ -330,30 +159,5 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.valueHint
-    name: valueHint
-    fullName: valueHint
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: A hint for input value. It can be used in the UI as the input placeholder.
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.values
-    name: values
-    fullName: values
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Information about possible values for this input
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputValues
+          - >-
+            @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<void>[]

@@ -40,7 +40,6 @@ items:
       - >-
         vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release.variableGroups
       - vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release.variables
-      - vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release._links
     langs:
       - typeScript
     type: interface
@@ -58,7 +57,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Artifact[]'
   - uid: vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release.comment
     name: comment
     fullName: comment
@@ -82,7 +81,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release.createdOn
     name: createdOn
     fullName: createdOn
@@ -132,7 +131,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment[]
   - uid: vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release.id
     name: id
     fullName: id
@@ -181,7 +181,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release.modifiedOn
     name: modifiedOn
     fullName: modifiedOn
@@ -231,7 +231,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ProjectReference
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ProjectReference
   - uid: vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release.properties
     name: properties
     fullName: properties
@@ -271,7 +271,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionShallowReference
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionShallowReference
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release.releaseNameFormat
     name: releaseNameFormat
@@ -308,7 +308,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'string[]'
   - uid: vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release.url
     name: url
     fullName: url
@@ -333,7 +333,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.VariableGroup[]
   - uid: vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release.variables
     name: variables
     fullName: variables
@@ -345,16 +346,6 @@ items:
     syntax:
       return:
         type:
-          - '[key: string]: ConfigurationVariableValue'
-  - uid: vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Gets links to access the release.
-    syntax:
-      return:
-        type:
-          - any
+          - >-
+            [key: string]:
+            @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ConfigurationVariableValue

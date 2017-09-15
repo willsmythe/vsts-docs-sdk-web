@@ -4,127 +4,16 @@ items:
     name: GitCommit
     fullName: GitCommit
     children:
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.author
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.changeCounts
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.changes
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.comment
-      - >-
-        vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.commentTruncated
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.commitId
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.committer
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.parents
       - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.push
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.remoteUrl
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.statuses
       - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.treeId
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.url
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.workItems
-      - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef'
     package: vss-web-extension-sdk
     module: TFS/VersionControl/Contracts
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.author
-    name: author
-    fullName: author
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitUserDate
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.changeCounts
-    name: changeCounts
-    fullName: changeCounts
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - >-
-            vss-web-extension-sdk.TFS.VersionControl.Contracts.ChangeCountDictionary
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.changes
-    name: changes
-    fullName: changes
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - function
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.comment
-    name: comment
-    fullName: comment
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.commentTruncated
-    name: commentTruncated
-    fullName: commentTruncated
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.commitId
-    name: commitId
-    fullName: commitId
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.committer
-    name: committer
-    fullName: committer
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitUserDate
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.parents
-    name: parents
-    fullName: parents
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - function
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.push
     name: push
     fullName: push
@@ -136,31 +25,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPushRef
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.remoteUrl
-    name: remoteUrl
-    fullName: remoteUrl
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.statuses
-    name: statuses
-    fullName: statuses
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - function
+          - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPushRef'
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.treeId
     name: treeId
     fullName: treeId
@@ -173,39 +38,3 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit.workItems
-    name: workItems
-    fullName: workItems
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - function
-  - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

@@ -33,7 +33,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.VSS.Common.Contracts.Platform.JavascriptFileReference
+            @vss-web-extension-sdk.VSS.Common.Contracts.Platform.JavascriptFileReference
   - uid: >-
       vss-web-extension-sdk.VSS.Common.Contracts.Platform.CoreReferencesContext.extensionCoreReferences
     name: extensionCoreReferences
@@ -47,7 +47,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.VSS.Common.Contracts.Platform.JavascriptFileReference
+            @vss-web-extension-sdk.VSS.Common.Contracts.Platform.JavascriptFileReference
   - uid: >-
       vss-web-extension-sdk.VSS.Common.Contracts.Platform.CoreReferencesContext.scripts
     name: scripts
@@ -60,7 +60,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.VSS.Common.Contracts.Platform.JavascriptFileReference[]
   - uid: >-
       vss-web-extension-sdk.VSS.Common.Contracts.Platform.CoreReferencesContext.stylesheets
     name: stylesheets
@@ -73,4 +74,5 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.VSS.Common.Contracts.Platform.StylesheetReference[]

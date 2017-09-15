@@ -9,15 +9,15 @@ items:
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemHistory.revisedBy
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemHistory.revisedDate
-      - vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemHistory.url
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemHistory.value
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemHistory._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTrackingResource
     package: vss-web-extension-sdk
     module: TFS/WorkItemTracking/Contracts
   - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemHistory.rev
@@ -45,7 +45,7 @@ items:
       return:
         type:
           - >-
-            vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemHistory.revisedDate
     name: revisedDate
@@ -59,18 +59,6 @@ items:
       return:
         type:
           - Date
-  - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemHistory.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemHistory.value
     name: value
     fullName: value
@@ -83,16 +71,3 @@ items:
       return:
         type:
           - string
-  - uid: >-
-      vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemHistory._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

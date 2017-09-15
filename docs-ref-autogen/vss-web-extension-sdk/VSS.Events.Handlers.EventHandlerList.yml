@@ -17,7 +17,7 @@ items:
     package: vss-web-extension-sdk
     module: VSS/Events/Handlers
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.EventHandlerList.constructor
-    name: 'EventHandlerList(handlers?: function)'
+    name: 'EventHandlerList(handlers?: IFunctionPPR<TSender>[])'
     children: []
     langs:
       - typeScript
@@ -26,11 +26,11 @@ items:
       parameters:
         - id: handlers
           type:
-            - function
+            - '@vss-web-extension-sdk.IFunctionPPR<TSender>[]'
           description: |
             Optional initial list of handlers
           optional: true
-      content: 'new EventHandlerList(handlers?: function)'
+      content: 'new EventHandlerList(handlers?: IFunctionPPR<TSender>[])'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.EventHandlerList.getHandlers
     name: getHandlers()
@@ -63,7 +63,8 @@ items:
           description: Event-specific arguments
           optional: true
         - id: handlerResultFilter
-          type: []
+          type:
+            - function
           description: >
             Optional callback method to be able to break out of the handler
             invocation loop based on the return value of a handler. The filter
@@ -74,7 +75,7 @@ items:
         handlerResultFilter?: function)
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.EventHandlerList.subscribe
-    name: 'subscribe(handler: IFunctionPPR)'
+    name: 'subscribe(handler: IFunctionPPR<TSender>)'
     children: []
     langs:
       - typeScript
@@ -83,13 +84,13 @@ items:
       parameters:
         - id: handler
           type:
-            - vss-web-extension-sdk.IFunctionPPR
+            - '@vss-web-extension-sdk.IFunctionPPR<TSender>'
           description: |
             Event handler method to register
-      content: 'function subscribe(handler: IFunctionPPR)'
+      content: 'function subscribe(handler: IFunctionPPR<TSender>)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.EventHandlerList.unsubscribe
-    name: 'unsubscribe(handler: IFunctionPPR)'
+    name: 'unsubscribe(handler: IFunctionPPR<TSender>)'
     children: []
     langs:
       - typeScript
@@ -98,8 +99,8 @@ items:
       parameters:
         - id: handler
           type:
-            - vss-web-extension-sdk.IFunctionPPR
+            - '@vss-web-extension-sdk.IFunctionPPR<TSender>'
           description: |
             Event handler method to remove
-      content: 'function unsubscribe(handler: IFunctionPPR)'
+      content: 'function unsubscribe(handler: IFunctionPPR<TSender>)'
     type: method

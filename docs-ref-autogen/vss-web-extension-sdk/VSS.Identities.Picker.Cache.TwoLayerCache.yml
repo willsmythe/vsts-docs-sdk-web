@@ -4,6 +4,10 @@ items:
     name: TwoLayerCache
     fullName: TwoLayerCache
     children:
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Cache.TwoLayerCache.addRedirector
+      - >-
+        vss-web-extension-sdk.VSS.Identities.Picker.Cache.TwoLayerCache.configure
       - vss-web-extension-sdk.VSS.Identities.Picker.Cache.TwoLayerCache.get
       - vss-web-extension-sdk.VSS.Identities.Picker.Cache.TwoLayerCache.set
       - >-
@@ -14,6 +18,36 @@ items:
     summary: ''
     package: vss-web-extension-sdk
     module: VSS/Identities/Picker/Cache
+  - uid: >-
+      vss-web-extension-sdk.VSS.Identities.Picker.Cache.TwoLayerCache.addRedirector
+    name: 'addRedirector(cacheType: CacheableTypes)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: cacheType
+          type:
+            - CacheableTypes
+          description: ''
+      content: 'function addRedirector(cacheType: CacheableTypes)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.TwoLayerCache.configure
+    name: 'configure(config: ITwoLayerCacheConfiguration<V>)'
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters:
+        - id: config
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCacheConfiguration<V>
+          description: ''
+      content: 'function configure(config: ITwoLayerCacheConfiguration<V>)'
+    type: method
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.TwoLayerCache.get
     name: 'get(key: string, cacheTypeHint?: string)'
     children: []
@@ -61,7 +95,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Cache.TwoLayerCache.constructor
-    name: 'TwoLayerCache(config: ITwoLayerCacheConfiguration)'
+    name: 'TwoLayerCache(config: ITwoLayerCacheConfiguration<V>)'
     children: []
     langs:
       - typeScript
@@ -71,7 +105,7 @@ items:
         - id: config
           type:
             - >-
-              vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCacheConfiguration
+              @vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCacheConfiguration<V>
           description: ''
-      content: 'new TwoLayerCache(config: ITwoLayerCacheConfiguration)'
+      content: 'new TwoLayerCache(config: ITwoLayerCacheConfiguration<V>)'
     type: constructor

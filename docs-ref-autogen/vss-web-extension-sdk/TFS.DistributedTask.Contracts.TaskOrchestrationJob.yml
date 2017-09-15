@@ -15,8 +15,6 @@ items:
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationJob.instanceId
       - >-
-        vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationJob.itemType
-      - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationJob.name
       - >-
         vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationJob.refName
@@ -28,6 +26,9 @@ items:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationItem
     package: vss-web-extension-sdk
     module: TFS/DistributedTask/Contracts
   - uid: >-
@@ -42,7 +43,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'any[]'
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationJob.executeAs
     name: executeAs
@@ -55,7 +56,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+          - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationJob.executionMode
     name: executionMode
@@ -96,19 +97,6 @@ items:
         type:
           - string
   - uid: >-
-      vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationJob.itemType
-    name: itemType
-    fullName: itemType
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - TaskOrchestrationItemType
-  - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationJob.name
     name: name
     fullName: name
@@ -146,7 +134,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskInstance[]'
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskOrchestrationJob.variables
     name: variables

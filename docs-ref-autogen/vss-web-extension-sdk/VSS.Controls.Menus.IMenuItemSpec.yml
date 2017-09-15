@@ -17,9 +17,7 @@ items:
       - vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.extraOptions
       - vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.focusable
       - vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.groupId
-      - vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.hidden
       - vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.hideDrop
-      - vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.href
       - vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.html
       - vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.icon
       - vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.id
@@ -46,6 +44,8 @@ items:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.IContributedMenuItem'
     package: vss-web-extension-sdk
     module: VSS/Controls/Menus
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.action
@@ -58,7 +58,8 @@ items:
     summary: ''
     syntax:
       return:
-        type: []
+        type:
+          - function
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.arguments
     name: arguments
     fullName: arguments
@@ -106,7 +107,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.Controls.Menus.MenuOptions
+          - '@vss-web-extension-sdk.VSS.Controls.Menus.MenuOptions'
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.clickOpensSubMenu
     name: clickOpensSubMenu
     fullName: clickOpensSubMenu
@@ -211,18 +212,6 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.hidden
-    name: hidden
-    fullName: hidden
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: 'If true, the menu item will not be displayed.'
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.hideDrop
     name: hideDrop
     fullName: hideDrop
@@ -237,20 +226,6 @@ items:
       return:
         type:
           - boolean
-  - uid: vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.href
-    name: href
-    fullName: href
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      If specified, create an <a> tag around this menu item with the specified
-      href.
-    syntax:
-      return:
-        type:
-          - string
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.html
     name: html
     fullName: html
@@ -351,7 +326,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions
+          - '@vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions'
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.pinningOptions
     name: pinningOptions
     fullName: pinningOptions
@@ -363,7 +338,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemPinningOptions
+          - '@vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemPinningOptions'
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.rank
     name: rank
     fullName: rank
@@ -476,7 +451,7 @@ items:
     syntax:
       return:
         type:
-          - vss-web-extension-sdk.VSS.Controls.Menus.ISplitDropMenuItemSpec
+          - '@vss-web-extension-sdk.VSS.Controls.Menus.ISplitDropMenuItemSpec'
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec.text
     name: text
     fullName: text

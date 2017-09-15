@@ -35,7 +35,7 @@ items:
         - id: fieldChangedArgs
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemFieldChangedArgs
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemFieldChangedArgs
           description: >
             Information about the work item that was modified and the fields
             that were changed.
@@ -53,7 +53,7 @@ items:
         - id: workItemLoadedArgs
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemLoadedArgs
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemLoadedArgs
           description: |
             Information about the work item that was loaded.
       content: 'function onLoaded(workItemLoadedArgs: IWorkItemLoadedArgs)'
@@ -70,7 +70,7 @@ items:
         - id: refreshEventArgs
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemChangedArgs
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemChangedArgs
           description: |
             Information about the work item that was refreshed.
       content: 'function onRefreshed(refreshEventArgs: IWorkItemChangedArgs)'
@@ -87,7 +87,7 @@ items:
         - id: undoEventArgs
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemChangedArgs
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemChangedArgs
           description: |
             Information about the work item that was reset.
       content: 'function onReset(undoEventArgs: IWorkItemChangedArgs)'
@@ -104,7 +104,7 @@ items:
         - id: savedEventArgs
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemChangedArgs
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemChangedArgs
           description: |
             Information about the work item that was saved.
       content: 'function onSaved(savedEventArgs: IWorkItemChangedArgs)'
@@ -121,7 +121,7 @@ items:
         - id: unloadedEventArgs
           type:
             - >-
-              vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemChangedArgs
+              @vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemChangedArgs
           description: |
             Information about the work item that was saved.
       content: 'function onUnloaded(unloadedEventArgs: IWorkItemChangedArgs)'

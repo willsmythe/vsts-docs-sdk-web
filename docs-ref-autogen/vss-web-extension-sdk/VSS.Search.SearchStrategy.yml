@@ -12,7 +12,6 @@ items:
       - vss-web-extension-sdk.VSS.Search.SearchStrategy.processItems
       - vss-web-extension-sdk.VSS.Search.SearchStrategy.search
       - vss-web-extension-sdk.VSS.Search.SearchStrategy.constructor
-      - vss-web-extension-sdk.VSS.Search.SearchStrategy._options
     langs:
       - typeScript
     type: class
@@ -69,7 +68,7 @@ items:
           - number
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.getTerms
-    name: 'getTerms(searchText: function, delimiter?: string)'
+    name: 'getTerms(searchText: string[], delimiter?: string)'
     children: []
     langs:
       - typeScript
@@ -80,17 +79,17 @@ items:
       parameters:
         - id: searchText
           type:
-            - function
+            - 'string[]'
           description: The searchText to split up.
         - id: delimiter
           type:
             - string
           description: The string or regex delimiter to use to split up the search terms
           optional: true
-      content: 'function getTerms(searchText: function, delimiter?: string)'
+      content: 'function getTerms(searchText: string[], delimiter?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.processItems
-    name: 'processItems(searchableObjects: function)'
+    name: 'processItems(searchableObjects: SearchableObject<T>[])'
     children: []
     langs:
       - typeScript
@@ -101,10 +100,10 @@ items:
       parameters:
         - id: searchableObjects
           type:
-            - function
+            - '@vss-web-extension-sdk.VSS.Search.SearchableObject<T>[]'
           description: |
             SearchableObjects to add
-      content: 'function processItems(searchableObjects: function)'
+      content: 'function processItems(searchableObjects: SearchableObject<T>[])'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.search
     name: 'search(query: string)'
@@ -123,7 +122,7 @@ items:
       content: 'function search(query: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.constructor
-    name: 'SearchStrategy(options?: ISearchStrategyOptions)'
+    name: 'SearchStrategy(options?: ISearchStrategyOptions<T>)'
     children: []
     langs:
       - typeScript
@@ -134,20 +133,8 @@ items:
       parameters:
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.Search.ISearchStrategyOptions
+            - '@vss-web-extension-sdk.VSS.Search.ISearchStrategyOptions<T>'
           description: ''
           optional: true
-      content: 'new SearchStrategy(options?: ISearchStrategyOptions)'
+      content: 'new SearchStrategy(options?: ISearchStrategyOptions<T>)'
     type: constructor
-  - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy._options
-    name: _options
-    fullName: _options
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.VSS.Search.ISearchStrategyOptions

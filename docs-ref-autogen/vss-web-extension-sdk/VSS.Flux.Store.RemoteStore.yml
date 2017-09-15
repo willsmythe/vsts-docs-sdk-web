@@ -4,15 +4,57 @@ items:
     name: RemoteStore
     fullName: RemoteStore
     children:
+      - vss-web-extension-sdk.VSS.Flux.Store.RemoteStore.getError
+      - vss-web-extension-sdk.VSS.Flux.Store.RemoteStore.hasError
+      - vss-web-extension-sdk.VSS.Flux.Store.RemoteStore.isLoading
       - vss-web-extension-sdk.VSS.Flux.Store.RemoteStore.constructor
-      - vss-web-extension-sdk.VSS.Flux.Store.RemoteStore._error
-      - vss-web-extension-sdk.VSS.Flux.Store.RemoteStore._loading
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.Flux.Store.Store'
     package: vss-web-extension-sdk
     module: VSS/Flux/Store
+  - uid: vss-web-extension-sdk.VSS.Flux.Store.RemoteStore.getError
+    name: getError()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function getError()
+      return:
+        type:
+          - any
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Flux.Store.RemoteStore.hasError
+    name: hasError()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function hasError()
+      return:
+        type:
+          - boolean
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Flux.Store.RemoteStore.isLoading
+    name: isLoading()
+    children: []
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      parameters: []
+      content: function isLoading()
+      return:
+        type:
+          - boolean
+    type: method
   - uid: vss-web-extension-sdk.VSS.Flux.Store.RemoteStore.constructor
     name: RemoteStore()
     children: []
@@ -23,27 +65,3 @@ items:
       parameters: []
       content: new RemoteStore()
     type: constructor
-  - uid: vss-web-extension-sdk.VSS.Flux.Store.RemoteStore._error
-    name: _error
-    fullName: _error
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any
-  - uid: vss-web-extension-sdk.VSS.Flux.Store.RemoteStore._loading
-    name: _loading
-    fullName: _loading
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean

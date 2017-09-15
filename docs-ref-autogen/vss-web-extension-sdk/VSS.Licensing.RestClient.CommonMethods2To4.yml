@@ -9,33 +9,13 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.assignAvailableAccountEntitlement
       - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.authTokenManager
-      - >-
         vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.bulkGetExtensionsAssignedToUsers
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.certificateApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.clientRightsApiVersion
       - >-
         vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.constructor
       - >-
         vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.computeExtensionRights
       - >-
         vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.deleteUserEntitlements
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.entitlementsApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.entitlementsApiVersion_c01e9fd5
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.entitlementsBatchApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.extensionEntitlementsBatchApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.extensionRegistrationApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.extensionRightsApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
       - >-
         vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.getAccountEntitlement
       - >-
@@ -57,33 +37,15 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.getUsageRights
       - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.msdnApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.msdnApiVersion_69522c3f
-      - >-
         vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.obtainAvailableAccountEntitlements
       - >-
         vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.registerExtensionLicense
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.usageApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.usageRightsApiVersion
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4._beginGetLocation
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4._beginRequest
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4._beginRequestWithAjaxResult
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4._issueAjaxRequest
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4._rootRequestPath
-      - >-
-        vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4._setInitializationPromise
     langs:
       - typeScript
     type: class
     summary: ''
+    extends:
+      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     package: vss-web-extension-sdk
     module: VSS/Licensing/RestClient
   - uid: >-
@@ -100,7 +62,7 @@ items:
         - id: body
           type:
             - >-
-              vss-web-extension-sdk.VSS.Licensing.Contracts.AccountEntitlementUpdateModel
+              @vss-web-extension-sdk.VSS.Licensing.Contracts.AccountEntitlementUpdateModel
           description: The update model for the entitlement
         - id: userId
           type:
@@ -111,7 +73,8 @@ items:
         AccountEntitlementUpdateModel, userId: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Licensing.Contracts.AccountEntitlement>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.assignAvailableAccountEntitlement
@@ -129,24 +92,12 @@ items:
       content: 'function assignAvailableAccountEntitlement(userId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Licensing.Contracts.AccountEntitlement>
     type: method
   - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.authTokenManager
-    name: authTokenManager
-    fullName: authTokenManager
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - vss-web-extension-sdk.IAuthTokenManager
-  - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.bulkGetExtensionsAssignedToUsers
-    name: 'bulkGetExtensionsAssignedToUsers(userIds: function)'
+    name: 'bulkGetExtensionsAssignedToUsers(userIds: string[])'
     children: []
     langs:
       - typeScript
@@ -157,39 +108,13 @@ items:
       parameters:
         - id: userIds
           type:
-            - function
+            - 'string[]'
           description: ''
-      content: 'function bulkGetExtensionsAssignedToUsers(userIds: function)'
+      content: 'function bulkGetExtensionsAssignedToUsers(userIds: string[])'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<[key: string]: function>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.certificateApiVersion
-    name: certificateApiVersion
-    fullName: certificateApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.clientRightsApiVersion
-    name: clientRightsApiVersion
-    fullName: clientRightsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.constructor
     name: >-
@@ -207,7 +132,7 @@ items:
           description: ''
         - id: options
           type:
-            - vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
       content: >-
@@ -216,7 +141,7 @@ items:
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.computeExtensionRights
-    name: 'computeExtensionRights(ids: function)'
+    name: 'computeExtensionRights(ids: string[])'
     children: []
     langs:
       - typeScript
@@ -225,12 +150,12 @@ items:
       parameters:
         - id: ids
           type:
-            - function
+            - 'string[]'
           description: ''
-      content: 'function computeExtensionRights(ids: function)'
+      content: 'function computeExtensionRights(ids: string[])'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<[key: string]: boolean>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.deleteUserEntitlements
@@ -248,99 +173,8 @@ items:
       content: 'function deleteUserEntitlements(userId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.entitlementsApiVersion
-    name: entitlementsApiVersion
-    fullName: entitlementsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.entitlementsApiVersion_c01e9fd5
-    name: entitlementsApiVersion_c01e9fd5
-    fullName: entitlementsApiVersion_c01e9fd5
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.entitlementsBatchApiVersion
-    name: entitlementsBatchApiVersion
-    fullName: entitlementsBatchApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.extensionEntitlementsBatchApiVersion
-    name: extensionEntitlementsBatchApiVersion
-    fullName: extensionEntitlementsBatchApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.extensionRegistrationApiVersion
-    name: extensionRegistrationApiVersion
-    fullName: extensionRegistrationApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.extensionRightsApiVersion
-    name: extensionRightsApiVersion
-    fullName: extensionRightsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.forceOptionsCallForAutoNegotiate
-    name: forceOptionsCallForAutoNegotiate
-    fullName: forceOptionsCallForAutoNegotiate
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - boolean
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.getAccountEntitlement
     name: getAccountEntitlement()
@@ -356,7 +190,8 @@ items:
       content: function getAccountEntitlement()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Licensing.Contracts.AccountEntitlement>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.getAccountEntitlementForUser
@@ -381,7 +216,8 @@ items:
         boolean)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Licensing.Contracts.AccountEntitlement>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.getAccountLicensesUsage
@@ -395,7 +231,8 @@ items:
       content: function getAccountLicensesUsage()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Licensing.Contracts.AccountLicenseUsage[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.getCertificate
@@ -409,7 +246,7 @@ items:
       content: function getCertificate()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.getClientRights
@@ -464,7 +301,8 @@ items:
         canary?: string, machineId?: string)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Licensing.Contracts.ClientRightsContainer>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.getEntitlements
@@ -478,7 +316,8 @@ items:
       content: function getEntitlements()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Licensing.Contracts.MsdnEntitlement[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.getExtensionLicenseData
@@ -496,7 +335,8 @@ items:
       content: 'function getExtensionLicenseData(extensionId: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Licensing.Contracts.ExtensionLicenseData>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.getExtensionRights
@@ -510,7 +350,8 @@ items:
       content: function getExtensionRights()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Licensing.Contracts.ExtensionRightsResult>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.getMsdnPresence
@@ -524,7 +365,7 @@ items:
       content: function getMsdnPresence()
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.getUsageRights
@@ -543,37 +384,12 @@ items:
       content: 'function getUsageRights(rightName?: string)'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Licensing.Contracts.IUsageRight[]>
     type: method
   - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.msdnApiVersion
-    name: msdnApiVersion
-    fullName: msdnApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.msdnApiVersion_69522c3f
-    name: msdnApiVersion_69522c3f
-    fullName: msdnApiVersion_69522c3f
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.obtainAvailableAccountEntitlements
-    name: 'obtainAvailableAccountEntitlements(userIds: function)'
+    name: 'obtainAvailableAccountEntitlements(userIds: string[])'
     children: []
     langs:
       - typeScript
@@ -584,12 +400,13 @@ items:
       parameters:
         - id: userIds
           type:
-            - function
+            - 'string[]'
           description: List of user Ids.
-      content: 'function obtainAvailableAccountEntitlements(userIds: function)'
+      content: 'function obtainAvailableAccountEntitlements(userIds: string[])'
       return:
         type:
-          - vss-web-extension-sdk.IPromise
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Licensing.Contracts.AccountEntitlement[]>
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.registerExtensionLicense
@@ -602,191 +419,13 @@ items:
       parameters:
         - id: extensionLicenseData
           type:
-            - vss-web-extension-sdk.VSS.Licensing.Contracts.ExtensionLicenseData
+            - >-
+              @vss-web-extension-sdk.VSS.Licensing.Contracts.ExtensionLicenseData
           description: ''
       content: >-
         function registerExtensionLicense(extensionLicenseData:
         ExtensionLicenseData)
       return:
         type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.usageApiVersion
-    name: usageApiVersion
-    fullName: usageApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.usageRightsApiVersion
-    name: usageRightsApiVersion
-    fullName: usageRightsApiVersion
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4._beginGetLocation
-    name: '_beginGetLocation(area: string, locationId: string)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Gets information about an API resource location (route template, supported
-      versions, etc.)
-    syntax:
-      parameters:
-        - id: area
-          type:
-            - string
-          description: resource area name
-        - id: locationId
-          type:
-            - string
-          description: |
-            Guid of the location to get
-      content: 'function _beginGetLocation(area: string, locationId: string)'
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4._beginRequest
-    name: >-
-      _beginRequest(requestParams: VssApiResourceRequestParams, useAjaxResult?:
-      boolean)
-    children: []
-    langs:
-      - typeScript
-    summary: Issue a request to a VSS REST endpoint.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >-
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used
-          optional: true
-      content: >-
-        function _beginRequest(requestParams: VssApiResourceRequestParams,
-        useAjaxResult?: boolean)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4._beginRequestWithAjaxResult
-    name: '_beginRequestWithAjaxResult(requestParams: VssApiResourceRequestParams)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue a request to a VSS REST endpoint and makes sure the result contains
-      jqXHR. Use spread to access jqXHR.
-    syntax:
-      parameters:
-        - id: requestParams
-          type:
-            - >-
-              vss-web-extension-sdk.VSS.WebApi.RestClient.VssApiResourceRequestParams
-          description: request options
-      content: >-
-        function _beginRequestWithAjaxResult(requestParams:
-        VssApiResourceRequestParams)
-      return:
-        type:
-          - Q.Promise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4._issueAjaxRequest
-    name: >-
-      _issueAjaxRequest(requestUrl: string, ajaxOptions: JQueryAjaxSettings,
-      useAjaxResult?: boolean, vssRequestOptions?: IVssAjaxOptions)
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Issue an AJAX request. This is a wrapper around jquery's ajax method that
-      handles VSS authentication
-
-      and triggers events that can be listened to by other modules.
-    syntax:
-      parameters:
-        - id: requestUrl
-          type:
-            - string
-          description: Url to send the request to
-        - id: ajaxOptions
-          type:
-            - JQueryAjaxSettings
-          description: jQuery.ajax options
-        - id: useAjaxResult
-          type:
-            - boolean
-          description: >
-            If true, textStatus and jqXHR are added to the success callback. In
-            this case, spread (instead of then) needs to be used.
-          optional: true
-        - id: vssRequestOptions
-          type:
-            - vss-web-extension-sdk.IVssAjaxOptions
-          description: ''
-          optional: true
-      content: >-
-        function _issueAjaxRequest(requestUrl: string, ajaxOptions:
-        JQueryAjaxSettings, useAjaxResult?: boolean, vssRequestOptions?:
-        IVssAjaxOptions)
-      return:
-        type:
-          - vss-web-extension-sdk.IPromise
-    type: method
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4._rootRequestPath
-    name: _rootRequestPath
-    fullName: _rootRequestPath
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: >-
-      vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4._setInitializationPromise
-    name: '_setInitializationPromise(promise: IPromise)'
-    children: []
-    langs:
-      - typeScript
-    summary: >-
-      Sets a promise that is waited on before any requests are issued. Can be
-      used to asynchronously
-
-      set the request url and auth token manager.
-    syntax:
-      parameters:
-        - id: promise
-          type:
-            - vss-web-extension-sdk.IPromise
-          description: ''
-      content: 'function _setInitializationPromise(promise: IPromise)'
+          - '@vss-web-extension-sdk.IPromise<boolean>'
     type: method

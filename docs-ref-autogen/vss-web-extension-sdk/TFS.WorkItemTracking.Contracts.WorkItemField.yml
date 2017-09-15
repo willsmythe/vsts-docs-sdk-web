@@ -20,13 +20,13 @@ items:
       - >-
         vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemField.supportedOperations
       - vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemField.type
-      - vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemField.url
-      - >-
-        vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemField._links
     langs:
       - typeScript
     type: interface
     summary: ''
+    extends:
+      - >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTrackingResource
     package: vss-web-extension-sdk
     module: TFS/WorkItemTracking/Contracts
   - uid: >-
@@ -131,7 +131,8 @@ items:
     syntax:
       return:
         type:
-          - function
+          - >-
+            @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemFieldOperation[]
   - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemField.type
     name: type
     fullName: type
@@ -144,27 +145,3 @@ items:
       return:
         type:
           - FieldType
-  - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemField.url
-    name: url
-    fullName: url
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemField._links
-    name: _links
-    fullName: _links
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: ''
-    syntax:
-      return:
-        type:
-          - any

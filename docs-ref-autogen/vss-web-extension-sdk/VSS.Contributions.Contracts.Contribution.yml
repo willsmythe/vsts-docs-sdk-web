@@ -6,19 +6,17 @@ items:
     children:
       - >-
         vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution.constraints
-      - >-
-        vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution.description
-      - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution.id
       - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution.includes
       - >-
         vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution.properties
       - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution.targets
       - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution.type
-      - vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution.visibleTo
     langs:
       - typeScript
     type: interface
     summary: An individual contribution made by an extension
+    extends:
+      - '@vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionBase'
     package: vss-web-extension-sdk
     module: VSS/Contributions/Contracts
   - uid: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution.constraints
@@ -34,31 +32,8 @@ items:
     syntax:
       return:
         type:
-          - function
-  - uid: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution.description
-    name: description
-    fullName: description
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Description of the contribution/type
-    syntax:
-      return:
-        type:
-          - string
-  - uid: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution.id
-    name: id
-    fullName: id
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: Fully qualified identifier of the contribution/type
-    syntax:
-      return:
-        type:
-          - string
+          - >-
+            @vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionConstraint[]
   - uid: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution.includes
     name: includes
     fullName: includes
@@ -72,7 +47,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'string[]'
   - uid: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution.properties
     name: properties
     fullName: properties
@@ -98,7 +73,7 @@ items:
     syntax:
       return:
         type:
-          - function
+          - 'string[]'
   - uid: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution.type
     name: type
     fullName: type
@@ -111,20 +86,3 @@ items:
       return:
         type:
           - string
-  - uid: vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution.visibleTo
-    name: visibleTo
-    fullName: visibleTo
-    children: []
-    langs:
-      - typeScript
-    type: property
-    summary: >-
-      VisibleTo can be used to restrict whom can reference a given
-      contribution/type. This value should be a list of publishers or extensions
-      access is restricted too.  Examples: "ms" - Means only the "ms" publisher
-      can reference this. "ms.vss-web" - Means only the "vss-web" extension from
-      the "ms" publisher can reference this.
-    syntax:
-      return:
-        type:
-          - function
