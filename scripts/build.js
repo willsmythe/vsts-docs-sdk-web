@@ -36,7 +36,7 @@ function generatePackageDoc(packagePath, dest) {
         if (fse.existsSync(sourceCodeBasePath)) {
             var packageDest = dest + '/' + packageName;
             fse.mkdirpSync(packageDest);
-            child_process.execSync('typedoc --json ' + dir + '/api.json ' + dir + '/typings --module commonjs --ignoreCompilerErrors --includeDeclarations --exclude **/node_modules/**');
+            child_process.execSync('typedoc --json ' + dir + '/api.json ' + dir + '/typings --module commonjs --ignoreCompilerErrors --includeDeclarations  --excludeExternals');
             var basePath = sourceCodeBasePath.replace(src + '/', '');
             child_process.execFileSync('node', ['node_modules/type2docfx/dist/main', dir + '/api.json', packageDest,
              '--hasModule', '--basePath', basePath]);
