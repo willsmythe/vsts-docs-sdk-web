@@ -38,7 +38,7 @@ function generatePackageDoc(packagePath, dest) {
             fse.mkdirpSync(packageDest);
             child_process.spawnSync('./node_modules/.bin/typedoc',  [' --json ', dir + '/api.json ', dir + '/typings', '--module', 'commonjs', '--ignoreCompilerErrors', '--includeDeclarations', '--excludeExternals']);
             var basePath = sourceCodeBasePath.replace(src + '/', '');
-            child_process.execFileSync('node', ['node_modules/type2docfx/dist/main', dir + '/api.json', packageDest,
+            child_process.execFileSync('node', ['node_modules/type2docfx/dist/main', dir + '/api.json', packageDest, 'repo.json',
              '--hasModule', '--basePath', basePath]);
         } else {
             console.log('No source file for ' + packageName);

@@ -18,6 +18,13 @@ items:
     summary: Interval metrics event that does nothing
     extends:
       - '@vss-web-extension-sdk.VSS.Profile.Metrics.IntervalMetricsEvent'
+    source:
+      path: vss.d.ts
+      startLine: 30006
+      remote:
+        path: typings\vss.d.ts
+        repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
+        branch: master
     package: vss-web-extension-sdk
     module: VSS/Profile/Metrics
   - uid: vss-web-extension-sdk.VSS.Profile.Metrics.NullIntervalMetricsEvent.begin

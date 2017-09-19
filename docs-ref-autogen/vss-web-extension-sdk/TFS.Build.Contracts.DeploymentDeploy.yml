@@ -11,6 +11,13 @@ items:
     summary: Deployment information for type "Deploy"
     extends:
       - '@vss-web-extension-sdk.TFS.Build.Contracts.Deployment'
+    source:
+      path: tfs.d.ts
+      startLine: 1217
+      remote:
+        path: typings\tfs.d.ts
+        repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
+        branch: master
     package: vss-web-extension-sdk
     module: TFS/Build/Contracts
   - uid: vss-web-extension-sdk.TFS.Build.Contracts.DeploymentDeploy.message

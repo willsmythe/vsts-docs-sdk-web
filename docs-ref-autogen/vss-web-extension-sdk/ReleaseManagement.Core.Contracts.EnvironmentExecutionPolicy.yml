@@ -16,6 +16,13 @@ items:
       Defines policy on environment queuing at Release Management side queue. We
       will send to Environment Runner [creating pre-deploy and other steps] only
       when the policies mentioned are satisfied.
+    source:
+      path: rmo.d.ts
+      startLine: 618
+      remote:
+        path: typings\rmo.d.ts
+        repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
+        branch: master
     package: vss-web-extension-sdk
     module: ReleaseManagement/Core/Contracts
   - uid: >-
