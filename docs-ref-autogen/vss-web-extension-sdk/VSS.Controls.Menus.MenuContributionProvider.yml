@@ -31,12 +31,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getContributedMenuItems(context: any)'
       parameters:
         - id: context
           type:
             - any
           description: ''
-      content: 'function getContributedMenuItems(context: any)'
       return:
         type:
           - >-
@@ -52,8 +52,8 @@ items:
       Gets the time in ms to wait to get actions from action provider or for the
       actions to run
     syntax:
-      parameters: []
       content: function getContributionSourceTimeout()
+      parameters: []
       return:
         type:
           - number
@@ -70,6 +70,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new MenuContributionProvider(menu: Menu<MenuOptions>, webContext:
+        WebContext, contributionIds: string[], contributionType: string,
+        contributionQueryOptions: ContributionQueryOptions,
+        getMenuActionContext: function, options:
+        MenuContributionProviderOptions)
       parameters:
         - id: menu
           type:
@@ -101,10 +107,4 @@ items:
             - >-
               @vss-web-extension-sdk.VSS.Controls.Menus.MenuContributionProviderOptions
           description: ''
-      content: >-
-        new MenuContributionProvider(menu: Menu<MenuOptions>, webContext:
-        WebContext, contributionIds: string[], contributionType: string,
-        contributionQueryOptions: ContributionQueryOptions,
-        getMenuActionContext: function, options:
-        MenuContributionProviderOptions)
     type: constructor

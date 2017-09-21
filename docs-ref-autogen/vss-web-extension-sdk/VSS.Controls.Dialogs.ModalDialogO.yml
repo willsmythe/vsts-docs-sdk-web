@@ -23,7 +23,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO<TOptions>'
     source:
       path: vss.d.ts
       startLine: 10803
@@ -68,8 +68,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.ModalDialogO.initializeOptions
     name: 'initializeOptions(options?: TOptions)'
@@ -78,6 +78,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -85,7 +86,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: TOptions)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Dialogs.ModalDialogO.onButtonStatusChange
@@ -95,6 +95,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onButtonStatusChange(e?: JQueryEventObject, args?: any)'
       parameters:
         - id: e
           type:
@@ -106,7 +107,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function onButtonStatusChange(e?: JQueryEventObject, args?: any)'
       return:
         type:
           - any
@@ -118,13 +118,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onCancelClick(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function onCancelClick(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -136,13 +136,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onOkClick(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function onOkClick(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -154,6 +154,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onResultReady(e?: JQueryEventObject, args?: any)'
       parameters:
         - id: e
           type:
@@ -165,7 +166,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function onResultReady(e?: JQueryEventObject, args?: any)'
       return:
         type:
           - any
@@ -177,12 +177,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function processResult(result: any)'
       parameters:
         - id: result
           type:
             - any
           description: ''
-      content: 'function processResult(result: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.ModalDialogO.updateOkButton
     name: 'updateOkButton(enabled: boolean)'
@@ -191,10 +191,10 @@ items:
       - typeScript
     summary: Updates the enabled state of the ok button.
     syntax:
+      content: 'function updateOkButton(enabled: boolean)'
       parameters:
         - id: enabled
           type:
             - boolean
           description: 'True if enabled, otherwise false.'
-      content: 'function updateOkButton(enabled: boolean)'
     type: method

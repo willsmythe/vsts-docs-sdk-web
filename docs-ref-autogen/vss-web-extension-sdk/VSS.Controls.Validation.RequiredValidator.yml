@@ -16,7 +16,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator<TOptions>'
     source:
       path: vss.d.ts
       startLine: 17863
@@ -34,6 +34,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -41,7 +42,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: TOptions)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.RequiredValidator.isValid
     name: isValid()
@@ -50,8 +50,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isValid()
+      parameters: []
       return:
         type:
           - boolean
@@ -78,6 +78,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new RequiredValidator(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -85,5 +86,4 @@ items:
           description: |+
 
           optional: true
-      content: 'new RequiredValidator(options?: TOptions)'
     type: constructor

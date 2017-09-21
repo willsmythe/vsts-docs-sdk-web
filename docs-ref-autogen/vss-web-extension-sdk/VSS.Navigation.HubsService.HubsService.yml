@@ -63,6 +63,9 @@ items:
       - typeScript
     summary: Get the default hub to use for the specified hub group
     syntax:
+      content: >-
+        function getDefaultHubForHubGroup(hubGroup: HubGroup, hubGroupHubs?:
+        Hub[])
       parameters:
         - id: hubGroup
           type:
@@ -74,9 +77,6 @@ items:
           description: |
             Optional list of the hubs to consider for the group.
           optional: true
-      content: >-
-        function getDefaultHubForHubGroup(hubGroup: HubGroup, hubGroupHubs?:
-        Hub[])
       return:
         type:
           - '@vss-web-extension-sdk.Hub'
@@ -88,13 +88,13 @@ items:
       - typeScript
     summary: Gets the hub by its id
     syntax:
+      content: 'function getHubById(id: string)'
       parameters:
         - id: id
           type:
             - string
           description: |
             Id of the hub to return
-      content: 'function getHubById(id: string)'
       return:
         type:
           - '@vss-web-extension-sdk.Hub'
@@ -107,12 +107,12 @@ items:
       - typeScript
     summary: Gets the hub group by its id.
     syntax:
+      content: 'function getHubGroupById(id: string)'
       parameters:
         - id: id
           type:
             - string
           description: Id of the hub group to return.
-      content: 'function getHubGroupById(id: string)'
       return:
         type:
           - '@vss-web-extension-sdk.HubGroup'
@@ -124,8 +124,8 @@ items:
       - typeScript
     summary: Gets all hub groups
     syntax:
-      parameters: []
       content: function getHubGroups()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.getHubNavigateHandler
@@ -135,6 +135,7 @@ items:
       - typeScript
     summary: Get an event handler to navigate to the specified hub
     syntax:
+      content: 'function getHubNavigateHandler(hubId: string, url?: string)'
       parameters:
         - id: hubId
           type:
@@ -147,7 +148,6 @@ items:
             Optional specific url for the hub (the hub's default url if not
             specified)
           optional: true
-      content: 'function getHubNavigateHandler(hubId: string, url?: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.getHubsByGroupId
@@ -159,6 +159,9 @@ items:
       - typeScript
     summary: Get the hubs in the specified hub group
     syntax:
+      content: >-
+        function getHubsByGroupId(id: string, excludeContributed?: boolean,
+        excludeBuiltIn?: boolean, includeHidden?: boolean)
       parameters:
         - id: id
           type:
@@ -180,9 +183,6 @@ items:
           description: |
             If true, exclude hidden hubs
           optional: true
-      content: >-
-        function getHubsByGroupId(id: string, excludeContributed?: boolean,
-        excludeBuiltIn?: boolean, includeHidden?: boolean)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.getPinnedHubsByGroupId
@@ -192,13 +192,13 @@ items:
       - typeScript
     summary: 'Gets non-built in, pinned hubs.'
     syntax:
+      content: 'function getPinnedHubsByGroupId(hubGroupId: string)'
       parameters:
         - id: hubGroupId
           type:
             - string
           description: |
             Id of the hub group
-      content: 'function getPinnedHubsByGroupId(hubGroupId: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.getPinningPreferences
@@ -208,8 +208,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getPinningPreferences()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.PinningPreferences'
@@ -222,8 +222,8 @@ items:
       - typeScript
     summary: Get the id of the selected hub group
     syntax:
-      parameters: []
       content: function getSelectedHubGroupId()
+      parameters: []
       return:
         type:
           - string
@@ -236,8 +236,8 @@ items:
       - typeScript
     summary: Get the id of the selected hub
     syntax:
-      parameters: []
       content: function getSelectedHubId()
+      parameters: []
       return:
         type:
           - string
@@ -249,8 +249,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: new HubsService()
+      parameters: []
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.isHubGroupPinned
@@ -260,13 +260,13 @@ items:
       - typeScript
     summary: Is the specified hub group explicitly pinned by the user?
     syntax:
+      content: 'function isHubGroupPinned(hubGroup: HubGroup)'
       parameters:
         - id: hubGroup
           type:
             - '@vss-web-extension-sdk.HubGroup'
           description: |
             The hub group to check
-      content: 'function isHubGroupPinned(hubGroup: HubGroup)'
       return:
         type:
           - boolean
@@ -279,13 +279,13 @@ items:
       - typeScript
     summary: Is the specified hub group explicitly unpinned by the user?
     syntax:
+      content: 'function isHubGroupUnpinned(hubGroup: HubGroup)'
       parameters:
         - id: hubGroup
           type:
             - '@vss-web-extension-sdk.HubGroup'
           description: |
             Hub group to check
-      content: 'function isHubGroupUnpinned(hubGroup: HubGroup)'
       return:
         type:
           - boolean
@@ -299,13 +299,13 @@ items:
       Returns true if the specified hub has not been explicitly unpinned by the
       current user
     syntax:
+      content: 'function isHubPinned(hub: Hub)'
       parameters:
         - id: hub
           type:
             - '@vss-web-extension-sdk.Hub'
           description: |
             The hub to check
-      content: 'function isHubPinned(hub: Hub)'
       return:
         type:
           - boolean
@@ -317,6 +317,7 @@ items:
       - typeScript
     summary: Navigate the page to the specified hub
     syntax:
+      content: 'function navigateToHub(hubId: string, url?: string)'
       parameters:
         - id: hubId
           type:
@@ -329,7 +330,6 @@ items:
             (Optional) Specific url to navigate to. The hub's default url if not
             specified.
           optional: true
-      content: 'function navigateToHub(hubId: string, url?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.pinHub
     name: 'pinHub(hub: Hub)'
@@ -338,13 +338,13 @@ items:
       - typeScript
     summary: Pin the specified hub for the current user
     syntax:
+      content: 'function pinHub(hub: Hub)'
       parameters:
         - id: hub
           type:
             - '@vss-web-extension-sdk.Hub'
           description: |
             Hub to pin
-      content: 'function pinHub(hub: Hub)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.pinHubGroup
     name: 'pinHubGroup(hubGroup: HubGroup)'
@@ -353,13 +353,13 @@ items:
       - typeScript
     summary: Pin the hub group for the current user
     syntax:
+      content: 'function pinHubGroup(hubGroup: HubGroup)'
       parameters:
         - id: hubGroup
           type:
             - '@vss-web-extension-sdk.HubGroup'
           description: |
             Hub group to pin
-      content: 'function pinHubGroup(hubGroup: HubGroup)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.replaceCurrentHubState
@@ -369,6 +369,7 @@ items:
       - typeScript
     summary: Replace current hub state
     syntax:
+      content: 'function replaceCurrentHubState(hubId: string, url?: string)'
       parameters:
         - id: hubId
           type:
@@ -381,7 +382,6 @@ items:
             (Optional) Specific url to navigate to. The hub's default url if not
             specified.
           optional: true
-      content: 'function replaceCurrentHubState(hubId: string, url?: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.saveDefaultHubForGroup
@@ -393,6 +393,7 @@ items:
       Saves details of the current route to Local Storage, keyed off of the Hub
       Group ID.
     syntax:
+      content: 'function saveDefaultHubForGroup(hubGroupId: string, hubId: string)'
       parameters:
         - id: hubGroupId
           type:
@@ -404,7 +405,6 @@ items:
           description: >
             The id of the hub to save/remember as the default hub for the hub
             group for this user
-      content: 'function saveDefaultHubForGroup(hubGroupId: string, hubId: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.triggerSelectedHubChangedEvent
@@ -419,13 +419,13 @@ items:
       has changed, so all navigation-related elements should be updated
       appropriately.
     syntax:
+      content: 'function triggerSelectedHubChangedEvent(hubId: string)'
       parameters:
         - id: hubId
           type:
             - string
           description: |
             The id of the newly selected hub
-      content: 'function triggerSelectedHubChangedEvent(hubId: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.unpinHub
     name: 'unpinHub(hub: Hub)'
@@ -434,13 +434,13 @@ items:
       - typeScript
     summary: Unpin the specified hub for the current user
     syntax:
+      content: 'function unpinHub(hub: Hub)'
       parameters:
         - id: hub
           type:
             - '@vss-web-extension-sdk.Hub'
           description: |
             Hub to unpin
-      content: 'function unpinHub(hub: Hub)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Navigation.HubsService.HubsService.unpinHubGroup
     name: 'unpinHubGroup(hubGroup: HubGroup)'
@@ -449,11 +449,11 @@ items:
       - typeScript
     summary: Unpin the hub group for the current user
     syntax:
+      content: 'function unpinHubGroup(hubGroup: HubGroup)'
       parameters:
         - id: hubGroup
           type:
             - '@vss-web-extension-sdk.HubGroup'
           description: |
             Hub group to unpin
-      content: 'function unpinHubGroup(hubGroup: HubGroup)'
     type: method

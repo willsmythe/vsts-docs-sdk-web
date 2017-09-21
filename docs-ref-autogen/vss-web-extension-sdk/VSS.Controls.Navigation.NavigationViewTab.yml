@@ -15,7 +15,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.BaseControl'
+      name: '@vss-web-extension-sdk.VSS.Controls.BaseControl'
     source:
       path: vss.d.ts
       startLine: 14896
@@ -35,13 +35,13 @@ items:
       Creates a control which is used to populate a navigation tab's content
       section
     syntax:
+      content: 'new NavigationViewTab(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'new NavigationViewTab(options?: any)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.NavigationViewTab.onNavigate
     name: 'onNavigate(rawState: any, parsedState: any)'
@@ -50,6 +50,7 @@ items:
       - typeScript
     summary: Called whenever navigation occurs with this tab as the selected tab
     syntax:
+      content: 'function onNavigate(rawState: any, parsedState: any)'
       parameters:
         - id: rawState
           type:
@@ -62,7 +63,6 @@ items:
             - any
           description: |
             Resolved state objects parsed by the view
-      content: 'function onNavigate(rawState: any, parsedState: any)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.NavigationViewTab.onNavigateAway
@@ -74,6 +74,6 @@ items:
       Called whenever this tab is active and a navigation occurs that is
       switching to another tab
     syntax:
-      parameters: []
       content: function onNavigateAway()
+      parameters: []
     type: method

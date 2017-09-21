@@ -39,13 +39,13 @@ items:
       Begins the long running operation, invoking the specified
       operationCallback when necessary.
     syntax:
+      content: 'function beginOperation(operationCallback: IResultCallback)'
       parameters:
         - id: operationCallback
           type:
             - '@vss-web-extension-sdk.IResultCallback'
           description: |
             An operation that may take a long time to complete.
-      content: 'function beginOperation(operationCallback: IResultCallback)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.cancelOperation
@@ -55,8 +55,8 @@ items:
       - typeScript
     summary: Cancels the current operation.
     syntax:
-      parameters: []
       content: function cancelOperation()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.endOperation
@@ -66,8 +66,8 @@ items:
       - typeScript
     summary: Signals the completion of a long running operation.
     syntax:
-      parameters: []
       content: function endOperation()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.getWaitControl
@@ -77,8 +77,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getWaitControl()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControl'
@@ -93,8 +93,8 @@ items:
       Gets a boolean value indicating whether the current operation has a
       pending cancel request.
     syntax:
-      parameters: []
       content: function isCancelled()
+      parameters: []
       return:
         type:
           - boolean
@@ -110,6 +110,7 @@ items:
       cancellable means overtop the specified container until the operation has
       completed.
     syntax:
+      content: 'new LongRunningOperation(container: any, options?: any)'
       parameters:
         - id: container
           type:
@@ -127,5 +128,4 @@ items:
                 cancellable           boolean     Boolean value indicating whether the operation may be cancelled while it is running.
 
           optional: true
-      content: 'new LongRunningOperation(container: any, options?: any)'
     type: constructor

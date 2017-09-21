@@ -27,7 +27,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior'
+      name: '@vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior'
     source:
       path: vss.d.ts
       startLine: 17766
@@ -45,8 +45,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function canType()
+      parameters: []
       return:
         type:
           - boolean
@@ -59,8 +59,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getAriaAutocomplete()
+      parameters: []
       return:
         type:
           - string
@@ -73,8 +73,8 @@ items:
       - typeScript
     summary: Get additional text to use to label the control for screen reader users.
     syntax:
-      parameters: []
       content: function getAriaDescription()
+      parameters: []
       return:
         type:
           - string
@@ -87,8 +87,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.TreeView.SearchComboTreeBehavior.keyDown
@@ -98,13 +98,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function keyDown(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function keyDown(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -116,13 +116,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function keyUp(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function keyUp(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -135,13 +135,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function leftKey(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function leftKey(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -154,13 +154,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function rightKey(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function rightKey(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -173,6 +173,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new SearchComboTreeBehavior(combo: any, options?: any)'
       parameters:
         - id: combo
           type:
@@ -183,5 +184,4 @@ items:
             - any
           description: ''
           optional: true
-      content: 'new SearchComboTreeBehavior(combo: any, options?: any)'
     type: constructor

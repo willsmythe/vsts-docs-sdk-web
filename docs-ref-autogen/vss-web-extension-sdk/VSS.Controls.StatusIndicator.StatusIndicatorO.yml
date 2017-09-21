@@ -33,7 +33,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Control<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Control<TOptions>'
     source:
       path: vss.d.ts
       startLine: 16499
@@ -51,8 +51,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function complete()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.StatusIndicatorO.delayStart
@@ -62,13 +62,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function delayStart(delay: number)'
       parameters:
         - id: delay
           type:
             - number
           description: |+
 
-      content: 'function delayStart(delay: number)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.StatusIndicatorO.enhancementTypeName
@@ -91,12 +91,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function error(error: Error)'
       parameters:
         - id: error
           type:
             - Error
           description: ''
-      content: 'function error(error: Error)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.StatusIndicatorO.getActiveCount
@@ -106,8 +106,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: static function getActiveCount()
+      parameters: []
       return:
         type:
           - number
@@ -120,8 +120,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function hideElement()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.StatusIndicatorO.initialize
@@ -131,8 +131,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.StatusIndicatorO.initializeOptions
@@ -142,6 +142,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -149,7 +150,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.StatusIndicatorO.isActive
@@ -159,8 +159,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isActive()
+      parameters: []
       return:
         type:
           - boolean
@@ -173,12 +173,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setMessage(message: string)'
       parameters:
         - id: message
           type:
             - string
           description: ''
-      content: 'function setMessage(message: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.StatusIndicatorO.showElement
@@ -188,8 +188,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function showElement()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.StatusIndicator.StatusIndicatorO.start
     name: 'start(options?: IStatusIndicatorOptions)'
@@ -198,6 +198,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function start(options?: IStatusIndicatorOptions)'
       parameters:
         - id: options
           type:
@@ -205,5 +206,4 @@ items:
               @vss-web-extension-sdk.VSS.Controls.StatusIndicator.IStatusIndicatorOptions
           description: ''
           optional: true
-      content: 'function start(options?: IStatusIndicatorOptions)'
     type: method

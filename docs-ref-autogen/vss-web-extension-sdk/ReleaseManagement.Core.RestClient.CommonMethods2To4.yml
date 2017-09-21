@@ -15,7 +15,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: rmo.d.ts
       startLine: 2277
@@ -35,6 +35,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -45,9 +48,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.RestClient.CommonMethods2To4.getAgentArtifactDefinitions
@@ -57,6 +57,7 @@ items:
       - typeScript
     summary: '[Preview API] Returns the artifact details that automation agent requires'
     syntax:
+      content: 'function getAgentArtifactDefinitions(project: string, releaseId: number)'
       parameters:
         - id: project
           type:
@@ -66,7 +67,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getAgentArtifactDefinitions(project: string, releaseId: number)'
       return:
         type:
           - >-

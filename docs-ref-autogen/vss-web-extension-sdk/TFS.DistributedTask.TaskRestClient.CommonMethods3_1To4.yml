@@ -14,7 +14,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2_1To4
     source:
       path: tfs.d.ts
@@ -35,6 +35,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -45,9 +48,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods3_1To4.getQueuedPlanGroups
@@ -59,6 +59,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getQueuedPlanGroups(scopeIdentifier: string, hubName: string,
+        statusFilter?: PlanGroupStatus, count?: number)
       parameters:
         - id: scopeIdentifier
           type:
@@ -80,9 +83,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getQueuedPlanGroups(scopeIdentifier: string, hubName: string,
-        statusFilter?: PlanGroupStatus, count?: number)
       return:
         type:
           - >-

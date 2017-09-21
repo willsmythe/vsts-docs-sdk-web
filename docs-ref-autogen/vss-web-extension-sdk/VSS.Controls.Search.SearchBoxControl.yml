@@ -16,7 +16,7 @@ items:
     type: class
     summary: A input box control for search or filter.
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.Control<@vss-web-extension-sdk.VSS.Controls.Search.ISearchBoxControlOptions>
     source:
       path: vss.d.ts
@@ -34,8 +34,8 @@ items:
       - typeScript
     summary: Displays the search box and hides the search button.
     syntax:
-      parameters: []
       content: function activateSearch()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Search.SearchBoxControl.deactivateSearch
@@ -45,13 +45,13 @@ items:
       - typeScript
     summary: Removes the search box and shows the search button instead.
     syntax:
+      content: 'function deactivateSearch(deactivateSearchHandler?: boolean)'
       parameters:
         - id: deactivateSearchHandler
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function deactivateSearch(deactivateSearchHandler?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Search.SearchBoxControl.getValue
     name: getValue()
@@ -60,8 +60,8 @@ items:
       - typeScript
     summary: Return the triming value of the input box.
     syntax:
-      parameters: []
       content: function getValue()
+      parameters: []
       return:
         type:
           - string
@@ -73,8 +73,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Search.SearchBoxControl.constructor
     name: 'SearchBoxControl(options?: ISearchBoxControlOptions)'
@@ -83,6 +83,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new SearchBoxControl(options?: ISearchBoxControlOptions)'
       parameters:
         - id: options
           type:
@@ -90,5 +91,4 @@ items:
               @vss-web-extension-sdk.VSS.Controls.Search.ISearchBoxControlOptions
           description: ''
           optional: true
-      content: 'new SearchBoxControl(options?: ISearchBoxControlOptions)'
     type: constructor

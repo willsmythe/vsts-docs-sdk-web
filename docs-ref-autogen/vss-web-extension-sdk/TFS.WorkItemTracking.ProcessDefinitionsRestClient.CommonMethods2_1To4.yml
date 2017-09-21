@@ -104,7 +104,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: tfs.d.ts
       startLine: 19691
@@ -124,6 +124,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function addBehaviorToWorkItemType(behavior: WorkItemTypeBehavior,
+        processId: string, witRefNameForBehaviors: string)
       parameters:
         - id: behavior
           type:
@@ -138,9 +141,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function addBehaviorToWorkItemType(behavior: WorkItemTypeBehavior,
-        processId: string, witRefNameForBehaviors: string)
       return:
         type:
           - >-
@@ -159,6 +159,9 @@ items:
       group. So far, the only controls that don't know how to generate their own
       ids are control extensions.
     syntax:
+      content: >-
+        function addControlToGroup(control: Control, processId: string,
+        witRefName: string, groupId: string)
       parameters:
         - id: control
           type:
@@ -177,9 +180,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function addControlToGroup(control: Control, processId: string,
-        witRefName: string, groupId: string)
       return:
         type:
           - >-
@@ -195,6 +195,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function addFieldToWorkItemType(field: WorkItemTypeFieldModel,
+        processId: string, witRefNameForFields: string)
       parameters:
         - id: field
           type:
@@ -209,9 +212,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function addFieldToWorkItemType(field: WorkItemTypeFieldModel,
-        processId: string, witRefNameForFields: string)
       return:
         type:
           - >-
@@ -227,6 +227,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function addGroup(group: Group, processId: string, witRefName: string,
+        pageId: string, sectionId: string)
       parameters:
         - id: group
           type:
@@ -249,9 +252,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function addGroup(group: Group, processId: string, witRefName: string,
-        pageId: string, sectionId: string)
       return:
         type:
           - >-
@@ -265,6 +265,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function addPage(page: Page, processId: string, witRefName: string)'
       parameters:
         - id: page
           type:
@@ -279,7 +280,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function addPage(page: Page, processId: string, witRefName: string)'
       return:
         type:
           - >-
@@ -295,6 +295,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -305,9 +308,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.CommonMethods2_1To4.createBehavior
@@ -317,6 +317,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createBehavior(behavior: BehaviorCreateModel, processId:
+        string)
       parameters:
         - id: behavior
           type:
@@ -327,9 +330,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function createBehavior(behavior: BehaviorCreateModel, processId:
-        string)
       return:
         type:
           - >-
@@ -343,6 +343,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createField(field: FieldModel, processId: string)'
       parameters:
         - id: field
           type:
@@ -353,7 +354,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function createField(field: FieldModel, processId: string)'
       return:
         type:
           - >-
@@ -367,13 +367,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createList(picklist: PickListModel)'
       parameters:
         - id: picklist
           type:
             - >-
               @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.PickListModel
           description: ''
-      content: 'function createList(picklist: PickListModel)'
       return:
         type:
           - >-
@@ -389,6 +389,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createStateDefinition(stateModel: WorkItemStateInputModel,
+        processId: string, witRefName: string)
       parameters:
         - id: stateModel
           type:
@@ -403,9 +406,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function createStateDefinition(stateModel: WorkItemStateInputModel,
-        processId: string, witRefName: string)
       return:
         type:
           - >-
@@ -419,6 +419,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createWorkItemType(workItemType: WorkItemTypeModel, processId:
+        string)
       parameters:
         - id: workItemType
           type:
@@ -429,9 +432,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function createWorkItemType(workItemType: WorkItemTypeModel, processId:
-        string)
       return:
         type:
           - >-
@@ -445,6 +445,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteBehavior(processId: string, behaviorId: string)'
       parameters:
         - id: processId
           type:
@@ -454,7 +455,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function deleteBehavior(processId: string, behaviorId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -467,12 +467,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteList(listId: string)'
       parameters:
         - id: listId
           type:
             - string
           description: ''
-      content: 'function deleteList(listId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -487,6 +487,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteStateDefinition(processId: string, witRefName: string,
+        stateId: string)
       parameters:
         - id: processId
           type:
@@ -500,9 +503,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function deleteStateDefinition(processId: string, witRefName: string,
-        stateId: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -515,6 +515,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteWorkItemType(processId: string, witRefName: string)'
       parameters:
         - id: processId
           type:
@@ -524,7 +525,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function deleteWorkItemType(processId: string, witRefName: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -539,6 +539,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function editControl(control: Control, processId: string, witRefName:
+        string, groupId: string, controlId: string)
       parameters:
         - id: control
           type:
@@ -561,9 +564,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function editControl(control: Control, processId: string, witRefName:
-        string, groupId: string, controlId: string)
       return:
         type:
           - >-
@@ -579,6 +579,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function editGroup(group: Group, processId: string, witRefName: string,
+        pageId: string, sectionId: string, groupId: string)
       parameters:
         - id: group
           type:
@@ -605,9 +608,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function editGroup(group: Group, processId: string, witRefName: string,
-        pageId: string, sectionId: string, groupId: string)
       return:
         type:
           - >-
@@ -621,6 +621,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function editPage(page: Page, processId: string, witRefName: string)'
       parameters:
         - id: page
           type:
@@ -635,7 +636,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function editPage(page: Page, processId: string, witRefName: string)'
       return:
         type:
           - >-
@@ -649,6 +649,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getBehavior(processId: string, behaviorId: string)'
       parameters:
         - id: processId
           type:
@@ -658,7 +659,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getBehavior(processId: string, behaviorId: string)'
       return:
         type:
           - >-
@@ -674,6 +674,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getBehaviorForWorkItemType(processId: string,
+        witRefNameForBehaviors: string, behaviorRefName: string)
       parameters:
         - id: processId
           type:
@@ -687,9 +690,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getBehaviorForWorkItemType(processId: string,
-        witRefNameForBehaviors: string, behaviorRefName: string)
       return:
         type:
           - >-
@@ -703,12 +703,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getBehaviors(processId: string)'
       parameters:
         - id: processId
           type:
             - string
           description: ''
-      content: 'function getBehaviors(processId: string)'
       return:
         type:
           - >-
@@ -724,6 +724,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getBehaviorsForWorkItemType(processId: string,
+        witRefNameForBehaviors: string)
       parameters:
         - id: processId
           type:
@@ -733,9 +736,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getBehaviorsForWorkItemType(processId: string,
-        witRefNameForBehaviors: string)
       return:
         type:
           - >-
@@ -749,6 +749,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getFormLayout(processId: string, witRefName: string)'
       parameters:
         - id: processId
           type:
@@ -758,7 +759,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getFormLayout(processId: string, witRefName: string)'
       return:
         type:
           - >-
@@ -772,12 +772,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getList(listId: string)'
       parameters:
         - id: listId
           type:
             - string
           description: ''
-      content: 'function getList(listId: string)'
       return:
         type:
           - >-
@@ -791,8 +791,8 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
-      parameters: []
       content: function getListsMetadata()
+      parameters: []
       return:
         type:
           - >-
@@ -806,6 +806,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getStateDefinition(processId: string, witRefName: string,
+        stateId: string)
       parameters:
         - id: processId
           type:
@@ -819,9 +822,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getStateDefinition(processId: string, witRefName: string,
-        stateId: string)
       return:
         type:
           - >-
@@ -835,6 +835,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getStateDefinitions(processId: string, witRefName: string)'
       parameters:
         - id: processId
           type:
@@ -844,7 +845,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getStateDefinitions(processId: string, witRefName: string)'
       return:
         type:
           - >-
@@ -860,6 +860,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getWorkItemType(processId: string, witRefName: string, expand?:
+        GetWorkItemTypeExpand)
       parameters:
         - id: processId
           type:
@@ -874,9 +877,6 @@ items:
             - GetWorkItemTypeExpand
           description: ''
           optional: true
-      content: >-
-        function getWorkItemType(processId: string, witRefName: string, expand?:
-        GetWorkItemTypeExpand)
       return:
         type:
           - >-
@@ -892,6 +892,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getWorkItemTypeField(processId: string, witRefNameForFields:
+        string, fieldRefName: string)
       parameters:
         - id: processId
           type:
@@ -905,9 +908,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getWorkItemTypeField(processId: string, witRefNameForFields:
-        string, fieldRefName: string)
       return:
         type:
           - >-
@@ -921,6 +921,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getWorkItemTypeFields(processId: string, witRefNameForFields:
+        string)
       parameters:
         - id: processId
           type:
@@ -930,9 +933,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getWorkItemTypeFields(processId: string, witRefNameForFields:
-        string)
       return:
         type:
           - >-
@@ -946,6 +946,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getWorkItemTypes(processId: string, expand?:
+        GetWorkItemTypeExpand)
       parameters:
         - id: processId
           type:
@@ -956,9 +959,6 @@ items:
             - GetWorkItemTypeExpand
           description: ''
           optional: true
-      content: >-
-        function getWorkItemTypes(processId: string, expand?:
-        GetWorkItemTypeExpand)
       return:
         type:
           - >-
@@ -974,6 +974,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function hideStateDefinition(hideStateModel: HideStateModel, processId:
+        string, witRefName: string, stateId: string)
       parameters:
         - id: hideStateModel
           type:
@@ -992,9 +995,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function hideStateDefinition(hideStateModel: HideStateModel, processId:
-        string, witRefName: string, stateId: string)
       return:
         type:
           - >-
@@ -1010,6 +1010,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function removeBehaviorFromWorkItemType(processId: string,
+        witRefNameForBehaviors: string, behaviorRefName: string)
       parameters:
         - id: processId
           type:
@@ -1023,9 +1026,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function removeBehaviorFromWorkItemType(processId: string,
-        witRefNameForBehaviors: string, behaviorRefName: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -1040,6 +1040,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function removeControlFromGroup(processId: string, witRefName: string,
+        groupId: string, controlId: string)
       parameters:
         - id: processId
           type:
@@ -1057,9 +1060,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function removeControlFromGroup(processId: string, witRefName: string,
-        groupId: string, controlId: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -1074,6 +1074,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function removeFieldFromWorkItemType(processId: string,
+        witRefNameForFields: string, fieldRefName: string)
       parameters:
         - id: processId
           type:
@@ -1087,9 +1090,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function removeFieldFromWorkItemType(processId: string,
-        witRefNameForFields: string, fieldRefName: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -1104,6 +1104,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function removeGroup(processId: string, witRefName: string, pageId:
+        string, sectionId: string, groupId: string)
       parameters:
         - id: processId
           type:
@@ -1125,9 +1128,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function removeGroup(processId: string, witRefName: string, pageId:
-        string, sectionId: string, groupId: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -1140,6 +1140,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function removePage(processId: string, witRefName: string, pageId:
+        string)
       parameters:
         - id: processId
           type:
@@ -1153,9 +1156,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function removePage(processId: string, witRefName: string, pageId:
-        string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -1170,6 +1170,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function replaceBehavior(behaviorData: BehaviorReplaceModel, processId:
+        string, behaviorId: string)
       parameters:
         - id: behaviorData
           type:
@@ -1184,9 +1187,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function replaceBehavior(behaviorData: BehaviorReplaceModel, processId:
-        string, behaviorId: string)
       return:
         type:
           - >-
@@ -1218,6 +1218,10 @@ items:
       [Preview API] Puts a control withan id into a group. Controls backed by
       fields can generate their own id.
     syntax:
+      content: >-
+        function setControlInGroup(control: Control, processId: string,
+        witRefName: string, groupId: string, controlId: string,
+        removeFromGroupId?: string)
       parameters:
         - id: control
           type:
@@ -1245,10 +1249,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function setControlInGroup(control: Control, processId: string,
-        witRefName: string, groupId: string, controlId: string,
-        removeFromGroupId?: string)
       return:
         type:
           - >-
@@ -1265,6 +1265,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function setGroupInPage(group: Group, processId: string, witRefName:
+        string, pageId: string, sectionId: string, groupId: string,
+        removeFromPageId: string, removeFromSectionId: string)
       parameters:
         - id: group
           type:
@@ -1299,10 +1303,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function setGroupInPage(group: Group, processId: string, witRefName:
-        string, pageId: string, sectionId: string, groupId: string,
-        removeFromPageId: string, removeFromSectionId: string)
       return:
         type:
           - >-
@@ -1319,6 +1319,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function setGroupInSection(group: Group, processId: string, witRefName:
+        string, pageId: string, sectionId: string, groupId: string,
+        removeFromSectionId: string)
       parameters:
         - id: group
           type:
@@ -1349,10 +1353,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function setGroupInSection(group: Group, processId: string, witRefName:
-        string, pageId: string, sectionId: string, groupId: string,
-        removeFromSectionId: string)
       return:
         type:
           - >-
@@ -1368,6 +1368,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateBehaviorToWorkItemType(behavior: WorkItemTypeBehavior,
+        processId: string, witRefNameForBehaviors: string)
       parameters:
         - id: behavior
           type:
@@ -1382,9 +1385,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateBehaviorToWorkItemType(behavior: WorkItemTypeBehavior,
-        processId: string, witRefNameForBehaviors: string)
       return:
         type:
           - >-
@@ -1398,6 +1398,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function updateField(field: FieldUpdate, processId: string)'
       parameters:
         - id: field
           type:
@@ -1408,7 +1409,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function updateField(field: FieldUpdate, processId: string)'
       return:
         type:
           - >-
@@ -1422,6 +1422,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function updateList(picklist: PickListModel, listId: string)'
       parameters:
         - id: picklist
           type:
@@ -1432,7 +1433,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function updateList(picklist: PickListModel, listId: string)'
       return:
         type:
           - >-
@@ -1448,6 +1448,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateStateDefinition(stateModel: WorkItemStateInputModel,
+        processId: string, witRefName: string, stateId: string)
       parameters:
         - id: stateModel
           type:
@@ -1466,9 +1469,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateStateDefinition(stateModel: WorkItemStateInputModel,
-        processId: string, witRefName: string, stateId: string)
       return:
         type:
           - >-
@@ -1484,6 +1484,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateWorkItemType(workItemTypeUpdate: WorkItemTypeUpdateModel,
+        processId: string, witRefName: string)
       parameters:
         - id: workItemTypeUpdate
           type:
@@ -1498,9 +1501,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateWorkItemType(workItemTypeUpdate: WorkItemTypeUpdateModel,
-        processId: string, witRefName: string)
       return:
         type:
           - >-

@@ -36,6 +36,7 @@ items:
       Add specified document to the running document table
         The document must have a method named isDirty that returns boolean
     syntax:
+      content: 'function add(moniker: string, document: RunningDocument)'
       parameters:
         - id: moniker
           type:
@@ -45,7 +46,6 @@ items:
           type:
             - '@vss-web-extension-sdk.VSS.Events.Document.RunningDocument'
           description: Object that will be called to determine state (e.g. dirty//modified)
-      content: 'function add(moniker: string, document: RunningDocument)'
       return:
         type:
           - >-
@@ -58,6 +58,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function beginSave(callback: IResultCallback, errorCallback?:
+        IErrorCallback)
       parameters:
         - id: callback
           type:
@@ -68,9 +71,6 @@ items:
             - '@vss-web-extension-sdk.IErrorCallback'
           description: ''
           optional: true
-      content: >-
-        function beginSave(callback: IResultCallback, errorCallback?:
-        IErrorCallback)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTable.getUnsavedItemsMessage
@@ -80,8 +80,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getUnsavedItemsMessage()
+      parameters: []
       return:
         type:
           - string
@@ -96,13 +96,13 @@ items:
       or undefined
         will return true if any currently opened documents are modified
     syntax:
+      content: 'function isModified(moniker?: string)'
       parameters:
         - id: moniker
           type:
             - string
           description: Name for this document type
           optional: true
-      content: 'function isModified(moniker?: string)'
       return:
         type:
           - boolean
@@ -114,6 +114,7 @@ items:
       - typeScript
     summary: Remove an entry from the running document table
     syntax:
+      content: 'function remove(entry: RunningDocumentsTableEntry)'
       parameters:
         - id: entry
           type:
@@ -122,7 +123,6 @@ items:
           description: >
             The handle to the entry that will be removed. The handle is returned
             from the add function
-      content: 'function remove(entry: RunningDocumentsTableEntry)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Document.RunningDocumentsTable.constructor
@@ -132,6 +132,6 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: new RunningDocumentsTable()
+      parameters: []
     type: constructor

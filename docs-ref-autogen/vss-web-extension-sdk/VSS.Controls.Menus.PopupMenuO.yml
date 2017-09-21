@@ -19,7 +19,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Menus.MenuOwner<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Menus.MenuOwner<TOptions>'
     source:
       path: vss.d.ts
       startLine: 14519
@@ -49,8 +49,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function escaped()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.PopupMenuO.initializeOptions
     name: 'initializeOptions(options?: TOptions)'
@@ -59,6 +59,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -66,7 +67,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: TOptions)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.PopupMenuO.popup
     name: 'popup(focusElement: any, pinElement: any)'
@@ -75,6 +75,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function popup(focusElement: any, pinElement: any)'
       parameters:
         - id: focusElement
           type:
@@ -84,7 +85,6 @@ items:
           type:
             - any
           description: ''
-      content: 'function popup(focusElement: any, pinElement: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.PopupMenuO.constructor
     name: 'PopupMenuO(options?: TOptions)'
@@ -93,13 +93,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new PopupMenuO(options?: TOptions)'
       parameters:
         - id: options
           type:
             - TOptions
           description: ''
           optional: true
-      content: 'new PopupMenuO(options?: TOptions)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.PopupMenuO.selectDown
     name: 'selectDown(options?: any)'
@@ -108,13 +108,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectDown(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function selectDown(options?: any)'
       return:
         type:
           - boolean
@@ -128,8 +128,8 @@ items:
       Selects the first item of the child menu.
       Override of Menu.selectFirstItem()
     syntax:
-      parameters: []
       content: function selectFirstItem()
+      parameters: []
       return:
         type:
           - boolean
@@ -141,13 +141,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectLeft(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function selectLeft(options?: any)'
       return:
         type:
           - boolean
@@ -159,13 +159,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectRight(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function selectRight(options?: any)'
       return:
         type:
           - boolean
@@ -177,13 +177,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectUp(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function selectUp(options?: any)'
       return:
         type:
           - boolean

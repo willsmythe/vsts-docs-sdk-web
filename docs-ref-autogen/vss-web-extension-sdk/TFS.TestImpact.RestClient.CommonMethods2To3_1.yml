@@ -23,7 +23,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: tfs.d.ts
       startLine: 9982
@@ -43,6 +43,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To3_1(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -53,9 +56,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To3_1(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.TestImpact.RestClient.CommonMethods2To3_1.publishCodeSignatures
@@ -65,6 +65,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function publishCodeSignatures(results: TestResultSignaturesInfo,
+        project: string)
       parameters:
         - id: results
           type:
@@ -75,9 +78,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function publishCodeSignatures(results: TestResultSignaturesInfo,
-        project: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -92,6 +92,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function publishTestImpactBuildData(testImapctBuildData:
+        TestImpactBuildData, project: string, definitionRunInfo:
+        DefinitionRunInfo)
       parameters:
         - id: testImapctBuildData
           type:
@@ -106,10 +110,6 @@ items:
           type:
             - '@vss-web-extension-sdk.TFS.TestImpact.Contracts.DefinitionRunInfo'
           description: ''
-      content: >-
-        function publishTestImpactBuildData(testImapctBuildData:
-        TestImpactBuildData, project: string, definitionRunInfo:
-        DefinitionRunInfo)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -122,6 +122,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function queryBuildType(project: string, buildId: number)'
       parameters:
         - id: project
           type:
@@ -131,7 +132,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function queryBuildType(project: string, buildId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<BuildType>'
@@ -144,6 +144,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function queryCodeChanges(project: string, definitionRunInfo:
+        DefinitionRunInfo)
       parameters:
         - id: project
           type:
@@ -153,9 +156,6 @@ items:
           type:
             - '@vss-web-extension-sdk.TFS.TestImpact.Contracts.DefinitionRunInfo'
           description: ''
-      content: >-
-        function queryCodeChanges(project: string, definitionRunInfo:
-        DefinitionRunInfo)
       return:
         type:
           - >-
@@ -171,6 +171,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function queryImpactedTests(project: string, definitionRunInfo:
+        DefinitionRunInfo, currentTestRunId: number, typesToInclude?:
+        TestInclusionOptions)
       parameters:
         - id: project
           type:
@@ -189,10 +193,6 @@ items:
             - TestInclusionOptions
           description: ''
           optional: true
-      content: >-
-        function queryImpactedTests(project: string, definitionRunInfo:
-        DefinitionRunInfo, currentTestRunId: number, typesToInclude?:
-        TestInclusionOptions)
       return:
         type:
           - >-

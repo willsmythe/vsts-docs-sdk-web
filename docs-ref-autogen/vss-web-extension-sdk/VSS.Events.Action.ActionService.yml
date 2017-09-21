@@ -42,8 +42,8 @@ items:
       and usually call the "next" handler in the chain (see the Chain of
       Responsibility pattern).
     syntax:
-      parameters: []
       content: new ActionService()
+      parameters: []
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Events.Action.ActionService.clearActionWorkers
     name: clearActionWorkers()
@@ -52,8 +52,8 @@ items:
       - typeScript
     summary: Clears all action workers
     syntax:
-      parameters: []
       content: function clearActionWorkers()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Action.ActionService.MaxOrder
     name: MaxOrder
@@ -75,6 +75,7 @@ items:
       - typeScript
     summary: Invoke the registered action workers for the an action
     syntax:
+      content: 'function performAction(action: string, actionArgs?: any)'
       parameters:
         - id: action
           type:
@@ -86,7 +87,6 @@ items:
           description: |
             An object passed to the registered action workers.
           optional: true
-      content: 'function performAction(action: string, actionArgs?: any)'
       return:
         type:
           - any
@@ -102,6 +102,9 @@ items:
       Register a handler for an action. The handler participates in the Chain of
       Responsibility pattern.
     syntax:
+      content: >-
+        function registerActionWorker(action: string, actionWorker:
+        IActionWorker, order?: number)
       parameters:
         - id: action
           type:
@@ -146,9 +149,6 @@ items:
             The order of the action (default:100).
                   Action workers are executed in increasing order. Order must be less than MaxOrder (inclusive)
           optional: true
-      content: >-
-        function registerActionWorker(action: string, actionWorker:
-        IActionWorker, order?: number)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Action.ActionService.unregisterActionWorker
@@ -158,6 +158,9 @@ items:
       - typeScript
     summary: Un-Register a handler for an action.
     syntax:
+      content: >-
+        function unregisterActionWorker(action: string, actionWorker:
+        IActionWorker)
       parameters:
         - id: action
           type:
@@ -168,9 +171,6 @@ items:
             - '@vss-web-extension-sdk.VSS.Events.Action.IActionWorker'
           description: |
             Function(actionArgs, next), The IActionWorker that was registered.
-      content: >-
-        function unregisterActionWorker(action: string, actionWorker:
-        IActionWorker)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Action.ActionService.unregisterActionWorkers
@@ -180,11 +180,11 @@ items:
       - typeScript
     summary: Un-Register all handlers for an action.
     syntax:
+      content: 'function unregisterActionWorkers(action: string)'
       parameters:
         - id: action
           type:
             - string
           description: |
             The action to un-register
-      content: 'function unregisterActionWorkers(action: string)'
     type: method

@@ -16,7 +16,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Dialogs.ModalDialogO<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Dialogs.ModalDialogO<TOptions>'
     source:
       path: vss.d.ts
       startLine: 10845
@@ -47,8 +47,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Dialogs.ConfirmationDialogO.initializeOptions
@@ -58,6 +58,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -65,7 +66,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.ConfirmationDialogO.onOkClick
     name: 'onOkClick(e?: JQueryEventObject)'
@@ -74,13 +74,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onOkClick(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function onOkClick(e?: JQueryEventObject)'
       return:
         type:
           - any

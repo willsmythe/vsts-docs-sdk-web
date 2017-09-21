@@ -44,8 +44,8 @@ items:
 
       announced if the start message was announced.
     syntax:
-      parameters: []
       content: function announceCompleted()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Utils.Accessibility.ProgressAnnouncer.announceError
@@ -60,8 +60,8 @@ items:
       to be announced regardless of whether or not the start message was
       announced.
     syntax:
-      parameters: []
       content: function announceError()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Utils.Accessibility.ProgressAnnouncer.forPromise
     name: 'forPromise<T>(promise: IPromise<T>, options: ProgressAnnouncerOptions)'
@@ -72,6 +72,9 @@ items:
       Create a ProgressAnnouncer for a promise that will announce promise start
       and completion/rejection.
     syntax:
+      content: >-
+        static function forPromise<T>(promise: IPromise<T>, options:
+        ProgressAnnouncerOptions)
       parameters:
         - id: promise
           type:
@@ -83,9 +86,6 @@ items:
               @vss-web-extension-sdk.VSS.Utils.Accessibility.ProgressAnnouncerOptions
           description: |+
 
-      content: >-
-        static function forPromise<T>(promise: IPromise<T>, options:
-        ProgressAnnouncerOptions)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Utils.Accessibility.ProgressAnnouncer.constructor
@@ -95,11 +95,11 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new ProgressAnnouncer(options: ProgressAnnouncerOptions)'
       parameters:
         - id: options
           type:
             - >-
               @vss-web-extension-sdk.VSS.Utils.Accessibility.ProgressAnnouncerOptions
           description: ''
-      content: 'new ProgressAnnouncer(options: ProgressAnnouncerOptions)'
     type: constructor

@@ -25,7 +25,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.BaseControl'
+      name: '@vss-web-extension-sdk.VSS.Controls.BaseControl'
     source:
       path: vss.d.ts
       startLine: 11060
@@ -42,12 +42,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function beginEdit(initValue: string)'
       parameters:
         - id: initValue
           type:
             - string
           description: ''
-      content: 'function beginEdit(initValue: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.CellEditor.constructor
     name: 'CellEditor(options: any)'
@@ -56,12 +56,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new CellEditor(options: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
-      content: 'new CellEditor(options: any)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.CellEditor.clearValue
     name: 'clearValue(setEmpty?: boolean)'
@@ -70,13 +70,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function clearValue(setEmpty?: boolean)'
       parameters:
         - id: setEmpty
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function clearValue(setEmpty?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.CellEditor.dispose
     name: dispose()
@@ -85,8 +85,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function dispose()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.CellEditor.endEdit
     name: endEdit
@@ -108,13 +108,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function fireEndEdit(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function fireEndEdit(e?: JQueryEventObject)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.CellEditor.focus
     name: focus()
@@ -123,8 +123,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function focus()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.CellEditor.getDisplayValue
     name: getDisplayValue()
@@ -133,8 +133,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getDisplayValue()
+      parameters: []
       return:
         type:
           - string
@@ -146,8 +146,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getHeight()
+      parameters: []
       return:
         type:
           - number
@@ -159,8 +159,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getValue()
+      parameters: []
       return:
         type:
           - string
@@ -172,8 +172,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.CellEditor.setPosition
     name: 'setPosition(top: number, left: number)'
@@ -182,6 +182,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setPosition(top: number, left: number)'
       parameters:
         - id: top
           type:
@@ -191,7 +192,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function setPosition(top: number, left: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.CellEditor.setSize
     name: 'setSize($cellContext: JQuery)'
@@ -200,12 +200,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setSize($cellContext: JQuery)'
       parameters:
         - id: $cellContext
           type:
             - JQuery
           description: ''
-      content: 'function setSize($cellContext: JQuery)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.CellEditor.setValue
     name: 'setValue(value: string, doNotSavePrevious?: boolean)'
@@ -214,6 +214,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setValue(value: string, doNotSavePrevious?: boolean)'
       parameters:
         - id: value
           type:
@@ -224,7 +225,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function setValue(value: string, doNotSavePrevious?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.CellEditor.valueChanged
     name: valueChanged

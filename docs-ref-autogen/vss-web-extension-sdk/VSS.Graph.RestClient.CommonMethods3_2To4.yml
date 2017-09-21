@@ -45,7 +45,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_1To4'
+      name: '@vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_1To4'
     source:
       path: vss.d.ts
       startLine: 24456
@@ -63,6 +63,9 @@ items:
       - typeScript
     summary: '[Preview API] Create a new membership between a container and subject'
     syntax:
+      content: >-
+        function addMembership(subjectDescriptor: string, containerDescriptor:
+        string)
       parameters:
         - id: subjectDescriptor
           type:
@@ -76,9 +79,6 @@ items:
           description: >-
             A descriptor to a group that can be the container in the
             relationship.
-      content: >-
-        function addMembership(subjectDescriptor: string, containerDescriptor:
-        string)
       return:
         type:
           - >-
@@ -96,6 +96,9 @@ items:
       [Preview API] Check to see if a membership relationship between a
       container and subject exists
     syntax:
+      content: >-
+        function checkMembershipExistence(subjectDescriptor: string,
+        containerDescriptor: string)
       parameters:
         - id: subjectDescriptor
           type:
@@ -105,9 +108,6 @@ items:
           type:
             - string
           description: The group that is the parent in the relationship.
-      content: >-
-        function checkMembershipExistence(subjectDescriptor: string,
-        containerDescriptor: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -121,6 +121,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3_2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -131,9 +134,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3_2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.createGroup
     name: >-
@@ -155,6 +155,9 @@ items:
       member of an existing Team Services group and/or specify a custom storage
       key for the group.
     syntax:
+      content: >-
+        function createGroup(creationContext: GraphGroupCreationContext,
+        scopeDescriptor?: string, groupDescriptors?: SubjectDescriptor[])
       parameters:
         - id: creationContext
           type:
@@ -175,9 +178,6 @@ items:
             A comma separated list of descriptors referencing groups you want
             the graph group to join
           optional: true
-      content: >-
-        function createGroup(creationContext: GraphGroupCreationContext,
-        scopeDescriptor?: string, groupDescriptors?: SubjectDescriptor[])
       return:
         type:
           - >-
@@ -206,6 +206,9 @@ items:
       Optionally, you can add the newly created user as a member of an existing
       Team Services group and/or specify a custom storage key for the user.
     syntax:
+      content: >-
+        function createUser(creationContext: GraphUserCreationContext,
+        groupDescriptors?: SubjectDescriptor[])
       parameters:
         - id: creationContext
           type:
@@ -221,9 +224,6 @@ items:
             A comma separated list of descriptors of groups you want the graph
             user to join
           optional: true
-      content: >-
-        function createUser(creationContext: GraphUserCreationContext,
-        groupDescriptors?: SubjectDescriptor[])
       return:
         type:
           - >-
@@ -239,12 +239,12 @@ items:
       The group will still be visible, but membership checks for the group, and
       all descendants which derive membership through it, will return false.”
     syntax:
+      content: 'function deleteGroup(groupDescriptor: string)'
       parameters:
         - id: groupDescriptor
           type:
             - string
           description: The descriptor of the group to delete.
-      content: 'function deleteGroup(groupDescriptor: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -260,12 +260,12 @@ items:
       return multiple users, can control whether or not deleted users should be
       returned using the disabled flag, which defaults to false.
     syntax:
+      content: 'function deleteUser(userDescriptor: string)'
       parameters:
         - id: userDescriptor
           type:
             - string
           description: The descriptor of the user to delete.
-      content: 'function deleteUser(userDescriptor: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -284,6 +284,9 @@ items:
       had all their memberships deleted. The current validity of the group is
       indicated through its disabled property, which is omitted when false.
     syntax:
+      content: >-
+        function findGroupsBySearchFactor(searchFactor: GraphMemberSearchFactor,
+        searchValue?: string, forceDomainQualification?: boolean)
       parameters:
         - id: searchFactor
           type:
@@ -302,9 +305,6 @@ items:
             will specify that system should force the principle name being
             domain qualified
           optional: true
-      content: >-
-        function findGroupsBySearchFactor(searchFactor: GraphMemberSearchFactor,
-        searchValue?: string, forceDomainQualification?: boolean)
       return:
         type:
           - >-
@@ -324,6 +324,9 @@ items:
       had all their memberships deleted. The current validity of the user is
       indicated through its disabled property, which is omitted when false.
     syntax:
+      content: >-
+        function findUsersBySearchFactor(searchFactor: GraphMemberSearchFactor,
+        searchValue?: string, forceDomainQualification?: boolean)
       parameters:
         - id: searchFactor
           type:
@@ -342,9 +345,6 @@ items:
             will specify that system should force the principle name being
             domain qualified
           optional: true
-      content: >-
-        function findUsersBySearchFactor(searchFactor: GraphMemberSearchFactor,
-        searchValue?: string, forceDomainQualification?: boolean)
       return:
         type:
           - >-
@@ -360,12 +360,12 @@ items:
       even if it has been deleted from the account or has had all its
       memberships deleted.
     syntax:
+      content: 'function getGroup(groupDescriptor: string)'
       parameters:
         - id: groupDescriptor
           type:
             - string
           description: The descriptor of the desired graph group.
-      content: 'function getGroup(groupDescriptor: string)'
       return:
         type:
           - >-
@@ -387,6 +387,9 @@ items:
       the result set will containt a continuation token for retrieval of the
       next set of results.
     syntax:
+      content: >-
+        function getGroups(scopeDescriptor?: string, subjectTypes?: string[],
+        continuationToken?: string)
       parameters:
         - id: scopeDescriptor
           type:
@@ -410,9 +413,6 @@ items:
             way to know if there is more data left is the presence of a
             continuation token.
           optional: true
-      content: >-
-        function getGroups(scopeDescriptor?: string, subjectTypes?: string[],
-        continuationToken?: string)
       return:
         type:
           - >-
@@ -428,6 +428,9 @@ items:
       [Preview API] Get a membership relationship between a container and
       subject
     syntax:
+      content: >-
+        function getMembership(subjectDescriptor: string, containerDescriptor:
+        string)
       parameters:
         - id: subjectDescriptor
           type:
@@ -437,9 +440,6 @@ items:
           type:
             - string
           description: A descriptor to the container in the relationship.
-      content: >-
-        function getMembership(subjectDescriptor: string, containerDescriptor:
-        string)
       return:
         type:
           - >-
@@ -461,6 +461,9 @@ items:
       return all memberships where the subject is a container (e.g. all members
       of the subject group).
     syntax:
+      content: >-
+        function getMemberships(subjectDescriptor: string, direction?:
+        GraphTraversalDirection, depth?: number)
       parameters:
         - id: subjectDescriptor
           type:
@@ -478,9 +481,6 @@ items:
             The maximum number of edges to traverse up or down the membership
             tree. Currently the only supported value is '1'.
           optional: true
-      content: >-
-        function getMemberships(subjectDescriptor: string, direction?:
-        GraphTraversalDirection, depth?: number)
       return:
         type:
           - >-
@@ -494,12 +494,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getMembershipState(subjectDescriptor: string)'
       parameters:
         - id: subjectDescriptor
           type:
             - string
           description: ''
-      content: 'function getMembershipState(subjectDescriptor: string)'
       return:
         type:
           - >-
@@ -513,12 +513,12 @@ items:
       - typeScript
     summary: '[Preview API] Resolve a descriptor to a storage key.'
     syntax:
+      content: 'function getStorageKey(descriptor: string)'
       parameters:
         - id: descriptor
           type:
             - string
           description: 'Descriptor of the subject (user, group, scope, etc.) to resolve'
-      content: 'function getStorageKey(descriptor: string)'
       return:
         type:
           - >-
@@ -531,12 +531,12 @@ items:
       - typeScript
     summary: '[Preview API] Get a user by its descriptor.'
     syntax:
+      content: 'function getUser(userDescriptor: string)'
       parameters:
         - id: userDescriptor
           type:
             - string
           description: The descriptor of the desired user.
-      content: 'function getUser(userDescriptor: string)'
       return:
         type:
           - >-
@@ -554,6 +554,7 @@ items:
       will containt a continuation token for retrieval of the next set of
       results.
     syntax:
+      content: 'function getUsers(subjectTypes?: string[], continuationToken?: string)'
       parameters:
         - id: subjectTypes
           type:
@@ -572,7 +573,6 @@ items:
             way to know if there is more data left is the presence of a
             continuation token.
           optional: true
-      content: 'function getUsers(subjectTypes?: string[], continuationToken?: string)'
       return:
         type:
           - >-
@@ -586,12 +586,12 @@ items:
       - typeScript
     summary: '[Preview API] Resolve descriptors to users or groups (Subjects) in a batch'
     syntax:
+      content: 'function lookupSubjects(subjectLookup: GraphSubjectLookup)'
       parameters:
         - id: subjectLookup
           type:
             - '@vss-web-extension-sdk.VSS.Graph.Contracts.GraphSubjectLookup'
           description: ''
-      content: 'function lookupSubjects(subjectLookup: GraphSubjectLookup)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<GraphSubject>'
@@ -604,6 +604,9 @@ items:
       - typeScript
     summary: '[Preview API] Deletes a membership between a container and subject'
     syntax:
+      content: >-
+        function removeMembership(subjectDescriptor: string,
+        containerDescriptor: string)
       parameters:
         - id: subjectDescriptor
           type:
@@ -615,9 +618,6 @@ items:
           type:
             - string
           description: A descriptor to a group that is the container in the relationship.
-      content: >-
-        function removeMembership(subjectDescriptor: string,
-        containerDescriptor: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -631,6 +631,9 @@ items:
       [Preview API] Update the properties of a Team Services group.  Currently
       limited to only changing the description and account name.
     syntax:
+      content: >-
+        function updateGroup(groupDescriptor: string, patchDocument:
+        JsonPatchDocument)
       parameters:
         - id: groupDescriptor
           type:
@@ -640,9 +643,6 @@ items:
           type:
             - '@vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument'
           description: The JSON+Patch document containing the fields to alter.
-      content: >-
-        function updateGroup(groupDescriptor: string, patchDocument:
-        JsonPatchDocument)
       return:
         type:
           - >-

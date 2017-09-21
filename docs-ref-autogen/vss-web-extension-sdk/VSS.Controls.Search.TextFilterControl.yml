@@ -26,7 +26,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.Control<@vss-web-extension-sdk.VSS.Controls.Search.ITextFilterControlOptions>
     source:
       path: vss.d.ts
@@ -44,8 +44,8 @@ items:
       - typeScript
     summary: Displays the search box and hides the search button
     syntax:
-      parameters: []
       content: function activateSearch()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Search.TextFilterControl.attachEventOnKeyUp
@@ -55,13 +55,13 @@ items:
       - typeScript
     summary: Handle input changed event.
     syntax:
+      content: 'function attachEventOnKeyUp(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function attachEventOnKeyUp(e?: JQueryEventObject)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Search.TextFilterControl.clearIndex
     name: clearIndex()
@@ -70,8 +70,8 @@ items:
       - typeScript
     summary: Clears the index in the Search Core
     syntax:
-      parameters: []
       content: function clearIndex()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Search.TextFilterControl.coreCssClass
     name: coreCssClass
@@ -93,8 +93,8 @@ items:
       - typeScript
     summary: Creates the index in the searchCore
     syntax:
-      parameters: []
       content: function createIndex()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Search.TextFilterControl.deactivateSearch
@@ -104,6 +104,7 @@ items:
       - typeScript
     summary: Removes the search bar and shows the search button instead
     syntax:
+      content: 'function deactivateSearch(suppressClear?: boolean)'
       parameters:
         - id: suppressClear
           type:
@@ -111,7 +112,6 @@ items:
           description: |
             Suppress the clearing event
           optional: true
-      content: 'function deactivateSearch(suppressClear?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Search.TextFilterControl.initialize
     name: initialize()
@@ -120,8 +120,8 @@ items:
       - typeScript
     summary: Initializes the control. Creates the search box and initializes events.
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Search.TextFilterControl.initializeOptions
@@ -131,6 +131,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -138,7 +139,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Search.TextFilterControl.isActive
     name: isActive()
@@ -147,8 +147,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isActive()
+      parameters: []
       return:
         type:
           - boolean
@@ -160,8 +160,8 @@ items:
       - typeScript
     summary: Clears the store and performs the search if search is active.
     syntax:
-      parameters: []
       content: function refreshResults()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Search.TextFilterControl.tagName
     name: tagName
@@ -183,6 +183,7 @@ items:
       - typeScript
     summary: Control for backlog search.
     syntax:
+      content: 'new TextFilterControl(options?: ITextFilterControlOptions)'
       parameters:
         - id: options
           type:
@@ -191,5 +192,4 @@ items:
           description: |
             Options for the control
           optional: true
-      content: 'new TextFilterControl(options?: ITextFilterControlOptions)'
     type: constructor

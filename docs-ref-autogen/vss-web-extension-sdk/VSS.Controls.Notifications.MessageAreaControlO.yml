@@ -31,7 +31,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Control<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Control<TOptions>'
     source:
       path: vss.d.ts
       startLine: 15153
@@ -48,8 +48,8 @@ items:
       - typeScript
     summary: Clear the shown message
     syntax:
-      parameters: []
       content: function clear()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Notifications.MessageAreaControlO.ERROR_DETAILS_TOGGLED
@@ -115,8 +115,8 @@ items:
       - typeScript
     summary: Gets the current message type.
     syntax:
-      parameters: []
       content: function getMessageType()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Notifications.MessageAreaControlO.initialize
@@ -126,8 +126,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Notifications.MessageAreaControlO.initializeOptions
@@ -137,6 +137,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -144,7 +145,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: TOptions)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Notifications.MessageAreaControlO.setError
@@ -154,6 +154,7 @@ items:
       - typeScript
     summary: Set the error message
     syntax:
+      content: 'function setError(message: any, clickCallback?: Function)'
       parameters:
         - id: message
           type:
@@ -172,7 +173,6 @@ items:
           description: |
             Click callback function
           optional: true
-      content: 'function setError(message: any, clickCallback?: Function)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Notifications.MessageAreaControlO.setErrorDetailsVisibility
@@ -182,12 +182,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setErrorDetailsVisibility(show: any)'
       parameters:
         - id: show
           type:
             - any
           description: ''
-      content: 'function setErrorDetailsVisibility(show: any)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Notifications.MessageAreaControlO.setMessage
@@ -197,6 +197,7 @@ items:
       - typeScript
     summary: Set the message
     syntax:
+      content: 'function setMessage(message: any, messageType?: MessageAreaType)'
       parameters:
         - id: message
           type:
@@ -215,5 +216,4 @@ items:
           description: |
             Type of message
           optional: true
-      content: 'function setMessage(message: any, messageType?: MessageAreaType)'
     type: method

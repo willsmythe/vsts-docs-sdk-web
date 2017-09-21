@@ -28,6 +28,9 @@ items:
       - typeScript
     summary: Creates a MetricsEvent with specified area and feature
     syntax:
+      content: >-
+        new BaseMetricsEvent(area: string, feature: string, publishOnClose:
+        boolean)
       parameters:
         - id: area
           type:
@@ -41,9 +44,6 @@ items:
           type:
             - boolean
           description: ''
-      content: >-
-        new BaseMetricsEvent(area: string, feature: string, publishOnClose:
-        boolean)
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent.close
     name: close()
@@ -56,8 +56,8 @@ items:
 
       invokes closeThis for specific implementations.
     syntax:
-      parameters: []
       content: function close()
+      parameters: []
       return:
         type:
           - Promise<void>
@@ -69,12 +69,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function inner(feature: string)'
       parameters:
         - id: feature
           type:
             - string
           description: ''
-      content: 'function inner(feature: string)'
       return:
         type:
           - T
@@ -86,6 +86,7 @@ items:
       - typeScript
     summary: Set value for a metric field
     syntax:
+      content: 'function setValue<T>(key: string, value: T)'
       parameters:
         - id: key
           type:
@@ -95,7 +96,6 @@ items:
           type:
             - T
           description: ''
-      content: 'function setValue<T>(key: string, value: T)'
       return:
         type:
           - any

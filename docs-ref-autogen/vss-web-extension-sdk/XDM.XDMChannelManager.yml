@@ -28,6 +28,7 @@ items:
       - typeScript
     summary: Add an XDM channel for the given target window/iframe
     syntax:
+      content: 'function addChannel(window: Window, targetOrigin?: string)'
       parameters:
         - id: window
           type:
@@ -39,7 +40,6 @@ items:
           description: |
             Url of the target iframe (if known)
           optional: true
-      content: 'function addChannel(window: Window, targetOrigin?: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IXDMChannel'
@@ -51,8 +51,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: static function get()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.XDM.XDMChannelManager'
@@ -64,12 +64,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function removeChannel(channel: IXDMChannel)'
       parameters:
         - id: channel
           type:
             - '@vss-web-extension-sdk.IXDMChannel'
           description: ''
-      content: 'function removeChannel(channel: IXDMChannel)'
     type: method
   - uid: vss-web-extension-sdk.XDM.XDMChannelManager.constructor
     name: XDMChannelManager()
@@ -78,6 +78,6 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: new XDMChannelManager()
+      parameters: []
     type: constructor

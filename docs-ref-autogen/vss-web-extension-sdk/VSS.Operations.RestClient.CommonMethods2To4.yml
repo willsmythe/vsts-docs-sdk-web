@@ -13,7 +13,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 29028
@@ -33,6 +33,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -43,9 +46,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Operations.RestClient.CommonMethods2To4.getOperation
@@ -55,12 +55,12 @@ items:
       - typeScript
     summary: Gets an operation from the the Id.
     syntax:
+      content: 'function getOperation(operationId: string)'
       parameters:
         - id: operationId
           type:
             - string
           description: The id for the operation.
-      content: 'function getOperation(operationId: string)'
       return:
         type:
           - >-

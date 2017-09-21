@@ -32,7 +32,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Service.VssService'
+      name: '@vss-web-extension-sdk.VSS.Service.VssService'
     source:
       path: vss.d.ts
       startLine: 25993
@@ -50,8 +50,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: new EntityOperationsFacade()
+      parameters: []
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.EntityOperationsFacade.filterEntities
@@ -61,6 +61,7 @@ items:
       - typeScript
     summary: Return only the MRU users or groups that have the prefix
     syntax:
+      content: 'static function filterEntities(identities: IEntity[], prefix: string)'
       parameters:
         - id: identities
           type:
@@ -70,7 +71,6 @@ items:
           type:
             - string
           description: ''
-      content: 'static function filterEntities(identities: IEntity[], prefix: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.EntityOperationsFacade.getImagesForEntities
@@ -82,6 +82,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getImagesForEntities(entities: IEntity[], request?:
+        IEntityOperationsFacadeRequest)
       parameters:
         - id: entities
           type:
@@ -93,9 +96,6 @@ items:
               @vss-web-extension-sdk.VSS.Identities.Picker.Controls.IEntityOperationsFacadeRequest
           description: ''
           optional: true
-      content: >-
-        function getImagesForEntities(entities: IEntity[], request?:
-        IEntityOperationsFacadeRequest)
       return:
         type:
           - >-
@@ -109,12 +109,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getMruEntitiesUnchecked(filterByScope: FilterByScope)'
       parameters:
         - id: filterByScope
           type:
             - '@vss-web-extension-sdk.VSS.Identities.Picker.Common.FilterByScope'
           description: ''
-      content: 'function getMruEntitiesUnchecked(filterByScope: FilterByScope)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.EntityOperationsFacade.isUserMruReady
@@ -124,12 +124,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function isUserMruReady(filterByScope: FilterByScope)'
       parameters:
         - id: filterByScope
           type:
             - '@vss-web-extension-sdk.VSS.Identities.Picker.Common.FilterByScope'
           description: ''
-      content: 'function isUserMruReady(filterByScope: FilterByScope)'
       return:
         type:
           - boolean
@@ -142,6 +142,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function load(options?: IEntityOperationsFacadeOptions)'
       parameters:
         - id: options
           type:
@@ -149,7 +150,6 @@ items:
               @vss-web-extension-sdk.VSS.Identities.Picker.Controls.IEntityOperationsFacadeOptions
           description: ''
           optional: true
-      content: 'function load(options?: IEntityOperationsFacadeOptions)'
       return:
         type:
           - Promise<boolean>
@@ -168,6 +168,9 @@ items:
         Assumes that list1 and list2 are lists of distinct entities.
         Use-cases apart from calls by the controls here are not supported; provided as a example of merging logic.
     syntax:
+      content: >-
+        static function mergeEntities(list1: IEntity[], list2: IEntity[],
+        mergePreference?: string)
       parameters:
         - id: list1
           type:
@@ -182,9 +185,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        static function mergeEntities(list1: IEntity[], list2: IEntity[],
-        mergePreference?: string)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.EntityOperationsFacade.queryTokenEntityImageCache
@@ -210,12 +210,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function refreshUserMru(filterByScope: FilterByScope)'
       parameters:
         - id: filterByScope
           type:
             - '@vss-web-extension-sdk.VSS.Identities.Picker.Common.FilterByScope'
           description: ''
-      content: 'function refreshUserMru(filterByScope: FilterByScope)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -228,12 +228,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function registerSyncSource(source: ISyncSource)'
       parameters:
         - id: source
           type:
             - '@vss-web-extension-sdk.VSS.Identities.Picker.Controls.ISyncSource'
           description: ''
-      content: 'function registerSyncSource(source: ISyncSource)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.EntityOperationsFacade.search
@@ -243,13 +243,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function search(request: IEntityOperationsFacadeRequest)'
       parameters:
         - id: request
           type:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.Controls.IEntityOperationsFacadeRequest
           description: ''
-      content: 'function search(request: IEntityOperationsFacadeRequest)'
       return:
         type:
           - >-

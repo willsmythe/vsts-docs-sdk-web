@@ -24,7 +24,7 @@ items:
       HTML5 based file input control which accepts one or multiple files with
       browse and drag/drop support. Reads content as a base64 encoded string.
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.Control<@vss-web-extension-sdk.VSS.Controls.FileInput.FileInputControlOptions>
     source:
       path: vss.d.ts
@@ -42,8 +42,8 @@ items:
       - typeScript
     summary: Clear all files in the list.
     syntax:
-      parameters: []
       content: function clear()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FileInput.FileInputControl.createControl
@@ -53,6 +53,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        static function createControl($container: JQuery, options:
+        FileInputControlOptions)
       parameters:
         - id: $container
           type:
@@ -63,9 +66,6 @@ items:
             - >-
               @vss-web-extension-sdk.VSS.Controls.FileInput.FileInputControlOptions
           description: ''
-      content: >-
-        static function createControl($container: JQuery, options:
-        FileInputControlOptions)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.FileInput.FileInputControl'
@@ -79,8 +79,8 @@ items:
       Override default control focus behavior, focus on 'browse' button by
       default and if not visible then first 'remove' link
     syntax:
-      parameters: []
       content: function focus()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FileInput.FileInputControl.getFiles
     name: getFiles()
@@ -89,8 +89,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getFiles()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FileInput.FileInputControl.getRows
     name: getRows()
@@ -99,8 +99,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getRows()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FileInput.FileInputControl.initialize
     name: initialize()
@@ -109,8 +109,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FileInput.FileInputControl.initializeOptions
@@ -120,13 +120,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FileInput.FileInputControl.isLoadInProgress
@@ -136,8 +136,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isLoadInProgress()
+      parameters: []
       return:
         type:
           - boolean
@@ -153,8 +153,8 @@ items:
 
       is present on all supported browsers except IE9.
     syntax:
-      parameters: []
       content: static function isSupported()
+      parameters: []
       return:
         type:
           - boolean

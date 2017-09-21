@@ -21,7 +21,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Menus.Menu<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Menus.Menu<TOptions>'
     source:
       path: vss.d.ts
       startLine: 14371
@@ -38,13 +38,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function activate(tryFocus?: boolean)'
       parameters:
         - id: tryFocus
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function activate(tryFocus?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuOwner.escape
     name: 'escape(options?: any)'
@@ -53,13 +53,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function escape(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function escape(options?: any)'
       return:
         type:
           - boolean
@@ -71,13 +71,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function escaped(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function escaped(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuOwner.getMenuItemAlignment
     name: getMenuItemAlignment()
@@ -86,8 +86,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getMenuItemAlignment()
+      parameters: []
       return:
         type:
           - string
@@ -99,6 +99,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getMenuItemOptions(item: any, extraOptions?: any)'
       parameters:
         - id: item
           type:
@@ -110,7 +111,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function getMenuItemOptions(item: any, extraOptions?: any)'
       return:
         type:
           - any
@@ -122,8 +122,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuOwner.initializeOptions
     name: 'initializeOptions(options?: TOptions)'
@@ -132,6 +132,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -139,7 +140,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: TOptions)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuOwner.isActive
     name: isActive()
@@ -148,8 +148,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isActive()
+      parameters: []
       return:
         type:
           - boolean
@@ -161,6 +161,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new MenuOwner(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -168,7 +169,6 @@ items:
           description: |+
 
           optional: true
-      content: 'new MenuOwner(options?: TOptions)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuOwner.setShowIcon
     name: 'setShowIcon(showIcon: boolean)'
@@ -177,13 +177,13 @@ items:
       - typeScript
     summary: Sets showIcon option.
     syntax:
+      content: 'function setShowIcon(showIcon: boolean)'
       parameters:
         - id: showIcon
           type:
             - boolean
           description: |
             New state for the showIcon option.
-      content: 'function setShowIcon(showIcon: boolean)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Menus.MenuOwner.showSubMenuOnFocusedItem
@@ -193,8 +193,8 @@ items:
       - typeScript
     summary: Attempt to open the submenu on the focused item
     syntax:
-      parameters: []
       content: function showSubMenuOnFocusedItem()
+      parameters: []
       return:
         type:
           - boolean

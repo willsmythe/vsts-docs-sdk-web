@@ -30,8 +30,8 @@ items:
       - typeScript
     summary: Enact action
     syntax:
-      parameters: []
       content: function enact()
+      parameters: []
       return:
         type:
           - Promise<T>
@@ -43,6 +43,7 @@ items:
       - typeScript
     summary: Create metered async action
     syntax:
+      content: 'new MeteredAsyncAction(metrics?: IntervalMetricsEvent, feature?: string)'
       parameters:
         - id: metrics
           type:
@@ -55,5 +56,4 @@ items:
             - string
           description: ''
           optional: true
-      content: 'new MeteredAsyncAction(metrics?: IntervalMetricsEvent, feature?: string)'
     type: constructor

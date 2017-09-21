@@ -54,12 +54,12 @@ items:
       Cancels any pending delayed functions (delayExecute calls) with the
       specified name
     syntax:
+      content: 'function cancelDelayedFunction(name: string)'
       parameters:
         - id: name
           type:
             - string
           description: Name (supplied in the delayExecute call) of the operations to cancel
-      content: 'function cancelDelayedFunction(name: string)'
       return:
         type:
           - boolean
@@ -73,6 +73,9 @@ items:
       - typeScript
     summary: Executes the provided function after the specified amount of time
     syntax:
+      content: >-
+        function delayExecute(name?: string, msDelay?: number,
+        cancelPendingOps?: boolean, func?: Function)
       parameters:
         - id: name
           type:
@@ -100,9 +103,6 @@ items:
           description: |
             Method to execute after the delay
           optional: true
-      content: >-
-        function delayExecute(name?: string, msDelay?: number,
-        cancelPendingOps?: boolean, func?: Function)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.dispose
     name: dispose()
@@ -111,8 +111,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function dispose()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.enhance
     name: 'enhance($element: any)'
@@ -121,12 +121,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function enhance($element: any)'
       parameters:
         - id: $element
           type:
             - any
           description: ''
-      content: 'function enhance($element: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.enhance
     name: >-
@@ -137,6 +137,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        static function enhance<TOptions>(type: function, element: Enhancement,
+        options?: function, enhancementOptions?: EnhancementOptions)
       parameters:
         - id: type
           type:
@@ -156,9 +159,6 @@ items:
             - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
           description: ''
           optional: true
-      content: >-
-        static function enhance<TOptions>(type: function, element: Enhancement,
-        options?: function, enhancementOptions?: EnhancementOptions)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Enhancement<TOptions>'
@@ -170,6 +170,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new Enhancement(options?: TOptions, enhancementOptions?:
+        EnhancementOptions)
       parameters:
         - id: options
           type:
@@ -182,9 +185,6 @@ items:
             - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
           description: ''
           optional: true
-      content: >-
-        new Enhancement(options?: TOptions, enhancementOptions?:
-        EnhancementOptions)
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.ENHANCEMENTS_DATA_KEY
     name: ENHANCEMENTS_DATA_KEY
@@ -233,6 +233,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        static function ensureEnhancement(type?: any, context?: any,
+        errorCallback?: any)
       parameters:
         - id: type
           type:
@@ -249,9 +252,6 @@ items:
             - any
           description: ''
           optional: true
-      content: >-
-        static function ensureEnhancement(type?: any, context?: any,
-        errorCallback?: any)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Enhancement<any>'
@@ -263,6 +263,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        static function ensureEnhancements(type?: any, context?: any,
+        errorCallback?: any)
       parameters:
         - id: type
           type:
@@ -279,9 +282,6 @@ items:
             - any
           description: ''
           optional: true
-      content: >-
-        static function ensureEnhancements(type?: any, context?: any,
-        errorCallback?: any)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.getElement
     name: getElement()
@@ -290,8 +290,8 @@ items:
       - typeScript
     summary: Gets the element associated with this control.
     syntax:
-      parameters: []
       content: function getElement()
+      parameters: []
       return:
         type:
           - JQuery
@@ -303,6 +303,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function getEnhancementOptions(type: any, element: any)'
       parameters:
         - id: type
           type:
@@ -313,7 +314,6 @@ items:
             - any
           description: |+
 
-      content: 'static function getEnhancementOptions(type: any, element: any)'
       return:
         type:
           - any
@@ -325,8 +325,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getId()
+      parameters: []
       return:
         type:
           - string
@@ -338,6 +338,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function getInstance(type?: any, element?: any)'
       parameters:
         - id: type
           type:
@@ -349,7 +350,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'static function getInstance(type?: any, element?: any)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Enhancement<any>'
@@ -361,6 +361,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function getInstanceO<TOptions>(type?: any, element?: any)'
       parameters:
         - id: type
           type:
@@ -372,7 +373,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'static function getInstanceO<TOptions>(type?: any, element?: any)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Enhancement<TOptions>'
@@ -384,12 +384,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function getOptionPrefix(type: any)'
       parameters:
         - id: type
           type:
             - any
           description: ''
-      content: 'static function getOptionPrefix(type: any)'
       return:
         type:
           - string
@@ -401,8 +401,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getType()
+      parameters: []
       return:
         type:
           - Function
@@ -414,8 +414,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getTypeName()
+      parameters: []
       return:
         type:
           - string
@@ -427,13 +427,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function getTypeName(type?: any)'
       parameters:
         - id: type
           type:
             - any
           description: ''
           optional: true
-      content: 'static function getTypeName(type?: any)'
       return:
         type:
           - string
@@ -445,8 +445,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.initializeOptions
     name: 'initializeOptions(options?: TOptions)'
@@ -455,6 +455,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -462,7 +463,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: TOptions)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.isDisposed
     name: isDisposed()
@@ -471,8 +471,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isDisposed()
+      parameters: []
       return:
         type:
           - boolean
@@ -500,6 +500,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        static function registerEnhancement<TOptions>(type?: function,
+        selector?: string, options?: TOptions, errorCallback?: IErrorCallback,
+        enhancementOptions?: EnhancementOptions)
       parameters:
         - id: type
           type:
@@ -527,10 +531,6 @@ items:
             - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
           description: ''
           optional: true
-      content: >-
-        static function registerEnhancement<TOptions>(type?: function,
-        selector?: string, options?: TOptions, errorCallback?: IErrorCallback,
-        enhancementOptions?: EnhancementOptions)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.registerJQueryWidget
     name: >-
@@ -541,6 +541,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        static function registerJQueryWidget<TOptions>(type?: any, widgetName?:
+        any, widgetOptions?: TOptions, enhancementOptions?: EnhancementOptions)
       parameters:
         - id: type
           type:
@@ -563,9 +566,6 @@ items:
             - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
           description: ''
           optional: true
-      content: >-
-        static function registerJQueryWidget<TOptions>(type?: any, widgetName?:
-        any, widgetOptions?: TOptions, enhancementOptions?: EnhancementOptions)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.setEnhancementOptions
     name: 'setEnhancementOptions(enhancementOptions: EnhancementOptions)'
@@ -578,10 +578,10 @@ items:
 
       Note: Options are merged.
     syntax:
+      content: 'function setEnhancementOptions(enhancementOptions: EnhancementOptions)'
       parameters:
         - id: enhancementOptions
           type:
             - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
           description: ''
-      content: 'function setEnhancementOptions(enhancementOptions: EnhancementOptions)'
     type: method

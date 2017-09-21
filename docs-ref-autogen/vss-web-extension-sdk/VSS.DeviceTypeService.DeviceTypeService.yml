@@ -16,7 +16,7 @@ items:
       This is a client side wrapper for server side data provider contribution,
       device-type-data.
     extends:
-      - '@vss-web-extension-sdk.VSS.Service.VssService'
+      name: '@vss-web-extension-sdk.VSS.Service.VssService'
     source:
       path: vss.d.ts
       startLine: 18580
@@ -35,8 +35,8 @@ items:
       Return true if the current device is mobile and not tablet. Return false
       otherwise.
     syntax:
-      parameters: []
       content: function isMobile()
+      parameters: []
       return:
         type:
           - boolean
@@ -49,8 +49,8 @@ items:
       - typeScript
     summary: Return true if the current device is mobile. Return false otherwise.
     syntax:
-      parameters: []
       content: function isMobileDevice()
+      parameters: []
       return:
         type:
           - boolean
@@ -63,8 +63,8 @@ items:
       - typeScript
     summary: Return true if the current device is tablet. Return false otherwise.
     syntax:
-      parameters: []
       content: function isTabletDevice()
+      parameters: []
       return:
         type:
           - boolean

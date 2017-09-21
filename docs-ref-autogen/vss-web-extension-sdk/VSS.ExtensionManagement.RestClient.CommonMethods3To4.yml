@@ -17,7 +17,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.ExtensionManagement.RestClient.CommonMethods2_2To4
     source:
       path: vss.d.ts
@@ -38,6 +38,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -48,9 +51,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.ExtensionManagement.RestClient.CommonMethods3To4.getAcquisitionOptions
@@ -62,6 +62,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAcquisitionOptions(itemId: string, testCommerce?: boolean,
+        isFreeOrTrialInstall?: boolean)
       parameters:
         - id: itemId
           type:
@@ -77,9 +80,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getAcquisitionOptions(itemId: string, testCommerce?: boolean,
-        isFreeOrTrialInstall?: boolean)
       return:
         type:
           - >-
@@ -95,6 +95,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function registerAuthorization(publisherName: string, extensionName:
+        string, registrationId: string)
       parameters:
         - id: publisherName
           type:
@@ -108,9 +111,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function registerAuthorization(publisherName: string, extensionName:
-        string, registrationId: string)
       return:
         type:
           - >-
@@ -124,15 +124,15 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function requestAcquisition(acquisitionRequest:
+        ExtensionAcquisitionRequest)
       parameters:
         - id: acquisitionRequest
           type:
             - >-
               @vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionAcquisitionRequest
           description: ''
-      content: >-
-        function requestAcquisition(acquisitionRequest:
-        ExtensionAcquisitionRequest)
       return:
         type:
           - >-

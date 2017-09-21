@@ -33,6 +33,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getFormattedColumnValue(column: any, value: string)'
       parameters:
         - id: column
           type:
@@ -42,7 +43,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getFormattedColumnValue(column: any, value: string)'
       return:
         type:
           - string
@@ -55,8 +55,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getTableFromSelectedItems()
+      parameters: []
       return:
         type:
           - string
@@ -68,6 +68,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new HtmlTableFormatter(grid: Grid, options?: any)'
       parameters:
         - id: grid
           type:
@@ -78,7 +79,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'new HtmlTableFormatter(grid: Grid, options?: any)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter.includesHtml
     name: includesHtml
@@ -100,10 +100,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function processColumns(columns: any[])'
       parameters:
         - id: columns
           type:
             - 'any[]'
           description: ''
-      content: 'function processColumns(columns: any[])'
     type: method

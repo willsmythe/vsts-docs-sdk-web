@@ -27,13 +27,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new LocalSettingsService(webContext?: WebContext)'
       parameters:
         - id: webContext
           type:
             - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
           description: ''
           optional: true
-      content: 'new LocalSettingsService(webContext?: WebContext)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Settings.LocalSettingsService.read
     name: 'read<T>(key: string, defaultValue?: T, scope?: LocalSettingsScope)'
@@ -42,6 +42,9 @@ items:
       - typeScript
     summary: Read a setting from browser local storage.
     syntax:
+      content: >-
+        function read<T>(key: string, defaultValue?: T, scope?:
+        LocalSettingsScope)
       parameters:
         - id: key
           type:
@@ -61,9 +64,6 @@ items:
             Scope for the setting to apply to. This will determine the prefix to
             use at the beginning of the setting key.
           optional: true
-      content: >-
-        function read<T>(key: string, defaultValue?: T, scope?:
-        LocalSettingsScope)
       return:
         type:
           - T
@@ -75,6 +75,7 @@ items:
       - typeScript
     summary: Write a settings value to browser local storage
     syntax:
+      content: 'function write(key: string, value: any, scope?: LocalSettingsScope)'
       parameters:
         - id: key
           type:
@@ -93,5 +94,4 @@ items:
             Scope for the setting to apply to. This will determine the prefix to
             use at the beginning of the setting key.
           optional: true
-      content: 'function write(key: string, value: any, scope?: LocalSettingsScope)'
     type: method

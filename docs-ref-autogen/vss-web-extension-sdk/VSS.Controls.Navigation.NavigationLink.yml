@@ -15,7 +15,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.BaseControl'
+      name: '@vss-web-extension-sdk.VSS.Controls.BaseControl'
     source:
       path: vss.d.ts
       startLine: 15056
@@ -32,8 +32,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function dispose()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.NavigationLink.getLocation
     name: 'getLocation(state: any)'
@@ -42,12 +42,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getLocation(state: any)'
       parameters:
         - id: state
           type:
             - any
           description: ''
-      content: 'function getLocation(state: any)'
       return:
         type:
           - any
@@ -59,8 +59,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.NavigationLink.initializeOptions
@@ -70,13 +70,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.NavigationLink.constructor
     name: 'NavigationLink(options: NavigationLinkOptions)'
@@ -85,11 +85,11 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new NavigationLink(options: NavigationLinkOptions)'
       parameters:
         - id: options
           type:
             - >-
               @vss-web-extension-sdk.VSS.Controls.Navigation.NavigationLinkOptions
           description: ''
-      content: 'new NavigationLink(options: NavigationLinkOptions)'
     type: constructor

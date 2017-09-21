@@ -21,7 +21,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 21058
@@ -41,6 +41,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -51,9 +54,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.FileContainer.RestClient.CommonMethods2To4.createItem
@@ -67,6 +67,9 @@ items:
       [Preview API] Creates the specified item in the container referenced
       container.
     syntax:
+      content: >-
+        function createItem(content: string, containerId: number, itemPath:
+        string, scope?: string)
       parameters:
         - id: content
           type:
@@ -87,9 +90,6 @@ items:
             A guid representing the scope of the container. This is often the
             project id.
           optional: true
-      content: >-
-        function createItem(content: string, containerId: number, itemPath:
-        string, scope?: string)
       return:
         type:
           - >-
@@ -105,6 +105,10 @@ items:
       - typeScript
     summary: '[Preview API] Creates the specified items in in the referenced container.'
     syntax:
+      content: >-
+        function createItems(items:
+        VssJsonCollectionWrapperV<FileContainerItem[]>, containerId: number,
+        scope?: string)
       parameters:
         - id: items
           type:
@@ -122,10 +126,6 @@ items:
             A guid representing the scope of the container. This is often the
             project id.
           optional: true
-      content: >-
-        function createItems(items:
-        VssJsonCollectionWrapperV<FileContainerItem[]>, containerId: number,
-        scope?: string)
       return:
         type:
           - >-
@@ -139,6 +139,9 @@ items:
       - typeScript
     summary: '[Preview API] Deletes the specified items in a container.'
     syntax:
+      content: >-
+        function deleteItem(containerId: number, itemPath: string, scope?:
+        string)
       parameters:
         - id: containerId
           type:
@@ -155,9 +158,6 @@ items:
             A guid representing the scope of the container. This is often the
             project id.
           optional: true
-      content: >-
-        function deleteItem(containerId: number, itemPath: string, scope?:
-        string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -173,6 +173,7 @@ items:
       artifact uris within the same scope, if not specified returns all
       containers
     syntax:
+      content: 'function getContainers(scope?: string, artifactUris?: string)'
       parameters:
         - id: scope
           type:
@@ -186,7 +187,6 @@ items:
             - string
           description: ''
           optional: true
-      content: 'function getContainers(scope?: string, artifactUris?: string)'
       return:
         type:
           - >-
@@ -203,6 +203,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getItems(containerId: number, scope?: string, itemPath?:
+        string, metadata?: boolean, format?: string, downloadFileName?: string,
+        includeDownloadTickets?: boolean, isShallow?: boolean)
       parameters:
         - id: containerId
           type:
@@ -243,10 +247,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getItems(containerId: number, scope?: string, itemPath?:
-        string, metadata?: boolean, format?: string, downloadFileName?: string,
-        includeDownloadTickets?: boolean, isShallow?: boolean)
       return:
         type:
           - >-

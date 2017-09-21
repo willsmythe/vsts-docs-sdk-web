@@ -56,7 +56,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Control<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Control<TOptions>'
     source:
       path: vss.d.ts
       startLine: 16203
@@ -81,6 +81,7 @@ items:
       splitter has just been re-attached to the DOM and needs to see if the
       viewwport size has changed.
     syntax:
+      content: 'function attachResize(resizeNow?: boolean)'
       parameters:
         - id: resizeNow
           type:
@@ -88,7 +89,6 @@ items:
           description: |
             Whether or not the splitter should perform resize now.
           optional: true
-      content: 'function attachResize(resizeNow?: boolean)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.AUTO_COLLAPSE_THRESHOLD
@@ -111,8 +111,8 @@ items:
       - typeScript
     summary: Collapses the splitter.
     syntax:
-      parameters: []
       content: function collapse()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.COLLAPSED_CLASS_NAME
     name: COLLAPSED_CLASS_NAME
@@ -163,8 +163,8 @@ items:
       Detaches the splitter from the window resize event (tells it to ignore the
       event).
     syntax:
-      parameters: []
       content: function detachResize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.enhancementTypeName
     name: enhancementTypeName
@@ -186,8 +186,8 @@ items:
       - typeScript
     summary: Expands the splitter.
     syntax:
-      parameters: []
       content: function expand()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.expandState
     name: expandState
@@ -212,8 +212,8 @@ items:
       - typeScript
     summary: Gets the fixed side size in px.
     syntax:
-      parameters: []
       content: function getFixedSidePixels()
+      parameters: []
       return:
         type:
           - number
@@ -252,8 +252,8 @@ items:
       - typeScript
     summary: Changes split orientation to horizontal.
     syntax:
-      parameters: []
       content: function horizontal()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.HORIZONTAL_CLASS
     name: HORIZONTAL_CLASS
@@ -275,8 +275,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.initializeOptions
     name: 'initializeOptions(options?: TOptions)'
@@ -285,6 +285,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -292,7 +293,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: TOptions)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.isExpanded
     name: isExpanded()
@@ -301,8 +301,8 @@ items:
       - typeScript
     summary: Specifies whether the splitter is expanded or not.
     syntax:
-      parameters: []
       content: function isExpanded()
+      parameters: []
       return:
         type:
           - boolean
@@ -327,13 +327,13 @@ items:
       - typeScript
     summary: Disables the split.
     syntax:
+      content: 'function noSplit(animate?: boolean)'
       parameters:
         - id: animate
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function noSplit(animate?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.removeExpand
     name: 'removeExpand(suppressResize?: boolean)'
@@ -342,6 +342,7 @@ items:
       - typeScript
     summary: Expands the splitter.
     syntax:
+      content: 'function removeExpand(suppressResize?: boolean)'
       parameters:
         - id: suppressResize
           type:
@@ -349,7 +350,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function removeExpand(suppressResize?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.resize
     name: >-
@@ -360,6 +360,9 @@ items:
       - typeScript
     summary: Resize the fixed side of the splitter to the specified size.
     syntax:
+      content: >-
+        function resize(newSize: any, suppressFireResize?: boolean,
+        useAnimation?: boolean, complete?: Function)
       parameters:
         - id: newSize
           type:
@@ -380,9 +383,6 @@ items:
             - Function
           description: A callback function to notify that the resize operation completes.
           optional: true
-      content: >-
-        function resize(newSize: any, suppressFireResize?: boolean,
-        useAnimation?: boolean, complete?: Function)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.rightPane
     name: rightPane
@@ -404,12 +404,12 @@ items:
       - typeScript
     summary: Sets the label that is shown when the splitter is collapsed
     syntax:
+      content: 'function setCollapsedLabel(labelText: string)'
       parameters:
         - id: labelText
           type:
             - string
           description: Text displayed when the splitter is collapsed (null/empty for none)
-      content: 'function setCollapsedLabel(labelText: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.setMaxWidth
     name: 'setMaxWidth(maxWidth: number)'
@@ -418,12 +418,12 @@ items:
       - typeScript
     summary: Sets the maximum width of the splitter's fixed side.
     syntax:
+      content: 'function setMaxWidth(maxWidth: number)'
       parameters:
         - id: maxWidth
           type:
             - number
           description: maximum number of pixels the fixed side will fill.
-      content: 'function setMaxWidth(maxWidth: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.setMinWidth
     name: 'setMinWidth(minWidth: number)'
@@ -432,12 +432,12 @@ items:
       - typeScript
     summary: Sets the minimum width of the splitter's fixed side.
     syntax:
+      content: 'function setMinWidth(minWidth: number)'
       parameters:
         - id: minWidth
           type:
             - number
           description: minimum number of pixels the fixed side will fill.
-      content: 'function setMinWidth(minWidth: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.setOnToggle
     name: 'setOnToggle(handler: function)'
@@ -448,12 +448,12 @@ items:
       set the handler on toggle - this should only be used when Splitter control
       was automatically enhanced, otherwise specify in options
     syntax:
+      content: 'function setOnToggle(handler: function)'
       parameters:
         - id: handler
           type:
             - function
           description: ''
-      content: 'function setOnToggle(handler: function)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.split
     name: 'split(animate?: boolean, defaultExpandToPixels?: number)'
@@ -462,6 +462,7 @@ items:
       - typeScript
     summary: Enables the split.
     syntax:
+      content: 'function split(animate?: boolean, defaultExpandToPixels?: number)'
       parameters:
         - id: animate
           type:
@@ -475,7 +476,6 @@ items:
             Specified value used for split amount. If not specified default
             value is used.
           optional: true
-      content: 'function split(animate?: boolean, defaultExpandToPixels?: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.constructor
     name: 'SplitterO(options: TOptions)'
@@ -484,12 +484,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new SplitterO(options: TOptions)'
       parameters:
         - id: options
           type:
             - TOptions
           description: ''
-      content: 'new SplitterO(options: TOptions)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.toggleExpanded
     name: 'toggleExpanded(expanded?: boolean)'
@@ -498,6 +498,7 @@ items:
       - typeScript
     summary: Expand or collapse the splitter.
     syntax:
+      content: 'function toggleExpanded(expanded?: boolean)'
       parameters:
         - id: expanded
           type:
@@ -506,7 +507,6 @@ items:
             True to expand the splitter, false to collapse it. If not provided,
             the expansion state toggles.
           optional: true
-      content: 'function toggleExpanded(expanded?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.toggleOrientation
     name: 'toggleOrientation(vertical: any, newSize?: number)'
@@ -515,6 +515,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function toggleOrientation(vertical: any, newSize?: number)'
       parameters:
         - id: vertical
           type:
@@ -526,7 +527,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function toggleOrientation(vertical: any, newSize?: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.toggleSplit
     name: >-
@@ -537,6 +537,9 @@ items:
       - typeScript
     summary: Shows/hides the fixed side of the splitter.
     syntax:
+      content: >-
+        function toggleSplit(visible?: boolean, animate?: boolean,
+        defaultExpandToPixels?: number)
       parameters:
         - id: visible
           type:
@@ -555,9 +558,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function toggleSplit(visible?: boolean, animate?: boolean,
-        defaultExpandToPixels?: number)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.TOGGLE_BUTTON_ENABLED_CLASS_NAME
@@ -620,8 +620,8 @@ items:
       - typeScript
     summary: Changes split orientation to vertical.
     syntax:
-      parameters: []
       content: function vertical()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.VERTICAL_CLASS
     name: VERTICAL_CLASS

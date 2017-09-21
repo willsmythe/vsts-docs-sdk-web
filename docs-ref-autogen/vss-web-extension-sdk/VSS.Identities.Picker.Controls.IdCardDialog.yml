@@ -17,7 +17,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.Control<@vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerIdCardDialogOptions>
     source:
       path: vss.d.ts
@@ -36,6 +36,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new IdCardDialog(options?: IIdentityPickerIdCardDialogOptions)'
       parameters:
         - id: options
           type:
@@ -43,7 +44,6 @@ items:
               @vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerIdCardDialogOptions
           description: ''
           optional: true
-      content: 'new IdCardDialog(options?: IIdentityPickerIdCardDialogOptions)'
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdCardDialog.IDCARD_LOADED_EVENT
@@ -67,8 +67,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdCardDialog.initializeOptions
@@ -78,6 +78,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: IIdentityPickerIdCardDialogOptions)'
       parameters:
         - id: options
           type:
@@ -85,5 +86,4 @@ items:
               @vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerIdCardDialogOptions
           description: ''
           optional: true
-      content: 'function initializeOptions(options?: IIdentityPickerIdCardDialogOptions)'
     type: method

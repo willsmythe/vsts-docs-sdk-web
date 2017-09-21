@@ -41,7 +41,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Gallery.RestClient.CommonMethods3_1To4'
+      name: '@vss-web-extension-sdk.VSS.Gallery.RestClient.CommonMethods3_1To4'
     source:
       path: vss.d.ts
       startLine: 23687
@@ -61,6 +61,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3_2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -71,9 +74,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3_2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Gallery.RestClient.CommonMethods3_2To4.createExtension
@@ -83,12 +83,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createExtension(content: any)'
       parameters:
         - id: content
           type:
             - any
           description: Content to upload
-      content: 'function createExtension(content: any)'
       return:
         type:
           - >-
@@ -102,6 +102,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createExtensionWithPublisher(content: any, publisherName:
+        string)
       parameters:
         - id: content
           type:
@@ -111,9 +114,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function createExtensionWithPublisher(content: any, publisherName:
-        string)
       return:
         type:
           - >-
@@ -129,6 +129,9 @@ items:
       - typeScript
     summary: '[Preview API] Creates a new question for an extension.'
     syntax:
+      content: >-
+        function createQuestion(question: Question, publisherName: string,
+        extensionName: string)
       parameters:
         - id: question
           type:
@@ -142,9 +145,6 @@ items:
           type:
             - string
           description: Name of the extension.
-      content: >-
-        function createQuestion(question: Question, publisherName: string,
-        extensionName: string)
       return:
         type:
           - >-
@@ -162,6 +162,9 @@ items:
       [Preview API] Creates a new response for a given question for an
       extension.
     syntax:
+      content: >-
+        function createResponse(response: Response, publisherName: string,
+        extensionName: string, questionId: number)
       parameters:
         - id: response
           type:
@@ -181,9 +184,6 @@ items:
           description: >-
             Identifier of the question for which response is to be created for
             the extension.
-      content: >-
-        function createResponse(response: Response, publisherName: string,
-        extensionName: string, questionId: number)
       return:
         type:
           - >-
@@ -201,6 +201,9 @@ items:
       [Preview API] Deletes an existing question and all its associated
       responses for an extension. (soft delete)
     syntax:
+      content: >-
+        function deleteQuestion(publisherName: string, extensionName: string,
+        questionId: number)
       parameters:
         - id: publisherName
           type:
@@ -214,9 +217,6 @@ items:
           type:
             - number
           description: Identifier of the question to be deleted for the extension.
-      content: >-
-        function deleteQuestion(publisherName: string, extensionName: string,
-        questionId: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -231,6 +231,9 @@ items:
       - typeScript
     summary: '[Preview API] Deletes a response for an extension. (soft delete)'
     syntax:
+      content: >-
+        function deleteResponse(publisherName: string, extensionName: string,
+        questionId: number, responseId: number)
       parameters:
         - id: publisherName
           type:
@@ -248,9 +251,6 @@ items:
           type:
             - number
           description: Identifies the response to be deleted.
-      content: >-
-        function deleteResponse(publisherName: string, extensionName: string,
-        questionId: number, responseId: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -267,6 +267,9 @@ items:
       [Preview API] Returns a list of questions with their responses associated
       with an extension.
     syntax:
+      content: >-
+        function getQuestions(publisherName: string, extensionName: string,
+        count?: number, page?: number, afterDate?: Date)
       parameters:
         - id: publisherName
           type:
@@ -293,9 +296,6 @@ items:
             If provided, results questions are returned which were posted after
             this date
           optional: true
-      content: >-
-        function getQuestions(publisherName: string, extensionName: string,
-        count?: number, page?: number, afterDate?: Date)
       return:
         type:
           - >-
@@ -311,6 +311,9 @@ items:
       - typeScript
     summary: '[Preview API] Returns a summary of the reviews'
     syntax:
+      content: >-
+        function getReviewsSummary(pubName: string, extName: string,
+        beforeDate?: Date, afterDate?: Date)
       parameters:
         - id: pubName
           type:
@@ -334,9 +337,6 @@ items:
             Use if you want to fetch summary of reviews newer than the specified
             date, defaults to null
           optional: true
-      content: >-
-        function getReviewsSummary(pubName: string, extName: string,
-        beforeDate?: Date, afterDate?: Date)
       return:
         type:
           - >-
@@ -352,6 +352,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getVerificationLog(publisherName: string, extensionName:
+        string, version: string)
       parameters:
         - id: publisherName
           type:
@@ -365,9 +368,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getVerificationLog(publisherName: string, extensionName:
-        string, version: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -382,6 +382,9 @@ items:
       - typeScript
     summary: '[Preview API] Flags a concern with an existing question for an extension.'
     syntax:
+      content: >-
+        function reportQuestion(concern: Concern, pubName: string, extName:
+        string, questionId: number)
       parameters:
         - id: concern
           type:
@@ -399,9 +402,6 @@ items:
           type:
             - number
           description: Identifier of the question to be updated for the extension.
-      content: >-
-        function reportQuestion(concern: Concern, pubName: string, extName:
-        string, questionId: number)
       return:
         type:
           - >-
@@ -415,12 +415,12 @@ items:
       - typeScript
     summary: '[Preview API] Send Notification'
     syntax:
+      content: 'function sendNotifications(notificationData: NotificationsData)'
       parameters:
         - id: notificationData
           type:
             - '@vss-web-extension-sdk.VSS.Gallery.Contracts.NotificationsData'
           description: Denoting the data needed to send notification
-      content: 'function sendNotifications(notificationData: NotificationsData)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -435,6 +435,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateExtension(content: any, publisherName: string,
+        extensionName: string)
       parameters:
         - id: content
           type:
@@ -448,9 +451,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateExtension(content: any, publisherName: string,
-        extensionName: string)
       return:
         type:
           - >-
@@ -464,12 +464,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function updateExtensionById(extensionId: string)'
       parameters:
         - id: extensionId
           type:
             - string
           description: ''
-      content: 'function updateExtensionById(extensionId: string)'
       return:
         type:
           - >-
@@ -485,6 +485,9 @@ items:
       - typeScript
     summary: '[Preview API] Updates an existing question for an extension.'
     syntax:
+      content: >-
+        function updateQuestion(question: Question, publisherName: string,
+        extensionName: string, questionId: number)
       parameters:
         - id: question
           type:
@@ -502,9 +505,6 @@ items:
           type:
             - number
           description: Identifier of the question to be updated for the extension.
-      content: >-
-        function updateQuestion(question: Question, publisherName: string,
-        extensionName: string, questionId: number)
       return:
         type:
           - >-
@@ -522,6 +522,9 @@ items:
       [Preview API] Updates an existing response for a given question for an
       extension.
     syntax:
+      content: >-
+        function updateResponse(response: Response, publisherName: string,
+        extensionName: string, questionId: number, responseId: number)
       parameters:
         - id: response
           type:
@@ -545,9 +548,6 @@ items:
           type:
             - number
           description: Identifier of the response which has to be updated.
-      content: >-
-        function updateResponse(response: Response, publisherName: string,
-        extensionName: string, questionId: number, responseId: number)
       return:
         type:
           - >-

@@ -33,7 +33,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Panels.AjaxPanelO<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Panels.AjaxPanelO<TOptions>'
     source:
       path: vss.d.ts
       startLine: 10592
@@ -55,6 +55,7 @@ items:
           in parallel. For example, clicking a link that does some server processing before opening a dialog. On slow connections
           the user may be able to click the link several times before the first dialog ever opens.
     syntax:
+      content: 'static function beginExecuteDialogAction(actionDelegate: Function)'
       parameters:
         - id: actionDelegate
           type:
@@ -65,7 +66,6 @@ items:
                 paramater which is a cancellation routine. Call this when you encounter a situation (such as an error)
                 where you wish to cancel the operation and have subsequent dialog actions execute without being blocked.
 
-      content: 'static function beginExecuteDialogAction(actionDelegate: Function)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO.centerDialog
     name: centerDialog()
@@ -74,8 +74,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function centerDialog()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO.close
     name: close()
@@ -84,8 +84,8 @@ items:
       - typeScript
     summary: Closes the dialog.
     syntax:
-      parameters: []
       content: function close()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO.create
     name: 'create<T>(dialogType: function, options?: any)'
@@ -94,6 +94,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function create<T>(dialogType: function, options?: any)'
       parameters:
         - id: dialogType
           type:
@@ -104,7 +105,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'static function create<T>(dialogType: function, options?: any)'
       return:
         type:
           - T
@@ -116,13 +116,13 @@ items:
       - typeScript
     summary: Creates a new dialog with the provided options
     syntax:
+      content: 'new DialogO(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'new DialogO(options?: any)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO.dispose
     name: dispose()
@@ -131,8 +131,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function dispose()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO.enhancementTypeName
     name: enhancementTypeName
@@ -156,8 +156,8 @@ items:
       Gets the current dialog result which will be used when ok button is
       clicked.
     syntax:
-      parameters: []
       content: function getDialogResult()
+      parameters: []
       return:
         type:
           - any
@@ -169,8 +169,8 @@ items:
       - typeScript
     summary: Gets the current subtitle of the dialog
     syntax:
-      parameters: []
       content: function getSubtitle()
+      parameters: []
       return:
         type:
           - string
@@ -182,8 +182,8 @@ items:
       - typeScript
     summary: Gets the current title of the dialog.
     syntax:
-      parameters: []
       content: function getTitle()
+      parameters: []
       return:
         type:
           - string
@@ -195,8 +195,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO.initializeOptions
     name: 'initializeOptions(options?: any)'
@@ -205,6 +205,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -212,7 +213,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO.onClose
     name: 'onClose(e?: JQueryEventObject)'
@@ -221,13 +221,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onClose(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function onClose(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -239,13 +239,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onDialogResize(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function onDialogResize(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -257,12 +257,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onLoadCompleted(content: any)'
       parameters:
         - id: content
           type:
             - any
           description: ''
-      content: 'function onLoadCompleted(content: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO.onOpen
     name: 'onOpen(e?: JQueryEventObject)'
@@ -271,13 +271,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onOpen(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function onOpen(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -289,12 +289,12 @@ items:
       - typeScript
     summary: Sets the dialog result.
     syntax:
+      content: 'function setDialogResult(dialogResult: any)'
       parameters:
         - id: dialogResult
           type:
             - any
           description: Result object used when ok button is clicked.
-      content: 'function setDialogResult(dialogResult: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO.setFormFocusDelayed
     name: 'setFormFocusDelayed($field: any)'
@@ -303,12 +303,12 @@ items:
       - typeScript
     summary: Sets focus on the first enabled input element in the dialog.
     syntax:
+      content: 'function setFormFocusDelayed($field: any)'
       parameters:
         - id: $field
           type:
             - any
           description: ''
-      content: 'function setFormFocusDelayed($field: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO.setInitialFocus
     name: setInitialFocus()
@@ -317,8 +317,8 @@ items:
       - typeScript
     summary: Tries to set the focus using the specified or default selector
     syntax:
-      parameters: []
       content: function setInitialFocus()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO.setSubtitle
     name: 'setSubtitle(subtitle: string)'
@@ -327,13 +327,13 @@ items:
       - typeScript
     summary: Sets a new subtitle for the dialog
     syntax:
+      content: 'function setSubtitle(subtitle: string)'
       parameters:
         - id: subtitle
           type:
             - string
           description: |+
 
-      content: 'function setSubtitle(subtitle: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO.setTitle
     name: 'setTitle(title: string)'
@@ -342,12 +342,12 @@ items:
       - typeScript
     summary: Sets a new title for the dialog.
     syntax:
+      content: 'function setTitle(title: string)'
       parameters:
         - id: title
           type:
             - string
           description: New title value.
-      content: 'function setTitle(title: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO.show
     name: show()
@@ -356,8 +356,8 @@ items:
       - typeScript
     summary: Shows the dialog.
     syntax:
-      parameters: []
       content: function show()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO.show
     name: 'show<T>(dialogType: function, options?: any)'
@@ -366,6 +366,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function show<T>(dialogType: function, options?: any)'
       parameters:
         - id: dialogType
           type:
@@ -376,7 +377,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'static function show<T>(dialogType: function, options?: any)'
       return:
         type:
           - T

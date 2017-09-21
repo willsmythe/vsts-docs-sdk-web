@@ -26,6 +26,7 @@ items:
       - typeScript
     summary: Returns a copy of array that is sorted using a stable sorting routine
     syntax:
+      content: 'function sort(array: T[], inPlace?: boolean)'
       parameters:
         - id: array
           type:
@@ -36,7 +37,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function sort(array: T[], inPlace?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Utils.Array.StableSorter.constructor
     name: 'StableSorter(cmpFunc: function)'
@@ -45,10 +45,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new StableSorter(cmpFunc: function)'
       parameters:
         - id: cmpFunc
           type:
             - function
           description: ''
-      content: 'new StableSorter(cmpFunc: function)'
     type: constructor

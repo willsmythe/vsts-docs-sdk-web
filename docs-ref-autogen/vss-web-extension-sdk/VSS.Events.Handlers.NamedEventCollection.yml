@@ -34,8 +34,8 @@ items:
       - typeScript
     summary: Returns true if there is at least one subscriber in this event collection.
     syntax:
-      parameters: []
       content: function hasSubscribers()
+      parameters: []
       return:
         type:
           - boolean
@@ -50,6 +50,9 @@ items:
       - typeScript
     summary: Invoke the handlers that have subscribed to this event
     syntax:
+      content: >-
+        function invokeHandlers(eventName: string, sender?: TSender, eventArgs?:
+        TEventArgs, handlerResultFilter?: function)
       parameters:
         - id: eventName
           type:
@@ -73,9 +76,6 @@ items:
             invocation loop based on the return value of a handler. The filter
             should return true to break out of the loop.
           optional: true
-      content: >-
-        function invokeHandlers(eventName: string, sender?: TSender, eventArgs?:
-        TEventArgs, handlerResultFilter?: function)
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.NamedEventCollection.subscribe
     name: 'subscribe(eventName: string, handler: IFunctionPPR<TSender>)'
@@ -84,6 +84,7 @@ items:
       - typeScript
     summary: Adds an event handler to the list of handlers for the given event
     syntax:
+      content: 'function subscribe(eventName: string, handler: IFunctionPPR<TSender>)'
       parameters:
         - id: eventName
           type:
@@ -94,7 +95,6 @@ items:
             - '@vss-web-extension-sdk.IFunctionPPR<TSender>'
           description: |
             Event handler method to register
-      content: 'function subscribe(eventName: string, handler: IFunctionPPR<TSender>)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.NamedEventCollection.unsubscribe
     name: 'unsubscribe(eventName: string, handler: IFunctionPPR<TSender>)'
@@ -103,6 +103,7 @@ items:
       - typeScript
     summary: Removes an event handler from the list of handlers for the given event
     syntax:
+      content: 'function unsubscribe(eventName: string, handler: IFunctionPPR<TSender>)'
       parameters:
         - id: eventName
           type:
@@ -113,7 +114,6 @@ items:
             - '@vss-web-extension-sdk.IFunctionPPR<TSender>'
           description: |
             Event handler method to remove
-      content: 'function unsubscribe(eventName: string, handler: IFunctionPPR<TSender>)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Handlers.NamedEventCollection.unsubscribeAll
@@ -123,6 +123,6 @@ items:
       - typeScript
     summary: Unsubscribes all event handlers
     syntax:
-      parameters: []
       content: function unsubscribeAll()
+      parameters: []
     type: method

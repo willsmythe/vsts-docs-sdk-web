@@ -32,7 +32,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.Control<@vss-web-extension-sdk.VSS.Controls.Panels.ICollapsiblePanelOptions>
     source:
       path: vss.d.ts
@@ -50,12 +50,12 @@ items:
       - typeScript
     summary: Appends the specified content to the display content of the control
     syntax:
+      content: 'function appendContent(element: string)'
       parameters:
         - id: element
           type:
             - string
           description: ''
-      content: 'function appendContent(element: string)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel'
@@ -69,6 +69,7 @@ items:
       Appends the specified HTML, DOM element or jQuery object to the
       header section of the CollapsiblePanel
     syntax:
+      content: 'function appendHeader(element: string)'
       parameters:
         - id: element
           type:
@@ -76,7 +77,6 @@ items:
           description: >-
             Content to append to the header section (JQuery object or HTML
             string)
-      content: 'function appendHeader(element: string)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel'
@@ -91,12 +91,12 @@ items:
       Appends the specified plain text to the header section of the
       CollapsiblePanel
     syntax:
+      content: 'function appendHeaderText(headerText: string)'
       parameters:
         - id: headerText
           type:
             - string
           description: Content to append to the header section
-      content: 'function appendHeaderText(headerText: string)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel'
@@ -108,8 +108,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function collapse()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel.enhancementTypeName
@@ -160,8 +160,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function expand()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel.initializeOptions
@@ -171,6 +171,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: ICollapsiblePanelOptions)'
       parameters:
         - id: options
           type:
@@ -179,7 +180,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: ICollapsiblePanelOptions)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel.isCollapsiblePanelDisabled
@@ -189,8 +189,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isCollapsiblePanelDisabled()
+      parameters: []
       return:
         type:
           - Boolean
@@ -202,8 +202,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isExpanded()
+      parameters: []
       return:
         type:
           - boolean
@@ -217,6 +217,7 @@ items:
       Prepends the specified HTML, DOM element or jQuery object to the
       header section of the CollapsiblePanel
     syntax:
+      content: 'function prependHeader(element: string)'
       parameters:
         - id: element
           type:
@@ -224,7 +225,6 @@ items:
           description: >-
             Content to prepend to the header section (JQuery object or HTML
             string)
-      content: 'function prependHeader(element: string)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel'
@@ -239,12 +239,12 @@ items:
       Appends the specified plain text to the header section of the
       CollapsiblePanel
     syntax:
+      content: 'function replaceHeaderTextIfPresent(headerText: string)'
       parameters:
         - id: headerText
           type:
             - string
           description: ''
-      content: 'function replaceHeaderTextIfPresent(headerText: string)'
       return:
         type:
           - JQuery
@@ -256,12 +256,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setDisabled(isDisabled: boolean)'
       parameters:
         - id: isDisabled
           type:
             - boolean
           description: ''
-      content: 'function setDisabled(isDisabled: boolean)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel.toggleExpandedState
@@ -271,8 +271,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function toggleExpandedState()
+      parameters: []
       return:
         type:
           - boolean

@@ -31,7 +31,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Gallery.RestClient.CommonMethods3To4'
+      name: '@vss-web-extension-sdk.VSS.Gallery.RestClient.CommonMethods3To4'
     source:
       path: vss.d.ts
       startLine: 23571
@@ -51,6 +51,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -61,9 +64,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Gallery.RestClient.CommonMethods3_1To4.getCategoryTree
@@ -75,6 +75,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getCategoryTree(product: string, categoryId: string, lcid?:
+        number, source?: string, productVersion?: string, skus?: string,
+        subSkus?: string)
       parameters:
         - id: product
           type:
@@ -109,10 +113,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getCategoryTree(product: string, categoryId: string, lcid?:
-        number, source?: string, productVersion?: string, skus?: string,
-        subSkus?: string)
       return:
         type:
           - >-
@@ -128,6 +128,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getExtensionDailyStats(publisherName: string, extensionName:
+        string, days?: number, aggregate?: ExtensionStatsAggregateType,
+        afterDate?: Date)
       parameters:
         - id: publisherName
           type:
@@ -152,10 +156,6 @@ items:
             - Date
           description: ''
           optional: true
-      content: >-
-        function getExtensionDailyStats(publisherName: string, extensionName:
-        string, days?: number, aggregate?: ExtensionStatsAggregateType,
-        afterDate?: Date)
       return:
         type:
           - >-
@@ -176,6 +176,9 @@ items:
       Without this explicit implementation, calling GET on this public route
       invokes the above GET implementation GetExtensionDailyStats.
     syntax:
+      content: >-
+        function getExtensionDailyStatsAnonymous(publisherName: string,
+        extensionName: string, version: string)
       parameters:
         - id: publisherName
           type:
@@ -189,9 +192,6 @@ items:
           type:
             - string
           description: Version of the extension
-      content: >-
-        function getExtensionDailyStatsAnonymous(publisherName: string,
-        extensionName: string, version: string)
       return:
         type:
           - >-
@@ -209,6 +209,10 @@ items:
       [Preview API] Get install/uninstall events of an extension. If both count
       and afterDate parameters are specified, count takes precedence.
     syntax:
+      content: >-
+        function getExtensionEvents(publisherName: string, extensionName:
+        string, count?: number, afterDate?: Date, include?: string,
+        includeProperty?: string)
       parameters:
         - id: publisherName
           type:
@@ -242,10 +246,6 @@ items:
             Event properties to include. Currently only 'lastContactDetails' is
             supported for uninstall events
           optional: true
-      content: >-
-        function getExtensionEvents(publisherName: string, extensionName:
-        string, count?: number, afterDate?: Date, include?: string,
-        includeProperty?: string)
       return:
         type:
           - >-
@@ -261,6 +261,9 @@ items:
       - typeScript
     summary: '[Preview API] Returns extension reports'
     syntax:
+      content: >-
+        function getExtensionReports(publisherName: string, extensionName:
+        string, days?: number, count?: number, afterDate?: Date)
       parameters:
         - id: publisherName
           type:
@@ -287,9 +290,6 @@ items:
             - Date
           description: Use if you want to fetch events newer than the specified date
           optional: true
-      content: >-
-        function getExtensionReports(publisherName: string, extensionName:
-        string, days?: number, count?: number, afterDate?: Date)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -302,6 +302,7 @@ items:
       - typeScript
     summary: '[Preview API] Get all setting entries for the given user/all-users scope'
     syntax:
+      content: 'function getGalleryUserSettings(userScope: string, key?: string)'
       parameters:
         - id: userScope
           type:
@@ -314,7 +315,6 @@ items:
             - string
           description: Optional key under which to filter all the entries
           optional: true
-      content: 'function getGalleryUserSettings(userScope: string, key?: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<[key: string]: any>'
@@ -329,6 +329,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getRootCategories(product: string, lcid?: number, source?:
+        string, productVersion?: string, skus?: string, subSkus?: string)
       parameters:
         - id: product
           type:
@@ -359,9 +362,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getRootCategories(product: string, lcid?: number, source?:
-        string, productVersion?: string, skus?: string, subSkus?: string)
       return:
         type:
           - >-
@@ -377,6 +377,9 @@ items:
       - typeScript
     summary: '[Preview API] Increments a daily statistic associated with the extension'
     syntax:
+      content: >-
+        function incrementExtensionDailyStat(publisherName: string,
+        extensionName: string, version: string, statType: string)
       parameters:
         - id: publisherName
           type:
@@ -394,9 +397,6 @@ items:
           type:
             - string
           description: Type of stat to increment
-      content: >-
-        function incrementExtensionDailyStat(publisherName: string,
-        extensionName: string, version: string, statType: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -412,12 +412,12 @@ items:
       This is meant to be invoked by EMS only for sending us data related to
       install/uninstall of an extension.
     syntax:
+      content: 'function publishExtensionEvents(extensionEvents: ExtensionEvents[])'
       parameters:
         - id: extensionEvents
           type:
             - '@vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionEvents[]'
           description: ''
-      content: 'function publishExtensionEvents(extensionEvents: ExtensionEvents[])'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -430,6 +430,9 @@ items:
       - typeScript
     summary: '[Preview API] Set all setting entries for the given user/all-users scope'
     syntax:
+      content: >-
+        function setGalleryUserSettings(entries: [key: string]: any, userScope:
+        string)
       parameters:
         - id: entries
           type:
@@ -441,9 +444,6 @@ items:
           description: >-
             User-Scope at which to get the value. Should be "me" for the current
             user or "host" for all users.
-      content: >-
-        function setGalleryUserSettings(entries: [key: string]: any, userScope:
-        string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'

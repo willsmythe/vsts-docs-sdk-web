@@ -20,7 +20,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4
     source:
       path: tfs.d.ts
@@ -41,6 +41,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getTaskGroup(project: string, taskGroupId: string, versionSpec:
+        string, expanded?: boolean)
       parameters:
         - id: project
           type:
@@ -59,9 +62,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getTaskGroup(project: string, taskGroupId: string, versionSpec:
-        string, expanded?: boolean)
       return:
         type:
           - >-
@@ -77,6 +77,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function publishPreviewTaskGroup(taskGroup: TaskGroup, project: string,
+        taskGroupId: string, disablePriorVersions?: boolean)
       parameters:
         - id: taskGroup
           type:
@@ -95,9 +98,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function publishPreviewTaskGroup(taskGroup: TaskGroup, project: string,
-        taskGroupId: string, disablePriorVersions?: boolean)
       return:
         type:
           - >-
@@ -113,6 +113,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function publishTaskGroup(taskGroupMetadata: PublishTaskGroupMetadata,
+        project: string, parentTaskGroupId: string)
       parameters:
         - id: taskGroupMetadata
           type:
@@ -127,9 +130,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function publishTaskGroup(taskGroupMetadata: PublishTaskGroupMetadata,
-        project: string, parentTaskGroupId: string)
       return:
         type:
           - >-
@@ -145,6 +145,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new TaskAgentHttpClient4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -155,9 +158,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new TaskAgentHttpClient4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.TaskAgentHttpClient4.undeleteTaskGroup
@@ -167,6 +167,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function undeleteTaskGroup(taskGroup: TaskGroup, project: string)'
       parameters:
         - id: taskGroup
           type:
@@ -176,7 +177,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: 'function undeleteTaskGroup(taskGroup: TaskGroup, project: string)'
       return:
         type:
           - >-

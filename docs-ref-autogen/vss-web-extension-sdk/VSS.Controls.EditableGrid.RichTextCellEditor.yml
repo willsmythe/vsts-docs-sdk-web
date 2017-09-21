@@ -17,7 +17,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.EditableGrid.TextCellEditor'
+      name: '@vss-web-extension-sdk.VSS.Controls.EditableGrid.TextCellEditor'
     source:
       path: vss.d.ts
       startLine: 11099
@@ -35,13 +35,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function clearValue(setEmpty?: boolean)'
       parameters:
         - id: setEmpty
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function clearValue(setEmpty?: boolean)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.RichTextCellEditor.getValue
@@ -51,8 +51,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getValue()
+      parameters: []
       return:
         type:
           - string
@@ -64,12 +64,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setSize($cellContext: JQuery)'
       parameters:
         - id: $cellContext
           type:
             - JQuery
           description: ''
-      content: 'function setSize($cellContext: JQuery)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.RichTextCellEditor.setValue
@@ -79,6 +79,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setValue(htmlString: string, doNotSavePrevious?: boolean)'
       parameters:
         - id: htmlString
           type:
@@ -89,5 +90,4 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function setValue(htmlString: string, doNotSavePrevious?: boolean)'
     type: method

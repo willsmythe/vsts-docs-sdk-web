@@ -58,7 +58,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Grids.GridO<any>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Grids.GridO<any>'
     source:
       path: vss.d.ts
       startLine: 11158
@@ -75,6 +75,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function cacheRows(aboveRange: any, visibleRange: any, belowRange: any)'
       parameters:
         - id: aboveRange
           type:
@@ -88,7 +89,6 @@ items:
           type:
             - any
           description: ''
-      content: 'function cacheRows(aboveRange: any, visibleRange: any, belowRange: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.canEditCell
     name: 'canEditCell(dataIndex: number, columnIndex: string)'
@@ -97,6 +97,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function canEditCell(dataIndex: number, columnIndex: string)'
       parameters:
         - id: dataIndex
           type:
@@ -106,7 +107,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function canEditCell(dataIndex: number, columnIndex: string)'
       return:
         type:
           - boolean
@@ -131,13 +131,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new EditableGrid(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'new EditableGrid(options?: any)'
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.ensureRowSelectionWhenLayoutComplete
@@ -149,6 +149,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function ensureRowSelectionWhenLayoutComplete(command: any,
+        indicesToSelect?: number[])
       parameters:
         - id: command
           type:
@@ -159,9 +162,6 @@ items:
             - 'number[]'
           description: ''
           optional: true
-      content: >-
-        function ensureRowSelectionWhenLayoutComplete(command: any,
-        indicesToSelect?: number[])
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.getCellEditorForColumn
@@ -171,12 +171,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getCellEditorForColumn(index: any)'
       parameters:
         - id: index
           type:
             - any
           description: ''
-      content: 'function getCellEditorForColumn(index: any)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.EditableGrid.CellEditor'
@@ -189,8 +189,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getCurrentEditRowIndex()
+      parameters: []
       return:
         type:
           - number
@@ -203,12 +203,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getPinAndFocusElementForContextMenu(eventArgs: any)'
       parameters:
         - id: eventArgs
           type:
             - any
           description: ''
-      content: 'function getPinAndFocusElementForContextMenu(eventArgs: any)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.getSelectedCell
@@ -218,8 +218,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getSelectedCell()
+      parameters: []
       return:
         type:
           - JQuery
@@ -232,8 +232,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getSelectedCellIntoView()
+      parameters: []
       return:
         type:
           - boolean
@@ -246,8 +246,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getSelectedRowIndices()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.handleHeaderSelectionAfterViewPortUpdate
@@ -257,8 +257,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function handleHeaderSelectionAfterViewPortUpdate()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.initialize
     name: initialize()
@@ -267,8 +267,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.initializeOptions
@@ -278,6 +278,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -285,7 +286,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.layout
     name: layout()
@@ -294,8 +294,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function layout()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.onBeginCellEdit
@@ -305,6 +305,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onBeginCellEdit(dataIndex: number, columnIndex: string)'
       parameters:
         - id: dataIndex
           type:
@@ -314,7 +315,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function onBeginCellEdit(dataIndex: number, columnIndex: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.onCellChanged
     name: 'onCellChanged(dataIndex: number, columnIndex: string, newValue: string)'
@@ -323,6 +323,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function onCellChanged(dataIndex: number, columnIndex: string, newValue:
+        string)
       parameters:
         - id: dataIndex
           type:
@@ -336,9 +339,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function onCellChanged(dataIndex: number, columnIndex: string, newValue:
-        string)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.onCellSelectionChanged
@@ -348,6 +348,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onCellSelectionChanged($cell?: JQuery, delayEdit?: boolean)'
       parameters:
         - id: $cell
           type:
@@ -359,7 +360,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function onCellSelectionChanged($cell?: JQuery, delayEdit?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.onContextMenu
     name: 'onContextMenu(eventArgs: any)'
@@ -368,12 +368,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onContextMenu(eventArgs: any)'
       parameters:
         - id: eventArgs
           type:
             - any
           description: ''
-      content: 'function onContextMenu(eventArgs: any)'
       return:
         type:
           - any
@@ -387,6 +387,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function onEndCellEdit(dataIndex: number, columnIndex: string, newValue:
+        string, ignoreValueChange?: boolean)
       parameters:
         - id: dataIndex
           type:
@@ -405,9 +408,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function onEndCellEdit(dataIndex: number, columnIndex: string, newValue:
-        string, ignoreValueChange?: boolean)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.onHyperLinkClick
@@ -417,6 +417,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onHyperLinkClick(dataIndex: number, columnIndex: string)'
       parameters:
         - id: dataIndex
           type:
@@ -426,7 +427,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function onHyperLinkClick(dataIndex: number, columnIndex: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.onLayoutComplete
@@ -436,6 +436,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onLayoutComplete(command: any, indicesToSelect?: number[])'
       parameters:
         - id: command
           type:
@@ -446,7 +447,6 @@ items:
             - 'number[]'
           description: ''
           optional: true
-      content: 'function onLayoutComplete(command: any, indicesToSelect?: number[])'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.postUpdateViewPort
@@ -456,8 +456,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function postUpdateViewPort()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.selectSameRowNthCell
@@ -467,6 +467,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectSameRowNthCell(n: number, doNotGetCellIntoView?: boolean)'
       parameters:
         - id: 'n'
           type:
@@ -477,7 +478,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function selectSameRowNthCell(n: number, doNotGetCellIntoView?: boolean)'
       return:
         type:
           - boolean
@@ -490,12 +490,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setHeightForLowerContentSpacer(height: number)'
       parameters:
         - id: height
           type:
             - number
           description: ''
-      content: 'function setHeightForLowerContentSpacer(height: number)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.setHeightForUpperContentSpacer
@@ -505,12 +505,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setHeightForUpperContentSpacer(height: number)'
       parameters:
         - id: height
           type:
             - number
           description: ''
-      content: 'function setHeightForUpperContentSpacer(height: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.updateRows
     name: 'updateRows(indices?: number[])'
@@ -519,13 +519,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function updateRows(indices?: number[])'
       parameters:
         - id: indices
           type:
             - 'number[]'
           description: ''
           optional: true
-      content: 'function updateRows(indices?: number[])'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.EditableGrid.whenLayoutComplete
@@ -535,6 +535,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function whenLayoutComplete(command: any, indicesToSelect?: number[])'
       parameters:
         - id: command
           type:
@@ -545,5 +546,4 @@ items:
             - 'number[]'
           description: ''
           optional: true
-      content: 'function whenLayoutComplete(command: any, indicesToSelect?: number[])'
     type: method

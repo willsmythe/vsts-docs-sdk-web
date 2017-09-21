@@ -20,7 +20,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Menus.MenuOwner<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Menus.MenuOwner<TOptions>'
     source:
       path: vss.d.ts
       startLine: 14445
@@ -50,8 +50,8 @@ items:
       - typeScript
     summary: Sets focus to the control
     syntax:
-      parameters: []
       content: function focus()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuBarO.getMenuItemAlignment
     name: getMenuItemAlignment()
@@ -60,8 +60,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getMenuItemAlignment()
+      parameters: []
       return:
         type:
           - string
@@ -73,6 +73,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -80,7 +81,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: TOptions)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuBarO.constructor
     name: 'MenuBarO(options?: TOptions)'
@@ -89,6 +89,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new MenuBarO(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -96,7 +97,6 @@ items:
           description: |+
 
           optional: true
-      content: 'new MenuBarO(options?: TOptions)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuBarO.selectDown
     name: 'selectDown(options?: any)'
@@ -105,13 +105,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectDown(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function selectDown(options?: any)'
       return:
         type:
           - boolean
@@ -123,13 +123,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectLeft(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function selectLeft(options?: any)'
       return:
         type:
           - boolean
@@ -141,13 +141,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectRight(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function selectRight(options?: any)'
       return:
         type:
           - boolean
@@ -159,13 +159,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectUp(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function selectUp(options?: any)'
       return:
         type:
           - boolean
@@ -179,12 +179,12 @@ items:
       Tries to activate the menubar associated with the element matched by the
       selector.
     syntax:
+      content: 'static function tryActivate(selector: string)'
       parameters:
         - id: selector
           type:
             - string
           description: Selector to match the element.
-      content: 'static function tryActivate(selector: string)'
       return:
         type:
           - boolean
@@ -198,12 +198,12 @@ items:
       Tries to activate and open the menubar associated with the element matched
       by the selector.
     syntax:
+      content: 'static function tryShowSubMenu(selector: string)'
       parameters:
         - id: selector
           type:
             - string
           description: Selector to match the element.
-      content: 'static function tryShowSubMenu(selector: string)'
       return:
         type:
           - boolean

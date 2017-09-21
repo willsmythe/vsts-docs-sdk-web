@@ -30,13 +30,13 @@ items:
 
       contributed menu item does not have an "action" method.
     syntax:
+      content: 'function execute(actionContext: any)'
       parameters:
         - id: actionContext
           type:
             - any
           description: |
             Menu-specific context information
-      content: 'function execute(actionContext: any)'
       return:
         type:
           - any
@@ -48,10 +48,10 @@ items:
       - typeScript
     summary: Get an array of menu items for the given context
     syntax:
+      content: 'function getMenuItems(context: any)'
       parameters:
         - id: context
           type:
             - any
           description: Menu-specific context information
-      content: 'function getMenuItems(context: any)'
     type: method

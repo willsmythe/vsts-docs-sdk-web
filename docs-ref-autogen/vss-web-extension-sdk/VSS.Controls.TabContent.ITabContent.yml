@@ -47,12 +47,12 @@ items:
       - typeScript
     summary: This method is called when user clicks on the tab for the first time.
     syntax:
+      content: 'function beginLoad($container: JQuery)'
       parameters:
         - id: $container
           type:
             - JQuery
           description: ''
-      content: 'function beginLoad($container: JQuery)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -68,8 +68,8 @@ items:
       Returns a promise that in turn returns a boolean flag, indicating whether
       the current save operation requires page refresh or not
     syntax:
-      parameters: []
       content: function beginSave()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -81,8 +81,8 @@ items:
       - typeScript
     summary: Optional method. Called when the control is getting disposed.
     syntax:
-      parameters: []
       content: function dispose()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TabContent.ITabContent.isDirty
     name: isDirty()
@@ -91,8 +91,8 @@ items:
       - typeScript
     summary: Indicates if the control is dirty
     syntax:
-      parameters: []
       content: function isDirty()
+      parameters: []
       return:
         type:
           - boolean
@@ -104,8 +104,8 @@ items:
       - typeScript
     summary: Optional method. Called when the control is getting resized.
     syntax:
-      parameters: []
       content: function onResize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TabContent.ITabContent.onTabActivated
     name: 'onTabActivated(initialLoad: boolean)'
@@ -119,12 +119,12 @@ items:
       This method will NOT be called for the first time user clicks the tab, use
       beginLoad($container) instead.
     syntax:
+      content: 'function onTabActivated(initialLoad: boolean)'
       parameters:
         - id: initialLoad
           type:
             - boolean
           description: ''
-      content: 'function onTabActivated(initialLoad: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TabContent.ITabContent.onTabChanging
     name: onTabChanging()
@@ -137,8 +137,8 @@ items:
 
       the method is called to see if user is allowed to leave the tab.
     syntax:
-      parameters: []
       content: function onTabChanging()
+      parameters: []
       return:
         type:
           - boolean
@@ -153,10 +153,10 @@ items:
       Accepts the event handlers for onDirtyStateChanged and onValidStateChanged
       events
     syntax:
+      content: 'function registerStateChangedEvents(eventHandler: Function)'
       parameters:
         - id: eventHandler
           type:
             - Function
           description: ''
-      content: 'function registerStateChangedEvents(eventHandler: Function)'
     type: method

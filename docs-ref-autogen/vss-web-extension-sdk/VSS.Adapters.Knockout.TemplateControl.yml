@@ -19,7 +19,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.BaseControl'
+      name: '@vss-web-extension-sdk.VSS.Controls.BaseControl'
     source:
       path: vss.d.ts
       startLine: 3497
@@ -36,12 +36,12 @@ items:
       - typeScript
     summary: See interface.
     syntax:
+      content: 'function applyBinding(element: JQuery)'
       parameters:
         - id: element
           type:
             - JQuery
           description: ''
-      content: 'function applyBinding(element: JQuery)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateControl.applyBinding
     name: >-
@@ -54,6 +54,9 @@ items:
       Creates a new template control using the specified type, element and
       options.
     syntax:
+      content: >-
+        static function applyBinding<TControl>(controlType: any, element:
+        JQuery, viewModel: TViewModel, options: TemplateControlOptions)
       parameters:
         - id: controlType
           type:
@@ -72,9 +75,6 @@ items:
             - >-
               @vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateControlOptions
           description: Template options like templateHtml and templateId.
-      content: >-
-        static function applyBinding<TControl>(controlType: any, element:
-        JQuery, viewModel: TViewModel, options: TemplateControlOptions)
       return:
         type:
           - TControl
@@ -91,6 +91,9 @@ items:
       Creates a new template control using registered control specified by
       template id.
     syntax:
+      content: >-
+        static function applyRegisteredBinding<TControl>(templateId: string,
+        element: JQuery, viewModelContext: any)
       parameters:
         - id: templateId
           type:
@@ -104,9 +107,6 @@ items:
           type:
             - any
           description: Context used to generate view model.
-      content: >-
-        static function applyRegisteredBinding<TControl>(templateId: string,
-        element: JQuery, viewModelContext: any)
       return:
         type:
           - TControl
@@ -120,12 +120,12 @@ items:
       Proxy for a knockout computed to keep track of it to ensure that when the
       control is disposed, computed is also disposed.
     syntax:
+      content: 'function computed(func: function)'
       parameters:
         - id: func
           type:
             - function
           description: ''
-      content: 'function computed(func: function)'
       return:
         type:
           - KnockoutComputed<any>
@@ -137,8 +137,8 @@ items:
       - typeScript
     summary: Gets the viewmodel bound to this control.
     syntax:
-      parameters: []
       content: function getViewModel()
+      parameters: []
       return:
         type:
           - TViewModel
@@ -153,6 +153,9 @@ items:
       - typeScript
     summary: Registers a template control to be invoked later.
     syntax:
+      content: >-
+        static function registerBinding(templateId: string, controlType: any,
+        viewModelGenerator: function)
       parameters:
         - id: templateId
           type:
@@ -167,9 +170,6 @@ items:
             - function
           description: |
             Delegate to generate the viewmodel.
-      content: >-
-        static function registerBinding(templateId: string, controlType: any,
-        viewModelGenerator: function)
     type: method
   - uid: vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateControl.subscribe
     name: 'subscribe(subscribable: KnockoutSubscribable<any>, callback: function)'
@@ -180,6 +180,9 @@ items:
       Proxy for a knockout subscription to keep track of it to ensure that when
       the control is disposed, subscription is also disposed.
     syntax:
+      content: >-
+        function subscribe(subscribable: KnockoutSubscribable<any>, callback:
+        function)
       parameters:
         - id: subscribable
           type:
@@ -189,9 +192,6 @@ items:
           type:
             - function
           description: ''
-      content: >-
-        function subscribe(subscribable: KnockoutSubscribable<any>, callback:
-        function)
       return:
         type:
           - '@vss-web-extension-sdk.IDisposable'
@@ -203,6 +203,9 @@ items:
       - typeScript
     summary: 'Do not use this! Instead, use TemplateControl.applyBinding.'
     syntax:
+      content: >-
+        new TemplateControl(viewModel: TViewModel, options?:
+        TemplateControlOptions)
       parameters:
         - id: viewModel
           type:
@@ -214,7 +217,4 @@ items:
               @vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateControlOptions
           description: ''
           optional: true
-      content: >-
-        new TemplateControl(viewModel: TViewModel, options?:
-        TemplateControlOptions)
     type: constructor

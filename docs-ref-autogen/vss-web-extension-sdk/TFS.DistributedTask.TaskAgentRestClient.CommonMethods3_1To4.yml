@@ -50,7 +50,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3To4
     source:
       path: tfs.d.ts
@@ -69,13 +69,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function acquireAccessToken(authenticationRequest: AadOauthTokenRequest)'
       parameters:
         - id: authenticationRequest
           type:
             - >-
               @vss-web-extension-sdk.TFS.DistributedTask.Contracts.AadOauthTokenRequest
           description: ''
-      content: 'function acquireAccessToken(authenticationRequest: AadOauthTokenRequest)'
       return:
         type:
           - >-
@@ -91,6 +91,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function addDeploymentMachineGroup(machineGroup: DeploymentMachineGroup,
+        project: string)
       parameters:
         - id: machineGroup
           type:
@@ -101,9 +104,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function addDeploymentMachineGroup(machineGroup: DeploymentMachineGroup,
-        project: string)
       return:
         type:
           - >-
@@ -117,6 +117,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function addVariableGroup(group: VariableGroup, project: string)'
       parameters:
         - id: group
           type:
@@ -126,7 +127,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: 'function addVariableGroup(group: VariableGroup, project: string)'
       return:
         type:
           - >-
@@ -142,6 +142,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -152,9 +155,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_1To4.createAadOAuthRequest
@@ -166,6 +166,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createAadOAuthRequest(tenantId: string, redirectUri: string,
+        promptOption?: AadLoginPromptOption, completeCallbackPayload?: string)
       parameters:
         - id: tenantId
           type:
@@ -185,9 +188,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function createAadOAuthRequest(tenantId: string, redirectUri: string,
-        promptOption?: AadLoginPromptOption, completeCallbackPayload?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -200,6 +200,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteDeploymentMachineGroup(project: string, machineGroupId:
+        number)
       parameters:
         - id: project
           type:
@@ -209,9 +212,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function deleteDeploymentMachineGroup(project: string, machineGroupId:
-        number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -224,6 +224,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteVariableGroup(project: string, groupId: number)'
       parameters:
         - id: project
           type:
@@ -233,7 +234,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function deleteVariableGroup(project: string, groupId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -248,6 +248,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function generateDeploymentMachineGroupAccessToken(project: string,
+        machineGroupId: number)
       parameters:
         - id: project
           type:
@@ -257,9 +260,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function generateDeploymentMachineGroupAccessToken(project: string,
-        machineGroupId: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -274,6 +274,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getDeploymentMachineGroup(project: string, machineGroupId:
+        number, actionFilter?: MachineGroupActionFilter)
       parameters:
         - id: project
           type:
@@ -288,9 +291,6 @@ items:
             - MachineGroupActionFilter
           description: ''
           optional: true
-      content: >-
-        function getDeploymentMachineGroup(project: string, machineGroupId:
-        number, actionFilter?: MachineGroupActionFilter)
       return:
         type:
           - >-
@@ -306,6 +306,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getDeploymentMachineGroupMachines(project: string,
+        machineGroupId: number, tagFilters?: string[])
       parameters:
         - id: project
           type:
@@ -320,9 +323,6 @@ items:
             - 'string[]'
           description: ''
           optional: true
-      content: >-
-        function getDeploymentMachineGroupMachines(project: string,
-        machineGroupId: number, tagFilters?: string[])
       return:
         type:
           - >-
@@ -338,6 +338,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getDeploymentMachineGroups(project: string, machineGroupName?:
+        string, actionFilter?: MachineGroupActionFilter)
       parameters:
         - id: project
           type:
@@ -353,9 +356,6 @@ items:
             - MachineGroupActionFilter
           description: ''
           optional: true
-      content: >-
-        function getDeploymentMachineGroups(project: string, machineGroupName?:
-        string, actionFilter?: MachineGroupActionFilter)
       return:
         type:
           - >-
@@ -369,6 +369,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getTaskGroupHistory(project: string, taskGroupId: string)'
       parameters:
         - id: project
           type:
@@ -378,7 +379,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getTaskGroupHistory(project: string, taskGroupId: string)'
       return:
         type:
           - >-
@@ -394,6 +394,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getTaskGroupRevision(project: string, taskGroupId: string,
+        revision: number)
       parameters:
         - id: project
           type:
@@ -407,9 +410,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getTaskGroupRevision(project: string, taskGroupId: string,
-        revision: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -422,6 +422,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getVariableGroup(project: string, groupId: number)'
       parameters:
         - id: project
           type:
@@ -431,7 +432,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getVariableGroup(project: string, groupId: number)'
       return:
         type:
           - >-
@@ -447,6 +447,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getVariableGroups(project: string, groupName?: string,
+        actionFilter?: VariableGroupActionFilter)
       parameters:
         - id: project
           type:
@@ -462,9 +465,6 @@ items:
             - VariableGroupActionFilter
           description: ''
           optional: true
-      content: >-
-        function getVariableGroups(project: string, groupName?: string,
-        actionFilter?: VariableGroupActionFilter)
       return:
         type:
           - >-
@@ -478,6 +478,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getVariableGroupsById(project: string, groupIds: number[])'
       parameters:
         - id: project
           type:
@@ -487,7 +488,6 @@ items:
           type:
             - 'number[]'
           description: ''
-      content: 'function getVariableGroupsById(project: string, groupIds: number[])'
       return:
         type:
           - >-
@@ -501,8 +501,8 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
-      parameters: []
       content: function getVstsAadTenantId()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -517,6 +517,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateDeploymentMachineGroup(machineGroup:
+        DeploymentMachineGroup, project: string, machineGroupId: number)
       parameters:
         - id: machineGroup
           type:
@@ -531,9 +534,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateDeploymentMachineGroup(machineGroup:
-        DeploymentMachineGroup, project: string, machineGroupId: number)
       return:
         type:
           - >-
@@ -549,6 +549,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateDeploymentMachineGroupMachines(deploymentMachines:
+        DeploymentMachine[], project: string, machineGroupId: number)
       parameters:
         - id: deploymentMachines
           type:
@@ -563,9 +566,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateDeploymentMachineGroupMachines(deploymentMachines:
-        DeploymentMachine[], project: string, machineGroupId: number)
       return:
         type:
           - >-
@@ -581,6 +581,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateVariableGroup(group: VariableGroup, project: string,
+        groupId: number)
       parameters:
         - id: group
           type:
@@ -594,9 +597,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateVariableGroup(group: VariableGroup, project: string,
-        groupId: number)
       return:
         type:
           - >-

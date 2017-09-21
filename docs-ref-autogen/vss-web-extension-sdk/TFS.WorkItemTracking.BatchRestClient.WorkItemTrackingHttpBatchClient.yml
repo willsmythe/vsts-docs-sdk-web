@@ -26,7 +26,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: tfs.d.ts
       startLine: 18015
@@ -46,6 +46,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createWorkItemsBatch(documents: JsonPatchDocument[], project:
+        string, type: string)
       parameters:
         - id: documents
           type:
@@ -59,9 +62,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function createWorkItemsBatch(documents: JsonPatchDocument[], project:
-        string, type: string)
       return:
         type:
           - >-
@@ -75,12 +75,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteWorkItemsBatch(ids: number[])'
       parameters:
         - id: ids
           type:
             - 'number[]'
           description: ''
-      content: 'function deleteWorkItemsBatch(ids: number[])'
       return:
         type:
           - >-
@@ -94,12 +94,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function destroyWorkItemsBatch(ids: number[])'
       parameters:
         - id: ids
           type:
             - 'number[]'
           description: ''
-      content: 'function destroyWorkItemsBatch(ids: number[])'
       return:
         type:
           - >-
@@ -113,12 +113,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getQueriesBatch(ids: string[])'
       parameters:
         - id: ids
           type:
             - 'string[]'
           description: ''
-      content: 'function getQueriesBatch(ids: string[])'
       return:
         type:
           - >-
@@ -132,12 +132,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function restoreWorkItemsBatch(ids: number[])'
       parameters:
         - id: ids
           type:
             - 'number[]'
           description: ''
-      content: 'function restoreWorkItemsBatch(ids: number[])'
       return:
         type:
           - >-
@@ -165,12 +165,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function updateWorkItemsBatch(updateDocuments: function[])'
       parameters:
         - id: updateDocuments
           type:
             - 'function[]'
           description: ''
-      content: 'function updateWorkItemsBatch(updateDocuments: function[])'
       return:
         type:
           - >-
@@ -184,10 +184,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new WorkItemTrackingHttpBatchClient(rootRequestPath: string)'
       parameters:
         - id: rootRequestPath
           type:
             - string
           description: ''
-      content: 'new WorkItemTrackingHttpBatchClient(rootRequestPath: string)'
     type: constructor

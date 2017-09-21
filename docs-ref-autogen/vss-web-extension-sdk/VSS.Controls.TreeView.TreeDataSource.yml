@@ -19,7 +19,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.BaseDataSource'
+      name: '@vss-web-extension-sdk.VSS.Controls.BaseDataSource'
     source:
       path: vss.d.ts
       startLine: 17331
@@ -36,12 +36,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function collapseNode(node: any)'
       parameters:
         - id: node
           type:
             - any
           description: ''
-      content: 'function collapseNode(node: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.expandNode
     name: 'expandNode(node: any)'
@@ -50,12 +50,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function expandNode(node: any)'
       parameters:
         - id: node
           type:
             - any
           description: ''
-      content: 'function expandNode(node: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.getItemIndex
     name: 'getItemIndex(itemText: any, startsWith?: any, all?: any)'
@@ -64,6 +64,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getItemIndex(itemText: any, startsWith?: any, all?: any)'
       parameters:
         - id: itemText
           type:
@@ -80,7 +81,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function getItemIndex(itemText: any, startsWith?: any, all?: any)'
       return:
         type:
           - any
@@ -92,6 +92,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getItemText(index: any, all?: any, textOnly?: any)'
       parameters:
         - id: index
           type:
@@ -107,7 +108,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function getItemText(index: any, all?: any, textOnly?: any)'
       return:
         type:
           - string
@@ -119,6 +119,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function prepareSource(source?: any)'
       parameters:
         - id: source
           type:
@@ -126,7 +127,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function prepareSource(source?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.root
     name: root
@@ -148,12 +148,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setSource(source: any)'
       parameters:
         - id: source
           type:
             - any
           description: ''
-      content: 'function setSource(source: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.constructor
     name: 'TreeDataSource(options?: any)'
@@ -162,13 +162,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new TreeDataSource(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'new TreeDataSource(options?: any)'
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.TreeView.TreeDataSource.updateItemsFromSource
@@ -178,6 +178,6 @@ items:
       - typeScript
     summary: Update the flat content representation from the current tree
     syntax:
-      parameters: []
       content: function updateItemsFromSource()
+      parameters: []
     type: method

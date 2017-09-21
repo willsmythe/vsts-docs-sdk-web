@@ -31,7 +31,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 27214
@@ -51,6 +51,9 @@ items:
       - typeScript
     summary: '[Preview API] Add a new group Licensing rule asynchronously'
     syntax:
+      content: >-
+        function addGroupLicensingRule(licensingRule: GroupLicensingRule,
+        ruleOption?: RuleOption)
       parameters:
         - id: licensingRule
           type:
@@ -62,9 +65,6 @@ items:
             - RuleOption
           description: Rule Option
           optional: true
-      content: >-
-        function addGroupLicensingRule(licensingRule: GroupLicensingRule,
-        ruleOption?: RuleOption)
       return:
         type:
           - >-
@@ -78,13 +78,13 @@ items:
       - typeScript
     summary: '[Preview API] Applies group rules to the specified user'
     syntax:
+      content: 'function applyGroupLicensingRulesToAllUsers(ruleOption?: RuleOption)'
       parameters:
         - id: ruleOption
           type:
             - RuleOption
           description: ''
           optional: true
-      content: 'function applyGroupLicensingRulesToAllUsers(ruleOption?: RuleOption)'
       return:
         type:
           - >-
@@ -98,12 +98,12 @@ items:
       - typeScript
     summary: '[Preview API] Applies group rules to the specified user'
     syntax:
+      content: 'function applyGroupLicensingRulesToUser(userId: string)'
       parameters:
         - id: userId
           type:
             - string
           description: ''
-      content: 'function applyGroupLicensingRulesToUser(userId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -118,6 +118,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -128,9 +131,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.LicensingRule.RestClient.CommonMethods2To4.deleteGroupLicenseRule
@@ -140,6 +140,9 @@ items:
       - typeScript
     summary: '[Preview API] Delete a group Licensing rule'
     syntax:
+      content: >-
+        function deleteGroupLicenseRule(subjectDescriptor: string, ruleOption?:
+        RuleOption)
       parameters:
         - id: subjectDescriptor
           type:
@@ -150,9 +153,6 @@ items:
             - RuleOption
           description: Rule Option
           optional: true
-      content: >-
-        function deleteGroupLicenseRule(subjectDescriptor: string, ruleOption?:
-        RuleOption)
       return:
         type:
           - >-
@@ -166,13 +166,13 @@ items:
       - typeScript
     summary: '[Preview API] Gets application status for the specific rule'
     syntax:
+      content: 'function getApplicationStatus(operationId?: string)'
       parameters:
         - id: operationId
           type:
             - string
           description: ''
           optional: true
-      content: 'function getApplicationStatus(operationId?: string)'
       return:
         type:
           - >-
@@ -188,12 +188,12 @@ items:
       [Preview API] Gets the group Licensing rule for the group with given
       SubjectDescriptor
     syntax:
+      content: 'function getGroupLicensingRule(subjectDescriptor: string)'
       parameters:
         - id: subjectDescriptor
           type:
             - string
           description: ''
-      content: 'function getGroupLicensingRule(subjectDescriptor: string)'
       return:
         type:
           - >-
@@ -207,6 +207,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getGroupLicensingRules(top: number, skip?: number)'
       parameters:
         - id: top
           type:
@@ -217,7 +218,6 @@ items:
             - number
           description: ''
           optional: true
-      content: 'function getGroupLicensingRules(top: number, skip?: number)'
       return:
         type:
           - >-
@@ -233,13 +233,13 @@ items:
       [Preview API] Get Group License Rules for the given batch batch of group
       Ids
     syntax:
+      content: 'function lookupGroupLicensingRules(groupRuleLookup: GraphSubjectLookup)'
       parameters:
         - id: groupRuleLookup
           type:
             - >-
               @vss-web-extension-sdk.VSS.LicensingRule.Contracts.GraphSubjectLookup
           description: ''
-      content: 'function lookupGroupLicensingRules(groupRuleLookup: GraphSubjectLookup)'
       return:
         type:
           - >-
@@ -269,6 +269,9 @@ items:
       - typeScript
     summary: '[Preview API] Update a group Licensing rule'
     syntax:
+      content: >-
+        function updateGroupLicensingRule(licensingRuleUpdate:
+        GroupLicensingRuleUpdate, ruleOption?: RuleOption)
       parameters:
         - id: licensingRuleUpdate
           type:
@@ -280,9 +283,6 @@ items:
             - RuleOption
           description: Rule Option
           optional: true
-      content: >-
-        function updateGroupLicensingRule(licensingRuleUpdate:
-        GroupLicensingRuleUpdate, ruleOption?: RuleOption)
       return:
         type:
           - >-

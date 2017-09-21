@@ -32,7 +32,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior'
+      name: '@vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior'
     source:
       path: vss.d.ts
       startLine: 10180
@@ -49,6 +49,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new ComboListBehavior(combo: any, options?: any)'
       parameters:
         - id: combo
           type:
@@ -59,7 +60,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'new ComboListBehavior(combo: any, options?: any)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.downKey
     name: 'downKey(e?: JQueryEventObject)'
@@ -68,13 +68,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function downKey(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function downKey(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -86,8 +86,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getDropOptions()
+      parameters: []
       return:
         type:
           - any
@@ -99,8 +99,8 @@ items:
       - typeScript
     summary: Gets the drop width of this behavior
     syntax:
-      parameters: []
       content: function getDropWidth()
+      parameters: []
       return:
         type:
           - number
@@ -113,8 +113,8 @@ items:
       - typeScript
     summary: Finds the max item length inside the data source
     syntax:
-      parameters: []
       content: function getMaxItemLength()
+      parameters: []
       return:
         type:
           - number
@@ -127,6 +127,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getSelectedIndex(value?: string, all?: any)'
       parameters:
         - id: value
           type:
@@ -138,7 +139,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function getSelectedIndex(value?: string, all?: any)'
       return:
         type:
           - number
@@ -150,8 +150,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getValue<TValue>()
+      parameters: []
       return:
         type:
           - TValue
@@ -163,8 +163,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.keyDown
     name: 'keyDown(e?: JQueryEventObject)'
@@ -173,13 +173,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function keyDown(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function keyDown(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -191,13 +191,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function keyPress(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function keyPress(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -209,13 +209,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function keyUp(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function keyUp(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -227,13 +227,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function pageDownKey(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function pageDownKey(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -245,13 +245,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function pageUpKey(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function pageUpKey(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -263,13 +263,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectNext(page?: boolean)'
       parameters:
         - id: page
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function selectNext(page?: boolean)'
       return:
         type:
           - any
@@ -281,13 +281,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectPrev(page?: boolean)'
       parameters:
         - id: page
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function selectPrev(page?: boolean)'
       return:
         type:
           - boolean
@@ -300,6 +300,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setSelectedIndex(selectedIndex: number, fireEvent?: boolean)'
       parameters:
         - id: selectedIndex
           type:
@@ -310,7 +311,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function setSelectedIndex(selectedIndex: number, fireEvent?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.setSource
     name: 'setSource(source: any)'
@@ -319,12 +319,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setSource(source: any)'
       parameters:
         - id: source
           type:
             - any
           description: ''
-      content: 'function setSource(source: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.setText
     name: 'setText(value: string, fireEvent?: boolean)'
@@ -333,6 +333,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setText(value: string, fireEvent?: boolean)'
       parameters:
         - id: value
           type:
@@ -344,7 +345,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function setText(value: string, fireEvent?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior.upKey
     name: 'upKey(e?: JQueryEventObject)'
@@ -353,13 +353,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function upKey(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function upKey(e?: JQueryEventObject)'
       return:
         type:
           - any

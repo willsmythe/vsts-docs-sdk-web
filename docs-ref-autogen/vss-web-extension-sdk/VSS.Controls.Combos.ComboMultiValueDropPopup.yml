@@ -21,7 +21,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Combos.ComboListDropPopup'
+      name: '@vss-web-extension-sdk.VSS.Controls.Combos.ComboListDropPopup'
     source:
       path: vss.d.ts
       startLine: 10404
@@ -39,13 +39,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new ComboMultiValueDropPopup(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'new ComboMultiValueDropPopup(options?: any)'
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Combos.ComboMultiValueDropPopup.getCheckedItems
@@ -55,8 +55,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getCheckedItems()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Combos.ComboMultiValueDropPopup.getValue
@@ -66,8 +66,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getValue()
+      parameters: []
       return:
         type:
           - string
@@ -80,8 +80,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Combos.ComboMultiValueDropPopup.initializeOptions
@@ -91,6 +91,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -98,7 +99,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Combos.ComboMultiValueDropPopup.toggleCheckbox
@@ -108,10 +108,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function toggleCheckbox(selectedIndex: any)'
       parameters:
         - id: selectedIndex
           type:
             - any
           description: ''
-      content: 'function toggleCheckbox(selectedIndex: any)'
     type: method

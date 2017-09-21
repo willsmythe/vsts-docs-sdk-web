@@ -32,7 +32,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2_1To4
     source:
       path: tfs.d.ts
@@ -51,6 +51,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createServiceEndpoint(endpoint: ServiceEndpoint,
+        scopeIdentifier: string)
       parameters:
         - id: endpoint
           type:
@@ -61,9 +64,6 @@ items:
           type:
             - string
           description: The project GUID to scope the request
-      content: >-
-        function createServiceEndpoint(endpoint: ServiceEndpoint,
-        scopeIdentifier: string)
       return:
         type:
           - >-
@@ -77,6 +77,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteServiceEndpoint(scopeIdentifier: string, endpointId:
+        string)
       parameters:
         - id: scopeIdentifier
           type:
@@ -86,9 +89,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function deleteServiceEndpoint(scopeIdentifier: string, endpointId:
-        string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -103,6 +103,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function executeServiceEndpointRequest(serviceEndpointRequest:
+        ServiceEndpointRequest, scopeIdentifier: string, endpointId: string)
       parameters:
         - id: serviceEndpointRequest
           type:
@@ -117,9 +120,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function executeServiceEndpointRequest(serviceEndpointRequest:
-        ServiceEndpointRequest, scopeIdentifier: string, endpointId: string)
       return:
         type:
           - >-
@@ -135,12 +135,12 @@ items:
       This method can return packages/{packageType} -- package stream OR
       TaskPackageMetadata if requested for json
     syntax:
+      content: 'function getPackage(packageType: string)'
       parameters:
         - id: packageType
           type:
             - string
           description: ''
-      content: 'function getPackage(packageType: string)'
       return:
         type:
           - >-
@@ -154,8 +154,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getPackages()
+      parameters: []
       return:
         type:
           - >-
@@ -171,12 +171,12 @@ items:
       This method can return packages/{packageType} -- package stream OR
       TaskPackageMetadata if requested for json
     syntax:
+      content: 'function getPackageZip(packageType: string)'
       parameters:
         - id: packageType
           type:
             - string
           description: ''
-      content: 'function getPackageZip(packageType: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -189,6 +189,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getServiceEndpointDetails(scopeIdentifier: string, endpointId:
+        string)
       parameters:
         - id: scopeIdentifier
           type:
@@ -198,9 +201,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getServiceEndpointDetails(scopeIdentifier: string, endpointId:
-        string)
       return:
         type:
           - >-
@@ -216,6 +216,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getServiceEndpoints(scopeIdentifier: string, type?: string,
+        authSchemes?: string[], endpointIds?: string[], includeFailed?: boolean)
       parameters:
         - id: scopeIdentifier
           type:
@@ -241,9 +244,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getServiceEndpoints(scopeIdentifier: string, type?: string,
-        authSchemes?: string[], endpointIds?: string[], includeFailed?: boolean)
       return:
         type:
           - >-
@@ -261,6 +261,9 @@ items:
       data source in service endpoint. The response is filtered using an
       XPath/Json based selector.
     syntax:
+      content: >-
+        function queryServiceEndpoint(binding: DataSourceBinding,
+        scopeIdentifier: string)
       parameters:
         - id: binding
           type:
@@ -271,9 +274,6 @@ items:
           type:
             - string
           description: The project GUID to scope the request
-      content: >-
-        function queryServiceEndpoint(binding: DataSourceBinding,
-        scopeIdentifier: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string[]>'
@@ -288,6 +288,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new TaskAgentHttpClient2_3(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -298,9 +301,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new TaskAgentHttpClient2_3(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.TaskAgentHttpClient2_3.updateServiceEndpoint
@@ -312,6 +312,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateServiceEndpoint(endpoint: ServiceEndpoint,
+        scopeIdentifier: string, endpointId: string, operation?: string)
       parameters:
         - id: endpoint
           type:
@@ -331,9 +334,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function updateServiceEndpoint(endpoint: ServiceEndpoint,
-        scopeIdentifier: string, endpointId: string, operation?: string)
       return:
         type:
           - >-

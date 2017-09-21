@@ -31,7 +31,7 @@ items:
 
       on the structure defined in the HubPageExplorerTriSplitPivot.master page.
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Navigation.NavigationView'
+      name: '@vss-web-extension-sdk.VSS.Controls.Navigation.NavigationView'
     source:
       path: vss.d.ts
       startLine: 14695
@@ -49,8 +49,8 @@ items:
       - typeScript
     summary: Retrieve the singleton instance of the class for the current page.
     syntax:
-      parameters: []
       content: static function getInstance()
+      parameters: []
       return:
         type:
           - >-
@@ -64,8 +64,8 @@ items:
       - typeScript
     summary: Retrieve the left pane element within the current backlog view
     syntax:
-      parameters: []
       content: function getLeftPane()
+      parameters: []
       return:
         type:
           - JQuery
@@ -85,8 +85,8 @@ items:
       hub content as well as the right hub content (e.g. the product backlog
       mapping pane).
     syntax:
-      parameters: []
       content: function getRightPane()
+      parameters: []
       return:
         type:
           - JQuery
@@ -99,8 +99,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.TriSplitNavigationView.initializeOptions
@@ -110,6 +110,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -117,5 +118,4 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method

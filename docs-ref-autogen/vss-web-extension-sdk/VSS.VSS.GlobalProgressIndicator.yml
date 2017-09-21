@@ -34,12 +34,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function actionCompleted(id: number)'
       parameters:
         - id: id
           type:
             - number
           description: ''
-      content: 'function actionCompleted(id: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.VSS.GlobalProgressIndicator.actionStarted
     name: 'actionStarted(name: string, immediate?: boolean)'
@@ -48,6 +48,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function actionStarted(name: string, immediate?: boolean)'
       parameters:
         - id: name
           type:
@@ -58,7 +59,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function actionStarted(name: string, immediate?: boolean)'
       return:
         type:
           - number
@@ -70,8 +70,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getPendingActions()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.VSS.GlobalProgressIndicator.getProgressElements
     name: getProgressElements()
@@ -80,8 +80,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getProgressElements()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.VSS.GlobalProgressIndicator.constructor
     name: GlobalProgressIndicator()
@@ -92,8 +92,8 @@ items:
       Global handler for displaying progress during page loads, module_ loads,
       ajax requests, or any other registered long-running operations
     syntax:
-      parameters: []
       content: new GlobalProgressIndicator()
+      parameters: []
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.VSS.GlobalProgressIndicator.registerProgressElement
@@ -103,12 +103,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function registerProgressElement(element: JQuery)'
       parameters:
         - id: element
           type:
             - JQuery
           description: ''
-      content: 'function registerProgressElement(element: JQuery)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.VSS.GlobalProgressIndicator.unRegisterProgressElement
@@ -118,10 +118,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function unRegisterProgressElement(element: JQuery)'
       parameters:
         - id: element
           type:
             - JQuery
           description: ''
-      content: 'function unRegisterProgressElement(element: JQuery)'
     type: method

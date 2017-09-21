@@ -33,12 +33,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function addRedirector(cacheType: CacheableTypes)'
       parameters:
         - id: cacheType
           type:
             - CacheableTypes
           description: ''
-      content: 'function addRedirector(cacheType: CacheableTypes)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.TwoLayerCache.configure
     name: 'configure(config: ITwoLayerCacheConfiguration<V>)'
@@ -47,13 +47,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function configure(config: ITwoLayerCacheConfiguration<V>)'
       parameters:
         - id: config
           type:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCacheConfiguration<V>
           description: ''
-      content: 'function configure(config: ITwoLayerCacheConfiguration<V>)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.TwoLayerCache.get
     name: 'get(key: string, cacheTypeHint?: string)'
@@ -62,6 +62,7 @@ items:
       - typeScript
     summary: This method can return null
     syntax:
+      content: 'function get(key: string, cacheTypeHint?: string)'
       parameters:
         - id: key
           type:
@@ -72,7 +73,6 @@ items:
             - string
           description: ''
           optional: true
-      content: 'function get(key: string, cacheTypeHint?: string)'
       return:
         type:
           - V
@@ -84,6 +84,7 @@ items:
       - typeScript
     summary: This method is optimistic
     syntax:
+      content: 'function set(key: string, value: V, cacheTypeHint?: string)'
       parameters:
         - id: key
           type:
@@ -98,7 +99,6 @@ items:
             - string
           description: ''
           optional: true
-      content: 'function set(key: string, value: V, cacheTypeHint?: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Cache.TwoLayerCache.constructor
@@ -108,11 +108,11 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new TwoLayerCache(config: ITwoLayerCacheConfiguration<V>)'
       parameters:
         - id: config
           type:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCacheConfiguration<V>
           description: ''
-      content: 'new TwoLayerCache(config: ITwoLayerCacheConfiguration<V>)'
     type: constructor

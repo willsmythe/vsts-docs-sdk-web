@@ -18,7 +18,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Service.VssService'
+      name: '@vss-web-extension-sdk.VSS.Service.VssService'
     source:
       path: vss.d.ts
       startLine: 3704
@@ -38,6 +38,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function beginResolveArtifacts(artifactUris: string[], options?: any,
+        callback?: IResultCallback, errorCallback?: IErrorCallback)
       parameters:
         - id: artifactUris
           type:
@@ -58,9 +61,6 @@ items:
             - '@vss-web-extension-sdk.IErrorCallback'
           description: ''
           optional: true
-      content: >-
-        function beginResolveArtifacts(artifactUris: string[], options?: any,
-        callback?: IResultCallback, errorCallback?: IErrorCallback)
     type: method
   - uid: vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.constructor
     name: ClientLinking()
@@ -69,8 +69,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: new ClientLinking()
+      parameters: []
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Artifacts.Services.ClientLinking.getArtifactResolver
@@ -80,12 +80,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function getArtifactResolver(toolName: string)'
       parameters:
         - id: toolName
           type:
             - string
           description: ''
-      content: 'static function getArtifactResolver(toolName: string)'
       return:
         type:
           - any
@@ -112,6 +112,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        static function registerArtifactResolver(toolName: string, resolver:
+        any)
       parameters:
         - id: toolName
           type:
@@ -121,7 +124,4 @@ items:
           type:
             - any
           description: ''
-      content: >-
-        static function registerArtifactResolver(toolName: string, resolver:
-        any)
     type: method

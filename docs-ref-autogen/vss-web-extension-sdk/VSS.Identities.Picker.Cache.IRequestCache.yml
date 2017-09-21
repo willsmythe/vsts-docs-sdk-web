@@ -30,13 +30,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function configure(config: IRequestCacheConfiguration)'
       parameters:
         - id: config
           type:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.Cache.IRequestCacheConfiguration
           description: ''
-      content: 'function configure(config: IRequestCacheConfiguration)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.IRequestCache.getPromise
     name: 'getPromise(request: string)'
@@ -45,12 +45,12 @@ items:
       - typeScript
     summary: This method can return null
     syntax:
+      content: 'function getPromise(request: string)'
       parameters:
         - id: request
           type:
             - string
           description: ''
-      content: 'function getPromise(request: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<T>'
@@ -62,6 +62,7 @@ items:
       - typeScript
     summary: This method is optimistic
     syntax:
+      content: 'function setPromise(request: string, promise: IPromise<T>)'
       parameters:
         - id: request
           type:
@@ -71,5 +72,4 @@ items:
           type:
             - '@vss-web-extension-sdk.IPromise<T>'
           description: ''
-      content: 'function setPromise(request: string, promise: IPromise<T>)'
     type: method

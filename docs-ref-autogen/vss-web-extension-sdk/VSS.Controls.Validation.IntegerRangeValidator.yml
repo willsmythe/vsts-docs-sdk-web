@@ -19,7 +19,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator<TOptions>'
     source:
       path: vss.d.ts
       startLine: 17975
@@ -37,8 +37,8 @@ items:
       - typeScript
     summary: 'OVERRIDE: Gets the error message for display purposes'
     syntax:
-      parameters: []
       content: function getMessage()
+      parameters: []
       return:
         type:
           - string
@@ -53,6 +53,7 @@ items:
       A validator that ensures only whole integers between an upper and lower
       limit are entered.
     syntax:
+      content: 'new IntegerRangeValidator(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -63,7 +64,6 @@ items:
                 maxValue: The maximum value (inclusive)
 
           optional: true
-      content: 'new IntegerRangeValidator(options?: TOptions)'
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Validation.IntegerRangeValidator.isValid
@@ -75,8 +75,8 @@ items:
       OVERRIDE: Determines whether the input control bound to this validator
       contains valid input
     syntax:
-      parameters: []
       content: function isValid()
+      parameters: []
       return:
         type:
           - boolean
@@ -89,6 +89,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function isWithinBounds(value: string, max: number, min: number)'
       parameters:
         - id: value
           type:
@@ -102,7 +103,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function isWithinBounds(value: string, max: number, min: number)'
       return:
         type:
           - boolean

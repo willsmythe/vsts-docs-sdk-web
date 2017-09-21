@@ -38,12 +38,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function dumpTracePoints(activeOnly: boolean)'
       parameters:
         - id: activeOnly
           type:
             - boolean
           description: ''
-      content: 'function dumpTracePoints(activeOnly: boolean)'
       return:
         type:
           - string
@@ -55,12 +55,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getActiveCount(tracePointName: string)'
       parameters:
         - id: tracePointName
           type:
             - string
           description: ''
-      content: 'function getActiveCount(tracePointName: string)'
       return:
         type:
           - number
@@ -72,12 +72,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getLastTracePoint(tracePointName: string)'
       parameters:
         - id: tracePointName
           type:
             - string
           description: ''
-      content: 'function getLastTracePoint(tracePointName: string)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Diag.ITracePoint'
@@ -90,12 +90,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getLastTracePointTime(tracePointName: string)'
       parameters:
         - id: tracePointName
           type:
             - string
           description: ''
-      content: 'function getLastTracePointTime(tracePointName: string)'
       return:
         type:
           - number
@@ -107,8 +107,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getModuleInitTime()
+      parameters: []
       return:
         type:
           - number
@@ -120,12 +120,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getOverallCount(tracePointName: string)'
       parameters:
         - id: tracePointName
           type:
             - string
           description: ''
-      content: 'function getOverallCount(tracePointName: string)'
       return:
         type:
           - number
@@ -138,12 +138,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getTracePointCountData(tracePointNames: string[])'
       parameters:
         - id: tracePointNames
           type:
             - 'string[]'
           description: ''
-      content: 'function getTracePointCountData(tracePointNames: string[])'
       return:
         type:
           - string
@@ -155,12 +155,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getTracePoints(activeOnly: boolean)'
       parameters:
         - id: activeOnly
           type:
             - boolean
           description: ''
-      content: 'function getTracePoints(activeOnly: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.constructor
     name: PerfTracePointCollector()
@@ -169,8 +169,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: new PerfTracePointCollector()
+      parameters: []
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.register
     name: register()
@@ -179,8 +179,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function register()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.resetActiveCount
     name: 'resetActiveCount(tracePointName: string)'
@@ -189,12 +189,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function resetActiveCount(tracePointName: string)'
       parameters:
         - id: tracePointName
           type:
             - string
           description: ''
-      content: 'function resetActiveCount(tracePointName: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.PerfTracePointCollector.resetActiveCounts
     name: resetActiveCounts()
@@ -203,6 +203,6 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function resetActiveCounts()
+      parameters: []
     type: method

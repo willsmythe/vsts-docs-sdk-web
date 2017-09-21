@@ -76,7 +76,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 5147
@@ -96,6 +96,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function cancelOfferSubscription(offerSubscription: OfferSubscription,
+        cancelReason: string, billingTarget?: string)
       parameters:
         - id: offerSubscription
           type:
@@ -110,9 +113,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function cancelOfferSubscription(offerSubscription: OfferSubscription,
-        cancelReason: string, billingTarget?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -127,6 +127,10 @@ items:
       - typeScript
     summary: '[Preview API] Swaps the subscriptions for an account'
     syntax:
+      content: >-
+        function changeSubscriptionAccount(subscriptionId: string,
+        providerNamespaceId: AccountProviderNamespace, accountId: string,
+        hydrate?: boolean)
       parameters:
         - id: subscriptionId
           type:
@@ -145,10 +149,6 @@ items:
             - boolean
           description: Whether or not the hydrate the account into ARM.
           optional: true
-      content: >-
-        function changeSubscriptionAccount(subscriptionId: string,
-        providerNamespaceId: AccountProviderNamespace, accountId: string,
-        hydrate?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -163,6 +163,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -173,9 +176,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods2To4.createOfferMeterDefinition
@@ -185,12 +185,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createOfferMeterDefinition(offerConfig: OfferMeter)'
       parameters:
         - id: offerConfig
           type:
             - '@vss-web-extension-sdk.VSS.Commerce.Contracts.OfferMeter'
           description: ''
-      content: 'function createOfferMeterDefinition(offerConfig: OfferMeter)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -205,6 +205,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createOfferSubscription(offerSubscription: OfferSubscription,
+        offerCode?: string, tenantId?: string, objectId?: string,
+        billingTarget?: string)
       parameters:
         - id: offerSubscription
           type:
@@ -230,10 +234,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function createOfferSubscription(offerSubscription: OfferSubscription,
-        offerCode?: string, tenantId?: string, objectId?: string,
-        billingTarget?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -249,6 +249,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function decreaseResourceQuantity(offerMeterName: string, renewalGroup:
+        ResourceRenewalGroup, quantity: number, shouldBeImmediate: boolean,
+        azureSubscriptionId: string)
       parameters:
         - id: offerMeterName
           type:
@@ -270,10 +274,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function decreaseResourceQuantity(offerMeterName: string, renewalGroup:
-        ResourceRenewalGroup, quantity: number, shouldBeImmediate: boolean,
-        azureSubscriptionId: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -288,6 +288,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function enableTrialOfferSubscriptionExtension(offerMeterName: string,
+        renewalGroup: ResourceRenewalGroup, endDate: Date)
       parameters:
         - id: offerMeterName
           type:
@@ -301,9 +304,6 @@ items:
           type:
             - Date
           description: ''
-      content: >-
-        function enableTrialOfferSubscriptionExtension(offerMeterName: string,
-        renewalGroup: ResourceRenewalGroup, endDate: Date)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -318,6 +318,9 @@ items:
       - typeScript
     summary: '[Preview API] Creates the trial or preview offer subscription.'
     syntax:
+      content: >-
+        function enableTrialOrPreviewOfferSubscription(offerMeterName: string,
+        renewalGroup: ResourceRenewalGroup)
       parameters:
         - id: offerMeterName
           type:
@@ -327,9 +330,6 @@ items:
           type:
             - ResourceRenewalGroup
           description: The renewal group.
-      content: >-
-        function enableTrialOrPreviewOfferSubscription(offerMeterName: string,
-        renewalGroup: ResourceRenewalGroup)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -342,8 +342,8 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
-      parameters: []
       content: function getAccountRegions()
+      parameters: []
       return:
         type:
           - >-
@@ -359,6 +359,9 @@ items:
       - typeScript
     summary: '[Preview API] Gets the accounts by subscription.'
     syntax:
+      content: >-
+        function getAccounts(subscriptionId: string, providerNamespaceId:
+        AccountProviderNamespace)
       parameters:
         - id: subscriptionId
           type:
@@ -368,9 +371,6 @@ items:
           type:
             - AccountProviderNamespace
           description: The provider namespace identifier.
-      content: >-
-        function getAccounts(subscriptionId: string, providerNamespaceId:
-        AccountProviderNamespace)
       return:
         type:
           - >-
@@ -388,6 +388,11 @@ items:
       - typeScript
     summary: '[Preview API] Gets the accounts owned by identity.'
     syntax:
+      content: >-
+        function getAccountsByIdentity(providerNamespaceId:
+        AccountProviderNamespace, memberId: string, queryOnlyOwnerAccounts:
+        boolean, inlcudeDisabledAccounts: boolean, includeMSAAccounts: boolean,
+        serviceOwners: string[])
       parameters:
         - id: providerNamespaceId
           type:
@@ -413,11 +418,6 @@ items:
           type:
             - 'string[]'
           description: ''
-      content: >-
-        function getAccountsByIdentity(providerNamespaceId:
-        AccountProviderNamespace, memberId: string, queryOnlyOwnerAccounts:
-        boolean, inlcudeDisabledAccounts: boolean, includeMSAAccounts: boolean,
-        serviceOwners: string[])
       return:
         type:
           - >-
@@ -438,6 +438,12 @@ items:
       [Preview API] Get accounts and associated subscriptions by identity and
       offer id
     syntax:
+      content: >-
+        function getAccountsByIdentityForOfferId(providerNamespaceId:
+        AccountProviderNamespace, memberId: string, queryOnlyOwnerAccounts:
+        boolean, inlcudeDisabledAccounts: boolean, includeMSAAccounts: boolean,
+        serviceOwners: string[], galleryId: string, addUnlinkedSubscription?:
+        boolean, queryAccountsByUpn?: boolean)
       parameters:
         - id: providerNamespaceId
           type:
@@ -477,12 +483,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getAccountsByIdentityForOfferId(providerNamespaceId:
-        AccountProviderNamespace, memberId: string, queryOnlyOwnerAccounts:
-        boolean, inlcudeDisabledAccounts: boolean, includeMSAAccounts: boolean,
-        serviceOwners: string[], galleryId: string, addUnlinkedSubscription?:
-        boolean, queryAccountsByUpn?: boolean)
       return:
         type:
           - >-
@@ -500,6 +500,9 @@ items:
       [Preview API] Get all offer subscriptions for user for valid azure
       subscriptions. This may be span across multiple accounts
     syntax:
+      content: >-
+        function getAllOfferSubscriptionsForUser(validateAzuresubscription:
+        boolean, nextBillingPeriod: boolean)
       parameters:
         - id: validateAzuresubscription
           type:
@@ -509,9 +512,6 @@ items:
           type:
             - boolean
           description: True to return next billing cycle committed quantity
-      content: >-
-        function getAllOfferSubscriptionsForUser(validateAzuresubscription:
-        boolean, nextBillingPeriod: boolean)
       return:
         type:
           - >-
@@ -530,6 +530,9 @@ items:
       such as msdn subscription, spending limit checks, etc are performed by
       this method.
     syntax:
+      content: >-
+        function getAzureSubscriptionForPurchase(subscriptionId: string,
+        galleryItemId: string, accountId?: string)
       parameters:
         - id: subscriptionId
           type:
@@ -544,9 +547,6 @@ items:
             - string
           description: Collection id
           optional: true
-      content: >-
-        function getAzureSubscriptionForPurchase(subscriptionId: string,
-        galleryItemId: string, accountId?: string)
       return:
         type:
           - >-
@@ -562,6 +562,9 @@ items:
       - typeScript
     summary: '[Preview API] Returns azure subscriptions across tenants.'
     syntax:
+      content: >-
+        function getAzureSubscriptionForUser(subscriptionId?: string,
+        queryAcrossTenants?: boolean)
       parameters:
         - id: subscriptionId
           type:
@@ -575,9 +578,6 @@ items:
             Query across multiple tenants if the logged in user is member of
             multiple tenants
           optional: true
-      content: >-
-        function getAzureSubscriptionForUser(subscriptionId?: string,
-        queryAcrossTenants?: boolean)
       return:
         type:
           - >-
@@ -593,6 +593,9 @@ items:
       - typeScript
     summary: '[Preview API] Get a list of Azure Subscriptions.'
     syntax:
+      content: >-
+        function getAzureSubscriptions(subscriptionIds: string[],
+        providerNamespaceId: AccountProviderNamespace)
       parameters:
         - id: subscriptionIds
           type:
@@ -602,9 +605,6 @@ items:
           type:
             - AccountProviderNamespace
           description: Namespace id.
-      content: >-
-        function getAzureSubscriptions(subscriptionIds: string[],
-        providerNamespaceId: AccountProviderNamespace)
       return:
         type:
           - >-
@@ -620,6 +620,9 @@ items:
       [Preview API] Returns resource information like status, committed
       quantity, included quantity, reset date, etc.
     syntax:
+      content: >-
+        function getOfferMeter(resourceName: string, resourceNameResolveMethod:
+        string)
       parameters:
         - id: resourceName
           type:
@@ -629,9 +632,6 @@ items:
           type:
             - string
           description: Method of how to retrieve the resource
-      content: >-
-        function getOfferMeter(resourceName: string, resourceNameResolveMethod:
-        string)
       return:
         type:
           - >-
@@ -647,12 +647,12 @@ items:
       [Preview API] Returns an enumerable of instances of price for the
       specified offer meter in each region available
     syntax:
+      content: 'function getOfferMeterPrice(galleryId: string)'
       parameters:
         - id: galleryId
           type:
             - string
           description: 'The name of the meter, e.g ms.testmanager-web'
-      content: 'function getOfferMeterPrice(galleryId: string)'
       return:
         type:
           - >-
@@ -669,8 +669,8 @@ items:
       quantity, included quantity, reset date, etc. about all available
       resources
     syntax:
-      parameters: []
       content: function getOfferMeters()
+      parameters: []
       return:
         type:
           - >-
@@ -686,6 +686,9 @@ items:
       [Preview API] Returns resource information like status, committed
       quantity, included quantity, reset date, etc.
     syntax:
+      content: >-
+        function getOfferSubscription(galleryId: string, nextBillingPeriod?:
+        boolean)
       parameters:
         - id: galleryId
           type:
@@ -696,9 +699,6 @@ items:
             - boolean
           description: True to return next billing cycle committed quantity
           optional: true
-      content: >-
-        function getOfferSubscription(galleryId: string, nextBillingPeriod?:
-        boolean)
       return:
         type:
           - >-
@@ -716,6 +716,9 @@ items:
       [Preview API] Returns resource information like status, committed
       quantity, included quantity, reset date, etc.
     syntax:
+      content: >-
+        function getOfferSubscriptionForRenewalGroup(galleryId: string,
+        renewalGroup: ResourceRenewalGroup, nextBillingPeriod?: boolean)
       parameters:
         - id: galleryId
           type:
@@ -730,9 +733,6 @@ items:
             - boolean
           description: True to return next billing cycle committed quantity
           optional: true
-      content: >-
-        function getOfferSubscriptionForRenewalGroup(galleryId: string,
-        renewalGroup: ResourceRenewalGroup, nextBillingPeriod?: boolean)
       return:
         type:
           - >-
@@ -748,13 +748,13 @@ items:
       [Preview API] Returns resource information like status, committed
       quantity, included quantity, reset date, etc.
     syntax:
+      content: 'function getOfferSubscriptions(nextBillingPeriod?: boolean)'
       parameters:
         - id: nextBillingPeriod
           type:
             - boolean
           description: True to return next billing cycle committed quantity
           optional: true
-      content: 'function getOfferSubscriptions(nextBillingPeriod?: boolean)'
       return:
         type:
           - >-
@@ -772,6 +772,9 @@ items:
       [Preview API] Get all offer subscriptions for user for valid azure
       subscriptions. This may be span across multiple accounts
     syntax:
+      content: >-
+        function getOfferSubscriptionsForGalleryItem(galleryItemId: string,
+        azureSubscriptionId: string, nextBillingPeriod?: boolean)
       parameters:
         - id: galleryItemId
           type:
@@ -786,9 +789,6 @@ items:
             - boolean
           description: True to return next billing cycle committed quantity
           optional: true
-      content: >-
-        function getOfferSubscriptionsForGalleryItem(galleryItemId: string,
-        azureSubscriptionId: string, nextBillingPeriod?: boolean)
       return:
         type:
           - >-
@@ -807,6 +807,11 @@ items:
       [Preview API] Returns resource information like status, committed
       quantity, included quantity, reset date, etc.
     syntax:
+      content: >-
+        function getPurchasableOfferMeter(resourceName: string,
+        resourceNameResolveMethod: string, subscriptionId: string,
+        includeMeterPricing: boolean, offerCode?: string, tenantId?: string,
+        objectId?: string)
       parameters:
         - id: resourceName
           type:
@@ -839,11 +844,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getPurchasableOfferMeter(resourceName: string,
-        resourceNameResolveMethod: string, subscriptionId: string,
-        includeMeterPricing: boolean, offerCode?: string, tenantId?: string,
-        objectId?: string)
       return:
         type:
           - >-
@@ -859,13 +859,13 @@ items:
       [Preview API] Returns resource information like status, committed
       quantity, included quantity, reset date, etc.
     syntax:
+      content: 'function getResourceStatus(nextBillingPeriod?: boolean)'
       parameters:
         - id: nextBillingPeriod
           type:
             - boolean
           description: True to return next billing cycle committed quantity
           optional: true
-      content: 'function getResourceStatus(nextBillingPeriod?: boolean)'
       return:
         type:
           - >-
@@ -883,6 +883,9 @@ items:
       [Preview API] Returns resource information like status, committed
       quantity, included quantity, reset date, etc.
     syntax:
+      content: >-
+        function getResourceStatusByResourceName(resourceName: ResourceName,
+        nextBillingPeriod?: boolean)
       parameters:
         - id: resourceName
           type:
@@ -893,9 +896,6 @@ items:
             - boolean
           description: True to return next billing cycle committed quantity
           optional: true
-      content: >-
-        function getResourceStatusByResourceName(resourceName: ResourceName,
-        nextBillingPeriod?: boolean)
       return:
         type:
           - >-
@@ -913,6 +913,9 @@ items:
       [Preview API] Retrieves the subscription id associated to an account or
       null if no subscription is associated.
     syntax:
+      content: >-
+        function getSubscriptionAccount(providerNamespaceId:
+        AccountProviderNamespace, accountId: string)
       parameters:
         - id: providerNamespaceId
           type:
@@ -922,9 +925,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getSubscriptionAccount(providerNamespaceId:
-        AccountProviderNamespace, accountId: string)
       return:
         type:
           - >-
@@ -941,6 +941,7 @@ items:
       than the post method on this controller. This is an aggregation of usage
       events over time rather than individual usage event(s).
     syntax:
+      content: 'function getUsage(startTime: Date, endTime: Date, timeSpan: any)'
       parameters:
         - id: startTime
           type:
@@ -956,7 +957,6 @@ items:
           description: >-
             Interval of the time to retrieve, should be in a multiple of hour or
             day
-      content: 'function getUsage(startTime: Date, endTime: Date, timeSpan: any)'
       return:
         type:
           - >-
@@ -973,6 +973,10 @@ items:
       - typeScript
     summary: '[Preview API] Links the account to a subscription.'
     syntax:
+      content: >-
+        function linkAccount(subscriptionId: string, providerNamespaceId:
+        AccountProviderNamespace, accountId: string, ownerId: string, hydrate?:
+        boolean)
       parameters:
         - id: subscriptionId
           type:
@@ -995,10 +999,6 @@ items:
             - boolean
           description: Whether or not the hydrate the account into ARM.
           optional: true
-      content: >-
-        function linkAccount(subscriptionId: string, providerNamespaceId:
-        AccountProviderNamespace, accountId: string, ownerId: string, hydrate?:
-        boolean)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -1011,12 +1011,12 @@ items:
       - typeScript
     summary: '[Preview API] Saves usage entry of a resource.'
     syntax:
+      content: 'function reportUsage(usageEvent: UsageEvent)'
       parameters:
         - id: usageEvent
           type:
             - '@vss-web-extension-sdk.VSS.Commerce.Contracts.UsageEvent'
           description: Detailed usage event
-      content: 'function reportUsage(usageEvent: UsageEvent)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -1045,6 +1045,9 @@ items:
       - typeScript
     summary: '[Preview API] Unlinks an account from the subscription.'
     syntax:
+      content: >-
+        function unlinkAccount(subscriptionId: string, providerNamespaceId:
+        AccountProviderNamespace, accountId: string, ownerId: string)
       parameters:
         - id: subscriptionId
           type:
@@ -1062,9 +1065,6 @@ items:
           type:
             - string
           description: The account owner identifier.
-      content: >-
-        function unlinkAccount(subscriptionId: string, providerNamespaceId:
-        AccountProviderNamespace, accountId: string, ownerId: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -1077,12 +1077,12 @@ items:
       - typeScript
     summary: '[Preview API] Sets the maximum and included quantities for a resource'
     syntax:
+      content: 'function updateMeter(meter: SubscriptionResource)'
       parameters:
         - id: meter
           type:
             - '@vss-web-extension-sdk.VSS.Commerce.Contracts.SubscriptionResource'
           description: ''
-      content: 'function updateMeter(meter: SubscriptionResource)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -1095,12 +1095,12 @@ items:
       - typeScript
     summary: '[Preview API] Sets the maximum and included quantities for a resource'
     syntax:
+      content: 'function updateOfferSubscription(offerSubscription: OfferSubscription)'
       parameters:
         - id: offerSubscription
           type:
             - '@vss-web-extension-sdk.VSS.Commerce.Contracts.OfferSubscription'
           description: ''
-      content: 'function updateOfferSubscription(offerSubscription: OfferSubscription)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'

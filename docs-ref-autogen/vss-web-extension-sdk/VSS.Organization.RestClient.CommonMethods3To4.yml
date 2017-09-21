@@ -43,7 +43,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 29352
@@ -63,6 +63,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -73,9 +76,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Organization.RestClient.CommonMethods3To4.createCollection
@@ -85,12 +85,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createCollection(resource: Collection)'
       parameters:
         - id: resource
           type:
             - '@vss-web-extension-sdk.VSS.Organization.Contracts.Collection'
           description: ''
-      content: 'function createCollection(resource: Collection)'
       return:
         type:
           - >-
@@ -104,12 +104,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createOrganization(resource: Organization)'
       parameters:
         - id: resource
           type:
             - '@vss-web-extension-sdk.VSS.Organization.Contracts.Organization'
           description: ''
-      content: 'function createOrganization(resource: Organization)'
       return:
         type:
           - >-
@@ -123,12 +123,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteCollection(collectionId: string)'
       parameters:
         - id: collectionId
           type:
             - string
           description: ''
-      content: 'function deleteCollection(collectionId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -141,12 +141,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function exportOrganizationMigrationBlob(organizationId: string)'
       parameters:
         - id: organizationId
           type:
             - string
           description: ''
-      content: 'function exportOrganizationMigrationBlob(organizationId: string)'
       return:
         type:
           - >-
@@ -160,6 +160,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getCollection(collectionId: string, propertyNames?: string[])'
       parameters:
         - id: collectionId
           type:
@@ -170,7 +171,6 @@ items:
             - 'string[]'
           description: ''
           optional: true
-      content: 'function getCollection(collectionId: string, propertyNames?: string[])'
       return:
         type:
           - >-
@@ -184,8 +184,8 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
-      parameters: []
       content: function getCollections()
+      parameters: []
       return:
         type:
           - >-
@@ -199,6 +199,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getOrganization(organizationId: string, propertyNames?:
+        string[])
       parameters:
         - id: organizationId
           type:
@@ -209,9 +212,6 @@ items:
             - 'string[]'
           description: ''
           optional: true
-      content: >-
-        function getOrganization(organizationId: string, propertyNames?:
-        string[])
       return:
         type:
           - >-
@@ -227,6 +227,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getOrganizations(searchKind: OrganizationSearchKind,
+        searchValue: string, isActivated?: boolean)
       parameters:
         - id: searchKind
           type:
@@ -241,9 +244,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getOrganizations(searchKind: OrganizationSearchKind,
-        searchValue: string, isActivated?: boolean)
       return:
         type:
           - >-
@@ -257,8 +257,8 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
-      parameters: []
       content: function getRegions()
+      parameters: []
       return:
         type:
           - >-
@@ -272,15 +272,15 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function importOrganizationMigrationBlob(migrationBlob:
+        OrganizationMigrationBlob)
       parameters:
         - id: migrationBlob
           type:
             - >-
               @vss-web-extension-sdk.VSS.Organization.Contracts.OrganizationMigrationBlob
           description: ''
-      content: >-
-        function importOrganizationMigrationBlob(migrationBlob:
-        OrganizationMigrationBlob)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -293,6 +293,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function restoreCollection(collectionId: string, collectionName: string)'
       parameters:
         - id: collectionId
           type:
@@ -302,7 +303,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function restoreCollection(collectionId: string, collectionName: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -329,6 +329,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateCollection(patchDocument: JsonPatchDocument,
+        collectionId: string)
       parameters:
         - id: patchDocument
           type:
@@ -338,9 +341,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateCollection(patchDocument: JsonPatchDocument,
-        collectionId: string)
       return:
         type:
           - >-
@@ -356,6 +356,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateCollectionProperties(collectionId: string, patchDocument:
+        JsonPatchDocument)
       parameters:
         - id: collectionId
           type:
@@ -365,9 +368,6 @@ items:
           type:
             - '@vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument'
           description: ''
-      content: >-
-        function updateCollectionProperties(collectionId: string, patchDocument:
-        JsonPatchDocument)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -382,6 +382,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateOrganization(patchDocument: JsonPatchDocument,
+        organizationId: string)
       parameters:
         - id: patchDocument
           type:
@@ -391,9 +394,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateOrganization(patchDocument: JsonPatchDocument,
-        organizationId: string)
       return:
         type:
           - >-
@@ -409,6 +409,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateOrganizationProperties(organizationId: string,
+        patchDocument: JsonPatchDocument)
       parameters:
         - id: organizationId
           type:
@@ -418,9 +421,6 @@ items:
           type:
             - '@vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument'
           description: ''
-      content: >-
-        function updateOrganizationProperties(organizationId: string,
-        patchDocument: JsonPatchDocument)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'

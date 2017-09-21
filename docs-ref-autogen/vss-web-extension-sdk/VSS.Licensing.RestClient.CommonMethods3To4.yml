@@ -21,7 +21,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4'
+      name: '@vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4'
     source:
       path: vss.d.ts
       startLine: 27920
@@ -42,12 +42,12 @@ items:
       users in the account that do not already have access to the extension
       though bundle or account assignment
     syntax:
+      content: 'function assignExtensionToAllEligibleUsers(extensionId: string)'
       parameters:
         - id: extensionId
           type:
             - string
           description: The extension id to assign the access to.
-      content: 'function assignExtensionToAllEligibleUsers(extensionId: string)'
       return:
         type:
           - >-
@@ -63,12 +63,12 @@ items:
       [Preview API] Assigns the access to the given extension for a given list
       of users
     syntax:
+      content: 'function assignExtensionToUsers(body: ExtensionAssignment)'
       parameters:
         - id: body
           type:
             - '@vss-web-extension-sdk.VSS.Licensing.Contracts.ExtensionAssignment'
           description: The extension assignment details.
-      content: 'function assignExtensionToUsers(body: ExtensionAssignment)'
       return:
         type:
           - >-
@@ -84,6 +84,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -94,9 +97,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods3To4.getEligibleUsersForExtension
@@ -111,6 +111,9 @@ items:
       extension to. the list is filtered based on the value of
       ExtensionFilterOptions
     syntax:
+      content: >-
+        function getEligibleUsersForExtension(extensionId: string, options:
+        ExtensionFilterOptions)
       parameters:
         - id: extensionId
           type:
@@ -120,9 +123,6 @@ items:
           type:
             - ExtensionFilterOptions
           description: The options to filter the list.
-      content: >-
-        function getEligibleUsersForExtension(extensionId: string, options:
-        ExtensionFilterOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string[]>'
@@ -137,12 +137,12 @@ items:
       [Preview API] Returns extensions that are currently assigned to the user
       in the account
     syntax:
+      content: 'function getExtensionsAssignedToUser(userId: string)'
       parameters:
         - id: userId
           type:
             - string
           description: The user's identity id.
-      content: 'function getExtensionsAssignedToUser(userId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<[key: string]: function>'
@@ -157,12 +157,12 @@ items:
       [Preview API] Returns extension assignment status of all account users for
       the given extension
     syntax:
+      content: 'function getExtensionStatusForUsers(extensionId: string)'
       parameters:
         - id: extensionId
           type:
             - string
           description: The extension to check the status of the users for.
-      content: 'function getExtensionStatusForUsers(extensionId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ExtensionAssignmentDetails>'

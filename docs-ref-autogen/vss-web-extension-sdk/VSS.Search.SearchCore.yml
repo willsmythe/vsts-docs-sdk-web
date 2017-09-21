@@ -29,13 +29,13 @@ items:
       - typeScript
     summary: Add items to the search strategy
     syntax:
+      content: 'function addItems(items: SearchableObject<T>[])'
       parameters:
         - id: items
           type:
             - '@vss-web-extension-sdk.VSS.Search.SearchableObject<T>[]'
           description: |
             Items to add
-      content: 'function addItems(items: SearchableObject<T>[])'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchCore.beginSearch
     name: 'beginSearch(query: string)'
@@ -46,13 +46,13 @@ items:
       Performs a search using the Indexer and then runs the adapter's
       resultHandler on the results
     syntax:
+      content: 'function beginSearch(query: string)'
       parameters:
         - id: query
           type:
             - string
           description: |
             Query to run search on
-      content: 'function beginSearch(query: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchCore.clearStrategyStore
     name: clearStrategyStore()
@@ -61,8 +61,8 @@ items:
       - typeScript
     summary: Clears the stored items in the strategy
     syntax:
-      parameters: []
       content: function clearStrategyStore()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchCore.getStrategy
     name: getStrategy()
@@ -71,8 +71,8 @@ items:
       - typeScript
     summary: Returns the search strategy currently being used.
     syntax:
-      parameters: []
       content: function getStrategy()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Search.SearchStrategy<T>'
@@ -86,6 +86,7 @@ items:
       The search core, allows users to perform searches on data using a custom
       strategy.
     syntax:
+      content: 'new SearchCore(strategy: SearchStrategy<T>, adapter: SearchAdapter<T>)'
       parameters:
         - id: strategy
           type:
@@ -96,5 +97,4 @@ items:
             - '@vss-web-extension-sdk.VSS.Search.SearchAdapter<T>'
           description: |
             The search adapter to use.
-      content: 'new SearchCore(strategy: SearchStrategy<T>, adapter: SearchAdapter<T>)'
     type: constructor

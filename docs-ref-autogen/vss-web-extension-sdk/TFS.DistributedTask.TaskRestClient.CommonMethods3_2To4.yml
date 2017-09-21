@@ -16,7 +16,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods3_1To4
     source:
       path: tfs.d.ts
@@ -37,6 +37,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3_2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -47,9 +50,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3_2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods3_2To4.getPlanGroupsQueueMetrics
@@ -59,6 +59,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getPlanGroupsQueueMetrics(scopeIdentifier: string, hubName:
+        string)
       parameters:
         - id: scopeIdentifier
           type:
@@ -70,9 +73,6 @@ items:
           description: >-
             The name of the server hub: "build" for the Build server or "rm" for
             the Release Management server
-      content: >-
-        function getPlanGroupsQueueMetrics(scopeIdentifier: string, hubName:
-        string)
       return:
         type:
           - >-
@@ -88,6 +88,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getQueuedPlanGroup(scopeIdentifier: string, hubName: string,
+        planGroup: string)
       parameters:
         - id: scopeIdentifier
           type:
@@ -103,9 +106,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getQueuedPlanGroup(scopeIdentifier: string, hubName: string,
-        planGroup: string)
       return:
         type:
           - >-

@@ -58,7 +58,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.Control<@vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerSearchOptions>
     source:
       path: vss.d.ts
@@ -77,12 +77,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function addIdentitiesToMru(identities: IEntity[])'
       parameters:
         - id: identities
           type:
             - '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity[]'
           description: ''
-      content: 'function addIdentitiesToMru(identities: IEntity[])'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerSearchControl.clear
@@ -92,8 +92,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function clear()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerSearchControl.DIALOG_MOVE_EVENT
@@ -117,8 +117,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function disableReadOnlyMode()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerSearchControl.dispose
@@ -128,8 +128,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function dispose()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerSearchControl.enableReadOnlyMode
@@ -139,8 +139,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function enableReadOnlyMode()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerSearchControl.focusOnSearchInput
@@ -153,8 +153,8 @@ items:
       resolved/unresolved item if the input is hidden. It also triggers the
       focus event on the container element for eventual styling
     syntax:
-      parameters: []
       content: function focusOnSearchInput()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerSearchControl.getDropdownPrefix
@@ -164,8 +164,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getDropdownPrefix()
+      parameters: []
       return:
         type:
           - string
@@ -178,8 +178,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getIdentitySearchResult()
+      parameters: []
       return:
         type:
           - >-
@@ -193,8 +193,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getInputText()
+      parameters: []
       return:
         type:
           - string
@@ -209,6 +209,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new IdentityPickerSearchControl(options?: IIdentityPickerSearchOptions,
+        testUse?: boolean)
       parameters:
         - id: options
           type:
@@ -221,9 +224,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        new IdentityPickerSearchControl(options?: IIdentityPickerSearchOptions,
-        testUse?: boolean)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerSearchControl.initialize
@@ -233,8 +233,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerSearchControl.initializeOptionsInternal
@@ -244,15 +244,15 @@ items:
       - typeScript
     summary: To be used only by unit tests
     syntax:
+      content: >-
+        function initializeOptionsInternal(options:
+        IIdentityPickerSearchOptionsInternal)
       parameters:
         - id: options
           type:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerSearchOptionsInternal
           description: ''
-      content: >-
-        function initializeOptionsInternal(options:
-        IIdentityPickerSearchOptionsInternal)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerSearchControl.INVALID_INPUT_EVENT
@@ -276,8 +276,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isDropdownFiltered()
+      parameters: []
       return:
         type:
           - boolean
@@ -290,8 +290,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isDropdownVisible()
+      parameters: []
       return:
         type:
           - boolean
@@ -304,8 +304,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function load()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -380,6 +380,9 @@ items:
       objects must have been retrieved at some point from the control or DDS, or
       created using EntityFactory
     syntax:
+      content: >-
+        function setEntities(entities: IEntity[], queryTokens: string[],
+        operationScope?: IOperationScope)
       parameters:
         - id: entities
           type:
@@ -395,9 +398,6 @@ items:
               @vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
           description: ''
           optional: true
-      content: >-
-        function setEntities(entities: IEntity[], queryTokens: string[],
-        operationScope?: IOperationScope)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerSearchControl.showMruDropdown
@@ -407,8 +407,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function showMruDropdown()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerSearchControl.VALID_INPUT_EVENT

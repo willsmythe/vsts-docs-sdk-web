@@ -12,7 +12,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.Core.RestClient.CommonMethods3_2To4'
+      name: '@vss-web-extension-sdk.TFS.Core.RestClient.CommonMethods3_2To4'
     source:
       path: tfs.d.ts
       startLine: 5072
@@ -29,6 +29,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CoreHttpClient4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -39,9 +42,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CoreHttpClient4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.Core.RestClient.CoreHttpClient4.getProjectHistoryEntries
@@ -51,13 +51,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getProjectHistoryEntries(minRevision?: number)'
       parameters:
         - id: minRevision
           type:
             - number
           description: ''
           optional: true
-      content: 'function getProjectHistoryEntries(minRevision?: number)'
       return:
         type:
           - >-

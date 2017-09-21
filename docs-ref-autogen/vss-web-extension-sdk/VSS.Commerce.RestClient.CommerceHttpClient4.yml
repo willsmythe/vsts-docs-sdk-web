@@ -15,7 +15,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods3_2To4'
+      name: '@vss-web-extension-sdk.VSS.Commerce.RestClient.CommonMethods3_2To4'
     source:
       path: vss.d.ts
       startLine: 5475
@@ -35,6 +35,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommerceHttpClient4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -45,9 +48,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommerceHttpClient4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Commerce.RestClient.CommerceHttpClient4.createPurchaseRequest
@@ -57,12 +57,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createPurchaseRequest(request: PurchaseRequest)'
       parameters:
         - id: request
           type:
             - '@vss-web-extension-sdk.VSS.Commerce.Contracts.PurchaseRequest'
           description: ''
-      content: 'function createPurchaseRequest(request: PurchaseRequest)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -75,12 +75,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function updatePurchaseRequest(request: PurchaseRequest)'
       parameters:
         - id: request
           type:
             - '@vss-web-extension-sdk.VSS.Commerce.Contracts.PurchaseRequest'
           description: ''
-      content: 'function updatePurchaseRequest(request: PurchaseRequest)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'

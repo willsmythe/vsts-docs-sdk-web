@@ -31,7 +31,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior'
+      name: '@vss-web-extension-sdk.VSS.Controls.Combos.BaseComboBehavior'
     source:
       path: vss.d.ts
       startLine: 10333
@@ -48,8 +48,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function canType()
+      parameters: []
       return:
         type:
           - boolean
@@ -61,6 +61,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new ComboDateBehavior(combo: any, options?: any)'
       parameters:
         - id: combo
           type:
@@ -71,7 +72,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'new ComboDateBehavior(combo: any, options?: any)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.downKey
     name: 'downKey(e?: JQueryEventObject)'
@@ -80,13 +80,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function downKey(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function downKey(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -99,8 +99,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getAriaAutocomplete()
+      parameters: []
       return:
         type:
           - string
@@ -113,8 +113,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getAriaDescription()
+      parameters: []
       return:
         type:
           - string
@@ -126,8 +126,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getDropOptions()
+      parameters: []
       return:
         type:
           - any
@@ -139,8 +139,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getDropWidth()
+      parameters: []
       return:
         type:
           - number
@@ -153,8 +153,8 @@ items:
       - typeScript
     summary: Get's the current value as a date or null if there is no (valid) date.
     syntax:
-      parameters: []
       content: function getSelectedDate()
+      parameters: []
       return:
         type:
           - Date
@@ -166,8 +166,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getValue()
+      parameters: []
       return:
         type:
           - Date
@@ -179,8 +179,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.keyDown
     name: 'keyDown(e?: JQueryEventObject)'
@@ -189,13 +189,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function keyDown(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function keyDown(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -207,13 +207,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function leftKey(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function leftKey(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -225,13 +225,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function pageDownKey(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function pageDownKey(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -243,13 +243,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function pageUpKey(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function pageUpKey(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -261,13 +261,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function rightKey(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function rightKey(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -280,6 +280,7 @@ items:
       - typeScript
     summary: Sets a date value on the combo using the behavior's dateTime format
     syntax:
+      content: 'function setSelectedDate(selectedDate: Date, fireChange?: boolean)'
       parameters:
         - id: selectedDate
           type:
@@ -291,7 +292,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function setSelectedDate(selectedDate: Date, fireChange?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboDateBehavior.upKey
     name: 'upKey(e?: JQueryEventObject)'
@@ -300,13 +300,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function upKey(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function upKey(e?: JQueryEventObject)'
       return:
         type:
           - any

@@ -103,7 +103,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: tfs.d.ts
       startLine: 20548
@@ -123,6 +123,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -133,9 +136,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.CommonMethods2To4.createAttachment
@@ -147,6 +147,9 @@ items:
       - typeScript
     summary: Creates an attachment.
     syntax:
+      content: >-
+        function createAttachment(content: any, fileName?: string, uploadType?:
+        string, areaPath?: string)
       parameters:
         - id: content
           type:
@@ -167,9 +170,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function createAttachment(content: any, fileName?: string, uploadType?:
-        string, areaPath?: string)
       return:
         type:
           - >-
@@ -185,6 +185,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function createOrUpdateClassificationNode(postedNode:
+        WorkItemClassificationNode, project: string, structureGroup:
+        TreeStructureGroup, path?: string)
       parameters:
         - id: postedNode
           type:
@@ -204,10 +208,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function createOrUpdateClassificationNode(postedNode:
-        WorkItemClassificationNode, project: string, structureGroup:
-        TreeStructureGroup, path?: string)
       return:
         type:
           - >-
@@ -223,6 +223,9 @@ items:
       - typeScript
     summary: 'Creates a query, or moves a query.'
     syntax:
+      content: >-
+        function createQuery(postedQuery: QueryHierarchyItem, project: string,
+        query: string)
       parameters:
         - id: postedQuery
           type:
@@ -237,9 +240,6 @@ items:
           type:
             - string
           description: The parent path for the query to create.
-      content: >-
-        function createQuery(postedQuery: QueryHierarchyItem, project: string,
-        query: string)
       return:
         type:
           - >-
@@ -256,6 +256,10 @@ items:
       - typeScript
     summary: Creates a single work item
     syntax:
+      content: >-
+        function createWorkItem(document: JsonPatchDocument, project: string,
+        type: string, validateOnly?: boolean, bypassRules?: boolean,
+        suppressNotifications?: boolean)
       parameters:
         - id: document
           type:
@@ -286,10 +290,6 @@ items:
             - boolean
           description: Do not fire any notifications for this change
           optional: true
-      content: >-
-        function createWorkItem(document: JsonPatchDocument, project: string,
-        type: string, validateOnly?: boolean, bypassRules?: boolean,
-        suppressNotifications?: boolean)
       return:
         type:
           - >-
@@ -305,6 +305,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function deleteClassificationNode(project: string, structureGroup:
+        TreeStructureGroup, path?: string, reclassifyId?: number)
       parameters:
         - id: project
           type:
@@ -324,9 +327,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function deleteClassificationNode(project: string, structureGroup:
-        TreeStructureGroup, path?: string, reclassifyId?: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -339,6 +339,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function deleteField(fieldNameOrRefName: string, project?: string)'
       parameters:
         - id: fieldNameOrRefName
           type:
@@ -349,7 +350,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function deleteField(fieldNameOrRefName: string, project?: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -362,6 +362,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function deleteQuery(project: string, query: string)'
       parameters:
         - id: project
           type:
@@ -371,7 +372,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function deleteQuery(project: string, query: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -384,6 +384,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function deleteWorkItem(id: number, destroy?: boolean)'
       parameters:
         - id: id
           type:
@@ -394,7 +395,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function deleteWorkItem(id: number, destroy?: boolean)'
       return:
         type:
           - >-
@@ -408,13 +408,13 @@ items:
       - typeScript
     summary: Validates the fields values.
     syntax:
+      content: 'function evaluateRulesOnField(ruleEngineInput: FieldsToEvaluate)'
       parameters:
         - id: ruleEngineInput
           type:
             - >-
               @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.FieldsToEvaluate
           description: ''
-      content: 'function evaluateRulesOnField(ruleEngineInput: FieldsToEvaluate)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -429,6 +429,9 @@ items:
       - typeScript
     summary: Export work item type
     syntax:
+      content: >-
+        function exportWorkItemTypeDefinition(project?: string, type?: string,
+        exportGlobalLists?: boolean)
       parameters:
         - id: project
           type:
@@ -445,9 +448,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function exportWorkItemTypeDefinition(project?: string, type?: string,
-        exportGlobalLists?: boolean)
       return:
         type:
           - >-
@@ -461,6 +461,7 @@ items:
       - typeScript
     summary: Returns an attachment
     syntax:
+      content: 'function getAttachmentContent(id: string, fileName?: string)'
       parameters:
         - id: id
           type:
@@ -471,7 +472,6 @@ items:
             - string
           description: ''
           optional: true
-      content: 'function getAttachmentContent(id: string, fileName?: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -484,6 +484,7 @@ items:
       - typeScript
     summary: Returns an attachment
     syntax:
+      content: 'function getAttachmentZip(id: string, fileName?: string)'
       parameters:
         - id: id
           type:
@@ -494,7 +495,6 @@ items:
             - string
           description: ''
           optional: true
-      content: 'function getAttachmentZip(id: string, fileName?: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -509,6 +509,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getClassificationNode(project: string, structureGroup:
+        TreeStructureGroup, path?: string, depth?: number)
       parameters:
         - id: project
           type:
@@ -528,9 +531,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getClassificationNode(project: string, structureGroup:
-        TreeStructureGroup, path?: string, depth?: number)
       return:
         type:
           - >-
@@ -546,6 +546,9 @@ items:
       Returns the dependent fields for the corresponding workitem type and
       fieldname
     syntax:
+      content: >-
+        function getDependentFields(project: string, type: string, field:
+        string)
       parameters:
         - id: project
           type:
@@ -559,9 +562,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getDependentFields(project: string, type: string, field:
-        string)
       return:
         type:
           - >-
@@ -575,6 +575,7 @@ items:
       - typeScript
     summary: Gets information on a specific field.
     syntax:
+      content: 'function getField(fieldNameOrRefName: string, project?: string)'
       parameters:
         - id: fieldNameOrRefName
           type:
@@ -585,7 +586,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function getField(fieldNameOrRefName: string, project?: string)'
       return:
         type:
           - >-
@@ -599,6 +599,7 @@ items:
       - typeScript
     summary: Returns information for all fields.
     syntax:
+      content: 'function getFields(project?: string, expand?: GetFieldsExpand)'
       parameters:
         - id: project
           type:
@@ -613,7 +614,6 @@ items:
             them. Unless the feature flag for this parameter is enabled,
             extension fields are always included.
           optional: true
-      content: 'function getFields(project?: string, expand?: GetFieldsExpand)'
       return:
         type:
           - >-
@@ -629,6 +629,9 @@ items:
       - typeScript
     summary: Retrieves all queries the user has access to in the current project
     syntax:
+      content: >-
+        function getQueries(project: string, expand?: QueryExpand, depth?:
+        number, includeDeleted?: boolean)
       parameters:
         - id: project
           type:
@@ -649,9 +652,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getQueries(project: string, expand?: QueryExpand, depth?:
-        number, includeDeleted?: boolean)
       return:
         type:
           - >-
@@ -667,6 +667,9 @@ items:
       - typeScript
     summary: Retrieves a single query by project and either id or path
     syntax:
+      content: >-
+        function getQuery(project: string, query: string, expand?: QueryExpand,
+        depth?: number, includeDeleted?: boolean)
       parameters:
         - id: project
           type:
@@ -691,9 +694,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getQuery(project: string, query: string, expand?: QueryExpand,
-        depth?: number, includeDeleted?: boolean)
       return:
         type:
           - >-
@@ -709,6 +709,9 @@ items:
       - typeScript
     summary: Gets the results of the query by id.
     syntax:
+      content: >-
+        function getQueryResultCount(id: string, project?: string, team?:
+        string, timePrecision?: boolean)
       parameters:
         - id: id
           type:
@@ -729,9 +732,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getQueryResultCount(id: string, project?: string, team?:
-        string, timePrecision?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<number>'
@@ -744,12 +744,12 @@ items:
       - typeScript
     summary: Gets the work item relation types.
     syntax:
+      content: 'function getRelationType(relation: string)'
       parameters:
         - id: relation
           type:
             - string
           description: ''
-      content: 'function getRelationType(relation: string)'
       return:
         type:
           - >-
@@ -763,8 +763,8 @@ items:
       - typeScript
     summary: Gets the work item relation types.
     syntax:
-      parameters: []
       content: function getRelationTypes()
+      parameters: []
       return:
         type:
           - >-
@@ -778,6 +778,9 @@ items:
       - typeScript
     summary: Returns a fully hydrated work item for the requested revision
     syntax:
+      content: >-
+        function getRevision(id: number, revisionNumber: number, expand?:
+        WorkItemExpand)
       parameters:
         - id: id
           type:
@@ -792,9 +795,6 @@ items:
             - WorkItemExpand
           description: ''
           optional: true
-      content: >-
-        function getRevision(id: number, revisionNumber: number, expand?:
-        WorkItemExpand)
       return:
         type:
           - >-
@@ -810,6 +810,9 @@ items:
       - typeScript
     summary: 'Returns the list of fully hydrated work item revisions, paged.'
     syntax:
+      content: >-
+        function getRevisions(id: number, top?: number, skip?: number, expand?:
+        WorkItemExpand)
       parameters:
         - id: id
           type:
@@ -830,9 +833,6 @@ items:
             - WorkItemExpand
           description: ''
           optional: true
-      content: >-
-        function getRevisions(id: number, top?: number, skip?: number, expand?:
-        WorkItemExpand)
       return:
         type:
           - >-
@@ -846,6 +846,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getRootNodes(project: string, depth?: number)'
       parameters:
         - id: project
           type:
@@ -856,7 +857,6 @@ items:
             - number
           description: ''
           optional: true
-      content: 'function getRootNodes(project: string, depth?: number)'
       return:
         type:
           - >-
@@ -870,6 +870,7 @@ items:
       - typeScript
     summary: Returns a single update for a work item
     syntax:
+      content: 'function getUpdate(id: number, updateNumber: number)'
       parameters:
         - id: id
           type:
@@ -879,7 +880,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getUpdate(id: number, updateNumber: number)'
       return:
         type:
           - >-
@@ -893,6 +893,7 @@ items:
       - typeScript
     summary: Returns a the deltas between work item revisions
     syntax:
+      content: 'function getUpdates(id: number, top?: number, skip?: number)'
       parameters:
         - id: id
           type:
@@ -908,7 +909,6 @@ items:
             - number
           description: ''
           optional: true
-      content: 'function getUpdates(id: number, top?: number, skip?: number)'
       return:
         type:
           - >-
@@ -924,6 +924,9 @@ items:
       - typeScript
     summary: Returns a single work item
     syntax:
+      content: >-
+        function getWorkItem(id: number, fields?: string[], asOf?: Date,
+        expand?: WorkItemExpand)
       parameters:
         - id: id
           type:
@@ -944,9 +947,6 @@ items:
             - WorkItemExpand
           description: ''
           optional: true
-      content: >-
-        function getWorkItem(id: number, fields?: string[], asOf?: Date,
-        expand?: WorkItemExpand)
       return:
         type:
           - >-
@@ -962,6 +962,7 @@ items:
       [Preview API] Get a work item icon svg by icon friendly name and icon
       color
     syntax:
+      content: 'function getWorkItemIconJson(icon: string, color?: string, v?: number)'
       parameters:
         - id: icon
           type:
@@ -977,7 +978,6 @@ items:
             - number
           description: ''
           optional: true
-      content: 'function getWorkItemIconJson(icon: string, color?: string, v?: number)'
       return:
         type:
           - >-
@@ -991,8 +991,8 @@ items:
       - typeScript
     summary: '[Preview API] Get a list of all work item icons'
     syntax:
-      parameters: []
       content: function getWorkItemIcons()
+      parameters: []
       return:
         type:
           - >-
@@ -1008,6 +1008,7 @@ items:
       [Preview API] Get a work item icon svg by icon friendly name and icon
       color
     syntax:
+      content: 'function getWorkItemIconSvg(icon: string, color?: string, v?: number)'
       parameters:
         - id: icon
           type:
@@ -1023,7 +1024,6 @@ items:
             - number
           description: ''
           optional: true
-      content: 'function getWorkItemIconSvg(icon: string, color?: string, v?: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -1038,6 +1038,9 @@ items:
       - typeScript
     summary: Returns a list of work items
     syntax:
+      content: >-
+        function getWorkItems(ids: number[], fields?: string[], asOf?: Date,
+        expand?: WorkItemExpand, errorPolicy?: WorkItemErrorPolicy)
       parameters:
         - id: ids
           type:
@@ -1063,9 +1066,6 @@ items:
             - WorkItemErrorPolicy
           description: ''
           optional: true
-      content: >-
-        function getWorkItems(ids: number[], fields?: string[], asOf?: Date,
-        expand?: WorkItemExpand, errorPolicy?: WorkItemErrorPolicy)
       return:
         type:
           - >-
@@ -1081,6 +1081,9 @@ items:
       - typeScript
     summary: Returns a single work item from a template
     syntax:
+      content: >-
+        function getWorkItemTemplate(project: string, type: string, fields?:
+        string, asOf?: Date, expand?: WorkItemExpand)
       parameters:
         - id: project
           type:
@@ -1105,9 +1108,6 @@ items:
             - WorkItemExpand
           description: ''
           optional: true
-      content: >-
-        function getWorkItemTemplate(project: string, type: string, fields?:
-        string, asOf?: Date, expand?: WorkItemExpand)
       return:
         type:
           - >-
@@ -1121,6 +1121,7 @@ items:
       - typeScript
     summary: Returns a the deltas between work item revisions
     syntax:
+      content: 'function getWorkItemType(project: string, type: string)'
       parameters:
         - id: project
           type:
@@ -1130,7 +1131,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getWorkItemType(project: string, type: string)'
       return:
         type:
           - >-
@@ -1144,12 +1144,12 @@ items:
       - typeScript
     summary: Returns a the deltas between work item revisions
     syntax:
+      content: 'function getWorkItemTypeCategories(project: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
-      content: 'function getWorkItemTypeCategories(project: string)'
       return:
         type:
           - >-
@@ -1163,6 +1163,7 @@ items:
       - typeScript
     summary: Returns a the deltas between work item revisions
     syntax:
+      content: 'function getWorkItemTypeCategory(project: string, category: string)'
       parameters:
         - id: project
           type:
@@ -1172,7 +1173,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getWorkItemTypeCategory(project: string, category: string)'
       return:
         type:
           - >-
@@ -1186,12 +1186,12 @@ items:
       - typeScript
     summary: Returns a the deltas between work item revisions
     syntax:
+      content: 'function getWorkItemTypes(project: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
-      content: 'function getWorkItemTypes(project: string)'
       return:
         type:
           - >-
@@ -1205,6 +1205,7 @@ items:
       - typeScript
     summary: '[Preview API] Returns the state names and colors for a work item type'
     syntax:
+      content: 'function getWorkItemTypeStates(project: string, type: string)'
       parameters:
         - id: project
           type:
@@ -1214,7 +1215,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getWorkItemTypeStates(project: string, type: string)'
       return:
         type:
           - >-
@@ -1230,6 +1230,9 @@ items:
       - typeScript
     summary: Gets the results of the query by id.
     syntax:
+      content: >-
+        function queryById(id: string, project?: string, team?: string,
+        timePrecision?: boolean)
       parameters:
         - id: id
           type:
@@ -1250,9 +1253,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function queryById(id: string, project?: string, team?: string,
-        timePrecision?: boolean)
       return:
         type:
           - >-
@@ -1268,6 +1268,9 @@ items:
       - typeScript
     summary: Gets the results of the query.
     syntax:
+      content: >-
+        function queryByWiql(wiql: Wiql, project?: string, team?: string,
+        timePrecision?: boolean, top?: number)
       parameters:
         - id: wiql
           type:
@@ -1293,9 +1296,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function queryByWiql(wiql: Wiql, project?: string, team?: string,
-        timePrecision?: boolean, top?: number)
       return:
         type:
           - >-
@@ -1311,6 +1311,9 @@ items:
       - typeScript
     summary: Searches all queries the user has access to in the current project
     syntax:
+      content: >-
+        function searchQueries(project: string, filter: string, top?: number,
+        expand?: QueryExpand, includeDeleted?: boolean)
       parameters:
         - id: project
           type:
@@ -1335,9 +1338,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function searchQueries(project: string, filter: string, top?: number,
-        expand?: QueryExpand, includeDeleted?: boolean)
       return:
         type:
           - >-
@@ -1367,6 +1367,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateClassificationNode(postedNode:
+        WorkItemClassificationNode, project: string, structureGroup:
+        TreeStructureGroup, path?: string)
       parameters:
         - id: postedNode
           type:
@@ -1386,10 +1390,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function updateClassificationNode(postedNode:
-        WorkItemClassificationNode, project: string, structureGroup:
-        TreeStructureGroup, path?: string)
       return:
         type:
           - >-
@@ -1405,6 +1405,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateField(workItemField: WorkItemField, fieldNameOrRefName:
+        string, project?: string)
       parameters:
         - id: workItemField
           type:
@@ -1420,9 +1423,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function updateField(workItemField: WorkItemField, fieldNameOrRefName:
-        string, project?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -1437,6 +1437,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateQuery(queryUpdate: QueryHierarchyItem, project: string,
+        query: string, undeleteDescendants?: boolean)
       parameters:
         - id: queryUpdate
           type:
@@ -1456,9 +1459,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function updateQuery(queryUpdate: QueryHierarchyItem, project: string,
-        query: string, undeleteDescendants?: boolean)
       return:
         type:
           - >-
@@ -1474,6 +1474,10 @@ items:
       - typeScript
     summary: Updates a single work item
     syntax:
+      content: >-
+        function updateWorkItem(document: JsonPatchDocument, id: number,
+        validateOnly?: boolean, bypassRules?: boolean, suppressNotifications?:
+        boolean)
       parameters:
         - id: document
           type:
@@ -1500,10 +1504,6 @@ items:
             - boolean
           description: Do not fire any notifications for this change
           optional: true
-      content: >-
-        function updateWorkItem(document: JsonPatchDocument, id: number,
-        validateOnly?: boolean, bypassRules?: boolean, suppressNotifications?:
-        boolean)
       return:
         type:
           - >-
@@ -1519,6 +1519,9 @@ items:
       - typeScript
     summary: Add/updates a work item type
     syntax:
+      content: >-
+        function updateWorkItemTypeDefinition(updateModel:
+        WorkItemTypeTemplateUpdateModel, project?: string)
       parameters:
         - id: updateModel
           type:
@@ -1530,9 +1533,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function updateWorkItemTypeDefinition(updateModel:
-        WorkItemTypeTemplateUpdateModel, project?: string)
       return:
         type:
           - >-

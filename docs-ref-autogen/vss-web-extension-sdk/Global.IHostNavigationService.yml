@@ -30,8 +30,8 @@ items:
       - typeScript
     summary: Gets the current hash.
     syntax:
-      parameters: []
       content: function getHash()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -43,13 +43,13 @@ items:
       - typeScript
     summary: Add a callback to be invoked each time the hash navigation has changed
     syntax:
+      content: 'function onHashChanged(callback: function)'
       parameters:
         - id: callback
           type:
             - function
           description: |
             Method invoked on each navigation hash change
-      content: 'function onHashChanged(callback: function)'
       return:
         type:
           - any
@@ -61,8 +61,8 @@ items:
       - typeScript
     summary: Reloads the parent frame
     syntax:
-      parameters: []
       content: function reload()
+      parameters: []
       return:
         type:
           - any
@@ -74,13 +74,13 @@ items:
       - typeScript
     summary: Sets the provided hash from the hosted content.
     syntax:
+      content: 'function setHash(hash: string)'
       parameters:
         - id: hash
           type:
             - string
           description: |
             The new hash string to
-      content: 'function setHash(hash: string)'
       return:
         type:
           - any

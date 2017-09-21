@@ -28,8 +28,8 @@ items:
       A static template engine for applying JS objects to a "jquery-tmpl" like
       template.
     syntax:
-      parameters: []
       content: new TemplateEngine()
+      parameters: []
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Utils.Html.TemplateEngine.tmpl
     name: 'tmpl(template: string, data: any)'
@@ -42,6 +42,7 @@ items:
 
       specified HTML content as a template, using the specified data.
     syntax:
+      content: 'static function tmpl(template: string, data: any)'
       parameters:
         - id: template
           type:
@@ -51,7 +52,6 @@ items:
           type:
             - any
           description: The data to render.
-      content: 'static function tmpl(template: string, data: any)'
       return:
         type:
           - string

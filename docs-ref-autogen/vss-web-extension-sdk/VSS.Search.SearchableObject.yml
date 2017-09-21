@@ -29,13 +29,13 @@ items:
       - typeScript
     summary: Add a term to the item
     syntax:
+      content: 'function addTerm(term: string)'
       parameters:
         - id: term
           type:
             - string
           description: |
             The additional term
-      content: 'function addTerm(term: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchableObject.item
     name: item
@@ -57,6 +57,7 @@ items:
       - typeScript
     summary: Represents a single item to be placed in the index.
     syntax:
+      content: 'new SearchableObject(item: T, terms: string[])'
       parameters:
         - id: item
           type:
@@ -67,7 +68,6 @@ items:
             - 'string[]'
           description: |
             The terms associated to the item.
-      content: 'new SearchableObject(item: T, terms: string[])'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Search.SearchableObject.setTerms
     name: 'setTerms(terms: string[])'
@@ -76,13 +76,13 @@ items:
       - typeScript
     summary: Set the terms for this item
     syntax:
+      content: 'function setTerms(terms: string[])'
       parameters:
         - id: terms
           type:
             - 'string[]'
           description: |
             The new terms
-      content: 'function setTerms(terms: string[])'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchableObject.terms
     name: terms

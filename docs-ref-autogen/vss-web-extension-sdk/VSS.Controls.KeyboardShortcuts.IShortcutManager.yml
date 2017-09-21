@@ -9,7 +9,11 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.registerShortcut
       - >-
+        vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.registerShortcut_1
+      - >-
         vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.registerShortcuts
+      - >-
+        vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.registerShortcuts_1
       - >-
         vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.removeShortcutGroup
       - >-
@@ -37,8 +41,8 @@ items:
       - typeScript
     summary: Gets the shortcut groups
     syntax:
-      parameters: []
       content: function getShortcutGroups()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.registerShortcut
@@ -50,6 +54,9 @@ items:
       - typeScript
     summary: Register a shortcut
     syntax:
+      content: >-
+        function registerShortcut(group: string, combo: string, description:
+        string, action: KeyboardAction, allowPropagation?: boolean)
       parameters:
         - id: group
           type:
@@ -74,9 +81,48 @@ items:
             Defaults to false. Use true in the rare case that you want the last
             key of the chord to propagate to the focused element
           optional: true
+      return:
+        type:
+          - >-
+            @vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.registerShortcut_1
+    name: >-
+      registerShortcut(group: string, combo: string, description: string,
+      action: KeyboardAction, allowPropagation?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: Register a shortcut
+    syntax:
       content: >-
         function registerShortcut(group: string, combo: string, description:
         string, action: KeyboardAction, allowPropagation?: boolean)
+      parameters:
+        - id: group
+          type:
+            - string
+          description: Name of a shortcut group.
+        - id: combo
+          type:
+            - string
+          description: Keyboard combination.
+        - id: description
+          type:
+            - string
+          description: Description of the shortcut
+        - id: action
+          type:
+            - KeyboardAction
+          description: Action which gets called when shortcut is pressed
+        - id: allowPropagation
+          type:
+            - boolean
+          description: >
+            Defaults to false. Use true in the rare case that you want the last
+            key of the chord to propagate to the focused element
+          optional: true
       return:
         type:
           - >-
@@ -92,6 +138,9 @@ items:
       - typeScript
     summary: Register a group of shortcuts
     syntax:
+      content: >-
+        function registerShortcuts(group: string, combos: string[], description:
+        string, action: KeyboardAction, allowPropagation?: boolean)
       parameters:
         - id: group
           type:
@@ -116,9 +165,48 @@ items:
             Defaults to false. Use true in the rare case that you want the last
             key of the chord to propagate to the focused element
           optional: true
+      return:
+        type:
+          - >-
+            @vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.registerShortcuts_1
+    name: >-
+      registerShortcuts(group: string, combos: string[], description: string,
+      action: KeyboardAction, allowPropagation?: boolean)
+    children: []
+    langs:
+      - typeScript
+    summary: Register a group of shortcuts
+    syntax:
       content: >-
         function registerShortcuts(group: string, combos: string[], description:
         string, action: KeyboardAction, allowPropagation?: boolean)
+      parameters:
+        - id: group
+          type:
+            - string
+          description: Name of a shortcut group.
+        - id: combos
+          type:
+            - 'string[]'
+          description: Keyboard combinations that all map to same action.
+        - id: description
+          type:
+            - string
+          description: Description of the shortcut
+        - id: action
+          type:
+            - KeyboardAction
+          description: Action which gets called when shortcut is pressed
+        - id: allowPropagation
+          type:
+            - boolean
+          description: >
+            Defaults to false. Use true in the rare case that you want the last
+            key of the chord to propagate to the focused element
+          optional: true
       return:
         type:
           - >-
@@ -142,13 +230,13 @@ items:
       NOTE: This will remove all shortcuts for a given group regardless of where
       they were registered from.
     syntax:
+      content: 'function removeShortcutGroup(group: string)'
       parameters:
         - id: group
           type:
             - string
           description: |
             Name of a shortcut group.
-      content: 'function removeShortcutGroup(group: string)'
       return:
         type:
           - any
@@ -161,8 +249,8 @@ items:
       - typeScript
     summary: Show the shortcut dialog
     syntax:
-      parameters: []
       content: function showShortcutDialog()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.unRegisterShortcut
@@ -172,6 +260,7 @@ items:
       - typeScript
     summary: Unregister a shortcut
     syntax:
+      content: 'function unRegisterShortcut(group: string, combo: string)'
       parameters:
         - id: group
           type:
@@ -181,5 +270,4 @@ items:
           type:
             - string
           description: Keyboard combination.
-      content: 'function unRegisterShortcut(group: string, combo: string)'
     type: method

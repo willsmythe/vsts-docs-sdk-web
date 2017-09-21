@@ -12,7 +12,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.CommonMethods3_2To4
     source:
       path: tfs.d.ts
@@ -33,6 +33,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new WorkItemTrackingHttpClient3_2(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -43,7 +46,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new WorkItemTrackingHttpClient3_2(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

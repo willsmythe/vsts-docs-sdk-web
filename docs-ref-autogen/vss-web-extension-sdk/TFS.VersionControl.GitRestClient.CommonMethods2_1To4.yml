@@ -17,7 +17,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4
     source:
       path: tfs.d.ts
@@ -38,6 +38,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -48,9 +51,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2_1To4.createCommitStatus
@@ -62,6 +62,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function createCommitStatus(gitCommitStatusToCreate: GitStatus,
+        commitId: string, repositoryId: string, project?: string)
       parameters:
         - id: gitCommitStatusToCreate
           type:
@@ -80,9 +83,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function createCommitStatus(gitCommitStatusToCreate: GitStatus,
-        commitId: string, repositoryId: string, project?: string)
       return:
         type:
           - >-
@@ -98,6 +98,9 @@ items:
       - typeScript
     summary: Retrieve pull request's commits
     syntax:
+      content: >-
+        function getPullRequestCommits(repositoryId: string, pullRequestId:
+        number, project?: string)
       parameters:
         - id: repositoryId
           type:
@@ -112,9 +115,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getPullRequestCommits(repositoryId: string, pullRequestId:
-        number, project?: string)
       return:
         type:
           - >-
@@ -130,6 +130,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getStatuses(commitId: string, repositoryId: string, project?:
+        string, top?: number, skip?: number, latestOnly?: boolean)
       parameters:
         - id: commitId
           type:
@@ -159,9 +162,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getStatuses(commitId: string, repositoryId: string, project?:
-        string, top?: number, skip?: number, latestOnly?: boolean)
       return:
         type:
           - >-

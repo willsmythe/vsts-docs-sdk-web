@@ -13,7 +13,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4
     source:
       path: tfs.d.ts
@@ -34,6 +34,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -44,9 +47,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods3To4.getChangesets
@@ -62,6 +62,10 @@ items:
       API that doesn't expose the unneeded queryParams present in the 1.0
       version of the API.
     syntax:
+      content: >-
+        function getChangesets(project?: string, maxCommentLength?: number,
+        skip?: number, top?: number, orderby?: string, searchCriteria?:
+        TfvcChangesetSearchCriteria)
       parameters:
         - id: project
           type:
@@ -94,10 +98,6 @@ items:
               @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetSearchCriteria
           description: ''
           optional: true
-      content: >-
-        function getChangesets(project?: string, maxCommentLength?: number,
-        skip?: number, top?: number, orderby?: string, searchCriteria?:
-        TfvcChangesetSearchCriteria)
       return:
         type:
           - >-

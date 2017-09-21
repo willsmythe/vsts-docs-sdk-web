@@ -29,8 +29,8 @@ items:
       - typeScript
     summary: Clears all the subscriptions.
     syntax:
-      parameters: []
       content: function clear()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Page.IPageEventService.fire
     name: 'fire(eventName: string, eventArgs?: any)'
@@ -39,6 +39,7 @@ items:
       - typeScript
     summary: Fires a page event.
     syntax:
+      content: 'function fire(eventName: string, eventArgs?: any)'
       parameters:
         - id: eventName
           type:
@@ -50,7 +51,6 @@ items:
           description: |
             Optional event arguments.
           optional: true
-      content: 'function fire(eventName: string, eventArgs?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Page.IPageEventService.reset
     name: 'reset(eventName: string)'
@@ -59,12 +59,12 @@ items:
       - typeScript
     summary: Resets the specified event like it is not fired yet.
     syntax:
+      content: 'function reset(eventName: string)'
       parameters:
         - id: eventName
           type:
             - string
           description: ''
-      content: 'function reset(eventName: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Page.IPageEventService.subscribe
     name: 'subscribe(eventName: string, callback: IPageEventCallback)'
@@ -75,6 +75,7 @@ items:
       Enables to subscribe a page event.
       Specify '*' as eventName to subscribe all events.
     syntax:
+      content: 'function subscribe(eventName: string, callback: IPageEventCallback)'
       parameters:
         - id: eventName
           type:
@@ -85,7 +86,6 @@ items:
             - '@vss-web-extension-sdk.VSS.Events.Page.IPageEventCallback'
           description: |
             Callback to invoke when the event is fired.
-      content: 'function subscribe(eventName: string, callback: IPageEventCallback)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Page.IPageEventService.unsubscribe
     name: 'unsubscribe(eventName: string, callback: IPageEventCallback)'
@@ -96,6 +96,7 @@ items:
       Enables to unsubscribe from a page event.
       Specify '*' as eventName to unsubscribe from all events.
     syntax:
+      content: 'function unsubscribe(eventName: string, callback: IPageEventCallback)'
       parameters:
         - id: eventName
           type:
@@ -106,5 +107,4 @@ items:
             - '@vss-web-extension-sdk.VSS.Events.Page.IPageEventCallback'
           description: |
             Callback to invoke when the event is fired.
-      content: 'function unsubscribe(eventName: string, callback: IPageEventCallback)'
     type: method

@@ -80,7 +80,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: tfs.d.ts
       startLine: 8047
@@ -98,6 +98,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function addAgent(agent: TaskAgent, poolId: number)'
       parameters:
         - id: agent
           type:
@@ -107,7 +108,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function addAgent(agent: TaskAgent, poolId: number)'
       return:
         type:
           - >-
@@ -121,12 +121,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function addAgentPool(pool: TaskAgentPool)'
       parameters:
         - id: pool
           type:
             - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPool'
           description: ''
-      content: 'function addAgentPool(pool: TaskAgentPool)'
       return:
         type:
           - >-
@@ -140,6 +140,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function addAgentQueue(queue: TaskAgentQueue, project?: string)'
       parameters:
         - id: queue
           type:
@@ -151,7 +152,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function addAgentQueue(queue: TaskAgentQueue, project?: string)'
       return:
         type:
           - >-
@@ -167,6 +167,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -177,9 +180,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4.createAgentSession
@@ -189,6 +189,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function createAgentSession(session: TaskAgentSession, poolId: number)'
       parameters:
         - id: session
           type:
@@ -199,7 +200,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function createAgentSession(session: TaskAgentSession, poolId: number)'
       return:
         type:
           - >-
@@ -213,13 +213,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createTeamProject(project?: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function createTeamProject(project?: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -232,6 +232,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function deleteAgent(poolId: number, agentId: number)'
       parameters:
         - id: poolId
           type:
@@ -241,7 +242,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function deleteAgent(poolId: number, agentId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -254,12 +254,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function deleteAgentPool(poolId: number)'
       parameters:
         - id: poolId
           type:
             - number
           description: ''
-      content: 'function deleteAgentPool(poolId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -272,6 +272,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteAgentQueue(queueId: number, project?: string)'
       parameters:
         - id: queueId
           type:
@@ -282,7 +283,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function deleteAgentQueue(queueId: number, project?: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -297,6 +297,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function deleteAgentRequest(poolId: number, requestId: number,
+        lockToken: string, result?: TaskResult)
       parameters:
         - id: poolId
           type:
@@ -315,9 +318,6 @@ items:
             - TaskResult
           description: ''
           optional: true
-      content: >-
-        function deleteAgentRequest(poolId: number, requestId: number,
-        lockToken: string, result?: TaskResult)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -330,6 +330,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function deleteAgentSession(poolId: number, sessionId: string)'
       parameters:
         - id: poolId
           type:
@@ -339,7 +340,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function deleteAgentSession(poolId: number, sessionId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -352,6 +352,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function deleteMessage(poolId: number, messageId: number, sessionId:
+        string)
       parameters:
         - id: poolId
           type:
@@ -365,9 +368,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function deleteMessage(poolId: number, messageId: number, sessionId:
-        string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -382,6 +382,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getAgent(poolId: number, agentId: number, includeCapabilities?:
+        boolean, includeAssignedRequest?: boolean, propertyFilters?: string[])
       parameters:
         - id: poolId
           type:
@@ -406,9 +409,6 @@ items:
             - 'string[]'
           description: ''
           optional: true
-      content: >-
-        function getAgent(poolId: number, agentId: number, includeCapabilities?:
-        boolean, includeAssignedRequest?: boolean, propertyFilters?: string[])
       return:
         type:
           - >-
@@ -424,6 +424,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getAgentPool(poolId: number, properties?: string[],
+        actionFilter?: TaskAgentPoolActionFilter)
       parameters:
         - id: poolId
           type:
@@ -439,9 +442,6 @@ items:
             - TaskAgentPoolActionFilter
           description: ''
           optional: true
-      content: >-
-        function getAgentPool(poolId: number, properties?: string[],
-        actionFilter?: TaskAgentPoolActionFilter)
       return:
         type:
           - >-
@@ -457,6 +457,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getAgentPools(poolName?: string, properties?: string[],
+        poolType?: TaskAgentPoolType, actionFilter?: TaskAgentPoolActionFilter)
       parameters:
         - id: poolName
           type:
@@ -478,9 +481,6 @@ items:
             - TaskAgentPoolActionFilter
           description: ''
           optional: true
-      content: >-
-        function getAgentPools(poolName?: string, properties?: string[],
-        poolType?: TaskAgentPoolType, actionFilter?: TaskAgentPoolActionFilter)
       return:
         type:
           - >-
@@ -496,6 +496,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAgentQueue(queueId: number, project?: string, actionFilter?:
+        TaskAgentQueueActionFilter)
       parameters:
         - id: queueId
           type:
@@ -511,9 +514,6 @@ items:
             - TaskAgentQueueActionFilter
           description: ''
           optional: true
-      content: >-
-        function getAgentQueue(queueId: number, project?: string, actionFilter?:
-        TaskAgentQueueActionFilter)
       return:
         type:
           - >-
@@ -529,6 +529,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAgentQueues(project?: string, queueName?: string,
+        actionFilter?: TaskAgentQueueActionFilter)
       parameters:
         - id: project
           type:
@@ -545,9 +548,6 @@ items:
             - TaskAgentQueueActionFilter
           description: ''
           optional: true
-      content: >-
-        function getAgentQueues(project?: string, queueName?: string,
-        actionFilter?: TaskAgentQueueActionFilter)
       return:
         type:
           - >-
@@ -561,6 +561,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getAgentRequest(poolId: number, requestId: number)'
       parameters:
         - id: poolId
           type:
@@ -570,7 +571,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getAgentRequest(poolId: number, requestId: number)'
       return:
         type:
           - >-
@@ -586,6 +586,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getAgentRequestsForAgent(poolId: number, agentId: number,
+        completedRequestCount?: number)
       parameters:
         - id: poolId
           type:
@@ -600,9 +603,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getAgentRequestsForAgent(poolId: number, agentId: number,
-        completedRequestCount?: number)
       return:
         type:
           - >-
@@ -618,6 +618,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getAgentRequestsForAgents(poolId: number, agentIds?: number[],
+        completedRequestCount?: number)
       parameters:
         - id: poolId
           type:
@@ -633,9 +636,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getAgentRequestsForAgents(poolId: number, agentIds?: number[],
-        completedRequestCount?: number)
       return:
         type:
           - >-
@@ -649,6 +649,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getAgentRequestsForPlan(poolId: number, planId: string, jobId?:
+        string)
       parameters:
         - id: poolId
           type:
@@ -663,9 +666,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getAgentRequestsForPlan(poolId: number, planId: string, jobId?:
-        string)
       return:
         type:
           - >-
@@ -682,6 +682,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getAgents(poolId: number, agentName?: string,
+        includeCapabilities?: boolean, includeAssignedRequest?: boolean,
+        propertyFilters?: string[], demands?: string[])
       parameters:
         - id: poolId
           type:
@@ -712,10 +716,6 @@ items:
             - 'string[]'
           description: ''
           optional: true
-      content: >-
-        function getAgents(poolId: number, agentName?: string,
-        includeCapabilities?: boolean, includeAssignedRequest?: boolean,
-        propertyFilters?: string[], demands?: string[])
       return:
         type:
           - >-
@@ -729,8 +729,8 @@ items:
       - typeScript
     summary: '[Preview API] Returns list of azure subscriptions'
     syntax:
-      parameters: []
       content: function getAzureSubscriptions()
+      parameters: []
       return:
         type:
           - >-
@@ -744,6 +744,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getMessage(poolId: number, sessionId: string, lastMessageId?:
+        number)
       parameters:
         - id: poolId
           type:
@@ -758,9 +761,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getMessage(poolId: number, sessionId: string, lastMessageId?:
-        number)
       return:
         type:
           - >-
@@ -774,6 +774,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getServiceEndpointTypes(type?: string, scheme?: string)'
       parameters:
         - id: type
           type:
@@ -785,7 +786,6 @@ items:
             - string
           description: ''
           optional: true
-      content: 'function getServiceEndpointTypes(type?: string, scheme?: string)'
       return:
         type:
           - >-
@@ -802,13 +802,13 @@ items:
       authorized using a service connection. The response is filtered using an
       XPath/Json based selector.
     syntax:
+      content: 'function queryEndpoint(endpoint: TaskDefinitionEndpoint)'
       parameters:
         - id: endpoint
           type:
             - >-
               @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskDefinitionEndpoint
           description: Describes the URL to fetch.
-      content: 'function queryEndpoint(endpoint: TaskDefinitionEndpoint)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string[]>'
@@ -821,6 +821,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function queueAgentRequest(request: TaskAgentJobRequest, poolId: number)'
       parameters:
         - id: request
           type:
@@ -831,7 +832,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function queueAgentRequest(request: TaskAgentJobRequest, poolId: number)'
       return:
         type:
           - >-
@@ -845,6 +845,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function refreshAgent(poolId: number, agentId: number)'
       parameters:
         - id: poolId
           type:
@@ -854,7 +855,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function refreshAgent(poolId: number, agentId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -867,12 +867,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function refreshAgents(poolId: number)'
       parameters:
         - id: poolId
           type:
             - number
           description: ''
-      content: 'function refreshAgents(poolId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -885,6 +885,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function replaceAgent(agent: TaskAgent, poolId: number, agentId: number)'
       parameters:
         - id: agent
           type:
@@ -898,7 +899,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function replaceAgent(agent: TaskAgent, poolId: number, agentId: number)'
       return:
         type:
           - >-
@@ -912,6 +912,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function sendMessage(message: TaskAgentMessage, poolId: number,
+        requestId: number)
       parameters:
         - id: message
           type:
@@ -926,9 +929,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function sendMessage(message: TaskAgentMessage, poolId: number,
-        requestId: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -941,6 +941,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function updateAgent(agent: TaskAgent, poolId: number, agentId: number)'
       parameters:
         - id: agent
           type:
@@ -954,7 +955,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function updateAgent(agent: TaskAgent, poolId: number, agentId: number)'
       return:
         type:
           - >-
@@ -968,6 +968,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function updateAgentPool(pool: TaskAgentPool, poolId: number)'
       parameters:
         - id: pool
           type:
@@ -977,7 +978,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function updateAgentPool(pool: TaskAgentPool, poolId: number)'
       return:
         type:
           - >-
@@ -993,6 +993,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateAgentRequest(request: TaskAgentJobRequest, poolId:
+        number, requestId: number, lockToken: string)
       parameters:
         - id: request
           type:
@@ -1011,9 +1014,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateAgentRequest(request: TaskAgentJobRequest, poolId:
-        number, requestId: number, lockToken: string)
       return:
         type:
           - >-
@@ -1029,6 +1029,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateAgentUserCapabilities(userCapabilities: [key: string]:
+        string, poolId: number, agentId: number)
       parameters:
         - id: userCapabilities
           type:
@@ -1042,9 +1045,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateAgentUserCapabilities(userCapabilities: [key: string]:
-        string, poolId: number, agentId: number)
       return:
         type:
           - >-

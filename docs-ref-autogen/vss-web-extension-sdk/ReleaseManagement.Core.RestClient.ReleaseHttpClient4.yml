@@ -13,7 +13,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.ReleaseManagement.Core.RestClient.CommonMethods3_2To4
     source:
       path: rmo.d.ts
@@ -34,6 +34,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAutoTriggerIssues(artifactType: string, sourceId: string,
+        artifactVersionId: string)
       parameters:
         - id: artifactType
           type:
@@ -47,9 +50,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getAutoTriggerIssues(artifactType: string, sourceId: string,
-        artifactVersionId: string)
       return:
         type:
           - >-
@@ -65,6 +65,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new ReleaseHttpClient4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -75,7 +78,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new ReleaseHttpClient4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

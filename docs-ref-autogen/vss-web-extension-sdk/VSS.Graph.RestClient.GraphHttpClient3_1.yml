@@ -11,7 +11,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_1To4'
+      name: '@vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_1To4'
     source:
       path: vss.d.ts
       startLine: 24644
@@ -30,6 +30,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new GraphHttpClient3_1(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -40,7 +43,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new GraphHttpClient3_1(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

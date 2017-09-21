@@ -28,7 +28,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Control<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Control<TOptions>'
     source:
       path: vss.d.ts
       startLine: 17495
@@ -60,13 +60,13 @@ items:
       Indicate whether the element that has focus should be styled differently.
       The current focus element will be updated to match the new preference
     syntax:
+      content: 'function enableFocusStyling(enabled: boolean)'
       parameters:
         - id: enabled
           type:
             - boolean
           description: |
             true, if focus element should be styled.
-      content: 'function enableFocusStyling(enabled: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeViewO.EXPANDED_CLASS
     name: EXPANDED_CLASS
@@ -88,8 +88,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function focus()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeViewO.focusOnNode
     name: 'focusOnNode(node: TreeNode)'
@@ -98,13 +98,13 @@ items:
       - typeScript
     summary: Set UI Focus on the node (Does not change selected node state)
     syntax:
+      content: 'function focusOnNode(node: TreeNode)'
       parameters:
         - id: node
           type:
             - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode'
           description: |
             Tree node to navigate to
-      content: 'function focusOnNode(node: TreeNode)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeViewO.getNodeFromElement
     name: 'getNodeFromElement(element: any)'
@@ -113,12 +113,12 @@ items:
       - typeScript
     summary: Gets the node associated with the provided DOM/JQuery element.
     syntax:
+      content: 'function getNodeFromElement(element: any)'
       parameters:
         - id: element
           type:
             - any
           description: Element to get the node for.
-      content: 'function getNodeFromElement(element: any)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode'
@@ -130,8 +130,8 @@ items:
       - typeScript
     summary: Gets the currently selected node.
     syntax:
-      parameters: []
       content: function getSelectedNode()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode'
@@ -143,8 +143,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeViewO.initializeOptions
     name: 'initializeOptions(options?: any)'
@@ -153,6 +153,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -160,7 +161,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeViewO.LEVEL_DATA_NAME
     name: LEVEL_DATA_NAME
@@ -195,6 +195,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function onItemClick(node: TreeNode, nodeElement: any, e?:
+        JQueryEventObject)
       parameters:
         - id: node
           type:
@@ -209,9 +212,6 @@ items:
             - JQueryEventObject
           description: ''
           optional: true
-      content: >-
-        function onItemClick(node: TreeNode, nodeElement: any, e?:
-        JQueryEventObject)
       return:
         type:
           - any
@@ -223,6 +223,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onShowPopupMenu(node: TreeNode, options?: any)'
       parameters:
         - id: node
           type:
@@ -233,7 +234,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function onShowPopupMenu(node: TreeNode, options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeViewO.removeNode
     name: 'removeNode(node: TreeNode)'
@@ -242,12 +242,12 @@ items:
       - typeScript
     summary: Removes the specified node from the tree.
     syntax:
+      content: 'function removeNode(node: TreeNode)'
       parameters:
         - id: node
           type:
             - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode'
           description: Node to be removed.
-      content: 'function removeNode(node: TreeNode)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeViewO.rootNode
     name: rootNode
@@ -269,13 +269,13 @@ items:
       - typeScript
     summary: Set the droppable
     syntax:
+      content: 'function setDroppable(droppable: any)'
       parameters:
         - id: droppable
           type:
             - any
           description: |+
 
-      content: 'function setDroppable(droppable: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeViewO.setSelectedNode
     name: 'setSelectedNode(node: TreeNode, suppressChangeEvent?: boolean)'
@@ -284,6 +284,7 @@ items:
       - typeScript
     summary: Sets the specified node as selected.
     syntax:
+      content: 'function setSelectedNode(node: TreeNode, suppressChangeEvent?: boolean)'
       parameters:
         - id: node
           type:
@@ -294,7 +295,6 @@ items:
             - boolean
           description: 'If specified true, "selectionChanged" event will not fire.'
           optional: true
-      content: 'function setSelectedNode(node: TreeNode, suppressChangeEvent?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeViewO.constructor
     name: 'TreeViewO(options?: any)'
@@ -303,13 +303,13 @@ items:
       - typeScript
     summary: Creates new Grid Control
     syntax:
+      content: 'new TreeViewO(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'new TreeViewO(options?: any)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeViewO.updateNode
     name: 'updateNode(node: TreeNode, suppressFocus?: boolean)'
@@ -320,6 +320,7 @@ items:
       Update the specified node by refreshing the child nodes if anything is
       added or removed.
     syntax:
+      content: 'function updateNode(node: TreeNode, suppressFocus?: boolean)'
       parameters:
         - id: node
           type:
@@ -330,5 +331,4 @@ items:
             - boolean
           description: suppress focusing on the node
           optional: true
-      content: 'function updateNode(node: TreeNode, suppressFocus?: boolean)'
     type: method

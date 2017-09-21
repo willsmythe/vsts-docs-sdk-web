@@ -65,6 +65,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new FilterByScope(filterByAncestorEntityIds?: string[],
+        filterByEntityIds?: string[])
       parameters:
         - id: filterByAncestorEntityIds
           type:
@@ -76,9 +79,6 @@ items:
             - 'string[]'
           description: ''
           optional: true
-      content: >-
-        new FilterByScope(filterByAncestorEntityIds?: string[],
-        filterByEntityIds?: string[])
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Common.FilterByScope.GetHashCode
@@ -88,12 +88,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function GetHashCode(filterByScope: FilterByScope)'
       parameters:
         - id: filterByScope
           type:
             - '@vss-web-extension-sdk.VSS.Identities.Picker.Common.FilterByScope'
           description: ''
-      content: 'static function GetHashCode(filterByScope: FilterByScope)'
       return:
         type:
           - number
@@ -108,12 +108,12 @@ items:
       Return true if the filterByScope is not null and the ancestorEntitityIds
       and entityIds arrays are empty, otherwise false.
     syntax:
+      content: 'static function isFilterByScopeEmpty(filterByScope: FilterByScope)'
       parameters:
         - id: filterByScope
           type:
             - '@vss-web-extension-sdk.VSS.Identities.Picker.Common.FilterByScope'
           description: ''
-      content: 'static function isFilterByScopeEmpty(filterByScope: FilterByScope)'
       return:
         type:
           - boolean

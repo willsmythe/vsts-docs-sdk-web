@@ -17,7 +17,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 24878
@@ -37,6 +37,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -47,9 +50,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Mru.RestClient.CommonMethods2To4.getMruIdentities
@@ -59,6 +59,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getMruIdentities(identityId: string, containerId: string)'
       parameters:
         - id: identityId
           type:
@@ -68,7 +69,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getMruIdentities(identityId: string, containerId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string[]>'
@@ -83,6 +83,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function setMruIdentities(identityIds: string[], identityId: string,
+        containerId: string)
       parameters:
         - id: identityIds
           type:
@@ -96,9 +99,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function setMruIdentities(identityIds: string[], identityId: string,
-        containerId: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -113,6 +113,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateMruIdentities(updateData: MruIdentitiesUpdateData,
+        identityId: string, containerId: string)
       parameters:
         - id: updateData
           type:
@@ -127,9 +130,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateMruIdentities(updateData: MruIdentitiesUpdateData,
-        identityId: string, containerId: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'

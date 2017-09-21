@@ -38,6 +38,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function addInputsViewModel(key: string, inputsViewModel:
+        InputsViewModel)
       parameters:
         - id: key
           type:
@@ -47,9 +50,6 @@ items:
           type:
             - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputsViewModel'
           description: ''
-      content: >-
-        function addInputsViewModel(key: string, inputsViewModel:
-        InputsViewModel)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.constructor
@@ -62,6 +62,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new FormInputViewModel(dependentInputsLoadingCallback: any,
+        dependentInputsLoadedCallback: any, inputValidChangedCallback: any,
+        inputValuesChangedCallback: any, queryForValuesCallback?: any)
       parameters:
         - id: dependentInputsLoadingCallback
           type:
@@ -84,10 +88,6 @@ items:
             - any
           description: ''
           optional: true
-      content: >-
-        new FormInputViewModel(dependentInputsLoadingCallback: any,
-        dependentInputsLoadedCallback: any, inputValidChangedCallback: any,
-        inputValuesChangedCallback: any, queryForValuesCallback?: any)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.inputsAreValid
@@ -97,12 +97,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function inputsAreValid(inputsKey: string)'
       parameters:
         - id: inputsKey
           type:
             - string
           description: ''
-      content: 'function inputsAreValid(inputsKey: string)'
       return:
         type:
           - boolean
@@ -114,8 +114,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isDirty()
+      parameters: []
       return:
         type:
           - boolean
@@ -144,12 +144,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onInputValuesChanged(inputViewModel: InputViewModel)'
       parameters:
         - id: inputViewModel
           type:
             - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel'
           description: ''
-      content: 'function onInputValuesChanged(inputViewModel: InputViewModel)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.FormInputViewModel.queryInputValues
@@ -161,6 +161,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function queryInputValues(inputsViewModel: InputsViewModel,
+        inputsToQuery: InputViewModel[], callback: any, callbackContext: any)
       parameters:
         - id: inputsViewModel
           type:
@@ -178,7 +181,4 @@ items:
           type:
             - any
           description: ''
-      content: >-
-        function queryInputValues(inputsViewModel: InputsViewModel,
-        inputsToQuery: InputViewModel[], callback: any, callbackContext: any)
     type: method

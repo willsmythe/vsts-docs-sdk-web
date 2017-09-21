@@ -45,8 +45,8 @@ items:
       - typeScript
     summary: Aborts this scenario
     syntax:
-      parameters: []
       content: function abort()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.addAjaxCallStart
     name: addAjaxCallStart()
@@ -55,8 +55,8 @@ items:
       - typeScript
     summary: Add information about ajax call to scenario
     syntax:
-      parameters: []
       content: function addAjaxCallStart()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Performance.IEndAjaxCallTiming'
@@ -68,13 +68,13 @@ items:
       - typeScript
     summary: Add additional data to the scenario.
     syntax:
+      content: 'function addData(data: any)'
       parameters:
         - id: data
           type:
             - any
           description: |
             Property bag of additional data
-      content: 'function addData(data: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.addSplitTiming
     name: 'addSplitTiming(name: string, elapsedTime?: number)'
@@ -83,6 +83,7 @@ items:
       - typeScript
     summary: Add split timing at current timestamp
     syntax:
+      content: 'function addSplitTiming(name: string, elapsedTime?: number)'
       parameters:
         - id: name
           type:
@@ -94,7 +95,6 @@ items:
           description: |
             Optional: Deprecated: Store elapsed time in addition to split
           optional: true
-      content: 'function addSplitTiming(name: string, elapsedTime?: number)'
       return:
         type:
           - any
@@ -106,6 +106,7 @@ items:
       - typeScript
     summary: Ends this scenario
     syntax:
+      content: 'function end(endTime?: number)'
       parameters:
         - id: endTime
           type:
@@ -114,7 +115,6 @@ items:
             Optional Scenario End Time. IMPORTANT: Has to be obtained using
             getTimestamp
           optional: true
-      content: 'function end(endTime?: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.getAjaxCalls
     name: getAjaxCalls()
@@ -123,8 +123,8 @@ items:
       - typeScript
     summary: Return ajax call timings
     syntax:
-      parameters: []
       content: function getAjaxCalls()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.getCorrelationId
     name: getCorrelationId()
@@ -133,8 +133,8 @@ items:
       - typeScript
     summary: Returns scenario's correlation id
     syntax:
-      parameters: []
       content: function getCorrelationId()
+      parameters: []
       return:
         type:
           - string
@@ -146,8 +146,8 @@ items:
       - typeScript
     summary: Return the data associated with the scenario
     syntax:
-      parameters: []
       content: function getData()
+      parameters: []
       return:
         type:
           - any
@@ -159,8 +159,8 @@ items:
       - typeScript
     summary: Returns scenario duration in ms
     syntax:
-      parameters: []
       content: function getDuration()
+      parameters: []
       return:
         type:
           - number
@@ -172,8 +172,8 @@ items:
       - typeScript
     summary: Returns scenario area
     syntax:
-      parameters: []
       content: function getFeatureArea()
+      parameters: []
       return:
         type:
           - string
@@ -185,8 +185,8 @@ items:
       - typeScript
     summary: Returns scenario name
     syntax:
-      parameters: []
       content: function getName()
+      parameters: []
       return:
         type:
           - string
@@ -198,8 +198,8 @@ items:
       - typeScript
     summary: Return split timings
     syntax:
-      parameters: []
       content: function getSplitTimings()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.getStartTime
     name: getStartTime()
@@ -208,8 +208,8 @@ items:
       - typeScript
     summary: Get the scenario start timestamp
     syntax:
-      parameters: []
       content: function getStartTime()
+      parameters: []
       return:
         type:
           - number
@@ -221,8 +221,8 @@ items:
       - typeScript
     summary: Returns telemetry data for scenario
     syntax:
-      parameters: []
       content: function getTelemetry()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Telemetry.Services.TelemetryEventData'
@@ -234,8 +234,8 @@ items:
       - typeScript
     summary: Returns a value indicating whether the scenario is active
     syntax:
-      parameters: []
       content: function isActive()
+      parameters: []
       return:
         type:
           - boolean
@@ -250,8 +250,8 @@ items:
       Determines whether or not the scenario is the primary indicator
       of Time-to-Interactive on the page
     syntax:
-      parameters: []
       content: function isPageInteractive()
+      parameters: []
       return:
         type:
           - boolean
@@ -263,6 +263,6 @@ items:
       - typeScript
     summary: Logs scenario data to the browser's console
     syntax:
-      parameters: []
       content: function log()
+      parameters: []
     type: method

@@ -38,7 +38,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 18424
@@ -58,6 +58,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function authorize(responseType: ResponseType, clientId: string,
+        redirectUri: string, scopes: string, userId?: string)
       parameters:
         - id: responseType
           type:
@@ -80,9 +83,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function authorize(responseType: ResponseType, clientId: string,
-        redirectUri: string, scopes: string, userId?: string)
       return:
         type:
           - >-
@@ -96,12 +96,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function authorizeHost(clientId: string)'
       parameters:
         - id: clientId
           type:
             - string
           description: ''
-      content: 'function authorizeHost(clientId: string)'
       return:
         type:
           - >-
@@ -117,6 +117,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -127,9 +130,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.DelegatedAuthorization.RestClient.CommonMethods2To4.createRegistration
@@ -139,6 +139,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function createRegistration(registration: Registration, includeSecret?:
+        boolean)
       parameters:
         - id: registration
           type:
@@ -150,9 +153,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function createRegistration(registration: Registration, includeSecret?:
-        boolean)
       return:
         type:
           - >-
@@ -166,12 +166,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function deleteRegistration(registrationId: string)'
       parameters:
         - id: registrationId
           type:
             - string
           description: ''
-      content: 'function deleteRegistration(registrationId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -184,13 +184,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getAuthorizations(userId?: string)'
       parameters:
         - id: userId
           type:
             - string
           description: ''
           optional: true
-      content: 'function getAuthorizations(userId?: string)'
       return:
         type:
           - >-
@@ -204,12 +204,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getHostAuthorizations(hostId: string)'
       parameters:
         - id: hostId
           type:
             - string
           description: ''
-      content: 'function getHostAuthorizations(hostId: string)'
       return:
         type:
           - >-
@@ -223,6 +223,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getRegistration(registrationId: string, includeSecret?:
+        boolean)
       parameters:
         - id: registrationId
           type:
@@ -233,9 +236,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getRegistration(registrationId: string, includeSecret?:
-        boolean)
       return:
         type:
           - >-
@@ -249,8 +249,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getRegistrations()
+      parameters: []
       return:
         type:
           - >-
@@ -264,12 +264,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getSecret(registrationId: string)'
       parameters:
         - id: registrationId
           type:
             - string
           description: ''
-      content: 'function getSecret(registrationId: string)'
       return:
         type:
           - >-
@@ -285,6 +285,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function initiateAuthorization(responseType: ResponseType, clientId:
+        string, redirectUri: string, scopes: string, userId?: string)
       parameters:
         - id: responseType
           type:
@@ -307,9 +310,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function initiateAuthorization(responseType: ResponseType, clientId:
-        string, redirectUri: string, scopes: string, userId?: string)
       return:
         type:
           - >-
@@ -323,6 +323,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function revokeAuthorization(authorizationId: string, userId?: string)'
       parameters:
         - id: authorizationId
           type:
@@ -333,7 +334,6 @@ items:
             - string
           description: ''
           optional: true
-      content: 'function revokeAuthorization(authorizationId: string, userId?: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -346,6 +346,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function revokeHostAuthorization(clientId: string, hostId?: string)'
       parameters:
         - id: clientId
           type:
@@ -356,7 +357,6 @@ items:
             - string
           description: ''
           optional: true
-      content: 'function revokeHostAuthorization(clientId: string, hostId?: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -369,6 +369,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateRegistration(registration: Registration, includeSecret?:
+        boolean)
       parameters:
         - id: registration
           type:
@@ -380,9 +383,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function updateRegistration(registration: Registration, includeSecret?:
-        boolean)
       return:
         type:
           - >-

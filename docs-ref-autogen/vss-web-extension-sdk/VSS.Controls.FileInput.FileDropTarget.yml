@@ -11,7 +11,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.Enhancement<@vss-web-extension-sdk.VSS.Controls.FileInput.FileDropTargetOptions>
     source:
       path: vss.d.ts
@@ -29,6 +29,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        static function makeDropTarget($element: JQuery, options:
+        FileDropTargetOptions)
       parameters:
         - id: $element
           type:
@@ -39,9 +42,6 @@ items:
             - >-
               @vss-web-extension-sdk.VSS.Controls.FileInput.FileDropTargetOptions
           description: ''
-      content: >-
-        static function makeDropTarget($element: JQuery, options:
-        FileDropTargetOptions)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.FileInput.FileDropTarget'

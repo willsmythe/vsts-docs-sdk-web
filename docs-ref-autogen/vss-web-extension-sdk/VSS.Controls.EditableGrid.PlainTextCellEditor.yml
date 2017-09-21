@@ -19,7 +19,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.EditableGrid.TextCellEditor'
+      name: '@vss-web-extension-sdk.VSS.Controls.EditableGrid.TextCellEditor'
     source:
       path: vss.d.ts
       startLine: 11114
@@ -37,13 +37,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function clearValue(setEmpty?: boolean)'
       parameters:
         - id: setEmpty
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function clearValue(setEmpty?: boolean)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.PlainTextCellEditor.getValue
@@ -53,8 +53,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getValue()
+      parameters: []
       return:
         type:
           - string
@@ -67,12 +67,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new PlainTextCellEditor(options: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
-      content: 'new PlainTextCellEditor(options: any)'
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.PlainTextCellEditor.setSize
@@ -82,12 +82,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setSize($cellContext: JQuery)'
       parameters:
         - id: $cellContext
           type:
             - JQuery
           description: ''
-      content: 'function setSize($cellContext: JQuery)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.PlainTextCellEditor.setValue
@@ -97,6 +97,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setValue(value: string, doNotSavePrevious?: boolean)'
       parameters:
         - id: value
           type:
@@ -107,5 +108,4 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function setValue(value: string, doNotSavePrevious?: boolean)'
     type: method

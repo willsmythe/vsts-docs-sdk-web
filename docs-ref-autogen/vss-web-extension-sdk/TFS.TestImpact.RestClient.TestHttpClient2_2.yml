@@ -11,7 +11,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.TestImpact.RestClient.CommonMethods2To3_1'
+      name: '@vss-web-extension-sdk.TFS.TestImpact.RestClient.CommonMethods2To3_1'
     source:
       path: tfs.d.ts
       startLine: 10052
@@ -31,6 +31,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new TestHttpClient2_2(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -41,7 +44,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new TestHttpClient2_2(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

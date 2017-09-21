@@ -29,7 +29,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods2To4'
+      name: '@vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods2To4'
     source:
       path: tfs.d.ts
       startLine: 5830
@@ -49,6 +49,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createDashboard(entry: DashboardGroupEntry, groupId: string,
+        project?: string)
       parameters:
         - id: entry
           type:
@@ -64,9 +67,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function createDashboard(entry: DashboardGroupEntry, groupId: string,
-        project?: string)
       return:
         type:
           - >-
@@ -82,6 +82,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createWidget(widget: Widget, groupId: string, dashboardId:
+        string, project?: string)
       parameters:
         - id: widget
           type:
@@ -100,9 +103,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function createWidget(widget: Widget, groupId: string, dashboardId:
-        string, project?: string)
       return:
         type:
           - >-
@@ -118,6 +118,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new DashboardHttpClient2(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -128,9 +131,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new DashboardHttpClient2(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.DashboardHttpClient2.deleteDashboard
@@ -140,6 +140,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteDashboard(groupId: string, dashboardId: string, project?:
+        string)
       parameters:
         - id: groupId
           type:
@@ -154,9 +157,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function deleteDashboard(groupId: string, dashboardId: string, project?:
-        string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -169,6 +169,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getDashboard(groupId: string, dashboardId: string, project?:
+        string)
       parameters:
         - id: groupId
           type:
@@ -183,9 +186,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getDashboard(groupId: string, dashboardId: string, project?:
-        string)
       return:
         type:
           - >-
@@ -199,6 +199,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getDashboardGroup(groupId: string, project?: string)'
       parameters:
         - id: groupId
           type:
@@ -209,7 +210,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function getDashboardGroup(groupId: string, project?: string)'
       return:
         type:
           - >-
@@ -225,6 +225,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getWidget(groupId: string, dashboardId: string, widgetId:
+        string, project?: string)
       parameters:
         - id: groupId
           type:
@@ -243,9 +246,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getWidget(groupId: string, dashboardId: string, widgetId:
-        string, project?: string)
       return:
         type:
           - >-
@@ -261,6 +261,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function replaceDashboard(dashboard: Dashboard, groupId: string,
+        dashboardId: string, project?: string)
       parameters:
         - id: dashboard
           type:
@@ -279,9 +282,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function replaceDashboard(dashboard: Dashboard, groupId: string,
-        dashboardId: string, project?: string)
       return:
         type:
           - >-
@@ -297,6 +297,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function replaceDashboardGroup(group: DashboardGroup, groupId: string,
+        project?: string)
       parameters:
         - id: group
           type:
@@ -311,9 +314,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function replaceDashboardGroup(group: DashboardGroup, groupId: string,
-        project?: string)
       return:
         type:
           - >-
@@ -329,6 +329,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateWidget(widget: Widget, groupId: string, dashboardId:
+        string, widgetId: string, project?: string)
       parameters:
         - id: widget
           type:
@@ -351,9 +354,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function updateWidget(widget: Widget, groupId: string, dashboardId:
-        string, widgetId: string, project?: string)
       return:
         type:
           - >-

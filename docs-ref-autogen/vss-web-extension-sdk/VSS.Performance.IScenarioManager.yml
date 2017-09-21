@@ -41,6 +41,7 @@ items:
       started hit an error condition and you want to abort performance tracking
       for the scenario.
     syntax:
+      content: 'function abortScenario(featureArea: string, name: string)'
       parameters:
         - id: featureArea
           type:
@@ -51,7 +52,6 @@ items:
             - string
           description: |
             Name of scenario.
-      content: 'function abortScenario(featureArea: string, name: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioManager.addAjaxCallStart
     name: addAjaxCallStart()
@@ -60,8 +60,8 @@ items:
       - typeScript
     summary: Add information about ajax call to all currently active scenarios
     syntax:
-      parameters: []
       content: function addAjaxCallStart()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Performance.IEndAjaxCallTiming'
@@ -74,15 +74,15 @@ items:
       - typeScript
     summary: Add an event listener for scenario-complete events
     syntax:
+      content: >-
+        function addScenarioCompletedListener(callback:
+        IPerfScenarioEventCallback)
       parameters:
         - id: callback
           type:
             - '@vss-web-extension-sdk.VSS.Performance.IPerfScenarioEventCallback'
           description: |
             Method invoked when a perf scenario has been marked as completed
-      content: >-
-        function addScenarioCompletedListener(callback:
-        IPerfScenarioEventCallback)
     type: method
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioManager.endScenario
     name: 'endScenario(featureArea: string, name: string)'
@@ -91,6 +91,7 @@ items:
       - typeScript
     summary: End scenario if it's currently active
     syntax:
+      content: 'function endScenario(featureArea: string, name: string)'
       parameters:
         - id: featureArea
           type:
@@ -101,7 +102,6 @@ items:
             - string
           description: |
             Name of scenario.
-      content: 'function endScenario(featureArea: string, name: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Performance.IScenarioManager.getAllCompletedScenarios
@@ -111,8 +111,8 @@ items:
       - typeScript
     summary: Get all completed scenarios
     syntax:
-      parameters: []
       content: function getAllCompletedScenarios()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioManager.getScenarios
     name: 'getScenarios(featureArea: string, name: string)'
@@ -121,6 +121,7 @@ items:
       - typeScript
     summary: Get active scenarios with given area/name
     syntax:
+      content: 'function getScenarios(featureArea: string, name: string)'
       parameters:
         - id: featureArea
           type:
@@ -131,7 +132,6 @@ items:
             - string
           description: |
             Name of scenario.
-      content: 'function getScenarios(featureArea: string, name: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Performance.IScenarioManager.recordPageLoadScenario
@@ -141,6 +141,9 @@ items:
       - typeScript
     summary: Record a page load scenario.
     syntax:
+      content: >-
+        function recordPageLoadScenario(featureArea: string, name: string,
+        data?: any)
       parameters:
         - id: featureArea
           type:
@@ -156,9 +159,6 @@ items:
           description: |
             Optional data to be recorded with scenario
           optional: true
-      content: >-
-        function recordPageLoadScenario(featureArea: string, name: string,
-        data?: any)
       return:
         type:
           - any
@@ -170,13 +170,13 @@ items:
       - typeScript
     summary: Insert split timing for all currently active scenarios
     syntax:
+      content: 'function split(splitName: string)'
       parameters:
         - id: splitName
           type:
             - string
           description: |
             Name of split timing
-      content: 'function split(splitName: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioManager.startScenario
     name: >-
@@ -187,6 +187,9 @@ items:
       - typeScript
     summary: Start new scenario
     syntax:
+      content: >-
+        function startScenario(featureArea: string, name: string, startTime?:
+        number, isPageInteractive?: boolean)
       parameters:
         - id: featureArea
           type:
@@ -210,9 +213,6 @@ items:
             Optional: Whether or not the scenario is the primary one for the
             page, indicating whether or not hte page is yet interactive (TTI)
           optional: true
-      content: >-
-        function startScenario(featureArea: string, name: string, startTime?:
-        number, isPageInteractive?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor'
@@ -227,6 +227,9 @@ items:
       - typeScript
     summary: Start new scenario beginning at the browser's navigationStart event
     syntax:
+      content: >-
+        function startScenarioFromNavigation(featureArea: string, name: string,
+        isPageInteractive?: boolean)
       parameters:
         - id: featureArea
           type:
@@ -243,9 +246,6 @@ items:
             Optional: Whether or not the scenario is the primary one for the
             page, indicating whether or not hte page is yet interactive (TTI)
           optional: true
-      content: >-
-        function startScenarioFromNavigation(featureArea: string, name: string,
-        isPageInteractive?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor'

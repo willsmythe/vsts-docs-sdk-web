@@ -15,7 +15,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 26967
@@ -35,6 +35,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To3_1(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -45,9 +48,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To3_1(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.JoinOrganization.RestClient.CommonMethods3To3_1.queueJoinOrganization
@@ -57,13 +57,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function queueJoinOrganization(request: JoinOrganizationRequest)'
       parameters:
         - id: request
           type:
             - >-
               @vss-web-extension-sdk.VSS.JoinOrganization.Contracts.JoinOrganizationRequest
           description: ''
-      content: 'function queueJoinOrganization(request: JoinOrganizationRequest)'
       return:
         type:
           - >-

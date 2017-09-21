@@ -32,7 +32,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.Control<@vss-web-extension-sdk.VSS.Controls.Navigation.IPivotViewOptions>
     source:
       path: vss.d.ts
@@ -64,8 +64,8 @@ items:
       - typeScript
     summary: Sets the focus on the selected pivot.
     syntax:
-      parameters: []
       content: function focusSelectedPivot()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.PivotView.getItems
     name: 'getItems(selector?: any)'
@@ -74,13 +74,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getItems(selector?: any)'
       parameters:
         - id: selector
           type:
             - any
           description: ''
           optional: true
-      content: 'function getItems(selector?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.PivotView.getSelectedView
     name: getSelectedView()
@@ -89,8 +89,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getSelectedView()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Navigation.IPivotViewItem'
@@ -102,6 +102,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getView(id: any, selectedTabId?: any)'
       parameters:
         - id: id
           type:
@@ -112,7 +113,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function getView(id: any, selectedTabId?: any)'
       return:
         type:
           - any
@@ -124,8 +124,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.PivotView.initializeOptions
     name: 'initializeOptions(options?: any)'
@@ -134,6 +134,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -141,7 +142,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.PivotView.onChanged
     name: 'onChanged(view: any)'
@@ -150,12 +150,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onChanged(view: any)'
       parameters:
         - id: view
           type:
             - any
           description: ''
-      content: 'function onChanged(view: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.PivotView.constructor
     name: 'PivotView(options?: any)'
@@ -164,13 +164,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new PivotView(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'new PivotView(options?: any)'
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.PivotView.refreshContributedItems
@@ -185,13 +185,13 @@ items:
       use forceRefresh for for refreshing contributions, by default this ensures
       we get contributions only once
     syntax:
+      content: 'function refreshContributedItems(forceRefresh?: boolean)'
       parameters:
         - id: forceRefresh
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function refreshContributedItems(forceRefresh?: boolean)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -204,12 +204,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setContributionContext(context: any)'
       parameters:
         - id: context
           type:
             - any
           description: ''
-      content: 'function setContributionContext(context: any)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.PivotView.setExtensionContainer
@@ -221,13 +221,13 @@ items:
       Sets the DOM (jQuery) container that tab extensions will be loaded in.
       Should probably be a div.
     syntax:
+      content: 'function setExtensionContainer(container: JQuery)'
       parameters:
         - id: container
           type:
             - JQuery
           description: |+
 
-      content: 'function setExtensionContainer(container: JQuery)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.PivotView.setSelectedView
     name: 'setSelectedView(view: any)'
@@ -236,12 +236,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setSelectedView(view: any)'
       parameters:
         - id: view
           type:
             - any
           description: ''
-      content: 'function setSelectedView(view: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.PivotView.setViewEnabled
     name: 'setViewEnabled(id: any, isEnabled: any)'
@@ -250,6 +250,7 @@ items:
       - typeScript
     summary: Set a particular view to be enabled or disabled.
     syntax:
+      content: 'function setViewEnabled(id: any, isEnabled: any)'
       parameters:
         - id: id
           type:
@@ -260,7 +261,6 @@ items:
             - any
           description: |
             Weather to enable the view or not
-      content: 'function setViewEnabled(id: any, isEnabled: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.PivotView.setViewLink
     name: 'setViewLink(id: string, link: string)'
@@ -269,6 +269,7 @@ items:
       - typeScript
     summary: Set a particular view's link to a new link.
     syntax:
+      content: 'function setViewLink(id: string, link: string)'
       parameters:
         - id: id
           type:
@@ -279,7 +280,6 @@ items:
             - string
           description: |
             The new link for the specified view.
-      content: 'function setViewLink(id: string, link: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.PivotView.showExtensionTab
     name: 'showExtensionTab(contributionId: string, configuration?: any)'
@@ -288,6 +288,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function showExtensionTab(contributionId: string, configuration?: any)'
       parameters:
         - id: contributionId
           type:
@@ -298,7 +299,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function showExtensionTab(contributionId: string, configuration?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.PivotView.updateItems
     name: 'updateItems(keepTabFocus?: boolean)'
@@ -307,11 +307,11 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function updateItems(keepTabFocus?: boolean)'
       parameters:
         - id: keepTabFocus
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function updateItems(keepTabFocus?: boolean)'
     type: method

@@ -29,12 +29,12 @@ items:
       - typeScript
     summary: Get the url of an MVC endpoint.
     syntax:
+      content: 'function beginGetMvcUrl(options: MvcRouteOptions)'
       parameters:
         - id: options
           type:
             - '@vss-web-extension-sdk.VSS.Locations.MvcRouteOptions'
           description: Url generation options
-      content: 'function beginGetMvcUrl(options: MvcRouteOptions)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -48,12 +48,12 @@ items:
       Get the url of particular content. If a service id is specified, its url
       needs to already be in the cached locations.
     syntax:
+      content: 'function getContentUrl(options: ContentLocationOptions)'
       parameters:
         - id: options
           type:
             - '@vss-web-extension-sdk.VSS.Locations.ContentLocationOptions'
           description: Url generation options
-      content: 'function getContentUrl(options: ContentLocationOptions)'
       return:
         type:
           - string
@@ -67,12 +67,12 @@ items:
       Get the url of an MVC endpoint. If a service id is specified, its url
       needs to already be in the cached locations.
     syntax:
+      content: 'function getMvcUrl(options: MvcRouteOptions)'
       parameters:
         - id: options
           type:
             - '@vss-web-extension-sdk.VSS.Locations.MvcRouteOptions'
           description: Url generation options
-      content: 'function getMvcUrl(options: MvcRouteOptions)'
       return:
         type:
           - string
@@ -86,6 +86,9 @@ items:
       - typeScript
     summary: Get the url of a versioned _content file from the hosting page's service.
     syntax:
+      content: >-
+        function getVersionedContentUrl(contentFileName: string,
+        serviceInstanceTypeId?: string)
       parameters:
         - id: contentFileName
           type:
@@ -96,9 +99,6 @@ items:
             - string
           description: The id of the service instance to generate the content url of
           optional: true
-      content: >-
-        function getVersionedContentUrl(contentFileName: string,
-        serviceInstanceTypeId?: string)
       return:
         type:
           - string
@@ -110,6 +110,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new UrlHelper(areaPrefix?: string, controllerPrefix?: string)'
       parameters:
         - id: areaPrefix
           type:
@@ -121,5 +122,4 @@ items:
             - string
           description: ''
           optional: true
-      content: 'new UrlHelper(areaPrefix?: string, controllerPrefix?: string)'
     type: constructor

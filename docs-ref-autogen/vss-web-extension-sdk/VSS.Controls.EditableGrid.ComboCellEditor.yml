@@ -26,7 +26,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.EditableGrid.CellEditor'
+      name: '@vss-web-extension-sdk.VSS.Controls.EditableGrid.CellEditor'
     source:
       path: vss.d.ts
       startLine: 11125
@@ -43,13 +43,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function clearValue(setEmpty?: boolean)'
       parameters:
         - id: setEmpty
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function clearValue(setEmpty?: boolean)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.ComboCellEditor.constructor
@@ -59,12 +59,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new ComboCellEditor(options: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
-      content: 'new ComboCellEditor(options: any)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.ComboCellEditor.createIn
     name: 'createIn(container: any)'
@@ -73,12 +73,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function createIn(container: any)'
       parameters:
         - id: container
           type:
             - any
           description: ''
-      content: 'function createIn(container: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.ComboCellEditor.focus
     name: focus()
@@ -87,8 +87,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function focus()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.ComboCellEditor.getComboControl
@@ -98,8 +98,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getComboControl()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Combos.Combo'
@@ -111,8 +111,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getHeight()
+      parameters: []
       return:
         type:
           - number
@@ -124,8 +124,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getValue()
+      parameters: []
       return:
         type:
           - string
@@ -137,8 +137,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.EditableGrid.ComboCellEditor.setPosition
@@ -148,6 +148,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setPosition(top: number, left: number)'
       parameters:
         - id: top
           type:
@@ -157,7 +158,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function setPosition(top: number, left: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.ComboCellEditor.setSize
     name: 'setSize($cellContext: JQuery)'
@@ -166,12 +166,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setSize($cellContext: JQuery)'
       parameters:
         - id: $cellContext
           type:
             - JQuery
           description: ''
-      content: 'function setSize($cellContext: JQuery)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.EditableGrid.ComboCellEditor.setValue
     name: 'setValue(value: string, doNotSavePrevious?: boolean)'
@@ -180,6 +180,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setValue(value: string, doNotSavePrevious?: boolean)'
       parameters:
         - id: value
           type:
@@ -190,5 +191,4 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function setValue(value: string, doNotSavePrevious?: boolean)'
     type: method

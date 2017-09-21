@@ -26,8 +26,8 @@ items:
       - typeScript
     summary: The list of handlers for this event
     syntax:
-      parameters: []
       content: function getHandlers()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Events.Handlers.EventHandlerList<TSender>'
@@ -41,6 +41,9 @@ items:
       - typeScript
     summary: Invoke the handlers that have subscribed to this event
     syntax:
+      content: >-
+        function invokeHandlers(sender: TSender, eventArgs: TEventArgs,
+        handlerResultFilter?: function)
       parameters:
         - id: sender
           type:
@@ -58,7 +61,4 @@ items:
             invocation loop based on the return value of a handler. The filter
             should return true to break out of the loop.
           optional: true
-      content: >-
-        function invokeHandlers(sender: TSender, eventArgs: TEventArgs,
-        handlerResultFilter?: function)
     type: method

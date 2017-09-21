@@ -35,6 +35,9 @@ items:
       - typeScript
     summary: Get the url for the given service
     syntax:
+      content: >-
+        function beginGetServiceUrl(serviceInstanceId: string, hostType?:
+        ContextHostType, faultInMissingHost?: boolean)
       parameters:
         - id: serviceInstanceId
           type:
@@ -52,9 +55,6 @@ items:
             If true, attempt to fault in the target host if the location's
             service definition doesn't already exist.
           optional: true
-      content: >-
-        function beginGetServiceUrl(serviceInstanceId: string, hostType?:
-        ContextHostType, faultInMissingHost?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -66,6 +66,9 @@ items:
       - typeScript
     summary: Get a (cached) VssConnection object of the given type
     syntax:
+      content: >-
+        static function getConnection(webContext?: WebContext, hostType?:
+        ContextHostType)
       parameters:
         - id: webContext
           type:
@@ -78,9 +81,6 @@ items:
           description: |
             Host type to scope the connection to
           optional: true
-      content: >-
-        static function getConnection(webContext?: WebContext, hostType?:
-        ContextHostType)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Service.VssConnection'
@@ -92,8 +92,8 @@ items:
       - typeScript
     summary: Gets the host information that this service is scoped to
     syntax:
-      parameters: []
       content: function getHostContext()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.HostContext'
@@ -105,8 +105,8 @@ items:
       - typeScript
     summary: Gets the host type that this service is scoped to
     syntax:
-      parameters: []
       content: function getHostType()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getHostUrl
     name: getHostUrl()
@@ -117,8 +117,8 @@ items:
       Gets the service host url for this connection. This is typically
       a relative url, but it can be absolute in child iframes (e.g. extensions)
     syntax:
-      parameters: []
       content: function getHostUrl()
+      parameters: []
       return:
         type:
           - string
@@ -133,6 +133,10 @@ items:
       - typeScript
     summary: Returns a new or a cached instance of an httpClient for the given type.
     syntax:
+      content: >-
+        function getHttpClient<T>(httpClientType: function, serviceInstanceId?:
+        string, authTokenManager?: IAuthTokenManager<any>, clientOptions?:
+        IVssHttpClientOptions)
       parameters:
         - id: httpClientType
           type:
@@ -153,10 +157,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        function getHttpClient<T>(httpClientType: function, serviceInstanceId?:
-        string, authTokenManager?: IAuthTokenManager<any>, clientOptions?:
-        IVssHttpClientOptions)
       return:
         type:
           - T
@@ -168,6 +168,7 @@ items:
       - typeScript
     summary: Gets a (potentially-cached) service associated with this connection
     syntax:
+      content: 'function getService<T>(serviceType: function, useCached?: boolean)'
       parameters:
         - id: serviceType
           type:
@@ -178,7 +179,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function getService<T>(serviceType: function, useCached?: boolean)'
       return:
         type:
           - T
@@ -190,8 +190,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getWebContext()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
@@ -203,6 +203,7 @@ items:
       - typeScript
     summary: Create a new connection object
     syntax:
+      content: 'new VssConnection(webContext: WebContext, hostType?: ContextHostType)'
       parameters:
         - id: webContext
           type:
@@ -214,5 +215,4 @@ items:
           description: |
             Host type to scope the connection to
           optional: true
-      content: 'new VssConnection(webContext: WebContext, hostType?: ContextHostType)'
     type: constructor

@@ -45,7 +45,7 @@ items:
     type: class
     summary: Manages all RegisteredExtension instances and their contributions.
     extends:
-      - '@vss-web-extension-sdk.VSS.Service.VssService'
+      name: '@vss-web-extension-sdk.VSS.Service.VssService'
     source:
       path: vss.d.ts
       startLine: 8700
@@ -63,8 +63,8 @@ items:
       - typeScript
     summary: Private constructor - do not call.
     syntax:
-      parameters: []
       content: new ExtensionService()
+      parameters: []
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.getBaseUri
@@ -74,13 +74,13 @@ items:
       - typeScript
     summary: Get the baseUri this contribution.
     syntax:
+      content: 'function getBaseUri(contribution: Contribution)'
       parameters:
         - id: contribution
           type:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose baseUri is being requested
-      content: 'function getBaseUri(contribution: Contribution)'
       return:
         type:
           - string
@@ -93,12 +93,12 @@ items:
       - typeScript
     summary: Get the contribution with the given id.
     syntax:
+      content: 'function getContribution(id: string)'
       parameters:
         - id: id
           type:
             - string
           description: Full id of the contribution to fetch
-      content: 'function getContribution(id: string)'
       return:
         type:
           - >-
@@ -114,6 +114,10 @@ items:
       - typeScript
     summary: Gets contributions for the given contribution ids.
     syntax:
+      content: >-
+        function getContributions(ids: string[], includeRootItems: boolean,
+        includeChildren: boolean, recursive?: boolean, contributionType?:
+        string)
       parameters:
         - id: ids
           type:
@@ -137,10 +141,6 @@ items:
             - string
           description: Optional type of contribution to filter by
           optional: true
-      content: >-
-        function getContributions(ids: string[], includeRootItems: boolean,
-        includeChildren: boolean, recursive?: boolean, contributionType?:
-        string)
       return:
         type:
           - >-
@@ -154,6 +154,9 @@ items:
       - typeScript
     summary: Gets the contributions that target the given contribution ids
     syntax:
+      content: >-
+        function getContributionsForTarget(targetId: string, contributionType?:
+        string)
       parameters:
         - id: targetId
           type:
@@ -164,9 +167,6 @@ items:
             - string
           description: Optional type of contribution to filter by
           optional: true
-      content: >-
-        function getContributionsForTarget(targetId: string, contributionType?:
-        string)
       return:
         type:
           - >-
@@ -180,6 +180,9 @@ items:
       - typeScript
     summary: Gets the contributions that target the given contribution ids
     syntax:
+      content: >-
+        function getContributionsForTargets(targetIds: string[],
+        contributionType?: string)
       parameters:
         - id: targetIds
           type:
@@ -190,9 +193,6 @@ items:
             - string
           description: Optional type of contribution to filter by
           optional: true
-      content: >-
-        function getContributionsForTargets(targetIds: string[],
-        contributionType?: string)
       return:
         type:
           - >-
@@ -206,13 +206,13 @@ items:
       - typeScript
     summary: Get the fallbackUri this contribution.
     syntax:
+      content: 'function getFallbackUri(contribution: Contribution)'
       parameters:
         - id: contribution
           type:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose fallbackUri is being requested
-      content: 'function getFallbackUri(contribution: Contribution)'
       return:
         type:
           - string
@@ -232,13 +232,13 @@ items:
 
       via JSON island data or those already fetched by a prior REST call.
     syntax:
+      content: 'function getLoadedContributionsOfType(contributionType: string)'
       parameters:
         - id: contributionType
           type:
             - string
           description: |
             The full id of the contribution type
-      content: 'function getLoadedContributionsOfType(contributionType: string)'
       return:
         type:
           - >-
@@ -252,13 +252,13 @@ items:
       - typeScript
     summary: Get the version this contribution.
     syntax:
+      content: 'function getProviderDisplayName(contribution: Contribution)'
       parameters:
         - id: contribution
           type:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose version is being requested
-      content: 'function getProviderDisplayName(contribution: Contribution)'
       return:
         type:
           - string
@@ -271,6 +271,9 @@ items:
       - typeScript
     summary: Get the specified provider property for this contribution.
     syntax:
+      content: >-
+        function getProviderProperty(contribution: Contribution, propertyName:
+        string)
       parameters:
         - id: contribution
           type:
@@ -281,9 +284,6 @@ items:
             - string
           description: |
             The property being requested
-      content: >-
-        function getProviderProperty(contribution: Contribution, propertyName:
-        string)
       return:
         type:
           - string
@@ -296,13 +296,13 @@ items:
       - typeScript
     summary: Get the registrationId this contribution.
     syntax:
+      content: 'function getRegistrationId(contribution: Contribution)'
       parameters:
         - id: contribution
           type:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose registration is being requested
-      content: 'function getRegistrationId(contribution: Contribution)'
       return:
         type:
           - string
@@ -315,13 +315,13 @@ items:
       - typeScript
     summary: Get the ServiceInstanceTypeProperty for this contribution.
     syntax:
+      content: 'function getServiceInstanceType(contribution: Contribution)'
       parameters:
         - id: contribution
           type:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose fallbackUri is being requested
-      content: 'function getServiceInstanceType(contribution: Contribution)'
       return:
         type:
           - string
@@ -334,13 +334,13 @@ items:
       - typeScript
     summary: Get the version this contribution.
     syntax:
+      content: 'function getVersion(contribution: Contribution)'
       parameters:
         - id: contribution
           type:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose version is being requested
-      content: 'function getVersion(contribution: Contribution)'
       return:
         type:
           - string
@@ -357,13 +357,13 @@ items:
 
       Should be called by the Service factory.
     syntax:
+      content: 'function initializeConnection(connection: VssConnection)'
       parameters:
         - id: connection
           type:
             - '@vss-web-extension-sdk.VSS.Service.VssConnection'
           description: |
             Service.VssConnection
-      content: 'function initializeConnection(connection: VssConnection)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.isExtensionActive
@@ -375,13 +375,13 @@ items:
       Determines whether or not the provided extension id is currently active -
       installed, licensed, and enabled.
     syntax:
+      content: 'function isExtensionActive(extensionId: string)'
       parameters:
         - id: extensionId
           type:
             - string
           description: |
             The extension id (e.g. 'ms.vss-testmanager-web') to check
-      content: 'function isExtensionActive(extensionId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -396,6 +396,10 @@ items:
       - typeScript
     summary: Gets contributions for the given contribution ids.
     syntax:
+      content: >-
+        function queryContributions(ids: string[], queryOptions:
+        ContributionQueryOptions, contributionType?: string, queryCallback?:
+        ContributionQueryCallback)
       parameters:
         - id: ids
           type:
@@ -416,10 +420,6 @@ items:
               @vss-web-extension-sdk.VSS.Contributions.Services.ContributionQueryCallback
           description: Optional method to filter contributions by
           optional: true
-      content: >-
-        function queryContributions(ids: string[], queryOptions:
-        ContributionQueryOptions, contributionType?: string, queryCallback?:
-        ContributionQueryCallback)
       return:
         type:
           - >-
@@ -437,6 +437,9 @@ items:
       Register the given contributions with this service instance, avoiding an
       AJAX call for the specified contributions
     syntax:
+      content: >-
+        function registerContributionData(contributionData:
+        ContributionsPageData, clearExisting?: boolean)
       parameters:
         - id: contributionData
           type:
@@ -450,9 +453,6 @@ items:
             If true, clear any existing contribution hierarchy. If false, add to
             it.
           optional: true
-      content: >-
-        function registerContributionData(contributionData:
-        ContributionsPageData, clearExisting?: boolean)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionService.registerContributions
@@ -462,10 +462,10 @@ items:
       - typeScript
     summary: Register contributions
     syntax:
+      content: 'function registerContributions(contributions: Contribution[])'
       parameters:
         - id: contributions
           type:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution[]'
           description: ''
-      content: 'function registerContributions(contributions: Contribution[])'
     type: method

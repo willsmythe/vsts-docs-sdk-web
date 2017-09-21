@@ -17,7 +17,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.FeatureManagement.RestClient.CommonMethods3To4
     source:
       path: vss.d.ts
@@ -38,6 +38,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -48,9 +51,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.FeatureManagement.RestClient.CommonMethods3_1To4.queryFeatureStates
@@ -60,13 +60,13 @@ items:
       - typeScript
     summary: '[Preview API] Get the effective state for a list of feature ids'
     syntax:
+      content: 'function queryFeatureStates(query: ContributedFeatureStateQuery)'
       parameters:
         - id: query
           type:
             - >-
               @vss-web-extension-sdk.VSS.FeatureManagement.Contracts.ContributedFeatureStateQuery
           description: Features to query along with current scope values
-      content: 'function queryFeatureStates(query: ContributedFeatureStateQuery)'
       return:
         type:
           - >-
@@ -84,6 +84,9 @@ items:
       [Preview API] Get the states of the specified features for the default
       scope
     syntax:
+      content: >-
+        function queryFeatureStatesForDefaultScope(query:
+        ContributedFeatureStateQuery, userScope: string)
       parameters:
         - id: query
           type:
@@ -94,9 +97,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function queryFeatureStatesForDefaultScope(query:
-        ContributedFeatureStateQuery, userScope: string)
       return:
         type:
           - >-
@@ -114,6 +114,10 @@ items:
       [Preview API] Get the states of the specified features for the specific
       named scope
     syntax:
+      content: >-
+        function queryFeatureStatesForNamedScope(query:
+        ContributedFeatureStateQuery, userScope: string, scopeName: string,
+        scopeValue: string)
       parameters:
         - id: query
           type:
@@ -132,10 +136,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function queryFeatureStatesForNamedScope(query:
-        ContributedFeatureStateQuery, userScope: string, scopeName: string,
-        scopeValue: string)
       return:
         type:
           - >-

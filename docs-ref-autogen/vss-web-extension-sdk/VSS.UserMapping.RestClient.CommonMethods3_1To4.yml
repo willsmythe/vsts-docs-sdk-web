@@ -17,7 +17,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 32515
@@ -37,6 +37,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function activateUserAccountMapping(userId: string, accountId: string,
+        userType?: UserType)
       parameters:
         - id: userId
           type:
@@ -51,9 +54,6 @@ items:
             - UserType
           description: ''
           optional: true
-      content: >-
-        function activateUserAccountMapping(userId: string, accountId: string,
-        userType?: UserType)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -68,6 +68,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -78,9 +81,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.UserMapping.RestClient.CommonMethods3_1To4.queryAccountIds
@@ -93,6 +93,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function queryAccountIds(userId: string, userType: UserType,
+        useEqualsCheckForUserTypeMatch?: boolean, includeDeletedAccounts?:
+        boolean)
       parameters:
         - id: userId
           type:
@@ -112,10 +116,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function queryAccountIds(userId: string, userType: UserType,
-        useEqualsCheckForUserTypeMatch?: boolean, includeDeletedAccounts?:
-        boolean)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string[]>'

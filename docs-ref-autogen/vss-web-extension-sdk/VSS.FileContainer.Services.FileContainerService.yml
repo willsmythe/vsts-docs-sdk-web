@@ -13,7 +13,7 @@ items:
     type: class
     summary: Service to manage file container data
     extends:
-      - '@vss-web-extension-sdk.VSS.Service.VssService'
+      name: '@vss-web-extension-sdk.VSS.Service.VssService'
     source:
       path: vss.d.ts
       startLine: 21180
@@ -31,6 +31,9 @@ items:
       - typeScript
     summary: Returns a list of file container items
     syntax:
+      content: >-
+        function beginGetItems(containerId: number, scope: string, itemPath:
+        string)
       parameters:
         - id: containerId
           type:
@@ -45,9 +48,6 @@ items:
             - string
           description: |
             The path of the item within the container
-      content: >-
-        function beginGetItems(containerId: number, scope: string, itemPath:
-        string)
       return:
         type:
           - >-
@@ -61,13 +61,13 @@ items:
       - typeScript
     summary: Returns the file container info
     syntax:
+      content: 'function parseContainerPath(fileContainerPath: string)'
       parameters:
         - id: fileContainerPath
           type:
             - string
           description: |
             The path of the container. For example, "#/12/drop".
-      content: 'function parseContainerPath(fileContainerPath: string)'
       return:
         type:
           - >-

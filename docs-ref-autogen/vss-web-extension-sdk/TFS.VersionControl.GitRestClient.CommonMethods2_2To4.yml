@@ -15,7 +15,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2_1To4
     source:
       path: tfs.d.ts
@@ -36,6 +36,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2_2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -46,9 +49,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2_2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2_2To4.getDeletedRepositories
@@ -58,12 +58,12 @@ items:
       - typeScript
     summary: '[Preview API] Retrieve deleted git repositories.'
     syntax:
+      content: 'function getDeletedRepositories(project: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
-      content: 'function getDeletedRepositories(project: string)'
       return:
         type:
           - >-
@@ -79,6 +79,7 @@ items:
       [Preview API] Retrieve a set of suggestions (including a pull request
       suggestion).
     syntax:
+      content: 'function getSuggestions(repositoryId: string, project?: string)'
       parameters:
         - id: repositoryId
           type:
@@ -89,7 +90,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function getSuggestions(repositoryId: string, project?: string)'
       return:
         type:
           - >-

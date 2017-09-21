@@ -13,7 +13,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Accounts.RestClient.CommonMethods2To4'
+      name: '@vss-web-extension-sdk.VSS.Accounts.RestClient.CommonMethods2To4'
     source:
       path: vss.d.ts
       startLine: 3340
@@ -33,6 +33,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3_2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -43,9 +46,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3_2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Accounts.RestClient.CommonMethods3_2To4.getAccounts
@@ -59,6 +59,9 @@ items:
       AccountName and AccountId information, will use collection host Id as the
       AccountId.
     syntax:
+      content: >-
+        function getAccounts(ownerId?: string, memberId?: string, properties?:
+        string)
       parameters:
         - id: ownerId
           type:
@@ -75,9 +78,6 @@ items:
             - string
           description: Only support service URL properties
           optional: true
-      content: >-
-        function getAccounts(ownerId?: string, memberId?: string, properties?:
-        string)
       return:
         type:
           - >-

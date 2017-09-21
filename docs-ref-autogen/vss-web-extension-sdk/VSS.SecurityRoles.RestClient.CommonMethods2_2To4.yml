@@ -23,7 +23,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 31207
@@ -43,6 +43,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2_2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -53,9 +56,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2_2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.SecurityRoles.RestClient.CommonMethods2_2To4.getRoleAssignments
@@ -65,6 +65,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getRoleAssignments(scopeId: string, resourceId: string)'
       parameters:
         - id: scopeId
           type:
@@ -74,7 +75,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getRoleAssignments(scopeId: string, resourceId: string)'
       return:
         type:
           - >-
@@ -88,12 +88,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getRoleDefinitions(scopeId: string)'
       parameters:
         - id: scopeId
           type:
             - string
           description: ''
-      content: 'function getRoleDefinitions(scopeId: string)'
       return:
         type:
           - >-
@@ -109,6 +109,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function removeRoleAssignment(scopeId: string, resourceId: string,
+        identityId: string)
       parameters:
         - id: scopeId
           type:
@@ -122,9 +125,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function removeRoleAssignment(scopeId: string, resourceId: string,
-        identityId: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -139,6 +139,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function removeRoleAssignments(identityIds: string[], scopeId: string,
+        resourceId: string)
       parameters:
         - id: identityIds
           type:
@@ -152,9 +155,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function removeRoleAssignments(identityIds: string[], scopeId: string,
-        resourceId: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -169,6 +169,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function setRoleAssignment(roleAssignment: UserRoleAssignmentRef,
+        scopeId: string, resourceId: string, identityId: string)
       parameters:
         - id: roleAssignment
           type:
@@ -187,9 +190,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function setRoleAssignment(roleAssignment: UserRoleAssignmentRef,
-        scopeId: string, resourceId: string, identityId: string)
       return:
         type:
           - >-
@@ -205,6 +205,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function setRoleAssignments(roleAssignments: UserRoleAssignmentRef[],
+        scopeId: string, resourceId: string)
       parameters:
         - id: roleAssignments
           type:
@@ -219,9 +222,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function setRoleAssignments(roleAssignments: UserRoleAssignmentRef[],
-        scopeId: string, resourceId: string)
       return:
         type:
           - >-

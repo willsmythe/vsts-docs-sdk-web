@@ -12,7 +12,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Contributions.RestClient.CommonMethods3_1To4'
+      name: '@vss-web-extension-sdk.VSS.Contributions.RestClient.CommonMethods3_1To4'
     source:
       path: vss.d.ts
       startLine: 8581
@@ -32,6 +32,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new ContributionsHttpClient3_2(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -42,7 +45,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new ContributionsHttpClient3_2(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

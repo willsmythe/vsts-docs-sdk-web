@@ -13,7 +13,7 @@ items:
       Provides an easy-to-use tracking object for sending customer intelligence
       telemetries
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent<@vss-web-extension-sdk.VSS.Profile.Metrics.IntervalMetricsEvent>
     source:
       path: vss.d.ts
@@ -31,8 +31,8 @@ items:
       - typeScript
     summary: Set startTime for this metrics event to Date.now()
     syntax:
-      parameters: []
       content: function begin()
+      parameters: []
       return:
         type:
           - number
@@ -46,8 +46,8 @@ items:
       Set elapsedTime if the start timestamp has been set by Date.now() -
       startTime
     syntax:
-      parameters: []
       content: function end()
+      parameters: []
       return:
         type:
           - number

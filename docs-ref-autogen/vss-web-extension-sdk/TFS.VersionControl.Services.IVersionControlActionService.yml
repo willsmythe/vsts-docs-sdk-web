@@ -32,6 +32,9 @@ items:
       - typeScript
     summary: Launches create branch dialog
     syntax:
+      content: >-
+        function beginLaunchCreateBranchDialog(workItemIds: number[], project?:
+        string, projectId?: string)
       parameters:
         - id: workItemIds
           type:
@@ -48,9 +51,6 @@ items:
           description: |
             The Project ID/Guid to open the dialog for
           optional: true
-      content: >-
-        function beginLaunchCreateBranchDialog(workItemIds: number[], project?:
-        string, projectId?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'

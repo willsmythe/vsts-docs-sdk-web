@@ -42,6 +42,10 @@ items:
 
       after reading from the cache
     syntax:
+      content: >-
+        function getCachedPageData<T>(cachedDataProviderContributionId: string,
+        primaryDataProviderContributionId?: string, refreshCache?: boolean,
+        contractMetadata?: ContractMetadata)
       parameters:
         - id: cachedDataProviderContributionId
           type:
@@ -68,10 +72,6 @@ items:
             Optional contract metadata to use when deserializing the JSON island
             data
           optional: true
-      content: >-
-        function getCachedPageData<T>(cachedDataProviderContributionId: string,
-        primaryDataProviderContributionId?: string, refreshCache?: boolean,
-        contractMetadata?: ContractMetadata)
       return:
         type:
           - T
@@ -84,12 +84,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getContainerHub(context: IHubsProviderContext)'
       parameters:
         - id: context
           type:
             - '@vss-web-extension-sdk.IHubsProviderContext'
           description: ''
-      content: 'function getContainerHub(context: IHubsProviderContext)'
       return:
         type:
           - >-
@@ -102,12 +102,12 @@ items:
       - typeScript
     summary: Create a hubs provider
     syntax:
+      content: 'new HubsProvider(variesByOwner: boolean)'
       parameters:
         - id: variesByOwner
           type:
             - boolean
           description: ''
-      content: 'new HubsProvider(variesByOwner: boolean)'
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.HubsProvider.HubsProvider.invokeRefreshCallbacks
@@ -117,8 +117,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function invokeRefreshCallbacks()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.HubsProvider.HubsProvider.reloadCachedProviderData
@@ -130,6 +130,9 @@ items:
       - typeScript
     summary: Always reloads provider data by queuing up a new request
     syntax:
+      content: >-
+        function reloadCachedProviderData(cachedDataProviderContributionId:
+        string, properties?: any)
       parameters:
         - id: cachedDataProviderContributionId
           type:
@@ -142,7 +145,4 @@ items:
             Additional properties to pass to the provider on reload as part of
             the context
           optional: true
-      content: >-
-        function reloadCachedProviderData(cachedDataProviderContributionId:
-        string, properties?: any)
     type: method

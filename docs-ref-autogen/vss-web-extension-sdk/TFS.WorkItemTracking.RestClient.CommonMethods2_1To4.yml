@@ -21,7 +21,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.CommonMethods2To4'
+      name: '@vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.CommonMethods2To4'
     source:
       path: tfs.d.ts
       startLine: 20964
@@ -41,6 +41,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -51,9 +54,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.CommonMethods2_1To4.destroyWorkItem
@@ -63,6 +63,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function destroyWorkItem(id: number, project?: string)'
       parameters:
         - id: id
           type:
@@ -73,7 +74,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function destroyWorkItem(id: number, project?: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -86,6 +86,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getDeletedWorkItem(id: number, project?: string)'
       parameters:
         - id: id
           type:
@@ -96,7 +97,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function getDeletedWorkItem(id: number, project?: string)'
       return:
         type:
           - >-
@@ -110,13 +110,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getDeletedWorkItemReferences(project?: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function getDeletedWorkItemReferences(project?: string)'
       return:
         type:
           - >-
@@ -130,6 +130,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getDeletedWorkItems(ids: number[], project?: string)'
       parameters:
         - id: ids
           type:
@@ -140,7 +141,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function getDeletedWorkItems(ids: number[], project?: string)'
       return:
         type:
           - >-
@@ -156,6 +156,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function restoreWorkItem(payload: WorkItemDeleteUpdate, id: number,
+        project?: string)
       parameters:
         - id: payload
           type:
@@ -171,9 +174,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function restoreWorkItem(payload: WorkItemDeleteUpdate, id: number,
-        project?: string)
       return:
         type:
           - >-

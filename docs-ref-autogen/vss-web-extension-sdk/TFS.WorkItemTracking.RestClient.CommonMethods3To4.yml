@@ -25,7 +25,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.CommonMethods2_2To4
     source:
       path: tfs.d.ts
@@ -46,6 +46,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -56,9 +59,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.CommonMethods3To4.createTemplate
@@ -68,6 +68,9 @@ items:
       - typeScript
     summary: '[Preview API] Creates a template'
     syntax:
+      content: >-
+        function createTemplate(template: WorkItemTemplate, project: string,
+        team: string)
       parameters:
         - id: template
           type:
@@ -82,9 +85,6 @@ items:
           type:
             - string
           description: Team ID or team name
-      content: >-
-        function createTemplate(template: WorkItemTemplate, project: string,
-        team: string)
       return:
         type:
           - >-
@@ -98,6 +98,9 @@ items:
       - typeScript
     summary: '[Preview API] Deletes the template with given id'
     syntax:
+      content: >-
+        function deleteTemplate(project: string, team: string, templateId:
+        string)
       parameters:
         - id: project
           type:
@@ -111,9 +114,6 @@ items:
           type:
             - string
           description: Template id
-      content: >-
-        function deleteTemplate(project: string, team: string, templateId:
-        string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -126,6 +126,7 @@ items:
       - typeScript
     summary: '[Preview API] Returns comment for a work item at the specified revision'
     syntax:
+      content: 'function getComment(id: number, revision: number)'
       parameters:
         - id: id
           type:
@@ -135,7 +136,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getComment(id: number, revision: number)'
       return:
         type:
           - >-
@@ -153,6 +153,9 @@ items:
       [Preview API] Returns specified number of comments for a work item from
       the specified revision
     syntax:
+      content: >-
+        function getComments(id: number, fromRevision?: number, top?: number,
+        order?: CommentSortOrder)
       parameters:
         - id: id
           type:
@@ -173,9 +176,6 @@ items:
             - CommentSortOrder
           description: Ascending or descending by revision id
           optional: true
-      content: >-
-        function getComments(id: number, fromRevision?: number, top?: number,
-        order?: CommentSortOrder)
       return:
         type:
           - >-
@@ -189,6 +189,7 @@ items:
       - typeScript
     summary: '[Preview API] Gets the template with specified id'
     syntax:
+      content: 'function getTemplate(project: string, team: string, templateId: string)'
       parameters:
         - id: project
           type:
@@ -202,7 +203,6 @@ items:
           type:
             - string
           description: Template Id
-      content: 'function getTemplate(project: string, team: string, templateId: string)'
       return:
         type:
           - >-
@@ -216,6 +216,9 @@ items:
       - typeScript
     summary: '[Preview API] Gets template'
     syntax:
+      content: >-
+        function getTemplates(project: string, team: string, workitemtypename?:
+        string)
       parameters:
         - id: project
           type:
@@ -230,9 +233,6 @@ items:
             - string
           description: 'Optional, When specified returns templates for given Work item type.'
           optional: true
-      content: >-
-        function getTemplates(project: string, team: string, workitemtypename?:
-        string)
       return:
         type:
           - >-
@@ -248,6 +248,9 @@ items:
       - typeScript
     summary: '[Preview API] Replace template contents'
     syntax:
+      content: >-
+        function replaceTemplate(templateContent: WorkItemTemplate, project:
+        string, team: string, templateId: string)
       parameters:
         - id: templateContent
           type:
@@ -266,9 +269,6 @@ items:
           type:
             - string
           description: Template id
-      content: >-
-        function replaceTemplate(templateContent: WorkItemTemplate, project:
-        string, team: string, templateId: string)
       return:
         type:
           - >-

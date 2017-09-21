@@ -28,13 +28,13 @@ items:
       - typeScript
     summary: Appends the specified text to the end of the string buffer.
     syntax:
+      content: 'function append(text: string)'
       parameters:
         - id: text
           type:
             - string
           description: |
             The text to append.
-      content: 'function append(text: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Utils.String.StringBuilder.appendNewLine
     name: appendNewLine()
@@ -43,8 +43,8 @@ items:
       - typeScript
     summary: Appends a new-line to the current text buffer.
     syntax:
-      parameters: []
       content: function appendNewLine()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Utils.String.StringBuilder.constructor
     name: 'StringBuilder(initialText?: string)'
@@ -55,6 +55,7 @@ items:
       Utility class for building strings - similar to the
       System.Text.StringBuilder .NET class.
     syntax:
+      content: 'new StringBuilder(initialText?: string)'
       parameters:
         - id: initialText
           type:
@@ -62,7 +63,6 @@ items:
           description: |
             The initial text for the builder
           optional: true
-      content: 'new StringBuilder(initialText?: string)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Utils.String.StringBuilder.toString
     name: toString()
@@ -71,8 +71,8 @@ items:
       - typeScript
     summary: Concatenates all text in the string buffer into a single string value.
     syntax:
-      parameters: []
       content: function toString()
+      parameters: []
       return:
         type:
           - string

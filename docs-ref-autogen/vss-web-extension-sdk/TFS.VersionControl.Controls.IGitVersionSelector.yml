@@ -35,8 +35,8 @@ items:
       Gets the selected item, including arbitrary text as the branchName if
       allowUnmatchedSelection is true.
     syntax:
-      parameters: []
       content: function getSelectedVersion()
+      parameters: []
       return:
         type:
           - >-
@@ -50,12 +50,12 @@ items:
       - typeScript
     summary: Fetches repository by Id and updates the lists of branches and tags
     syntax:
+      content: 'function setRepositoryId(repositoryId: string)'
       parameters:
         - id: repositoryId
           type:
             - string
           description: ''
-      content: 'function setRepositoryId(repositoryId: string)'
       return:
         type:
           - >-
@@ -71,13 +71,13 @@ items:
       Sets the selected item, including arbitrary text as the branchName if
       allowUnmatchedSelection is true.
     syntax:
+      content: 'function setSelectedVersion(item: IGitVersionSelectorItem)'
       parameters:
         - id: item
           type:
             - >-
               @vss-web-extension-sdk.TFS.VersionControl.Controls.IGitVersionSelectorItem
           description: ''
-      content: 'function setSelectedVersion(item: IGitVersionSelectorItem)'
       return:
         type:
           - any

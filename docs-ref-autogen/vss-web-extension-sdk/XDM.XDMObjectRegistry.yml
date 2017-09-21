@@ -27,6 +27,7 @@ items:
       - typeScript
     summary: Get an instance of an object registered with the given id
     syntax:
+      content: 'function getInstance<T>(instanceId: string, contextData?: Object)'
       parameters:
         - id: instanceId
           type:
@@ -39,7 +40,6 @@ items:
             Optional context data to pass to a registered object's factory
             method
           optional: true
-      content: 'function getInstance<T>(instanceId: string, contextData?: Object)'
       return:
         type:
           - T
@@ -53,6 +53,7 @@ items:
       Register an object (instance or factory method) exposed by this frame to
       callers in a remote frame
     syntax:
+      content: 'function register(instanceId: string, instance: Object)'
       parameters:
         - id: instanceId
           type:
@@ -64,7 +65,6 @@ items:
           description: >
             Either: (1) an object instance, or (2) a function that takes
             optional context data and returns an object instance.
-      content: 'function register(instanceId: string, instance: Object)'
     type: method
   - uid: vss-web-extension-sdk.XDM.XDMObjectRegistry.unregister
     name: 'unregister(instanceId: string)'
@@ -75,11 +75,11 @@ items:
       Unregister an object (instance or factory method) that was previously
       registered by this frame
     syntax:
+      content: 'function unregister(instanceId: string)'
       parameters:
         - id: instanceId
           type:
             - string
           description: |
             unique id of the registered object
-      content: 'function unregister(instanceId: string)'
     type: method

@@ -29,6 +29,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function publish(eventData: TelemetryEventData, publishImmediately?:
+        boolean)
       parameters:
         - id: eventData
           type:
@@ -40,9 +43,6 @@ items:
           description: |
             flush all currently queueed events and publish them immediately
           optional: true
-      content: >-
-        function publish(eventData: TelemetryEventData, publishImmediately?:
-        boolean)
       return:
         type:
           - Promise<void>
@@ -54,6 +54,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new TelemetryAsyncHelper(client?: CustomerIntelligenceHttpClient)'
       parameters:
         - id: client
           type:
@@ -61,5 +62,4 @@ items:
               @vss-web-extension-sdk.VSS.Telemetry.RestClient.CustomerIntelligenceHttpClient
           description: ''
           optional: true
-      content: 'new TelemetryAsyncHelper(client?: CustomerIntelligenceHttpClient)'
     type: constructor

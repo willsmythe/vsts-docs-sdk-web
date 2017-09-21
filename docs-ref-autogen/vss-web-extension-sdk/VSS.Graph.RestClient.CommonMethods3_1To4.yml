@@ -13,7 +13,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 24445
@@ -32,6 +32,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -42,9 +45,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_1To4.getDescriptor
@@ -54,12 +54,12 @@ items:
       - typeScript
     summary: '[Preview API] Resolve a storage key to a descriptor'
     syntax:
+      content: 'function getDescriptor(storageKey: string)'
       parameters:
         - id: storageKey
           type:
             - string
           description: 'Storage key of the subject (user, group, scope, etc.) to resolve'
-      content: 'function getDescriptor(storageKey: string)'
       return:
         type:
           - >-

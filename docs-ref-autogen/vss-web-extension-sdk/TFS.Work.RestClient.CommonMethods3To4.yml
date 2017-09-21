@@ -27,7 +27,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.Work.RestClient.CommonMethods2To4'
+      name: '@vss-web-extension-sdk.TFS.Work.RestClient.CommonMethods2To4'
     source:
       path: tfs.d.ts
       startLine: 22872
@@ -46,6 +46,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -56,9 +59,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: vss-web-extension-sdk.TFS.Work.RestClient.CommonMethods3To4.createPlan
     name: 'createPlan(postedPlan: CreatePlan, project: string)'
@@ -67,6 +67,7 @@ items:
       - typeScript
     summary: '[Preview API] Add a new plan for the team'
     syntax:
+      content: 'function createPlan(postedPlan: CreatePlan, project: string)'
       parameters:
         - id: postedPlan
           type:
@@ -76,7 +77,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: 'function createPlan(postedPlan: CreatePlan, project: string)'
       return:
         type:
           - >-
@@ -89,6 +89,7 @@ items:
       - typeScript
     summary: '[Preview API] Delete the specified plan'
     syntax:
+      content: 'function deletePlan(project: string, id: string)'
       parameters:
         - id: project
           type:
@@ -98,7 +99,6 @@ items:
           type:
             - string
           description: Identifier of the plan
-      content: 'function deletePlan(project: string, id: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -113,6 +113,7 @@ items:
       [Preview API] Returns the board filter settings for the given board id or
       board by name
     syntax:
+      content: 'function getBoardFilterSettings(teamContext: TeamContext, board: string)'
       parameters:
         - id: teamContext
           type:
@@ -122,7 +123,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getBoardFilterSettings(teamContext: TeamContext, board: string)'
       return:
         type:
           - >-
@@ -140,6 +140,9 @@ items:
       [Preview API] Returns the list of parent field filter model for the given
       list of workitem ids
     syntax:
+      content: >-
+        function getBoardMappingParentItems(teamContext: TeamContext,
+        childBacklogContextCategoryRefName: string, workitemIds: number[])
       parameters:
         - id: teamContext
           type:
@@ -153,9 +156,6 @@ items:
           type:
             - 'number[]'
           description: ''
-      content: >-
-        function getBoardMappingParentItems(teamContext: TeamContext,
-        childBacklogContextCategoryRefName: string, workitemIds: number[])
       return:
         type:
           - >-
@@ -169,6 +169,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getBoardUserSettings(teamContext: TeamContext, board: string)'
       parameters:
         - id: teamContext
           type:
@@ -178,7 +179,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getBoardUserSettings(teamContext: TeamContext, board: string)'
       return:
         type:
           - >-
@@ -194,6 +194,9 @@ items:
       - typeScript
     summary: '[Preview API] Get Delivery View Data'
     syntax:
+      content: >-
+        function getDeliveryTimelineData(project: string, id: string, revision?:
+        number, startDate?: Date, endDate?: Date)
       parameters:
         - id: project
           type:
@@ -222,9 +225,6 @@ items:
             - Date
           description: The end date of timeline
           optional: true
-      content: >-
-        function getDeliveryTimelineData(project: string, id: string, revision?:
-        number, startDate?: Date, endDate?: Date)
       return:
         type:
           - >-
@@ -237,6 +237,7 @@ items:
       - typeScript
     summary: '[Preview API] Get the information for the specified plan'
     syntax:
+      content: 'function getPlan(project: string, id: string)'
       parameters:
         - id: project
           type:
@@ -246,7 +247,6 @@ items:
           type:
             - string
           description: Identifier of the plan
-      content: 'function getPlan(project: string, id: string)'
       return:
         type:
           - >-
@@ -261,12 +261,12 @@ items:
       [Preview API] Get the information for all the plans configured for the
       given team
     syntax:
+      content: 'function getPlans(project: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
-      content: 'function getPlans(project: string)'
       return:
         type:
           - >-
@@ -284,6 +284,9 @@ items:
       [Preview API] Update board filter settings for the board id or board by
       name
     syntax:
+      content: >-
+        function updateBoardFilterSettings(filterSettings: BoardFilterSettings,
+        teamContext: TeamContext, board: string)
       parameters:
         - id: filterSettings
           type:
@@ -297,9 +300,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateBoardFilterSettings(filterSettings: BoardFilterSettings,
-        teamContext: TeamContext, board: string)
       return:
         type:
           - >-
@@ -315,6 +315,9 @@ items:
       - typeScript
     summary: '[Preview API] Update board user settings for the board id'
     syntax:
+      content: >-
+        function updateBoardUserSettings(boardUserSettings: [key: string]:
+        string, teamContext: TeamContext, board: string)
       parameters:
         - id: boardUserSettings
           type:
@@ -328,9 +331,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateBoardUserSettings(boardUserSettings: [key: string]:
-        string, teamContext: TeamContext, board: string)
       return:
         type:
           - >-
@@ -343,6 +343,9 @@ items:
       - typeScript
     summary: '[Preview API] Update the information for the specified plan'
     syntax:
+      content: >-
+        function updatePlan(updatedPlan: UpdatePlan, project: string, id:
+        string)
       parameters:
         - id: updatedPlan
           type:
@@ -356,9 +359,6 @@ items:
           type:
             - string
           description: Identifier of the plan
-      content: >-
-        function updatePlan(updatedPlan: UpdatePlan, project: string, id:
-        string)
       return:
         type:
           - >-

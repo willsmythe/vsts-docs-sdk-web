@@ -10,7 +10,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.Work.RestClient.CommonMethods3To4'
+      name: '@vss-web-extension-sdk.TFS.Work.RestClient.CommonMethods3To4'
     source:
       path: tfs.d.ts
       startLine: 22979
@@ -27,6 +27,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new WorkHttpClient4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -37,7 +40,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new WorkHttpClient4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

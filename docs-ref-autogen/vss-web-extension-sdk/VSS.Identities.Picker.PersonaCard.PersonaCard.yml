@@ -23,7 +23,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.PersonaCard<@vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.PersonaCardProps>
     source:
       path: vss.d.ts
@@ -42,8 +42,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function componentDidMount()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.PersonaCard.componentWillUnmount
@@ -53,8 +53,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function componentWillUnmount()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.PersonaCard.getIdentityByUniqueAttribute
@@ -64,12 +64,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getIdentityByUniqueAttribute(uniqueAttribute: string)'
       parameters:
         - id: uniqueAttribute
           type:
             - string
           description: ''
-      content: 'function getIdentityByUniqueAttribute(uniqueAttribute: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.PersonaCard.getImagesForDataState
@@ -79,8 +79,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getImagesForDataState()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.PersonaCard.constructor
@@ -90,13 +90,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new PersonaCard(props: PersonaCardProps)'
       parameters:
         - id: props
           type:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.PersonaCardProps
           description: ''
-      content: 'new PersonaCard(props: PersonaCardProps)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.PersonaCard.PersonaCard.render
     name: render()
@@ -105,8 +105,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function render()
+      parameters: []
       return:
         type:
           - Element
@@ -119,6 +119,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function setupInitialData(dataState: DataState, uniqueAttribute?:
+        string)
       parameters:
         - id: dataState
           type:
@@ -129,7 +132,4 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function setupInitialData(dataState: DataState, uniqueAttribute?:
-        string)
     type: method

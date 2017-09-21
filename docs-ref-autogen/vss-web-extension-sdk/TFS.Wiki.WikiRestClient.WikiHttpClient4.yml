@@ -21,7 +21,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: tfs.d.ts
       startLine: 17886
@@ -42,6 +42,9 @@ items:
       [Preview API] Creates the wiki page and attachments update on the given
       version of the wiki.
     syntax:
+      content: >-
+        function createUpdate(update: WikiUpdate, project: string, wikiId:
+        string, versionDescriptor?: GitVersionDescriptor)
       parameters:
         - id: update
           type:
@@ -63,9 +66,6 @@ items:
             Version descriptor for the version on which the update is to be
             made. Defaults to deafult branch (Optional)
           optional: true
-      content: >-
-        function createUpdate(update: WikiUpdate, project: string, wikiId:
-        string, versionDescriptor?: GitVersionDescriptor)
       return:
         type:
           - >-
@@ -80,6 +80,7 @@ items:
       [Preview API] Creates a backing git repository and does the intiailization
       of the wiki for the given project.
     syntax:
+      content: 'function createWiki(wikiToCreate: GitRepository, project?: string)'
       parameters:
         - id: wikiToCreate
           type:
@@ -94,7 +95,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function createWiki(wikiToCreate: GitRepository, project?: string)'
       return:
         type:
           - >-
@@ -111,6 +111,10 @@ items:
       [Preview API] Gets the wiki pages metadata/content under the provided page
       path.
     syntax:
+      content: >-
+        function getPages(project: string, wikiId: string, path?: string,
+        recursionLevel?: VersionControlRecursionType, versionDescriptor?:
+        GitVersionDescriptor)
       parameters:
         - id: project
           type:
@@ -138,10 +142,6 @@ items:
             Version descriptor for the page. Defaults to deafult branch
             (Optional).
           optional: true
-      content: >-
-        function getPages(project: string, wikiId: string, path?: string,
-        recursionLevel?: VersionControlRecursionType, versionDescriptor?:
-        GitVersionDescriptor)
       return:
         type:
           - >-
@@ -159,6 +159,10 @@ items:
       [Preview API] Gets the wiki pages metadata/content under the provided page
       path.
     syntax:
+      content: >-
+        function getPageText(project: string, wikiId: string, path?: string,
+        recursionLevel?: VersionControlRecursionType, versionDescriptor?:
+        GitVersionDescriptor)
       parameters:
         - id: project
           type:
@@ -186,10 +190,6 @@ items:
             Version descriptor for the page. Defaults to deafult branch
             (Optional).
           optional: true
-      content: >-
-        function getPageText(project: string, wikiId: string, path?: string,
-        recursionLevel?: VersionControlRecursionType, versionDescriptor?:
-        GitVersionDescriptor)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -206,6 +206,10 @@ items:
       [Preview API] Gets the wiki pages metadata/content under the provided page
       path.
     syntax:
+      content: >-
+        function getPageZip(project: string, wikiId: string, path?: string,
+        recursionLevel?: VersionControlRecursionType, versionDescriptor?:
+        GitVersionDescriptor)
       parameters:
         - id: project
           type:
@@ -233,10 +237,6 @@ items:
             Version descriptor for the page. Defaults to deafult branch
             (Optional).
           optional: true
-      content: >-
-        function getPageZip(project: string, wikiId: string, path?: string,
-        recursionLevel?: VersionControlRecursionType, versionDescriptor?:
-        GitVersionDescriptor)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -248,13 +248,13 @@ items:
       - typeScript
     summary: '[Preview API] Retrieves wiki repositories in a project or collection.'
     syntax:
+      content: 'function getWikis(project?: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function getWikis(project?: string)'
       return:
         type:
           - >-
@@ -281,6 +281,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new WikiHttpClient4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -291,7 +294,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new WikiHttpClient4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

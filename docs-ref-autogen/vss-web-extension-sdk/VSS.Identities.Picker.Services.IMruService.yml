@@ -36,6 +36,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function addMruIdentities(objectIds: string[], operationScope:
+        IOperationScope, identityId?: string, featureId?: string, options?:
+        IMruServiceOptions, extensionOptions?: IIdentityPickerExtensionOptions)
       parameters:
         - id: objectIds
           type:
@@ -68,10 +72,6 @@ items:
               @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityPickerExtensionOptions
           description: ''
           optional: true
-      content: >-
-        function addMruIdentities(objectIds: string[], operationScope:
-        IOperationScope, identityId?: string, featureId?: string, options?:
-        IMruServiceOptions, extensionOptions?: IIdentityPickerExtensionOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -87,6 +87,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getMruIdentities(operationScope: IOperationScope, identityId?:
+        string, featureId?: string, options?: IMruServiceOptions,
+        extensionOptions?: IIdentityPickerExtensionOptions)
       parameters:
         - id: operationScope
           type:
@@ -115,10 +119,6 @@ items:
               @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityPickerExtensionOptions
           description: ''
           optional: true
-      content: >-
-        function getMruIdentities(operationScope: IOperationScope, identityId?:
-        string, featureId?: string, options?: IMruServiceOptions,
-        extensionOptions?: IIdentityPickerExtensionOptions)
       return:
         type:
           - >-
@@ -135,6 +135,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function removeMruIdentities(objectIds: string[], operationScope:
+        IOperationScope, identityId?: string, featureId?: string, options?:
+        IMruServiceOptions, extensionOptions?: IIdentityPickerExtensionOptions)
       parameters:
         - id: objectIds
           type:
@@ -167,10 +171,6 @@ items:
               @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityPickerExtensionOptions
           description: ''
           optional: true
-      content: >-
-        function removeMruIdentities(objectIds: string[], operationScope:
-        IOperationScope, identityId?: string, featureId?: string, options?:
-        IMruServiceOptions, extensionOptions?: IIdentityPickerExtensionOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'

@@ -42,6 +42,9 @@ items:
       - typeScript
     summary: Generate a URL given the current navigation state values
     syntax:
+      content: >-
+        function generateUrl(state: [key: string]: string, mergeOptions?:
+        StateMergeOptions)
       parameters:
         - id: state
           type:
@@ -55,9 +58,6 @@ items:
             for the current navigation
                    state or a full set of state values. The default is to merge with the current navigation state.
           optional: true
-      content: >-
-        function generateUrl(state: [key: string]: string, mergeOptions?:
-        StateMergeOptions)
       return:
         type:
           - string
@@ -70,8 +70,8 @@ items:
       - typeScript
     summary: Get the current value for all the routeValues used for the current page.
     syntax:
-      parameters: []
       content: function getCurrentRouteValues()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.NavigationHistoryService.INavigationHistoryService.getState
@@ -83,8 +83,8 @@ items:
       Get the current dictionary of all URL state parameters. This includes
       route values as well as query parameters.
     syntax:
-      parameters: []
       content: function getState()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.NavigationHistoryService.INavigationHistoryService.pushState
@@ -96,6 +96,9 @@ items:
       - typeScript
     summary: 'Adds a new history entry, updating the address bar with a new url'
     syntax:
+      content: >-
+        function pushState(state: [key: string]: string, url?: string, routeId?:
+        string, navigationElementId?: string)
       parameters:
         - id: state
           type:
@@ -124,9 +127,6 @@ items:
             Optional id of the navigation element that this entry targets. If
             not specified the current page's hub id is used.
           optional: true
-      content: >-
-        function pushState(state: [key: string]: string, url?: string, routeId?:
-        string, navigationElementId?: string)
       return:
         type:
           - any
@@ -143,6 +143,9 @@ items:
       Updates (replaces) the current history entry, optionally updating the
       address bar with a new url
     syntax:
+      content: >-
+        function replaceState(state: [key: string]: string, url?: string,
+        routeId?: string, navigationElementId?: string)
       parameters:
         - id: state
           type:
@@ -171,9 +174,6 @@ items:
             Optional id of the navigation element that this entry targets. If
             not specified the current page's hub id is used.
           optional: true
-      content: >-
-        function replaceState(state: [key: string]: string, url?: string,
-        routeId?: string, navigationElementId?: string)
       return:
         type:
           - any
@@ -190,13 +190,13 @@ items:
 
       has occurred to a push-state entry that this service is managing.
     syntax:
+      content: 'function subscribe(listener: function)'
       parameters:
         - id: listener
           type:
             - function
           description: |
             Method invoked when a forward or back navigation has occurred.
-      content: 'function subscribe(listener: function)'
       return:
         type:
           - any
@@ -209,13 +209,13 @@ items:
       - typeScript
     summary: Remove a pop-state listener.
     syntax:
+      content: 'function unsubscribe(listener: function)'
       parameters:
         - id: listener
           type:
             - function
           description: |
             Listener to remove.
-      content: 'function unsubscribe(listener: function)'
       return:
         type:
           - any

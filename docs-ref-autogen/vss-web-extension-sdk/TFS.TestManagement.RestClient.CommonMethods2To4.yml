@@ -153,7 +153,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: tfs.d.ts
       startLine: 11905
@@ -171,6 +171,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function addCustomFields(newFields: CustomTestFieldDefinition[],
+        project: string)
       parameters:
         - id: newFields
           type:
@@ -181,9 +184,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function addCustomFields(newFields: CustomTestFieldDefinition[],
-        project: string)
       return:
         type:
           - >-
@@ -199,6 +199,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function addTestCasesToSuite(project: string, planId: number, suiteId:
+        number, testCaseIds: string)
       parameters:
         - id: project
           type:
@@ -216,9 +219,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function addTestCasesToSuite(project: string, planId: number, suiteId:
-        number, testCaseIds: string)
       return:
         type:
           - >-
@@ -234,6 +234,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function cloneTestPlan(cloneRequestBody: TestPlanCloneRequest, project:
+        string, planId: number)
       parameters:
         - id: cloneRequestBody
           type:
@@ -248,9 +251,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function cloneTestPlan(cloneRequestBody: TestPlanCloneRequest, project:
-        string, planId: number)
       return:
         type:
           - >-
@@ -266,6 +266,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function cloneTestSuite(cloneRequestBody: TestSuiteCloneRequest,
+        project: string, planId: number, sourceSuiteId: number)
       parameters:
         - id: cloneRequestBody
           type:
@@ -284,9 +287,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function cloneTestSuite(cloneRequestBody: TestSuiteCloneRequest,
-        project: string, planId: number, sourceSuiteId: number)
       return:
         type:
           - >-
@@ -302,6 +302,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -312,9 +315,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.createTestConfiguration
@@ -326,6 +326,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createTestConfiguration(testConfiguration: TestConfiguration,
+        project: string)
       parameters:
         - id: testConfiguration
           type:
@@ -336,9 +339,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function createTestConfiguration(testConfiguration: TestConfiguration,
-        project: string)
       return:
         type:
           - >-
@@ -352,6 +352,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function createTestPlan(testPlan: PlanUpdateModel, project: string)'
       parameters:
         - id: testPlan
           type:
@@ -362,7 +363,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: 'function createTestPlan(testPlan: PlanUpdateModel, project: string)'
       return:
         type:
           - >-
@@ -379,6 +379,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createTestResultAttachment(attachmentRequestModel:
+        TestAttachmentRequestModel, project: string, runId: number,
+        testCaseResultId: number)
       parameters:
         - id: attachmentRequestModel
           type:
@@ -397,10 +401,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function createTestResultAttachment(attachmentRequestModel:
-        TestAttachmentRequestModel, project: string, runId: number,
-        testCaseResultId: number)
       return:
         type:
           - >-
@@ -414,6 +414,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function createTestRun(testRun: RunCreateModel, project: string)'
       parameters:
         - id: testRun
           type:
@@ -423,7 +424,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: 'function createTestRun(testRun: RunCreateModel, project: string)'
       return:
         type:
           - >-
@@ -439,6 +439,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createTestRunAttachment(attachmentRequestModel:
+        TestAttachmentRequestModel, project: string, runId: number)
       parameters:
         - id: attachmentRequestModel
           type:
@@ -453,9 +456,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function createTestRunAttachment(attachmentRequestModel:
-        TestAttachmentRequestModel, project: string, runId: number)
       return:
         type:
           - >-
@@ -469,6 +469,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createTestSession(testSession: TestSession, teamContext:
+        TeamContext)
       parameters:
         - id: testSession
           type:
@@ -478,9 +481,6 @@ items:
           type:
             - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
-      content: >-
-        function createTestSession(testSession: TestSession, teamContext:
-        TeamContext)
       return:
         type:
           - >-
@@ -494,6 +494,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function createTestSettings(testSettings: TestSettings, project: string)'
       parameters:
         - id: testSettings
           type:
@@ -503,7 +504,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: 'function createTestSettings(testSettings: TestSettings, project: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<number>'
@@ -518,6 +518,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function createTestSuite(testSuite: SuiteCreateModel, project: string,
+        planId: number, suiteId: number)
       parameters:
         - id: testSuite
           type:
@@ -536,9 +539,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function createTestSuite(testSuite: SuiteCreateModel, project: string,
-        planId: number, suiteId: number)
       return:
         type:
           - >-
@@ -552,6 +552,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createTestVariable(testVariable: TestVariable, project: string)'
       parameters:
         - id: testVariable
           type:
@@ -561,7 +562,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: 'function createTestVariable(testVariable: TestVariable, project: string)'
       return:
         type:
           - >-
@@ -575,6 +575,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteSharedParameter(project: string, sharedParameterId:
+        number)
       parameters:
         - id: project
           type:
@@ -584,9 +587,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function deleteSharedParameter(project: string, sharedParameterId:
-        number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -599,6 +599,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteSharedStep(project: string, sharedStepId: number)'
       parameters:
         - id: project
           type:
@@ -608,7 +609,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function deleteSharedStep(project: string, sharedStepId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -621,6 +621,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteTestConfiguration(project: string, testConfigurationId:
+        number)
       parameters:
         - id: project
           type:
@@ -630,9 +633,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function deleteTestConfiguration(project: string, testConfigurationId:
-        number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -645,6 +645,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function deleteTestPlan(project: string, planId: number)'
       parameters:
         - id: project
           type:
@@ -654,7 +655,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function deleteTestPlan(project: string, planId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -667,6 +667,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function deleteTestRun(project: string, runId: number)'
       parameters:
         - id: project
           type:
@@ -676,7 +677,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function deleteTestRun(project: string, runId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -689,6 +689,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function deleteTestSettings(project: string, testSettingsId: number)'
       parameters:
         - id: project
           type:
@@ -698,7 +699,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function deleteTestSettings(project: string, testSettingsId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -711,6 +711,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function deleteTestSuite(project: string, planId: number, suiteId:
+        number)
       parameters:
         - id: project
           type:
@@ -724,9 +727,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function deleteTestSuite(project: string, planId: number, suiteId:
-        number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -739,6 +739,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteTestVariable(project: string, testVariableId: number)'
       parameters:
         - id: project
           type:
@@ -748,7 +749,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function deleteTestVariable(project: string, testVariableId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -763,6 +763,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getActionResults(project: string, runId: number,
+        testCaseResultId: number, iterationId: number, actionPath?: string)
       parameters:
         - id: project
           type:
@@ -785,9 +788,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getActionResults(project: string, runId: number,
-        testCaseResultId: number, iterationId: number, actionPath?: string)
       return:
         type:
           - >-
@@ -803,6 +803,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getBugsLinkedToTestResult(project: string, runId: number,
+        testCaseResultId: number)
       parameters:
         - id: project
           type:
@@ -816,9 +819,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getBugsLinkedToTestResult(project: string, runId: number,
-        testCaseResultId: number)
       return:
         type:
           - >-
@@ -832,6 +832,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getBuildCodeCoverage(project: string, buildId: number, flags:
+        number)
       parameters:
         - id: project
           type:
@@ -845,9 +848,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getBuildCodeCoverage(project: string, buildId: number, flags:
-        number)
       return:
         type:
           - >-
@@ -863,6 +863,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getCloneInformation(project: string, cloneOperationId: number,
+        includeDetails?: boolean)
       parameters:
         - id: project
           type:
@@ -877,9 +880,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getCloneInformation(project: string, cloneOperationId: number,
-        includeDetails?: boolean)
       return:
         type:
           - >-
@@ -895,6 +895,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getCodeCoverageSummary(project: string, buildId: number,
+        deltaBuildId?: number)
       parameters:
         - id: project
           type:
@@ -909,9 +912,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getCodeCoverageSummary(project: string, buildId: number,
-        deltaBuildId?: number)
       return:
         type:
           - >-
@@ -925,6 +925,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getPlanById(project: string, planId: number)'
       parameters:
         - id: project
           type:
@@ -934,7 +935,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getPlanById(project: string, planId: number)'
       return:
         type:
           - >-
@@ -950,6 +950,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getPlans(project: string, owner?: string, skip?: number, top?:
+        number, includePlanDetails?: boolean, filterActivePlans?: boolean)
       parameters:
         - id: project
           type:
@@ -980,9 +983,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getPlans(project: string, owner?: string, skip?: number, top?:
-        number, includePlanDetails?: boolean, filterActivePlans?: boolean)
       return:
         type:
           - >-
@@ -998,6 +998,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getPoint(project: string, planId: number, suiteId: number,
+        pointIds: number, witFields?: string)
       parameters:
         - id: project
           type:
@@ -1020,9 +1023,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getPoint(project: string, planId: number, suiteId: number,
-        pointIds: number, witFields?: string)
       return:
         type:
           - >-
@@ -1039,6 +1039,11 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getPoints(project: string, planId: number, suiteId: number,
+        witFields?: string, configurationId?: string, testCaseId?: string,
+        testPointIds?: string, includePointDetails?: boolean, skip?: number,
+        top?: number)
       parameters:
         - id: project
           type:
@@ -1087,11 +1092,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getPoints(project: string, planId: number, suiteId: number,
-        witFields?: string, configurationId?: string, testCaseId?: string,
-        testPointIds?: string, includePointDetails?: boolean, skip?: number,
-        top?: number)
       return:
         type:
           - >-
@@ -1107,6 +1107,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getPointsByQuery(query: TestPointsQuery, project: string,
+        skip?: number, top?: number)
       parameters:
         - id: query
           type:
@@ -1127,9 +1130,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getPointsByQuery(query: TestPointsQuery, project: string,
-        skip?: number, top?: number)
       return:
         type:
           - >-
@@ -1145,6 +1145,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getResultParameters(project: string, runId: number,
+        testCaseResultId: number, iterationId: number, paramName?: string)
       parameters:
         - id: project
           type:
@@ -1167,9 +1170,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getResultParameters(project: string, runId: number,
-        testCaseResultId: number, iterationId: number, paramName?: string)
       return:
         type:
           - >-
@@ -1183,12 +1183,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getResultRetentionSettings(project: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
-      content: 'function getResultRetentionSettings(project: string)'
       return:
         type:
           - >-
@@ -1202,6 +1202,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getSuiteEntries(project: string, suiteId: number)'
       parameters:
         - id: project
           type:
@@ -1211,7 +1212,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getSuiteEntries(project: string, suiteId: number)'
       return:
         type:
           - >-
@@ -1225,12 +1225,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getSuitesByTestCaseId(testCaseId: number)'
       parameters:
         - id: testCaseId
           type:
             - number
           description: ''
-      content: 'function getSuitesByTestCaseId(testCaseId: number)'
       return:
         type:
           - >-
@@ -1246,6 +1246,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTestCaseById(project: string, planId: number, suiteId:
+        number, testCaseIds: number)
       parameters:
         - id: project
           type:
@@ -1263,9 +1266,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getTestCaseById(project: string, planId: number, suiteId:
-        number, testCaseIds: number)
       return:
         type:
           - >-
@@ -1279,6 +1279,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getTestCases(project: string, planId: number, suiteId: number)'
       parameters:
         - id: project
           type:
@@ -1292,7 +1293,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getTestCases(project: string, planId: number, suiteId: number)'
       return:
         type:
           - >-
@@ -1306,6 +1306,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getTestConfigurationById(project: string, testConfigurationId:
+        number)
       parameters:
         - id: project
           type:
@@ -1315,9 +1318,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getTestConfigurationById(project: string, testConfigurationId:
-        number)
       return:
         type:
           - >-
@@ -1333,6 +1333,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getTestConfigurations(project: string, skip?: number, top?:
+        number, continuationToken?: string, includeAllProperties?: boolean)
       parameters:
         - id: project
           type:
@@ -1358,9 +1361,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getTestConfigurations(project: string, skip?: number, top?:
-        number, continuationToken?: string, includeAllProperties?: boolean)
       return:
         type:
           - >-
@@ -1376,6 +1376,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTestIteration(project: string, runId: number,
+        testCaseResultId: number, iterationId: number, includeActionResults?:
+        boolean)
       parameters:
         - id: project
           type:
@@ -1398,10 +1402,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getTestIteration(project: string, runId: number,
-        testCaseResultId: number, iterationId: number, includeActionResults?:
-        boolean)
       return:
         type:
           - >-
@@ -1417,6 +1417,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTestIterations(project: string, runId: number,
+        testCaseResultId: number, includeActionResults?: boolean)
       parameters:
         - id: project
           type:
@@ -1435,9 +1438,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getTestIterations(project: string, runId: number,
-        testCaseResultId: number, includeActionResults?: boolean)
       return:
         type:
           - >-
@@ -1453,6 +1453,9 @@ items:
       - typeScript
     summary: '[Preview API] Returns a test result attachment'
     syntax:
+      content: >-
+        function getTestResultAttachmentContent(project: string, runId: number,
+        testCaseResultId: number, attachmentId: number)
       parameters:
         - id: project
           type:
@@ -1470,9 +1473,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getTestResultAttachmentContent(project: string, runId: number,
-        testCaseResultId: number, attachmentId: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -1487,6 +1487,9 @@ items:
       - typeScript
     summary: '[Preview API] Returns a test result attachment'
     syntax:
+      content: >-
+        function getTestResultAttachmentZip(project: string, runId: number,
+        testCaseResultId: number, attachmentId: number)
       parameters:
         - id: project
           type:
@@ -1504,9 +1507,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getTestResultAttachmentZip(project: string, runId: number,
-        testCaseResultId: number, attachmentId: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -1521,6 +1521,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTestResultById(project: string, runId: number,
+        testCaseResultId: number, detailsToInclude?: ResultDetails)
       parameters:
         - id: project
           type:
@@ -1539,9 +1542,6 @@ items:
             - ResultDetails
           description: ''
           optional: true
-      content: >-
-        function getTestResultById(project: string, runId: number,
-        testCaseResultId: number, detailsToInclude?: ResultDetails)
       return:
         type:
           - >-
@@ -1557,6 +1557,9 @@ items:
       - typeScript
     summary: '[Preview API] Returns a test run attachment'
     syntax:
+      content: >-
+        function getTestRunAttachmentContent(project: string, runId: number,
+        attachmentId: number)
       parameters:
         - id: project
           type:
@@ -1570,9 +1573,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getTestRunAttachmentContent(project: string, runId: number,
-        attachmentId: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -1587,6 +1587,9 @@ items:
       - typeScript
     summary: '[Preview API] Returns a test run attachment'
     syntax:
+      content: >-
+        function getTestRunAttachmentZip(project: string, runId: number,
+        attachmentId: number)
       parameters:
         - id: project
           type:
@@ -1600,9 +1603,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getTestRunAttachmentZip(project: string, runId: number,
-        attachmentId: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -1615,6 +1615,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getTestRunById(project: string, runId: number)'
       parameters:
         - id: project
           type:
@@ -1624,7 +1625,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getTestRunById(project: string, runId: number)'
       return:
         type:
           - >-
@@ -1638,6 +1638,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getTestRunCodeCoverage(project: string, runId: number, flags:
+        number)
       parameters:
         - id: project
           type:
@@ -1651,9 +1654,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getTestRunCodeCoverage(project: string, runId: number, flags:
-        number)
       return:
         type:
           - >-
@@ -1667,6 +1667,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getTestRunLogs(project: string, runId: number)'
       parameters:
         - id: project
           type:
@@ -1676,7 +1677,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getTestRunLogs(project: string, runId: number)'
       return:
         type:
           - >-
@@ -1693,6 +1693,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTestRuns(project: string, buildUri?: string, owner?: string,
+        tmiRunId?: string, planId?: number, includeRunDetails?: boolean,
+        automated?: boolean, skip?: number, top?: number)
       parameters:
         - id: project
           type:
@@ -1738,10 +1742,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getTestRuns(project: string, buildUri?: string, owner?: string,
-        tmiRunId?: string, planId?: number, includeRunDetails?: boolean,
-        automated?: boolean, skip?: number, top?: number)
       return:
         type:
           - >-
@@ -1755,6 +1755,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getTestRunStatistics(project: string, runId: number)'
       parameters:
         - id: project
           type:
@@ -1764,7 +1765,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getTestRunStatistics(project: string, runId: number)'
       return:
         type:
           - >-
@@ -1781,6 +1781,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getTestSessions(teamContext: TeamContext, period?: number,
+        allSessions?: boolean, includeAllProperties?: boolean, source?:
+        TestSessionSource, includeOnlyCompletedSessions?: boolean)
       parameters:
         - id: teamContext
           type:
@@ -1811,10 +1815,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getTestSessions(teamContext: TeamContext, period?: number,
-        allSessions?: boolean, includeAllProperties?: boolean, source?:
-        TestSessionSource, includeOnlyCompletedSessions?: boolean)
       return:
         type:
           - >-
@@ -1828,6 +1828,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getTestSettingsById(project: string, testSettingsId: number)'
       parameters:
         - id: project
           type:
@@ -1837,7 +1838,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getTestSettingsById(project: string, testSettingsId: number)'
       return:
         type:
           - >-
@@ -1853,6 +1853,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTestSuiteById(project: string, planId: number, suiteId:
+        number, includeChildSuites?: boolean)
       parameters:
         - id: project
           type:
@@ -1871,9 +1874,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getTestSuiteById(project: string, planId: number, suiteId:
-        number, includeChildSuites?: boolean)
       return:
         type:
           - >-
@@ -1889,6 +1889,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTestSuitesForPlan(project: string, planId: number,
+        includeSuites?: boolean, skip?: number, top?: number, asTreeView?:
+        boolean)
       parameters:
         - id: project
           type:
@@ -1918,10 +1922,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getTestSuitesForPlan(project: string, planId: number,
-        includeSuites?: boolean, skip?: number, top?: number, asTreeView?:
-        boolean)
       return:
         type:
           - >-
@@ -1935,6 +1935,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getTestVariableById(project: string, testVariableId: number)'
       parameters:
         - id: project
           type:
@@ -1944,7 +1945,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getTestVariableById(project: string, testVariableId: number)'
       return:
         type:
           - >-
@@ -1958,6 +1958,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getTestVariables(project: string, skip?: number, top?: number)'
       parameters:
         - id: project
           type:
@@ -1973,7 +1974,6 @@ items:
             - number
           description: ''
           optional: true
-      content: 'function getTestVariables(project: string, skip?: number, top?: number)'
       return:
         type:
           - >-
@@ -1987,6 +1987,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function queryCustomFields(project: string, scopeFilter:
+        CustomTestFieldScope)
       parameters:
         - id: project
           type:
@@ -1996,9 +1999,6 @@ items:
           type:
             - CustomTestFieldScope
           description: ''
-      content: >-
-        function queryCustomFields(project: string, scopeFilter:
-        CustomTestFieldScope)
       return:
         type:
           - >-
@@ -2018,6 +2018,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function queryTestRuns(project: string, state: TestRunState,
+        minCompletedDate?: Date, maxCompletedDate?: Date, planId?: number,
+        IsAutomated?: boolean, publishContext?: TestRunPublishContext, buildId?:
+        number, buildDefId?: number, branchName?: string, releaseId?: number,
+        releaseDefId?: number, releaseEnvId?: number, releaseEnvDefId?: number,
+        runTitle?: string, skip?: number, top?: number)
       parameters:
         - id: project
           type:
@@ -2102,13 +2109,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function queryTestRuns(project: string, state: TestRunState,
-        minCompletedDate?: Date, maxCompletedDate?: Date, planId?: number,
-        IsAutomated?: boolean, publishContext?: TestRunPublishContext, buildId?:
-        number, buildDefId?: number, branchName?: string, releaseId?: number,
-        releaseDefId?: number, releaseEnvId?: number, releaseEnvDefId?: number,
-        runTitle?: string, skip?: number, top?: number)
       return:
         type:
           - >-
@@ -2124,6 +2124,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function removeTestCasesFromSuiteUrl(project: string, planId: number,
+        suiteId: number, testCaseIds: string)
       parameters:
         - id: project
           type:
@@ -2141,9 +2144,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function removeTestCasesFromSuiteUrl(project: string, planId: number,
-        suiteId: number, testCaseIds: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -2158,6 +2158,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function reorderSuiteEntries(suiteEntries: SuiteEntryUpdateModel[],
+        project: string, suiteId: number)
       parameters:
         - id: suiteEntries
           type:
@@ -2172,9 +2175,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function reorderSuiteEntries(suiteEntries: SuiteEntryUpdateModel[],
-        project: string, suiteId: number)
       return:
         type:
           - >-
@@ -2207,6 +2207,9 @@ items:
       http://(tfsserver):8080/tfs/DefaultCollection/_apis/test/CodeCoverage?buildId=10
       Request: Json of code coverage summary
     syntax:
+      content: >-
+        function updateCodeCoverageSummary(coverageData: CodeCoverageData,
+        project: string, buildId: number)
       parameters:
         - id: coverageData
           type:
@@ -2221,9 +2224,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateCodeCoverageSummary(coverageData: CodeCoverageData,
-        project: string, buildId: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -2238,6 +2238,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateResultRetentionSettings(retentionSettings:
+        ResultRetentionSettings, project: string)
       parameters:
         - id: retentionSettings
           type:
@@ -2248,9 +2251,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function updateResultRetentionSettings(retentionSettings:
-        ResultRetentionSettings, project: string)
       return:
         type:
           - >-
@@ -2266,6 +2266,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateTestConfiguration(testConfiguration: TestConfiguration,
+        project: string, testConfigurationId: number)
       parameters:
         - id: testConfiguration
           type:
@@ -2280,9 +2283,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateTestConfiguration(testConfiguration: TestConfiguration,
-        project: string, testConfigurationId: number)
       return:
         type:
           - >-
@@ -2298,6 +2298,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateTestPlan(planUpdateModel: PlanUpdateModel, project:
+        string, planId: number)
       parameters:
         - id: planUpdateModel
           type:
@@ -2312,9 +2315,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateTestPlan(planUpdateModel: PlanUpdateModel, project:
-        string, planId: number)
       return:
         type:
           - >-
@@ -2330,6 +2330,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateTestPoints(pointUpdateModel: PointUpdateModel, project:
+        string, planId: number, suiteId: number, pointIds: string)
       parameters:
         - id: pointUpdateModel
           type:
@@ -2352,9 +2355,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateTestPoints(pointUpdateModel: PointUpdateModel, project:
-        string, planId: number, suiteId: number, pointIds: string)
       return:
         type:
           - >-
@@ -2370,6 +2370,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateTestRun(runUpdateModel: RunUpdateModel, project: string,
+        runId: number)
       parameters:
         - id: runUpdateModel
           type:
@@ -2383,9 +2386,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateTestRun(runUpdateModel: RunUpdateModel, project: string,
-        runId: number)
       return:
         type:
           - >-
@@ -2399,6 +2399,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateTestSession(testSession: TestSession, teamContext:
+        TeamContext)
       parameters:
         - id: testSession
           type:
@@ -2408,9 +2411,6 @@ items:
           type:
             - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
-      content: >-
-        function updateTestSession(testSession: TestSession, teamContext:
-        TeamContext)
       return:
         type:
           - >-
@@ -2426,6 +2426,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateTestSuite(suiteUpdateModel: SuiteUpdateModel, project:
+        string, planId: number, suiteId: number)
       parameters:
         - id: suiteUpdateModel
           type:
@@ -2444,9 +2447,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateTestSuite(suiteUpdateModel: SuiteUpdateModel, project:
-        string, planId: number, suiteId: number)
       return:
         type:
           - >-
@@ -2462,6 +2462,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateTestVariable(testVariable: TestVariable, project: string,
+        testVariableId: number)
       parameters:
         - id: testVariable
           type:
@@ -2475,9 +2478,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateTestVariable(testVariable: TestVariable, project: string,
-        testVariableId: number)
       return:
         type:
           - >-

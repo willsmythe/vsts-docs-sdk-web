@@ -12,7 +12,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.FileContainer.RestClient.CommonMethods2To4'
+      name: '@vss-web-extension-sdk.VSS.FileContainer.RestClient.CommonMethods2To4'
     source:
       path: vss.d.ts
       startLine: 21151
@@ -32,6 +32,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new FileContainerHttpClient2_1(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -42,7 +45,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new FileContainerHttpClient2_1(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

@@ -30,6 +30,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function beginTranslateUrl(url: string, options?: any, callback?:
+        IFunctionPR<string>, errorCallback?: IErrorCallback)
       parameters:
         - id: url
           type:
@@ -50,9 +53,6 @@ items:
             - '@vss-web-extension-sdk.IErrorCallback'
           description: ''
           optional: true
-      content: >-
-        function beginTranslateUrl(url: string, options?: any, callback?:
-        IFunctionPR<string>, errorCallback?: IErrorCallback)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Utils.Url.UrlTranslatorService.registerUrlTranslator
@@ -62,6 +62,9 @@ items:
       - typeScript
     summary: Registers a URL translator function.
     syntax:
+      content: >-
+        function registerUrlTranslator(translatorFunction: Function, order?:
+        number)
       parameters:
         - id: translatorFunction
           type:
@@ -75,7 +78,4 @@ items:
           description: |
             The order of the translator function.
           optional: true
-      content: >-
-        function registerUrlTranslator(translatorFunction: Function, order?:
-        number)
     type: method

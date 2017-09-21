@@ -63,7 +63,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2_1To4'
+      name: '@vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2_1To4'
     source:
       path: tfs.d.ts
       startLine: 3260
@@ -82,6 +82,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new BuildHttpClient2_2(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -92,9 +95,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new BuildHttpClient2_2(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_2.createDefinition
@@ -106,6 +106,10 @@ items:
       - typeScript
     summary: Creates a new definition
     syntax:
+      content: >-
+        function createDefinition(definition: BuildDefinition3_2, project?:
+        string, definitionToCloneId?: number, definitionToCloneRevision?:
+        number)
       parameters:
         - id: definition
           type:
@@ -126,10 +130,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function createDefinition(definition: BuildDefinition3_2, project?:
-        string, definitionToCloneId?: number, definitionToCloneRevision?:
-        number)
       return:
         type:
           - >-
@@ -142,12 +142,12 @@ items:
       - typeScript
     summary: Creates a build queue
     syntax:
+      content: 'function createQueue(queue: AgentPoolQueue)'
       parameters:
         - id: queue
           type:
             - '@vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue'
           description: ''
-      content: 'function createQueue(queue: AgentPoolQueue)'
       return:
         type:
           - >-
@@ -160,6 +160,9 @@ items:
       - typeScript
     summary: Deletes a build
     syntax:
+      content: >-
+        function deleteBuild(buildId: number, project?: string, type?:
+        DefinitionType)
       parameters:
         - id: buildId
           type:
@@ -175,9 +178,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function deleteBuild(buildId: number, project?: string, type?:
-        DefinitionType)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -189,12 +189,12 @@ items:
       - typeScript
     summary: Deletes a build queue
     syntax:
+      content: 'function deleteQueue(id: number)'
       parameters:
         - id: id
           type:
             - number
           description: ''
-      content: 'function deleteQueue(id: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -207,12 +207,12 @@ items:
       - typeScript
     summary: Gets a queue
     syntax:
+      content: 'function getAgentPoolQueue(controllerId: number)'
       parameters:
         - id: controllerId
           type:
             - number
           description: ''
-      content: 'function getAgentPoolQueue(controllerId: number)'
       return:
         type:
           - >-
@@ -227,6 +227,9 @@ items:
       - typeScript
     summary: Gets a specific artifact for a build
     syntax:
+      content: >-
+        function getArtifact(buildId: number, artifactName: string, project?:
+        string, definitionType?: DefinitionType)
       parameters:
         - id: buildId
           type:
@@ -246,9 +249,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function getArtifact(buildId: number, artifactName: string, project?:
-        string, definitionType?: DefinitionType)
       return:
         type:
           - >-
@@ -264,6 +264,9 @@ items:
       - typeScript
     summary: Gets a specific artifact for a build
     syntax:
+      content: >-
+        function getArtifactContentZip(buildId: number, artifactName: string,
+        project?: string, definitionType?: DefinitionType)
       parameters:
         - id: buildId
           type:
@@ -283,9 +286,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function getArtifactContentZip(buildId: number, artifactName: string,
-        project?: string, definitionType?: DefinitionType)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -299,6 +299,9 @@ items:
       - typeScript
     summary: Gets all artifacts for a build
     syntax:
+      content: >-
+        function getArtifacts(buildId: number, project?: string,
+        definitionType?: DefinitionType)
       parameters:
         - id: buildId
           type:
@@ -314,9 +317,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function getArtifacts(buildId: number, project?: string,
-        definitionType?: DefinitionType)
       return:
         type:
           - >-
@@ -331,6 +331,9 @@ items:
       - typeScript
     summary: Gets a build
     syntax:
+      content: >-
+        function getBuild(buildId: number, project?: string, propertyFilters?:
+        string, type?: DefinitionType)
       parameters:
         - id: buildId
           type:
@@ -351,9 +354,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function getBuild(buildId: number, project?: string, propertyFilters?:
-        string, type?: DefinitionType)
       return:
         type:
           - >-
@@ -370,6 +370,10 @@ items:
       - typeScript
     summary: Gets the changes associated with a build
     syntax:
+      content: >-
+        function getBuildChanges(project: string, buildId: number,
+        continuationToken?: string, top?: number, includeSourceChange?: boolean,
+        type?: DefinitionType)
       parameters:
         - id: project
           type:
@@ -399,10 +403,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function getBuildChanges(project: string, buildId: number,
-        continuationToken?: string, top?: number, includeSourceChange?: boolean,
-        type?: DefinitionType)
       return:
         type:
           - >-
@@ -416,6 +416,7 @@ items:
       - typeScript
     summary: Gets the deployment information associated with a build
     syntax:
+      content: 'function getBuildDeployments(project: string, buildId: number)'
       parameters:
         - id: project
           type:
@@ -425,7 +426,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getBuildDeployments(project: string, buildId: number)'
       return:
         type:
           - >-
@@ -440,6 +440,9 @@ items:
       - typeScript
     summary: Gets a log
     syntax:
+      content: >-
+        function getBuildLog(project: string, buildId: number, logId: number,
+        startLine?: number, endLine?: number, type?: DefinitionType)
       parameters:
         - id: project
           type:
@@ -468,9 +471,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function getBuildLog(project: string, buildId: number, logId: number,
-        startLine?: number, endLine?: number, type?: DefinitionType)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -482,6 +482,9 @@ items:
       - typeScript
     summary: Gets logs for a build
     syntax:
+      content: >-
+        function getBuildLogs(project: string, buildId: number, type?:
+        DefinitionType)
       parameters:
         - id: project
           type:
@@ -496,9 +499,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function getBuildLogs(project: string, buildId: number, type?:
-        DefinitionType)
       return:
         type:
           - >-
@@ -512,6 +512,9 @@ items:
       - typeScript
     summary: Gets logs for a build
     syntax:
+      content: >-
+        function getBuildLogsZip(project: string, buildId: number, type?:
+        DefinitionType)
       parameters:
         - id: project
           type:
@@ -526,9 +529,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function getBuildLogsZip(project: string, buildId: number, type?:
-        DefinitionType)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -543,6 +543,9 @@ items:
       - typeScript
     summary: '[Preview API] Gets report for a build'
     syntax:
+      content: >-
+        function getBuildReport(project: string, buildId: number, type?: string,
+        definitionType?: DefinitionType)
       parameters:
         - id: project
           type:
@@ -562,9 +565,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function getBuildReport(project: string, buildId: number, type?: string,
-        definitionType?: DefinitionType)
       return:
         type:
           - >-
@@ -580,6 +580,9 @@ items:
       - typeScript
     summary: '[Preview API] Gets report for a build'
     syntax:
+      content: >-
+        function getBuildReportHtmlContent(project: string, buildId: number,
+        type?: string, definitionType?: DefinitionType)
       parameters:
         - id: project
           type:
@@ -599,9 +602,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function getBuildReportHtmlContent(project: string, buildId: number,
-        type?: string, definitionType?: DefinitionType)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -621,6 +621,15 @@ items:
       - typeScript
     summary: Gets builds
     syntax:
+      content: >-
+        function getBuilds(project?: string, definitions?: number[], queues?:
+        number[], buildNumber?: string, minFinishTime?: Date, maxFinishTime?:
+        Date, requestedFor?: string, reasonFilter?: BuildReason, statusFilter?:
+        BuildStatus, resultFilter?: BuildResult, tagFilters?: string[],
+        properties?: string[], type?: DefinitionType, top?: number,
+        continuationToken?: string, maxBuildsPerDefinition?: number,
+        deletedFilter?: QueryDeletedOption, queryOrder?: BuildQueryOrder,
+        branchName?: string)
       parameters:
         - id: project
           type:
@@ -717,15 +726,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getBuilds(project?: string, definitions?: number[], queues?:
-        number[], buildNumber?: string, minFinishTime?: Date, maxFinishTime?:
-        Date, requestedFor?: string, reasonFilter?: BuildReason, statusFilter?:
-        BuildStatus, resultFilter?: BuildResult, tagFilters?: string[],
-        properties?: string[], type?: DefinitionType, top?: number,
-        continuationToken?: string, maxBuildsPerDefinition?: number,
-        deletedFilter?: QueryDeletedOption, queryOrder?: BuildQueryOrder,
-        branchName?: string)
       return:
         type:
           - >-
@@ -741,6 +741,9 @@ items:
       - typeScript
     summary: Gets the work item ids associated with a build
     syntax:
+      content: >-
+        function getBuildWorkItemsRefs(project: string, buildId: number, top?:
+        number, type?: DefinitionType)
       parameters:
         - id: project
           type:
@@ -760,9 +763,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function getBuildWorkItemsRefs(project: string, buildId: number, top?:
-        number, type?: DefinitionType)
       return:
         type:
           - >-
@@ -778,6 +778,9 @@ items:
       - typeScript
     summary: Gets the work item ids associated with build commits
     syntax:
+      content: >-
+        function getBuildWorkItemsRefsFromCommits(commitIds: string[], project:
+        string, buildId: number, top?: number, type?: DefinitionType)
       parameters:
         - id: commitIds
           type:
@@ -803,9 +806,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function getBuildWorkItemsRefsFromCommits(commitIds: string[], project:
-        string, buildId: number, top?: number, type?: DefinitionType)
       return:
         type:
           - >-
@@ -821,6 +821,9 @@ items:
       - typeScript
     summary: 'Gets a definition, optionally at a specific revision'
     syntax:
+      content: >-
+        function getDefinition(definitionId: number, project?: string,
+        revision?: number, propertyFilters?: string[], type?: DefinitionType)
       parameters:
         - id: definitionId
           type:
@@ -846,9 +849,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function getDefinition(definitionId: number, project?: string,
-        revision?: number, propertyFilters?: string[], type?: DefinitionType)
       return:
         type:
           - >-
@@ -865,6 +865,10 @@ items:
       - typeScript
     summary: 'Gets definitions, optionally filtered by name'
     syntax:
+      content: >-
+        function getDefinitions(project?: string, name?: string, type?:
+        DefinitionType, repositoryId?: string, repositoryType?: string,
+        queryOrder?: DefinitionQueryOrder, top?: number)
       parameters:
         - id: project
           type:
@@ -901,10 +905,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getDefinitions(project?: string, name?: string, type?:
-        DefinitionType, repositoryId?: string, repositoryType?: string,
-        queryOrder?: DefinitionQueryOrder, top?: number)
       return:
         type:
           - >-
@@ -917,13 +917,13 @@ items:
       - typeScript
     summary: 'Gets queues, optionally filtered by name'
     syntax:
+      content: 'function getQueues(name?: string)'
       parameters:
         - id: name
           type:
             - string
           description: ''
           optional: true
-      content: 'function getQueues(name?: string)'
       return:
         type:
           - >-
@@ -936,6 +936,7 @@ items:
       - typeScript
     summary: Gets definition template filtered by id
     syntax:
+      content: 'function getTemplate(project: string, templateId: string)'
       parameters:
         - id: project
           type:
@@ -945,7 +946,6 @@ items:
           type:
             - string
           description: Id of the requested template.
-      content: 'function getTemplate(project: string, templateId: string)'
       return:
         type:
           - >-
@@ -958,12 +958,12 @@ items:
       - typeScript
     summary: Gets definition templates
     syntax:
+      content: 'function getTemplates(project: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
-      content: 'function getTemplates(project: string)'
       return:
         type:
           - >-
@@ -978,6 +978,9 @@ items:
       - typeScript
     summary: Queues a build
     syntax:
+      content: >-
+        function queueBuild(build: Build, project?: string, ignoreWarnings?:
+        boolean, checkInTicket?: string, type?: DefinitionType)
       parameters:
         - id: build
           type:
@@ -1003,9 +1006,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function queueBuild(build: Build, project?: string, ignoreWarnings?:
-        boolean, checkInTicket?: string, type?: DefinitionType)
       return:
         type:
           - >-
@@ -1020,6 +1020,9 @@ items:
       - typeScript
     summary: Saves a definition template
     syntax:
+      content: >-
+        function saveTemplate(template: BuildDefinitionTemplate3_2, project:
+        string, templateId: string)
       parameters:
         - id: template
           type:
@@ -1034,9 +1037,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function saveTemplate(template: BuildDefinitionTemplate3_2, project:
-        string, templateId: string)
       return:
         type:
           - >-
@@ -1051,6 +1051,9 @@ items:
       - typeScript
     summary: Updates a build
     syntax:
+      content: >-
+        function updateBuild(build: Build, buildId: number, project?: string,
+        type?: DefinitionType)
       parameters:
         - id: build
           type:
@@ -1070,9 +1073,6 @@ items:
             - DefinitionType
           description: ''
           optional: true
-      content: >-
-        function updateBuild(build: Build, buildId: number, project?: string,
-        type?: DefinitionType)
       return:
         type:
           - >-
@@ -1089,6 +1089,10 @@ items:
       - typeScript
     summary: Updates an existing definition
     syntax:
+      content: >-
+        function updateDefinition(definition: BuildDefinition3_2, definitionId:
+        number, project?: string, secretsSourceDefinitionId?: number,
+        secretsSourceDefinitionRevision?: number)
       parameters:
         - id: definition
           type:
@@ -1113,10 +1117,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function updateDefinition(definition: BuildDefinition3_2, definitionId:
-        number, project?: string, secretsSourceDefinitionId?: number,
-        secretsSourceDefinitionRevision?: number)
       return:
         type:
           - >-

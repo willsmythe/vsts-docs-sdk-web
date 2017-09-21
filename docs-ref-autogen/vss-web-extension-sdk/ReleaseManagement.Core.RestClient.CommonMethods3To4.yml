@@ -35,7 +35,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.ReleaseManagement.Core.RestClient.CommonMethods2_2To4
     source:
       path: rmo.d.ts
@@ -56,6 +56,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -66,9 +69,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.RestClient.CommonMethods3To4.getDeployments
@@ -84,6 +84,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getDeployments(project: string, definitionId?: number,
+        definitionEnvironmentId?: number, createdBy?: string, minModifiedTime?:
+        Date, maxModifiedTime?: Date, deploymentStatus?: DeploymentStatus,
+        operationStatus?: DeploymentOperationStatus, latestAttemptsOnly?:
+        boolean, queryOrder?: ReleaseQueryOrder, top?: number,
+        continuationToken?: number, createdFor?: string)
       parameters:
         - id: project
           type:
@@ -149,13 +156,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getDeployments(project: string, definitionId?: number,
-        definitionEnvironmentId?: number, createdBy?: string, minModifiedTime?:
-        Date, maxModifiedTime?: Date, deploymentStatus?: DeploymentStatus,
-        operationStatus?: DeploymentOperationStatus, latestAttemptsOnly?:
-        boolean, queryOrder?: ReleaseQueryOrder, top?: number,
-        continuationToken?: number, createdFor?: string)
       return:
         type:
           - >-
@@ -171,6 +171,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getDeploymentsForMultipleEnvironments(queryParameters:
+        DeploymentQueryParameters, project: string)
       parameters:
         - id: queryParameters
           type:
@@ -181,9 +184,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function getDeploymentsForMultipleEnvironments(queryParameters:
-        DeploymentQueryParameters, project: string)
       return:
         type:
           - >-
@@ -199,6 +199,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getManualIntervention(project: string, releaseId: number,
+        manualInterventionId: number)
       parameters:
         - id: project
           type:
@@ -212,9 +215,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getManualIntervention(project: string, releaseId: number,
-        manualInterventionId: number)
       return:
         type:
           - >-
@@ -228,6 +228,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getManualInterventions(project: string, releaseId: number)'
       parameters:
         - id: project
           type:
@@ -237,7 +238,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getManualInterventions(project: string, releaseId: number)'
       return:
         type:
           - >-
@@ -253,6 +253,9 @@ items:
       - typeScript
     summary: '[Preview API] Get a Release'
     syntax:
+      content: >-
+        function getRelease(project: string, releaseId: number,
+        includeAllApprovals?: boolean, propertyFilters?: string[])
       parameters:
         - id: project
           type:
@@ -272,9 +275,6 @@ items:
             - 'string[]'
           description: A comma-delimited list of properties to include in the results.
           optional: true
-      content: >-
-        function getRelease(project: string, releaseId: number,
-        includeAllApprovals?: boolean, propertyFilters?: string[])
       return:
         type:
           - >-
@@ -288,12 +288,12 @@ items:
       - typeScript
     summary: '[Preview API] Gets the release settings'
     syntax:
+      content: 'function getReleaseSettings(project: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
-      content: 'function getReleaseSettings(project: string)'
       return:
         type:
           - >-
@@ -307,6 +307,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getSourceBranches(project: string, definitionId: number)'
       parameters:
         - id: project
           type:
@@ -316,7 +317,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getSourceBranches(project: string, definitionId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string[]>'
@@ -331,6 +331,9 @@ items:
       - typeScript
     summary: '[Preview API] Gets the task log of a release as a plain text file.'
     syntax:
+      content: >-
+        function getTaskLog(project: string, releaseId: number, environmentId:
+        number, releaseDeployPhaseId: number, taskId: number)
       parameters:
         - id: project
           type:
@@ -352,9 +355,6 @@ items:
           type:
             - number
           description: Task Id for the log.
-      content: >-
-        function getTaskLog(project: string, releaseId: number, environmentId:
-        number, releaseDeployPhaseId: number, taskId: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -369,6 +369,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getTasksForTaskGroup(project: string, releaseId: number,
+        environmentId: number, releaseDeployPhaseId: number)
       parameters:
         - id: project
           type:
@@ -386,9 +389,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getTasksForTaskGroup(project: string, releaseId: number,
-        environmentId: number, releaseDeployPhaseId: number)
       return:
         type:
           - >-
@@ -402,6 +402,9 @@ items:
       - typeScript
     summary: '[Preview API] Undelete a soft deleted release.'
     syntax:
+      content: >-
+        function undeleteRelease(project: string, releaseId: number, comment:
+        string)
       parameters:
         - id: project
           type:
@@ -415,9 +418,6 @@ items:
           type:
             - string
           description: Any comment for undeleting.
-      content: >-
-        function undeleteRelease(project: string, releaseId: number, comment:
-        string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -433,6 +433,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateManualIntervention(manualInterventionUpdateMetadata:
+        ManualInterventionUpdateMetadata, project: string, releaseId: number,
+        manualInterventionId: number)
       parameters:
         - id: manualInterventionUpdateMetadata
           type:
@@ -451,10 +455,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateManualIntervention(manualInterventionUpdateMetadata:
-        ManualInterventionUpdateMetadata, project: string, releaseId: number,
-        manualInterventionId: number)
       return:
         type:
           - >-
@@ -468,6 +468,9 @@ items:
       - typeScript
     summary: '[Preview API] Updates the release settings'
     syntax:
+      content: >-
+        function updateReleaseSettings(releaseSettings: ReleaseSettings,
+        project: string)
       parameters:
         - id: releaseSettings
           type:
@@ -478,9 +481,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function updateReleaseSettings(releaseSettings: ReleaseSettings,
-        project: string)
       return:
         type:
           - >-

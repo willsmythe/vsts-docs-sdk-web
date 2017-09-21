@@ -31,6 +31,9 @@ items:
       - typeScript
     summary: Adds additional items to the search strategy
     syntax:
+      content: >-
+        function addMoreItems(addItemsCallback: function, searchCallback:
+        function)
       parameters:
         - id: addItemsCallback
           type:
@@ -41,9 +44,6 @@ items:
             - function
           description: |
             The function which searches the newly updated strategy.
-      content: >-
-        function addMoreItems(addItemsCallback: function, searchCallback:
-        function)
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.createSearchableObjects
     name: createSearchableObjects()
@@ -52,8 +52,8 @@ items:
       - typeScript
     summary: Creates SearchableObjects for all available work items
     syntax:
-      parameters: []
       content: function createSearchableObjects()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.handleClear
     name: handleClear()
@@ -62,8 +62,8 @@ items:
       - typeScript
     summary: Handles the search results being cleared and the view resetting to normal.
     syntax:
-      parameters: []
       content: function handleClear()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.handleError
     name: 'handleError(message: string)'
@@ -72,13 +72,13 @@ items:
       - typeScript
     summary: Handles an error being thrown in the search process.
     syntax:
+      content: 'function handleError(message: string)'
       parameters:
         - id: message
           type:
             - string
           description: |
             Specific error message if provided.
-      content: 'function handleError(message: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.handleResults
     name: 'handleResults(results: T[], finished: boolean, query?: string)'
@@ -90,6 +90,7 @@ items:
       the ones
           provided in the results array.
     syntax:
+      content: 'function handleResults(results: T[], finished: boolean, query?: string)'
       parameters:
         - id: results
           type:
@@ -105,7 +106,6 @@ items:
           description: |
             search query
           optional: true
-      content: 'function handleResults(results: T[], finished: boolean, query?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.isDataSetComplete
     name: isDataSetComplete()
@@ -114,8 +114,8 @@ items:
       - typeScript
     summary: Returns whether or not there is more data to be loaded.
     syntax:
-      parameters: []
       content: function isDataSetComplete()
+      parameters: []
       return:
         type:
           - boolean
@@ -129,6 +129,6 @@ items:
       Abstract Class to inherit from in order to implement the UI methods for
       search.
     syntax:
-      parameters: []
       content: new SearchAdapter()
+      parameters: []
     type: constructor

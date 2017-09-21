@@ -27,7 +27,7 @@ items:
 
       You can start with other class, but make sure you implement ITabContent.
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.BaseControl'
+      name: '@vss-web-extension-sdk.VSS.Controls.BaseControl'
     source:
       path: vss.d.ts
       startLine: 17160
@@ -45,12 +45,12 @@ items:
       - typeScript
     summary: Method that renders the actual control
     syntax:
+      content: 'function beginLoad($container: JQuery)'
       parameters:
         - id: $container
           type:
             - JQuery
           description: 'The DOM element, to which the control should be added'
-      content: 'function beginLoad($container: JQuery)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -63,8 +63,8 @@ items:
       - typeScript
     summary: 'Begin to persist user changes, make sure you overwrite this'
     syntax:
-      parameters: []
       content: function beginSave()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -77,8 +77,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function dispose()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.TabContent.TabContentBaseControl.fireDirtyFlagChange
@@ -90,13 +90,13 @@ items:
       Set the dirty state for the content control, make sure call this for any
       dirty state change
     syntax:
+      content: 'function fireDirtyFlagChange(isDirty: boolean)'
       parameters:
         - id: isDirty
           type:
             - boolean
           description: |+
 
-      content: 'function fireDirtyFlagChange(isDirty: boolean)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.TabContent.TabContentBaseControl.isDirty
@@ -106,8 +106,8 @@ items:
       - typeScript
     summary: Gets the dirty state for the content control
     syntax:
-      parameters: []
       content: function isDirty()
+      parameters: []
       return:
         type:
           - boolean
@@ -122,13 +122,13 @@ items:
       Method that lets the container specify the delegates to be called on state
       change in the tab content
     syntax:
+      content: 'function registerStateChangedEvents(onDirtyStateChanged: Function)'
       parameters:
         - id: onDirtyStateChanged
           type:
             - Function
           description: |
             The delegate for the dirty state transition
-      content: 'function registerStateChangedEvents(onDirtyStateChanged: Function)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.TabContent.TabContentBaseControl.constructor
@@ -138,11 +138,11 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new TabContentBaseControl(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'new TabContentBaseControl(options?: any)'
     type: constructor

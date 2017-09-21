@@ -29,7 +29,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Profile.RestClient.CommonMethods2To4'
+      name: '@vss-web-extension-sdk.VSS.Profile.RestClient.CommonMethods2To4'
     source:
       path: vss.d.ts
       startLine: 30436
@@ -47,6 +47,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function deleteProfileAttribute(id: string, descriptor: string)'
       parameters:
         - id: id
           type:
@@ -56,7 +57,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function deleteProfileAttribute(id: string, descriptor: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -68,6 +68,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getAvatar(id: string, size?: string, format?: string)'
       parameters:
         - id: id
           type:
@@ -83,7 +84,6 @@ items:
             - string
           description: ''
           optional: true
-      content: 'function getAvatar(id: string, size?: string, format?: string)'
       return:
         type:
           - >-
@@ -99,6 +99,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getAvatarPreview(container: any, id: string, size?: string,
+        format?: string, displayName?: string)
       parameters:
         - id: container
           type:
@@ -123,9 +126,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getAvatarPreview(container: any, id: string, size?: string,
-        format?: string, displayName?: string)
       return:
         type:
           - >-
@@ -139,6 +139,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getProfileAttribute(id: string, descriptor: string)'
       parameters:
         - id: id
           type:
@@ -148,7 +149,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getProfileAttribute(id: string, descriptor: string)'
       return:
         type:
           - >-
@@ -165,6 +165,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getProfileAttributes(id: string, partition: string,
+        modifiedSince?: string, modifiedAfterRevision?: string,
+        withCoreAttributes?: boolean, coreAttributes?: string)
       parameters:
         - id: id
           type:
@@ -194,10 +198,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getProfileAttributes(id: string, partition: string,
-        modifiedSince?: string, modifiedAfterRevision?: string,
-        withCoreAttributes?: boolean, coreAttributes?: string)
       return:
         type:
           - >-
@@ -213,6 +213,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new ProfileHttpClient2(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -223,9 +226,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new ProfileHttpClient2(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Profile.RestClient.ProfileHttpClient2.resetAvatar
@@ -235,12 +235,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function resetAvatar(id: string)'
       parameters:
         - id: id
           type:
             - string
           description: ''
-      content: 'function resetAvatar(id: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -252,6 +252,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setAvatar(container: any, id: string)'
       parameters:
         - id: container
           type:
@@ -261,7 +262,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function setAvatar(container: any, id: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -274,6 +274,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function setProfileAttribute(container: any, id: string, descriptor:
+        string)
       parameters:
         - id: container
           type:
@@ -287,9 +290,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function setProfileAttribute(container: any, id: string, descriptor:
-        string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -304,6 +304,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function setProfileAttributes(attributesCollection:
+        VssJsonCollectionWrapperV<ProfileAttributeBase<any>[]>, id: string)
       parameters:
         - id: attributesCollection
           type:
@@ -314,9 +317,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function setProfileAttributes(attributesCollection:
-        VssJsonCollectionWrapperV<ProfileAttributeBase<any>[]>, id: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'

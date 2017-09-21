@@ -16,7 +16,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator<TOptions>'
     source:
       path: vss.d.ts
       startLine: 17955
@@ -33,6 +33,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new DateValidator(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -40,7 +41,6 @@ items:
           description: |+
 
           optional: true
-      content: 'new DateValidator(options?: TOptions)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.DateValidator.getMessage
     name: getMessage()
@@ -49,8 +49,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getMessage()
+      parameters: []
       return:
         type:
           - any
@@ -63,6 +63,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -70,7 +71,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: TOptions)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.DateValidator.isValid
     name: isValid()
@@ -79,8 +79,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isValid()
+      parameters: []
       return:
         type:
           - boolean

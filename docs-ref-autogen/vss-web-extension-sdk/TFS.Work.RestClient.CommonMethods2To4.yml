@@ -72,7 +72,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: tfs.d.ts
       startLine: 22623
@@ -91,6 +91,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -101,9 +104,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.Work.RestClient.CommonMethods2To4.deleteTeamIteration
@@ -113,6 +113,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function deleteTeamIteration(teamContext: TeamContext, id: string)'
       parameters:
         - id: teamContext
           type:
@@ -122,7 +123,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function deleteTeamIteration(teamContext: TeamContext, id: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -135,12 +135,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getBacklogConfigurations(teamContext: TeamContext)'
       parameters:
         - id: teamContext
           type:
             - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
-      content: 'function getBacklogConfigurations(teamContext: TeamContext)'
       return:
         type:
           - >-
@@ -153,6 +153,7 @@ items:
       - typeScript
     summary: Get board
     syntax:
+      content: 'function getBoard(teamContext: TeamContext, id: string)'
       parameters:
         - id: teamContext
           type:
@@ -164,7 +165,6 @@ items:
           description: >-
             identifier for board, either board's backlog level name
             (Eg:"Stories") or Id
-      content: 'function getBoard(teamContext: TeamContext, id: string)'
       return:
         type:
           - >-
@@ -180,6 +180,9 @@ items:
       [Preview API] Get board card Rule settings for the board id or board by
       name
     syntax:
+      content: >-
+        function getBoardCardRuleSettings(teamContext: TeamContext, board:
+        string)
       parameters:
         - id: teamContext
           type:
@@ -189,9 +192,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getBoardCardRuleSettings(teamContext: TeamContext, board:
-        string)
       return:
         type:
           - >-
@@ -205,6 +205,7 @@ items:
       - typeScript
     summary: Get board card settings for the board id or board by name
     syntax:
+      content: 'function getBoardCardSettings(teamContext: TeamContext, board: string)'
       parameters:
         - id: teamContext
           type:
@@ -214,7 +215,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getBoardCardSettings(teamContext: TeamContext, board: string)'
       return:
         type:
           - >-
@@ -227,6 +227,9 @@ items:
       - typeScript
     summary: Get a board chart
     syntax:
+      content: >-
+        function getBoardChart(teamContext: TeamContext, board: string, name:
+        string)
       parameters:
         - id: teamContext
           type:
@@ -242,9 +245,6 @@ items:
           type:
             - string
           description: The chart name
-      content: >-
-        function getBoardChart(teamContext: TeamContext, board: string, name:
-        string)
       return:
         type:
           - >-
@@ -257,6 +257,7 @@ items:
       - typeScript
     summary: Get board charts
     syntax:
+      content: 'function getBoardCharts(teamContext: TeamContext, board: string)'
       parameters:
         - id: teamContext
           type:
@@ -268,7 +269,6 @@ items:
           description: >-
             Identifier for board, either board's backlog level name
             (Eg:"Stories") or Id
-      content: 'function getBoardCharts(teamContext: TeamContext, board: string)'
       return:
         type:
           - >-
@@ -282,6 +282,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getBoardColumns(teamContext: TeamContext, board: string)'
       parameters:
         - id: teamContext
           type:
@@ -291,7 +292,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getBoardColumns(teamContext: TeamContext, board: string)'
       return:
         type:
           - >-
@@ -304,6 +304,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getBoardRows(teamContext: TeamContext, board: string)'
       parameters:
         - id: teamContext
           type:
@@ -313,7 +314,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getBoardRows(teamContext: TeamContext, board: string)'
       return:
         type:
           - >-
@@ -326,12 +326,12 @@ items:
       - typeScript
     summary: Get boards
     syntax:
+      content: 'function getBoards(teamContext: TeamContext)'
       parameters:
         - id: teamContext
           type:
             - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
-      content: 'function getBoards(teamContext: TeamContext)'
       return:
         type:
           - >-
@@ -344,6 +344,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getCapacities(teamContext: TeamContext, iterationId: string)'
       parameters:
         - id: teamContext
           type:
@@ -353,7 +354,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getCapacities(teamContext: TeamContext, iterationId: string)'
       return:
         type:
           - >-
@@ -368,6 +368,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getCapacity(teamContext: TeamContext, iterationId: string,
+        teamMemberId: string)
       parameters:
         - id: teamContext
           type:
@@ -381,9 +384,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getCapacity(teamContext: TeamContext, iterationId: string,
-        teamMemberId: string)
       return:
         type:
           - >-
@@ -397,13 +397,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getColumnSuggestedValues(project?: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function getColumnSuggestedValues(project?: string)'
       return:
         type:
           - >-
@@ -417,12 +417,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getProcessConfiguration(project: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
-      content: 'function getProcessConfiguration(project: string)'
       return:
         type:
           - >-
@@ -436,13 +436,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getRowSuggestedValues(project?: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function getRowSuggestedValues(project?: string)'
       return:
         type:
           - >-
@@ -455,6 +455,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getTeamDaysOff(teamContext: TeamContext, iterationId: string)'
       parameters:
         - id: teamContext
           type:
@@ -464,7 +465,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getTeamDaysOff(teamContext: TeamContext, iterationId: string)'
       return:
         type:
           - >-
@@ -478,12 +478,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getTeamFieldValues(teamContext: TeamContext)'
       parameters:
         - id: teamContext
           type:
             - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
-      content: 'function getTeamFieldValues(teamContext: TeamContext)'
       return:
         type:
           - >-
@@ -497,6 +497,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getTeamIteration(teamContext: TeamContext, id: string)'
       parameters:
         - id: teamContext
           type:
@@ -506,7 +507,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getTeamIteration(teamContext: TeamContext, id: string)'
       return:
         type:
           - >-
@@ -520,6 +520,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getTeamIterations(teamContext: TeamContext, timeframe?: string)'
       parameters:
         - id: teamContext
           type:
@@ -530,7 +531,6 @@ items:
             - string
           description: ''
           optional: true
-      content: 'function getTeamIterations(teamContext: TeamContext, timeframe?: string)'
       return:
         type:
           - >-
@@ -544,12 +544,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getTeamSettings(teamContext: TeamContext)'
       parameters:
         - id: teamContext
           type:
             - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
-      content: 'function getTeamSettings(teamContext: TeamContext)'
       return:
         type:
           - >-
@@ -565,6 +565,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function postTeamIteration(iteration: TeamSettingsIteration,
+        teamContext: TeamContext)
       parameters:
         - id: iteration
           type:
@@ -574,9 +577,6 @@ items:
           type:
             - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
-      content: >-
-        function postTeamIteration(iteration: TeamSettingsIteration,
-        teamContext: TeamContext)
       return:
         type:
           - >-
@@ -592,6 +592,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function replaceCapacities(capacities: TeamMemberCapacity[],
+        teamContext: TeamContext, iterationId: string)
       parameters:
         - id: capacities
           type:
@@ -605,9 +608,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function replaceCapacities(capacities: TeamMemberCapacity[],
-        teamContext: TeamContext, iterationId: string)
       return:
         type:
           - >-
@@ -637,6 +637,9 @@ items:
       - typeScript
     summary: Update board options
     syntax:
+      content: >-
+        function setBoardOptions(options: [key: string]: string, teamContext:
+        TeamContext, id: string)
       parameters:
         - id: options
           type:
@@ -652,9 +655,6 @@ items:
           description: >-
             identifier for board, either category plural name (Eg:"Stories") or
             guid
-      content: >-
-        function setBoardOptions(options: [key: string]: string, teamContext:
-        TeamContext, id: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<[key: string]: string>'
@@ -671,6 +671,9 @@ items:
       [Preview API] Update board card Rule settings for the board id or board by
       name
     syntax:
+      content: >-
+        function updateBoardCardRuleSettings(boardCardRuleSettings:
+        BoardCardRuleSettings, teamContext: TeamContext, board: string)
       parameters:
         - id: boardCardRuleSettings
           type:
@@ -684,9 +687,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateBoardCardRuleSettings(boardCardRuleSettings:
-        BoardCardRuleSettings, teamContext: TeamContext, board: string)
       return:
         type:
           - >-
@@ -702,6 +702,9 @@ items:
       - typeScript
     summary: Update board card settings for the board id or board by name
     syntax:
+      content: >-
+        function updateBoardCardSettings(boardCardSettingsToSave:
+        BoardCardSettings, teamContext: TeamContext, board: string)
       parameters:
         - id: boardCardSettingsToSave
           type:
@@ -715,9 +718,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateBoardCardSettings(boardCardSettingsToSave:
-        BoardCardSettings, teamContext: TeamContext, board: string)
       return:
         type:
           - >-
@@ -733,6 +733,9 @@ items:
       - typeScript
     summary: Update a board chart
     syntax:
+      content: >-
+        function updateBoardChart(chart: BoardChart, teamContext: TeamContext,
+        board: string, name: string)
       parameters:
         - id: chart
           type:
@@ -752,9 +755,6 @@ items:
           type:
             - string
           description: The chart name
-      content: >-
-        function updateBoardChart(chart: BoardChart, teamContext: TeamContext,
-        board: string, name: string)
       return:
         type:
           - >-
@@ -770,6 +770,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateBoardColumns(boardColumns: BoardColumn[], teamContext:
+        TeamContext, board: string)
       parameters:
         - id: boardColumns
           type:
@@ -783,9 +786,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateBoardColumns(boardColumns: BoardColumn[], teamContext:
-        TeamContext, board: string)
       return:
         type:
           - >-
@@ -801,6 +801,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateBoardRows(boardRows: BoardRow[], teamContext:
+        TeamContext, board: string)
       parameters:
         - id: boardRows
           type:
@@ -814,9 +817,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateBoardRows(boardRows: BoardRow[], teamContext:
-        TeamContext, board: string)
       return:
         type:
           - >-
@@ -831,6 +831,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateCapacity(patch: CapacityPatch, teamContext: TeamContext,
+        iterationId: string, teamMemberId: string)
       parameters:
         - id: patch
           type:
@@ -848,9 +851,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateCapacity(patch: CapacityPatch, teamContext: TeamContext,
-        iterationId: string, teamMemberId: string)
       return:
         type:
           - >-
@@ -866,6 +866,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateTeamDaysOff(daysOffPatch: TeamSettingsDaysOffPatch,
+        teamContext: TeamContext, iterationId: string)
       parameters:
         - id: daysOffPatch
           type:
@@ -879,9 +882,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateTeamDaysOff(daysOffPatch: TeamSettingsDaysOffPatch,
-        teamContext: TeamContext, iterationId: string)
       return:
         type:
           - >-
@@ -897,6 +897,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateTeamFieldValues(patch: TeamFieldValuesPatch, teamContext:
+        TeamContext)
       parameters:
         - id: patch
           type:
@@ -906,9 +909,6 @@ items:
           type:
             - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
-      content: >-
-        function updateTeamFieldValues(patch: TeamFieldValuesPatch, teamContext:
-        TeamContext)
       return:
         type:
           - >-
@@ -924,6 +924,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateTeamSettings(teamSettingsPatch: TeamSettingsPatch,
+        teamContext: TeamContext)
       parameters:
         - id: teamSettingsPatch
           type:
@@ -933,9 +936,6 @@ items:
           type:
             - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
-      content: >-
-        function updateTeamSettings(teamSettingsPatch: TeamSettingsPatch,
-        teamContext: TeamContext)
       return:
         type:
           - >-

@@ -11,7 +11,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Profile.RestClient.ProfileHttpClient4'
+      name: '@vss-web-extension-sdk.VSS.Profile.RestClient.ProfileHttpClient4'
     source:
       path: vss.d.ts
       startLine: 30501
@@ -30,6 +30,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new ProfileHttpClient(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -40,7 +43,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new ProfileHttpClient(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

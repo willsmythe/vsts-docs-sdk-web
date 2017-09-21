@@ -31,12 +31,12 @@ items:
       Proxy for a knockout computed to keep track of it to ensure that when the
       control is disposed, computed is also disposed.
     syntax:
+      content: 'function computed(func: function)'
       parameters:
         - id: func
           type:
             - function
           description: ''
-      content: 'function computed(func: function)'
       return:
         type:
           - KnockoutComputed<any>
@@ -48,8 +48,8 @@ items:
       - typeScript
     summary: Disposes all disposables.
     syntax:
-      parameters: []
       content: function dispose()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateViewModel.subscribe
     name: 'subscribe(subscribable: KnockoutSubscribable<any>, callback: function)'
@@ -60,6 +60,9 @@ items:
       Proxy for a knockout subscription to keep track of it to ensure that when
       the control is disposed, subscription is also disposed.
     syntax:
+      content: >-
+        function subscribe(subscribable: KnockoutSubscribable<any>, callback:
+        function)
       parameters:
         - id: subscribable
           type:
@@ -69,9 +72,6 @@ items:
           type:
             - function
           description: ''
-      content: >-
-        function subscribe(subscribable: KnockoutSubscribable<any>, callback:
-        function)
       return:
         type:
           - '@vss-web-extension-sdk.IDisposable'
@@ -83,6 +83,6 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: new TemplateViewModel()
+      parameters: []
     type: constructor

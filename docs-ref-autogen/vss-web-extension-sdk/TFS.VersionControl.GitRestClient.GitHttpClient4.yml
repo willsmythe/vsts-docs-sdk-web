@@ -25,7 +25,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods3_1To4
     source:
       path: tfs.d.ts
@@ -46,6 +46,9 @@ items:
       - typeScript
     summary: '[Preview API] Add a like on a comment.'
     syntax:
+      content: >-
+        function createLike(repositoryId: string, pullRequestId: number,
+        threadId: number, commentId: number, project?: string)
       parameters:
         - id: repositoryId
           type:
@@ -68,9 +71,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function createLike(repositoryId: string, pullRequestId: number,
-        threadId: number, commentId: number, project?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -86,6 +86,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createPullRequestLabels(labels: WebApiCreateTagRequestData[],
+        repositoryId: string, pullRequestId: number, project?: string,
+        projectId?: string)
       parameters:
         - id: labels
           type:
@@ -110,10 +114,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function createPullRequestLabels(labels: WebApiCreateTagRequestData[],
-        repositoryId: string, pullRequestId: number, project?: string,
-        projectId?: string)
       return:
         type:
           - >-
@@ -129,6 +129,9 @@ items:
       - typeScript
     summary: '[Preview API] Delete a like on a comment.'
     syntax:
+      content: >-
+        function deleteLike(repositoryId: string, pullRequestId: number,
+        threadId: number, commentId: number, project?: string)
       parameters:
         - id: repositoryId
           type:
@@ -151,9 +154,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function deleteLike(repositoryId: string, pullRequestId: number,
-        threadId: number, commentId: number, project?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -168,6 +168,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deletePullRequestLabels(repositoryId: string, pullRequestId:
+        number, labelIdOrName: string, project?: string, projectId?: string)
       parameters:
         - id: repositoryId
           type:
@@ -191,9 +194,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function deletePullRequestLabels(repositoryId: string, pullRequestId:
-        number, labelIdOrName: string, project?: string, projectId?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -208,6 +208,9 @@ items:
       - typeScript
     summary: '[Preview API] Get likes for a comment.'
     syntax:
+      content: >-
+        function getLikes(repositoryId: string, pullRequestId: number, threadId:
+        number, commentId: number, project?: string)
       parameters:
         - id: repositoryId
           type:
@@ -230,9 +233,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getLikes(repositoryId: string, pullRequestId: number, threadId:
-        number, commentId: number, project?: string)
       return:
         type:
           - >-
@@ -248,6 +248,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getPullRequestLabel(repositoryId: string, pullRequestId:
+        number, labelIdOrName: string, project?: string, projectId?: string)
       parameters:
         - id: repositoryId
           type:
@@ -271,9 +274,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getPullRequestLabel(repositoryId: string, pullRequestId:
-        number, labelIdOrName: string, project?: string, projectId?: string)
       return:
         type:
           - >-
@@ -289,6 +289,9 @@ items:
       - typeScript
     summary: '[Preview API] Retrieve a pull request''s Labels'
     syntax:
+      content: >-
+        function getPullRequestLabels(repositoryId: string, pullRequestId:
+        number, project?: string, projectId?: string)
       parameters:
         - id: repositoryId
           type:
@@ -308,9 +311,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getPullRequestLabels(repositoryId: string, pullRequestId:
-        number, project?: string, projectId?: string)
       return:
         type:
           - >-
@@ -324,6 +324,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new GitHttpClient4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -334,7 +337,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new GitHttpClient4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

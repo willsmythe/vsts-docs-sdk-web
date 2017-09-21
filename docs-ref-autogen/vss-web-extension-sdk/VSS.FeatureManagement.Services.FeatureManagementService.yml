@@ -12,7 +12,7 @@ items:
     type: class
     summary: Service to manage feature availability data
     extends:
-      - '@vss-web-extension-sdk.VSS.Service.VssService'
+      name: '@vss-web-extension-sdk.VSS.Service.VssService'
     source:
       path: vss.d.ts
       startLine: 20850
@@ -32,12 +32,12 @@ items:
       Returns whether or not a feature is enabled. Checks features sent through
       JSON island data via IClientFeatureProviderService.AddFeatureState
     syntax:
+      content: 'function isFeatureEnabled(featureId: string)'
       parameters:
         - id: featureId
           type:
             - string
           description: ''
-      content: 'function isFeatureEnabled(featureId: string)'
       return:
         type:
           - boolean

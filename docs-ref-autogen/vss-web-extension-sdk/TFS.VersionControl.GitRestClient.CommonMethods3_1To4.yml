@@ -27,7 +27,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods3To4
     source:
       path: tfs.d.ts
@@ -48,6 +48,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -58,9 +61,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods3_1To4.createAnnotatedTag
@@ -72,6 +72,9 @@ items:
       - typeScript
     summary: '[Preview API] Create an annotated tag'
     syntax:
+      content: >-
+        function createAnnotatedTag(tagObject: GitAnnotatedTag, project: string,
+        repositoryId: string)
       parameters:
         - id: tagObject
           type:
@@ -86,9 +89,6 @@ items:
           type:
             - string
           description: Friendly name or guid of repository
-      content: >-
-        function createAnnotatedTag(tagObject: GitAnnotatedTag, project: string,
-        repositoryId: string)
       return:
         type:
           - >-
@@ -104,6 +104,9 @@ items:
       - typeScript
     summary: '[Preview API] Create a new attachment'
     syntax:
+      content: >-
+        function createAttachment(content: any, fileName: string, repositoryId:
+        string, pullRequestId: number, project?: string)
       parameters:
         - id: content
           type:
@@ -126,9 +129,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function createAttachment(content: any, fileName: string, repositoryId:
-        string, pullRequestId: number, project?: string)
       return:
         type:
           - >-
@@ -144,6 +144,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteAttachment(fileName: string, repositoryId: string,
+        pullRequestId: number, project?: string)
       parameters:
         - id: fileName
           type:
@@ -162,9 +165,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function deleteAttachment(fileName: string, repositoryId: string,
-        pullRequestId: number, project?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -177,6 +177,9 @@ items:
       - typeScript
     summary: '[Preview API] Get an annotated tag'
     syntax:
+      content: >-
+        function getAnnotatedTag(project: string, repositoryId: string,
+        objectId: string)
       parameters:
         - id: project
           type:
@@ -190,9 +193,6 @@ items:
           type:
             - string
           description: Sha1 of annotated tag to be returned
-      content: >-
-        function getAnnotatedTag(project: string, repositoryId: string,
-        objectId: string)
       return:
         type:
           - >-
@@ -208,6 +208,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAttachmentContent(fileName: string, repositoryId: string,
+        pullRequestId: number, project?: string)
       parameters:
         - id: fileName
           type:
@@ -226,9 +229,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getAttachmentContent(fileName: string, repositoryId: string,
-        pullRequestId: number, project?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -243,6 +243,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAttachments(repositoryId: string, pullRequestId: number,
+        project?: string)
       parameters:
         - id: repositoryId
           type:
@@ -257,9 +260,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getAttachments(repositoryId: string, pullRequestId: number,
-        project?: string)
       return:
         type:
           - >-
@@ -275,6 +275,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAttachmentZip(fileName: string, repositoryId: string,
+        pullRequestId: number, project?: string)
       parameters:
         - id: fileName
           type:
@@ -293,9 +296,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getAttachmentZip(fileName: string, repositoryId: string,
-        pullRequestId: number, project?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -310,6 +310,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function sharePullRequest(userMessage: ShareNotificationContext,
+        repositoryId: string, pullRequestId: number, project?: string)
       parameters:
         - id: userMessage
           type:
@@ -329,9 +332,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function sharePullRequest(userMessage: ShareNotificationContext,
-        repositoryId: string, pullRequestId: number, project?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'

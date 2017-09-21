@@ -58,7 +58,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.Menus.MenuBase<@vss-web-extension-sdk.VSS.Controls.Menus.MenuItemOptions>
     source:
       path: vss.d.ts
@@ -76,13 +76,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function collapse(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function collapse(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.deselect
     name: deselect()
@@ -91,8 +91,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function deselect()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.enhancementTypeName
     name: enhancementTypeName
@@ -114,8 +114,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function escaped()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.execute
     name: 'execute(options?: function)'
@@ -124,6 +124,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function execute(options?: function)'
       parameters:
         - id: options
           type:
@@ -131,7 +132,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function execute(options?: function)'
       return:
         type:
           - any
@@ -143,6 +143,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function executeAction(args?: any, e?: JQueryEventObject)'
       parameters:
         - id: args
           type:
@@ -154,7 +155,6 @@ items:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function executeAction(args?: any, e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -166,13 +166,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function focusPin(value?: boolean)'
       parameters:
         - id: value
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function focusPin(value?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.getAction
     name: getAction()
@@ -181,8 +181,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getAction()
+      parameters: []
       return:
         type:
           - any
@@ -194,8 +194,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getAriaRole()
+      parameters: []
       return:
         type:
           - string
@@ -207,8 +207,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getCommandId()
+      parameters: []
       return:
         type:
           - string
@@ -220,6 +220,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getCommandState(commandId?: string, context?: any)'
       parameters:
         - id: commandId
           type:
@@ -231,7 +232,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function getCommandState(commandId?: string, context?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.getIndex
     name: getIndex()
@@ -240,8 +240,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getIndex()
+      parameters: []
       return:
         type:
           - number
@@ -253,8 +253,8 @@ items:
       - typeScript
     summary: Get the parent menu of this menu item.
     syntax:
-      parameters: []
       content: function getParentMenu()
+      parameters: []
       return:
         type:
           - >-
@@ -267,6 +267,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function getScopedCommandId(id: string, scope: string)'
       parameters:
         - id: id
           type:
@@ -276,7 +277,6 @@ items:
           type:
             - string
           description: ''
-      content: 'static function getScopedCommandId(id: string, scope: string)'
       return:
         type:
           - string
@@ -288,13 +288,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getSubMenu(create?: boolean)'
       parameters:
         - id: create
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function getSubMenu(create?: boolean)'
       return:
         type:
           - >-
@@ -307,8 +307,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function hasAction()
+      parameters: []
       return:
         type:
           - boolean
@@ -320,8 +320,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function hasSubMenu()
+      parameters: []
       return:
         type:
           - any
@@ -333,13 +333,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function hideSiblings(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function hideSiblings(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.hideSubMenu
     name: 'hideSubMenu(options?: any)'
@@ -348,13 +348,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function hideSubMenu(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function hideSubMenu(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.initialize
     name: initialize()
@@ -363,8 +363,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.initializeOptions
     name: 'initializeOptions(options?: MenuItemOptions)'
@@ -373,6 +373,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: MenuItemOptions)'
       parameters:
         - id: options
           type:
@@ -380,7 +381,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: MenuItemOptions)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.isDecorated
     name: isDecorated()
@@ -389,8 +389,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isDecorated()
+      parameters: []
       return:
         type:
           - boolean
@@ -402,8 +402,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isDefault()
+      parameters: []
       return:
         type:
           - boolean
@@ -415,8 +415,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isEnabled()
+      parameters: []
       return:
         type:
           - boolean
@@ -428,8 +428,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isFocusable()
+      parameters: []
       return:
         type:
           - boolean
@@ -441,8 +441,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isHidden()
+      parameters: []
       return:
         type:
           - boolean
@@ -457,8 +457,8 @@ items:
       actions, like separators, but contain content, such as text.
           NOTE: Currently, Labels are implemented using separators.  However, there are plans to revisit this.
     syntax:
-      parameters: []
       content: function isLabel()
+      parameters: []
       return:
         type:
           - any
@@ -470,8 +470,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isPinnable()
+      parameters: []
       return:
         type:
           - any
@@ -483,8 +483,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isPinned()
+      parameters: []
       return:
         type:
           - boolean
@@ -498,8 +498,8 @@ items:
       Returns the selected state of this menu item (not to be confused with the
       select() method's notion of state)
     syntax:
-      parameters: []
       content: function isSelected()
+      parameters: []
       return:
         type:
           - boolean
@@ -511,8 +511,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isSeparator()
+      parameters: []
       return:
         type:
           - boolean
@@ -524,8 +524,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isToggled()
+      parameters: []
       return:
         type:
           - boolean
@@ -537,6 +537,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new MenuItem(options?: MenuItemOptions)'
       parameters:
         - id: options
           type:
@@ -544,7 +545,6 @@ items:
           description: |+
 
           optional: true
-      content: 'new MenuItem(options?: MenuItemOptions)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.removeFocus
     name: removeFocus()
@@ -553,8 +553,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function removeFocus()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.removeHighlight
     name: removeHighlight()
@@ -563,8 +563,8 @@ items:
       - typeScript
     summary: Called to remove all highlighting on the button
     syntax:
-      parameters: []
       content: function removeHighlight()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.removePressedHighlight
     name: removePressedHighlight()
@@ -573,8 +573,8 @@ items:
       - typeScript
     summary: Called to make the button appear to be 'pressed'
     syntax:
-      parameters: []
       content: function removePressedHighlight()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.select
     name: 'select(ignoreFocus?: boolean, setKeyboardFocus?: boolean)'
@@ -583,6 +583,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function select(ignoreFocus?: boolean, setKeyboardFocus?: boolean)'
       parameters:
         - id: ignoreFocus
           type:
@@ -594,7 +595,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function select(ignoreFocus?: boolean, setKeyboardFocus?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.setFocus
     name: 'setFocus(setKeyboardFocus?: boolean)'
@@ -603,13 +603,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setFocus(setKeyboardFocus?: boolean)'
       parameters:
         - id: setKeyboardFocus
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function setFocus(setKeyboardFocus?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.setIndex
     name: 'setIndex(value: number)'
@@ -618,12 +618,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setIndex(value: number)'
       parameters:
         - id: value
           type:
             - number
           description: ''
-      content: 'function setIndex(value: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.setIsHidden
     name: 'setIsHidden(value: boolean)'
@@ -636,13 +636,13 @@ items:
       Even if this is set to false, the menu item may be hidden for other
       reasons. See isHidden().
     syntax:
+      content: 'function setIsHidden(value: boolean)'
       parameters:
         - id: value
           type:
             - boolean
           description: |+
 
-      content: 'function setIsHidden(value: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.showHoverHighlight
     name: showHoverHighlight()
@@ -651,8 +651,8 @@ items:
       - typeScript
     summary: Called to show the hover highlight the button
     syntax:
-      parameters: []
       content: function showHoverHighlight()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.showPressedHighlight
     name: showPressedHighlight()
@@ -661,8 +661,8 @@ items:
       - typeScript
     summary: Called to make the button appear to be 'pressed'
     syntax:
-      parameters: []
       content: function showPressedHighlight()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.showSubMenu
     name: 'showSubMenu(options?: any)'
@@ -671,13 +671,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function showSubMenu(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function showSubMenu(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.toggleIsPinned
     name: 'toggleIsPinned(isPinned?: boolean, options?: function)'
@@ -686,6 +686,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function toggleIsPinned(isPinned?: boolean, options?: function)'
       parameters:
         - id: isPinned
           type:
@@ -697,7 +698,6 @@ items:
             - function
           description: ''
           optional: true
-      content: 'function toggleIsPinned(isPinned?: boolean, options?: function)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.tryShowSubMenu
     name: 'tryShowSubMenu(options?: any)'
@@ -706,13 +706,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function tryShowSubMenu(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function tryShowSubMenu(options?: any)'
       return:
         type:
           - boolean
@@ -724,12 +724,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function update(item: any)'
       parameters:
         - id: item
           type:
             - any
           description: ''
-      content: 'function update(item: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.updateItems
     name: 'updateItems(items: any)'
@@ -738,12 +738,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function updateItems(items: any)'
       parameters:
         - id: items
           type:
             - any
           description: ''
-      content: 'function updateItems(items: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.updateText
     name: 'updateText(text: string)'
@@ -754,13 +754,13 @@ items:
       Updates the text of a menu item using either the specified text or
       the function provided in the options
     syntax:
+      content: 'function updateText(text: string)'
       parameters:
         - id: text
           type:
             - string
           description: |
             New text to be displayed
-      content: 'function updateText(text: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem.updateTitle
     name: 'updateTitle(title: string)'
@@ -771,10 +771,10 @@ items:
       Updates the title of a menu item using either the specified text or
       the function provided in the options
     syntax:
+      content: 'function updateTitle(title: string)'
       parameters:
         - id: title
           type:
             - string
           description: ''
-      content: 'function updateTitle(title: string)'
     type: method

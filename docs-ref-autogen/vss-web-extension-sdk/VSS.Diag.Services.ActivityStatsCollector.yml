@@ -55,6 +55,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function actionCompleted(id: number, jqXHR: JQueryXHR)'
       parameters:
         - id: id
           type:
@@ -64,7 +65,6 @@ items:
           type:
             - JQueryXHR
           description: ''
-      content: 'function actionCompleted(id: number, jqXHR: JQueryXHR)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.actionStarted
@@ -74,12 +74,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function actionStarted(name: string)'
       parameters:
         - id: name
           type:
             - string
           description: ''
-      content: 'function actionStarted(name: string)'
       return:
         type:
           - number
@@ -91,8 +91,8 @@ items:
       - typeScript
     summary: Global handler for logging activity data
     syntax:
-      parameters: []
       content: new ActivityStatsCollector()
+      parameters: []
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.ACTIVITY_COLLECTION_STATUS
@@ -132,15 +132,15 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function addActivtyStatsCollectionAllowedCallback(callback:
+        ActivtyStatsCollectionAllowedCallback)
       parameters:
         - id: callback
           type:
             - >-
               @vss-web-extension-sdk.VSS.Diag.Services.ActivtyStatsCollectionAllowedCallback
           description: ''
-      content: >-
-        function addActivtyStatsCollectionAllowedCallback(callback:
-        ActivtyStatsCollectionAllowedCallback)
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.clearStats
     name: clearStats()
@@ -149,8 +149,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function clearStats()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.collectStats
@@ -160,12 +160,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function collectStats(shouldCollect: boolean)'
       parameters:
         - id: shouldCollect
           type:
             - boolean
           description: ''
-      content: 'function collectStats(shouldCollect: boolean)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.CURRENT_PAGE
@@ -189,8 +189,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getActivityStatistics()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.getCurrentPage
@@ -200,8 +200,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getCurrentPage()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Diag.Services.ActivityStatistic'
@@ -213,8 +213,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.isCollectingStats
@@ -224,8 +224,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isCollectingStats()
+      parameters: []
       return:
         type:
           - boolean
@@ -237,6 +237,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function logActivity(activityId: string, page: string)'
       parameters:
         - id: activityId
           type:
@@ -246,7 +247,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function logActivity(activityId: string, page: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Diag.Services.ActivityStatsCollector.setCurrentPage
@@ -256,10 +256,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setCurrentPage(currentPage: ActivityStatistic)'
       parameters:
         - id: currentPage
           type:
             - '@vss-web-extension-sdk.VSS.Diag.Services.ActivityStatistic'
           description: ''
-      content: 'function setCurrentPage(currentPage: ActivityStatistic)'
     type: method

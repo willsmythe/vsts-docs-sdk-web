@@ -35,6 +35,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommandEventArgs(commandName: string, commandArgument?: any,
+        commandSource?: any)
       parameters:
         - id: commandName
           type:
@@ -50,9 +53,6 @@ items:
             - any
           description: ''
           optional: true
-      content: >-
-        new CommandEventArgs(commandName: string, commandArgument?: any,
-        commandSource?: any)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Handlers.CommandEventArgs.get_commandArgument
@@ -62,8 +62,8 @@ items:
       - typeScript
     summary: Get arguments to the command
     syntax:
-      parameters: []
       content: function get_commandArgument()
+      parameters: []
       return:
         type:
           - any
@@ -75,8 +75,8 @@ items:
       - typeScript
     summary: Get the name of the command
     syntax:
-      parameters: []
       content: function get_commandName()
+      parameters: []
       return:
         type:
           - string
@@ -89,8 +89,8 @@ items:
       - typeScript
     summary: Get the source that triggered the event
     syntax:
-      parameters: []
       content: function get_commandSource()
+      parameters: []
       return:
         type:
           - any

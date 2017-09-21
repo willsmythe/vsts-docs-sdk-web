@@ -15,7 +15,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior'
+      name: '@vss-web-extension-sdk.VSS.Controls.Combos.ComboListBehavior'
     source:
       path: vss.d.ts
       startLine: 17688
@@ -32,8 +32,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function canType()
+      parameters: []
       return:
         type:
           - boolean
@@ -45,6 +45,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new ComboTreeBehavior(combo: any, options?: any)'
       parameters:
         - id: combo
           type:
@@ -55,7 +56,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'new ComboTreeBehavior(combo: any, options?: any)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.ComboTreeBehavior.keyUp
     name: 'keyUp(e?: JQueryEventObject)'
@@ -64,13 +64,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function keyUp(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function keyUp(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -82,13 +82,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function leftKey(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function leftKey(e?: JQueryEventObject)'
       return:
         type:
           - any
@@ -100,13 +100,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function rightKey(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
           optional: true
-      content: 'function rightKey(e?: JQueryEventObject)'
       return:
         type:
           - any

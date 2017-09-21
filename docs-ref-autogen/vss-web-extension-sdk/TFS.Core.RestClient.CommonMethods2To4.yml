@@ -49,7 +49,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: tfs.d.ts
       startLine: 4831
@@ -68,6 +68,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -78,9 +81,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.Core.RestClient.CommonMethods2To4.createConnectedService
@@ -92,6 +92,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createConnectedService(connectedServiceCreationData:
+        WebApiConnectedServiceDetails, projectId: string)
       parameters:
         - id: connectedServiceCreationData
           type:
@@ -102,9 +105,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function createConnectedService(connectedServiceCreationData:
-        WebApiConnectedServiceDetails, projectId: string)
       return:
         type:
           - >-
@@ -118,6 +118,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createIdentityMru(mruData: IdentityData, mruName: string)'
       parameters:
         - id: mruData
           type:
@@ -127,7 +128,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function createIdentityMru(mruData: IdentityData, mruName: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -139,6 +139,7 @@ items:
       - typeScript
     summary: Creates a team
     syntax:
+      content: 'function createTeam(team: WebApiTeam, projectId: string)'
       parameters:
         - id: team
           type:
@@ -150,7 +151,6 @@ items:
           description: >-
             The name or id (GUID) of the team project in which to create the
             team.
-      content: 'function createTeam(team: WebApiTeam, projectId: string)'
       return:
         type:
           - >-
@@ -164,6 +164,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteIdentityMru(mruData: IdentityData, mruName: string)'
       parameters:
         - id: mruData
           type:
@@ -173,7 +174,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function deleteIdentityMru(mruData: IdentityData, mruName: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -185,6 +185,7 @@ items:
       - typeScript
     summary: Deletes a team
     syntax:
+      content: 'function deleteTeam(projectId: string, teamId: string)'
       parameters:
         - id: projectId
           type:
@@ -196,7 +197,6 @@ items:
           type:
             - string
           description: The name of id of the team to delete.
-      content: 'function deleteTeam(projectId: string, teamId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -209,6 +209,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getConnectedServiceDetails(projectId: string, name: string)'
       parameters:
         - id: projectId
           type:
@@ -218,7 +219,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getConnectedServiceDetails(projectId: string, name: string)'
       return:
         type:
           - >-
@@ -232,6 +232,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getConnectedServices(projectId: string, kind?:
+        ConnectedServiceKind)
       parameters:
         - id: projectId
           type:
@@ -242,9 +245,6 @@ items:
             - ConnectedServiceKind
           description: ''
           optional: true
-      content: >-
-        function getConnectedServices(projectId: string, kind?:
-        ConnectedServiceKind)
       return:
         type:
           - >-
@@ -257,12 +257,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getIdentityMru(mruName: string)'
       parameters:
         - id: mruName
           type:
             - string
           description: ''
-      content: 'function getIdentityMru(mruName: string)'
       return:
         type:
           - >-
@@ -275,12 +275,12 @@ items:
       - typeScript
     summary: Retrieve process by id
     syntax:
+      content: 'function getProcessById(processId: string)'
       parameters:
         - id: processId
           type:
             - string
           description: ''
-      content: 'function getProcessById(processId: string)'
       return:
         type:
           - >-
@@ -293,8 +293,8 @@ items:
       - typeScript
     summary: Retrieve all processes
     syntax:
-      parameters: []
       content: function getProcesses()
+      parameters: []
       return:
         type:
           - >-
@@ -311,6 +311,9 @@ items:
       Get project with the specified id or name, optionally including
       capabilities.
     syntax:
+      content: >-
+        function getProject(projectId: string, includeCapabilities?: boolean,
+        includeHistory?: boolean)
       parameters:
         - id: projectId
           type:
@@ -328,9 +331,6 @@ items:
             - boolean
           description: Search within renamed projects (that had such name in the past).
           optional: true
-      content: >-
-        function getProject(projectId: string, includeCapabilities?: boolean,
-        includeHistory?: boolean)
       return:
         type:
           - >-
@@ -344,12 +344,12 @@ items:
       - typeScript
     summary: Get project collection with the specified id or name.
     syntax:
+      content: 'function getProjectCollection(collectionId: string)'
       parameters:
         - id: collectionId
           type:
             - string
           description: ''
-      content: 'function getProjectCollection(collectionId: string)'
       return:
         type:
           - >-
@@ -363,6 +363,7 @@ items:
       - typeScript
     summary: Get project collection references for this application.
     syntax:
+      content: 'function getProjectCollections(top?: number, skip?: number)'
       parameters:
         - id: top
           type:
@@ -374,7 +375,6 @@ items:
             - number
           description: ''
           optional: true
-      content: 'function getProjectCollections(top?: number, skip?: number)'
       return:
         type:
           - >-
@@ -389,6 +389,9 @@ items:
       - typeScript
     summary: Get project references with the specified state
     syntax:
+      content: >-
+        function getProjects(stateFilter?: any, top?: number, skip?: number,
+        continuationToken?: string)
       parameters:
         - id: stateFilter
           type:
@@ -412,9 +415,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getProjects(stateFilter?: any, top?: number, skip?: number,
-        continuationToken?: string)
       return:
         type:
           - >-
@@ -427,13 +427,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getProxies(proxyUrl?: string)'
       parameters:
         - id: proxyUrl
           type:
             - string
           description: ''
           optional: true
-      content: 'function getProxies(proxyUrl?: string)'
       return:
         type:
           - >-
@@ -446,6 +446,7 @@ items:
       - typeScript
     summary: Gets a team
     syntax:
+      content: 'function getTeam(projectId: string, teamId: string)'
       parameters:
         - id: projectId
           type:
@@ -455,7 +456,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getTeam(projectId: string, teamId: string)'
       return:
         type:
           - >-
@@ -470,6 +470,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTeamMembers(projectId: string, teamId: string, top?: number,
+        skip?: number)
       parameters:
         - id: projectId
           type:
@@ -489,9 +492,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getTeamMembers(projectId: string, teamId: string, top?: number,
-        skip?: number)
       return:
         type:
           - >-
@@ -504,6 +504,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getTeams(projectId: string, top?: number, skip?: number)'
       parameters:
         - id: projectId
           type:
@@ -519,7 +520,6 @@ items:
             - number
           description: ''
           optional: true
-      content: 'function getTeams(projectId: string, top?: number, skip?: number)'
       return:
         type:
           - >-
@@ -533,12 +533,12 @@ items:
       - typeScript
     summary: Queue a project creation.
     syntax:
+      content: 'function queueCreateProject(projectToCreate: TeamProject)'
       parameters:
         - id: projectToCreate
           type:
             - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProject'
           description: The project to create.
-      content: 'function queueCreateProject(projectToCreate: TeamProject)'
       return:
         type:
           - >-
@@ -552,12 +552,12 @@ items:
       - typeScript
     summary: Queue a project deletion.
     syntax:
+      content: 'function queueDeleteProject(projectId: string)'
       parameters:
         - id: projectId
           type:
             - string
           description: The project id of the project to delete.
-      content: 'function queueDeleteProject(projectId: string)'
       return:
         type:
           - >-
@@ -585,6 +585,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function updateIdentityMru(mruData: IdentityData, mruName: string)'
       parameters:
         - id: mruData
           type:
@@ -594,7 +595,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function updateIdentityMru(mruData: IdentityData, mruName: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -606,6 +606,7 @@ items:
       - typeScript
     summary: 'Update an existing project''s name, abbreviation, or description.'
     syntax:
+      content: 'function updateProject(projectUpdate: TeamProject, projectId: string)'
       parameters:
         - id: projectUpdate
           type:
@@ -615,7 +616,6 @@ items:
           type:
             - string
           description: The project id of the project to update.
-      content: 'function updateProject(projectUpdate: TeamProject, projectId: string)'
       return:
         type:
           - >-
@@ -628,6 +628,9 @@ items:
       - typeScript
     summary: Updates a team's name and/or description
     syntax:
+      content: >-
+        function updateTeam(teamData: WebApiTeam, projectId: string, teamId:
+        string)
       parameters:
         - id: teamData
           type:
@@ -643,9 +646,6 @@ items:
           type:
             - string
           description: The name of id of the team to update.
-      content: >-
-        function updateTeam(teamData: WebApiTeam, projectId: string, teamId:
-        string)
       return:
         type:
           - >-

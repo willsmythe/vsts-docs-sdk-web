@@ -29,6 +29,9 @@ items:
       - typeScript
     summary: Query the history by providing certain searchCriteria
     syntax:
+      content: >-
+        function createHistoryList(itemPaths: function, fromVersion: string,
+        toVersion: string, repositoryId?: string)
       parameters:
         - id: itemPaths
           type:
@@ -50,9 +53,6 @@ items:
           description: |
             Optional repository Id for control to search history in Git
           optional: true
-      content: >-
-        function createHistoryList(itemPaths: function, fromVersion: string,
-        toVersion: string, repositoryId?: string)
       return:
         type:
           - any

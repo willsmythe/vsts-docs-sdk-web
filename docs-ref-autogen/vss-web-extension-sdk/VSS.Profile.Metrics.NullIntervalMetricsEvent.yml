@@ -17,7 +17,7 @@ items:
     type: class
     summary: Interval metrics event that does nothing
     extends:
-      - '@vss-web-extension-sdk.VSS.Profile.Metrics.IntervalMetricsEvent'
+      name: '@vss-web-extension-sdk.VSS.Profile.Metrics.IntervalMetricsEvent'
     source:
       path: vss.d.ts
       startLine: 30005
@@ -34,8 +34,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function begin()
+      parameters: []
       return:
         type:
           - number
@@ -47,8 +47,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function close()
+      parameters: []
       return:
         type:
           - Promise<void>
@@ -60,8 +60,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function end()
+      parameters: []
       return:
         type:
           - number
@@ -73,8 +73,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function inner()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Profile.Metrics.NullIntervalMetricsEvent'
@@ -87,8 +87,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: new NullIntervalMetricsEvent()
+      parameters: []
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Profile.Metrics.NullIntervalMetricsEvent.setValue
@@ -98,6 +98,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setValue<T>(key: string, value: T)'
       parameters:
         - id: key
           type:
@@ -107,5 +108,4 @@ items:
           type:
             - T
           description: ''
-      content: 'function setValue<T>(key: string, value: T)'
     type: method

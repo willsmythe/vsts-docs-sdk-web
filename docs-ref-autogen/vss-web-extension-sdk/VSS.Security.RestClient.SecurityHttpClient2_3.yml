@@ -11,7 +11,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Security.RestClient.CommonMethods2_2To4'
+      name: '@vss-web-extension-sdk.VSS.Security.RestClient.CommonMethods2_2To4'
     source:
       path: vss.d.ts
       startLine: 31618
@@ -31,6 +31,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new SecurityHttpClient2_3(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -41,7 +44,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new SecurityHttpClient2_3(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

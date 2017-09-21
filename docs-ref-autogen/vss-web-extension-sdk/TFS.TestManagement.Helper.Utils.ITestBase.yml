@@ -50,8 +50,8 @@ items:
       - typeScript
     summary: create a test step
     syntax:
-      parameters: []
       content: function createTestStep()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep'
@@ -64,8 +64,8 @@ items:
       - typeScript
     summary: function to generate teststep xml for all actions
     syntax:
-      parameters: []
       content: function generateXmlFromActions()
+      parameters: []
       return:
         type:
           - string
@@ -78,6 +78,7 @@ items:
       - typeScript
     summary: it will initalize actions array for given input
     syntax:
+      content: 'function loadActions(xmString: string, links: ITestAttachmentLink[])'
       parameters:
         - id: xmString
           type:
@@ -88,7 +89,6 @@ items:
             - >-
               @vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestAttachmentLink[]
           description: ''
-      content: 'function loadActions(xmString: string, links: ITestAttachmentLink[])'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.saveActions
@@ -101,12 +101,12 @@ items:
       1st for teststep xml
       remaining for add relation links based on all teststep attachments
     syntax:
+      content: 'function saveActions(json: JsonPatchDocument)'
       parameters:
         - id: json
           type:
             - '@vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument'
           description: ''
-      content: 'function saveActions(json: JsonPatchDocument)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument'

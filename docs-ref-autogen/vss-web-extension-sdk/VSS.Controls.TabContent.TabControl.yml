@@ -29,7 +29,7 @@ items:
     type: class
     summary: A control for content across multiple tabs.
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.Control<@vss-web-extension-sdk.VSS.Controls.TabContent.ITabControlOption>
     source:
       path: vss.d.ts
@@ -52,13 +52,13 @@ items:
       Begin to persist user changes by iterate all the tab pages and call the
       beginSave() for each page if it is dirty and valid
     syntax:
+      content: 'function beginSave(e?: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: The event that trigger the saving
           optional: true
-      content: 'function beginSave(e?: JQueryEventObject)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<TabSavingStatus>'
@@ -71,8 +71,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function clearOnSavedCallbackList()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TabContent.TabControl.dispose
     name: dispose()
@@ -81,8 +81,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function dispose()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.TabContent.TabControl.EVENT_DIRTY_STATE_CHANGED
@@ -134,8 +134,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getRefreshOnCloseStatus()
+      parameters: []
       return:
         type:
           - boolean
@@ -147,8 +147,8 @@ items:
       - typeScript
     summary: Initialize the control
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TabContent.TabControl.initializeOptions
     name: 'initializeOptions(options?: ITabControlOption)'
@@ -157,6 +157,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: ITabControlOption)'
       parameters:
         - id: options
           type:
@@ -164,7 +165,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: ITabControlOption)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.TabContent.TabControl.invokeSaveCallbacks
@@ -174,8 +174,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function invokeSaveCallbacks()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TabContent.TabControl.isDirty
     name: isDirty()
@@ -184,8 +184,8 @@ items:
       - typeScript
     summary: Check the dirty states for the all tab pages
     syntax:
-      parameters: []
       content: function isDirty()
+      parameters: []
       return:
         type:
           - boolean
@@ -197,8 +197,8 @@ items:
       - typeScript
     summary: Check the saving states for the all tab pages
     syntax:
-      parameters: []
       content: function isSaving()
+      parameters: []
       return:
         type:
           - boolean
@@ -210,6 +210,6 @@ items:
       - typeScript
     summary: Recalculate the size and update the navigation buttons
     syntax:
-      parameters: []
       content: function onResize()
+      parameters: []
     type: method

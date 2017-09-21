@@ -22,7 +22,7 @@ items:
     type: interface
     summary: Interface for test step
     extends:
-      - '@vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestAction'
+      name: '@vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestAction'
     source:
       path: tfs.d.ts
       startLine: 11737
@@ -57,6 +57,7 @@ items:
       - typeScript
     summary: create atatchment for test step
     syntax:
+      content: 'function createAttachment(url: string, name?: string)'
       parameters:
         - id: url
           type:
@@ -68,7 +69,6 @@ items:
           description: |
             -- name for attachment
           optional: true
-      content: 'function createAttachment(url: string, name?: string)'
       return:
         type:
           - >-
@@ -96,8 +96,8 @@ items:
       - typeScript
     summary: get expectedresult for test step
     syntax:
-      parameters: []
       content: function getExpectedResult()
+      parameters: []
       return:
         type:
           - string
@@ -109,8 +109,8 @@ items:
       - typeScript
     summary: get test step title/action
     syntax:
-      parameters: []
       content: function getTitle()
+      parameters: []
       return:
         type:
           - string
@@ -123,12 +123,12 @@ items:
       - typeScript
     summary: set expectedresult for test step
     syntax:
+      content: 'function setExpectedResult(expectedResult: string)'
       parameters:
         - id: expectedResult
           type:
             - string
           description: ''
-      content: 'function setExpectedResult(expectedResult: string)'
     type: method
   - uid: vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.setTitle
     name: 'setTitle(title: string)'
@@ -137,12 +137,12 @@ items:
       - typeScript
     summary: set title/action for test step
     syntax:
+      content: 'function setTitle(title: string)'
       parameters:
         - id: title
           type:
             - string
           description: ''
-      content: 'function setTitle(title: string)'
     type: method
   - uid: vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep.stepType
     name: stepType

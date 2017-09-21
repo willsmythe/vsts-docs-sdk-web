@@ -15,7 +15,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4'
+      name: '@vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2To4'
     source:
       path: tfs.d.ts
       startLine: 2334
@@ -34,6 +34,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -44,9 +47,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2_1To4.getChangesBetweenBuilds
@@ -58,6 +58,9 @@ items:
       - typeScript
     summary: '[Preview API] Gets the changes associated between given builds'
     syntax:
+      content: >-
+        function getChangesBetweenBuilds(project: string, fromBuildId?: number,
+        toBuildId?: number, top?: number)
       parameters:
         - id: project
           type:
@@ -78,9 +81,6 @@ items:
             - number
           description: The maximum number of changes to return
           optional: true
-      content: >-
-        function getChangesBetweenBuilds(project: string, fromBuildId?: number,
-        toBuildId?: number, top?: number)
       return:
         type:
           - >-
@@ -98,6 +98,9 @@ items:
       [Preview API] Gets all the work item ids inbetween fromBuildId to
       toBuildId
     syntax:
+      content: >-
+        function getWorkItemsBetweenBuilds(project: string, fromBuildId: number,
+        toBuildId: number, top?: number)
       parameters:
         - id: project
           type:
@@ -116,9 +119,6 @@ items:
             - number
           description: The maximum number of workitems to return
           optional: true
-      content: >-
-        function getWorkItemsBetweenBuilds(project: string, fromBuildId: number,
-        toBuildId: number, top?: number)
       return:
         type:
           - >-

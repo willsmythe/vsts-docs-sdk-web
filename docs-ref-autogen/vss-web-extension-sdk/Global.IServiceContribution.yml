@@ -12,7 +12,7 @@ items:
       Information about an individual contribution that contributes one or more
       services registered by id.
     extends:
-      - '@vss-web-extension-sdk.IExtensionContribution'
+      name: '@vss-web-extension-sdk.IExtensionContribution'
     source:
       path: vss.d.ts
       startLine: 533
@@ -29,6 +29,7 @@ items:
       - typeScript
     summary: Get the instance of an object registered by this contribution
     syntax:
+      content: 'function getInstance<T>(objectId?: string, context?: any)'
       parameters:
         - id: objectId
           type:
@@ -43,7 +44,6 @@ items:
           description: |
             Optional context to use when getting the object.
           optional: true
-      content: 'function getInstance<T>(objectId?: string, context?: any)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<T>'

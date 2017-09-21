@@ -34,6 +34,9 @@ items:
       - typeScript
     summary: Returns a promise for creating a document in the provided collection
     syntax:
+      content: >-
+        function createDocument(collectionName: string, doc: any,
+        documentOptions?: IDocumentOptions)
       parameters:
         - id: collectionName
           type:
@@ -50,9 +53,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: >-
-        function createDocument(collectionName: string, doc: any,
-        documentOptions?: IDocumentOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -68,6 +68,9 @@ items:
       Returns a promise for deleting the document at the provided scope,
       collection and id
     syntax:
+      content: >-
+        function deleteDocument(collectionName: string, id: string,
+        documentOptions?: IDocumentOptions)
       parameters:
         - id: collectionName
           type:
@@ -84,9 +87,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: >-
-        function deleteDocument(collectionName: string, id: string,
-        documentOptions?: IDocumentOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -102,6 +102,9 @@ items:
       Returns a promise for getting a document with the provided id in the
       provided collection
     syntax:
+      content: >-
+        function getDocument(collectionName: string, id: string,
+        documentOptions?: IDocumentOptions)
       parameters:
         - id: collectionName
           type:
@@ -118,9 +121,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: >-
-        function getDocument(collectionName: string, id: string,
-        documentOptions?: IDocumentOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -134,6 +134,9 @@ items:
       Returns a promise for getting all of the documents in the provided
       collection
     syntax:
+      content: >-
+        function getDocuments(collectionName: string, documentOptions?:
+        IDocumentOptions)
       parameters:
         - id: collectionName
           type:
@@ -146,9 +149,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: >-
-        function getDocuments(collectionName: string, documentOptions?:
-        IDocumentOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any[]>'
@@ -160,6 +160,7 @@ items:
       - typeScript
     summary: Returns a promise for retrieving a setting at the provided key and scope
     syntax:
+      content: 'function getValue<T>(key: string, documentOptions?: IDocumentOptions)'
       parameters:
         - id: key
           type:
@@ -172,7 +173,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: 'function getValue<T>(key: string, documentOptions?: IDocumentOptions)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<T>'
@@ -190,6 +190,9 @@ items:
       Creates the document if it does not exist, otherwise updates the existing
       document with the id provided
     syntax:
+      content: >-
+        function setDocument(collectionName: string, doc: any, documentOptions?:
+        IDocumentOptions)
       parameters:
         - id: collectionName
           type:
@@ -206,9 +209,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: >-
-        function setDocument(collectionName: string, doc: any, documentOptions?:
-        IDocumentOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -220,6 +220,9 @@ items:
       - typeScript
     summary: Returns a promise for saving a setting at the provided key and scope
     syntax:
+      content: >-
+        function setValue<T>(key: string, value: T, documentOptions?:
+        IDocumentOptions)
       parameters:
         - id: key
           type:
@@ -236,9 +239,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: >-
-        function setValue<T>(key: string, value: T, documentOptions?:
-        IDocumentOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<T>'
@@ -254,6 +254,9 @@ items:
       Returns a promise for updating a document in the provided collection
       A document with the id provided must exist
     syntax:
+      content: >-
+        function updateDocument(collectionName: string, doc: any,
+        documentOptions?: IDocumentOptions)
       parameters:
         - id: collectionName
           type:
@@ -270,9 +273,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: >-
-        function updateDocument(collectionName: string, doc: any,
-        documentOptions?: IDocumentOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'

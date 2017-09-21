@@ -28,12 +28,12 @@ items:
       - typeScript
     summary: Gets the authorization header to use in a request from the given token
     syntax:
+      content: 'function getAuthorizationHeader(sessionToken: TToken)'
       parameters:
         - id: sessionToken
           type:
             - TToken
           description: Used for token key.
-      content: 'function getAuthorizationHeader(sessionToken: TToken)'
       return:
         type:
           - string
@@ -45,6 +45,7 @@ items:
       - typeScript
     summary: Get the auth token to use for this request.
     syntax:
+      content: 'function getAuthToken(refresh?: boolean)'
       parameters:
         - id: refresh
           type:
@@ -53,7 +54,6 @@ items:
             If true refresh the token (i.e. request a new one - don't use a
             cached token)
           optional: true
-      content: 'function getAuthToken(refresh?: boolean)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<TToken>'

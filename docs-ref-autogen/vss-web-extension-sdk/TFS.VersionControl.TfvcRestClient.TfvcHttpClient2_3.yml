@@ -13,7 +13,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4
     source:
       path: tfs.d.ts
@@ -36,6 +36,11 @@ items:
       - typeScript
     summary: Retrieve Tfvc changesets
     syntax:
+      content: >-
+        function getChangesets(project?: string, maxChangeCount?: string,
+        includeDetails?: boolean, includeWorkItems?: boolean, maxCommentLength?:
+        number, includeSourceRename?: boolean, skip?: number, top?: number,
+        orderby?: string, searchCriteria?: TfvcChangesetSearchCriteria)
       parameters:
         - id: project
           type:
@@ -88,11 +93,6 @@ items:
               @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetSearchCriteria
           description: ''
           optional: true
-      content: >-
-        function getChangesets(project?: string, maxChangeCount?: string,
-        includeDetails?: boolean, includeWorkItems?: boolean, maxCommentLength?:
-        number, includeSourceRename?: boolean, skip?: number, top?: number,
-        orderby?: string, searchCriteria?: TfvcChangesetSearchCriteria)
       return:
         type:
           - >-
@@ -108,6 +108,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new TfvcHttpClient2_3(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -118,7 +121,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new TfvcHttpClient2_3(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

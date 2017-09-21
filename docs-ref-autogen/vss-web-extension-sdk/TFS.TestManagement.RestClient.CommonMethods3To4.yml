@@ -57,7 +57,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4'
+      name: '@vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4'
     source:
       path: tfs.d.ts
       startLine: 12572
@@ -77,6 +77,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function addTestResultsToTestRun(results: TestCaseResult[], project:
+        string, runId: number)
       parameters:
         - id: results
           type:
@@ -91,9 +94,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function addTestResultsToTestRun(results: TestCaseResult[], project:
-        string, runId: number)
       return:
         type:
           - >-
@@ -109,6 +109,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function addWorkItemToTestLinks(workItemToTestLinks:
+        WorkItemToTestLinks, project: string)
       parameters:
         - id: workItemToTestLinks
           type:
@@ -119,9 +122,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function addWorkItemToTestLinks(workItemToTestLinks:
-        WorkItemToTestLinks, project: string)
       return:
         type:
           - >-
@@ -137,6 +137,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -147,9 +150,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods3To4.createTestIterationResultAttachment
@@ -162,6 +162,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createTestIterationResultAttachment(attachmentRequestModel:
+        TestAttachmentRequestModel, project: string, runId: number,
+        testCaseResultId: number, iterationId: number, actionPath?: string)
       parameters:
         - id: attachmentRequestModel
           type:
@@ -189,10 +193,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function createTestIterationResultAttachment(attachmentRequestModel:
-        TestAttachmentRequestModel, project: string, runId: number,
-        testCaseResultId: number, iterationId: number, actionPath?: string)
       return:
         type:
           - >-
@@ -206,6 +206,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteTestCase(project: string, testCaseId: number)'
       parameters:
         - id: project
           type:
@@ -215,7 +216,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function deleteTestCase(project: string, testCaseId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -230,6 +230,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteTestMethodToWorkItemLink(project: string, testName:
+        string, workItemId: number)
       parameters:
         - id: project
           type:
@@ -243,9 +246,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function deleteTestMethodToWorkItemLink(project: string, testName:
-        string, workItemId: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -260,6 +260,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getLinkedWorkItemsByQuery(workItemQuery: LinkedWorkItemsQuery,
+        project: string)
       parameters:
         - id: workItemQuery
           type:
@@ -270,9 +273,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function getLinkedWorkItemsByQuery(workItemQuery: LinkedWorkItemsQuery,
-        project: string)
       return:
         type:
           - >-
@@ -288,6 +288,9 @@ items:
       - typeScript
     summary: '[Preview API] Returns attachment references for test result.'
     syntax:
+      content: >-
+        function getTestResultAttachments(project: string, runId: number,
+        testCaseResultId: number)
       parameters:
         - id: project
           type:
@@ -301,9 +304,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getTestResultAttachments(project: string, runId: number,
-        testCaseResultId: number)
       return:
         type:
           - >-
@@ -320,6 +320,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getTestResultDetailsForBuild(project: string, buildId: number,
+        publishContext?: string, groupBy?: string, filter?: string, orderby?:
+        string)
       parameters:
         - id: project
           type:
@@ -349,10 +353,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getTestResultDetailsForBuild(project: string, buildId: number,
-        publishContext?: string, groupBy?: string, filter?: string, orderby?:
-        string)
       return:
         type:
           - >-
@@ -369,6 +369,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getTestResultDetailsForRelease(project: string, releaseId:
+        number, releaseEnvId: number, publishContext?: string, groupBy?: string,
+        filter?: string, orderby?: string)
       parameters:
         - id: project
           type:
@@ -402,10 +406,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getTestResultDetailsForRelease(project: string, releaseId:
-        number, releaseEnvId: number, publishContext?: string, groupBy?: string,
-        filter?: string, orderby?: string)
       return:
         type:
           - >-
@@ -421,6 +421,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTestResults(project: string, runId: number,
+        detailsToInclude?: ResultDetails, skip?: number, top?: number)
       parameters:
         - id: project
           type:
@@ -445,9 +448,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getTestResults(project: string, runId: number,
-        detailsToInclude?: ResultDetails, skip?: number, top?: number)
       return:
         type:
           - >-
@@ -461,6 +461,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getTestResultsByQuery(query: TestResultsQuery, project: string)'
       parameters:
         - id: query
           type:
@@ -471,7 +472,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: 'function getTestResultsByQuery(query: TestResultsQuery, project: string)'
       return:
         type:
           - >-
@@ -485,6 +485,7 @@ items:
       - typeScript
     summary: '[Preview API] Returns attachment references for test run.'
     syntax:
+      content: 'function getTestRunAttachments(project: string, runId: number)'
       parameters:
         - id: project
           type:
@@ -494,7 +495,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getTestRunAttachments(project: string, runId: number)'
       return:
         type:
           - >-
@@ -510,6 +510,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function publishTestResultDocument(document: TestResultDocument,
+        project: string, runId: number)
       parameters:
         - id: document
           type:
@@ -524,9 +527,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function publishTestResultDocument(document: TestResultDocument,
-        project: string, runId: number)
       return:
         type:
           - >-
@@ -540,6 +540,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function queryResultTrendForBuild(filter: TestResultTrendFilter,
+        project: string)
       parameters:
         - id: filter
           type:
@@ -550,9 +553,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function queryResultTrendForBuild(filter: TestResultTrendFilter,
-        project: string)
       return:
         type:
           - >-
@@ -566,6 +566,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function queryResultTrendForRelease(filter: TestResultTrendFilter,
+        project: string)
       parameters:
         - id: filter
           type:
@@ -576,9 +579,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function queryResultTrendForRelease(filter: TestResultTrendFilter,
-        project: string)
       return:
         type:
           - >-
@@ -592,6 +592,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function queryTestMethodLinkedWorkItems(project: string, testName:
+        string)
       parameters:
         - id: project
           type:
@@ -601,9 +604,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function queryTestMethodLinkedWorkItems(project: string, testName:
-        string)
       return:
         type:
           - >-
@@ -617,6 +617,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function queryTestResultHistory(filter: ResultsFilter, project: string)'
       parameters:
         - id: filter
           type:
@@ -626,7 +627,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: 'function queryTestResultHistory(filter: ResultsFilter, project: string)'
       return:
         type:
           - >-
@@ -643,6 +643,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function queryTestResultsReportForBuild(project: string, buildId:
+        number, publishContext?: string, includeFailureDetails?: boolean,
+        buildToCompare?: BuildReference)
       parameters:
         - id: project
           type:
@@ -667,10 +671,6 @@ items:
             - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.BuildReference'
           description: ''
           optional: true
-      content: >-
-        function queryTestResultsReportForBuild(project: string, buildId:
-        number, publishContext?: string, includeFailureDetails?: boolean,
-        buildToCompare?: BuildReference)
       return:
         type:
           - >-
@@ -687,6 +687,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function queryTestResultsReportForRelease(project: string, releaseId:
+        number, releaseEnvId: number, publishContext?: string,
+        includeFailureDetails?: boolean, releaseToCompare?: ReleaseReference)
       parameters:
         - id: project
           type:
@@ -716,10 +720,6 @@ items:
               @vss-web-extension-sdk.TFS.TestManagement.Contracts.ReleaseReference
           description: ''
           optional: true
-      content: >-
-        function queryTestResultsReportForRelease(project: string, releaseId:
-        number, releaseEnvId: number, publishContext?: string,
-        includeFailureDetails?: boolean, releaseToCompare?: ReleaseReference)
       return:
         type:
           - >-
@@ -735,6 +735,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function queryTestResultsSummaryForReleases(releases:
+        ReleaseReference[], project: string)
       parameters:
         - id: releases
           type:
@@ -745,9 +748,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function queryTestResultsSummaryForReleases(releases:
-        ReleaseReference[], project: string)
       return:
         type:
           - >-
@@ -764,6 +764,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function queryTestResultWorkItems(project: string, workItemCategory:
+        string, automatedTestName?: string, testCaseId?: number,
+        maxCompleteDate?: Date, days?: number, workItemCount?: number)
       parameters:
         - id: project
           type:
@@ -798,10 +802,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function queryTestResultWorkItems(project: string, workItemCategory:
-        string, automatedTestName?: string, testCaseId?: number,
-        maxCompleteDate?: Date, days?: number, workItemCount?: number)
       return:
         type:
           - >-
@@ -817,6 +817,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function queryTestSummaryByRequirement(resultsContext:
+        TestResultsContext, project: string, workItemIds?: number[])
       parameters:
         - id: resultsContext
           type:
@@ -832,9 +835,6 @@ items:
             - 'number[]'
           description: ''
           optional: true
-      content: >-
-        function queryTestSummaryByRequirement(resultsContext:
-        TestResultsContext, project: string, workItemIds?: number[])
       return:
         type:
           - >-
@@ -850,6 +850,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateTestResults(results: TestCaseResult[], project: string,
+        runId: number)
       parameters:
         - id: results
           type:
@@ -864,9 +867,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateTestResults(results: TestCaseResult[], project: string,
-        runId: number)
       return:
         type:
           - >-

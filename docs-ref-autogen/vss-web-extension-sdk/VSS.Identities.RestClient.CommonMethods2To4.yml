@@ -73,7 +73,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 26640
@@ -91,6 +91,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function addMember(containerId: string, memberId: string)'
       parameters:
         - id: containerId
           type:
@@ -100,7 +101,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function addMember(containerId: string, memberId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -115,6 +115,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -125,9 +128,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.RestClient.CommonMethods2To4.createGroups
@@ -137,12 +137,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function createGroups(container: any)'
       parameters:
         - id: container
           type:
             - any
           description: ''
-      content: 'function createGroups(container: any)'
       return:
         type:
           - >-
@@ -156,13 +156,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function createIdentity(frameworkIdentityInfo: FrameworkIdentityInfo)'
       parameters:
         - id: frameworkIdentityInfo
           type:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Contracts.FrameworkIdentityInfo
           description: ''
-      content: 'function createIdentity(frameworkIdentityInfo: FrameworkIdentityInfo)'
       return:
         type:
           - >-
@@ -176,12 +176,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createOrBindWithClaims(sourceIdentity: Identity)'
       parameters:
         - id: sourceIdentity
           type:
             - '@vss-web-extension-sdk.VSS.Identities.Contracts.Identity'
           description: ''
-      content: 'function createOrBindWithClaims(sourceIdentity: Identity)'
       return:
         type:
           - >-
@@ -195,6 +195,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createScope(info: CreateScopeInfo, scopeId: string)'
       parameters:
         - id: info
           type:
@@ -204,7 +205,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function createScope(info: CreateScopeInfo, scopeId: string)'
       return:
         type:
           - >-
@@ -218,12 +218,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function deleteGroup(groupId: string)'
       parameters:
         - id: groupId
           type:
             - string
           description: ''
-      content: 'function deleteGroup(groupId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -236,12 +236,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteScope(scopeId: string)'
       parameters:
         - id: scopeId
           type:
             - string
           description: ''
-      content: 'function deleteScope(scopeId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -254,6 +254,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getDescriptorById(id: string, isMasterId?: boolean)'
       parameters:
         - id: id
           type:
@@ -264,7 +265,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function getDescriptorById(id: string, isMasterId?: boolean)'
       return:
         type:
           - >-
@@ -280,6 +280,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getIdentityChanges(identitySequenceId: number, groupSequenceId:
+        number, scopeId?: string)
       parameters:
         - id: identitySequenceId
           type:
@@ -294,9 +297,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getIdentityChanges(identitySequenceId: number, groupSequenceId:
-        number, scopeId?: string)
       return:
         type:
           - >-
@@ -310,12 +310,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getIdentitySnapshot(scopeId: string)'
       parameters:
         - id: scopeId
           type:
             - string
           description: ''
-      content: 'function getIdentitySnapshot(scopeId: string)'
       return:
         type:
           - >-
@@ -329,8 +329,8 @@ items:
       - typeScript
     summary: Read the max sequence id of all the identities.
     syntax:
-      parameters: []
       content: function getMaxSequenceId()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<number>'
@@ -343,12 +343,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getScopeById(scopeId: string)'
       parameters:
         - id: scopeId
           type:
             - string
           description: ''
-      content: 'function getScopeById(scopeId: string)'
       return:
         type:
           - >-
@@ -362,12 +362,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getScopeByName(scopeName: string)'
       parameters:
         - id: scopeName
           type:
             - string
           description: ''
-      content: 'function getScopeByName(scopeName: string)'
       return:
         type:
           - >-
@@ -380,8 +380,8 @@ items:
       - typeScript
     summary: Read identity of the home tenant request user.
     syntax:
-      parameters: []
       content: function getSelf()
+      parameters: []
       return:
         type:
           - >-
@@ -395,8 +395,8 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
-      parameters: []
       content: function getSignedInToken()
+      parameters: []
       return:
         type:
           - >-
@@ -410,8 +410,8 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
-      parameters: []
       content: function getSignoutToken()
+      parameters: []
       return:
         type:
           - >-
@@ -425,12 +425,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getTenant(tenantId: string)'
       parameters:
         - id: tenantId
           type:
             - string
           description: ''
-      content: 'function getTenant(tenantId: string)'
       return:
         type:
           - >-
@@ -444,12 +444,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getUserIdentityIdsByDomainId(domainId: string)'
       parameters:
         - id: domainId
           type:
             - string
           description: ''
-      content: 'function getUserIdentityIdsByDomainId(domainId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string[]>'
@@ -464,6 +464,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function listGroups(scopeIds?: string, recurse?: boolean, deleted?:
+        boolean, properties?: string)
       parameters:
         - id: scopeIds
           type:
@@ -485,9 +488,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function listGroups(scopeIds?: string, recurse?: boolean, deleted?:
-        boolean, properties?: string)
       return:
         type:
           - >-
@@ -505,6 +505,11 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function readIdentities(descriptors?: string, identityIds?: string,
+        searchFilter?: string, filterValue?: string, queryMembership?:
+        QueryMembership, properties?: string, includeRestrictedVisibility?:
+        boolean, options?: ReadIdentitiesOptions)
       parameters:
         - id: descriptors
           type:
@@ -546,11 +551,6 @@ items:
             - ReadIdentitiesOptions
           description: ''
           optional: true
-      content: >-
-        function readIdentities(descriptors?: string, identityIds?: string,
-        searchFilter?: string, filterValue?: string, queryMembership?:
-        QueryMembership, properties?: string, includeRestrictedVisibility?:
-        boolean, options?: ReadIdentitiesOptions)
       return:
         type:
           - >-
@@ -566,6 +566,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function readIdentitiesByScope(scopeId: string, queryMembership?:
+        QueryMembership, properties?: string)
       parameters:
         - id: scopeId
           type:
@@ -581,9 +584,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function readIdentitiesByScope(scopeId: string, queryMembership?:
-        QueryMembership, properties?: string)
       return:
         type:
           - >-
@@ -599,6 +599,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function readIdentity(identityId: string, queryMembership?:
+        QueryMembership, properties?: string)
       parameters:
         - id: identityId
           type:
@@ -614,9 +617,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function readIdentity(identityId: string, queryMembership?:
-        QueryMembership, properties?: string)
       return:
         type:
           - >-
@@ -630,12 +630,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function readIdentityBatch(batchInfo: IdentityBatchInfo)'
       parameters:
         - id: batchInfo
           type:
             - '@vss-web-extension-sdk.VSS.Identities.Contracts.IdentityBatchInfo'
           description: ''
-      content: 'function readIdentityBatch(batchInfo: IdentityBatchInfo)'
       return:
         type:
           - >-
@@ -651,6 +651,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function readMember(containerId: string, memberId: string,
+        queryMembership?: QueryMembership)
       parameters:
         - id: containerId
           type:
@@ -665,9 +668,6 @@ items:
             - QueryMembership
           description: ''
           optional: true
-      content: >-
-        function readMember(containerId: string, memberId: string,
-        queryMembership?: QueryMembership)
       return:
         type:
           - >-
@@ -683,6 +683,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function readMemberOf(memberId: string, containerId: string,
+        queryMembership?: QueryMembership)
       parameters:
         - id: memberId
           type:
@@ -697,9 +700,6 @@ items:
             - QueryMembership
           description: ''
           optional: true
-      content: >-
-        function readMemberOf(memberId: string, containerId: string,
-        queryMembership?: QueryMembership)
       return:
         type:
           - >-
@@ -713,6 +713,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function readMembers(containerId: string, queryMembership?:
+        QueryMembership)
       parameters:
         - id: containerId
           type:
@@ -723,9 +726,6 @@ items:
             - QueryMembership
           description: ''
           optional: true
-      content: >-
-        function readMembers(containerId: string, queryMembership?:
-        QueryMembership)
       return:
         type:
           - >-
@@ -739,6 +739,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function readMembersOf(memberId: string, queryMembership?:
+        QueryMembership)
       parameters:
         - id: memberId
           type:
@@ -749,9 +752,6 @@ items:
             - QueryMembership
           description: ''
           optional: true
-      content: >-
-        function readMembersOf(memberId: string, queryMembership?:
-        QueryMembership)
       return:
         type:
           - >-
@@ -765,6 +765,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function removeMember(containerId: string, memberId: string)'
       parameters:
         - id: containerId
           type:
@@ -774,7 +775,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function removeMember(containerId: string, memberId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -787,6 +787,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function renameScope(renameScope: IdentityScope, scopeId: string)'
       parameters:
         - id: renameScope
           type:
@@ -796,7 +797,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function renameScope(renameScope: IdentityScope, scopeId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -809,15 +809,15 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateIdentities(identities:
+        VssJsonCollectionWrapperV<Identity[]>)
       parameters:
         - id: identities
           type:
             - >-
               @vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV<@vss-web-extension-sdk.VSS.Identities.Contracts.Identity[]>
           description: ''
-      content: >-
-        function updateIdentities(identities:
-        VssJsonCollectionWrapperV<Identity[]>)
       return:
         type:
           - >-
@@ -831,6 +831,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function updateIdentity(identity: Identity, identityId: string)'
       parameters:
         - id: identity
           type:
@@ -840,7 +841,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function updateIdentity(identity: Identity, identityId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'

@@ -27,13 +27,13 @@ items:
       - typeScript
     summary: Add the specified disposable to the list.
     syntax:
+      content: 'function addDisposable<TDisposable>(disposable: TDisposable)'
       parameters:
         - id: disposable
           type:
             - TDisposable
           description: |
             Disposable to be added to the list.
-      content: 'function addDisposable<TDisposable>(disposable: TDisposable)'
       return:
         type:
           - TDisposable
@@ -45,8 +45,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: new DisposalManager()
+      parameters: []
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DisposalManager.dispose
     name: dispose()
@@ -55,6 +55,6 @@ items:
       - typeScript
     summary: Disposes all disposables.
     syntax:
-      parameters: []
       content: function dispose()
+      parameters: []
     type: method

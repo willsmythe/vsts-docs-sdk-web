@@ -13,7 +13,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Search.IndexedSearchStore<T>'
+      name: '@vss-web-extension-sdk.VSS.Search.IndexedSearchStore<T>'
     source:
       path: vss.d.ts
       startLine: 31011
@@ -30,6 +30,7 @@ items:
       - typeScript
     summary: 'Adds an item to the index, under its token and its subparts.'
     syntax:
+      content: 'function addToIndex(item: T, tokens: string[])'
       parameters:
         - id: item
           type:
@@ -39,7 +40,6 @@ items:
           type:
             - 'string[]'
           description: The tokens to add the item under.
-      content: 'function addToIndex(item: T, tokens: string[])'
       return:
         type:
           - boolean
@@ -51,8 +51,8 @@ items:
       - typeScript
     summary: Clears the items stored in the strategy.
     syntax:
-      parameters: []
       content: function clearStrategyStore()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.InvertedIndexStore.constructor
     name: 'InvertedIndexStore(options?: IndexedSearchStoreOptions<T>)'
@@ -61,13 +61,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new InvertedIndexStore(options?: IndexedSearchStoreOptions<T>)'
       parameters:
         - id: options
           type:
             - '@vss-web-extension-sdk.VSS.Search.IndexedSearchStoreOptions<T>'
           description: ''
           optional: true
-      content: 'new InvertedIndexStore(options?: IndexedSearchStoreOptions<T>)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Search.InvertedIndexStore.search
     name: 'search(query: string)'
@@ -76,10 +76,10 @@ items:
       - typeScript
     summary: Runs a query on the index.
     syntax:
+      content: 'function search(query: string)'
       parameters:
         - id: query
           type:
             - string
           description: The query to run.
-      content: 'function search(query: string)'
     type: method

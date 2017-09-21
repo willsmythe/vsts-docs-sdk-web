@@ -24,7 +24,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2To4
     source:
       path: tfs.d.ts
@@ -45,6 +45,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -55,9 +58,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2_1To4.deleteTaskDefinition
@@ -67,12 +67,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function deleteTaskDefinition(taskId: string)'
       parameters:
         - id: taskId
           type:
             - string
           description: ''
-      content: 'function deleteTaskDefinition(taskId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -85,13 +85,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getAgentPoolRoles(poolId?: number)'
       parameters:
         - id: poolId
           type:
             - number
           description: ''
           optional: true
-      content: 'function getAgentPoolRoles(poolId?: number)'
       return:
         type:
           - >-
@@ -105,13 +105,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getAgentQueueRoles(queueId?: number)'
       parameters:
         - id: queueId
           type:
             - number
           description: ''
           optional: true
-      content: 'function getAgentQueueRoles(queueId?: number)'
       return:
         type:
           - >-
@@ -127,6 +127,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTaskContentZip(taskId: string, versionString: string,
+        visibility?: string[], scopeLocal?: boolean)
       parameters:
         - id: taskId
           type:
@@ -146,9 +149,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getTaskContentZip(taskId: string, versionString: string,
-        visibility?: string[], scopeLocal?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -163,6 +163,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTaskDefinition(taskId: string, versionString: string,
+        visibility?: string[], scopeLocal?: boolean)
       parameters:
         - id: taskId
           type:
@@ -182,9 +185,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getTaskDefinition(taskId: string, versionString: string,
-        visibility?: string[], scopeLocal?: boolean)
       return:
         type:
           - >-
@@ -200,6 +200,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTaskDefinitions(taskId?: string, visibility?: string[],
+        scopeLocal?: boolean)
       parameters:
         - id: taskId
           type:
@@ -216,9 +219,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getTaskDefinitions(taskId?: string, visibility?: string[],
-        scopeLocal?: boolean)
       return:
         type:
           - >-

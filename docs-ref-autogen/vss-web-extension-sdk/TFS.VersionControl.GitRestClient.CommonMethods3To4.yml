@@ -95,7 +95,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2_2To4
     source:
       path: tfs.d.ts
@@ -116,6 +116,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -126,9 +129,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods3To4.createCherryPick
@@ -140,6 +140,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createCherryPick(cherryPickToCreate:
+        GitAsyncRefOperationParameters, project: string, repositoryId: string)
       parameters:
         - id: cherryPickToCreate
           type:
@@ -154,9 +157,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function createCherryPick(cherryPickToCreate:
-        GitAsyncRefOperationParameters, project: string, repositoryId: string)
       return:
         type:
           - >-
@@ -172,6 +172,9 @@ items:
       - typeScript
     summary: Create a pull request review comment
     syntax:
+      content: >-
+        function createComment(comment: Comment, repositoryId: string,
+        pullRequestId: number, threadId: number, project?: string)
       parameters:
         - id: comment
           type:
@@ -194,9 +197,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function createComment(comment: Comment, repositoryId: string,
-        pullRequestId: number, threadId: number, project?: string)
       return:
         type:
           - >-
@@ -210,6 +210,7 @@ items:
       - typeScript
     summary: '[Preview API] Creates a ref favorite'
     syntax:
+      content: 'function createFavorite(favorite: GitRefFavorite, project: string)'
       parameters:
         - id: favorite
           type:
@@ -219,7 +220,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: 'function createFavorite(favorite: GitRefFavorite, project: string)'
       return:
         type:
           - >-
@@ -235,6 +235,9 @@ items:
       - typeScript
     summary: '[Preview API] Create an import request'
     syntax:
+      content: >-
+        function createImportRequest(importRequest: GitImportRequest, project:
+        string, repositoryId: string)
       parameters:
         - id: importRequest
           type:
@@ -249,9 +252,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function createImportRequest(importRequest: GitImportRequest, project:
-        string, repositoryId: string)
       return:
         type:
           - >-
@@ -268,6 +268,10 @@ items:
       - typeScript
     summary: '[Preview API] Create a pull request iteration status'
     syntax:
+      content: >-
+        function createPullRequestIterationStatus(status: GitPullRequestStatus,
+        repositoryId: string, pullRequestId: number, iterationId: number,
+        project?: string)
       parameters:
         - id: status
           type:
@@ -291,10 +295,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function createPullRequestIterationStatus(status: GitPullRequestStatus,
-        repositoryId: string, pullRequestId: number, iterationId: number,
-        project?: string)
       return:
         type:
           - >-
@@ -310,6 +310,9 @@ items:
       - typeScript
     summary: '[Preview API] Create a pull request status'
     syntax:
+      content: >-
+        function createPullRequestStatus(status: GitPullRequestStatus,
+        repositoryId: string, pullRequestId: number, project?: string)
       parameters:
         - id: status
           type:
@@ -329,9 +332,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function createPullRequestStatus(status: GitPullRequestStatus,
-        repositoryId: string, pullRequestId: number, project?: string)
       return:
         type:
           - >-
@@ -347,6 +347,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createRevert(revertToCreate: GitAsyncRefOperationParameters,
+        project: string, repositoryId: string)
       parameters:
         - id: revertToCreate
           type:
@@ -361,9 +364,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function createRevert(revertToCreate: GitAsyncRefOperationParameters,
-        project: string, repositoryId: string)
       return:
         type:
           - >-
@@ -379,6 +379,9 @@ items:
       - typeScript
     summary: Create a pull request review comment thread
     syntax:
+      content: >-
+        function createThread(commentThread: GitPullRequestCommentThread,
+        repositoryId: string, pullRequestId: number, project?: string)
       parameters:
         - id: commentThread
           type:
@@ -398,9 +401,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function createThread(commentThread: GitPullRequestCommentThread,
-        repositoryId: string, pullRequestId: number, project?: string)
       return:
         type:
           - >-
@@ -416,6 +416,9 @@ items:
       - typeScript
     summary: Delete a pull request comment by id for a pull request
     syntax:
+      content: >-
+        function deleteComment(repositoryId: string, pullRequestId: number,
+        threadId: number, commentId: number, project?: string)
       parameters:
         - id: repositoryId
           type:
@@ -438,9 +441,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function deleteComment(repositoryId: string, pullRequestId: number,
-        threadId: number, commentId: number, project?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -453,6 +453,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteRefFavorite(project: string, favoriteId: number)'
       parameters:
         - id: project
           type:
@@ -462,7 +463,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function deleteRefFavorite(project: string, favoriteId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -475,6 +475,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getCherryPick(project: string, cherryPickId: number,
+        repositoryId: string)
       parameters:
         - id: project
           type:
@@ -488,9 +491,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getCherryPick(project: string, cherryPickId: number,
-        repositoryId: string)
       return:
         type:
           - >-
@@ -506,6 +506,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getCherryPickForRefName(project: string, repositoryId: string,
+        refName: string)
       parameters:
         - id: project
           type:
@@ -519,9 +522,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getCherryPickForRefName(project: string, repositoryId: string,
-        refName: string)
       return:
         type:
           - >-
@@ -537,6 +537,9 @@ items:
       - typeScript
     summary: Get a pull request comment by id for a pull request
     syntax:
+      content: >-
+        function getComment(repositoryId: string, pullRequestId: number,
+        threadId: number, commentId: number, project?: string)
       parameters:
         - id: repositoryId
           type:
@@ -559,9 +562,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getComment(repositoryId: string, pullRequestId: number,
-        threadId: number, commentId: number, project?: string)
       return:
         type:
           - >-
@@ -577,6 +577,9 @@ items:
       - typeScript
     summary: Get all pull request comments in a thread.
     syntax:
+      content: >-
+        function getComments(repositoryId: string, pullRequestId: number,
+        threadId: number, project?: string)
       parameters:
         - id: repositoryId
           type:
@@ -595,9 +598,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getComments(repositoryId: string, pullRequestId: number,
-        threadId: number, project?: string)
       return:
         type:
           - >-
@@ -613,6 +613,9 @@ items:
       - typeScript
     summary: '[Preview API] Get file paths in a repository branch'
     syntax:
+      content: >-
+        function getFilePaths(project: string, repositoryId: string, scopePath?:
+        string, versionDescriptor?: GitVersionDescriptor)
       parameters:
         - id: project
           type:
@@ -633,9 +636,6 @@ items:
               @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
           description: 'version, version type and options'
           optional: true
-      content: >-
-        function getFilePaths(project: string, repositoryId: string, scopePath?:
-        string, versionDescriptor?: GitVersionDescriptor)
       return:
         type:
           - >-
@@ -651,6 +651,9 @@ items:
       - typeScript
     summary: '[Preview API] Retrieve a particular import request'
     syntax:
+      content: >-
+        function getImportRequest(project: string, repositoryId: string,
+        importRequestId: number)
       parameters:
         - id: project
           type:
@@ -664,9 +667,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getImportRequest(project: string, repositoryId: string,
-        importRequestId: number)
       return:
         type:
           - >-
@@ -680,12 +680,12 @@ items:
       - typeScript
     summary: Get a pull request using its ID
     syntax:
+      content: 'function getPullRequestById(pullRequestId: number)'
       parameters:
         - id: pullRequestId
           type:
             - number
           description: the Id of the pull request
-      content: 'function getPullRequestById(pullRequestId: number)'
       return:
         type:
           - >-
@@ -701,6 +701,9 @@ items:
       - typeScript
     summary: '[Preview API] Retrieve one conflict for a pull request by ID'
     syntax:
+      content: >-
+        function getPullRequestConflict(repositoryId: string, pullRequestId:
+        number, conflictId: number, project?: string)
       parameters:
         - id: repositoryId
           type:
@@ -719,9 +722,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getPullRequestConflict(repositoryId: string, pullRequestId:
-        number, conflictId: number, project?: string)
       return:
         type:
           - >-
@@ -737,6 +737,10 @@ items:
       - typeScript
     summary: '[Preview API] Retrieve all conflicts for a pull request'
     syntax:
+      content: >-
+        function getPullRequestConflicts(repositoryId: string, pullRequestId:
+        number, project?: string, skip?: number, top?: number, includeObsolete?:
+        boolean)
       parameters:
         - id: repositoryId
           type:
@@ -766,10 +770,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getPullRequestConflicts(repositoryId: string, pullRequestId:
-        number, project?: string, skip?: number, top?: number, includeObsolete?:
-        boolean)
       return:
         type:
           - >-
@@ -785,6 +785,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getPullRequestIteration(repositoryId: string, pullRequestId:
+        number, iterationId: number, project?: string)
       parameters:
         - id: repositoryId
           type:
@@ -803,9 +806,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getPullRequestIteration(repositoryId: string, pullRequestId:
-        number, iterationId: number, project?: string)
       return:
         type:
           - >-
@@ -822,6 +822,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getPullRequestIterationChanges(repositoryId: string,
+        pullRequestId: number, iterationId: number, project?: string, top?:
+        number, skip?: number, compareTo?: number)
       parameters:
         - id: repositoryId
           type:
@@ -855,10 +859,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getPullRequestIterationChanges(repositoryId: string,
-        pullRequestId: number, iterationId: number, project?: string, top?:
-        number, skip?: number, compareTo?: number)
       return:
         type:
           - >-
@@ -874,6 +874,9 @@ items:
       - typeScript
     summary: Get the commits for an iteration.
     syntax:
+      content: >-
+        function getPullRequestIterationCommits(repositoryId: string,
+        pullRequestId: number, iterationId: number, project?: string)
       parameters:
         - id: repositoryId
           type:
@@ -892,9 +895,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getPullRequestIterationCommits(repositoryId: string,
-        pullRequestId: number, iterationId: number, project?: string)
       return:
         type:
           - >-
@@ -910,6 +910,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getPullRequestIterations(repositoryId: string, pullRequestId:
+        number, project?: string, includeCommits?: boolean)
       parameters:
         - id: repositoryId
           type:
@@ -929,9 +932,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getPullRequestIterations(repositoryId: string, pullRequestId:
-        number, project?: string, includeCommits?: boolean)
       return:
         type:
           - >-
@@ -947,6 +947,10 @@ items:
       - typeScript
     summary: '[Preview API] Get the specific pull request iteration status.'
     syntax:
+      content: >-
+        function getPullRequestIterationStatus(repositoryId: string,
+        pullRequestId: number, iterationId: number, statusId: number, project?:
+        string)
       parameters:
         - id: repositoryId
           type:
@@ -969,10 +973,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getPullRequestIterationStatus(repositoryId: string,
-        pullRequestId: number, iterationId: number, statusId: number, project?:
-        string)
       return:
         type:
           - >-
@@ -990,6 +990,9 @@ items:
       [Preview API] Get all the statuses associated with a pull request
       iteration.
     syntax:
+      content: >-
+        function getPullRequestIterationStatuses(repositoryId: string,
+        pullRequestId: number, iterationId: number, project?: string)
       parameters:
         - id: repositoryId
           type:
@@ -1008,9 +1011,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getPullRequestIterationStatuses(repositoryId: string,
-        pullRequestId: number, iterationId: number, project?: string)
       return:
         type:
           - >-
@@ -1026,6 +1026,9 @@ items:
       - typeScript
     summary: Query for pull requests
     syntax:
+      content: >-
+        function getPullRequestQuery(queries: GitPullRequestQuery, repositoryId:
+        string, project?: string)
       parameters:
         - id: queries
           type:
@@ -1041,9 +1044,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getPullRequestQuery(queries: GitPullRequestQuery, repositoryId:
-        string, project?: string)
       return:
         type:
           - >-
@@ -1059,6 +1059,9 @@ items:
       - typeScript
     summary: '[Preview API] Get the specific pull request status.'
     syntax:
+      content: >-
+        function getPullRequestStatus(repositoryId: string, pullRequestId:
+        number, statusId: number, project?: string)
       parameters:
         - id: repositoryId
           type:
@@ -1077,9 +1080,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getPullRequestStatus(repositoryId: string, pullRequestId:
-        number, statusId: number, project?: string)
       return:
         type:
           - >-
@@ -1095,6 +1095,9 @@ items:
       - typeScript
     summary: '[Preview API] Get all the statuses associated with a pull request.'
     syntax:
+      content: >-
+        function getPullRequestStatuses(repositoryId: string, pullRequestId:
+        number, project?: string)
       parameters:
         - id: repositoryId
           type:
@@ -1109,9 +1112,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function getPullRequestStatuses(repositoryId: string, pullRequestId:
-        number, project?: string)
       return:
         type:
           - >-
@@ -1128,6 +1128,10 @@ items:
       - typeScript
     summary: Get a pull request comment thread by id for a pull request
     syntax:
+      content: >-
+        function getPullRequestThread(repositoryId: string, pullRequestId:
+        number, threadId: number, project?: string, iteration?: number,
+        baseIteration?: number)
       parameters:
         - id: repositoryId
           type:
@@ -1156,10 +1160,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getPullRequestThread(repositoryId: string, pullRequestId:
-        number, threadId: number, project?: string, iteration?: number,
-        baseIteration?: number)
       return:
         type:
           - >-
@@ -1173,6 +1173,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getRefFavorite(project: string, favoriteId: number)'
       parameters:
         - id: project
           type:
@@ -1182,7 +1183,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getRefFavorite(project: string, favoriteId: number)'
       return:
         type:
           - >-
@@ -1198,6 +1198,9 @@ items:
       - typeScript
     summary: '[Preview API] Gets the refs favorites for a repo and an identity.'
     syntax:
+      content: >-
+        function getRefFavorites(project: string, repositoryId?: string,
+        identityId?: string)
       parameters:
         - id: project
           type:
@@ -1215,9 +1218,6 @@ items:
             The id of the identity whose favorites are to be retrieved. If null,
             the requesting identity is used.
           optional: true
-      content: >-
-        function getRefFavorites(project: string, repositoryId?: string,
-        identityId?: string)
       return:
         type:
           - >-
@@ -1231,6 +1231,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getRevert(project: string, revertId: number, repositoryId:
+        string)
       parameters:
         - id: project
           type:
@@ -1244,9 +1247,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getRevert(project: string, revertId: number, repositoryId:
-        string)
       return:
         type:
           - >-
@@ -1262,6 +1262,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getRevertForRefName(project: string, repositoryId: string,
+        refName: string)
       parameters:
         - id: project
           type:
@@ -1275,9 +1278,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getRevertForRefName(project: string, repositoryId: string,
-        refName: string)
       return:
         type:
           - >-
@@ -1291,6 +1291,7 @@ items:
       - typeScript
     summary: '[Preview API] Retrieves statistics of a repository.'
     syntax:
+      content: 'function getStats(project: string, repositoryId: string)'
       parameters:
         - id: project
           type:
@@ -1300,7 +1301,6 @@ items:
           type:
             - string
           description: Friendly name or guid of repository.
-      content: 'function getStats(project: string, repositoryId: string)'
       return:
         type:
           - >-
@@ -1316,6 +1316,7 @@ items:
       [Preview API] Retrieve all available templates of specified 'type'. If not
       specified, entire list is returned
     syntax:
+      content: 'function getTemplateList(project: string, type?: string)'
       parameters:
         - id: project
           type:
@@ -1326,7 +1327,6 @@ items:
             - string
           description: searches for templates with this type
           optional: true
-      content: 'function getTemplateList(project: string, type?: string)'
       return:
         type:
           - >-
@@ -1342,6 +1342,9 @@ items:
       - typeScript
     summary: Get all pull request comment threads.
     syntax:
+      content: >-
+        function getThreads(repositoryId: string, pullRequestId: number,
+        project?: string, iteration?: number, baseIteration?: number)
       parameters:
         - id: repositoryId
           type:
@@ -1366,9 +1369,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getThreads(repositoryId: string, pullRequestId: number,
-        project?: string, iteration?: number, baseIteration?: number)
       return:
         type:
           - >-
@@ -1384,6 +1384,9 @@ items:
       - typeScript
     summary: '[Preview API] Retrieve import requests for a repository'
     syntax:
+      content: >-
+        function queryImportRequests(project: string, repositoryId: string,
+        includeAbandoned?: boolean)
       parameters:
         - id: project
           type:
@@ -1398,9 +1401,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function queryImportRequests(project: string, repositoryId: string,
-        includeAbandoned?: boolean)
       return:
         type:
           - >-
@@ -1416,6 +1416,10 @@ items:
       - typeScript
     summary: Update a pull request review comment thread
     syntax:
+      content: >-
+        function updateComment(comment: Comment, repositoryId: string,
+        pullRequestId: number, threadId: number, commentId: number, project?:
+        string)
       parameters:
         - id: comment
           type:
@@ -1442,10 +1446,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function updateComment(comment: Comment, repositoryId: string,
-        pullRequestId: number, threadId: number, commentId: number, project?:
-        string)
       return:
         type:
           - >-
@@ -1461,6 +1461,9 @@ items:
       - typeScript
     summary: '[Preview API] Update an import request'
     syntax:
+      content: >-
+        function updateImportRequest(importRequestToUpdate: GitImportRequest,
+        project: string, repositoryId: string, importRequestId: number)
       parameters:
         - id: importRequestToUpdate
           type:
@@ -1479,9 +1482,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateImportRequest(importRequestToUpdate: GitImportRequest,
-        project: string, repositoryId: string, importRequestId: number)
       return:
         type:
           - >-
@@ -1497,6 +1497,9 @@ items:
       - typeScript
     summary: '[Preview API] Update merge conflict resolution'
     syntax:
+      content: >-
+        function updatePullRequestConflict(conflict: GitConflict, repositoryId:
+        string, pullRequestId: number, conflictId: number, project?: string)
       parameters:
         - id: conflict
           type:
@@ -1519,9 +1522,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function updatePullRequestConflict(conflict: GitConflict, repositoryId:
-        string, pullRequestId: number, conflictId: number, project?: string)
       return:
         type:
           - >-
@@ -1537,6 +1537,10 @@ items:
       - typeScript
     summary: Update a pull request review comment thread
     syntax:
+      content: >-
+        function updateThread(commentThread: GitPullRequestCommentThread,
+        repositoryId: string, pullRequestId: number, threadId: number, project?:
+        string)
       parameters:
         - id: commentThread
           type:
@@ -1560,10 +1564,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: >-
-        function updateThread(commentThread: GitPullRequestCommentThread,
-        repositoryId: string, pullRequestId: number, threadId: number, project?:
-        string)
       return:
         type:
           - >-
@@ -1581,6 +1581,9 @@ items:
       [Preview API] Validates a remote repository. Returns 404 if remote
       repository is not reachable
     syntax:
+      content: >-
+        function validateRemoteRepository(remoteRepository:
+        ImportRepositoryValidation, project: string)
       parameters:
         - id: remoteRepository
           type:
@@ -1591,9 +1594,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function validateRemoteRepository(remoteRepository:
-        ImportRepositoryValidation, project: string)
       return:
         type:
           - >-

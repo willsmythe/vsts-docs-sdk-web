@@ -11,7 +11,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods3_1To4
     source:
       path: tfs.d.ts
@@ -32,6 +32,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new TaskHttpClient3_1(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -42,7 +45,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new TaskHttpClient3_1(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

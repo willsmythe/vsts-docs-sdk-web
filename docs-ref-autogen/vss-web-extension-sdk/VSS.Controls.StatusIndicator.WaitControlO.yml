@@ -30,7 +30,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Control<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Control<TOptions>'
     source:
       path: vss.d.ts
       startLine: 16661
@@ -47,8 +47,8 @@ items:
       - typeScript
     summary: Cancels waiting by removing message box and overlay.
     syntax:
-      parameters: []
       content: function cancelWait()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.DefaultShowDelay
@@ -71,8 +71,8 @@ items:
       - typeScript
     summary: Ends waiting by removing message box and overlay.
     syntax:
-      parameters: []
       content: function endWait()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.getWaitMessageFormatString
@@ -82,8 +82,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getWaitMessageFormatString()
+      parameters: []
       return:
         type:
           - string
@@ -95,8 +95,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.initializeOptions
@@ -106,12 +106,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options: TOptions)'
       parameters:
         - id: options
           type:
             - TOptions
           description: ''
-      content: 'function initializeOptions(options: TOptions)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.isCancelled
@@ -121,8 +121,8 @@ items:
       - typeScript
     summary: Indicates whether the operation is cancelled or not.
     syntax:
-      parameters: []
       content: function isCancelled()
+      parameters: []
       return:
         type:
           - boolean
@@ -148,12 +148,12 @@ items:
       - typeScript
     summary: Sets a new message for the displayed message box.
     syntax:
+      content: 'function setMessage(message: string)'
       parameters:
         - id: message
           type:
             - string
           description: Message to be displayed.
-      content: 'function setMessage(message: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.startWait
     name: 'startWait(cancellable?: Cancelable)'
@@ -164,13 +164,13 @@ items:
       Starts waiting by displaying message box and overlay in the target
       element.
     syntax:
+      content: 'function startWait(cancellable?: Cancelable)'
       parameters:
         - id: cancellable
           type:
             - '@vss-web-extension-sdk.VSS.Utils.Core.Cancelable'
           description: ''
           optional: true
-      content: 'function startWait(cancellable?: Cancelable)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.constructor
@@ -180,6 +180,7 @@ items:
       - typeScript
     summary: Constructs a WaitControl object.
     syntax:
+      content: 'new WaitControlO(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -195,5 +196,4 @@ items:
                   cancelCallback: function() { // do something }            // optional and only effective when cancellable is true
               }
           optional: true
-      content: 'new WaitControlO(options?: TOptions)'
     type: constructor

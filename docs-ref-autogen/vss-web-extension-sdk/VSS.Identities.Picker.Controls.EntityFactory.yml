@@ -36,6 +36,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        static function createStringEntity(displayName: string, imageUrl?:
+        string)
       parameters:
         - id: displayName
           type:
@@ -46,9 +49,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        static function createStringEntity(displayName: string, imageUrl?:
-        string)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity'
@@ -61,12 +61,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function isStringEntityId(entityId: string)'
       parameters:
         - id: entityId
           type:
             - string
           description: ''
-      content: 'static function isStringEntityId(entityId: string)'
       return:
         type:
           - boolean
@@ -79,12 +79,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function isStringPrefixedLocalId(localId: string)'
       parameters:
         - id: localId
           type:
             - string
           description: ''
-      content: 'static function isStringPrefixedLocalId(localId: string)'
       return:
         type:
           - boolean

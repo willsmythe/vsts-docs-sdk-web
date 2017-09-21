@@ -79,6 +79,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function addDeleteCallback(callback: function, addToFront?: boolean)'
       parameters:
         - id: callback
           type:
@@ -89,7 +90,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function addDeleteCallback(callback: function, addToFront?: boolean)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addDependenciesSatisfiedCallback
@@ -99,6 +99,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function addDependenciesSatisfiedCallback(callback: function,
+        addToFront?: boolean)
       parameters:
         - id: callback
           type:
@@ -109,9 +112,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function addDependenciesSatisfiedCallback(callback: function,
-        addToFront?: boolean)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addDependency
     name: >-
@@ -122,6 +122,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function addDependency(dependency: InputViewModelDelegate<boolean>,
+        addToFront?: boolean)
       parameters:
         - id: dependency
           type:
@@ -133,9 +136,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function addDependency(dependency: InputViewModelDelegate<boolean>,
-        addToFront?: boolean)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addValidityFollower
@@ -145,6 +145,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function addValidityFollower(follower: InputViewModel, addToFront?:
+        boolean)
       parameters:
         - id: follower
           type:
@@ -155,9 +158,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function addValidityFollower(follower: InputViewModel, addToFront?:
-        boolean)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addValueChangedCallback
@@ -169,6 +169,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function addValueChangedCallback(callback: InputViewModelDelegate<void>,
+        addToFront?: boolean)
       parameters:
         - id: callback
           type:
@@ -180,9 +183,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function addValueChangedCallback(callback: InputViewModelDelegate<void>,
-        addToFront?: boolean)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.checkDependenciesSatisfied
@@ -192,8 +192,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function checkDependenciesSatisfied()
+      parameters: []
       return:
         type:
           - boolean
@@ -206,8 +206,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function deleteViewModel()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.dependsOn
     name: 'dependsOn(inputValueId: string)'
@@ -216,12 +216,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function dependsOn(inputValueId: string)'
       parameters:
         - id: inputValueId
           type:
             - string
           description: ''
-      content: 'function dependsOn(inputValueId: string)'
       return:
         type:
           - boolean
@@ -234,8 +234,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getDependenciesSatisfied()
+      parameters: []
       return:
         type:
           - boolean
@@ -247,8 +247,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getId()
+      parameters: []
       return:
         type:
           - string
@@ -261,8 +261,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getInputDescriptor()
+      parameters: []
       return:
         type:
           - >-
@@ -276,12 +276,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getPossibleValueAtIndex(index: number)'
       parameters:
         - id: index
           type:
             - number
           description: ''
-      content: 'function getPossibleValueAtIndex(index: number)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputValue'
@@ -294,8 +294,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getSelectedIndex()
+      parameters: []
       return:
         type:
           - number
@@ -308,8 +308,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getValidationMessage()
+      parameters: []
       return:
         type:
           - string
@@ -321,8 +321,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getValue()
+      parameters: []
       return:
         type:
           - any
@@ -335,12 +335,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function inputDependenciesSatisfied(satisfied: boolean)'
       parameters:
         - id: satisfied
           type:
             - boolean
           description: ''
-      content: 'function inputDependenciesSatisfied(satisfied: boolean)'
       return:
         type:
           - boolean
@@ -359,6 +359,14 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new InputViewModel(inputDescriptor: InputDescriptor, inputValue: any,
+        inputValidChangedCallback: InputViewModelDelegate<void>, blurCallback:
+        InputViewModelDelegate<void>, valueChangedCallbacks:
+        InputViewModelDelegate<void>[], valuesChangedCallback:
+        InputViewModelDelegate<void>, dependencies?:
+        InputViewModelDelegate<boolean>[], dependenciesSatisfiedCallbacks?:
+        function[], deleteCallbacks?: function[])
       parameters:
         - id: inputDescriptor
           type:
@@ -405,14 +413,6 @@ items:
             - 'function[]'
           description: ''
           optional: true
-      content: >-
-        new InputViewModel(inputDescriptor: InputDescriptor, inputValue: any,
-        inputValidChangedCallback: InputViewModelDelegate<void>, blurCallback:
-        InputViewModelDelegate<void>, valueChangedCallbacks:
-        InputViewModelDelegate<void>[], valuesChangedCallback:
-        InputViewModelDelegate<void>, dependencies?:
-        InputViewModelDelegate<boolean>[], dependenciesSatisfiedCallbacks?:
-        function[], deleteCallbacks?: function[])
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.invalidateOnDependencyChange
@@ -422,8 +422,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function invalidateOnDependencyChange()
+      parameters: []
       return:
         type:
           - boolean
@@ -436,8 +436,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function invalidateValues()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isDirty
     name: isDirty()
@@ -446,8 +446,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isDirty()
+      parameters: []
       return:
         type:
           - boolean
@@ -459,8 +459,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isDropList()
+      parameters: []
       return:
         type:
           - boolean
@@ -472,8 +472,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isEmpty()
+      parameters: []
       return:
         type:
           - boolean
@@ -485,8 +485,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isRequired()
+      parameters: []
       return:
         type:
           - boolean
@@ -498,8 +498,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isValid()
+      parameters: []
       return:
         type:
           - boolean
@@ -511,8 +511,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function onBlur()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.refresh
     name: refresh()
@@ -521,8 +521,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function refresh()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.removeValidityFollower
@@ -532,12 +532,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function removeValidityFollower(follower: InputViewModel)'
       parameters:
         - id: follower
           type:
             - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel'
           description: ''
-      content: 'function removeValidityFollower(follower: InputViewModel)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.removeValueChangedCallback
@@ -547,15 +547,15 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function removeValueChangedCallback(callback:
+        InputViewModelDelegate<void>)
       parameters:
         - id: callback
           type:
             - >-
               @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<void>
           description: ''
-      content: >-
-        function removeValueChangedCallback(callback:
-        InputViewModelDelegate<void>)
       return:
         type:
           - boolean
@@ -568,12 +568,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setSelectedIndex(index: number)'
       parameters:
         - id: index
           type:
             - number
           description: ''
-      content: 'function setSelectedIndex(index: number)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.setValidityDelegate
@@ -583,12 +583,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setValidityDelegate(validityDelegate: InputViewModel)'
       parameters:
         - id: validityDelegate
           type:
             - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel'
           description: ''
-      content: 'function setValidityDelegate(validityDelegate: InputViewModel)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.setValue
     name: 'setValue(value: any)'
@@ -597,12 +597,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setValue(value: any)'
       parameters:
         - id: value
           type:
             - any
           description: ''
-      content: 'function setValue(value: any)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.suppressValidityChangeNotifications
@@ -612,12 +612,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function suppressValidityChangeNotifications(suppress: boolean)'
       parameters:
         - id: suppress
           type:
             - boolean
           description: ''
-      content: 'function suppressValidityChangeNotifications(suppress: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.updateValues
     name: 'updateValues(values: InputValues)'
@@ -626,12 +626,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function updateValues(values: InputValues)'
       parameters:
         - id: values
           type:
             - '@vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputValues'
           description: ''
-      content: 'function updateValues(values: InputValues)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.validate
     name: validate()
@@ -640,6 +640,6 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function validate()
+      parameters: []
     type: method

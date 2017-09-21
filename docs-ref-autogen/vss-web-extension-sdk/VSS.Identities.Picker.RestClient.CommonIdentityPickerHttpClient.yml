@@ -20,7 +20,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Identities.Picker.RestClient.AbstractIdentityPickerHttpClient
     source:
       path: vss.d.ts
@@ -41,6 +41,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function beginGetConnections(objectId: string, getRequestParams:
+        IdentitiesGetConnectionsRequestModel)
       parameters:
         - id: objectId
           type:
@@ -51,9 +54,6 @@ items:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IdentitiesGetConnectionsRequestModel
           description: ''
-      content: >-
-        function beginGetConnections(objectId: string, getRequestParams:
-        IdentitiesGetConnectionsRequestModel)
       return:
         type:
           - >-
@@ -67,15 +67,15 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function beginGetIdentities(identitiesRequest:
+        IdentitiesSearchRequestModel)
       parameters:
         - id: identitiesRequest
           type:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IdentitiesSearchRequestModel
           description: ''
-      content: >-
-        function beginGetIdentities(identitiesRequest:
-        IdentitiesSearchRequestModel)
       return:
         type:
           - >-
@@ -91,6 +91,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function beginGetIdentityFeatureMru(identityId: string, featureId:
+        string, getRequestParams: IdentitiesGetMruRequestModel)
       parameters:
         - id: identityId
           type:
@@ -105,9 +108,6 @@ items:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IdentitiesGetMruRequestModel
           description: ''
-      content: >-
-        function beginGetIdentityFeatureMru(identityId: string, featureId:
-        string, getRequestParams: IdentitiesGetMruRequestModel)
       return:
         type:
           - >-
@@ -121,12 +121,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function beginGetIdentityImageLocation(objectId: string)'
       parameters:
         - id: objectId
           type:
             - string
           description: ''
-      content: 'function beginGetIdentityImageLocation(objectId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -141,6 +141,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function beginPatchIdentityFeatureMru(identityId: string, featureId:
+        string, patchRequestBody: IdentitiesPatchMruAction[])
       parameters:
         - id: identityId
           type:
@@ -155,9 +158,6 @@ items:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IdentitiesPatchMruAction[]
           description: ''
-      content: >-
-        function beginPatchIdentityFeatureMru(identityId: string, featureId:
-        string, patchRequestBody: IdentitiesPatchMruAction[])
       return:
         type:
           - >-

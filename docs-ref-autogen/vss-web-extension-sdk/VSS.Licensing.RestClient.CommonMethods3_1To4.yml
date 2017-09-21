@@ -13,7 +13,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods3To4'
+      name: '@vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods3To4'
     source:
       path: vss.d.ts
       startLine: 27965
@@ -33,6 +33,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -43,9 +46,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods3_1To4.getExtensionLicenseUsage
@@ -57,8 +57,8 @@ items:
       [Preview API] Returns Licensing info about paid extensions assigned to
       user passed into GetExtensionsAssignedToAccount
     syntax:
-      parameters: []
       content: function getExtensionLicenseUsage()
+      parameters: []
       return:
         type:
           - >-

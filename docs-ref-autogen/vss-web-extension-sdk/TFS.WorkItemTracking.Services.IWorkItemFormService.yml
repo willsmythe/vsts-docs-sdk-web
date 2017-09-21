@@ -80,13 +80,13 @@ items:
       Adds links of another work items or artifacts (e.g. commits, hyperlinks)
       to the work item. Attachment is currently not supported by this function.
     syntax:
+      content: 'function addWorkItemRelations(workItemRelations: WorkItemRelation[])'
       parameters:
         - id: workItemRelations
           type:
             - >-
               @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemRelation[]
           description: Work item links to add.
-      content: 'function addWorkItemRelations(workItemRelations: WorkItemRelation[])'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -99,6 +99,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function beginSaveWorkItem(successCallback: function, errorCallback:
+        function)
       parameters:
         - id: successCallback
           type:
@@ -108,9 +111,6 @@ items:
           type:
             - function
           description: ''
-      content: >-
-        function beginSaveWorkItem(successCallback: function, errorCallback:
-        function)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -125,8 +125,8 @@ items:
       Clears the error set by setError method and unblocks saving of the work
       item in the form.
     syntax:
-      parameters: []
       content: function clearError()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -139,12 +139,12 @@ items:
       - typeScript
     summary: Gets the allowed values for the field on the active work item.
     syntax:
+      content: 'function getAllowedFieldValues(fieldReferenceName: string)'
       parameters:
         - id: fieldReferenceName
           type:
             - string
           description: Field reference name
-      content: 'function getAllowedFieldValues(fieldReferenceName: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<Object[]>'
@@ -157,8 +157,8 @@ items:
       - typeScript
     summary: Gets active work item fields.
     syntax:
-      parameters: []
       content: function getFields()
+      parameters: []
       return:
         type:
           - >-
@@ -172,6 +172,9 @@ items:
       - typeScript
     summary: Gets field value of the active work item.
     syntax:
+      content: >-
+        function getFieldValue(fieldReferenceName: string, returnOriginalValue?:
+        boolean)
       parameters:
         - id: fieldReferenceName
           type:
@@ -182,9 +185,6 @@ items:
             - boolean
           description: '(Optional) If false, gets unsaved field values. Default is false.'
           optional: true
-      content: >-
-        function getFieldValue(fieldReferenceName: string, returnOriginalValue?:
-        boolean)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<Object>'
@@ -199,6 +199,9 @@ items:
       - typeScript
     summary: Gets field values of the active work item.
     syntax:
+      content: >-
+        function getFieldValues(fieldReferenceNames: string[],
+        returnOriginalValue?: boolean)
       parameters:
         - id: fieldReferenceNames
           type:
@@ -209,9 +212,6 @@ items:
             - boolean
           description: '(Optional) If false, gets unsaved field values. Default is false.'
           optional: true
-      content: >-
-        function getFieldValues(fieldReferenceNames: string[],
-        returnOriginalValue?: boolean)
       return:
         type:
           - >-
@@ -225,8 +225,8 @@ items:
       - typeScript
     summary: Gets id of active work item.
     syntax:
-      parameters: []
       content: function getId()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<number>'
@@ -241,8 +241,8 @@ items:
       Gets invalid fields who are in an invalid state according to the work item
       rules. These fields need to be changed before the work item can be saved.
     syntax:
-      parameters: []
       content: function getInvalidFields()
+      parameters: []
       return:
         type:
           - >-
@@ -256,8 +256,8 @@ items:
       - typeScript
     summary: Gets active work item's latest revision.
     syntax:
-      parameters: []
       content: function getRevision()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<number>'
@@ -273,8 +273,8 @@ items:
       (e.g. commits, hyperlinks). Attachment is currently not supported by this
       function.
     syntax:
-      parameters: []
       content: function getWorkItemRelations()
+      parameters: []
       return:
         type:
           - >-
@@ -288,8 +288,8 @@ items:
       - typeScript
     summary: Returns an array of work item relation types.
     syntax:
-      parameters: []
       content: function getWorkItemRelationTypes()
+      parameters: []
       return:
         type:
           - >-
@@ -303,12 +303,12 @@ items:
       - typeScript
     summary: Returns the REST API url of the specified work item resource.
     syntax:
+      content: 'function getWorkItemResourceUrl(workItemId: number)'
       parameters:
         - id: workItemId
           type:
             - number
           description: Id of the work item that the resource url is requested for.
-      content: 'function getWorkItemResourceUrl(workItemId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -321,8 +321,8 @@ items:
       - typeScript
     summary: Returns true if the active work item available.
     syntax:
-      parameters: []
       content: function hasActiveWorkItem()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -335,8 +335,8 @@ items:
       - typeScript
     summary: Returns true if the active work item is dirty.
     syntax:
-      parameters: []
       content: function isDirty()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -349,8 +349,8 @@ items:
       - typeScript
     summary: Returns true if the active work item is new.
     syntax:
-      parameters: []
       content: function isNew()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -363,8 +363,8 @@ items:
       - typeScript
     summary: Returns true if the active work item fields are all valid.
     syntax:
-      parameters: []
       content: function isValid()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -379,8 +379,8 @@ items:
       Refreshes the active work item. Will prompt the user if the work item is
       dirty.
     syntax:
-      parameters: []
       content: function refresh()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -396,13 +396,13 @@ items:
       hyperlinks) from the work item. Attachment is currently not supported by
       this function.
     syntax:
+      content: 'function removeWorkItemRelations(workItemRelations: WorkItemRelation[])'
       parameters:
         - id: workItemRelations
           type:
             - >-
               @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemRelation[]
           description: Work item links to remove.
-      content: 'function removeWorkItemRelations(workItemRelations: WorkItemRelation[])'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -417,8 +417,8 @@ items:
       Reset any changes in the active work item. Will prompt the user to
       confirm.
     syntax:
-      parameters: []
       content: function reset()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -431,8 +431,8 @@ items:
       - typeScript
     summary: Saves the active work item.
     syntax:
-      parameters: []
       content: function save()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -447,6 +447,7 @@ items:
       Marks the work item as invalid and disable saving the work item on the
       form.
     syntax:
+      content: 'function setError(errorMessage: string)'
       parameters:
         - id: errorMessage
           type:
@@ -454,7 +455,6 @@ items:
           description: >
             A custom error message that would be shown on top of the work item
             form.
-      content: 'function setError(errorMessage: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -467,6 +467,7 @@ items:
       - typeScript
     summary: Sets field value of the active work item.
     syntax:
+      content: 'function setFieldValue(fieldReferenceName: string, value: Object)'
       parameters:
         - id: fieldReferenceName
           type:
@@ -476,7 +477,6 @@ items:
           type:
             - Object
           description: Field value
-      content: 'function setFieldValue(fieldReferenceName: string, value: Object)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -489,12 +489,12 @@ items:
       - typeScript
     summary: Sets field values of the active work item.
     syntax:
+      content: 'function setFieldValues(fields: IDictionaryStringTo<Object>)'
       parameters:
         - id: fields
           type:
             - '@vss-web-extension-sdk.IDictionaryStringTo<Object>'
           description: A dictionary of field refName/values
-      content: 'function setFieldValues(fields: IDictionaryStringTo<Object>)'
       return:
         type:
           - >-

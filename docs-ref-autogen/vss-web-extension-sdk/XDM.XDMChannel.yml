@@ -33,6 +33,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function error(data: any, errorObj: any)'
       parameters:
         - id: data
           type:
@@ -42,7 +43,6 @@ items:
           type:
             - any
           description: ''
-      content: 'function error(data: any, errorObj: any)'
     type: method
   - uid: vss-web-extension-sdk.XDM.XDMChannel.getObjectRegistry
     name: getObjectRegistry()
@@ -54,8 +54,8 @@ items:
       Upon receiving a message, this channel registry will be used first, then
       the global registry will be used if no handler is found here.
     syntax:
-      parameters: []
       content: function getObjectRegistry()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IXDMObjectRegistry'
@@ -69,6 +69,9 @@ items:
       Get a proxied object that represents the object registered with the given
       instance id on the remote side of this channel.
     syntax:
+      content: >-
+        function getRemoteObjectProxy<T>(instanceId: string, contextData?:
+        Object)
       parameters:
         - id: instanceId
           type:
@@ -81,9 +84,6 @@ items:
             Optional context data to pass to a registered object's factory
             method
           optional: true
-      content: >-
-        function getRemoteObjectProxy<T>(instanceId: string, contextData?:
-        Object)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<T>'
@@ -100,6 +100,10 @@ items:
       Invoke a method via RPC. Lookup the registered object on the remote end of
       the channel and invoke the specified method.
     syntax:
+      content: >-
+        function invokeRemoteMethod<T>(methodName: string, instanceId: string,
+        params?: any[], instanceContextData?: Object, serializationSettings?:
+        ISerializationSettings)
       parameters:
         - id: methodName
           type:
@@ -127,10 +131,6 @@ items:
           description: |
             Optional serialization settings
           optional: true
-      content: >-
-        function invokeRemoteMethod<T>(methodName: string, instanceId: string,
-        params?: any[], instanceContextData?: Object, serializationSettings?:
-        ISerializationSettings)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<T>'
@@ -144,6 +144,7 @@ items:
       Handle a received message on this channel. Dispatch to the appropriate
       object found via object registry
     syntax:
+      content: 'function onMessage(data: any, origin: string)'
       parameters:
         - id: data
           type:
@@ -153,7 +154,6 @@ items:
           type:
             - string
           description: Origin of the frame that sent the message
-      content: 'function onMessage(data: any, origin: string)'
       return:
         type:
           - boolean
@@ -165,6 +165,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function owns(source: Window, origin: string, data: any)'
       parameters:
         - id: source
           type:
@@ -178,7 +179,6 @@ items:
           type:
             - any
           description: ''
-      content: 'function owns(source: Window, origin: string, data: any)'
       return:
         type:
           - boolean
@@ -190,6 +190,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new XDMChannel(postToWindow: Window, targetOrigin?: string)'
       parameters:
         - id: postToWindow
           type:
@@ -200,5 +201,4 @@ items:
             - string
           description: ''
           optional: true
-      content: 'new XDMChannel(postToWindow: Window, targetOrigin?: string)'
     type: constructor

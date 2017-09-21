@@ -10,7 +10,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4'
+      name: '@vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4'
     source:
       path: tfs.d.ts
       startLine: 4351
@@ -29,6 +29,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new ChatHttpClient3_1(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -39,7 +42,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new ChatHttpClient3_1(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

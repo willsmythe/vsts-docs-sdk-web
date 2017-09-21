@@ -44,6 +44,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function actionCompleted(id: number, jqXHR: JQueryXHR)'
       parameters:
         - id: id
           type:
@@ -53,7 +54,6 @@ items:
           type:
             - JQueryXHR
           description: ''
-      content: 'function actionCompleted(id: number, jqXHR: JQueryXHR)'
     type: method
   - uid: vss-web-extension-sdk.VSS.VSS.ActivtyStatsCollector.actionStarted
     name: 'actionStarted(name: string)'
@@ -62,12 +62,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function actionStarted(name: string)'
       parameters:
         - id: name
           type:
             - string
           description: ''
-      content: 'function actionStarted(name: string)'
       return:
         type:
           - number
@@ -121,8 +121,8 @@ items:
       - typeScript
     summary: Global handler for logging activity data
     syntax:
-      parameters: []
       content: new ActivtyStatsCollector()
+      parameters: []
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.VSS.ActivtyStatsCollector.addActivtyStatsCollectionAllowedCallback
@@ -134,16 +134,16 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function
+        addActivtyStatsCollectionAllowedCallback(activtyStatsCollectionAllowedCallback:
+        ActivtyStatsCollectionAllowedCallback)
       parameters:
         - id: activtyStatsCollectionAllowedCallback
           type:
             - >-
               @vss-web-extension-sdk.VSS.VSS.ActivtyStatsCollectionAllowedCallback
           description: ''
-      content: >-
-        function
-        addActivtyStatsCollectionAllowedCallback(activtyStatsCollectionAllowedCallback:
-        ActivtyStatsCollectionAllowedCallback)
     type: method
   - uid: vss-web-extension-sdk.VSS.VSS.ActivtyStatsCollector.clearStats
     name: clearStats()
@@ -152,8 +152,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function clearStats()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.VSS.ActivtyStatsCollector.collectStats
     name: 'collectStats(shouldCollect: boolean)'
@@ -162,12 +162,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function collectStats(shouldCollect: boolean)'
       parameters:
         - id: shouldCollect
           type:
             - boolean
           description: ''
-      content: 'function collectStats(shouldCollect: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.VSS.ActivtyStatsCollector.CURRENT_PAGE
     name: CURRENT_PAGE
@@ -189,8 +189,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getActivtyStatistics()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.VSS.ActivtyStatsCollector.getClientStatistics
     name: getClientStatistics()
@@ -199,8 +199,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getClientStatistics()
+      parameters: []
       return:
         type:
           - >-
@@ -213,8 +213,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getCurrentPage()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.VSS.ActivtyStatistic'
@@ -226,8 +226,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isCollectingStats()
+      parameters: []
       return:
         type:
           - boolean
@@ -239,6 +239,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function logActivity(activityId: string, page: string)'
       parameters:
         - id: activityId
           type:
@@ -248,7 +249,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function logActivity(activityId: string, page: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.VSS.ActivtyStatsCollector.setCurrentPage
     name: 'setCurrentPage(currentPage: ActivtyStatistic)'
@@ -257,10 +257,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setCurrentPage(currentPage: ActivtyStatistic)'
       parameters:
         - id: currentPage
           type:
             - '@vss-web-extension-sdk.VSS.VSS.ActivtyStatistic'
           description: ''
-      content: 'function setCurrentPage(currentPage: ActivtyStatistic)'
     type: method

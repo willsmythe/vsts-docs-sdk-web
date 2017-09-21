@@ -29,8 +29,8 @@ items:
       - typeScript
     summary: clearAllTimers is used to clear any active timers in the object.
     syntax:
-      parameters: []
       content: function clearAllTimers()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement.clearInterval
     name: 'clearInterval(intervalId: number)'
@@ -41,13 +41,13 @@ items:
       clearInterval is used to stop the series of callbacks that was setup
       through setInterval.
     syntax:
+      content: 'function clearInterval(intervalId: number)'
       parameters:
         - id: intervalId
           type:
             - number
           description: |
             The id returned from eh setInterval call that you want stopped.
-      content: 'function clearInterval(intervalId: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement.clearTimeout
     name: 'clearTimeout(timeoutId: number)'
@@ -58,13 +58,13 @@ items:
       clearTimeout is used to stop a timeout callback that was setup through
       setTimeout.
     syntax:
+      content: 'function clearTimeout(timeoutId: number)'
       parameters:
         - id: timeoutId
           type:
             - number
           description: |
             The id returned from eh setTimeout call that you want stopped.
-      content: 'function clearTimeout(timeoutId: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Platform.Layout.TimerManagement.setInterval
     name: 'setInterval(callback: function, milliseconds: number, args: any[])'
@@ -73,6 +73,9 @@ items:
       - typeScript
     summary: setInterval is used to setup a callback that is called on an interval.
     syntax:
+      content: >-
+        function setInterval(callback: function, milliseconds: number, args:
+        any[])
       parameters:
         - id: callback
           type:
@@ -89,9 +92,6 @@ items:
             - 'any[]'
           description: |
             Optional variable argument list passed to the callback.
-      content: >-
-        function setInterval(callback: function, milliseconds: number, args:
-        any[])
       return:
         type:
           - number
@@ -105,6 +105,9 @@ items:
       setTimeout is used to setup a onetime callback that is called after the
       specified timeout.
     syntax:
+      content: >-
+        function setTimeout(callback: function, milliseconds?: number, args:
+        any[])
       parameters:
         - id: callback
           type:
@@ -123,9 +126,6 @@ items:
             - 'any[]'
           description: |
             Optional variable argument list passed to the callback.
-      content: >-
-        function setTimeout(callback: function, milliseconds?: number, args:
-        any[])
       return:
         type:
           - number

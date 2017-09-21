@@ -94,7 +94,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_1To4
     source:
       path: tfs.d.ts
@@ -113,6 +113,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function addDeploymentGroup(deploymentGroup: DeploymentGroup, project:
+        string)
       parameters:
         - id: deploymentGroup
           type:
@@ -123,9 +126,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function addDeploymentGroup(deploymentGroup: DeploymentGroup, project:
-        string)
       return:
         type:
           - >-
@@ -141,6 +141,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function addDeploymentMachine(machine: DeploymentMachine, project:
+        string, deploymentGroupId: number)
       parameters:
         - id: machine
           type:
@@ -155,9 +158,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function addDeploymentMachine(machine: DeploymentMachine, project:
-        string, deploymentGroupId: number)
       return:
         type:
           - >-
@@ -173,6 +173,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function addServiceEndpointExecutionRecords(input:
+        ServiceEndpointExecutionRecordsInput, project: string)
       parameters:
         - id: input
           type:
@@ -183,9 +186,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function addServiceEndpointExecutionRecords(input:
-        ServiceEndpointExecutionRecordsInput, project: string)
       return:
         type:
           - >-
@@ -201,6 +201,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3_2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -211,9 +214,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3_2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3_2To4.createAgentPoolMaintenanceDefinition
@@ -225,6 +225,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createAgentPoolMaintenanceDefinition(definition:
+        TaskAgentPoolMaintenanceDefinition, poolId: number)
       parameters:
         - id: definition
           type:
@@ -235,9 +238,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function createAgentPoolMaintenanceDefinition(definition:
-        TaskAgentPoolMaintenanceDefinition, poolId: number)
       return:
         type:
           - >-
@@ -251,6 +251,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteAgentPoolMaintenanceDefinition(poolId: number,
+        definitionId: number)
       parameters:
         - id: poolId
           type:
@@ -260,9 +263,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function deleteAgentPoolMaintenanceDefinition(poolId: number,
-        definitionId: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -275,6 +275,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteAgentPoolMaintenanceJob(poolId: number, jobId: number)'
       parameters:
         - id: poolId
           type:
@@ -284,7 +285,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function deleteAgentPoolMaintenanceJob(poolId: number, jobId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -297,6 +297,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteDeploymentGroup(project: string, deploymentGroupId:
+        number)
       parameters:
         - id: project
           type:
@@ -306,9 +309,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function deleteDeploymentGroup(project: string, deploymentGroupId:
-        number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -323,6 +323,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteDeploymentMachine(project: string, deploymentGroupId:
+        number, machineId: number)
       parameters:
         - id: project
           type:
@@ -336,9 +339,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function deleteDeploymentMachine(project: string, deploymentGroupId:
-        number, machineId: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -351,6 +351,7 @@ items:
       - typeScript
     summary: '[Preview API] Delete a secure file'
     syntax:
+      content: 'function deleteSecureFile(project: string, secureFileId: string)'
       parameters:
         - id: project
           type:
@@ -360,7 +361,6 @@ items:
           type:
             - string
           description: The unique secure file Id
-      content: 'function deleteSecureFile(project: string, secureFileId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -375,6 +375,9 @@ items:
       - typeScript
     summary: '[Preview API] Download a secure file by Id'
     syntax:
+      content: >-
+        function downloadSecureFile(project: string, secureFileId: string,
+        ticket: string, download?: boolean)
       parameters:
         - id: project
           type:
@@ -396,9 +399,6 @@ items:
             body. If download is false, the response body contains the file
             stream.
           optional: true
-      content: >-
-        function downloadSecureFile(project: string, secureFileId: string,
-        ticket: string, download?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -413,6 +413,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function generateDeploymentGroupAccessToken(project: string,
+        deploymentGroupId: number)
       parameters:
         - id: project
           type:
@@ -422,9 +425,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function generateDeploymentGroupAccessToken(project: string,
-        deploymentGroupId: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -437,6 +437,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAgentPoolMaintenanceDefinition(poolId: number, definitionId:
+        number)
       parameters:
         - id: poolId
           type:
@@ -446,9 +449,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getAgentPoolMaintenanceDefinition(poolId: number, definitionId:
-        number)
       return:
         type:
           - >-
@@ -462,12 +462,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getAgentPoolMaintenanceDefinitions(poolId: number)'
       parameters:
         - id: poolId
           type:
             - number
           description: ''
-      content: 'function getAgentPoolMaintenanceDefinitions(poolId: number)'
       return:
         type:
           - >-
@@ -481,6 +481,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getAgentPoolMaintenanceJob(poolId: number, jobId: number)'
       parameters:
         - id: poolId
           type:
@@ -490,7 +491,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getAgentPoolMaintenanceJob(poolId: number, jobId: number)'
       return:
         type:
           - >-
@@ -504,6 +504,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getAgentPoolMaintenanceJobLogs(poolId: number, jobId: number)'
       parameters:
         - id: poolId
           type:
@@ -513,7 +514,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getAgentPoolMaintenanceJobLogs(poolId: number, jobId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -526,6 +526,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAgentPoolMaintenanceJobs(poolId: number, definitionId?:
+        number)
       parameters:
         - id: poolId
           type:
@@ -536,9 +539,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getAgentPoolMaintenanceJobs(poolId: number, definitionId?:
-        number)
       return:
         type:
           - >-
@@ -554,6 +554,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAgentRequestsForDeploymentMachine(project: string,
+        deploymentGroupId: number, machineId: number, completedRequestCount?:
+        number)
       parameters:
         - id: project
           type:
@@ -572,10 +576,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getAgentRequestsForDeploymentMachine(project: string,
-        deploymentGroupId: number, machineId: number, completedRequestCount?:
-        number)
       return:
         type:
           - >-
@@ -591,6 +591,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAgentRequestsForDeploymentMachines(project: string,
+        deploymentGroupId: number, machineIds?: number[],
+        completedRequestCount?: number)
       parameters:
         - id: project
           type:
@@ -610,10 +614,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getAgentRequestsForDeploymentMachines(project: string,
-        deploymentGroupId: number, machineIds?: number[],
-        completedRequestCount?: number)
       return:
         type:
           - >-
@@ -630,6 +630,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getDeploymentGroup(project: string, deploymentGroupId: number,
+        actionFilter?: DeploymentGroupActionFilter, expand?:
+        DeploymentGroupExpands)
       parameters:
         - id: project
           type:
@@ -649,10 +653,6 @@ items:
             - DeploymentGroupExpands
           description: ''
           optional: true
-      content: >-
-        function getDeploymentGroup(project: string, deploymentGroupId: number,
-        actionFilter?: DeploymentGroupActionFilter, expand?:
-        DeploymentGroupExpands)
       return:
         type:
           - >-
@@ -669,6 +669,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getDeploymentGroups(project: string, name?: string,
+        actionFilter?: DeploymentGroupActionFilter, expand?:
+        DeploymentGroupExpands, continuationToken?: string, top?: number)
       parameters:
         - id: project
           type:
@@ -699,10 +703,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getDeploymentGroups(project: string, name?: string,
-        actionFilter?: DeploymentGroupActionFilter, expand?:
-        DeploymentGroupExpands, continuationToken?: string, top?: number)
       return:
         type:
           - >-
@@ -718,6 +718,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getDeploymentMachine(project: string, deploymentGroupId:
+        number, machineId: number, expand?: DeploymentMachineExpands)
       parameters:
         - id: project
           type:
@@ -736,9 +739,6 @@ items:
             - DeploymentMachineExpands
           description: ''
           optional: true
-      content: >-
-        function getDeploymentMachine(project: string, deploymentGroupId:
-        number, machineId: number, expand?: DeploymentMachineExpands)
       return:
         type:
           - >-
@@ -754,6 +754,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getDeploymentMachines(project: string, deploymentGroupId:
+        number, tags?: string[], name?: string, expand?:
+        DeploymentMachineExpands)
       parameters:
         - id: project
           type:
@@ -778,10 +782,6 @@ items:
             - DeploymentMachineExpands
           description: ''
           optional: true
-      content: >-
-        function getDeploymentMachines(project: string, deploymentGroupId:
-        number, tags?: string[], name?: string, expand?:
-        DeploymentMachineExpands)
       return:
         type:
           - >-
@@ -797,6 +797,9 @@ items:
       - typeScript
     summary: '[Preview API] Get a secure file'
     syntax:
+      content: >-
+        function getSecureFile(project: string, secureFileId: string,
+        includeDownloadTicket?: boolean)
       parameters:
         - id: project
           type:
@@ -813,9 +816,6 @@ items:
             If includeDownloadTicket is true and the caller has permissions, a
             download ticket is included in the response.
           optional: true
-      content: >-
-        function getSecureFile(project: string, secureFileId: string,
-        includeDownloadTicket?: boolean)
       return:
         type:
           - >-
@@ -831,6 +831,9 @@ items:
       - typeScript
     summary: '[Preview API] Get secure files'
     syntax:
+      content: >-
+        function getSecureFiles(project: string, namePattern?: string,
+        includeDownloadTickets?: boolean, actionFilter?: SecureFileActionFilter)
       parameters:
         - id: project
           type:
@@ -857,9 +860,6 @@ items:
             Filter by secure file permissions for View, Manage or Use action.
             Defaults to View.
           optional: true
-      content: >-
-        function getSecureFiles(project: string, namePattern?: string,
-        includeDownloadTickets?: boolean, actionFilter?: SecureFileActionFilter)
       return:
         type:
           - >-
@@ -875,6 +875,9 @@ items:
       - typeScript
     summary: '[Preview API] Get secure files'
     syntax:
+      content: >-
+        function getSecureFilesByIds(project: string, secureFileIds: string[],
+        includeDownloadTickets?: boolean)
       parameters:
         - id: project
           type:
@@ -891,9 +894,6 @@ items:
             If includeDownloadTickets is true and the caller has permissions, a
             download ticket for each secure file is included in the response.
           optional: true
-      content: >-
-        function getSecureFilesByIds(project: string, secureFileIds: string[],
-        includeDownloadTickets?: boolean)
       return:
         type:
           - >-
@@ -909,6 +909,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getServiceEndpointExecutionRecords(project: string, endpointId:
+        string, top?: number)
       parameters:
         - id: project
           type:
@@ -923,9 +926,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getServiceEndpointExecutionRecords(project: string, endpointId:
-        string, top?: number)
       return:
         type:
           - >-
@@ -943,6 +943,9 @@ items:
       [Preview API] Query secure files using a name pattern and a condition on
       file properties.
     syntax:
+      content: >-
+        function querySecureFilesByProperties(condition: string, project:
+        string, namePattern?: string)
       parameters:
         - id: condition
           type:
@@ -966,9 +969,6 @@ items:
             Name of the secure file to match. Can include wildcards to match
             multiple files.
           optional: true
-      content: >-
-        function querySecureFilesByProperties(condition: string, project:
-        string, namePattern?: string)
       return:
         type:
           - >-
@@ -984,6 +984,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function queueAgentPoolMaintenanceJob(job: TaskAgentPoolMaintenanceJob,
+        poolId: number)
       parameters:
         - id: job
           type:
@@ -994,9 +997,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function queueAgentPoolMaintenanceJob(job: TaskAgentPoolMaintenanceJob,
-        poolId: number)
       return:
         type:
           - >-
@@ -1010,6 +1010,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function refreshDeploymentMachines(project: string, deploymentGroupId:
+        number)
       parameters:
         - id: project
           type:
@@ -1019,9 +1022,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function refreshDeploymentMachines(project: string, deploymentGroupId:
-        number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -1036,6 +1036,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function replaceDeploymentMachine(machine: DeploymentMachine, project:
+        string, deploymentGroupId: number, machineId: number)
       parameters:
         - id: machine
           type:
@@ -1054,9 +1057,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function replaceDeploymentMachine(machine: DeploymentMachine, project:
-        string, deploymentGroupId: number, machineId: number)
       return:
         type:
           - >-
@@ -1072,6 +1072,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateAgentPoolMaintenanceDefinition(definition:
+        TaskAgentPoolMaintenanceDefinition, poolId: number, definitionId:
+        number)
       parameters:
         - id: definition
           type:
@@ -1086,10 +1090,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateAgentPoolMaintenanceDefinition(definition:
-        TaskAgentPoolMaintenanceDefinition, poolId: number, definitionId:
-        number)
       return:
         type:
           - >-
@@ -1105,6 +1105,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateAgentPoolMaintenanceJob(job: TaskAgentPoolMaintenanceJob,
+        poolId: number, jobId: number)
       parameters:
         - id: job
           type:
@@ -1119,9 +1122,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateAgentPoolMaintenanceJob(job: TaskAgentPoolMaintenanceJob,
-        poolId: number, jobId: number)
       return:
         type:
           - >-
@@ -1137,6 +1137,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateAgentUpdateState(poolId: number, agentId: number,
+        currentState: string)
       parameters:
         - id: poolId
           type:
@@ -1150,9 +1153,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateAgentUpdateState(poolId: number, agentId: number,
-        currentState: string)
       return:
         type:
           - >-
@@ -1168,6 +1168,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateDeploymentGroup(deploymentGroup: DeploymentGroup,
+        project: string, deploymentGroupId: number)
       parameters:
         - id: deploymentGroup
           type:
@@ -1182,9 +1185,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateDeploymentGroup(deploymentGroup: DeploymentGroup,
-        project: string, deploymentGroupId: number)
       return:
         type:
           - >-
@@ -1200,6 +1200,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateDeploymentMachine(machine: DeploymentMachine, project:
+        string, deploymentGroupId: number, machineId: number)
       parameters:
         - id: machine
           type:
@@ -1218,9 +1221,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateDeploymentMachine(machine: DeploymentMachine, project:
-        string, deploymentGroupId: number, machineId: number)
       return:
         type:
           - >-
@@ -1236,6 +1236,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateDeploymentMachines(machines: DeploymentMachine[],
+        project: string, deploymentGroupId: number)
       parameters:
         - id: machines
           type:
@@ -1250,9 +1253,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateDeploymentMachines(machines: DeploymentMachine[],
-        project: string, deploymentGroupId: number)
       return:
         type:
           - >-
@@ -1268,6 +1268,9 @@ items:
       - typeScript
     summary: '[Preview API] Update the name or properties of an existing secure file'
     syntax:
+      content: >-
+        function updateSecureFile(secureFile: SecureFile, project: string,
+        secureFileId: string)
       parameters:
         - id: secureFile
           type:
@@ -1281,9 +1284,6 @@ items:
           type:
             - string
           description: The unique secure file Id
-      content: >-
-        function updateSecureFile(secureFile: SecureFile, project: string,
-        secureFileId: string)
       return:
         type:
           - >-
@@ -1300,6 +1300,7 @@ items:
       Files are identified by their IDs. Properties provided override the
       existing one entirely, i.e. do not merge.
     syntax:
+      content: 'function updateSecureFiles(secureFiles: SecureFile[], project: string)'
       parameters:
         - id: secureFiles
           type:
@@ -1312,7 +1313,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: 'function updateSecureFiles(secureFiles: SecureFile[], project: string)'
       return:
         type:
           - >-
@@ -1326,6 +1326,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateServiceEndpoints(endpoints: ServiceEndpoint[], project:
+        string)
       parameters:
         - id: endpoints
           type:
@@ -1336,9 +1339,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function updateServiceEndpoints(endpoints: ServiceEndpoint[], project:
-        string)
       return:
         type:
           - >-
@@ -1354,6 +1354,7 @@ items:
       [Preview API] Upload a secure file, include the file stream in the request
       body
     syntax:
+      content: 'function uploadSecureFile(content: any, project: string, name: string)'
       parameters:
         - id: content
           type:
@@ -1367,7 +1368,6 @@ items:
           type:
             - string
           description: Name of the file to upload
-      content: 'function uploadSecureFile(content: any, project: string, name: string)'
       return:
         type:
           - >-
@@ -1381,13 +1381,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function validateInputs(inputValidationRequest: InputValidationRequest)'
       parameters:
         - id: inputValidationRequest
           type:
             - >-
               @vss-web-extension-sdk.TFS.DistributedTask.Contracts.InputValidationRequest
           description: ''
-      content: 'function validateInputs(inputValidationRequest: InputValidationRequest)'
       return:
         type:
           - >-

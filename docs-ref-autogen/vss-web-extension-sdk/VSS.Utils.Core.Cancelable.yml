@@ -31,8 +31,8 @@ items:
       - typeScript
     summary: Cancel the operation.
     syntax:
-      parameters: []
       content: function cancel()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Utils.Core.Cancelable.constructor
     name: 'Cancelable(context: any)'
@@ -41,6 +41,7 @@ items:
       - typeScript
     summary: Manage cancellable operations.
     syntax:
+      content: 'new Cancelable(context: any)'
       parameters:
         - id: context
           type:
@@ -48,7 +49,6 @@ items:
           description: |
             The context for the cancellable operation.
             The context is passed to actions when they are called.
-      content: 'new Cancelable(context: any)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Utils.Core.Cancelable.canceled
     name: canceled
@@ -83,13 +83,13 @@ items:
       - typeScript
     summary: Perform the action if not cancelled.
     syntax:
+      content: 'function perform(action: Function)'
       parameters:
         - id: action
           type:
             - Function
           description: |
             The action to call if the current operation has not been cancelled.
-      content: 'function perform(action: Function)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Utils.Core.Cancelable.register
     name: 'register(callback: Function)'
@@ -98,13 +98,13 @@ items:
       - typeScript
     summary: Register a callback to be called when the object is cancelled.
     syntax:
+      content: 'function register(callback: Function)'
       parameters:
         - id: callback
           type:
             - Function
           description: |
             The callback function.
-      content: 'function register(callback: Function)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Utils.Core.Cancelable.wrap
     name: 'wrap(action: Function)'
@@ -113,12 +113,12 @@ items:
       - typeScript
     summary: Wrap an action to make it cancellable.
     syntax:
+      content: 'function wrap(action: Function)'
       parameters:
         - id: action
           type:
             - Function
           description: The action to wrap.
-      content: 'function wrap(action: Function)'
       return:
         type:
           - Function

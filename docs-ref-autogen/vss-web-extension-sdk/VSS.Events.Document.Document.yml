@@ -26,8 +26,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getMoniker()
+      parameters: []
       return:
         type:
           - string
@@ -39,6 +39,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function save(successCallback: IResultCallback, errorCallback?:
+        IErrorCallback)
       parameters:
         - id: successCallback
           type:
@@ -49,7 +52,4 @@ items:
             - '@vss-web-extension-sdk.IErrorCallback'
           description: ''
           optional: true
-      content: >-
-        function save(successCallback: IResultCallback, errorCallback?:
-        IErrorCallback)
     type: method

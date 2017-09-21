@@ -31,7 +31,7 @@ items:
     type: class
     summary: Service for obtaining web page data from contributed data providers
     extends:
-      - '@vss-web-extension-sdk.VSS.Service.VssService'
+      name: '@vss-web-extension-sdk.VSS.Service.VssService'
     source:
       path: vss.d.ts
       startLine: 8887
@@ -53,6 +53,9 @@ items:
       Add a plugin handler that gets called when data with the given key has
       been sent from the server
     syntax:
+      content: >-
+        static function addResolutionPlugin(dataType: string, handler:
+        WebPageDataResolutionPlugin)
       parameters:
         - id: dataType
           type:
@@ -64,9 +67,6 @@ items:
               @vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataResolutionPlugin
           description: |
             Function called whenever data with the given key has been provided
-      content: >-
-        static function addResolutionPlugin(dataType: string, handler:
-        WebPageDataResolutionPlugin)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.ensureDataProvidersResolved
@@ -80,6 +80,9 @@ items:
       Ensure that all data providers have been resolved for all of the given
       data-provider contributions
     syntax:
+      content: >-
+        function ensureDataProvidersResolved(contributions: Contribution[],
+        refreshIfExpired?: boolean, properties?: any)
       parameters:
         - id: contributions
           type:
@@ -97,9 +100,6 @@ items:
             - any
           description: ''
           optional: true
-      content: >-
-        function ensureDataProvidersResolved(contributions: Contribution[],
-        refreshIfExpired?: boolean, properties?: any)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -119,6 +119,10 @@ items:
 
       after reading from the cache
     syntax:
+      content: >-
+        function getCachedPageData<T>(cachedDataProviderContributionId: string,
+        primaryDataProviderContributionId?: string, refreshCache?: boolean,
+        contractMetadata?: ContractMetadata, reloadCallback?: IResultCallback)
       parameters:
         - id: cachedDataProviderContributionId
           type:
@@ -150,10 +154,6 @@ items:
             - '@vss-web-extension-sdk.IResultCallback'
           description: ''
           optional: true
-      content: >-
-        function getCachedPageData<T>(cachedDataProviderContributionId: string,
-        primaryDataProviderContributionId?: string, refreshCache?: boolean,
-        contractMetadata?: ContractMetadata, reloadCallback?: IResultCallback)
       return:
         type:
           - T
@@ -168,6 +168,9 @@ items:
       - typeScript
     summary: Get web page data that was contributed from the given contribution
     syntax:
+      content: >-
+        function getPageData<T>(contributionId: string, contractMetadata?:
+        ContractMetadata)
       parameters:
         - id: contributionId
           type:
@@ -179,9 +182,6 @@ items:
           description: |
             Optional contract metadata to use to deserialize the object
           optional: true
-      content: >-
-        function getPageData<T>(contributionId: string, contractMetadata?:
-        ContractMetadata)
       return:
         type:
           - T
@@ -198,6 +198,9 @@ items:
       Get the page data entries from all data provider contributions with the
       given dataType property.
     syntax:
+      content: >-
+        function getPageDataByDataType<T>(dataType: string, contractMetadata?:
+        ContractMetadata)
       parameters:
         - id: dataType
           type:
@@ -212,9 +215,6 @@ items:
             Optional contract metadata to use to deserialize the returned
             values.
           optional: true
-      content: >-
-        function getPageDataByDataType<T>(dataType: string, contractMetadata?:
-        ContractMetadata)
       return:
         type:
           - '@vss-web-extension-sdk.IDictionaryStringTo<T>'
@@ -229,12 +229,12 @@ items:
       Gets the source from which a data provider's data was populated (JSON
       island data, REST call, localStorage, etc.)
     syntax:
+      content: 'function getPageDataSource(contributionId: string)'
       parameters:
         - id: contributionId
           type:
             - string
           description: ''
-      content: 'function getPageDataSource(contributionId: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.invalidateCachedProviderData
@@ -246,6 +246,9 @@ items:
       - typeScript
     summary: Invalidate any previously-cached data for the given data provider.
     syntax:
+      content: >-
+        function invalidateCachedProviderData(cachedDataProviderContributionId:
+        string, reloadDataNow?: boolean)
       parameters:
         - id: cachedDataProviderContributionId
           type:
@@ -258,9 +261,6 @@ items:
             If true, immediately make a request to repopulate the data
             provider's data
           optional: true
-      content: >-
-        function invalidateCachedProviderData(cachedDataProviderContributionId:
-        string, reloadDataNow?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -277,6 +277,9 @@ items:
       Register the given data provider data with this instance of the
       contribution service
     syntax:
+      content: >-
+        function registerProviderData(result: DataProviderResult, contributions:
+        Contribution[], clearExisting?: boolean)
       parameters:
         - id: result
           type:
@@ -293,9 +296,6 @@ items:
           description: |
             If true, clear any existing data providers. If false, add to it.
           optional: true
-      content: >-
-        function registerProviderData(result: DataProviderResult, contributions:
-        Contribution[], clearExisting?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -310,6 +310,9 @@ items:
       - typeScript
     summary: Always reloads provider data by queuing up a new request
     syntax:
+      content: >-
+        function reloadCachedProviderData(cachedDataProviderContributionId:
+        string, reloadCallback?: IResultCallback, properties?: any)
       parameters:
         - id: cachedDataProviderContributionId
           type:
@@ -327,9 +330,6 @@ items:
             Additional properties to pass to the provider on reload as part of
             the context
           optional: true
-      content: >-
-        function reloadCachedProviderData(cachedDataProviderContributionId:
-        string, reloadCallback?: IResultCallback, properties?: any)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.removePageData
@@ -339,13 +339,13 @@ items:
       - typeScript
     summary: Removes web page data that was contributed from the given contribution
     syntax:
+      content: 'function removePageData(contributionId: string)'
       parameters:
         - id: contributionId
           type:
             - string
           description: |
             The data provider key
-      content: 'function removePageData(contributionId: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.removeResolutionPlugin
@@ -355,11 +355,11 @@ items:
       - typeScript
     summary: Remove the plugin handler that gets called when data with the given key
     syntax:
+      content: 'static function removeResolutionPlugin(dataType: string)'
       parameters:
         - id: dataType
           type:
             - string
           description: |
             The data type property as set in the data provider's contribution
-      content: 'static function removeResolutionPlugin(dataType: string)'
     type: method

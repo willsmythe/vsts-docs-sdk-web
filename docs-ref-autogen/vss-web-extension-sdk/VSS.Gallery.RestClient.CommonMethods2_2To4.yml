@@ -13,7 +13,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Gallery.RestClient.CommonMethods2_1To4'
+      name: '@vss-web-extension-sdk.VSS.Gallery.RestClient.CommonMethods2_1To4'
     source:
       path: vss.d.ts
       startLine: 23458
@@ -33,6 +33,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2_2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -43,9 +46,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2_2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Gallery.RestClient.CommonMethods2_2To4.getAcquisitionOptions
@@ -57,6 +57,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAcquisitionOptions(itemId: string, installationTarget:
+        string, testCommerce?: boolean, isFreeOrTrialInstall?: boolean)
       parameters:
         - id: itemId
           type:
@@ -76,9 +79,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getAcquisitionOptions(itemId: string, installationTarget:
-        string, testCommerce?: boolean, isFreeOrTrialInstall?: boolean)
       return:
         type:
           - >-

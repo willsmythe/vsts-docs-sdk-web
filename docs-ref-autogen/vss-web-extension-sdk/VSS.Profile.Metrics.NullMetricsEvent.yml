@@ -27,8 +27,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function close()
+      parameters: []
       return:
         type:
           - Promise<void>
@@ -40,12 +40,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function inner(feature: string)'
       parameters:
         - id: feature
           type:
             - string
           description: ''
-      content: 'function inner(feature: string)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Profile.Metrics.MetricsEvent'
@@ -57,6 +57,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setValue<T>(key: string, value: T)'
       parameters:
         - id: key
           type:
@@ -66,5 +67,4 @@ items:
           type:
             - T
           description: ''
-      content: 'function setValue<T>(key: string, value: T)'
     type: method

@@ -12,7 +12,7 @@ items:
     type: class
     summary: Hierarchical datasource implementation.
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Grids.GridDefaultSource'
+      name: '@vss-web-extension-sdk.VSS.Controls.Grids.GridDefaultSource'
     source:
       path: vss.d.ts
       startLine: 12216
@@ -30,8 +30,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getExpandStates()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridHierarchySource.constructor
     name: 'GridHierarchySource(items: IGridHierarchyItem[])'
@@ -40,10 +40,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new GridHierarchySource(items: IGridHierarchyItem[])'
       parameters:
         - id: items
           type:
             - '@vss-web-extension-sdk.VSS.Controls.Grids.IGridHierarchyItem[]'
           description: ''
-      content: 'new GridHierarchySource(items: IGridHierarchyItem[])'
     type: constructor

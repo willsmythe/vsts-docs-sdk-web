@@ -19,7 +19,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3_2To4'
+      name: '@vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3_2To4'
     source:
       path: tfs.d.ts
       startLine: 2719
@@ -36,6 +36,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new BuildHttpClient4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -46,9 +49,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new BuildHttpClient4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient4.createDefinition
@@ -60,6 +60,9 @@ items:
       - typeScript
     summary: '[Preview API] Creates a new definition'
     syntax:
+      content: >-
+        function createDefinition(definition: BuildDefinition, project?: string,
+        definitionToCloneId?: number, definitionToCloneRevision?: number)
       parameters:
         - id: definition
           type:
@@ -80,9 +83,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function createDefinition(definition: BuildDefinition, project?: string,
-        definitionToCloneId?: number, definitionToCloneRevision?: number)
       return:
         type:
           - >-
@@ -98,6 +98,10 @@ items:
       - typeScript
     summary: '[Preview API] Gets a definition, optionally at a specific revision'
     syntax:
+      content: >-
+        function getDefinition(definitionId: number, project?: string,
+        revision?: number, minMetricsTime?: Date, propertyFilters?: string[],
+        includeLatestBuilds?: boolean)
       parameters:
         - id: definitionId
           type:
@@ -128,10 +132,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getDefinition(definitionId: number, project?: string,
-        revision?: number, minMetricsTime?: Date, propertyFilters?: string[],
-        includeLatestBuilds?: boolean)
       return:
         type:
           - >-
@@ -144,6 +144,7 @@ items:
       - typeScript
     summary: '[Preview API] Gets definition template filtered by id'
     syntax:
+      content: 'function getTemplate(project: string, templateId: string)'
       parameters:
         - id: project
           type:
@@ -153,7 +154,6 @@ items:
           type:
             - string
           description: Id of the requested template.
-      content: 'function getTemplate(project: string, templateId: string)'
       return:
         type:
           - >-
@@ -166,12 +166,12 @@ items:
       - typeScript
     summary: '[Preview API] Gets definition templates'
     syntax:
+      content: 'function getTemplates(project: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
-      content: 'function getTemplates(project: string)'
       return:
         type:
           - >-
@@ -186,6 +186,9 @@ items:
       - typeScript
     summary: '[Preview API] Saves a definition template'
     syntax:
+      content: >-
+        function saveTemplate(template: BuildDefinitionTemplate, project:
+        string, templateId: string)
       parameters:
         - id: template
           type:
@@ -199,9 +202,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function saveTemplate(template: BuildDefinitionTemplate, project:
-        string, templateId: string)
       return:
         type:
           - >-
@@ -218,6 +218,10 @@ items:
       - typeScript
     summary: '[Preview API] Updates an existing definition'
     syntax:
+      content: >-
+        function updateDefinition(definition: BuildDefinition, definitionId:
+        number, project?: string, secretsSourceDefinitionId?: number,
+        secretsSourceDefinitionRevision?: number)
       parameters:
         - id: definition
           type:
@@ -242,10 +246,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function updateDefinition(definition: BuildDefinition, definitionId:
-        number, project?: string, secretsSourceDefinitionId?: number,
-        secretsSourceDefinitionRevision?: number)
       return:
         type:
           - >-

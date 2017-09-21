@@ -26,7 +26,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 32369
@@ -45,6 +45,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -55,9 +58,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Token.RestClient.CommonMethods2To4.createSessionToken
@@ -69,6 +69,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createSessionToken(sessionToken: SessionToken, tokenType?:
+        SessionTokenType, isPublic?: boolean)
       parameters:
         - id: sessionToken
           type:
@@ -84,9 +87,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function createSessionToken(sessionToken: SessionToken, tokenType?:
-        SessionTokenType, isPublic?: boolean)
       return:
         type:
           - >-
@@ -100,12 +100,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function exchangeAppToken(appInfo: AppTokenSecretPair)'
       parameters:
         - id: appInfo
           type:
             - '@vss-web-extension-sdk.VSS.Token.Contracts.AppTokenSecretPair'
           description: ''
-      content: 'function exchangeAppToken(appInfo: AppTokenSecretPair)'
       return:
         type:
           - >-
@@ -119,6 +119,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getAccessToken(key?: string, isPublic?: boolean)'
       parameters:
         - id: key
           type:
@@ -130,7 +131,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function getAccessToken(key?: string, isPublic?: boolean)'
       return:
         type:
           - >-
@@ -144,6 +144,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getSessionToken(authorizationId: string, isPublic?: boolean)'
       parameters:
         - id: authorizationId
           type:
@@ -154,7 +155,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function getSessionToken(authorizationId: string, isPublic?: boolean)'
       return:
         type:
           - >-
@@ -168,6 +168,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getSessionTokens(isPublic?: boolean, includePublicData?:
+        boolean)
       parameters:
         - id: isPublic
           type:
@@ -179,9 +182,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getSessionTokens(isPublic?: boolean, includePublicData?:
-        boolean)
       return:
         type:
           - >-
@@ -195,6 +195,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function issueAppSessionToken(clientId: string, userId?: string)'
       parameters:
         - id: clientId
           type:
@@ -205,7 +206,6 @@ items:
             - string
           description: ''
           optional: true
-      content: 'function issueAppSessionToken(clientId: string, userId?: string)'
       return:
         type:
           - >-
@@ -219,6 +219,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function removePublicKey(publicData: SshPublicKey, remove: boolean)'
       parameters:
         - id: publicData
           type:
@@ -228,7 +229,6 @@ items:
           type:
             - boolean
           description: ''
-      content: 'function removePublicKey(publicData: SshPublicKey, remove: boolean)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -241,6 +241,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function revokeSessionToken(authorizationId: string, isPublic?: boolean)'
       parameters:
         - id: authorizationId
           type:
@@ -251,7 +252,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function revokeSessionToken(authorizationId: string, isPublic?: boolean)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'

@@ -47,13 +47,13 @@ items:
       - typeScript
     summary: Get the identfier for the extension that published this contribution.
     syntax:
+      content: 'static function getExtensionId(contribution: Contribution)'
       parameters:
         - id: contribution
           type:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose extension is being requested
-      content: 'static function getExtensionId(contribution: Contribution)'
       return:
         type:
           - string
@@ -66,13 +66,13 @@ items:
       - typeScript
     summary: full contribution id for the given contribution.
     syntax:
+      content: 'static function getFullContributionId(contribution: Contribution)'
       parameters:
         - id: contribution
           type:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution to get the id of
-      content: 'static function getFullContributionId(contribution: Contribution)'
       return:
         type:
           - string
@@ -85,13 +85,13 @@ items:
       - typeScript
     summary: Get the identfier for the publisher that published this contribution.
     syntax:
+      content: 'static function getPublisherId(contribution: Contribution)'
       parameters:
         - id: contribution
           type:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose publisher is being requested
-      content: 'static function getPublisherId(contribution: Contribution)'
       return:
         type:
           - string
@@ -104,6 +104,9 @@ items:
       - typeScript
     summary: Determine whether or not the given contribution provides hostable content
     syntax:
+      content: >-
+        static function hasContent(contribution: Contribution, uriProperty?:
+        string)
       parameters:
         - id: contribution
           type:
@@ -115,9 +118,6 @@ items:
           description: |
             The property name which contains the content uri ("uri" by default)
           optional: true
-      content: >-
-        static function hasContent(contribution: Contribution, uriProperty?:
-        string)
       return:
         type:
           - boolean
@@ -132,13 +132,13 @@ items:
       Determine whether or not the given contribution is from a trusted
       extension and has internal content
     syntax:
+      content: 'static function hasInternalContent(contribution: Contribution)'
       parameters:
         - id: contribution
           type:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose properties to check
-      content: 'static function hasInternalContent(contribution: Contribution)'
       return:
         type:
           - boolean
@@ -151,6 +151,9 @@ items:
       - typeScript
     summary: Is the contribution of the given contribution type
     syntax:
+      content: >-
+        static function isContributionOfType(contribution: Contribution,
+        contributionType: string)
       parameters:
         - id: contribution
           type:
@@ -161,9 +164,6 @@ items:
             - string
           description: |
             The full id of the contribution type to check for
-      content: >-
-        static function isContributionOfType(contribution: Contribution,
-        contributionType: string)
       return:
         type:
           - boolean
@@ -176,13 +176,13 @@ items:
       - typeScript
     summary: Determines whether or not a contribution is from a trusted source.
     syntax:
+      content: 'static function isContributionTrusted(contribution: Contribution)'
       parameters:
         - id: contribution
           type:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose trust to check
-      content: 'static function isContributionTrusted(contribution: Contribution)'
       return:
         type:
           - boolean
@@ -197,6 +197,9 @@ items:
       - typeScript
     summary: Publish tracing data for a given contribution
     syntax:
+      content: >-
+        static function publishTraceData(contribution: Contribution, data?:
+        string, contributionId?: string)
       parameters:
         - id: contribution
           type:
@@ -212,9 +215,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        static function publishTraceData(contribution: Contribution, data?:
-        string, contributionId?: string)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.resolveTemplateString
@@ -224,6 +224,9 @@ items:
       - typeScript
     summary: Processes a mustache template string with the given replacement object
     syntax:
+      content: >-
+        static function resolveTemplateString(templateString: string,
+        replacementObject: any)
       parameters:
         - id: templateString
           type:
@@ -233,9 +236,6 @@ items:
           type:
             - any
           description: ''
-      content: >-
-        static function resolveTemplateString(templateString: string,
-        replacementObject: any)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -252,6 +252,9 @@ items:
       Processes a URI template string with the given replacement object and base
       URI
     syntax:
+      content: >-
+        static function resolveUriTemplate(templateString: string,
+        replacementObject: any, baseUri: string)
       parameters:
         - id: templateString
           type:
@@ -265,9 +268,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        static function resolveUriTemplate(templateString: string,
-        replacementObject: any, baseUri: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -284,6 +284,9 @@ items:
       Get an absolute URI for a given property on a contribution and a
       replacements object
     syntax:
+      content: >-
+        static function resolveUriTemplateProperty(contribution: Contribution,
+        replacementObject: any, propertyName?: string, baseUri?: string)
       parameters:
         - id: contribution
           type:
@@ -303,9 +306,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        static function resolveUriTemplateProperty(contribution: Contribution,
-        replacementObject: any, propertyName?: string, baseUri?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'

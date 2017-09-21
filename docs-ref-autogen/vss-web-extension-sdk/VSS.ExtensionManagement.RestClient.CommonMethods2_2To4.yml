@@ -16,7 +16,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.ExtensionManagement.RestClient.CommonMethods2_1To4
     source:
       path: vss.d.ts
@@ -37,6 +37,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2_2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -47,9 +50,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2_2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.ExtensionManagement.RestClient.CommonMethods2_2To4.getPolicies
@@ -59,12 +59,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getPolicies(userId: string)'
       parameters:
         - id: userId
           type:
             - string
           description: ''
-      content: 'function getPolicies(userId: string)'
       return:
         type:
           - >-
@@ -80,6 +80,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function queryCollectionsByName(collectionQuery:
+        ExtensionDataCollectionQuery, publisherName: string, extensionName:
+        string)
       parameters:
         - id: collectionQuery
           type:
@@ -94,10 +98,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function queryCollectionsByName(collectionQuery:
-        ExtensionDataCollectionQuery, publisherName: string, extensionName:
-        string)
       return:
         type:
           - >-

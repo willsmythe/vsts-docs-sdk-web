@@ -16,7 +16,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Control<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Control<TOptions>'
     source:
       path: vss.d.ts
       startLine: 15413
@@ -35,6 +35,9 @@ items:
       - typeScript
     summary: Begins loading the content using the specified arguments.
     syntax:
+      content: >-
+        function beginLoad(url: string, params?: any, callback?: Function,
+        errorcallback?: Function)
       parameters:
         - id: url
           type:
@@ -55,9 +58,6 @@ items:
             - Function
           description: Callback executed if the load fails.
           optional: true
-      content: >-
-        function beginLoad(url: string, params?: any, callback?: Function,
-        errorcallback?: Function)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Panels.AjaxPanelO.enhancementTypeName
     name: enhancementTypeName
@@ -79,8 +79,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Panels.AjaxPanelO.initializeOptions
     name: 'initializeOptions(options?: any)'
@@ -89,6 +89,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -96,7 +97,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Panels.AjaxPanelO.onLoadCompleted
     name: 'onLoadCompleted(content: string)'
@@ -105,12 +105,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onLoadCompleted(content: string)'
       parameters:
         - id: content
           type:
             - string
           description: ''
-      content: 'function onLoadCompleted(content: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Panels.AjaxPanelO.onLoadError
     name: 'onLoadError(error: any, handled: boolean)'
@@ -119,6 +119,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onLoadError(error: any, handled: boolean)'
       parameters:
         - id: error
           type:
@@ -128,7 +129,6 @@ items:
           type:
             - boolean
           description: ''
-      content: 'function onLoadError(error: any, handled: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Panels.AjaxPanelO.showError
     name: 'showError(error: any)'
@@ -137,10 +137,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function showError(error: any)'
       parameters:
         - id: error
           type:
             - any
           description: ''
-      content: 'function showError(error: any)'
     type: method

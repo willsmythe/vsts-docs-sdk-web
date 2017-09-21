@@ -5,6 +5,9 @@ items:
     fullName: IPromise<T>
     children:
       - vss-web-extension-sdk.IPromise.then
+      - vss-web-extension-sdk.IPromise.then_1
+      - vss-web-extension-sdk.IPromise.then_2
+      - vss-web-extension-sdk.IPromise.then_3
     langs:
       - typeScript
     type: interface
@@ -33,6 +36,7 @@ items:
       nothing and a reject delegate which returns a promise or nothing. Then
       returns a new promise.
     syntax:
+      content: 'function then<U>(onFulfill: function, onReject?: function)'
       parameters:
         - id: onFulfill
           type:
@@ -43,7 +47,81 @@ items:
             - function
           description: ''
           optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.IPromise<U>'
+    type: method
+  - uid: vss-web-extension-sdk.IPromise.then_1
+    name: 'then<U>(onFulfill: function, onReject?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Then method which accepts a fulfill delegate which returns a promise or
+      nothing and a reject delegate which returns a promise or nothing. Then
+      returns a new promise.
+    syntax:
       content: 'function then<U>(onFulfill: function, onReject?: function)'
+      parameters:
+        - id: onFulfill
+          type:
+            - function
+          description: ''
+        - id: onReject
+          type:
+            - function
+          description: ''
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.IPromise<U>'
+    type: method
+  - uid: vss-web-extension-sdk.IPromise.then_2
+    name: 'then<U>(onFulfill: function, onReject?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Then method which accepts a fulfill delegate which returns a promise or
+      nothing and a reject delegate which returns a promise or nothing. Then
+      returns a new promise.
+    syntax:
+      content: 'function then<U>(onFulfill: function, onReject?: function)'
+      parameters:
+        - id: onFulfill
+          type:
+            - function
+          description: ''
+        - id: onReject
+          type:
+            - function
+          description: ''
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.IPromise<U>'
+    type: method
+  - uid: vss-web-extension-sdk.IPromise.then_3
+    name: 'then<U>(onFulfill: function, onReject?: function)'
+    children: []
+    langs:
+      - typeScript
+    summary: >-
+      Then method which accepts a fulfill delegate which returns a promise or
+      nothing and a reject delegate which returns a promise or nothing. Then
+      returns a new promise.
+    syntax:
+      content: 'function then<U>(onFulfill: function, onReject?: function)'
+      parameters:
+        - id: onFulfill
+          type:
+            - function
+          description: ''
+        - id: onReject
+          type:
+            - function
+          description: ''
+          optional: true
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<U>'

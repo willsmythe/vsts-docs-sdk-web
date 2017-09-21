@@ -34,7 +34,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.ExtensionManagement.RestClient.CommonMethods2To4
     source:
       path: vss.d.ts
@@ -55,6 +55,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -65,9 +68,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.ExtensionManagement.RestClient.CommonMethods2_1To4.createDocumentByName
@@ -79,6 +79,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createDocumentByName(doc: any, publisherName: string,
+        extensionName: string, scopeType: string, scopeValue: string,
+        collectionName: string)
       parameters:
         - id: doc
           type:
@@ -104,10 +108,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function createDocumentByName(doc: any, publisherName: string,
-        extensionName: string, scopeType: string, scopeValue: string,
-        collectionName: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -123,6 +123,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteDocumentByName(publisherName: string, extensionName:
+        string, scopeType: string, scopeValue: string, collectionName: string,
+        documentId: string)
       parameters:
         - id: publisherName
           type:
@@ -148,10 +152,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function deleteDocumentByName(publisherName: string, extensionName:
-        string, scopeType: string, scopeValue: string, collectionName: string,
-        documentId: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -166,6 +166,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getDocumentByName(publisherName: string, extensionName: string,
+        scopeType: string, scopeValue: string, collectionName: string,
+        documentId: string)
       parameters:
         - id: publisherName
           type:
@@ -191,10 +195,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getDocumentByName(publisherName: string, extensionName: string,
-        scopeType: string, scopeValue: string, collectionName: string,
-        documentId: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -209,6 +209,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getDocumentsByName(publisherName: string, extensionName:
+        string, scopeType: string, scopeValue: string, collectionName: string)
       parameters:
         - id: publisherName
           type:
@@ -230,9 +233,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getDocumentsByName(publisherName: string, extensionName:
-        string, scopeType: string, scopeValue: string, collectionName: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any[]>'
@@ -247,6 +247,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getInstalledExtensionByName(publisherName: string,
+        extensionName: string, assetTypes?: string[])
       parameters:
         - id: publisherName
           type:
@@ -261,9 +264,6 @@ items:
             - 'string[]'
           description: ''
           optional: true
-      content: >-
-        function getInstalledExtensionByName(publisherName: string,
-        extensionName: string, assetTypes?: string[])
       return:
         type:
           - >-
@@ -279,6 +279,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getStates(includeDisabled?: boolean, includeErrors?: boolean,
+        includeInstallationIssues?: boolean)
       parameters:
         - id: includeDisabled
           type:
@@ -295,9 +298,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getStates(includeDisabled?: boolean, includeErrors?: boolean,
-        includeInstallationIssues?: boolean)
       return:
         type:
           - >-
@@ -313,6 +313,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function installExtensionByName(publisherName: string, extensionName:
+        string, version?: string)
       parameters:
         - id: publisherName
           type:
@@ -327,9 +330,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function installExtensionByName(publisherName: string, extensionName:
-        string, version?: string)
       return:
         type:
           - >-
@@ -343,13 +343,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function queryExtensions(query: InstalledExtensionQuery)'
       parameters:
         - id: query
           type:
             - >-
               @vss-web-extension-sdk.VSS.Contributions.Contracts.InstalledExtensionQuery
           description: ''
-      content: 'function queryExtensions(query: InstalledExtensionQuery)'
       return:
         type:
           - >-
@@ -365,6 +365,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function setDocumentByName(doc: any, publisherName: string,
+        extensionName: string, scopeType: string, scopeValue: string,
+        collectionName: string)
       parameters:
         - id: doc
           type:
@@ -390,10 +394,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function setDocumentByName(doc: any, publisherName: string,
-        extensionName: string, scopeType: string, scopeValue: string,
-        collectionName: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -408,6 +408,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function uninstallExtensionByName(publisherName: string, extensionName:
+        string, reason?: string, reasonCode?: string)
       parameters:
         - id: publisherName
           type:
@@ -427,9 +430,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function uninstallExtensionByName(publisherName: string, extensionName:
-        string, reason?: string, reasonCode?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -444,6 +444,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateDocumentByName(doc: any, publisherName: string,
+        extensionName: string, scopeType: string, scopeValue: string,
+        collectionName: string)
       parameters:
         - id: doc
           type:
@@ -469,10 +473,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateDocumentByName(doc: any, publisherName: string,
-        extensionName: string, scopeType: string, scopeValue: string,
-        collectionName: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'

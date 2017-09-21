@@ -72,6 +72,7 @@ items:
       - vss-web-extension-sdk.VSS.Controls.Grids.GridO.selectionChanged
       - vss-web-extension-sdk.VSS.Controls.Grids.GridO.setColumnOptions
       - vss-web-extension-sdk.VSS.Controls.Grids.GridO.setDataSource
+      - vss-web-extension-sdk.VSS.Controls.Grids.GridO.setDataSource_1
       - vss-web-extension-sdk.VSS.Controls.Grids.GridO.setSelectedDataIndex
       - vss-web-extension-sdk.VSS.Controls.Grids.GridO.setSelectedRowIndex
       - vss-web-extension-sdk.VSS.Controls.Grids.GridO.setupDragDrop
@@ -82,7 +83,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Control<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Control<TOptions>'
     source:
       path: vss.d.ts
       startLine: 12226
@@ -99,12 +100,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function afterOnToggle(rowInfo: any)'
       parameters:
         - id: rowInfo
           type:
             - any
           description: ''
-      content: 'function afterOnToggle(rowInfo: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.ancestorFolderToggled
     name: 'ancestorFolderToggled(rowInfo: any)'
@@ -113,12 +114,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function ancestorFolderToggled(rowInfo: any)'
       parameters:
         - id: rowInfo
           type:
             - any
           description: ''
-      content: 'function ancestorFolderToggled(rowInfo: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.beginFormatTable
     name: >-
@@ -129,6 +130,9 @@ items:
       - typeScript
     summary: Generates a table of the selected items in the grid.
     syntax:
+      content: >-
+        function beginFormatTable(operationCompleteCallback: IResultCallback,
+        errorCallback?: IErrorCallback, formatterType?: function, options?: any)
       parameters:
         - id: operationCompleteCallback
           type:
@@ -152,9 +156,6 @@ items:
             - any
           description: ''
           optional: true
-      content: >-
-        function beginFormatTable(operationCompleteCallback: IResultCallback,
-        errorCallback?: IErrorCallback, formatterType?: function, options?: any)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.cacheRows
     name: 'cacheRows(aboveRange: any, visibleRange: any, belowRange: any)'
@@ -163,6 +164,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function cacheRows(aboveRange: any, visibleRange: any, belowRange: any)'
       parameters:
         - id: aboveRange
           type:
@@ -176,7 +178,6 @@ items:
           type:
             - any
           description: ''
-      content: 'function cacheRows(aboveRange: any, visibleRange: any, belowRange: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.collapseAll
     name: collapseAll()
@@ -185,8 +186,8 @@ items:
       - typeScript
     summary: Collapses all rows of the grid (if source data is hierarchical).
     syntax:
-      parameters: []
       content: function collapseAll()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.collapseAllNodes
     name: collapseAllNodes()
@@ -195,8 +196,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function collapseAllNodes()
+      parameters: []
       return:
         type:
           - boolean
@@ -210,12 +211,12 @@ items:
       Collapses all rows at or below specified level (if source data is
       hierarchical).
     syntax:
+      content: 'function collapseByLevel(level: number)'
       parameters:
         - id: level
           type:
             - number
           description: Level to collapse.
-      content: 'function collapseByLevel(level: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.collapseNode
     name: 'collapseNode(dataIndex: any)'
@@ -224,12 +225,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function collapseNode(dataIndex: any)'
       parameters:
         - id: dataIndex
           type:
             - any
           description: ''
-      content: 'function collapseNode(dataIndex: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.copySelectedItems
     name: >-
@@ -240,6 +241,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function copySelectedItems(formatterType?: function, copyAsHtml?:
+        boolean, options?: any)
       parameters:
         - id: formatterType
           type:
@@ -256,9 +260,6 @@ items:
             - any
           description: ''
           optional: true
-      content: >-
-        function copySelectedItems(formatterType?: function, copyAsHtml?:
-        boolean, options?: any)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.DATA_DRAGGING_ROWINFO
     name: DATA_DRAGGING_ROWINFO
@@ -293,8 +294,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function disableDragDrop()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.disableEvent
     name: 'disableEvent(eventName: string)'
@@ -303,13 +304,13 @@ items:
       - typeScript
     summary: Disables raising the custom event with the provided event name.
     syntax:
+      content: 'function disableEvent(eventName: string)'
       parameters:
         - id: eventName
           type:
             - string
           description: |
             Name of the event to disable.
-      content: 'function disableEvent(eventName: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.enableDragDrop
     name: enableDragDrop()
@@ -318,8 +319,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function enableDragDrop()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.enableEvent
     name: 'enableEvent(eventName: string)'
@@ -328,13 +329,13 @@ items:
       - typeScript
     summary: Enables raising the custom event with the provided event name.
     syntax:
+      content: 'function enableEvent(eventName: string)'
       parameters:
         - id: eventName
           type:
             - string
           description: |
             Name of the event to enable.
-      content: 'function enableEvent(eventName: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.enhancementTypeName
     name: enhancementTypeName
@@ -360,12 +361,12 @@ items:
       expanding any enclosing collapsed rows. Returns the rowIndex of the
       associated row.
     syntax:
+      content: 'function ensureDataIndexExpanded(dataIndex: number)'
       parameters:
         - id: dataIndex
           type:
             - number
           description: The data index of the item to ensure is expanded
-      content: 'function ensureDataIndexExpanded(dataIndex: number)'
       return:
         type:
           - number
@@ -417,8 +418,8 @@ items:
       - typeScript
     summary: Expands all rows of the grid (if source data is hierarchical).
     syntax:
-      parameters: []
       content: function expandAll()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.expandAllNodes
     name: expandAllNodes()
@@ -427,8 +428,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function expandAllNodes()
+      parameters: []
       return:
         type:
           - boolean
@@ -442,12 +443,12 @@ items:
       Expands all rows at or below specified level (if source data is
       hierarchical).
     syntax:
+      content: 'function expandByLevel(level: number)'
       parameters:
         - id: level
           type:
             - number
           description: Level to expand.
-      content: 'function expandByLevel(level: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.expandNode
     name: 'expandNode(dataIndex: any)'
@@ -456,12 +457,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function expandNode(dataIndex: any)'
       parameters:
         - id: dataIndex
           type:
             - any
           description: ''
-      content: 'function expandNode(dataIndex: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.focus
     name: 'focus(timeout?: number)'
@@ -470,6 +471,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function focus(timeout?: number)'
       parameters:
         - id: timeout
           type:
@@ -477,7 +479,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function focus(timeout?: number)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.getColumns
     name: getColumns()
@@ -486,8 +487,8 @@ items:
       - typeScript
     summary: Gets the columns currently being displayed in the grid.
     syntax:
-      parameters: []
       content: function getColumns()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.getColumnText
     name: 'getColumnText(dataIndex: any, column: any, columnOrder?: any)'
@@ -496,6 +497,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getColumnText(dataIndex: any, column: any, columnOrder?: any)'
       parameters:
         - id: dataIndex
           type:
@@ -510,7 +512,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function getColumnText(dataIndex: any, column: any, columnOrder?: any)'
       return:
         type:
           - any
@@ -526,6 +527,9 @@ items:
       Gets the value for a column. The default use of the return value is to
       convert it to a string and set it as the cell's text value.
     syntax:
+      content: >-
+        function getColumnValue(dataIndex: number, columnIndex: number,
+        columnOrder?: number)
       parameters:
         - id: dataIndex
           type:
@@ -542,9 +546,6 @@ items:
             The index of the column in the grid's column array. This is the
             current visible order of the column
           optional: true
-      content: >-
-        function getColumnValue(dataIndex: number, columnIndex: number,
-        columnOrder?: number)
       return:
         type:
           - any
@@ -558,8 +559,8 @@ items:
       Gets info about the row on which context menu is opened.
       If no context menu is open, returns null.
     syntax:
-      parameters: []
       content: function getContextMenuRowInfo()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Grids.IGridRowInfo'
@@ -571,8 +572,8 @@ items:
       - typeScript
     summary: Gets the row information for the item currently being dragged.
     syntax:
-      parameters: []
       content: function getDraggingRowInfo()
+      parameters: []
       return:
         type:
           - any
@@ -584,8 +585,8 @@ items:
       - typeScript
     summary: Gets the collection of expand states for the grid.
     syntax:
-      parameters: []
       content: function getExpandStates()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.getFocusElement
     name: getFocusElement()
@@ -598,8 +599,8 @@ items:
       This is the actual element that receives focus and that all the event
       bindings, like 'keydown', are bound to.
     syntax:
-      parameters: []
       content: function getFocusElement()
+      parameters: []
       return:
         type:
           - JQuery
@@ -611,8 +612,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getLastRowDataIndex()
+      parameters: []
       return:
         type:
           - number
@@ -625,12 +626,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getPinAndFocusElementForContextMenu(eventArgs: any)'
       parameters:
         - id: eventArgs
           type:
             - any
           description: ''
-      content: 'function getPinAndFocusElementForContextMenu(eventArgs: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.getRowData
     name: 'getRowData(dataIndex: number)'
@@ -639,12 +640,12 @@ items:
       - typeScript
     summary: Gets the data being used to display the row at the provided data index.
     syntax:
+      content: 'function getRowData(dataIndex: number)'
       parameters:
         - id: dataIndex
           type:
             - number
           description: The data index for the record to retrieve.
-      content: 'function getRowData(dataIndex: number)'
       return:
         type:
           - any
@@ -660,12 +661,12 @@ items:
       Returns a rowInfo object containing rowIndex, dataIndex and a jQuery
       wrapper for the actual row.
     syntax:
+      content: 'function getRowInfo(dataIndex: number)'
       parameters:
         - id: dataIndex
           type:
             - number
           description: The data index for the record to retrieve.
-      content: 'function getRowInfo(dataIndex: number)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Grids.IGridRowInfo'
@@ -677,8 +678,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getSelectedDataIndex()
+      parameters: []
       return:
         type:
           - number
@@ -690,8 +691,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getSelectedDataIndices()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.getSelectedRowIndex
     name: getSelectedRowIndex()
@@ -700,8 +701,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getSelectedRowIndex()
+      parameters: []
       return:
         type:
           - number
@@ -713,6 +714,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getSelectedRowIntoView(force?: boolean)'
       parameters:
         - id: force
           type:
@@ -720,7 +722,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function getSelectedRowIntoView(force?: boolean)'
       return:
         type:
           - boolean
@@ -732,8 +733,8 @@ items:
       - typeScript
     summary: Gets the number of selected items.
     syntax:
-      parameters: []
       content: function getSelectionCount()
+      parameters: []
       return:
         type:
           - number
@@ -745,8 +746,8 @@ items:
       - typeScript
     summary: Gets the current sort order being used in the grid.
     syntax:
-      parameters: []
       content: function getSortOrder()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.constructor
     name: 'GridO(options?: TOptions)'
@@ -755,6 +756,7 @@ items:
       - typeScript
     summary: Creates new Grid Control
     syntax:
+      content: 'new GridO(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -786,7 +788,6 @@ items:
                    GridO.EVENT_ROW_UPDATED: true
                }
           optional: true
-      content: 'new GridO(options?: TOptions)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.initialize
     name: initialize()
@@ -795,8 +796,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.initializeDataSource
     name: 'initializeDataSource(suppressRedraw?: boolean)'
@@ -805,13 +806,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeDataSource(suppressRedraw?: boolean)'
       parameters:
         - id: suppressRedraw
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function initializeDataSource(suppressRedraw?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.initializeOptions
     name: 'initializeOptions(options?: TOptions)'
@@ -820,6 +821,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -827,7 +829,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: TOptions)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.layout
     name: layout()
@@ -836,8 +837,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function layout()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.MAX_COPY_SIZE
     name: MAX_COPY_SIZE
@@ -859,6 +860,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function nonAncestorFolderToggled(rowInfo: any, currSelectedDataIndex:
+        any)
       parameters:
         - id: rowInfo
           type:
@@ -868,9 +872,6 @@ items:
           type:
             - any
           description: ''
-      content: >-
-        function nonAncestorFolderToggled(rowInfo: any, currSelectedDataIndex:
-        any)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.onContextMenu
     name: 'onContextMenu(eventArgs: any)'
@@ -879,12 +880,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onContextMenu(eventArgs: any)'
       parameters:
         - id: eventArgs
           type:
             - any
           description: ''
-      content: 'function onContextMenu(eventArgs: any)'
       return:
         type:
           - any
@@ -896,12 +897,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onDeleteKey(eventArgs: any)'
       parameters:
         - id: eventArgs
           type:
             - any
           description: ''
-      content: 'function onDeleteKey(eventArgs: any)'
       return:
         type:
           - any
@@ -913,12 +914,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onEnterKey(eventArgs: any)'
       parameters:
         - id: eventArgs
           type:
             - any
           description: ''
-      content: 'function onEnterKey(eventArgs: any)'
       return:
         type:
           - any
@@ -930,12 +931,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onGutterClick(eventArgs: any)'
       parameters:
         - id: eventArgs
           type:
             - any
           description: ''
-      content: 'function onGutterClick(eventArgs: any)'
       return:
         type:
           - any
@@ -947,12 +948,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onOpenRowDetail(eventArgs: any)'
       parameters:
         - id: eventArgs
           type:
             - any
           description: ''
-      content: 'function onOpenRowDetail(eventArgs: any)'
       return:
         type:
           - any
@@ -964,12 +965,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onRowClick(eventArgs: any)'
       parameters:
         - id: eventArgs
           type:
             - any
           description: ''
-      content: 'function onRowClick(eventArgs: any)'
       return:
         type:
           - any
@@ -981,12 +982,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onRowDoubleClick(eventArgs: any)'
       parameters:
         - id: eventArgs
           type:
             - any
           description: ''
-      content: 'function onRowDoubleClick(eventArgs: any)'
       return:
         type:
           - any
@@ -998,12 +999,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onRowMouseDown(eventArgs: any)'
       parameters:
         - id: eventArgs
           type:
             - any
           description: ''
-      content: 'function onRowMouseDown(eventArgs: any)'
       return:
         type:
           - any
@@ -1015,12 +1016,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onRowMouseUp(eventArgs: JQueryEventObject)'
       parameters:
         - id: eventArgs
           type:
             - JQueryEventObject
           description: ''
-      content: 'function onRowMouseUp(eventArgs: JQueryEventObject)'
       return:
         type:
           - any
@@ -1032,6 +1033,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onSort(sortOrder: any, sortColumns?: any)'
       parameters:
         - id: sortOrder
           type:
@@ -1042,7 +1044,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function onSort(sortOrder: any, sortColumns?: any)'
       return:
         type:
           - any
@@ -1067,8 +1068,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function redraw()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.selectAll
     name: selectAll()
@@ -1077,8 +1078,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function selectAll()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.selectedIndexChanged
     name: 'selectedIndexChanged(selectedRowIndex: any, selectedDataIndex: any)'
@@ -1087,6 +1088,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function selectedIndexChanged(selectedRowIndex: any, selectedDataIndex:
+        any)
       parameters:
         - id: selectedRowIndex
           type:
@@ -1096,9 +1100,6 @@ items:
           type:
             - any
           description: ''
-      content: >-
-        function selectedIndexChanged(selectedRowIndex: any, selectedDataIndex:
-        any)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.selectionChanged
     name: >-
@@ -1109,6 +1110,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function selectionChanged(selectedIndex: any, selectedCount: any,
+        selectedRows: any)
       parameters:
         - id: selectedIndex
           type:
@@ -1122,9 +1126,6 @@ items:
           type:
             - any
           description: ''
-      content: >-
-        function selectionChanged(selectedIndex: any, selectedCount: any,
-        selectedRows: any)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.setColumnOptions
     name: 'setColumnOptions(columnName: string, options?: IGridColumn)'
@@ -1135,6 +1136,7 @@ items:
       Set new column info for the column associated with the specified column
       name.
     syntax:
+      content: 'function setColumnOptions(columnName: string, options?: IGridColumn)'
       parameters:
         - id: columnName
           type:
@@ -1145,7 +1147,6 @@ items:
             - '@vss-web-extension-sdk.VSS.Controls.Grids.IGridColumn'
           description: New column options.
           optional: true
-      content: 'function setColumnOptions(columnName: string, options?: IGridColumn)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.setDataSource
     name: 'setDataSource(source: IGridSource)'
@@ -1154,12 +1155,29 @@ items:
       - typeScript
     summary: Sets the source of the grid using GridSource object.
     syntax:
+      content: 'function setDataSource(source: IGridSource)'
       parameters:
         - id: source
           type:
             - '@vss-web-extension-sdk.VSS.Controls.Grids.IGridSource'
           description: GridSource object to set the grid source.
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.setDataSource_1
+    name: 'setDataSource(source: IGridSource)'
+    children: []
+    langs:
+      - typeScript
+    summary: Sets the source of the grid using GridSource object.
+    syntax:
       content: 'function setDataSource(source: IGridSource)'
+      parameters:
+        - id: source
+          type:
+            - '@vss-web-extension-sdk.VSS.Controls.Grids.IGridSource'
+          description: GridSource object to set the grid source.
+      return:
+        type:
+          - any
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.setSelectedDataIndex
     name: 'setSelectedDataIndex(dataIndex: number, expandNodes?: boolean)'
@@ -1170,6 +1188,7 @@ items:
       Sets the selected item in the grid by the data index.
       Optionally ensure that the item is not hidden by collapsed rows.
     syntax:
+      content: 'function setSelectedDataIndex(dataIndex: number, expandNodes?: boolean)'
       parameters:
         - id: dataIndex
           type:
@@ -1181,7 +1200,6 @@ items:
           description: |
             If true, all containing collapsed nodes will be expanded
           optional: true
-      content: 'function setSelectedDataIndex(dataIndex: number, expandNodes?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.setSelectedRowIndex
     name: 'setSelectedRowIndex(selectedRowIndex: any)'
@@ -1190,12 +1208,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setSelectedRowIndex(selectedRowIndex: any)'
       parameters:
         - id: selectedRowIndex
           type:
             - any
           description: ''
-      content: 'function setSelectedRowIndex(selectedRowIndex: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.setupDragDrop
     name: 'setupDragDrop(draggableOptions: any, droppableOptions: any)'
@@ -1204,6 +1222,7 @@ items:
       - typeScript
     summary: Setup the provided draggable and droppable options
     syntax:
+      content: 'function setupDragDrop(draggableOptions: any, droppableOptions: any)'
       parameters:
         - id: draggableOptions
           type:
@@ -1213,7 +1232,6 @@ items:
           type:
             - any
           description: ''
-      content: 'function setupDragDrop(draggableOptions: any, droppableOptions: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO.tryToggle
     name: 'tryToggle(expand: boolean, applyToAllRows: boolean, targetIndex?: number)'
@@ -1224,6 +1242,9 @@ items:
       Expand or collapse node(s), and set selection focus at a given target
       index or at the current selected index as default behavior.
     syntax:
+      content: >-
+        function tryToggle(expand: boolean, applyToAllRows: boolean,
+        targetIndex?: number)
       parameters:
         - id: expand
           type:
@@ -1241,9 +1262,6 @@ items:
             - number
           description: 'The node index to be expanded or collapsed, and get selection focus.'
           optional: true
-      content: >-
-        function tryToggle(expand: boolean, applyToAllRows: boolean,
-        targetIndex?: number)
       return:
         type:
           - boolean
@@ -1257,6 +1275,9 @@ items:
       - typeScript
     summary: Updates the row identified by the given rowIndex.
     syntax:
+      content: >-
+        function updateRow(rowIndex: number, dataIndex?: number,
+        columnsToUpdate?: [key: number]: boolean)
       parameters:
         - id: rowIndex
           type:
@@ -1274,7 +1295,4 @@ items:
             HashSet of column indices. If given,
             only columns in this set will be updated.
           optional: true
-      content: >-
-        function updateRow(rowIndex: number, dataIndex?: number,
-        columnsToUpdate?: [key: number]: boolean)
     type: method

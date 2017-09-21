@@ -29,7 +29,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 20098
@@ -49,6 +49,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -59,9 +62,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.ExtensionManagement.RestClient.CommonMethods2To4.deleteRequest
@@ -71,6 +71,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteRequest(publisherName: string, extensionName: string)'
       parameters:
         - id: publisherName
           type:
@@ -80,7 +81,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function deleteRequest(publisherName: string, extensionName: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -96,6 +96,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getInstalledExtensions(includeDisabledExtensions?: boolean,
+        includeErrors?: boolean, assetTypes?: string[],
+        includeInstallationIssues?: boolean)
       parameters:
         - id: includeDisabledExtensions
           type:
@@ -117,10 +121,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getInstalledExtensions(includeDisabledExtensions?: boolean,
-        includeErrors?: boolean, assetTypes?: string[],
-        includeInstallationIssues?: boolean)
       return:
         type:
           - >-
@@ -134,8 +134,8 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
-      parameters: []
       content: function getRequests()
+      parameters: []
       return:
         type:
           - >-
@@ -149,8 +149,8 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
-      parameters: []
       content: function getToken()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -165,6 +165,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function requestExtension(publisherName: string, extensionName: string,
+        requestMessage: string)
       parameters:
         - id: publisherName
           type:
@@ -178,9 +181,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function requestExtension(publisherName: string, extensionName: string,
-        requestMessage: string)
       return:
         type:
           - >-
@@ -196,6 +196,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function resolveAllRequests(rejectMessage: string, publisherName:
+        string, extensionName: string, state: ExtensionRequestState)
       parameters:
         - id: rejectMessage
           type:
@@ -213,9 +216,6 @@ items:
           type:
             - ExtensionRequestState
           description: ''
-      content: >-
-        function resolveAllRequests(rejectMessage: string, publisherName:
-        string, extensionName: string, state: ExtensionRequestState)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<number>'
@@ -230,6 +230,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function resolveRequest(rejectMessage: string, publisherName: string,
+        extensionName: string, requesterId: string, state:
+        ExtensionRequestState)
       parameters:
         - id: rejectMessage
           type:
@@ -251,10 +255,6 @@ items:
           type:
             - ExtensionRequestState
           description: ''
-      content: >-
-        function resolveRequest(rejectMessage: string, publisherName: string,
-        extensionName: string, requesterId: string, state:
-        ExtensionRequestState)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<number>'
@@ -281,13 +281,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function updateInstalledExtension(extension: InstalledExtension)'
       parameters:
         - id: extension
           type:
             - >-
               @vss-web-extension-sdk.VSS.Contributions.Contracts.InstalledExtension
           description: ''
-      content: 'function updateInstalledExtension(extension: InstalledExtension)'
       return:
         type:
           - >-

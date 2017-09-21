@@ -46,7 +46,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: tfs.d.ts
       startLine: 20168
@@ -66,6 +66,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function addWorkItemTypeRule(fieldRule: FieldRuleModel, processId:
+        string, witRefName: string)
       parameters:
         - id: fieldRule
           type:
@@ -80,9 +83,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function addWorkItemTypeRule(fieldRule: FieldRuleModel, processId:
-        string, witRefName: string)
       return:
         type:
           - >-
@@ -98,6 +98,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -108,9 +111,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessRestClient.CommonMethods2_1To4.createProcess
@@ -120,13 +120,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createProcess(createRequest: CreateProcessModel)'
       parameters:
         - id: createRequest
           type:
             - >-
               @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessContracts.CreateProcessModel
           description: ''
-      content: 'function createProcess(createRequest: CreateProcessModel)'
       return:
         type:
           - >-
@@ -140,12 +140,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteProcess(processTypeId: string)'
       parameters:
         - id: processTypeId
           type:
             - string
           description: ''
-      content: 'function deleteProcess(processTypeId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -160,6 +160,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteWorkItemTypeRule(processId: string, witRefName: string,
+        ruleId: string)
       parameters:
         - id: processId
           type:
@@ -173,9 +176,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function deleteWorkItemTypeRule(processId: string, witRefName: string,
-        ruleId: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -190,6 +190,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getBehavior(processId: string, behaviorRefName: string,
+        expand?: GetBehaviorsExpand)
       parameters:
         - id: processId
           type:
@@ -204,9 +207,6 @@ items:
             - GetBehaviorsExpand
           description: ''
           optional: true
-      content: >-
-        function getBehavior(processId: string, behaviorRefName: string,
-        expand?: GetBehaviorsExpand)
       return:
         type:
           - >-
@@ -220,6 +220,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getBehaviors(processId: string, expand?: GetBehaviorsExpand)'
       parameters:
         - id: processId
           type:
@@ -230,7 +231,6 @@ items:
             - GetBehaviorsExpand
           description: ''
           optional: true
-      content: 'function getBehaviors(processId: string, expand?: GetBehaviorsExpand)'
       return:
         type:
           - >-
@@ -244,12 +244,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getFields(processId: string)'
       parameters:
         - id: processId
           type:
             - string
           description: ''
-      content: 'function getFields(processId: string)'
       return:
         type:
           - >-
@@ -263,6 +263,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getProcessById(processTypeId: string, expand?:
+        GetProcessExpandLevel)
       parameters:
         - id: processTypeId
           type:
@@ -273,9 +276,6 @@ items:
             - GetProcessExpandLevel
           description: ''
           optional: true
-      content: >-
-        function getProcessById(processTypeId: string, expand?:
-        GetProcessExpandLevel)
       return:
         type:
           - >-
@@ -289,13 +289,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getProcesses(expand?: GetProcessExpandLevel)'
       parameters:
         - id: expand
           type:
             - GetProcessExpandLevel
           description: ''
           optional: true
-      content: 'function getProcesses(expand?: GetProcessExpandLevel)'
       return:
         type:
           - >-
@@ -311,6 +311,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getWorkItemType(processId: string, witRefName: string, expand?:
+        GetWorkItemTypeExpand)
       parameters:
         - id: processId
           type:
@@ -325,9 +328,6 @@ items:
             - GetWorkItemTypeExpand
           description: ''
           optional: true
-      content: >-
-        function getWorkItemType(processId: string, witRefName: string, expand?:
-        GetWorkItemTypeExpand)
       return:
         type:
           - >-
@@ -341,6 +341,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getWorkItemTypeFields(processId: string, witRefName: string)'
       parameters:
         - id: processId
           type:
@@ -350,7 +351,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getWorkItemTypeFields(processId: string, witRefName: string)'
       return:
         type:
           - >-
@@ -364,6 +364,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getWorkItemTypeRule(processId: string, witRefName: string,
+        ruleId: string)
       parameters:
         - id: processId
           type:
@@ -377,9 +380,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getWorkItemTypeRule(processId: string, witRefName: string,
-        ruleId: string)
       return:
         type:
           - >-
@@ -393,6 +393,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getWorkItemTypeRules(processId: string, witRefName: string)'
       parameters:
         - id: processId
           type:
@@ -402,7 +403,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getWorkItemTypeRules(processId: string, witRefName: string)'
       return:
         type:
           - >-
@@ -416,6 +416,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getWorkItemTypes(processId: string, expand?:
+        GetWorkItemTypeExpand)
       parameters:
         - id: processId
           type:
@@ -426,9 +429,6 @@ items:
             - GetWorkItemTypeExpand
           description: ''
           optional: true
-      content: >-
-        function getWorkItemTypes(processId: string, expand?:
-        GetWorkItemTypeExpand)
       return:
         type:
           - >-
@@ -456,6 +456,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateProcess(updateRequest: UpdateProcessModel, processTypeId:
+        string)
       parameters:
         - id: updateRequest
           type:
@@ -466,9 +469,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateProcess(updateRequest: UpdateProcessModel, processTypeId:
-        string)
       return:
         type:
           - >-
@@ -484,6 +484,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateWorkItemTypeRule(fieldRule: FieldRuleModel, processId:
+        string, witRefName: string, ruleId: string)
       parameters:
         - id: fieldRule
           type:
@@ -502,9 +505,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateWorkItemTypeRule(fieldRule: FieldRuleModel, processId:
-        string, witRefName: string, ruleId: string)
       return:
         type:
           - >-

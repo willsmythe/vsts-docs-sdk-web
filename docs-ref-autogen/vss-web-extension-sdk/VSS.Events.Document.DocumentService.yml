@@ -50,12 +50,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function addBuildPropertyChangedListener(callBack: IEventHandler)'
       parameters:
         - id: callBack
           type:
             - '@vss-web-extension-sdk.IEventHandler'
           description: ''
-      content: 'function addBuildPropertyChangedListener(callBack: IEventHandler)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Document.DocumentService.addBuildStoppedListener
@@ -65,12 +65,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function addBuildStoppedListener(callBack: IEventHandler)'
       parameters:
         - id: callBack
           type:
             - '@vss-web-extension-sdk.IEventHandler'
           description: ''
-      content: 'function addBuildStoppedListener(callBack: IEventHandler)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Document.DocumentService.addDeleteListener
@@ -80,12 +80,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function addDeleteListener(callBack: Function)'
       parameters:
         - id: callBack
           type:
             - Function
           description: ''
-      content: 'function addDeleteListener(callBack: Function)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Document.DocumentService.addModifiedChangedListener
@@ -95,12 +95,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function addModifiedChangedListener(callBack: IEventHandler)'
       parameters:
         - id: callBack
           type:
             - '@vss-web-extension-sdk.IEventHandler'
           description: ''
-      content: 'function addModifiedChangedListener(callBack: IEventHandler)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Document.DocumentService.constructor
     name: DocumentService()
@@ -109,8 +109,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: new DocumentService()
+      parameters: []
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Document.DocumentService.getActiveDocument
@@ -120,8 +120,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getActiveDocument()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Events.Document.Document'
@@ -133,13 +133,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function isModified(args?: string)'
       parameters:
         - id: args
           type:
             - string
           description: ''
           optional: true
-      content: 'function isModified(args?: string)'
       return:
         type:
           - boolean
@@ -152,12 +152,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function removeBuildPropertyChangedListener(callBack: IEventHandler)'
       parameters:
         - id: callBack
           type:
             - '@vss-web-extension-sdk.IEventHandler'
           description: ''
-      content: 'function removeBuildPropertyChangedListener(callBack: IEventHandler)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Document.DocumentService.removeBuildStoppedListener
@@ -167,12 +167,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function removeBuildStoppedListener(callBack: IEventHandler)'
       parameters:
         - id: callBack
           type:
             - '@vss-web-extension-sdk.IEventHandler'
           description: ''
-      content: 'function removeBuildStoppedListener(callBack: IEventHandler)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Document.DocumentService.removeDeleteListener
@@ -182,12 +182,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function removeDeleteListener(callBack: IEventHandler)'
       parameters:
         - id: callBack
           type:
             - '@vss-web-extension-sdk.IEventHandler'
           description: ''
-      content: 'function removeDeleteListener(callBack: IEventHandler)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Document.DocumentService.removeModifiedChangedListener
@@ -197,12 +197,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function removeModifiedChangedListener(callBack: IEventHandler)'
       parameters:
         - id: callBack
           type:
             - '@vss-web-extension-sdk.IEventHandler'
           description: ''
-      content: 'function removeModifiedChangedListener(callBack: IEventHandler)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Document.DocumentService.save
     name: 'save(successCallback: IResultCallback, errorCallback?: IErrorCallback)'
@@ -211,6 +211,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function save(successCallback: IResultCallback, errorCallback?:
+        IErrorCallback)
       parameters:
         - id: successCallback
           type:
@@ -221,9 +224,6 @@ items:
             - '@vss-web-extension-sdk.IErrorCallback'
           description: ''
           optional: true
-      content: >-
-        function save(successCallback: IResultCallback, errorCallback?:
-        IErrorCallback)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Document.DocumentService.setActiveDocument
@@ -233,10 +233,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setActiveDocument(activeDocument: Document)'
       parameters:
         - id: activeDocument
           type:
             - '@vss-web-extension-sdk.VSS.Events.Document.Document'
           description: ''
-      content: 'function setActiveDocument(activeDocument: Document)'
     type: method

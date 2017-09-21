@@ -17,7 +17,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.CommonMethods2To4
     source:
       path: tfs.d.ts
@@ -40,6 +40,11 @@ items:
       - typeScript
     summary: Retrieve Tfvc changesets
     syntax:
+      content: >-
+        function getChangesets(project?: string, maxChangeCount?: string,
+        includeDetails?: boolean, includeWorkItems?: boolean, maxCommentLength?:
+        number, includeSourceRename?: boolean, skip?: number, top?: number,
+        orderby?: string, searchCriteria?: TfvcChangesetSearchCriteria)
       parameters:
         - id: project
           type:
@@ -92,11 +97,6 @@ items:
               @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetSearchCriteria
           description: ''
           optional: true
-      content: >-
-        function getChangesets(project?: string, maxChangeCount?: string,
-        includeDetails?: boolean, includeWorkItems?: boolean, maxCommentLength?:
-        number, includeSourceRename?: boolean, skip?: number, top?: number,
-        orderby?: string, searchCriteria?: TfvcChangesetSearchCriteria)
       return:
         type:
           - >-
@@ -112,6 +112,7 @@ items:
       [Obsolete - Use the Projects API instead] Retrieve the version control
       information for a given Team Project
     syntax:
+      content: 'function getProjectInfo(projectId: string, project?: string)'
       parameters:
         - id: projectId
           type:
@@ -122,7 +123,6 @@ items:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function getProjectInfo(projectId: string, project?: string)'
       return:
         type:
           - >-
@@ -138,13 +138,13 @@ items:
       [Obsolete - Use the Projects API instead] Retrieve the version control
       information for all Team projects in this project collection
     syntax:
+      content: 'function getProjectInfos(project?: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
           optional: true
-      content: 'function getProjectInfos(project?: string)'
       return:
         type:
           - >-
@@ -160,6 +160,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new TfvcHttpClient2_2(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -170,7 +173,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new TfvcHttpClient2_2(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

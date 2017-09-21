@@ -23,7 +23,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 31929
@@ -43,6 +43,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -53,9 +56,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Settings.RestClient.CommonMethods3To4.getEntries
     name: 'getEntries(userScope: string, key?: string)'
@@ -64,6 +64,7 @@ items:
       - typeScript
     summary: '[Preview API] Get all setting entries for the given user/all-users scope'
     syntax:
+      content: 'function getEntries(userScope: string, key?: string)'
       parameters:
         - id: userScope
           type:
@@ -76,7 +77,6 @@ items:
             - string
           description: Optional key under which to filter all the entries
           optional: true
-      content: 'function getEntries(userScope: string, key?: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<[key: string]: any>'
@@ -91,6 +91,9 @@ items:
       - typeScript
     summary: '[Preview API] Get all setting entries for the given named scope'
     syntax:
+      content: >-
+        function getEntriesForScope(userScope: string, scopeName: string,
+        scopeValue: string, key?: string)
       parameters:
         - id: userScope
           type:
@@ -111,9 +114,6 @@ items:
             - string
           description: Optional key under which to filter all the entries
           optional: true
-      content: >-
-        function getEntriesForScope(userScope: string, scopeName: string,
-        scopeValue: string, key?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<[key: string]: any>'
@@ -126,6 +126,7 @@ items:
       - typeScript
     summary: '[Preview API] Remove the entry or entries under the specified path'
     syntax:
+      content: 'function removeEntries(userScope: string, key: string)'
       parameters:
         - id: userScope
           type:
@@ -137,7 +138,6 @@ items:
           type:
             - string
           description: Root key of the entry or entries to remove
-      content: 'function removeEntries(userScope: string, key: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -152,6 +152,9 @@ items:
       - typeScript
     summary: '[Preview API] Remove the entry or entries under the specified path'
     syntax:
+      content: >-
+        function removeEntriesForScope(userScope: string, scopeName: string,
+        scopeValue: string, key: string)
       parameters:
         - id: userScope
           type:
@@ -171,9 +174,6 @@ items:
           type:
             - string
           description: Root key of the entry or entries to remove
-      content: >-
-        function removeEntriesForScope(userScope: string, scopeName: string,
-        scopeValue: string, key: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -187,6 +187,7 @@ items:
       [Preview API] Set the specified setting entry values for the given
       user/all-users scope
     syntax:
+      content: 'function setEntries(entries: [key: string]: any, userScope: string)'
       parameters:
         - id: entries
           type:
@@ -198,7 +199,6 @@ items:
           description: >-
             User-Scope at which to set the values. Should be "me" for the
             current user or "host" for all users.
-      content: 'function setEntries(entries: [key: string]: any, userScope: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -213,6 +213,9 @@ items:
       - typeScript
     summary: '[Preview API] Set the specified entries for the given named scope'
     syntax:
+      content: >-
+        function setEntriesForScope(entries: [key: string]: any, userScope:
+        string, scopeName: string, scopeValue: string)
       parameters:
         - id: entries
           type:
@@ -232,9 +235,6 @@ items:
           type:
             - string
           description: Value of the scope (e.g. the project or team id)
-      content: >-
-        function setEntriesForScope(entries: [key: string]: any, userScope:
-        string, scopeName: string, scopeValue: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'

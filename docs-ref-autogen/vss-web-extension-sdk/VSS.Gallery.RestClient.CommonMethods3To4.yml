@@ -31,7 +31,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Gallery.RestClient.CommonMethods2_2To4'
+      name: '@vss-web-extension-sdk.VSS.Gallery.RestClient.CommonMethods2_2To4'
     source:
       path: vss.d.ts
       startLine: 23472
@@ -49,6 +49,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function associateAzurePublisher(publisherName: string,
+        azurePublisherId: string)
       parameters:
         - id: publisherName
           type:
@@ -58,9 +61,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function associateAzurePublisher(publisherName: string,
-        azurePublisherId: string)
       return:
         type:
           - >-
@@ -75,6 +75,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -85,9 +88,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Gallery.RestClient.CommonMethods3To4.createCategory
@@ -97,12 +97,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createCategory(category: ExtensionCategory)'
       parameters:
         - id: category
           type:
             - '@vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionCategory'
           description: ''
-      content: 'function createCategory(category: ExtensionCategory)'
       return:
         type:
           - >-
@@ -116,6 +116,7 @@ items:
       - typeScript
     summary: '[Preview API] Creates a new review for an extension'
     syntax:
+      content: 'function createReview(review: Review, pubName: string, extName: string)'
       parameters:
         - id: review
           type:
@@ -129,7 +130,6 @@ items:
           type:
             - string
           description: Name of the extension
-      content: 'function createReview(review: Review, pubName: string, extName: string)'
       return:
         type:
           - >-
@@ -143,6 +143,9 @@ items:
       - typeScript
     summary: '[Preview API] Deletes a review'
     syntax:
+      content: >-
+        function deleteReview(pubName: string, extName: string, reviewId:
+        number)
       parameters:
         - id: pubName
           type:
@@ -156,9 +159,6 @@ items:
           type:
             - number
           description: Id of the review which needs to be updated
-      content: >-
-        function deleteReview(pubName: string, extName: string, reviewId:
-        number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -171,15 +171,15 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function extensionValidator(azureRestApiRequestModel:
+        AzureRestApiRequestModel)
       parameters:
         - id: azureRestApiRequestModel
           type:
             - >-
               @vss-web-extension-sdk.VSS.Gallery.Contracts.AzureRestApiRequestModel
           description: ''
-      content: >-
-        function extensionValidator(azureRestApiRequestModel:
-        AzureRestApiRequestModel)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -194,6 +194,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAssetAuthenticated(publisherName: string, extensionName:
+        string, version: string, assetType: string, accountToken?: string)
       parameters:
         - id: publisherName
           type:
@@ -216,9 +219,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getAssetAuthenticated(publisherName: string, extensionName:
-        string, version: string, assetType: string, accountToken?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -232,6 +232,10 @@ items:
       - typeScript
     summary: '[Preview API] Returns a list of reviews associated with an extension'
     syntax:
+      content: >-
+        function getReviews(publisherName: string, extensionName: string,
+        count?: number, filterOptions?: ReviewFilterOptions, beforeDate?: Date,
+        afterDate?: Date)
       parameters:
         - id: publisherName
           type:
@@ -265,10 +269,6 @@ items:
             Use if you want to fetch reviews newer than the specified date,
             defaults to null
           optional: true
-      content: >-
-        function getReviews(publisherName: string, extensionName: string,
-        count?: number, filterOptions?: ReviewFilterOptions, beforeDate?: Date,
-        afterDate?: Date)
       return:
         type:
           - >-
@@ -282,12 +282,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function queryAssociatedAzurePublisher(publisherName: string)'
       parameters:
         - id: publisherName
           type:
             - string
           description: ''
-      content: 'function queryAssociatedAzurePublisher(publisherName: string)'
       return:
         type:
           - >-
@@ -303,6 +303,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateExtensionStatistics(extensionStatisticsUpdate:
+        ExtensionStatisticUpdate, publisherName: string, extensionName: string)
       parameters:
         - id: extensionStatisticsUpdate
           type:
@@ -317,9 +320,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateExtensionStatistics(extensionStatisticsUpdate:
-        ExtensionStatisticUpdate, publisherName: string, extensionName: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -334,6 +334,9 @@ items:
       - typeScript
     summary: '[Preview API] Updates or Flags a review'
     syntax:
+      content: >-
+        function updateReview(reviewPatch: ReviewPatch, pubName: string,
+        extName: string, reviewId: number)
       parameters:
         - id: reviewPatch
           type:
@@ -353,9 +356,6 @@ items:
           type:
             - number
           description: Id of the review which needs to be updated
-      content: >-
-        function updateReview(reviewPatch: ReviewPatch, pubName: string,
-        extName: string, reviewId: number)
       return:
         type:
           - >-

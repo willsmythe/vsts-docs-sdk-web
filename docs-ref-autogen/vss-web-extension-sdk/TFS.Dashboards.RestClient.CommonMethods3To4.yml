@@ -39,7 +39,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods2To4'
+      name: '@vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods2To4'
     source:
       path: tfs.d.ts
       startLine: 5486
@@ -59,6 +59,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -69,9 +72,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.RestClient.CommonMethods3To4.createDashboard
@@ -81,6 +81,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createDashboard(dashboard: Dashboard, teamContext: TeamContext)'
       parameters:
         - id: dashboard
           type:
@@ -90,7 +91,6 @@ items:
           type:
             - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
-      content: 'function createDashboard(dashboard: Dashboard, teamContext: TeamContext)'
       return:
         type:
           - >-
@@ -106,6 +106,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createWidget(widget: Widget, teamContext: TeamContext,
+        dashboardId: string)
       parameters:
         - id: widget
           type:
@@ -119,9 +122,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function createWidget(widget: Widget, teamContext: TeamContext,
-        dashboardId: string)
       return:
         type:
           - >-
@@ -135,6 +135,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteDashboard(teamContext: TeamContext, dashboardId: string)'
       parameters:
         - id: teamContext
           type:
@@ -144,7 +145,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function deleteDashboard(teamContext: TeamContext, dashboardId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -159,6 +159,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteWidget(teamContext: TeamContext, dashboardId: string,
+        widgetId: string)
       parameters:
         - id: teamContext
           type:
@@ -172,9 +175,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function deleteWidget(teamContext: TeamContext, dashboardId: string,
-        widgetId: string)
       return:
         type:
           - >-
@@ -188,6 +188,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getDashboard(teamContext: TeamContext, dashboardId: string)'
       parameters:
         - id: teamContext
           type:
@@ -197,7 +198,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getDashboard(teamContext: TeamContext, dashboardId: string)'
       return:
         type:
           - >-
@@ -211,12 +211,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getDashboards(teamContext: TeamContext)'
       parameters:
         - id: teamContext
           type:
             - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
-      content: 'function getDashboards(teamContext: TeamContext)'
       return:
         type:
           - >-
@@ -230,6 +230,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getWidget(teamContext: TeamContext, dashboardId: string,
+        widgetId: string)
       parameters:
         - id: teamContext
           type:
@@ -243,9 +246,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getWidget(teamContext: TeamContext, dashboardId: string,
-        widgetId: string)
       return:
         type:
           - >-
@@ -259,6 +259,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getWidgets(teamContext: TeamContext, dashboardId: string,
+        eTag?: String)
       parameters:
         - id: teamContext
           type:
@@ -273,9 +276,6 @@ items:
             - String
           description: Dashboard Widgets Version
           optional: true
-      content: >-
-        function getWidgets(teamContext: TeamContext, dashboardId: string,
-        eTag?: String)
       return:
         type:
           - >-
@@ -291,6 +291,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function replaceDashboard(dashboard: Dashboard, teamContext:
+        TeamContext, dashboardId: string)
       parameters:
         - id: dashboard
           type:
@@ -304,9 +307,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function replaceDashboard(dashboard: Dashboard, teamContext:
-        TeamContext, dashboardId: string)
       return:
         type:
           - >-
@@ -320,6 +320,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function replaceDashboards(group: DashboardGroup, teamContext:
+        TeamContext)
       parameters:
         - id: group
           type:
@@ -329,9 +332,6 @@ items:
           type:
             - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamContext'
           description: The team context for the operation
-      content: >-
-        function replaceDashboards(group: DashboardGroup, teamContext:
-        TeamContext)
       return:
         type:
           - >-
@@ -347,6 +347,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function replaceWidget(widget: Widget, teamContext: TeamContext,
+        dashboardId: string, widgetId: string)
       parameters:
         - id: widget
           type:
@@ -364,9 +367,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function replaceWidget(widget: Widget, teamContext: TeamContext,
-        dashboardId: string, widgetId: string)
       return:
         type:
           - >-
@@ -382,6 +382,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function replaceWidgets(widgets: Widget[], teamContext: TeamContext,
+        dashboardId: string, eTag?: String)
       parameters:
         - id: widgets
           type:
@@ -400,9 +403,6 @@ items:
             - String
           description: Dashboard Widgets Version
           optional: true
-      content: >-
-        function replaceWidgets(widgets: Widget[], teamContext: TeamContext,
-        dashboardId: string, eTag?: String)
       return:
         type:
           - >-
@@ -418,6 +418,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateWidget(widget: Widget, teamContext: TeamContext,
+        dashboardId: string, widgetId: string)
       parameters:
         - id: widget
           type:
@@ -435,9 +438,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateWidget(widget: Widget, teamContext: TeamContext,
-        dashboardId: string, widgetId: string)
       return:
         type:
           - >-
@@ -453,6 +453,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateWidgets(widgets: Widget[], teamContext: TeamContext,
+        dashboardId: string, eTag?: String)
       parameters:
         - id: widgets
           type:
@@ -471,9 +474,6 @@ items:
             - String
           description: Dashboard Widgets Version
           optional: true
-      content: >-
-        function updateWidgets(widgets: Widget[], teamContext: TeamContext,
-        dashboardId: string, eTag?: String)
       return:
         type:
           - >-

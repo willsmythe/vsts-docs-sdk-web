@@ -22,7 +22,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4
     source:
       path: tfs.d.ts
@@ -43,6 +43,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2_1To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -53,9 +56,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2_1To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2_1To4.createAttachment
@@ -68,6 +68,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createAttachment(content: string, scopeIdentifier: string,
+        hubName: string, planId: string, timelineId: string, recordId: string,
+        type: string, name: string)
       parameters:
         - id: content
           type:
@@ -103,10 +107,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function createAttachment(content: string, scopeIdentifier: string,
-        hubName: string, planId: string, timelineId: string, recordId: string,
-        type: string, name: string)
       return:
         type:
           - >-
@@ -122,6 +122,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAttachment(scopeIdentifier: string, hubName: string, planId:
+        string, timelineId: string, recordId: string, type: string, name:
+        string)
       parameters:
         - id: scopeIdentifier
           type:
@@ -153,10 +157,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getAttachment(scopeIdentifier: string, hubName: string, planId:
-        string, timelineId: string, recordId: string, type: string, name:
-        string)
       return:
         type:
           - >-
@@ -172,6 +172,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAttachmentContent(scopeIdentifier: string, hubName: string,
+        planId: string, timelineId: string, recordId: string, type: string,
+        name: string)
       parameters:
         - id: scopeIdentifier
           type:
@@ -203,10 +207,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getAttachmentContent(scopeIdentifier: string, hubName: string,
-        planId: string, timelineId: string, recordId: string, type: string,
-        name: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -221,6 +221,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAttachments(scopeIdentifier: string, hubName: string,
+        planId: string, timelineId: string, recordId: string, type: string)
       parameters:
         - id: scopeIdentifier
           type:
@@ -248,9 +251,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getAttachments(scopeIdentifier: string, hubName: string,
-        planId: string, timelineId: string, recordId: string, type: string)
       return:
         type:
           - >-
@@ -266,6 +266,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getPlanAttachments(scopeIdentifier: string, hubName: string,
+        planId: string, type: string)
       parameters:
         - id: scopeIdentifier
           type:
@@ -285,9 +288,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getPlanAttachments(scopeIdentifier: string, hubName: string,
-        planId: string, type: string)
       return:
         type:
           - >-

@@ -19,7 +19,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator<TOptions>'
     source:
       path: vss.d.ts
       startLine: 17916
@@ -39,6 +39,7 @@ items:
       function,
           which then returns true if the input is valid, and false if it is invalid.
     syntax:
+      content: 'new CustomValidator(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -50,7 +51,6 @@ items:
                 validate: The function to validate the input against
 
           optional: true
-      content: 'new CustomValidator(options?: TOptions)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.CustomValidator.getMessage
     name: getMessage()
@@ -61,8 +61,8 @@ items:
       Gets the message that would be logged in the validation summary if the
       input were to be invalid
     syntax:
-      parameters: []
       content: function getMessage()
+      parameters: []
       return:
         type:
           - string
@@ -75,6 +75,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -82,7 +83,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.CustomValidator.isValid
     name: isValid()
@@ -91,8 +91,8 @@ items:
       - typeScript
     summary: Tests if the current input satisfies the function
     syntax:
-      parameters: []
       content: function isValid()
+      parameters: []
       return:
         type:
           - boolean
@@ -118,10 +118,10 @@ items:
       - typeScript
     summary: Set the function the validator tests
     syntax:
+      content: 'function setValidate(newValidateFunction: any)'
       parameters:
         - id: newValidateFunction
           type:
             - any
           description: ''
-      content: 'function setValidate(newValidateFunction: any)'
     type: method

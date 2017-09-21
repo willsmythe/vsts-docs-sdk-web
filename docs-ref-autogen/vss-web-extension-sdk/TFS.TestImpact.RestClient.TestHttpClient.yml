@@ -11,7 +11,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.TestImpact.RestClient.TestHttpClient3_1'
+      name: '@vss-web-extension-sdk.TFS.TestImpact.RestClient.TestHttpClient3_1'
     source:
       path: tfs.d.ts
       startLine: 10067
@@ -28,6 +28,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new TestHttpClient(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -38,7 +41,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new TestHttpClient(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

@@ -19,7 +19,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Gallery.RestClient.CommonMethods2_1To4'
+      name: '@vss-web-extension-sdk.VSS.Gallery.RestClient.CommonMethods2_1To4'
     source:
       path: vss.d.ts
       startLine: 24003
@@ -37,12 +37,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createExtension(extensionPackage: ExtensionPackage)'
       parameters:
         - id: extensionPackage
           type:
             - '@vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionPackage'
           description: ''
-      content: 'function createExtension(extensionPackage: ExtensionPackage)'
       return:
         type:
           - >-
@@ -58,6 +58,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createExtensionWithPublisher(extensionPackage:
+        ExtensionPackage, publisherName: string)
       parameters:
         - id: extensionPackage
           type:
@@ -67,9 +70,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function createExtensionWithPublisher(extensionPackage:
-        ExtensionPackage, publisherName: string)
       return:
         type:
           - >-
@@ -85,6 +85,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new GalleryHttpClient2_1(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -95,9 +98,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new GalleryHttpClient2_1(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Gallery.RestClient.GalleryHttpClient2_1.updateExtension
@@ -109,6 +109,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateExtension(extensionPackage: ExtensionPackage,
+        publisherName: string, extensionName: string)
       parameters:
         - id: extensionPackage
           type:
@@ -122,9 +125,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateExtension(extensionPackage: ExtensionPackage,
-        publisherName: string, extensionName: string)
       return:
         type:
           - >-
@@ -140,6 +140,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateExtensionById(extensionPackage: ExtensionPackage,
+        extensionId: string)
       parameters:
         - id: extensionPackage
           type:
@@ -149,9 +152,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateExtensionById(extensionPackage: ExtensionPackage,
-        extensionId: string)
       return:
         type:
           - >-

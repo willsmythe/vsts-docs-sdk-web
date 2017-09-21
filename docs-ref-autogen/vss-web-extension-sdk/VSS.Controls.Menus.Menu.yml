@@ -55,7 +55,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Menus.MenuBase<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Menus.MenuBase<TOptions>'
     source:
       path: vss.d.ts
       startLine: 14067
@@ -72,12 +72,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function appendItem(item: IMenuItemSpec)'
       parameters:
         - id: item
           type:
             - '@vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec'
           description: ''
-      content: 'function appendItem(item: IMenuItemSpec)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.appendItems
     name: 'appendItems(appendedItems: any)'
@@ -86,12 +86,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function appendItems(appendedItems: any)'
       parameters:
         - id: appendedItems
           type:
             - any
           description: ''
-      content: 'function appendItems(appendedItems: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.attach
     name: 'attach(parent: any)'
@@ -100,12 +100,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function attach(parent: any)'
       parameters:
         - id: parent
           type:
             - any
           description: ''
-      content: 'function attach(parent: any)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Menus.Menu.CONTRIBUTION_ITEMS_UPDATED_EVENT
@@ -141,13 +141,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function escape(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function escape(options?: any)'
       return:
         type:
           - boolean
@@ -159,12 +159,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function executeAction(eventArgs: any)'
       parameters:
         - id: eventArgs
           type:
             - any
           description: ''
-      content: 'function executeAction(eventArgs: any)'
       return:
         type:
           - any
@@ -176,6 +176,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getCommandState(commandId: string, context?: any)'
       parameters:
         - id: commandId
           type:
@@ -186,7 +187,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function getCommandState(commandId: string, context?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.getGroupedItems
     name: getGroupedItems()
@@ -207,8 +207,8 @@ items:
       If any groups are defined, separators are guaranteed not to be the first
       or last item in the menu.
     syntax:
-      parameters: []
       content: function getGroupedItems()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.getItem
     name: 'getItem(id: string)'
@@ -217,12 +217,12 @@ items:
       - typeScript
     summary: Gets the item which has the specified command id.
     syntax:
+      content: 'function getItem(id: string)'
       parameters:
         - id: id
           type:
             - string
           description: Id associated with the menu item.
-      content: 'function getItem(id: string)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Menus.MenuItem'
@@ -234,12 +234,12 @@ items:
       - typeScript
     summary: Gets the item which has the specified tag
     syntax:
+      content: 'function getItemByTag(tag: string)'
       parameters:
         - id: tag
           type:
             - string
           description: Associated with the menu item
-      content: 'function getItemByTag(tag: string)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Menus.MenuItem'
@@ -251,8 +251,8 @@ items:
       - typeScript
     summary: Gets an array of all menu items.
     syntax:
-      parameters: []
       content: function getItems()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.getMenuItemAlignment
     name: getMenuItemAlignment()
@@ -261,8 +261,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getMenuItemAlignment()
+      parameters: []
       return:
         type:
           - string
@@ -274,6 +274,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getMenuItemOptions(item: any, extraOptions?: any)'
       parameters:
         - id: item
           type:
@@ -284,7 +285,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function getMenuItemOptions(item: any, extraOptions?: any)'
       return:
         type:
           - any
@@ -296,8 +296,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getMenuItemSpecs()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.getMenuPinningOptions
     name: getMenuPinningOptions()
@@ -306,8 +306,8 @@ items:
       - typeScript
     summary: Get the pinning options for this menu.
     syntax:
-      parameters: []
       content: function getMenuPinningOptions()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Menus.IMenuPinningOptions'
@@ -319,8 +319,8 @@ items:
       - typeScript
     summary: 'Get the parent menu of this menu, if there is one.'
     syntax:
-      parameters: []
       content: function getParentMenu()
+      parameters: []
       return:
         type:
           - >-
@@ -333,6 +333,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function hide(options?: any)'
       parameters:
         - id: options
           type:
@@ -340,7 +341,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function hide(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.hideChildren
     name: 'hideChildren(excludedItem: MenuItem, options?: any)'
@@ -349,6 +349,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function hideChildren(excludedItem: MenuItem, options?: any)'
       parameters:
         - id: excludedItem
           type:
@@ -359,7 +360,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function hideChildren(excludedItem: MenuItem, options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.initialize
     name: initialize()
@@ -368,8 +368,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.initializeOptions
     name: 'initializeOptions(options?: any)'
@@ -378,6 +378,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -385,7 +386,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.constructor
     name: 'Menu(options?: any)'
@@ -394,6 +394,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new Menu(options?: any)'
       parameters:
         - id: options
           type:
@@ -401,7 +402,6 @@ items:
           description: |+
 
           optional: true
-      content: 'new Menu(options?: any)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.moveMenuItemAfter
     name: 'moveMenuItemAfter(item: MenuItem, after: MenuItem)'
@@ -410,6 +410,7 @@ items:
       - typeScript
     summary: Move a menu item to appear immediately after the other given menu item.
     syntax:
+      content: 'function moveMenuItemAfter(item: MenuItem, after: MenuItem)'
       parameters:
         - id: item
           type:
@@ -420,7 +421,6 @@ items:
             - '@vss-web-extension-sdk.VSS.Controls.Menus.MenuItem'
           description: |+
 
-      content: 'function moveMenuItemAfter(item: MenuItem, after: MenuItem)'
       return:
         type:
           - boolean
@@ -445,8 +445,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function ownFocus()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.refreshContributedItems
     name: refreshContributedItems()
@@ -455,8 +455,8 @@ items:
       - typeScript
     summary: Load contributed menu items.
     syntax:
-      parameters: []
       content: function refreshContributedItems()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.removeItem
     name: 'removeItem(item: IMenuItemSpec)'
@@ -465,12 +465,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function removeItem(item: IMenuItemSpec)'
       parameters:
         - id: item
           type:
             - '@vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec'
           description: ''
-      content: 'function removeItem(item: IMenuItemSpec)'
       return:
         type:
           - boolean
@@ -482,12 +482,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function removeMenuItem(menuItem: MenuItem)'
       parameters:
         - id: menuItem
           type:
             - '@vss-web-extension-sdk.VSS.Controls.Menus.MenuItem'
           description: ''
-      content: 'function removeMenuItem(menuItem: MenuItem)'
       return:
         type:
           - boolean
@@ -499,13 +499,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectDefaultItem(ignoreFocus?: boolean)'
       parameters:
         - id: ignoreFocus
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function selectDefaultItem(ignoreFocus?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.selectDown
     name: 'selectDown(options?: any)'
@@ -514,13 +514,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectDown(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function selectDown(options?: any)'
       return:
         type:
           - boolean
@@ -532,8 +532,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function selectFirstItem()
+      parameters: []
       return:
         type:
           - boolean
@@ -545,8 +545,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function selectLastItem()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.selectLeft
     name: 'selectLeft(options?: any)'
@@ -555,13 +555,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectLeft(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function selectLeft(options?: any)'
       return:
         type:
           - boolean
@@ -573,8 +573,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function selectNextItem()
+      parameters: []
       return:
         type:
           - boolean
@@ -586,8 +586,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function selectPrevItem()
+      parameters: []
       return:
         type:
           - boolean
@@ -599,13 +599,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectRight(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function selectRight(options?: any)'
       return:
         type:
           - boolean
@@ -617,13 +617,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectUp(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function selectUp(options?: any)'
       return:
         type:
           - boolean
@@ -639,6 +639,10 @@ items:
       Change the contribution options for this menu and reload the contributed
       menu items
     syntax:
+      content: >-
+        function setContributedItemOptions(contributionIds: string[],
+        contributionType?: string, contributionQueryOptions?:
+        ContributionQueryOptions)
       parameters:
         - id: contributionIds
           type:
@@ -655,10 +659,6 @@ items:
           description: |
             Optional contribution query options
           optional: true
-      content: >-
-        function setContributedItemOptions(contributionIds: string[],
-        contributionType?: string, contributionQueryOptions?:
-        ContributionQueryOptions)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.show
     name: 'show(options?: any)'
@@ -674,13 +674,13 @@ items:
        align: how to align the menu with its parent
        setFocus: whether to set the focus to the menu (default true)
     syntax:
+      content: 'function show(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function show(options?: any)'
       return:
         type:
           - boolean
@@ -707,8 +707,8 @@ items:
       Updates aria set related properties, use after modifying the child items
       of the menu.
     syntax:
-      parameters: []
       content: function updateAriaSetProperties()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.updateCommandStates
     name: 'updateCommandStates(commands: ICommand[])'
@@ -717,12 +717,12 @@ items:
       - typeScript
     summary: Updates the command states of the items with the specified ids.
     syntax:
+      content: 'function updateCommandStates(commands: ICommand[])'
       parameters:
         - id: commands
           type:
             - '@vss-web-extension-sdk.VSS.Controls.Menus.ICommand[]'
           description: List of commands to update.
-      content: 'function updateCommandStates(commands: ICommand[])'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.updateContributedMenuItems
     name: 'updateContributedMenuItems(contributedMenuItems: IMenuItemSpec[])'
@@ -739,15 +739,15 @@ items:
       Exposed to extensions as the updateMenuItems() method on the context
       object passed to getMenuItems().
     syntax:
+      content: >-
+        function updateContributedMenuItems(contributedMenuItems:
+        IMenuItemSpec[])
       parameters:
         - id: contributedMenuItems
           type:
             - '@vss-web-extension-sdk.VSS.Controls.Menus.IMenuItemSpec[]'
           description: |+
 
-      content: >-
-        function updateContributedMenuItems(contributedMenuItems:
-        IMenuItemSpec[])
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.updateItems
     name: 'updateItems(items: any)'
@@ -756,12 +756,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function updateItems(items: any)'
       parameters:
         - id: items
           type:
             - any
           description: ''
-      content: 'function updateItems(items: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu.updateMenuItemStates
     name: updateMenuItemStates()
@@ -770,6 +770,6 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function updateMenuItemStates()
+      parameters: []
     type: method

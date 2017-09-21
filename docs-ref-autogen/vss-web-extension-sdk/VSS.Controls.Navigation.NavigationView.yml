@@ -30,7 +30,7 @@ items:
 
       handles setting page title, etc.
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.BaseControl'
+      name: '@vss-web-extension-sdk.VSS.Controls.BaseControl'
     source:
       path: vss.d.ts
       startLine: 14604
@@ -61,8 +61,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.NavigationView.initializeOptions
@@ -72,6 +72,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -79,7 +80,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.NavigationView.constructor
     name: 'NavigationView(options?: any)'
@@ -88,6 +88,7 @@ items:
       - typeScript
     summary: Creates an instance of the object for the given page
     syntax:
+      content: 'new NavigationView(options?: any)'
       parameters:
         - id: options
           type:
@@ -97,7 +98,6 @@ items:
                 attachNavigate: If true, listen for page/hash navigations
 
           optional: true
-      content: 'new NavigationView(options?: any)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.NavigationView.onNavigate
     name: 'onNavigate(state: any)'
@@ -106,13 +106,13 @@ items:
       - typeScript
     summary: Function invoked when a page/hash navigation has occurred
     syntax:
+      content: 'function onNavigate(state: any)'
       parameters:
         - id: state
           type:
             - any
           description: |
             Hash object containing the hash-url parameters
-      content: 'function onNavigate(state: any)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.NavigationView.setFullScreenMode
@@ -126,6 +126,9 @@ items:
       Set full-screen mode. If true, hide the chrome (hubs, etc.) around the
       main hub content, hide the splitter, etc.
     syntax:
+      content: >-
+        function setFullScreenMode(fullScreenMode: boolean,
+        showLeftPaneInFullScreenMode?: boolean)
       parameters:
         - id: fullScreenMode
           type:
@@ -137,9 +140,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function setFullScreenMode(fullScreenMode: boolean,
-        showLeftPaneInFullScreenMode?: boolean)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.NavigationView.setLeftHubPaneVisibility
@@ -149,13 +149,13 @@ items:
       - typeScript
     summary: Shows or hides the Left (tree) section of the explorer page
     syntax:
+      content: 'function setLeftHubPaneVisibility(visible: boolean)'
       parameters:
         - id: visible
           type:
             - boolean
           description: |
             If true, show the left side of the explorer page. False to hide it.
-      content: 'function setLeftHubPaneVisibility(visible: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.NavigationView.setViewTitle
     name: 'setViewTitle(title?: string, tooltip?: string)'
@@ -164,6 +164,7 @@ items:
       - typeScript
     summary: Sets the (text) title of the page
     syntax:
+      content: 'function setViewTitle(title?: string, tooltip?: string)'
       parameters:
         - id: title
           type:
@@ -180,7 +181,6 @@ items:
                 Optional tooltip for the page's title element
 
           optional: true
-      content: 'function setViewTitle(title?: string, tooltip?: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.NavigationView.setViewTitleContent
@@ -190,6 +190,7 @@ items:
       - typeScript
     summary: Sets the raw-html title element for the page
     syntax:
+      content: 'function setViewTitleContent(title: string, titleContent: string)'
       parameters:
         - id: title
           type:
@@ -204,7 +205,6 @@ items:
 
                 Raw HTML to inject into the title element (will not be escaped)
 
-      content: 'function setViewTitleContent(title: string, titleContent: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.NavigationView.setWindowTitle
@@ -214,6 +214,7 @@ items:
       - typeScript
     summary: Sets the document's title
     syntax:
+      content: 'function setWindowTitle(title: string)'
       parameters:
         - id: title
           type:
@@ -222,5 +223,4 @@ items:
 
                 Title of the page (text)
 
-      content: 'function setWindowTitle(title: string)'
     type: method

@@ -21,7 +21,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Enhancement<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Enhancement<TOptions>'
     source:
       path: vss.d.ts
       startLine: 9333
@@ -38,6 +38,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new Control(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -45,7 +46,6 @@ items:
           description: |+
 
           optional: true
-      content: 'new Control(options?: TOptions)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Control.create
     name: >-
@@ -56,6 +56,10 @@ items:
       - typeScript
     summary: Creates a the control specified by TControl in the given container.
     syntax:
+      content: >-
+        static function create<TControl>(controlType: function, container:
+        JQuery, controlOptions: TOptions, enhancementOptions?:
+        EnhancementOptions)
       parameters:
         - id: controlType
           type:
@@ -74,10 +78,6 @@ items:
             - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
           description: ''
           optional: true
-      content: >-
-        static function create<TControl>(controlType: function, container:
-        JQuery, controlOptions: TOptions, enhancementOptions?:
-        EnhancementOptions)
       return:
         type:
           - TControl
@@ -89,12 +89,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function createIn(container: JQuery)'
       parameters:
         - id: container
           type:
             - JQuery
           description: ''
-      content: 'function createIn(container: JQuery)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Control.createIn
     name: >-
@@ -105,6 +105,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        static function createIn<TOptions>(type?: any, container?: any,
+        options?: TOptions, koCompatable?: boolean)
       parameters:
         - id: type
           type:
@@ -126,9 +129,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        static function createIn<TOptions>(type?: any, container?: any,
-        options?: TOptions, koCompatable?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Control<any>'
@@ -140,8 +140,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function dispose()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Control.enableElement
     name: 'enableElement(enabled: any)'
@@ -150,12 +150,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function enableElement(enabled: any)'
       parameters:
         - id: enabled
           type:
             - any
           description: ''
-      content: 'function enableElement(enabled: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Control.focus
     name: focus()
@@ -164,8 +164,8 @@ items:
       - typeScript
     summary: Set Focus to the control
     syntax:
-      parameters: []
       content: function focus()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Control.hideBusyOverlay
     name: hideBusyOverlay()
@@ -174,8 +174,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function hideBusyOverlay()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Control.hideElement
     name: hideElement()
@@ -184,8 +184,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function hideElement()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Control.initializeOptions
     name: 'initializeOptions(options?: TOptions)'
@@ -194,6 +194,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -201,7 +202,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: TOptions)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Control.showBusyOverlay
     name: showBusyOverlay()
@@ -210,8 +210,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function showBusyOverlay()
+      parameters: []
       return:
         type:
           - JQuery
@@ -223,6 +223,6 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function showElement()
+      parameters: []
     type: method

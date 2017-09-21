@@ -52,6 +52,9 @@ items:
       - typeScript
     summary: Adds a query string parameter to the current uri
     syntax:
+      content: >-
+        function addQueryParam(name: string, value: string, replaceExisting?:
+        boolean)
       parameters:
         - id: name
           type:
@@ -67,9 +70,6 @@ items:
           description: |
             If true, replace all existing parameters with the same name
           optional: true
-      content: >-
-        function addQueryParam(name: string, value: string, replaceExisting?:
-        boolean)
     type: method
   - uid: vss-web-extension-sdk.VSS.Utils.Url.Uri.getEffectivePort
     name: getEffectivePort()
@@ -80,8 +80,8 @@ items:
       Gets the effective port number, returning the default port number if
       omitted for the given scheme.
     syntax:
-      parameters: []
       content: function getEffectivePort()
+      parameters: []
       return:
         type:
           - number
@@ -93,13 +93,13 @@ items:
       - typeScript
     summary: Get the value of the query parameter with the given key
     syntax:
+      content: 'function getQueryParam(name: string)'
       parameters:
         - id: name
           type:
             - string
           description: |
             Query parameter name
-      content: 'function getQueryParam(name: string)'
       return:
         type:
           - string
@@ -137,6 +137,7 @@ items:
       - typeScript
     summary: Parse a uri string into a Uri member
     syntax:
+      content: 'static function parse(uri: string, options?: IUriParseOptions)'
       parameters:
         - id: uri
           type:
@@ -148,7 +149,6 @@ items:
           description: |
             Options for parsing the uri string
           optional: true
-      content: 'static function parse(uri: string, options?: IUriParseOptions)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Utils.Url.Uri'
@@ -227,6 +227,7 @@ items:
       - typeScript
     summary: Create a new Uri.
     syntax:
+      content: 'new Uri(uri?: string)'
       parameters:
         - id: uri
           type:
@@ -234,5 +235,4 @@ items:
           description: |
             Optional uri string to populate values with
           optional: true
-      content: 'new Uri(uri?: string)'
     type: constructor

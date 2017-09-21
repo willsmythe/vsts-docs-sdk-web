@@ -31,6 +31,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new BasicAuthTokenManager(user: string, password: string)'
       parameters:
         - id: user
           type:
@@ -40,7 +41,6 @@ items:
           type:
             - string
           description: ''
-      content: 'new BasicAuthTokenManager(user: string, password: string)'
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Authentication.Services.BasicAuthTokenManager.getAuthorizationHeader
@@ -50,12 +50,12 @@ items:
       - typeScript
     summary: Gets the authorization header to use in a request from the given token
     syntax:
+      content: 'function getAuthorizationHeader(sessionToken: string)'
       parameters:
         - id: sessionToken
           type:
             - string
           description: Used for token key.
-      content: 'function getAuthorizationHeader(sessionToken: string)'
       return:
         type:
           - string
@@ -68,13 +68,13 @@ items:
       - typeScript
     summary: Get the auth token to use for this request.
     syntax:
+      content: 'function getAuthToken(refresh?: boolean)'
       parameters:
         - id: refresh
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function getAuthToken(refresh?: boolean)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'

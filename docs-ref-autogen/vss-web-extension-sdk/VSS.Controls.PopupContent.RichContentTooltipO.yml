@@ -17,7 +17,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.PopupContent.PopupContentControlO<TOptions>
     source:
       path: vss.d.ts
@@ -37,6 +37,9 @@ items:
       - typeScript
     summary: Add a tooltip to the target with common default settings.
     syntax:
+      content: >-
+        static function add(content: string, target: HTMLElement, options?:
+        IRichContentTooltipOptions)
       parameters:
         - id: content
           type:
@@ -53,9 +56,6 @@ items:
           description: |+
 
           optional: true
-      content: >-
-        static function add(content: string, target: HTMLElement, options?:
-        IRichContentTooltipOptions)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.PopupContent.RichContentTooltip'
@@ -74,6 +74,9 @@ items:
 
       content in target is overflowing.
     syntax:
+      content: >-
+        static function addIfOverflow(content: string, target: HTMLElement,
+        options?: IRichContentTooltipOptions)
       parameters:
         - id: content
           type:
@@ -90,9 +93,6 @@ items:
           description: |+
 
           optional: true
-      content: >-
-        static function addIfOverflow(content: string, target: HTMLElement,
-        options?: IRichContentTooltipOptions)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.PopupContent.RichContentTooltip'
@@ -104,8 +104,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function hide()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.PopupContent.RichContentTooltipO.initialize
@@ -115,8 +115,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.PopupContent.RichContentTooltipO.initializeOptions
@@ -126,11 +126,11 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method

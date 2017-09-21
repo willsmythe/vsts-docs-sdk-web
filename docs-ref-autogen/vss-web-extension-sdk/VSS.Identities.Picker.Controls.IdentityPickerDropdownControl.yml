@@ -60,7 +60,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.Control<@vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions>
     source:
       path: vss.d.ts
@@ -79,12 +79,12 @@ items:
       - typeScript
     summary: Adds the identity to the querying identity's MRU
     syntax:
+      content: 'function addIdentitiesToMru(localIds: string[])'
       parameters:
         - id: localIds
           type:
             - 'string[]'
           description: ''
-      content: 'function addIdentitiesToMru(localIds: string[])'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerDropdownControl.dispose
@@ -94,8 +94,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function dispose()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerDropdownControl.DROPDOWN_BASE_CLASS
@@ -119,6 +119,7 @@ items:
       - typeScript
     summary: Get Identities
     syntax:
+      content: 'function getIdentities(prefix: string, selectFirstByDefault?: boolean)'
       parameters:
         - id: prefix
           type:
@@ -129,7 +130,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function getIdentities(prefix: string, selectFirstByDefault?: boolean)'
       return:
         type:
           - >-
@@ -143,8 +143,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getItemsListId()
+      parameters: []
       return:
         type:
           - string
@@ -157,8 +157,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getPrefix()
+      parameters: []
       return:
         type:
           - string
@@ -171,8 +171,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getSelectedIndex()
+      parameters: []
       return:
         type:
           - number
@@ -185,8 +185,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getSelectedItem()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity'
@@ -199,12 +199,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function handleKeyEvent(e: JQueryEventObject)'
       parameters:
         - id: e
           type:
             - JQueryEventObject
           description: ''
-      content: 'function handleKeyEvent(e: JQueryEventObject)'
       return:
         type:
           - boolean
@@ -217,6 +217,7 @@ items:
       - typeScript
     summary: Hide the dropdown
     syntax:
+      content: 'function hide(e?: JQueryEventObject, suppressHideEvent?: boolean)'
       parameters:
         - id: e
           type:
@@ -228,7 +229,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function hide(e?: JQueryEventObject, suppressHideEvent?: boolean)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerDropdownControl.HIDE_DROPDOWN_EVENT_INTERNAL
@@ -252,6 +252,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new IdentityPickerDropdownControl(options?:
+        IIdentityPickerDropdownOptions)
       parameters:
         - id: options
           type:
@@ -259,9 +262,6 @@ items:
               @vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions
           description: ''
           optional: true
-      content: >-
-        new IdentityPickerDropdownControl(options?:
-        IIdentityPickerDropdownOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerDropdownControl.IMAGE_MARGINS_PX
@@ -285,8 +285,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerDropdownControl.initializeOptions
@@ -296,6 +296,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: IIdentityPickerDropdownOptions)'
       parameters:
         - id: options
           type:
@@ -303,7 +304,6 @@ items:
               @vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions
           description: ''
           optional: true
-      content: 'function initializeOptions(options?: IIdentityPickerDropdownOptions)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerDropdownControl.initializeOptionsInternal
@@ -313,6 +313,9 @@ items:
       - typeScript
     summary: For internal / unit testing use only
     syntax:
+      content: >-
+        function initializeOptionsInternal(options?:
+        IIdentityPickerDropdownOptions)
       parameters:
         - id: options
           type:
@@ -320,9 +323,6 @@ items:
               @vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownOptions
           description: ''
           optional: true
-      content: >-
-        function initializeOptionsInternal(options?:
-        IIdentityPickerDropdownOptions)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerDropdownControl.isFiltered
@@ -334,8 +334,8 @@ items:
       Returns true if the prefix was used for filtering the identities in the
       dropdown
     syntax:
-      parameters: []
       content: function isFiltered()
+      parameters: []
       return:
         type:
           - boolean
@@ -348,8 +348,8 @@ items:
       - typeScript
     summary: Returns true if the dropdown is currently being shown
     syntax:
-      parameters: []
       content: function isVisible()
+      parameters: []
       return:
         type:
           - boolean
@@ -362,8 +362,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function load()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'
@@ -376,8 +376,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function reset()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerDropdownControl.show
@@ -387,8 +387,8 @@ items:
       - typeScript
     summary: Show the dropdown
     syntax:
-      parameters: []
       content: function show()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerDropdownControl.showAllMruIdentities
@@ -398,13 +398,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function showAllMruIdentities(selectFirstByDefault?: boolean)'
       parameters:
         - id: selectFirstByDefault
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function showAllMruIdentities(selectFirstByDefault?: boolean)'
       return:
         type:
           - >-
@@ -432,12 +432,12 @@ items:
       - typeScript
     summary: Set the prefix but does not update the list
     syntax:
+      content: 'function updatePrefix(prefix: string)'
       parameters:
         - id: prefix
           type:
             - string
           description: ''
-      content: 'function updatePrefix(prefix: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityPickerDropdownControl.UPDATE_ACTIVE_DESCENDANT_ID

@@ -23,7 +23,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 20718
@@ -43,6 +43,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -53,9 +56,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.FeatureManagement.RestClient.CommonMethods3To4.getFeature
@@ -65,12 +65,12 @@ items:
       - typeScript
     summary: '[Preview API] Get a specific feature by its id'
     syntax:
+      content: 'function getFeature(featureId: string)'
       parameters:
         - id: featureId
           type:
             - string
           description: The contribution id of the feature
-      content: 'function getFeature(featureId: string)'
       return:
         type:
           - >-
@@ -84,6 +84,7 @@ items:
       - typeScript
     summary: '[Preview API] Get a list of all defined features'
     syntax:
+      content: 'function getFeatures(targetContributionId?: string)'
       parameters:
         - id: targetContributionId
           type:
@@ -93,7 +94,6 @@ items:
             specified include the features that target the specified
             contribution.
           optional: true
-      content: 'function getFeatures(targetContributionId?: string)'
       return:
         type:
           - >-
@@ -109,6 +109,7 @@ items:
       [Preview API] Get the state of the specified feature for the given
       user/all-users scope
     syntax:
+      content: 'function getFeatureState(featureId: string, userScope: string)'
       parameters:
         - id: featureId
           type:
@@ -120,7 +121,6 @@ items:
           description: >-
             User-Scope at which to get the value. Should be "me" for the current
             user or "host" for all users.
-      content: 'function getFeatureState(featureId: string, userScope: string)'
       return:
         type:
           - >-
@@ -138,6 +138,9 @@ items:
       [Preview API] Get the state of the specified feature for the given named
       scope
     syntax:
+      content: >-
+        function getFeatureStateForScope(featureId: string, userScope: string,
+        scopeName: string, scopeValue: string)
       parameters:
         - id: featureId
           type:
@@ -159,9 +162,6 @@ items:
           type:
             - string
           description: Value of the scope (e.g. the project or team id)
-      content: >-
-        function getFeatureStateForScope(featureId: string, userScope: string,
-        scopeName: string, scopeValue: string)
       return:
         type:
           - >-
@@ -177,6 +177,9 @@ items:
       - typeScript
     summary: '[Preview API] Set the state of a feature'
     syntax:
+      content: >-
+        function setFeatureState(feature: ContributedFeatureState, featureId:
+        string, userScope: string, reason?: string, reasonCode?: string)
       parameters:
         - id: feature
           type:
@@ -203,9 +206,6 @@ items:
             - string
           description: Short reason code
           optional: true
-      content: >-
-        function setFeatureState(feature: ContributedFeatureState, featureId:
-        string, userScope: string, reason?: string, reasonCode?: string)
       return:
         type:
           - >-
@@ -222,6 +222,10 @@ items:
       - typeScript
     summary: '[Preview API] Set the state of a feature at a specific scope'
     syntax:
+      content: >-
+        function setFeatureStateForScope(feature: ContributedFeatureState,
+        featureId: string, userScope: string, scopeName: string, scopeValue:
+        string, reason?: string, reasonCode?: string)
       parameters:
         - id: feature
           type:
@@ -258,10 +262,6 @@ items:
             - string
           description: Short reason code
           optional: true
-      content: >-
-        function setFeatureStateForScope(feature: ContributedFeatureState,
-        featureId: string, userScope: string, scopeName: string, scopeValue:
-        string, reason?: string, reasonCode?: string)
       return:
         type:
           - >-

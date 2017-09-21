@@ -44,6 +44,9 @@ items:
       Open a modal dialog in the host frame which will get its content from a
       contributed control.
     syntax:
+      content: >-
+        function openDialog(contributionId: string, dialogOptions:
+        IHostDialogOptions, contributionConfig?: Object, postContent?: Object)
       parameters:
         - id: contributionId
           type:
@@ -65,9 +68,6 @@ items:
             Optional data to post to the contribution endpoint. If not
             specified, a GET request will be performed.
           optional: true
-      content: >-
-        function openDialog(contributionId: string, dialogOptions:
-        IHostDialogOptions, contributionConfig?: Object, postContent?: Object)
       return:
         type:
           - >-
@@ -82,6 +82,9 @@ items:
       Open a modal dialog in the host frame which will display the supplied
       message.
     syntax:
+      content: >-
+        function openMessageDialog(message: string, options?:
+        IOpenMessageDialogOptions)
       parameters:
         - id: message
           type:
@@ -92,9 +95,6 @@ items:
             - '@vss-web-extension-sdk.IOpenMessageDialogOptions'
           description: ''
           optional: true
-      content: >-
-        function openMessageDialog(message: string, options?:
-        IOpenMessageDialogOptions)
       return:
         type:
           - >-

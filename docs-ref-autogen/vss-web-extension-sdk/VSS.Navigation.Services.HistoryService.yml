@@ -7,11 +7,15 @@ items:
       - >-
         vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.addHistoryPoint
       - >-
+        vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.attachNavigate_1
+      - >-
         vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.attachNavigate
       - >-
         vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.deserializeState
       - >-
         vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.detachNavigate
+      - >-
+        vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.detachNavigate_1
       - >-
         vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.getCurrentFragment
       - >-
@@ -57,6 +61,9 @@ items:
       Add a new history entry with the given state. Merges data with the current
       navigation data.
     syntax:
+      content: >-
+        function addHistoryPoint(action: string, data?: any, windowTitle?:
+        string, suppressNavigate?: boolean, mergeCurrentState?: boolean)
       parameters:
         - id: action
           type:
@@ -92,18 +99,18 @@ items:
             If true, the supplied data just modify the existing/current state.
             If false, they replace all existing key/value pairs.
           optional: true
-      content: >-
-        function addHistoryPoint(action: string, data?: any, windowTitle?:
-        string, suppressNavigate?: boolean, mergeCurrentState?: boolean)
     type: method
   - uid: >-
-      vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.attachNavigate
+      vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.attachNavigate_1
     name: 'attachNavigate(handler: IFunctionPPR<any>, checkCurrentState?: boolean)'
     children: []
     langs:
       - typeScript
     summary: Attach a new navigate handler
     syntax:
+      content: >-
+        function attachNavigate(handler: IFunctionPPR<any>, checkCurrentState?:
+        boolean)
       parameters:
         - id: handler
           type:
@@ -115,9 +122,29 @@ items:
           description: |
             If true, immediately invoke the handler
           optional: true
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.attachNavigate
+    name: 'attachNavigate(handler: IFunctionPPR<any>, checkCurrentState?: boolean)'
+    children: []
+    langs:
+      - typeScript
+    summary: Attach a new navigate handler
+    syntax:
       content: >-
         function attachNavigate(handler: IFunctionPPR<any>, checkCurrentState?:
         boolean)
+      parameters:
+        - id: handler
+          type:
+            - '@vss-web-extension-sdk.IFunctionPPR<any>'
+          description: The method called whenever a navigation event occurs
+        - id: checkCurrentState
+          type:
+            - boolean
+          description: |
+            If true, immediately invoke the handler
+          optional: true
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.deserializeState
@@ -127,13 +154,13 @@ items:
       - typeScript
     summary: Deserialize a navigation state string into a navigation data lookup.
     syntax:
+      content: 'static function deserializeState(state: string)'
       parameters:
         - id: state
           type:
             - string
           description: |
             The serialized navigation state string (hash or query string)
-      content: 'static function deserializeState(state: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IDictionaryStringTo<any>'
@@ -146,13 +173,29 @@ items:
       - typeScript
     summary: Remove a navigate handler
     syntax:
+      content: 'function detachNavigate(handler: IFunctionPPR<any>)'
       parameters:
         - id: handler
           type:
             - '@vss-web-extension-sdk.IFunctionPPR<any>'
           description: |
             The global navigate handler method to remove
+    type: method
+  - uid: >-
+      vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.detachNavigate_1
+    name: 'detachNavigate(handler: IFunctionPPR<any>)'
+    children: []
+    langs:
+      - typeScript
+    summary: Remove a navigate handler
+    syntax:
       content: 'function detachNavigate(handler: IFunctionPPR<any>)'
+      parameters:
+        - id: handler
+          type:
+            - '@vss-web-extension-sdk.IFunctionPPR<any>'
+          description: |
+            The global navigate handler method to remove
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.getCurrentFragment
@@ -162,8 +205,8 @@ items:
       - typeScript
     summary: Gets the serialized version of the current navigation state.
     syntax:
-      parameters: []
       content: function getCurrentFragment()
+      parameters: []
       return:
         type:
           - string
@@ -176,8 +219,8 @@ items:
       - typeScript
     summary: Gets the current url's hash string
     syntax:
-      parameters: []
       content: function getCurrentHashString()
+      parameters: []
       return:
         type:
           - string
@@ -190,8 +233,8 @@ items:
       - typeScript
     summary: Gets the current url's query string
     syntax:
-      parameters: []
       content: function getCurrentQueryString()
+      parameters: []
       return:
         type:
           - string
@@ -206,8 +249,8 @@ items:
       Get the current navigation state dictionary. Uses query parameters and
       hash parameters.
     syntax:
-      parameters: []
       content: function getCurrentState()
+      parameters: []
       return:
         type:
           - any
@@ -224,6 +267,7 @@ items:
       This always returns a fragment link, regardless of the browser's
       capability to handle push state.
     syntax:
+      content: 'function getFragmentActionLink(action: string, data?: any)'
       parameters:
         - id: action
           type:
@@ -234,7 +278,6 @@ items:
             - any
           description: Action parameters
           optional: true
-      content: 'function getFragmentActionLink(action: string, data?: any)'
       return:
         type:
           - string
@@ -246,8 +289,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: new HistoryService()
+      parameters: []
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.pushState
     name: 'pushState(url: string)'
@@ -258,13 +301,13 @@ items:
       Add a new history entry to the browser's history (updating the url in the
       address bar)
     syntax:
+      content: 'function pushState(url: string)'
       parameters:
         - id: url
           type:
             - string
           description: |
             Url to update the browser's address bar to
-      content: 'function pushState(url: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.replaceHistoryPoint
@@ -280,6 +323,9 @@ items:
       The back button will therefore not map to the current url (at the time
       this call is made), but rather to the previous history entry.
     syntax:
+      content: >-
+        function replaceHistoryPoint(action: string, data: any, windowTitle?:
+        string, suppressNavigate?: boolean, mergeCurrentState?: boolean)
       parameters:
         - id: action
           type:
@@ -314,9 +360,6 @@ items:
             If true, the supplied data just modify the existing/current state.
             If false, they replace all existing key/value pairs.
           optional: true
-      content: >-
-        function replaceHistoryPoint(action: string, data: any, windowTitle?:
-        string, suppressNavigate?: boolean, mergeCurrentState?: boolean)
     type: method
   - uid: vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.replaceState
     name: 'replaceState(url: string)'
@@ -327,13 +370,13 @@ items:
       Replace the current history entry in the browser's history (updating the
       url in the address bar)
     syntax:
+      content: 'function replaceState(url: string)'
       parameters:
         - id: url
           type:
             - string
           description: |
             Url to update the browser's address bar to
-      content: 'function replaceState(url: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.serializeState
@@ -345,13 +388,13 @@ items:
       Serialize a navigation data lookup into a string that can be used as a
       hash or query string.
     syntax:
+      content: 'static function serializeState(state: IDictionaryStringTo<any>)'
       parameters:
         - id: state
           type:
             - '@vss-web-extension-sdk.IDictionaryStringTo<any>'
           description: |
             The navigation state dictionary to convert
-      content: 'static function serializeState(state: IDictionaryStringTo<any>)'
       return:
         type:
           - string
@@ -367,6 +410,11 @@ items:
       - typeScript
     summary: Update the current history entry
     syntax:
+      content: >-
+        function updateHistoryEntry(action: string, data?:
+        IDictionaryStringTo<any>, replaceHistoryEntry?: boolean,
+        mergeWithCurrentState?: boolean, windowTitle?: string,
+        suppressNavigate?: boolean)
       parameters:
         - id: action
           type:
@@ -407,9 +455,4 @@ items:
             If true, don't trigger any of the attached navigate event handlers
             due to this update.
           optional: true
-      content: >-
-        function updateHistoryEntry(action: string, data?:
-        IDictionaryStringTo<any>, replaceHistoryEntry?: boolean,
-        mergeWithCurrentState?: boolean, windowTitle?: string,
-        suppressNavigate?: boolean)
     type: method

@@ -45,7 +45,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 27780
@@ -65,6 +65,9 @@ items:
       - typeScript
     summary: '[Preview API] Assign an explicit account entitlement'
     syntax:
+      content: >-
+        function assignAccountEntitlementForUser(body:
+        AccountEntitlementUpdateModel, userId: string)
       parameters:
         - id: body
           type:
@@ -75,9 +78,6 @@ items:
           type:
             - string
           description: The id of the user
-      content: >-
-        function assignAccountEntitlementForUser(body:
-        AccountEntitlementUpdateModel, userId: string)
       return:
         type:
           - >-
@@ -91,12 +91,12 @@ items:
       - typeScript
     summary: '[Preview API] Assign an available entitilement to a user'
     syntax:
+      content: 'function assignAvailableAccountEntitlement(userId: string)'
       parameters:
         - id: userId
           type:
             - string
           description: The user to which to assign the entitilement
-      content: 'function assignAvailableAccountEntitlement(userId: string)'
       return:
         type:
           - >-
@@ -112,12 +112,12 @@ items:
       [Preview API] Returns extensions that are currrently assigned to the users
       that are in the account
     syntax:
+      content: 'function bulkGetExtensionsAssignedToUsers(userIds: string[])'
       parameters:
         - id: userIds
           type:
             - 'string[]'
           description: ''
-      content: 'function bulkGetExtensionsAssignedToUsers(userIds: string[])'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<[key: string]: function>'
@@ -132,6 +132,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -142,9 +145,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Licensing.RestClient.CommonMethods2To4.computeExtensionRights
@@ -154,12 +154,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function computeExtensionRights(ids: string[])'
       parameters:
         - id: ids
           type:
             - 'string[]'
           description: ''
-      content: 'function computeExtensionRights(ids: string[])'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<[key: string]: boolean>'
@@ -172,12 +172,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteUserEntitlements(userId: string)'
       parameters:
         - id: userId
           type:
             - string
           description: ''
-      content: 'function deleteUserEntitlements(userId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -193,8 +193,8 @@ items:
       mapped to _apis/licensing/entitlements/me so specifically is looking for
       the user of the request
     syntax:
-      parameters: []
       content: function getAccountEntitlement()
+      parameters: []
       return:
         type:
           - >-
@@ -208,6 +208,9 @@ items:
       - typeScript
     summary: '[Preview API] Get the entitlements for a user'
     syntax:
+      content: >-
+        function getAccountEntitlementForUser(userId: string, determineRights?:
+        boolean)
       parameters:
         - id: userId
           type:
@@ -218,9 +221,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getAccountEntitlementForUser(userId: string, determineRights?:
-        boolean)
       return:
         type:
           - >-
@@ -234,8 +234,8 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
-      parameters: []
       content: function getAccountLicensesUsage()
+      parameters: []
       return:
         type:
           - >-
@@ -249,8 +249,8 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
-      parameters: []
       content: function getCertificate()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -266,6 +266,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getClientRights(rightName?: string, productVersion?: string,
+        edition?: string, relType?: string, includeCertificate?: boolean,
+        canary?: string, machineId?: string)
       parameters:
         - id: rightName
           type:
@@ -302,10 +306,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getClientRights(rightName?: string, productVersion?: string,
-        edition?: string, relType?: string, includeCertificate?: boolean,
-        canary?: string, machineId?: string)
       return:
         type:
           - >-
@@ -319,8 +319,8 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
-      parameters: []
       content: function getEntitlements()
+      parameters: []
       return:
         type:
           - >-
@@ -334,12 +334,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getExtensionLicenseData(extensionId: string)'
       parameters:
         - id: extensionId
           type:
             - string
           description: ''
-      content: 'function getExtensionLicenseData(extensionId: string)'
       return:
         type:
           - >-
@@ -353,8 +353,8 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
-      parameters: []
       content: function getExtensionRights()
+      parameters: []
       return:
         type:
           - >-
@@ -368,8 +368,8 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
-      parameters: []
       content: function getMsdnPresence()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -382,13 +382,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getUsageRights(rightName?: string)'
       parameters:
         - id: rightName
           type:
             - string
           description: ''
           optional: true
-      content: 'function getUsageRights(rightName?: string)'
       return:
         type:
           - >-
@@ -404,12 +404,12 @@ items:
       [Preview API] Returns AccountEntitlements that are currently assigned to
       the given list of users in the account
     syntax:
+      content: 'function obtainAvailableAccountEntitlements(userIds: string[])'
       parameters:
         - id: userIds
           type:
             - 'string[]'
           description: List of user Ids.
-      content: 'function obtainAvailableAccountEntitlements(userIds: string[])'
       return:
         type:
           - >-
@@ -423,15 +423,15 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function registerExtensionLicense(extensionLicenseData:
+        ExtensionLicenseData)
       parameters:
         - id: extensionLicenseData
           type:
             - >-
               @vss-web-extension-sdk.VSS.Licensing.Contracts.ExtensionLicenseData
           description: ''
-      content: >-
-        function registerExtensionLicense(extensionLicenseData:
-        ExtensionLicenseData)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<boolean>'

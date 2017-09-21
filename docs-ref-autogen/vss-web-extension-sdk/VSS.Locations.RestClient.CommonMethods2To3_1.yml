@@ -23,7 +23,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 28353
@@ -43,6 +43,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To3_1(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -53,9 +56,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To3_1(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Locations.RestClient.CommonMethods2To3_1.deleteServiceDefinition
@@ -65,6 +65,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteServiceDefinition(serviceType: string, identifier:
+        string)
       parameters:
         - id: serviceType
           type:
@@ -74,9 +77,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function deleteServiceDefinition(serviceType: string, identifier:
-        string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -93,6 +93,9 @@ items:
       [Preview API] This was copied and adapted from
       TeamFoundationConnectionService.Connect()
     syntax:
+      content: >-
+        function getConnectionData(connectOptions?: ConnectOptions,
+        lastChangeId?: number, lastChangeId64?: number)
       parameters:
         - id: connectOptions
           type:
@@ -109,9 +112,6 @@ items:
             - number
           description: Non-truncated 64-bit LastChangeId
           optional: true
-      content: >-
-        function getConnectionData(connectOptions?: ConnectOptions,
-        lastChangeId?: number, lastChangeId64?: number)
       return:
         type:
           - >-
@@ -127,6 +127,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getServiceDefinition(serviceType: string, identifier: string,
+        allowFaultIn?: boolean)
       parameters:
         - id: serviceType
           type:
@@ -141,9 +144,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getServiceDefinition(serviceType: string, identifier: string,
-        allowFaultIn?: boolean)
       return:
         type:
           - >-
@@ -157,13 +157,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getServiceDefinitions(serviceType?: string)'
       parameters:
         - id: serviceType
           type:
             - string
           description: ''
           optional: true
-      content: 'function getServiceDefinitions(serviceType?: string)'
       return:
         type:
           - >-
@@ -193,15 +193,15 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateServiceDefinitions(serviceDefinitions:
+        VssJsonCollectionWrapperV<ServiceDefinition[]>)
       parameters:
         - id: serviceDefinitions
           type:
             - >-
               @vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV<@vss-web-extension-sdk.VSS.Locations.Contracts.ServiceDefinition[]>
           description: ''
-      content: >-
-        function updateServiceDefinitions(serviceDefinitions:
-        VssJsonCollectionWrapperV<ServiceDefinition[]>)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'

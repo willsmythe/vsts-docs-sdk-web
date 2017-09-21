@@ -29,7 +29,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4'
+      name: '@vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4'
     source:
       path: tfs.d.ts
       startLine: 12849
@@ -49,6 +49,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function addTestResultsToTestRun(resultCreateModels:
+        TestResultCreateModel[], project: string, runId: number)
       parameters:
         - id: resultCreateModels
           type:
@@ -63,9 +66,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function addTestResultsToTestRun(resultCreateModels:
-        TestResultCreateModel[], project: string, runId: number)
       return:
         type:
           - >-
@@ -81,6 +81,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function bulkUpdateTestResults(resultUpdateModel:
+        TestCaseResultUpdateModel, project: string, runId: number, resultIds:
+        number[])
       parameters:
         - id: resultUpdateModel
           type:
@@ -99,10 +103,6 @@ items:
           type:
             - 'number[]'
           description: ''
-      content: >-
-        function bulkUpdateTestResults(resultUpdateModel:
-        TestCaseResultUpdateModel, project: string, runId: number, resultIds:
-        number[])
       return:
         type:
           - >-
@@ -119,6 +119,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createTestIterationResultAttachment(attachmentRequestModel:
+        TestAttachmentRequestModel, project: string, runId: number,
+        testCaseResultId: number, iterationId: number, actionPath?: string)
       parameters:
         - id: attachmentRequestModel
           type:
@@ -146,10 +150,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function createTestIterationResultAttachment(attachmentRequestModel:
-        TestAttachmentRequestModel, project: string, runId: number,
-        testCaseResultId: number, iterationId: number, actionPath?: string)
       return:
         type:
           - >-
@@ -165,6 +165,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTestCaseResultById(project: string, runId: number,
+        testCaseResultId: number, includeIterationDetails: boolean,
+        includeAssociatedBugs?: boolean)
       parameters:
         - id: project
           type:
@@ -187,10 +191,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getTestCaseResultById(project: string, runId: number,
-        testCaseResultId: number, includeIterationDetails: boolean,
-        includeAssociatedBugs?: boolean)
       return:
         type:
           - >-
@@ -206,6 +206,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTestCaseResults(project: string, runId: number,
+        includeIterationDetails: boolean)
       parameters:
         - id: project
           type:
@@ -219,9 +222,6 @@ items:
           type:
             - boolean
           description: ''
-      content: >-
-        function getTestCaseResults(project: string, runId: number,
-        includeIterationDetails: boolean)
       return:
         type:
           - >-
@@ -237,6 +237,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTestResults(project: string, runId: number,
+        detailsToInclude?: ResultDetails, skip?: number, top?: number)
       parameters:
         - id: project
           type:
@@ -261,9 +264,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getTestResults(project: string, runId: number,
-        detailsToInclude?: ResultDetails, skip?: number, top?: number)
       return:
         type:
           - >-
@@ -280,6 +280,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getTestResultsByQuery(query: QueryModel, project: string,
+        includeResultDetails?: boolean, includeIterationDetails?: boolean,
+        skip?: number, top?: number)
       parameters:
         - id: query
           type:
@@ -309,10 +313,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getTestResultsByQuery(query: QueryModel, project: string,
-        includeResultDetails?: boolean, includeIterationDetails?: boolean,
-        skip?: number, top?: number)
       return:
         type:
           - >-
@@ -328,6 +328,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getTestRunsByQuery(query: QueryModel, project: string,
+        includeRunDetails?: boolean, skip?: number, top?: number)
       parameters:
         - id: query
           type:
@@ -352,9 +355,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getTestRunsByQuery(query: QueryModel, project: string,
-        includeRunDetails?: boolean, skip?: number, top?: number)
       return:
         type:
           - >-
@@ -370,6 +370,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new TestHttpClient2_3(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -380,9 +383,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new TestHttpClient2_3(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.TestHttpClient2_3.updateTestResults
@@ -394,6 +394,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateTestResults(resultUpdateModels:
+        TestCaseResultUpdateModel[], project: string, runId: number)
       parameters:
         - id: resultUpdateModels
           type:
@@ -408,9 +411,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function updateTestResults(resultUpdateModels:
-        TestCaseResultUpdateModel[], project: string, runId: number)
       return:
         type:
           - >-

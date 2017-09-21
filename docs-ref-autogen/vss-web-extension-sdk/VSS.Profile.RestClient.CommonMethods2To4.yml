@@ -23,7 +23,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 30070
@@ -42,6 +42,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -52,9 +55,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Profile.RestClient.CommonMethods2To4.createProfile
@@ -66,6 +66,9 @@ items:
       - typeScript
     summary: Create profile
     syntax:
+      content: >-
+        function createProfile(createProfileContext: CreateProfileContext,
+        autoCreate?: boolean)
       parameters:
         - id: createProfileContext
           type:
@@ -76,9 +79,6 @@ items:
             - boolean
           description: Create profile automatically
           optional: true
-      content: >-
-        function createProfile(createProfileContext: CreateProfileContext,
-        autoCreate?: boolean)
       return:
         type:
           - >-
@@ -94,6 +94,7 @@ items:
       Lookup up country/region based on provided IPv4, null if using the remote
       IPv4 address.
     syntax:
+      content: 'function getGeoRegion(ipaddress: string)'
       parameters:
         - id: ipaddress
           type:
@@ -101,7 +102,6 @@ items:
           description: >-
             IPv4 address to be used for reverse lookup, null if using
             RemoteIPAddress in request context
-      content: 'function getGeoRegion(ipaddress: string)'
       return:
         type:
           - >-
@@ -116,6 +116,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getProfile(id: string, details?: boolean, withAttributes?:
+        boolean, partition?: string, coreAttributes?: string, forceRefresh?:
+        boolean)
       parameters:
         - id: id
           type:
@@ -146,10 +150,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getProfile(id: string, details?: boolean, withAttributes?:
-        boolean, partition?: string, coreAttributes?: string, forceRefresh?:
-        boolean)
       return:
         type:
           - >-
@@ -164,8 +164,8 @@ items:
       [Preview API] Get available country/regions for profile with contact
       consent requirements
     syntax:
-      parameters: []
       content: function getRegions()
+      parameters: []
       return:
         type:
           - >-
@@ -193,6 +193,7 @@ items:
       - typeScript
     summary: Update profile
     syntax:
+      content: 'function updateProfile(profile: Profile, id: string)'
       parameters:
         - id: profile
           type:
@@ -202,7 +203,6 @@ items:
           type:
             - string
           description: Profile ID
-      content: 'function updateProfile(profile: Profile, id: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'

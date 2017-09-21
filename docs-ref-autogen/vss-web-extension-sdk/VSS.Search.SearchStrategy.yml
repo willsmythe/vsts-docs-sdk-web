@@ -32,8 +32,8 @@ items:
       - typeScript
     summary: Clears the items stored in the strategy.
     syntax:
-      parameters: []
       content: function clearStrategyStore()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.dataExists
     name: dataExists()
@@ -42,8 +42,8 @@ items:
       - typeScript
     summary: Checks whether data exists in the search strategy
     syntax:
-      parameters: []
       content: function dataExists()
+      parameters: []
       return:
         type:
           - boolean
@@ -55,8 +55,8 @@ items:
       - typeScript
     summary: Return the total count of item indexed.
     syntax:
-      parameters: []
       content: function getIndexedItemsCount()
+      parameters: []
       return:
         type:
           - number
@@ -68,8 +68,8 @@ items:
       - typeScript
     summary: Return the total size of the indexed store.
     syntax:
-      parameters: []
       content: function getIndexTotalSize()
+      parameters: []
       return:
         type:
           - number
@@ -83,6 +83,7 @@ items:
       Tokenizes the searchText into separate words using a regex. Empty terms
       ("") will not be returned.
     syntax:
+      content: 'static function getTerms(searchText: string[], delimiter?: string)'
       parameters:
         - id: searchText
           type:
@@ -93,7 +94,6 @@ items:
             - string
           description: The string or regex delimiter to use to split up the search terms
           optional: true
-      content: 'static function getTerms(searchText: string[], delimiter?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.processItems
     name: 'processItems(searchableObjects: SearchableObject<T>[])'
@@ -104,13 +104,13 @@ items:
       Stores items and terms for each item in order to later retrieve
           and search upon.
     syntax:
+      content: 'function processItems(searchableObjects: SearchableObject<T>[])'
       parameters:
         - id: searchableObjects
           type:
             - '@vss-web-extension-sdk.VSS.Search.SearchableObject<T>[]'
           description: |
             SearchableObjects to add
-      content: 'function processItems(searchableObjects: SearchableObject<T>[])'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.search
     name: 'search(query: string)'
@@ -121,12 +121,12 @@ items:
       Searches the item store for the query given to it. Returns an
           array of documents representing the documents which match the query.
     syntax:
+      content: 'function search(query: string)'
       parameters:
         - id: query
           type:
             - string
           description: The query to search for
-      content: 'function search(query: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.constructor
     name: 'SearchStrategy(options?: ISearchStrategyOptions<T>)'
@@ -137,11 +137,11 @@ items:
       Abstract Class to inherit from in order to implement the methods needed to
       store items and search on them.
     syntax:
+      content: 'new SearchStrategy(options?: ISearchStrategyOptions<T>)'
       parameters:
         - id: options
           type:
             - '@vss-web-extension-sdk.VSS.Search.ISearchStrategyOptions<T>'
           description: ''
           optional: true
-      content: 'new SearchStrategy(options?: ISearchStrategyOptions<T>)'
     type: constructor

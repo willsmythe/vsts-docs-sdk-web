@@ -27,6 +27,7 @@ items:
       - typeScript
     summary: Add listener to the action
     syntax:
+      content: 'function addListener(listener: function, context?: any)'
       parameters:
         - id: listener
           type:
@@ -37,7 +38,6 @@ items:
             - any
           description: Optional context to bind to listener
           optional: true
-      content: 'function addListener(listener: function, context?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Flux.Action.Action.invoke
     name: 'invoke(payload: T)'
@@ -46,12 +46,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function invoke(payload: T)'
       parameters:
         - id: payload
           type:
             - T
           description: ''
-      content: 'function invoke(payload: T)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Flux.Action.Action.removeListener
     name: 'removeListener(listener: function)'
@@ -60,11 +60,11 @@ items:
       - typeScript
     summary: Remove listener from the action
     syntax:
+      content: 'function removeListener(listener: function)'
       parameters:
         - id: listener
           type:
             - function
           description: |
             Listener to remove
-      content: 'function removeListener(listener: function)'
     type: method

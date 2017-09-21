@@ -67,12 +67,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function add(node: TreeNode)'
       parameters:
         - id: node
           type:
             - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode'
           description: ''
-      content: 'function add(node: TreeNode)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.addRange
     name: 'addRange(nodes: any)'
@@ -81,12 +81,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function addRange(nodes: any)'
       parameters:
         - id: nodes
           type:
             - any
           description: ''
-      content: 'function addRange(nodes: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.application
     name: application
@@ -121,8 +121,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function clear()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.config
     name: config
@@ -144,6 +144,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        static function create(text: string, config?: any, children?:
+        TreeNode[])
       parameters:
         - id: text
           type:
@@ -159,9 +162,6 @@ items:
             - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode[]'
           description: ''
           optional: true
-      content: >-
-        static function create(text: string, config?: any, children?:
-        TreeNode[])
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode'
@@ -225,6 +225,7 @@ items:
       - typeScript
     summary: Finds a node using the given path
     syntax:
+      content: 'function findNode(path: string, sepChar?: string, comparer?: function)'
       parameters:
         - id: path
           type:
@@ -242,7 +243,6 @@ items:
             Comparer used to compare nodes in the path, if not given default
             will be used
           optional: true
-      content: 'function findNode(path: string, sepChar?: string, comparer?: function)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode'
@@ -268,8 +268,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getContributionContext()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode'
@@ -281,8 +281,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getHtmlId()
+      parameters: []
       return:
         type:
           - string
@@ -294,8 +294,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function hasChildren()
+      parameters: []
       return:
         type:
           - boolean
@@ -386,12 +386,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function level(noRoot: any)'
       parameters:
         - id: noRoot
           type:
             - any
           description: ''
-      content: 'function level(noRoot: any)'
       return:
         type:
           - number
@@ -429,13 +429,13 @@ items:
       - typeScript
     summary: Move this node to reside under the specified new parent.
     syntax:
+      content: 'function moveTo(newParent: any)'
       parameters:
         - id: newParent
           type:
             - any
           description: |
             The destination to reparent the source under.
-      content: 'function moveTo(newParent: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.noContextMenu
     name: noContextMenu
@@ -509,6 +509,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function path(includeRoot: any, sepChar: any)'
       parameters:
         - id: includeRoot
           type:
@@ -518,7 +519,6 @@ items:
           type:
             - any
           description: ''
-      content: 'function path(includeRoot: any, sepChar: any)'
       return:
         type:
           - any
@@ -530,8 +530,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function remove()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.root
     name: root
@@ -566,6 +566,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function sort(recursive: any, treeNodeComparer: any)'
       parameters:
         - id: recursive
           type:
@@ -575,7 +576,6 @@ items:
           type:
             - any
           description: ''
-      content: 'function sort(recursive: any, treeNodeComparer: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.tag
     name: tag
@@ -623,6 +623,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new TreeNode(text: string, config?: any, children?: TreeNode[], id?:
+        string)
       parameters:
         - id: text
           type:
@@ -644,9 +647,6 @@ items:
           description: |+
 
           optional: true
-      content: >-
-        new TreeNode(text: string, config?: any, children?: TreeNode[], id?:
-        string)
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.type
     name: type

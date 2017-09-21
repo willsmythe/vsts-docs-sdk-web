@@ -27,8 +27,8 @@ items:
       - typeScript
     summary: Ends this measurement
     syntax:
-      parameters: []
       content: function finish()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Measurement.constructor
     name: 'Measurement(label: string)'
@@ -37,12 +37,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new Measurement(label: string)'
       parameters:
         - id: label
           type:
             - string
           description: ''
-      content: 'new Measurement(label: string)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Diag.Measurement.start
     name: 'start(label: string, callback: function)'
@@ -51,6 +51,7 @@ items:
       - typeScript
     summary: Begin new measurement
     syntax:
+      content: 'static function start(label: string, callback: function)'
       parameters:
         - id: label
           type:
@@ -61,5 +62,4 @@ items:
             - function
           description: |
             Callback to end measurement
-      content: 'static function start(label: string, callback: function)'
     type: method

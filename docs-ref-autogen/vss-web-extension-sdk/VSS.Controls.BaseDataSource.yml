@@ -38,13 +38,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new BaseDataSource(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'new BaseDataSource(options?: any)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.BaseDataSource.ensureItems
     name: ensureItems()
@@ -53,8 +53,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function ensureItems()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.BaseDataSource.getComparer
     name: getComparer()
@@ -63,8 +63,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getComparer()
+      parameters: []
       return:
         type:
           - any
@@ -76,6 +76,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getCount(all?: any)'
       parameters:
         - id: all
           type:
@@ -83,7 +84,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function getCount(all?: any)'
       return:
         type:
           - any
@@ -95,6 +95,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getItem(index: any, all?: any)'
       parameters:
         - id: index
           type:
@@ -106,7 +107,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function getItem(index: any, all?: any)'
       return:
         type:
           - any
@@ -118,6 +118,7 @@ items:
       - typeScript
     summary: Gets first matching index to text input
     syntax:
+      content: 'function getItemIndex(itemText: any, startsWith?: any, all?: any)'
       parameters:
         - id: itemText
           type:
@@ -134,7 +135,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function getItemIndex(itemText: any, startsWith?: any, all?: any)'
       return:
         type:
           - any
@@ -146,6 +146,9 @@ items:
       - typeScript
     summary: Returns an array of all indexes that match the search criteria
     syntax:
+      content: >-
+        function getItemIndexes(itemText: string, startsWith?: boolean, all?:
+        boolean)
       parameters:
         - id: itemText
           type:
@@ -162,9 +165,6 @@ items:
           description: |+
 
           optional: true
-      content: >-
-        function getItemIndexes(itemText: string, startsWith?: boolean, all?:
-        boolean)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.BaseDataSource.getItems
     name: 'getItems(all?: any)'
@@ -173,6 +173,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getItems(all?: any)'
       parameters:
         - id: all
           type:
@@ -180,7 +181,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function getItems(all?: any)'
       return:
         type:
           - any
@@ -192,6 +192,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getItemText(index: any, all?: any, textOnly?: any)'
       parameters:
         - id: index
           type:
@@ -207,7 +208,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function getItemText(index: any, all?: any, textOnly?: any)'
       return:
         type:
           - string
@@ -219,8 +219,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getSource()
+      parameters: []
       return:
         type:
           - any
@@ -232,6 +232,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function nextIndex(selectedIndex: any, delta: any, all: any)'
       parameters:
         - id: selectedIndex
           type:
@@ -245,7 +246,6 @@ items:
           type:
             - any
           description: ''
-      content: 'function nextIndex(selectedIndex: any, delta: any, all: any)'
       return:
         type:
           - number
@@ -257,6 +257,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function prepareSource(source?: any)'
       parameters:
         - id: source
           type:
@@ -264,7 +265,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function prepareSource(source?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.BaseDataSource.setItems
     name: 'setItems(items: any, allItems?: any)'
@@ -273,6 +273,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setItems(items: any, allItems?: any)'
       parameters:
         - id: items
           type:
@@ -284,7 +285,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function setItems(items: any, allItems?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.BaseDataSource.setSource
     name: 'setSource(source: any)'
@@ -293,10 +293,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setSource(source: any)'
       parameters:
         - id: source
           type:
             - any
           description: ''
-      content: 'function setSource(source: any)'
     type: method

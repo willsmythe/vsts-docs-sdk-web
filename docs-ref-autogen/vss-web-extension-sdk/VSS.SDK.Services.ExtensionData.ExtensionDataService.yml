@@ -57,6 +57,9 @@ items:
       - typeScript
     summary: Returns a promise for creating a document in the provided collection
     syntax:
+      content: >-
+        function createDocument(collectionName: string, doc: any,
+        documentOptions?: IDocumentOptions)
       parameters:
         - id: collectionName
           type:
@@ -73,9 +76,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: >-
-        function createDocument(collectionName: string, doc: any,
-        documentOptions?: IDocumentOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -92,6 +92,9 @@ items:
       Returns a promise for deleting the document at the provided scope,
       collection and id
     syntax:
+      content: >-
+        function deleteDocument(collectionName: string, id: string,
+        documentOptions?: IDocumentOptions)
       parameters:
         - id: collectionName
           type:
@@ -108,9 +111,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: >-
-        function deleteDocument(collectionName: string, id: string,
-        documentOptions?: IDocumentOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -125,6 +125,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new ExtensionDataService(publisherName: string, extensionName: string,
+        registrationId: string, webContext: WebContext)
       parameters:
         - id: publisherName
           type:
@@ -142,9 +145,6 @@ items:
           type:
             - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
           description: ''
-      content: >-
-        new ExtensionDataService(publisherName: string, extensionName: string,
-        registrationId: string, webContext: WebContext)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.getDocument
@@ -158,6 +158,9 @@ items:
       Returns a promise for getting a document with the provided id in the
       provided collection
     syntax:
+      content: >-
+        function getDocument(collectionName: string, id: string,
+        documentOptions?: IDocumentOptions)
       parameters:
         - id: collectionName
           type:
@@ -174,9 +177,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: >-
-        function getDocument(collectionName: string, id: string,
-        documentOptions?: IDocumentOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -191,6 +191,9 @@ items:
       Returns a promise for getting all of the documents in the provided
       collection
     syntax:
+      content: >-
+        function getDocuments(collectionName: string, documentOptions?:
+        IDocumentOptions)
       parameters:
         - id: collectionName
           type:
@@ -203,9 +206,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: >-
-        function getDocuments(collectionName: string, documentOptions?:
-        IDocumentOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any[]>'
@@ -222,6 +222,9 @@ items:
       Factory method for creating/getting an instance of the extension settings
       service.
     syntax:
+      content: >-
+        static function getServiceInstance(publisherName: string, extensionName:
+        string, registrationId: string, webContext?: WebContext)
       parameters:
         - id: publisherName
           type:
@@ -240,9 +243,6 @@ items:
             - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
           description: ''
           optional: true
-      content: >-
-        static function getServiceInstance(publisherName: string, extensionName:
-        string, registrationId: string, webContext?: WebContext)
       return:
         type:
           - >-
@@ -256,6 +256,7 @@ items:
       - typeScript
     summary: Returns a promise for retrieving a setting at the provided key and scope
     syntax:
+      content: 'function getValue<T>(key: string, documentOptions?: IDocumentOptions)'
       parameters:
         - id: key
           type:
@@ -268,7 +269,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: 'function getValue<T>(key: string, documentOptions?: IDocumentOptions)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<T>'
@@ -283,6 +283,7 @@ items:
       Returns a promise for retrieving a list of settings at the provided keys
       and scope
     syntax:
+      content: 'function getValues(keys: string[], documentOptions?: IDocumentOptions)'
       parameters:
         - id: keys
           type:
@@ -295,7 +296,6 @@ items:
             The scope in which the values are stored - default value is
             collection-wide
           optional: true
-      content: 'function getValues(keys: string[], documentOptions?: IDocumentOptions)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<[key: string]: any>'
@@ -308,12 +308,12 @@ items:
       - typeScript
     summary: Returns a promise for querying a set of collections
     syntax:
+      content: 'function queryCollectionNames(collectionNames: string[])'
       parameters:
         - id: collectionNames
           type:
             - 'string[]'
           description: ''
-      content: 'function queryCollectionNames(collectionNames: string[])'
       return:
         type:
           - >-
@@ -327,6 +327,7 @@ items:
       - typeScript
     summary: Returns a promise for querying a set of collections
     syntax:
+      content: 'function queryCollections(collections: ExtensionDataCollection[])'
       parameters:
         - id: collections
           type:
@@ -335,7 +336,6 @@ items:
           description: >
             The list of collections to query. Each collection will contain its
             collectionName, scopeType, and scopeValue
-      content: 'function queryCollections(collections: ExtensionDataCollection[])'
       return:
         type:
           - >-
@@ -355,6 +355,9 @@ items:
       Creates the document if it does not exist, otherwise updates the existing
       document with the id provided
     syntax:
+      content: >-
+        function setDocument(collectionName: string, doc: any, documentOptions?:
+        IDocumentOptions)
       parameters:
         - id: collectionName
           type:
@@ -371,9 +374,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: >-
-        function setDocument(collectionName: string, doc: any, documentOptions?:
-        IDocumentOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
@@ -386,6 +386,9 @@ items:
       - typeScript
     summary: Returns a promise for saving a setting at the provided key and scope
     syntax:
+      content: >-
+        function setValue<T>(key: string, value: T, documentOptions?:
+        IDocumentOptions)
       parameters:
         - id: key
           type:
@@ -402,9 +405,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: >-
-        function setValue<T>(key: string, value: T, documentOptions?:
-        IDocumentOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<T>'
@@ -421,6 +421,9 @@ items:
       Returns a promise for saving a collection of settings at the provided keys
       and scope
     syntax:
+      content: >-
+        function setValues(keyValuePairs: [key: string]: any, documentOptions?:
+        IDocumentOptions)
       parameters:
         - id: keyValuePairs
           type:
@@ -433,9 +436,6 @@ items:
             The scope in which the values are stored - default value is
             collection-wide
           optional: true
-      content: >-
-        function setValues(keyValuePairs: [key: string]: any, documentOptions?:
-        IDocumentOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any[]>'
@@ -452,6 +452,9 @@ items:
       Returns a promise for updating a document in the provided collection
       A document with the id provided must exist
     syntax:
+      content: >-
+        function updateDocument(collectionName: string, doc: any,
+        documentOptions?: IDocumentOptions)
       parameters:
         - id: collectionName
           type:
@@ -468,9 +471,6 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: >-
-        function updateDocument(collectionName: string, doc: any,
-        documentOptions?: IDocumentOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'

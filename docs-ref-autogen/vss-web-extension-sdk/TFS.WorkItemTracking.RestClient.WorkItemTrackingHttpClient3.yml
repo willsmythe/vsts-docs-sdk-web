@@ -16,7 +16,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.CommonMethods3To4'
+      name: '@vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.CommonMethods3To4'
     source:
       path: tfs.d.ts
       startLine: 21157
@@ -34,6 +34,7 @@ items:
       - typeScript
     summary: Returns history of all revision for a given work item ID
     syntax:
+      content: 'function getHistory(id: number, top?: number, skip?: number)'
       parameters:
         - id: id
           type:
@@ -49,7 +50,6 @@ items:
             - number
           description: ''
           optional: true
-      content: 'function getHistory(id: number, top?: number, skip?: number)'
       return:
         type:
           - >-
@@ -63,6 +63,7 @@ items:
       - typeScript
     summary: Returns the history value of particular revision
     syntax:
+      content: 'function getHistoryById(id: number, revisionNumber: number)'
       parameters:
         - id: id
           type:
@@ -72,7 +73,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getHistoryById(id: number, revisionNumber: number)'
       return:
         type:
           - >-
@@ -88,6 +88,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new WorkItemTrackingHttpClient3(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -98,7 +101,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new WorkItemTrackingHttpClient3(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

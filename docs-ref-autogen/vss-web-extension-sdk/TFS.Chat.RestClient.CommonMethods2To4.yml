@@ -37,7 +37,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: tfs.d.ts
       startLine: 4222
@@ -56,6 +56,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -66,9 +69,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.createChatRoom
     name: 'createChatRoom(roomUpdate: RoomData)'
@@ -77,12 +77,12 @@ items:
       - typeScript
     summary: Create a single chat room
     syntax:
+      content: 'function createChatRoom(roomUpdate: RoomData)'
       parameters:
         - id: roomUpdate
           type:
             - '@vss-web-extension-sdk.TFS.Chat.Contracts.RoomData'
           description: Information to create the room
-      content: 'function createChatRoom(roomUpdate: RoomData)'
       return:
         type:
           - >-
@@ -95,12 +95,12 @@ items:
       - typeScript
     summary: Delete a given chat room
     syntax:
+      content: 'function deleteChatRoom(roomId: number)'
       parameters:
         - id: roomId
           type:
             - number
           description: Id of the room
-      content: 'function deleteChatRoom(roomId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -112,6 +112,7 @@ items:
       - typeScript
     summary: Delete a given chat message
     syntax:
+      content: 'function deleteMessage(roomId: number, messageId: number)'
       parameters:
         - id: roomId
           type:
@@ -121,7 +122,6 @@ items:
           type:
             - number
           description: Id of the message to delete
-      content: 'function deleteMessage(roomId: number, messageId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -134,12 +134,12 @@ items:
       - typeScript
     summary: Retrieve a listing of all chat messages in a given room
     syntax:
+      content: 'function getAllChatRoomMessages(roomId: number)'
       parameters:
         - id: roomId
           type:
             - number
           description: Id of the room
-      content: 'function getAllChatRoomMessages(roomId: number)'
       return:
         type:
           - >-
@@ -153,12 +153,12 @@ items:
       - typeScript
     summary: Retrieve a listing of all chat users
     syntax:
+      content: 'function getAllChatRoomUsers(roomId: number)'
       parameters:
         - id: roomId
           type:
             - number
           description: Id of the room
-      content: 'function getAllChatRoomUsers(roomId: number)'
       return:
         type:
           - >-
@@ -171,8 +171,8 @@ items:
       - typeScript
     summary: Retrieve a listing of all chat rooms and the room information
     syntax:
-      parameters: []
       content: function getAllRooms()
+      parameters: []
       return:
         type:
           - >-
@@ -186,12 +186,12 @@ items:
       - typeScript
     summary: Retrieve information on a single chat room
     syntax:
+      content: 'function getChatRoomById(roomId: number)'
       parameters:
         - id: roomId
           type:
             - number
           description: Id of the room to retrieve
-      content: 'function getChatRoomById(roomId: number)'
       return:
         type:
           - >-
@@ -205,6 +205,7 @@ items:
       - typeScript
     summary: Retrieve information on a single chat message
     syntax:
+      content: 'function getChatRoomMessageById(roomId: number, messageId: number)'
       parameters:
         - id: roomId
           type:
@@ -214,7 +215,6 @@ items:
           type:
             - number
           description: Id of the message to retrieve
-      content: 'function getChatRoomMessageById(roomId: number, messageId: number)'
       return:
         type:
           - >-
@@ -228,6 +228,7 @@ items:
       - typeScript
     summary: Retrieve information on a single chat user
     syntax:
+      content: 'function getChatRoomUserById(roomId: number, userId: string)'
       parameters:
         - id: roomId
           type:
@@ -237,7 +238,6 @@ items:
           type:
             - string
           description: TfId of the user
-      content: 'function getChatRoomUserById(roomId: number, userId: string)'
       return:
         type:
           - >-
@@ -250,6 +250,7 @@ items:
       - typeScript
     summary: Joins a user to a given room
     syntax:
+      content: 'function joinRoom(userUpdate: UserData, roomId: number, userId: string)'
       parameters:
         - id: userUpdate
           type:
@@ -263,7 +264,6 @@ items:
           type:
             - string
           description: TfId of the user
-      content: 'function joinRoom(userUpdate: UserData, roomId: number, userId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -275,6 +275,7 @@ items:
       - typeScript
     summary: Leaves a user from a given room
     syntax:
+      content: 'function leaveRoom(roomId: number, userId: string)'
       parameters:
         - id: roomId
           type:
@@ -284,7 +285,6 @@ items:
           type:
             - string
           description: TfId of the user
-      content: 'function leaveRoom(roomId: number, userId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -297,6 +297,7 @@ items:
       - typeScript
     summary: Post message to a room
     syntax:
+      content: 'function sendMessageToRoom(messageUpdate: MessageData, roomId: number)'
       parameters:
         - id: messageUpdate
           type:
@@ -306,7 +307,6 @@ items:
           type:
             - number
           description: Id of the room
-      content: 'function sendMessageToRoom(messageUpdate: MessageData, roomId: number)'
       return:
         type:
           - >-
@@ -336,6 +336,9 @@ items:
       - typeScript
     summary: Update a given chat message
     syntax:
+      content: >-
+        function updateChatMessage(messageUpdate: MessageData, roomId: number,
+        messageId: number)
       parameters:
         - id: messageUpdate
           type:
@@ -349,9 +352,6 @@ items:
           type:
             - number
           description: Id of the message
-      content: >-
-        function updateChatMessage(messageUpdate: MessageData, roomId: number,
-        messageId: number)
       return:
         type:
           - >-
@@ -364,6 +364,7 @@ items:
       - typeScript
     summary: Update information on a single chat room
     syntax:
+      content: 'function updateChatRoom(roomUpdate: RoomData, roomId: number)'
       parameters:
         - id: roomUpdate
           type:
@@ -373,7 +374,6 @@ items:
           type:
             - number
           description: Id of the room to update
-      content: 'function updateChatRoom(roomUpdate: RoomData, roomId: number)'
       return:
         type:
           - >-

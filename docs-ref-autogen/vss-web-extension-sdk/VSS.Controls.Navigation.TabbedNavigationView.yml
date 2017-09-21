@@ -53,7 +53,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Navigation.NavigationView'
+      name: '@vss-web-extension-sdk.VSS.Controls.Navigation.NavigationView'
     source:
       path: vss.d.ts
       startLine: 14913
@@ -71,12 +71,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function appendElement(element: JQuery)'
       parameters:
         - id: element
           type:
             - JQuery
           description: ''
-      content: 'function appendElement(element: JQuery)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.TabbedNavigationView.appendInformationContent
@@ -86,6 +86,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function appendInformationContent(caption: string, collapsed: boolean)'
       parameters:
         - id: caption
           type:
@@ -95,7 +96,6 @@ items:
           type:
             - boolean
           description: ''
-      content: 'function appendInformationContent(caption: string, collapsed: boolean)'
       return:
         type:
           - >-
@@ -109,12 +109,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function appendSectionSummary(content: string)'
       parameters:
         - id: content
           type:
             - string
           description: ''
-      content: 'function appendSectionSummary(content: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.TabbedNavigationView.appendSectionTitle
@@ -124,12 +124,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function appendSectionTitle(content: string)'
       parameters:
         - id: content
           type:
             - string
           description: ''
-      content: 'function appendSectionTitle(content: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.TabbedNavigationView.getCurrentAction
@@ -139,8 +139,8 @@ items:
       - typeScript
     summary: Get the action/tab id for the current state
     syntax:
-      parameters: []
       content: function getCurrentAction()
+      parameters: []
       return:
         type:
           - string
@@ -160,8 +160,8 @@ items:
 
       so that existing hash parameters are NOT included in the new url.
     syntax:
-      parameters: []
       content: function getEmptyState()
+      parameters: []
       return:
         type:
           - any
@@ -176,8 +176,8 @@ items:
       Get the raw (unparsed) state objects for the current navigation state
       (key/value pairs from the hash/url)
     syntax:
-      parameters: []
       content: function getRawState()
+      parameters: []
       return:
         type:
           - any
@@ -190,8 +190,8 @@ items:
       - typeScript
     summary: Get the current (parsed) state objects for the current navigation state
     syntax:
-      parameters: []
       content: function getState()
+      parameters: []
       return:
         type:
           - any
@@ -203,12 +203,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getTab(tabId: string)'
       parameters:
         - id: tabId
           type:
             - string
           description: ''
-      content: 'function getTab(tabId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Navigation.NavigationViewTab'
@@ -225,6 +225,9 @@ items:
       Get the updated tab label for the specified tab based on the current
       tab/navigation state. null/undefined to keep the existing label.
     syntax:
+      content: >-
+        function getTabLabel(tabId: any, currentTabId: string, rawState: any,
+        parsedState: any)
       parameters:
         - id: tabId
           type:
@@ -245,9 +248,6 @@ items:
             - any
           description: |
             Resolved state objects parsed by the view
-      content: >-
-        function getTabLabel(tabId: any, currentTabId: string, rawState: any,
-        parsedState: any)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.TabbedNavigationView.getTabVisibility
@@ -261,6 +261,9 @@ items:
       Get the visibility state of the specified tab based on the current
       tab/navigation state. True to show this tab. False to hide it.
     syntax:
+      content: >-
+        function getTabVisibility(tabId: any, currentTabId: string, rawState:
+        any, parsedState: any)
       parameters:
         - id: tabId
           type:
@@ -280,9 +283,6 @@ items:
           type:
             - any
           description: Resolved state objects parsed by the view
-      content: >-
-        function getTabVisibility(tabId: any, currentTabId: string, rawState:
-        any, parsedState: any)
       return:
         type:
           - boolean
@@ -295,8 +295,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.TabbedNavigationView.initializeOptions
@@ -306,6 +306,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -313,7 +314,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.TabbedNavigationView.parseStateInfo
@@ -328,6 +328,9 @@ items:
       method with the new state info object when the state information has been
       successfully parsed.
     syntax:
+      content: >-
+        function parseStateInfo(action: string, rawState: any, callback:
+        IResultCallback)
       parameters:
         - id: action
           type:
@@ -348,9 +351,6 @@ items:
                callback(tabId, parsedStateInfo);
 
 
-      content: >-
-        function parseStateInfo(action: string, rawState: any, callback:
-        IResultCallback)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.TabbedNavigationView.refreshCurrentTab
@@ -362,8 +362,8 @@ items:
       Refresh the current tab (causes setState to be called on the currently
       visible tab)
     syntax:
-      parameters: []
       content: function refreshCurrentTab()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.TabbedNavigationView.setHubPivotVisibility
@@ -373,13 +373,13 @@ items:
       - typeScript
     summary: Shows or hides the Hub pivot section (navigation tab strip + filters)
     syntax:
+      content: 'function setHubPivotVisibility(visible: boolean)'
       parameters:
         - id: visible
           type:
             - boolean
           description: |
             If true, show the hub pivot (tabs/filters). If false, hide them
-      content: 'function setHubPivotVisibility(visible: boolean)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.TabbedNavigationView.setState
@@ -389,12 +389,12 @@ items:
       - typeScript
     summary: Set the current (parsed) state objects for the current navigation state
     syntax:
+      content: 'function setState(parsedState: any)'
       parameters:
         - id: parsedState
           type:
             - any
           description: ''
-      content: 'function setState(parsedState: any)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.TabbedNavigationView.showError
@@ -404,12 +404,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function showError(error: any)'
       parameters:
         - id: error
           type:
             - any
           description: ''
-      content: 'function showError(error: any)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.TabbedNavigationView.showErrorContent
@@ -421,6 +421,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function showErrorContent(title: any, $contentHtml: any, messageType:
+        any, expand: any)
       parameters:
         - id: title
           type:
@@ -438,9 +441,6 @@ items:
           type:
             - any
           description: ''
-      content: >-
-        function showErrorContent(title: any, $contentHtml: any, messageType:
-        any, expand: any)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.TabbedNavigationView.showInformationTab
@@ -450,6 +450,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function showInformationTab(title: string, description: string)'
       parameters:
         - id: title
           type:
@@ -459,7 +460,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function showInformationTab(title: string, description: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.TabbedNavigationView.constructor
@@ -473,6 +473,7 @@ items:
 
       displayed based on the current hash/navigation.
     syntax:
+      content: 'new TabbedNavigationView(options?: any)'
       parameters:
         - id: options
           type:
@@ -485,7 +486,6 @@ items:
                 hubSplitterSelector: (String) jQuery selector for the hub splitter control
 
           optional: true
-      content: 'new TabbedNavigationView(options?: any)'
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.TabbedNavigationView.updateTabs
@@ -495,6 +495,7 @@ items:
       - typeScript
     summary: Update the given tabs in the tabbed navigation view.
     syntax:
+      content: 'function updateTabs(tabs: [key: string]: NavigationViewTab)'
       parameters:
         - id: tabs
           type:
@@ -503,5 +504,4 @@ items:
               @vss-web-extension-sdk.VSS.Controls.Navigation.NavigationViewTab
           description: |
             Mapping of tabIds to tabControls
-      content: 'function updateTabs(tabs: [key: string]: NavigationViewTab)'
     type: method

@@ -33,12 +33,12 @@ items:
       Decodes the specified artifact URI and creates artifact object which has
       tool, type and id properties.
     syntax:
+      content: 'static function decodeUri(artifactUri: string)'
       parameters:
         - id: artifactUri
           type:
             - string
           description: URI to decode
-      content: 'static function decodeUri(artifactUri: string)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Artifacts.Services.IArtifactData'
@@ -50,6 +50,7 @@ items:
       - typeScript
     summary: Creates an artifact URI using specified artifact.
     syntax:
+      content: 'static function encodeUri(artifact: any)'
       parameters:
         - id: artifact
           type:
@@ -59,7 +60,6 @@ items:
                 - tool: Artifact tool name
                 - type: Artifact type
                 - id: Artifact tool specific id
-      content: 'static function encodeUri(artifact: any)'
       return:
         type:
           - string
@@ -76,12 +76,12 @@ items:
 
       from the rich client and in VS2010 and earlier versions.
     syntax:
+      content: 'static function legacyDecodeURIComponent(encodedURIComponent: string)'
       parameters:
         - id: encodedURIComponent
           type:
             - string
           description: URI component to decode
-      content: 'static function legacyDecodeURIComponent(encodedURIComponent: string)'
       return:
         type:
           - string

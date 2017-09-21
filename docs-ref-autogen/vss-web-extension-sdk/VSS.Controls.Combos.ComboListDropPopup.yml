@@ -27,7 +27,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Combos.BaseComboDropPopup'
+      name: '@vss-web-extension-sdk.VSS.Controls.Combos.BaseComboDropPopup'
     source:
       path: vss.d.ts
       startLine: 10147
@@ -44,8 +44,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getDataSource<TDataSource>()
+      parameters: []
       return:
         type:
           - TDataSource
@@ -58,8 +58,8 @@ items:
       - typeScript
     summary: Returns selected index of internal list view
     syntax:
-      parameters: []
       content: function getSelectedIndex()
+      parameters: []
       return:
         type:
           - number
@@ -72,8 +72,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getSelectedItem()
+      parameters: []
       return:
         type:
           - JQuery
@@ -86,8 +86,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getSelectedValue()
+      parameters: []
       return:
         type:
           - string
@@ -99,8 +99,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Combos.ComboListDropPopup.initializeOptions
@@ -110,6 +110,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -117,7 +118,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListDropPopup.selectNext
     name: 'selectNext(page?: boolean)'
@@ -126,13 +126,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectNext(page?: boolean)'
       parameters:
         - id: page
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function selectNext(page?: boolean)'
       return:
         type:
           - boolean
@@ -144,13 +144,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectPrev(page?: boolean)'
       parameters:
         - id: page
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function selectPrev(page?: boolean)'
       return:
         type:
           - boolean
@@ -163,12 +163,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setSelectedValue(value: any)'
       parameters:
         - id: value
           type:
             - any
           description: ''
-      content: 'function setSelectedValue(value: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboListDropPopup.update
     name: update()
@@ -177,8 +177,8 @@ items:
       - typeScript
     summary: Update internal list view to display current data
     syntax:
-      parameters: []
       content: function update()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Combos.ComboListDropPopup.virtualizingListView

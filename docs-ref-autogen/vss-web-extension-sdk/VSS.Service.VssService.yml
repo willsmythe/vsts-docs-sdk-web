@@ -27,8 +27,8 @@ items:
       - typeScript
     summary: Gets the relative location for the service's connection
     syntax:
-      parameters: []
       content: function getConnection()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Service.VssConnection'
@@ -40,8 +40,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getWebContext()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
@@ -53,11 +53,11 @@ items:
       - typeScript
     summary: Sets the VssConnection to use for this service
     syntax:
+      content: 'function initializeConnection(connection: VssConnection)'
       parameters:
         - id: connection
           type:
             - '@vss-web-extension-sdk.VSS.Service.VssConnection'
           description: |
             VssConnection used by this service
-      content: 'function initializeConnection(connection: VssConnection)'
     type: method

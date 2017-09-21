@@ -16,7 +16,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessRestClient.CommonMethods2_1To4
     source:
       path: tfs.d.ts
@@ -37,6 +37,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3_2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -47,9 +50,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3_2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessRestClient.CommonMethods3_2To4.getStateDefinition
@@ -59,6 +59,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getStateDefinition(processId: string, witRefName: string,
+        stateId: string)
       parameters:
         - id: processId
           type:
@@ -72,9 +75,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getStateDefinition(processId: string, witRefName: string,
-        stateId: string)
       return:
         type:
           - >-
@@ -88,6 +88,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getStateDefinitions(processId: string, witRefName: string)'
       parameters:
         - id: processId
           type:
@@ -97,7 +98,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getStateDefinitions(processId: string, witRefName: string)'
       return:
         type:
           - >-

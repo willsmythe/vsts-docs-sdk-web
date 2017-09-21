@@ -13,7 +13,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Authentication.Services.BearerAuthTokenManager
     source:
       path: vss.d.ts
@@ -32,13 +32,13 @@ items:
       - typeScript
     summary: Get the auth token to use for this request.
     syntax:
+      content: 'function getAuthToken(refresh?: boolean)'
       parameters:
         - id: refresh
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function getAuthToken(refresh?: boolean)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -51,6 +51,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new WebSessionTokenManager(sessionToken: WebSessionToken, hostUrl?:
+        string)
       parameters:
         - id: sessionToken
           type:
@@ -62,7 +65,4 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        new WebSessionTokenManager(sessionToken: WebSessionToken, hostUrl?:
-        string)
     type: constructor

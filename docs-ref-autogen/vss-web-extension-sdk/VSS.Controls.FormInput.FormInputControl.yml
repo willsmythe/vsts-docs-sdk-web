@@ -36,7 +36,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.Control<@vss-web-extension-sdk.VSS.Controls.FormInput.FormInputControlOptions>
     source:
       path: vss.d.ts
@@ -55,12 +55,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function addInputViewModel(inputViewModel: InputViewModel)'
       parameters:
         - id: inputViewModel
           type:
             - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel'
           description: ''
-      content: 'function addInputViewModel(inputViewModel: InputViewModel)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.FormInputControl.createControl
@@ -70,6 +70,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        static function createControl($container: JQuery, options:
+        FormInputControlOptions)
       parameters:
         - id: $container
           type:
@@ -80,9 +83,6 @@ items:
             - >-
               @vss-web-extension-sdk.VSS.Controls.FormInput.FormInputControlOptions
           description: ''
-      content: >-
-        static function createControl($container: JQuery, options:
-        FormInputControlOptions)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.FormInput.FormInputControl'
@@ -95,12 +95,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function createRowAfterInput(id: string)'
       parameters:
         - id: id
           type:
             - string
           description: ''
-      content: 'function createRowAfterInput(id: string)'
       return:
         type:
           - JQuery
@@ -113,12 +113,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function createRowBeforeInput(id: string)'
       parameters:
         - id: id
           type:
             - string
           description: ''
-      content: 'function createRowBeforeInput(id: string)'
       return:
         type:
           - JQuery
@@ -131,8 +131,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function deleteControl()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.FormInputControl.getGroupHeader
@@ -142,13 +142,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getGroupHeader(groupName?: string)'
       parameters:
         - id: groupName
           type:
             - string
           description: ''
           optional: true
-      content: 'function getGroupHeader(groupName?: string)'
       return:
         type:
           - JQuery
@@ -161,12 +161,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getInputFieldById(id: string)'
       parameters:
         - id: id
           type:
             - string
           description: ''
-      content: 'function getInputFieldById(id: string)'
       return:
         type:
           - JQuery
@@ -179,12 +179,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function getProgressIconForInput(inputId: string)'
       parameters:
         - id: inputId
           type:
             - string
           description: ''
-      content: 'static function getProgressIconForInput(inputId: string)'
       return:
         type:
           - JQuery
@@ -197,12 +197,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function getValidationIconForInput(inputId: string)'
       parameters:
         - id: inputId
           type:
             - string
           description: ''
-      content: 'static function getValidationIconForInput(inputId: string)'
       return:
         type:
           - JQuery
@@ -215,12 +215,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function hideInputViewModel(inputViewModel: InputViewModel)'
       parameters:
         - id: inputViewModel
           type:
             - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel'
           description: ''
-      content: 'function hideInputViewModel(inputViewModel: InputViewModel)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.FormInputControl.initialize
     name: initialize()
@@ -229,8 +229,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.FormInputControl.initializeOptions
@@ -240,13 +240,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.FormInputControl.removeInputViewModel
@@ -258,6 +258,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function removeInputViewModel(inputViewModel: InputViewModel,
+        removeFromInputsViewModel?: boolean)
       parameters:
         - id: inputViewModel
           type:
@@ -268,9 +271,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function removeInputViewModel(inputViewModel: InputViewModel,
-        removeFromInputsViewModel?: boolean)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.FormInputControl.showInputViewModel
@@ -280,10 +280,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function showInputViewModel(inputViewModel: InputViewModel)'
       parameters:
         - id: inputViewModel
           type:
             - '@vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel'
           description: ''
-      content: 'function showInputViewModel(inputViewModel: InputViewModel)'
     type: method

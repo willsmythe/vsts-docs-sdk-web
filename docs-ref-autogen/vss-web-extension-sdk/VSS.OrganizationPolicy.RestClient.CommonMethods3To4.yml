@@ -21,7 +21,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 29127
@@ -41,6 +41,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -51,9 +54,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.OrganizationPolicy.RestClient.CommonMethods3To4.getPolicies
@@ -63,6 +63,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getPolicies(policyNames: string[], defaultValues: string[])'
       parameters:
         - id: policyNames
           type:
@@ -72,7 +73,6 @@ items:
           type:
             - 'string[]'
           description: ''
-      content: 'function getPolicies(policyNames: string[], defaultValues: string[])'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<Policy>'
@@ -85,6 +85,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getPolicy(policyName: string, defaultValue: string)'
       parameters:
         - id: policyName
           type:
@@ -94,7 +95,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getPolicy(policyName: string, defaultValue: string)'
       return:
         type:
           - >-
@@ -108,12 +108,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getPolicyInformation(policyName: string)'
       parameters:
         - id: policyName
           type:
             - string
           description: ''
-      content: 'function getPolicyInformation(policyName: string)'
       return:
         type:
           - >-
@@ -127,13 +127,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getPolicyInformations(policyNames?: string[])'
       parameters:
         - id: policyNames
           type:
             - 'string[]'
           description: ''
           optional: true
-      content: 'function getPolicyInformations(policyNames?: string[])'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<PolicyInfo>'
@@ -146,6 +146,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updatePolicy(patchDocument: JsonPatchDocument, policyName:
+        string)
       parameters:
         - id: patchDocument
           type:
@@ -155,9 +158,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updatePolicy(patchDocument: JsonPatchDocument, policyName:
-        string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'

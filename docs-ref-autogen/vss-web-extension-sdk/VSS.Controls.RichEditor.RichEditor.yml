@@ -61,7 +61,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.Control<@vss-web-extension-sdk.VSS.Controls.RichEditor.IRichEditorOptions>
     source:
       path: vss.d.ts
@@ -79,12 +79,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function bindOnCopy(handler: any)'
       parameters:
         - id: handler
           type:
             - any
           description: ''
-      content: 'function bindOnCopy(handler: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.RichEditor.RichEditor.BOLD_COMMAND
     name: BOLD_COMMAND
@@ -108,8 +108,8 @@ items:
       Checks whether the value of the control is changed or not and fires the
       CHANGE event if it has
     syntax:
-      parameters: []
       content: function checkModified()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.RichEditor.RichEditor.CREATE_LINK_COMMAND
@@ -132,8 +132,8 @@ items:
       - typeScript
     summary: Disables and hides the rich editor toolbar.
     syntax:
-      parameters: []
       content: function disableToolbar()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.RichEditor.RichEditor.enableToolbar
     name: enableToolbar()
@@ -142,8 +142,8 @@ items:
       - typeScript
     summary: Enables and shows the rich editor toolbar
     syntax:
-      parameters: []
       content: function enableToolbar()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.RichEditor.RichEditor.enhancementTypeName
@@ -166,8 +166,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function focus()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.RichEditor.RichEditor.getOffsetForLastElementSelection
@@ -177,12 +177,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function getOffsetForLastElementSelection(lastElement: Element)'
       parameters:
         - id: lastElement
           type:
             - Element
           description: ''
-      content: 'static function getOffsetForLastElementSelection(lastElement: Element)'
       return:
         type:
           - number
@@ -194,8 +194,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getTextAreaId()
+      parameters: []
       return:
         type:
           - any
@@ -207,8 +207,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getValue()
+      parameters: []
       return:
         type:
           - string
@@ -220,8 +220,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getWindow()
+      parameters: []
       return:
         type:
           - Window
@@ -233,8 +233,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function hasFocus()
+      parameters: []
       return:
         type:
           - boolean
@@ -273,6 +273,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: IRichEditorOptions)'
       parameters:
         - id: options
           type:
@@ -280,7 +281,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: IRichEditorOptions)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.RichEditor.RichEditor.insertImage
     name: 'insertImage(url: string)'
@@ -294,13 +294,13 @@ items:
       If the current caret position cannot be determined, the image tag is
       inserted at the editor root node.
     syntax:
+      content: 'function insertImage(url: string)'
       parameters:
         - id: url
           type:
             - string
           description: |
             The url containing an image in which to link to the document.
-      content: 'function insertImage(url: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.RichEditor.RichEditor.INSERT_IMAGE_COMMAND
@@ -364,12 +364,12 @@ items:
       2. If content length is less than the minimal threshold, we remove the
       formatting before checking whether it matches any "empty" case.
     syntax:
+      content: 'function isEmpty(value: string)'
       parameters:
         - id: value
           type:
             - string
           description: ''
-      content: 'function isEmpty(value: string)'
       return:
         type:
           - boolean
@@ -395,8 +395,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isReady()
+      parameters: []
       return:
         type:
           - boolean
@@ -447,12 +447,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function ready(fn: any)'
       parameters:
         - id: fn
           type:
             - any
           description: ''
-      content: 'function ready(fn: any)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.RichEditor.RichEditor.REMOVE_FORMATTING_COMMAND
@@ -488,12 +488,12 @@ items:
       - typeScript
     summary: Creates a new rich editor with the provided options
     syntax:
+      content: 'new RichEditor(options: IRichEditorOptions)'
       parameters:
         - id: options
           type:
             - '@vss-web-extension-sdk.VSS.Controls.RichEditor.IRichEditorOptions'
           description: ''
-      content: 'new RichEditor(options: IRichEditorOptions)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.RichEditor.RichEditor.selectText
     name: 'selectText(collapseToEnd?: boolean)'
@@ -502,13 +502,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectText(collapseToEnd?: boolean)'
       parameters:
         - id: collapseToEnd
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function selectText(collapseToEnd?: boolean)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.RichEditor.RichEditor.setEnabled
     name: 'setEnabled(value: any)'
@@ -517,12 +517,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setEnabled(value: any)'
       parameters:
         - id: value
           type:
             - any
           description: ''
-      content: 'function setEnabled(value: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.RichEditor.RichEditor.setInvalid
     name: 'setInvalid(isInvalid: boolean, styleTextArea?: boolean)'
@@ -531,6 +531,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setInvalid(isInvalid: boolean, styleTextArea?: boolean)'
       parameters:
         - id: isInvalid
           type:
@@ -541,7 +542,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function setInvalid(isInvalid: boolean, styleTextArea?: boolean)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.RichEditor.RichEditor.setUploadAttachmentHandler
@@ -551,15 +551,15 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function setUploadAttachmentHandler(handler:
+        RichEditorAttachmentHandler)
       parameters:
         - id: handler
           type:
             - >-
               @vss-web-extension-sdk.VSS.Controls.RichEditor.RichEditorAttachmentHandler
           description: ''
-      content: >-
-        function setUploadAttachmentHandler(handler:
-        RichEditorAttachmentHandler)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.RichEditor.RichEditor.setValue
     name: 'setValue(value: any)'
@@ -568,12 +568,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setValue(value: any)'
       parameters:
         - id: value
           type:
             - any
           description: ''
-      content: 'function setValue(value: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.RichEditor.RichEditor.UNDERLINE_COMMAND
     name: UNDERLINE_COMMAND

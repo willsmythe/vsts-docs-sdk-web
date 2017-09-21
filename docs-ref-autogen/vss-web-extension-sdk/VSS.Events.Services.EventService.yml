@@ -28,6 +28,9 @@ items:
       - typeScript
     summary: Attatch a handler to an event.
     syntax:
+      content: >-
+        function attachEvent(eventName: string, handler: IEventHandler, scope?:
+        string)
       parameters:
         - id: eventName
           type:
@@ -43,9 +46,6 @@ items:
           description: |
             The scope of the event.
           optional: true
-      content: >-
-        function attachEvent(eventName: string, handler: IEventHandler, scope?:
-        string)
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Services.EventService.detachEvent
     name: 'detachEvent(eventName: string, handler: IEventHandler, scope?: string)'
@@ -54,6 +54,9 @@ items:
       - typeScript
     summary: Detatch a handler from an event.
     syntax:
+      content: >-
+        function detachEvent(eventName: string, handler: IEventHandler, scope?:
+        string)
       parameters:
         - id: eventName
           type:
@@ -69,9 +72,6 @@ items:
           description: |
             The scope of the event.
           optional: true
-      content: >-
-        function detachEvent(eventName: string, handler: IEventHandler, scope?:
-        string)
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Services.EventService.disposeScope
     name: 'disposeScope(scope: string)'
@@ -80,12 +80,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function disposeScope(scope: string)'
       parameters:
         - id: scope
           type:
             - string
           description: ''
-      content: 'function disposeScope(scope: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Events.Services.EventService.fire
     name: 'fire(eventName: string, sender?: any, eventArgs?: any, scope?: string)'
@@ -94,6 +94,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function fire(eventName: string, sender?: any, eventArgs?: any, scope?:
+        string)
       parameters:
         - id: eventName
           type:
@@ -114,9 +117,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function fire(eventName: string, sender?: any, eventArgs?: any, scope?:
-        string)
       return:
         type:
           - boolean

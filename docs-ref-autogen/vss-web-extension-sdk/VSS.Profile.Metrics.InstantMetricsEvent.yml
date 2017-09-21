@@ -11,7 +11,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent<@vss-web-extension-sdk.VSS.Profile.Metrics.MetricsEvent>
     source:
       path: vss.d.ts
@@ -30,12 +30,12 @@ items:
       - typeScript
     summary: Create inner metrics by prefixing the keys with innerFeature
     syntax:
+      content: 'function newInnerMetrics(innerFeature: string)'
       parameters:
         - id: innerFeature
           type:
             - string
           description: ''
-      content: 'function newInnerMetrics(innerFeature: string)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Profile.Metrics.MetricsEvent'

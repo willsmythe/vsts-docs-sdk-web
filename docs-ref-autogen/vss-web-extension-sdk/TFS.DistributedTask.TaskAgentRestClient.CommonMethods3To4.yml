@@ -42,7 +42,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods2_1To4
     source:
       path: tfs.d.ts
@@ -61,6 +61,7 @@ items:
       - typeScript
     summary: '[Preview API] Create a task group.'
     syntax:
+      content: 'function addTaskGroup(taskGroup: TaskGroup, project: string)'
       parameters:
         - id: taskGroup
           type:
@@ -70,7 +71,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: 'function addTaskGroup(taskGroup: TaskGroup, project: string)'
       return:
         type:
           - >-
@@ -86,6 +86,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods3To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -96,9 +99,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods3To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.CommonMethods3To4.createServiceEndpoint
@@ -108,6 +108,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createServiceEndpoint(endpoint: ServiceEndpoint, project:
+        string)
       parameters:
         - id: endpoint
           type:
@@ -118,9 +121,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function createServiceEndpoint(endpoint: ServiceEndpoint, project:
-        string)
       return:
         type:
           - >-
@@ -134,6 +134,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteServiceEndpoint(project: string, endpointId: string)'
       parameters:
         - id: project
           type:
@@ -143,7 +144,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function deleteServiceEndpoint(project: string, endpointId: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -156,6 +156,9 @@ items:
       - typeScript
     summary: '[Preview API] Delete a task group.'
     syntax:
+      content: >-
+        function deleteTaskGroup(project: string, taskGroupId: string, comment?:
+        string)
       parameters:
         - id: project
           type:
@@ -170,9 +173,6 @@ items:
             - string
           description: Comments to delete.
           optional: true
-      content: >-
-        function deleteTaskGroup(project: string, taskGroupId: string, comment?:
-        string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -187,6 +187,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function executeServiceEndpointRequest(serviceEndpointRequest:
+        ServiceEndpointRequest, project: string, endpointId: string)
       parameters:
         - id: serviceEndpointRequest
           type:
@@ -201,9 +204,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function executeServiceEndpointRequest(serviceEndpointRequest:
-        ServiceEndpointRequest, project: string, endpointId: string)
       return:
         type:
           - >-
@@ -217,6 +217,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getPackage(packageType: string, platform: string, version:
+        string)
       parameters:
         - id: packageType
           type:
@@ -230,9 +233,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getPackage(packageType: string, platform: string, version:
-        string)
       return:
         type:
           - >-
@@ -246,6 +246,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getPackages(packageType?: string, platform?: string, top?:
+        number)
       parameters:
         - id: packageType
           type:
@@ -262,9 +265,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getPackages(packageType?: string, platform?: string, top?:
-        number)
       return:
         type:
           - >-
@@ -278,6 +278,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getServiceEndpointDetails(project: string, endpointId: string)'
       parameters:
         - id: project
           type:
@@ -287,7 +288,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function getServiceEndpointDetails(project: string, endpointId: string)'
       return:
         type:
           - >-
@@ -303,6 +303,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getServiceEndpoints(project: string, type?: string,
+        authSchemes?: string[], endpointIds?: string[], includeFailed?: boolean)
       parameters:
         - id: project
           type:
@@ -328,9 +331,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getServiceEndpoints(project: string, type?: string,
-        authSchemes?: string[], endpointIds?: string[], includeFailed?: boolean)
       return:
         type:
           - >-
@@ -346,6 +346,9 @@ items:
       - typeScript
     summary: '[Preview API] Get a list of task groups.'
     syntax:
+      content: >-
+        function getTaskGroups(project: string, taskGroupId?: string, expanded?:
+        boolean, taskIdFilter?: string, deleted?: boolean)
       parameters:
         - id: project
           type:
@@ -371,9 +374,6 @@ items:
             - boolean
           description: '''true''to include deleted task groups. Default is ''false''.'
           optional: true
-      content: >-
-        function getTaskGroups(project: string, taskGroupId?: string, expanded?:
-        boolean, taskIdFilter?: string, deleted?: boolean)
       return:
         type:
           - >-
@@ -389,6 +389,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getTaskHubLicenseDetails(hubName: string,
+        includeEnterpriseUsersCount?: boolean, includeHostedAgentMinutesCount?:
+        boolean)
       parameters:
         - id: hubName
           type:
@@ -404,10 +408,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getTaskHubLicenseDetails(hubName: string,
-        includeEnterpriseUsersCount?: boolean, includeHostedAgentMinutesCount?:
-        boolean)
       return:
         type:
           - >-
@@ -425,6 +425,9 @@ items:
       data source in service endpoint. The response is filtered using an
       XPath/Json based selector.
     syntax:
+      content: >-
+        function queryServiceEndpoint(binding: DataSourceBinding, project:
+        string)
       parameters:
         - id: binding
           type:
@@ -435,9 +438,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function queryServiceEndpoint(binding: DataSourceBinding, project:
-        string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string[]>'
@@ -452,6 +452,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateServiceEndpoint(endpoint: ServiceEndpoint, project:
+        string, endpointId: string, operation?: string)
       parameters:
         - id: endpoint
           type:
@@ -471,9 +474,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function updateServiceEndpoint(endpoint: ServiceEndpoint, project:
-        string, endpointId: string, operation?: string)
       return:
         type:
           - >-
@@ -487,6 +487,7 @@ items:
       - typeScript
     summary: '[Preview API] Update a task group.'
     syntax:
+      content: 'function updateTaskGroup(taskGroup: TaskGroup, project: string)'
       parameters:
         - id: taskGroup
           type:
@@ -496,7 +497,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: 'function updateTaskGroup(taskGroup: TaskGroup, project: string)'
       return:
         type:
           - >-
@@ -512,6 +512,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateTaskHubLicenseDetails(taskHubLicenseDetails:
+        TaskHubLicenseDetails, hubName: string)
       parameters:
         - id: taskHubLicenseDetails
           type:
@@ -522,9 +525,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateTaskHubLicenseDetails(taskHubLicenseDetails:
-        TaskHubLicenseDetails, hubName: string)
       return:
         type:
           - >-

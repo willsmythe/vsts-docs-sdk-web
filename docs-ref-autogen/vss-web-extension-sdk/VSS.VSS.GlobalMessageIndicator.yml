@@ -27,8 +27,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function clearGlobalMessages()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.VSS.GlobalMessageIndicator.updateGlobalMessageIfEmpty
@@ -41,6 +41,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateGlobalMessageIfEmpty(message: string, messageLevel?:
+        string, customIcon?: string, onDismiss?: function, position?:
+        GlobalMessagePosition)
       parameters:
         - id: message
           type:
@@ -66,10 +70,6 @@ items:
             - GlobalMessagePosition
           description: ''
           optional: true
-      content: >-
-        function updateGlobalMessageIfEmpty(message: string, messageLevel?:
-        string, customIcon?: string, onDismiss?: function, position?:
-        GlobalMessagePosition)
       return:
         type:
           - HTMLElement

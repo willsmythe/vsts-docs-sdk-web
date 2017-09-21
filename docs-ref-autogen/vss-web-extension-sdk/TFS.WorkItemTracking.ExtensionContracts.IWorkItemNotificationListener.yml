@@ -38,6 +38,7 @@ items:
       - typeScript
     summary: Called when a field is modified
     syntax:
+      content: 'function onFieldChanged(fieldChangedArgs: IWorkItemFieldChangedArgs)'
       parameters:
         - id: fieldChangedArgs
           type:
@@ -46,7 +47,6 @@ items:
           description: >
             Information about the work item that was modified and the fields
             that were changed.
-      content: 'function onFieldChanged(fieldChangedArgs: IWorkItemFieldChangedArgs)'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemNotificationListener.onLoaded
@@ -56,6 +56,7 @@ items:
       - typeScript
     summary: Called when an extension is loaded
     syntax:
+      content: 'function onLoaded(workItemLoadedArgs: IWorkItemLoadedArgs)'
       parameters:
         - id: workItemLoadedArgs
           type:
@@ -63,7 +64,6 @@ items:
               @vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemLoadedArgs
           description: |
             Information about the work item that was loaded.
-      content: 'function onLoaded(workItemLoadedArgs: IWorkItemLoadedArgs)'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemNotificationListener.onRefreshed
@@ -73,6 +73,7 @@ items:
       - typeScript
     summary: Called when a work item is refreshed
     syntax:
+      content: 'function onRefreshed(refreshEventArgs: IWorkItemChangedArgs)'
       parameters:
         - id: refreshEventArgs
           type:
@@ -80,7 +81,6 @@ items:
               @vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemChangedArgs
           description: |
             Information about the work item that was refreshed.
-      content: 'function onRefreshed(refreshEventArgs: IWorkItemChangedArgs)'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemNotificationListener.onReset
@@ -90,6 +90,7 @@ items:
       - typeScript
     summary: Called when a work item is reset (undo back to unchanged state)
     syntax:
+      content: 'function onReset(undoEventArgs: IWorkItemChangedArgs)'
       parameters:
         - id: undoEventArgs
           type:
@@ -97,7 +98,6 @@ items:
               @vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemChangedArgs
           description: |
             Information about the work item that was reset.
-      content: 'function onReset(undoEventArgs: IWorkItemChangedArgs)'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemNotificationListener.onSaved
@@ -107,6 +107,7 @@ items:
       - typeScript
     summary: Called when a work item is saved
     syntax:
+      content: 'function onSaved(savedEventArgs: IWorkItemChangedArgs)'
       parameters:
         - id: savedEventArgs
           type:
@@ -114,7 +115,6 @@ items:
               @vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemChangedArgs
           description: |
             Information about the work item that was saved.
-      content: 'function onSaved(savedEventArgs: IWorkItemChangedArgs)'
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemNotificationListener.onUnloaded
@@ -124,6 +124,7 @@ items:
       - typeScript
     summary: Called when a work item is unloaded
     syntax:
+      content: 'function onUnloaded(unloadedEventArgs: IWorkItemChangedArgs)'
       parameters:
         - id: unloadedEventArgs
           type:
@@ -131,5 +132,4 @@ items:
               @vss-web-extension-sdk.TFS.WorkItemTracking.ExtensionContracts.IWorkItemChangedArgs
           description: |
             Information about the work item that was saved.
-      content: 'function onUnloaded(unloadedEventArgs: IWorkItemChangedArgs)'
     type: method

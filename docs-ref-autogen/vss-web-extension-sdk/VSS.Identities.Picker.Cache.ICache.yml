@@ -28,8 +28,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function clear()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.ICache.configure
     name: 'configure(config: ICacheConfiguration)'
@@ -38,13 +38,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function configure(config: ICacheConfiguration)'
       parameters:
         - id: config
           type:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.Cache.ICacheConfiguration
           description: ''
-      content: 'function configure(config: ICacheConfiguration)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.ICache.get
     name: 'get(key: string)'
@@ -53,12 +53,12 @@ items:
       - typeScript
     summary: This method can return null
     syntax:
+      content: 'function get(key: string)'
       parameters:
         - id: key
           type:
             - string
           description: ''
-      content: 'function get(key: string)'
       return:
         type:
           - V
@@ -70,6 +70,7 @@ items:
       - typeScript
     summary: This method is optimistic
     syntax:
+      content: 'function set(key: string, value: V)'
       parameters:
         - id: key
           type:
@@ -79,5 +80,4 @@ items:
           type:
             - V
           description: ''
-      content: 'function set(key: string, value: V)'
     type: method

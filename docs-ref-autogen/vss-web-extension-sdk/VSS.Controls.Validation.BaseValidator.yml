@@ -31,7 +31,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.Enhancement<TOptions>'
+      name: '@vss-web-extension-sdk.VSS.Controls.Enhancement<TOptions>'
     source:
       path: vss.d.ts
       startLine: 17834
@@ -48,6 +48,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new BaseValidator(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -55,7 +56,6 @@ items:
           description: |+
 
           optional: true
-      content: 'new BaseValidator(options?: TOptions)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator.dispose
     name: dispose()
@@ -64,8 +64,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function dispose()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator.EVENT_VALIDATE
     name: EVENT_VALIDATE
@@ -101,8 +101,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getMessage()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator.getValidationGroup
@@ -112,8 +112,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getValidationGroup()
+      parameters: []
       return:
         type:
           - string
@@ -125,8 +125,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getValue()
+      parameters: []
       return:
         type:
           - any
@@ -138,8 +138,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator.initializeOptions
@@ -149,6 +149,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: TOptions)'
       parameters:
         - id: options
           type:
@@ -156,7 +157,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: TOptions)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator.instanceId
     name: instanceId
@@ -178,8 +178,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function isValid()
+      parameters: []
       return:
         type:
           - boolean
@@ -191,8 +191,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function onChanged()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator.onKeyUp
     name: onKeyUp()
@@ -201,8 +201,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function onKeyUp()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator.onValidationRequired
@@ -212,6 +212,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function onValidationRequired(e?: any, group?: any)'
       parameters:
         - id: e
           type:
@@ -223,7 +224,6 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function onValidationRequired(e?: any, group?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator.optionsPrefix
     name: optionsPrefix
@@ -245,6 +245,6 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function validate()
+      parameters: []
     type: method

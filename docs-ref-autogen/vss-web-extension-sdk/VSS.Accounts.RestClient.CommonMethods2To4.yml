@@ -19,7 +19,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 3314
@@ -39,6 +39,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -49,9 +52,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Accounts.RestClient.CommonMethods2To4.createAccount
@@ -61,6 +61,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function createAccount(info: AccountCreateInfoInternal, usePrecreated?:
+        boolean)
       parameters:
         - id: info
           type:
@@ -72,9 +75,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function createAccount(info: AccountCreateInfoInternal, usePrecreated?:
-        boolean)
       return:
         type:
           - >-
@@ -87,12 +87,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function getAccount(accountId: string)'
       parameters:
         - id: accountId
           type:
             - string
           description: ''
-      content: 'function getAccount(accountId: string)'
       return:
         type:
           - >-
@@ -106,8 +106,8 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
-      parameters: []
       content: function getAccountSettings()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<[key: string]: string>'

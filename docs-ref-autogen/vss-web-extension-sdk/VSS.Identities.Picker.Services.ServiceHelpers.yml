@@ -95,6 +95,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        static function addScenarioProperties(service: VssService,
+        scenarioProperties: IDictionaryStringTo<any>, operationScope?:
+        IOperationScope, identityType?: IEntityType, options?:
+        IIdentityServiceOptions, extensionOptions?:
+        IIdentityPickerExtensionOptions)
       parameters:
         - id: service
           type:
@@ -127,12 +133,6 @@ items:
               @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityPickerExtensionOptions
           description: ''
           optional: true
-      content: >-
-        static function addScenarioProperties(service: VssService,
-        scenarioProperties: IDictionaryStringTo<any>, operationScope?:
-        IOperationScope, identityType?: IEntityType, options?:
-        IIdentityServiceOptions, extensionOptions?:
-        IIdentityPickerExtensionOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IDictionaryStringTo<any>'
@@ -271,13 +271,13 @@ items:
       - typeScript
     summary: 'Currently supports only Successors, Managers, and Direct Reports'
     syntax:
+      content: 'static function getConnectionTypeList(connectionType: IConnectionType)'
       parameters:
         - id: connectionType
           type:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.Services.IConnectionType
           description: ''
-      content: 'static function getConnectionTypeList(connectionType: IConnectionType)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Services.ServiceHelpers.getDefaultIdentityImage
@@ -287,12 +287,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function getDefaultIdentityImage(identity: IEntity)'
       parameters:
         - id: identity
           type:
             - '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity'
           description: ''
-      content: 'static function getDefaultIdentityImage(identity: IEntity)'
       return:
         type:
           - string
@@ -305,12 +305,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function getDistinct(array: string[])'
       parameters:
         - id: array
           type:
             - 'string[]'
           description: ''
-      content: 'static function getDistinct(array: string[])'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Services.ServiceHelpers.GetIdentities_Prefix_Separator
@@ -334,12 +334,12 @@ items:
       - typeScript
     summary: Currently supports only Users and Groups
     syntax:
+      content: 'static function getIdentityTypeList(identityType: IEntityType)'
       parameters:
         - id: identityType
           type:
             - '@vss-web-extension-sdk.VSS.Identities.Picker.Services.IEntityType'
           description: ''
-      content: 'static function getIdentityTypeList(identityType: IEntityType)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Services.ServiceHelpers.getOperationScopeList
@@ -352,13 +352,13 @@ items:
       accounts, IMS for MSA accounts/on-premise TFS and AD and WMD for
       on-premise TFS)
     syntax:
+      content: 'static function getOperationScopeList(operationScope: IOperationScope)'
       parameters:
         - id: operationScope
           type:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
           description: ''
-      content: 'static function getOperationScopeList(operationScope: IOperationScope)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Services.ServiceHelpers.getQueryTypeHint
@@ -368,13 +368,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'static function getQueryTypeHint(queryTypeHint: IQueryTypeHint)'
       parameters:
         - id: queryTypeHint
           type:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.Services.IQueryTypeHint
           description: ''
-      content: 'static function getQueryTypeHint(queryTypeHint: IQueryTypeHint)'
       return:
         type:
           - string

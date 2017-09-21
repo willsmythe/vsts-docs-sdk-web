@@ -16,7 +16,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.Control<@vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions>
     source:
       path: vss.d.ts
@@ -35,8 +35,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getDisplayedEntity()
+      parameters: []
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity'
@@ -49,6 +49,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new IdentityDisplayControl(options?: IIdentityDisplayOptions)'
       parameters:
         - id: options
           type:
@@ -56,7 +57,6 @@ items:
               @vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityDisplayOptions
           description: ''
           optional: true
-      content: 'new IdentityDisplayControl(options?: IIdentityDisplayOptions)'
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Controls.IdentityDisplayControl.initialize
@@ -66,6 +66,6 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method

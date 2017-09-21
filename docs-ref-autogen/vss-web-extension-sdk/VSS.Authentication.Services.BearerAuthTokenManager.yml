@@ -31,12 +31,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new BearerAuthTokenManager(token: string)'
       parameters:
         - id: token
           type:
             - string
           description: ''
-      content: 'new BearerAuthTokenManager(token: string)'
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Authentication.Services.BearerAuthTokenManager.getAuthorizationHeader
@@ -46,12 +46,12 @@ items:
       - typeScript
     summary: Gets the authorization header to use in a request from the given token
     syntax:
+      content: 'function getAuthorizationHeader(sessionToken: string)'
       parameters:
         - id: sessionToken
           type:
             - string
           description: Used for token key.
-      content: 'function getAuthorizationHeader(sessionToken: string)'
       return:
         type:
           - string
@@ -64,13 +64,13 @@ items:
       - typeScript
     summary: Get the auth token to use for this request.
     syntax:
+      content: 'function getAuthToken(refresh?: boolean)'
       parameters:
         - id: refresh
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function getAuthToken(refresh?: boolean)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'

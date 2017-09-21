@@ -27,7 +27,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Controls.BaseControl'
+      name: '@vss-web-extension-sdk.VSS.Controls.BaseControl'
     source:
       path: vss.d.ts
       startLine: 9701
@@ -44,13 +44,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new BaseComboDropPopup(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'new BaseComboDropPopup(options?: any)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboDropPopup.combo
     name: combo
@@ -72,8 +72,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function dispose()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Combos.BaseComboDropPopup.getSelectedIndex
@@ -85,8 +85,8 @@ items:
       Returns selected index of drop popup
       Base implementation, should be overridden
     syntax:
-      parameters: []
       content: function getSelectedIndex()
+      parameters: []
       return:
         type:
           - number
@@ -99,8 +99,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getSelectedItem()
+      parameters: []
       return:
         type:
           - JQuery
@@ -113,8 +113,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function getSelectedValue()
+      parameters: []
       return:
         type:
           - string
@@ -126,8 +126,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Combos.BaseComboDropPopup.initializeOptions
@@ -137,6 +137,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -144,7 +145,6 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboDropPopup.selectNext
     name: 'selectNext(page?: boolean)'
@@ -153,13 +153,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectNext(page?: boolean)'
       parameters:
         - id: page
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function selectNext(page?: boolean)'
       return:
         type:
           - boolean
@@ -171,13 +171,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function selectPrev(page?: boolean)'
       parameters:
         - id: page
           type:
             - boolean
           description: ''
           optional: true
-      content: 'function selectPrev(page?: boolean)'
       return:
         type:
           - boolean
@@ -189,8 +189,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: function setPosition()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Combos.BaseComboDropPopup.setSelectedValue
@@ -200,12 +200,12 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function setSelectedValue(value: string)'
       parameters:
         - id: value
           type:
             - string
           description: ''
-      content: 'function setSelectedValue(value: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.BaseComboDropPopup.update
     name: update()
@@ -216,6 +216,6 @@ items:
       Updates drop popup rendering based on current data
       Base implementation, should be overridden
     syntax:
-      parameters: []
       content: function update()
+      parameters: []
     type: method

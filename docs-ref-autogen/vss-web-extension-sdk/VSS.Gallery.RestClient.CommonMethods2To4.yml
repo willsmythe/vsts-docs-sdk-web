@@ -60,7 +60,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: vss.d.ts
       startLine: 23216
@@ -79,6 +79,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -89,9 +92,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Gallery.RestClient.CommonMethods2To4.createPublisher
@@ -101,12 +101,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function createPublisher(publisher: Publisher)'
       parameters:
         - id: publisher
           type:
             - '@vss-web-extension-sdk.VSS.Gallery.Contracts.Publisher'
           description: ''
-      content: 'function createPublisher(publisher: Publisher)'
       return:
         type:
           - >-
@@ -122,6 +122,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteExtension(publisherName: string, extensionName: string,
+        version?: string)
       parameters:
         - id: publisherName
           type:
@@ -136,9 +139,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function deleteExtension(publisherName: string, extensionName: string,
-        version?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -151,6 +151,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deleteExtensionById(extensionId: string, version?: string)'
       parameters:
         - id: extensionId
           type:
@@ -161,7 +162,6 @@ items:
             - string
           description: ''
           optional: true
-      content: 'function deleteExtensionById(extensionId: string, version?: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -174,12 +174,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function deletePublisher(publisherName: string)'
       parameters:
         - id: publisherName
           type:
             - string
           description: ''
-      content: 'function deletePublisher(publisherName: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -191,6 +191,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function generateKey(keyType: string, expireCurrentSeconds?: number)'
       parameters:
         - id: keyType
           type:
@@ -201,7 +202,6 @@ items:
             - number
           description: ''
           optional: true
-      content: 'function generateKey(keyType: string, expireCurrentSeconds?: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -215,6 +215,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAsset(extensionId: string, version: string, assetType:
+        string, accountToken?: string, acceptDefault?: boolean)
       parameters:
         - id: extensionId
           type:
@@ -238,9 +241,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getAsset(extensionId: string, version: string, assetType:
-        string, accountToken?: string, acceptDefault?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -255,6 +255,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAssetByName(publisherName: string, extensionName: string,
+        version: string, assetType: string, accountToken?: string,
+        acceptDefault?: boolean)
       parameters:
         - id: publisherName
           type:
@@ -282,10 +286,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getAssetByName(publisherName: string, extensionName: string,
-        version: string, assetType: string, accountToken?: string,
-        acceptDefault?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -301,6 +301,10 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getAssetWithToken(publisherName: string, extensionName: string,
+        version: string, assetType: string, assetToken?: string, accountToken?:
+        string, acceptDefault?: boolean)
       parameters:
         - id: publisherName
           type:
@@ -333,10 +337,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getAssetWithToken(publisherName: string, extensionName: string,
-        version: string, assetType: string, assetToken?: string, accountToken?:
-        string, acceptDefault?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -349,13 +349,13 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getCategories(languages?: string)'
       parameters:
         - id: languages
           type:
             - string
           description: ''
           optional: true
-      content: 'function getCategories(languages?: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string[]>'
@@ -370,6 +370,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getCategoryDetails(categoryName: string, languages?: string,
+        product?: string)
       parameters:
         - id: categoryName
           type:
@@ -385,9 +388,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getCategoryDetails(categoryName: string, languages?: string,
-        product?: string)
       return:
         type:
           - >-
@@ -403,6 +403,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getCertificate(publisherName: string, extensionName: string,
+        version?: string)
       parameters:
         - id: publisherName
           type:
@@ -417,9 +420,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getCertificate(publisherName: string, extensionName: string,
-        version?: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -434,6 +434,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getExtension(publisherName: string, extensionName: string,
+        version?: string, flags?: ExtensionQueryFlags, accountToken?: string)
       parameters:
         - id: publisherName
           type:
@@ -458,9 +461,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function getExtension(publisherName: string, extensionName: string,
-        version?: string, flags?: ExtensionQueryFlags, accountToken?: string)
       return:
         type:
           - >-
@@ -476,6 +476,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getExtensionById(extensionId: string, version?: string, flags?:
+        ExtensionQueryFlags)
       parameters:
         - id: extensionId
           type:
@@ -491,9 +494,6 @@ items:
             - ExtensionQueryFlags
           description: ''
           optional: true
-      content: >-
-        function getExtensionById(extensionId: string, version?: string, flags?:
-        ExtensionQueryFlags)
       return:
         type:
           - >-
@@ -508,6 +508,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getPackage(publisherName: string, extensionName: string,
+        version: string, accountToken?: string, acceptDefault?: boolean)
       parameters:
         - id: publisherName
           type:
@@ -531,9 +534,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getPackage(publisherName: string, extensionName: string,
-        version: string, accountToken?: string, acceptDefault?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -546,6 +546,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getPublisher(publisherName: string, flags?: number)'
       parameters:
         - id: publisherName
           type:
@@ -556,7 +557,6 @@ items:
             - number
           description: ''
           optional: true
-      content: 'function getPublisher(publisherName: string, flags?: number)'
       return:
         type:
           - >-
@@ -570,12 +570,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getSigningKey(keyType: string)'
       parameters:
         - id: keyType
           type:
             - string
           description: ''
-      content: 'function getSigningKey(keyType: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -588,6 +588,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function queryExtensions(extensionQuery: ExtensionQuery, accountToken?:
+        string)
       parameters:
         - id: extensionQuery
           type:
@@ -598,9 +601,6 @@ items:
             - string
           description: ''
           optional: true
-      content: >-
-        function queryExtensions(extensionQuery: ExtensionQuery, accountToken?:
-        string)
       return:
         type:
           - >-
@@ -614,12 +614,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function queryPublishers(publisherQuery: PublisherQuery)'
       parameters:
         - id: publisherQuery
           type:
             - '@vss-web-extension-sdk.VSS.Gallery.Contracts.PublisherQuery'
           description: ''
-      content: 'function queryPublishers(publisherQuery: PublisherQuery)'
       return:
         type:
           - >-
@@ -649,6 +649,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function shareExtension(publisherName: string, extensionName: string,
+        accountName: string)
       parameters:
         - id: publisherName
           type:
@@ -662,9 +665,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function shareExtension(publisherName: string, extensionName: string,
-        accountName: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -677,6 +677,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function shareExtensionById(extensionId: string, accountName: string)'
       parameters:
         - id: extensionId
           type:
@@ -686,7 +687,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function shareExtensionById(extensionId: string, accountName: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -701,6 +701,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function unshareExtension(publisherName: string, extensionName: string,
+        accountName: string)
       parameters:
         - id: publisherName
           type:
@@ -714,9 +717,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function unshareExtension(publisherName: string, extensionName: string,
-        accountName: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -729,6 +729,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function unshareExtensionById(extensionId: string, accountName: string)'
       parameters:
         - id: extensionId
           type:
@@ -738,7 +739,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function unshareExtensionById(extensionId: string, accountName: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -753,6 +753,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function updateExtensionProperties(publisherName: string, extensionName:
+        string, flags: PublishedExtensionFlags)
       parameters:
         - id: publisherName
           type:
@@ -766,9 +769,6 @@ items:
           type:
             - PublishedExtensionFlags
           description: ''
-      content: >-
-        function updateExtensionProperties(publisherName: string, extensionName:
-        string, flags: PublishedExtensionFlags)
       return:
         type:
           - >-
@@ -782,6 +782,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function updatePublisher(publisher: Publisher, publisherName: string)'
       parameters:
         - id: publisher
           type:
@@ -791,7 +792,6 @@ items:
           type:
             - string
           description: ''
-      content: 'function updatePublisher(publisher: Publisher, publisherName: string)'
       return:
         type:
           - >-

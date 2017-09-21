@@ -84,7 +84,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.ReleaseManagement.Core.RestClient.CommonMethods2To4
     source:
       path: rmo.d.ts
@@ -105,6 +105,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2_2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -115,9 +118,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2_2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.RestClient.CommonMethods2_2To4.createDefinitionEnvironmentTemplate
@@ -129,6 +129,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function createDefinitionEnvironmentTemplate(template:
+        ReleaseDefinitionEnvironmentTemplate, project: string)
       parameters:
         - id: template
           type:
@@ -139,9 +142,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function createDefinitionEnvironmentTemplate(template:
-        ReleaseDefinitionEnvironmentTemplate, project: string)
       return:
         type:
           - >-
@@ -155,6 +155,9 @@ items:
       - typeScript
     summary: '[Preview API] Create a release.'
     syntax:
+      content: >-
+        function createRelease(releaseStartMetadata: ReleaseStartMetadata,
+        project: string)
       parameters:
         - id: releaseStartMetadata
           type:
@@ -165,9 +168,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function createRelease(releaseStartMetadata: ReleaseStartMetadata,
-        project: string)
       return:
         type:
           - >-
@@ -183,6 +183,9 @@ items:
       - typeScript
     summary: '[Preview API] Create a release definition'
     syntax:
+      content: >-
+        function createReleaseDefinition(releaseDefinition: ReleaseDefinition,
+        project: string)
       parameters:
         - id: releaseDefinition
           type:
@@ -193,9 +196,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function createReleaseDefinition(releaseDefinition: ReleaseDefinition,
-        project: string)
       return:
         type:
           - >-
@@ -209,6 +209,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function deleteDefinitionEnvironmentTemplate(project: string,
+        templateId: string)
       parameters:
         - id: project
           type:
@@ -218,9 +221,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function deleteDefinitionEnvironmentTemplate(project: string,
-        templateId: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -233,6 +233,9 @@ items:
       - typeScript
     summary: '[Preview API] Soft delete a release'
     syntax:
+      content: >-
+        function deleteRelease(project: string, releaseId: number, comment?:
+        string)
       parameters:
         - id: project
           type:
@@ -247,9 +250,6 @@ items:
             - string
           description: Comment for deleting a release.
           optional: true
-      content: >-
-        function deleteRelease(project: string, releaseId: number, comment?:
-        string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -262,6 +262,7 @@ items:
       - typeScript
     summary: '[Preview API] Delete a release definition.'
     syntax:
+      content: 'function deleteReleaseDefinition(project: string, definitionId: number)'
       parameters:
         - id: project
           type:
@@ -271,7 +272,6 @@ items:
           type:
             - number
           description: Id of the release definition.
-      content: 'function deleteReleaseDefinition(project: string, definitionId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -284,6 +284,9 @@ items:
       - typeScript
     summary: '[Preview API] Get an approval.'
     syntax:
+      content: >-
+        function getApproval(project: string, approvalId: number,
+        includeHistory?: boolean)
       parameters:
         - id: project
           type:
@@ -298,9 +301,6 @@ items:
             - boolean
           description: '''true'' to include history of the approval. Default is ''false''.'
           optional: true
-      content: >-
-        function getApproval(project: string, approvalId: number,
-        includeHistory?: boolean)
       return:
         type:
           - >-
@@ -314,6 +314,7 @@ items:
       - typeScript
     summary: '[Preview API] Get approval history.'
     syntax:
+      content: 'function getApprovalHistory(project: string, approvalStepId: number)'
       parameters:
         - id: project
           type:
@@ -323,7 +324,6 @@ items:
           type:
             - number
           description: Id of the approval.
-      content: 'function getApprovalHistory(project: string, approvalStepId: number)'
       return:
         type:
           - >-
@@ -341,6 +341,11 @@ items:
       - typeScript
     summary: '[Preview API] Get a list of approvals'
     syntax:
+      content: >-
+        function getApprovals(project: string, assignedToFilter?: string,
+        statusFilter?: ApprovalStatus, releaseIdsFilter?: number[], typeFilter?:
+        ApprovalType, top?: number, continuationToken?: number, queryOrder?:
+        ReleaseQueryOrder, includeMyGroupApprovals?: boolean)
       parameters:
         - id: project
           type:
@@ -391,11 +396,6 @@ items:
             - boolean
           description: '''true'' to include my group approvals. Default is ''false''.'
           optional: true
-      content: >-
-        function getApprovals(project: string, assignedToFilter?: string,
-        statusFilter?: ApprovalStatus, releaseIdsFilter?: number[], typeFilter?:
-        ApprovalType, top?: number, continuationToken?: number, queryOrder?:
-        ReleaseQueryOrder, includeMyGroupApprovals?: boolean)
       return:
         type:
           - >-
@@ -409,12 +409,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getArtifactTypeDefinitions(project: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
-      content: 'function getArtifactTypeDefinitions(project: string)'
       return:
         type:
           - >-
@@ -428,6 +428,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getArtifactVersions(project: string, releaseDefinitionId:
+        number)
       parameters:
         - id: project
           type:
@@ -437,9 +440,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getArtifactVersions(project: string, releaseDefinitionId:
-        number)
       return:
         type:
           - >-
@@ -453,6 +453,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getArtifactVersionsForSources(artifacts: Artifact[], project:
+        string)
       parameters:
         - id: artifacts
           type:
@@ -462,9 +465,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function getArtifactVersionsForSources(artifacts: Artifact[], project:
-        string)
       return:
         type:
           - >-
@@ -478,6 +478,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getDefinitionEnvironmentTemplate(project: string, templateId:
+        string)
       parameters:
         - id: project
           type:
@@ -487,9 +490,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getDefinitionEnvironmentTemplate(project: string, templateId:
-        string)
       return:
         type:
           - >-
@@ -505,6 +505,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getDefinitionRevision(project: string, definitionId: number,
+        revision: number)
       parameters:
         - id: project
           type:
@@ -518,9 +521,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getDefinitionRevision(project: string, definitionId: number,
-        revision: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -533,6 +533,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getInputValues(query: InputValuesQuery, project: string)'
       parameters:
         - id: query
           type:
@@ -543,7 +544,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: 'function getInputValues(query: InputValuesQuery, project: string)'
       return:
         type:
           - >-
@@ -559,6 +559,9 @@ items:
       - typeScript
     summary: '[Preview API] Gets logs'
     syntax:
+      content: >-
+        function getLog(project: string, releaseId: number, environmentId:
+        number, taskId: number, attemptId?: number)
       parameters:
         - id: project
           type:
@@ -581,9 +584,6 @@ items:
             - number
           description: Id of the attempt.
           optional: true
-      content: >-
-        function getLog(project: string, releaseId: number, environmentId:
-        number, taskId: number, attemptId?: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -596,6 +596,7 @@ items:
       - typeScript
     summary: '[Preview API] Get logs for a release Id.'
     syntax:
+      content: 'function getLogs(project: string, releaseId: number)'
       parameters:
         - id: project
           type:
@@ -605,7 +606,6 @@ items:
           type:
             - number
           description: Id of the release.
-      content: 'function getLogs(project: string, releaseId: number)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
@@ -620,6 +620,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getReleaseChanges(project: string, releaseId: number,
+        baseReleaseId?: number, top?: number)
       parameters:
         - id: project
           type:
@@ -639,9 +642,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getReleaseChanges(project: string, releaseId: number,
-        baseReleaseId?: number, top?: number)
       return:
         type:
           - >-
@@ -657,6 +657,9 @@ items:
       - typeScript
     summary: '[Preview API] Get a release definition.'
     syntax:
+      content: >-
+        function getReleaseDefinition(project: string, definitionId: number,
+        propertyFilters?: string[])
       parameters:
         - id: project
           type:
@@ -671,9 +674,6 @@ items:
             - 'string[]'
           description: A comma-delimited list of extended properties to retrieve.
           optional: true
-      content: >-
-        function getReleaseDefinition(project: string, definitionId: number,
-        propertyFilters?: string[])
       return:
         type:
           - >-
@@ -687,6 +687,9 @@ items:
       - typeScript
     summary: '[Preview API] Get revision history for a release definition'
     syntax:
+      content: >-
+        function getReleaseDefinitionHistory(project: string, definitionId:
+        number)
       parameters:
         - id: project
           type:
@@ -696,9 +699,6 @@ items:
           type:
             - number
           description: Id of the definition.
-      content: >-
-        function getReleaseDefinitionHistory(project: string, definitionId:
-        number)
       return:
         type:
           - >-
@@ -714,6 +714,9 @@ items:
       - typeScript
     summary: '[Preview API] Get release definition of a given revision.'
     syntax:
+      content: >-
+        function getReleaseDefinitionRevision(project: string, definitionId:
+        number, revision: number)
       parameters:
         - id: project
           type:
@@ -727,9 +730,6 @@ items:
           type:
             - number
           description: Revision number of the release definition.
-      content: >-
-        function getReleaseDefinitionRevision(project: string, definitionId:
-        number, revision: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -748,6 +748,13 @@ items:
       - typeScript
     summary: '[Preview API] Get a list of release definitions.'
     syntax:
+      content: >-
+        function getReleaseDefinitions(project: string, searchText?: string,
+        expand?: ReleaseDefinitionExpands, artifactType?: string,
+        artifactSourceId?: string, top?: number, continuationToken?: string,
+        queryOrder?: ReleaseDefinitionQueryOrder, path?: string,
+        isExactNameMatch?: boolean, tagFilter?: string[], propertyFilters?:
+        string[], definitionIdFilter?: string[])
       parameters:
         - id: project
           type:
@@ -830,13 +837,6 @@ items:
             - 'string[]'
           description: A comma-delimited list of release definitions to retrieve.
           optional: true
-      content: >-
-        function getReleaseDefinitions(project: string, searchText?: string,
-        expand?: ReleaseDefinitionExpands, artifactType?: string,
-        artifactSourceId?: string, top?: number, continuationToken?: string,
-        queryOrder?: ReleaseDefinitionQueryOrder, path?: string,
-        isExactNameMatch?: boolean, tagFilter?: string[], propertyFilters?:
-        string[], definitionIdFilter?: string[])
       return:
         type:
           - >-
@@ -853,6 +853,10 @@ items:
       - typeScript
     summary: '[Preview API] Get release summary of a given definition Id.'
     syntax:
+      content: >-
+        function getReleaseDefinitionSummary(project: string, definitionId:
+        number, releaseCount: number, includeArtifact?: boolean,
+        definitionEnvironmentIdsFilter?: number[])
       parameters:
         - id: project
           type:
@@ -876,10 +880,6 @@ items:
             - 'number[]'
           description: ''
           optional: true
-      content: >-
-        function getReleaseDefinitionSummary(project: string, definitionId:
-        number, releaseCount: number, includeArtifact?: boolean,
-        definitionEnvironmentIdsFilter?: number[])
       return:
         type:
           - >-
@@ -895,6 +895,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getReleaseEnvironment(project: string, releaseId: number,
+        environmentId: number)
       parameters:
         - id: project
           type:
@@ -908,9 +911,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function getReleaseEnvironment(project: string, releaseId: number,
-        environmentId: number)
       return:
         type:
           - >-
@@ -924,6 +924,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getReleaseHistory(project: string, releaseId: number)'
       parameters:
         - id: project
           type:
@@ -933,7 +934,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getReleaseHistory(project: string, releaseId: number)'
       return:
         type:
           - >-
@@ -949,6 +949,9 @@ items:
       - typeScript
     summary: '[Preview API] Get release for a given revision number.'
     syntax:
+      content: >-
+        function getReleaseRevision(project: string, releaseId: number,
+        definitionSnapshotRevision: number)
       parameters:
         - id: project
           type:
@@ -962,9 +965,6 @@ items:
           type:
             - number
           description: Definition snapshot revision number.
-      content: >-
-        function getReleaseRevision(project: string, releaseId: number,
-        definitionSnapshotRevision: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -979,6 +979,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getReleaseWorkItemsRefs(project: string, releaseId: number,
+        baseReleaseId?: number, top?: number)
       parameters:
         - id: project
           type:
@@ -998,9 +1001,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getReleaseWorkItemsRefs(project: string, releaseId: number,
-        baseReleaseId?: number, top?: number)
       return:
         type:
           - >-
@@ -1014,6 +1014,7 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function getSummaryMailSections(project: string, releaseId: number)'
       parameters:
         - id: project
           type:
@@ -1023,7 +1024,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getSummaryMailSections(project: string, releaseId: number)'
       return:
         type:
           - >-
@@ -1039,6 +1039,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function getTasks(project: string, releaseId: number, environmentId:
+        number, attemptId?: number)
       parameters:
         - id: project
           type:
@@ -1057,9 +1060,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getTasks(project: string, releaseId: number, environmentId:
-        number, attemptId?: number)
       return:
         type:
           - >-
@@ -1073,12 +1073,12 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: 'function listDefinitionEnvironmentTemplates(project: string)'
       parameters:
         - id: project
           type:
             - string
           description: Project ID or project name
-      content: 'function listDefinitionEnvironmentTemplates(project: string)'
       return:
         type:
           - >-
@@ -1094,6 +1094,9 @@ items:
       - typeScript
     summary: '[Preview API]'
     syntax:
+      content: >-
+        function sendSummaryMail(mailMessage: MailMessage, project: string,
+        releaseId: number)
       parameters:
         - id: mailMessage
           type:
@@ -1108,9 +1111,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function sendSummaryMail(mailMessage: MailMessage, project: string,
-        releaseId: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -1123,6 +1123,9 @@ items:
       - typeScript
     summary: '[Preview API] Update a complete release object.'
     syntax:
+      content: >-
+        function updateRelease(release: Release, project: string, releaseId:
+        number)
       parameters:
         - id: release
           type:
@@ -1136,9 +1139,6 @@ items:
           type:
             - number
           description: Id of the release to update.
-      content: >-
-        function updateRelease(release: Release, project: string, releaseId:
-        number)
       return:
         type:
           - >-
@@ -1154,6 +1154,9 @@ items:
       - typeScript
     summary: '[Preview API] Update status of an approval'
     syntax:
+      content: >-
+        function updateReleaseApproval(approval: ReleaseApproval, project:
+        string, approvalId: number)
       parameters:
         - id: approval
           type:
@@ -1168,9 +1171,6 @@ items:
           type:
             - number
           description: Id of the approval.
-      content: >-
-        function updateReleaseApproval(approval: ReleaseApproval, project:
-        string, approvalId: number)
       return:
         type:
           - >-
@@ -1186,6 +1186,9 @@ items:
       - typeScript
     summary: '[Preview API] Update a release definition.'
     syntax:
+      content: >-
+        function updateReleaseDefinition(releaseDefinition: ReleaseDefinition,
+        project: string)
       parameters:
         - id: releaseDefinition
           type:
@@ -1196,9 +1199,6 @@ items:
           type:
             - string
           description: Project ID or project name
-      content: >-
-        function updateReleaseDefinition(releaseDefinition: ReleaseDefinition,
-        project: string)
       return:
         type:
           - >-
@@ -1215,6 +1215,10 @@ items:
       - typeScript
     summary: '[Preview API] Update the status of a release environment'
     syntax:
+      content: >-
+        function updateReleaseEnvironment(environmentUpdateData:
+        ReleaseEnvironmentUpdateMetadata, project: string, releaseId: number,
+        environmentId: number)
       parameters:
         - id: environmentUpdateData
           type:
@@ -1233,10 +1237,6 @@ items:
           type:
             - number
           description: Id of the environment.
-      content: >-
-        function updateReleaseEnvironment(environmentUpdateData:
-        ReleaseEnvironmentUpdateMetadata, project: string, releaseId: number,
-        environmentId: number)
       return:
         type:
           - >-
@@ -1252,6 +1252,9 @@ items:
       - typeScript
     summary: '[Preview API] Update few properties of a release.'
     syntax:
+      content: >-
+        function updateReleaseResource(releaseUpdateMetadata:
+        ReleaseUpdateMetadata, project: string, releaseId: number)
       parameters:
         - id: releaseUpdateMetadata
           type:
@@ -1266,9 +1269,6 @@ items:
           type:
             - number
           description: Id of the release to update.
-      content: >-
-        function updateReleaseResource(releaseUpdateMetadata:
-        ReleaseUpdateMetadata, project: string, releaseId: number)
       return:
         type:
           - >-

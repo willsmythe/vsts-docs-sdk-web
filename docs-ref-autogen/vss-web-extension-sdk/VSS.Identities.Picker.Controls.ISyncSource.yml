@@ -11,7 +11,7 @@ items:
     type: interface
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Identities.Picker.Controls.ISource'
+      name: '@vss-web-extension-sdk.VSS.Identities.Picker.Controls.ISource'
     source:
       path: vss.d.ts
       startLine: 25962
@@ -31,6 +31,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getEntities(currentEntitySet: IEntity[], request:
+        IEntityOperationsFacadeRequest)
       parameters:
         - id: currentEntitySet
           type:
@@ -41,7 +44,4 @@ items:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.Controls.IEntityOperationsFacadeRequest
           description: ''
-      content: >-
-        function getEntities(currentEntitySet: IEntity[], request:
-        IEntityOperationsFacadeRequest)
     type: method

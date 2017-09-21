@@ -22,7 +22,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.CommonMethods2To4'
+      name: '@vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.CommonMethods2To4'
     source:
       path: tfs.d.ts
       startLine: 21270
@@ -40,6 +40,7 @@ items:
       - typeScript
     summary: Returns history of all revision for a given work item ID
     syntax:
+      content: 'function getHistory(id: number, top?: number, skip?: number)'
       parameters:
         - id: id
           type:
@@ -55,7 +56,6 @@ items:
             - number
           description: ''
           optional: true
-      content: 'function getHistory(id: number, top?: number, skip?: number)'
       return:
         type:
           - >-
@@ -69,6 +69,7 @@ items:
       - typeScript
     summary: Returns the history value of particular revision
     syntax:
+      content: 'function getHistoryById(id: number, revisionNumber: number)'
       parameters:
         - id: id
           type:
@@ -78,7 +79,6 @@ items:
           type:
             - number
           description: ''
-      content: 'function getHistoryById(id: number, revisionNumber: number)'
       return:
         type:
           - >-
@@ -94,6 +94,9 @@ items:
       - typeScript
     summary: Get a batch of work item links
     syntax:
+      content: >-
+        function getReportingLinks(project?: string, types?: string[],
+        watermark?: number, startDateTime?: Date)
       parameters:
         - id: project
           type:
@@ -122,9 +125,6 @@ items:
             changes that occurred after that date/time will be returned. Cannot
             be used in conjunction with 'watermark' parameter.
           optional: true
-      content: >-
-        function getReportingLinks(project?: string, types?: string[],
-        watermark?: number, startDateTime?: Date)
       return:
         type:
           - >-
@@ -143,6 +143,10 @@ items:
       Get a batch of work item revisions with the option of including deleted
       items
     syntax:
+      content: >-
+        function readReportingRevisionsGet(project?: string, includeDeleted?:
+        boolean, fields?: string[], types?: string[], watermark?: number,
+        startDateTime?: Date, includeIdentityRef?: boolean)
       parameters:
         - id: project
           type:
@@ -191,10 +195,6 @@ items:
             Return an identity reference instead of a string value for identity
             fields.
           optional: true
-      content: >-
-        function readReportingRevisionsGet(project?: string, includeDeleted?:
-        boolean, fields?: string[], types?: string[], watermark?: number,
-        startDateTime?: Date, includeIdentityRef?: boolean)
       return:
         type:
           - >-
@@ -210,6 +210,10 @@ items:
       - typeScript
     summary: Get a batch of work item revisions
     syntax:
+      content: >-
+        function readReportingRevisionsPost(filter:
+        ReportingWorkItemRevisionsFilter, project?: string, watermark?: number,
+        startDateTime?: Date)
       parameters:
         - id: filter
           type:
@@ -238,10 +242,6 @@ items:
             will occur after this date/time. Cannot be used in conjunction with
             'watermark' parameter.
           optional: true
-      content: >-
-        function readReportingRevisionsPost(filter:
-        ReportingWorkItemRevisionsFilter, project?: string, watermark?: number,
-        startDateTime?: Date)
       return:
         type:
           - >-
@@ -257,6 +257,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new WorkItemTrackingHttpClient2(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -267,7 +270,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new WorkItemTrackingHttpClient2(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

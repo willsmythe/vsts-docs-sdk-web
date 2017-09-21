@@ -36,6 +36,9 @@ items:
 
       or it may update the current page view, depending on the current page.
     syntax:
+      content: >-
+        function openNewWorkItem(workItemTypeName: string, initialValues?:
+        IDictionaryStringTo<Object>)
       parameters:
         - id: workItemTypeName
           type:
@@ -48,9 +51,6 @@ items:
             (Optional) A dictionary of any initial field values to set after
             opening the new work item.
           optional: true
-      content: >-
-        function openNewWorkItem(workItemTypeName: string, initialValues?:
-        IDictionaryStringTo<Object>)
       return:
         type:
           - >-
@@ -68,6 +68,7 @@ items:
 
       or it may update the current page view, depending on the current page.
     syntax:
+      content: 'function openWorkItem(workItemId: number, openInNewTab?: boolean)'
       parameters:
         - id: workItemId
           type:
@@ -80,7 +81,6 @@ items:
             (Optional) If true, opens the work item in a new tab. Default is
             false
           optional: true
-      content: 'function openWorkItem(workItemId: number, openInNewTab?: boolean)'
       return:
         type:
           - >-

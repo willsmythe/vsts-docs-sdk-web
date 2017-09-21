@@ -19,7 +19,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.Search.SearchAdapter<any>'
+      name: '@vss-web-extension-sdk.VSS.Search.SearchAdapter<any>'
     source:
       path: vss.d.ts
       startLine: 13098
@@ -36,6 +36,9 @@ items:
       - typeScript
     summary: Adds additional items to the search strategy
     syntax:
+      content: >-
+        function addMoreItems(addItemsCallback: Function, searchCallback:
+        function)
       parameters:
         - id: addItemsCallback
           type:
@@ -46,9 +49,6 @@ items:
             - function
           description: |
             The function which searches the newly updated strategy.
-      content: >-
-        function addMoreItems(addItemsCallback: Function, searchCallback:
-        function)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.attachGrid
     name: 'attachGrid(grid: Grid)'
@@ -60,13 +60,13 @@ items:
       data.
           The grid is loaded asynchronously, so can't be attached on page load when initialized.
     syntax:
+      content: 'function attachGrid(grid: Grid)'
       parameters:
         - id: grid
           type:
             - '@vss-web-extension-sdk.VSS.Controls.Grids.Grid'
           description: |
             The grid to get data from
-      content: 'function attachGrid(grid: Grid)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.createSearchableObjects
@@ -76,8 +76,8 @@ items:
       - typeScript
     summary: Creates SearchableObjects for all available work items
     syntax:
-      parameters: []
       content: function createSearchableObjects()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.constructor
     name: GridSearchAdapter()
@@ -86,8 +86,8 @@ items:
       - typeScript
     summary: ''
     syntax:
-      parameters: []
       content: new GridSearchAdapter()
+      parameters: []
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.handleClear
     name: handleClear()
@@ -96,8 +96,8 @@ items:
       - typeScript
     summary: Handles the search results being cleared and the view resetting to normal.
     syntax:
-      parameters: []
       content: function handleClear()
+      parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.handleError
     name: 'handleError(message: string)'
@@ -106,13 +106,13 @@ items:
       - typeScript
     summary: Handles an error being thrown in the search process.
     syntax:
+      content: 'function handleError(message: string)'
       parameters:
         - id: message
           type:
             - string
           description: |
             Specific error message if provided.
-      content: 'function handleError(message: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.handleResults
     name: 'handleResults(results: any[], finished: boolean)'
@@ -124,6 +124,7 @@ items:
       the ones
           provided in the results array.
     syntax:
+      content: 'function handleResults(results: any[], finished: boolean)'
       parameters:
         - id: results
           type:
@@ -134,7 +135,6 @@ items:
             - boolean
           description: |
             Represents whether or not the search is finished
-      content: 'function handleResults(results: any[], finished: boolean)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.isDataSetComplete
@@ -144,8 +144,8 @@ items:
       - typeScript
     summary: Returns whether or not there is more data to be loaded.
     syntax:
-      parameters: []
       content: function isDataSetComplete()
+      parameters: []
       return:
         type:
           - boolean

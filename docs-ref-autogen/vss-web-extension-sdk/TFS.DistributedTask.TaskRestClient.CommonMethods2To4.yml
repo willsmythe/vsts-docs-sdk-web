@@ -35,7 +35,7 @@ items:
     type: class
     summary: ''
     extends:
-      - '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
+      name: '@vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient'
     source:
       path: tfs.d.ts
       startLine: 9484
@@ -55,6 +55,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function appendLogContent(content: string, scopeIdentifier: string,
+        hubName: string, planId: string, logId: number)
       parameters:
         - id: content
           type:
@@ -78,9 +81,6 @@ items:
           type:
             - number
           description: ''
-      content: >-
-        function appendLogContent(content: string, scopeIdentifier: string,
-        hubName: string, planId: string, logId: number)
       return:
         type:
           - >-
@@ -97,6 +97,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function appendTimelineRecordFeed(lines:
+        VssJsonCollectionWrapperV<string[]>, scopeIdentifier: string, hubName:
+        string, planId: string, timelineId: string, recordId: string)
       parameters:
         - id: lines
           type:
@@ -125,10 +129,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function appendTimelineRecordFeed(lines:
-        VssJsonCollectionWrapperV<string[]>, scopeIdentifier: string, hubName:
-        string, planId: string, timelineId: string, recordId: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -143,6 +143,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new CommonMethods2To4(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -153,9 +156,6 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new CommonMethods2To4(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.CommonMethods2To4.createLog
@@ -167,6 +167,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function createLog(log: TaskLog, scopeIdentifier: string, hubName:
+        string, planId: string)
       parameters:
         - id: log
           type:
@@ -186,9 +189,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function createLog(log: TaskLog, scopeIdentifier: string, hubName:
-        string, planId: string)
       return:
         type:
           - >-
@@ -204,6 +204,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function createTimeline(timeline: Timeline, scopeIdentifier: string,
+        hubName: string, planId: string)
       parameters:
         - id: timeline
           type:
@@ -223,9 +226,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function createTimeline(timeline: Timeline, scopeIdentifier: string,
-        hubName: string, planId: string)
       return:
         type:
           - >-
@@ -241,6 +241,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function deleteTimeline(scopeIdentifier: string, hubName: string,
+        planId: string, timelineId: string)
       parameters:
         - id: scopeIdentifier
           type:
@@ -260,9 +263,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function deleteTimeline(scopeIdentifier: string, hubName: string,
-        planId: string, timelineId: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
@@ -277,6 +277,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getLog(scopeIdentifier: string, hubName: string, planId:
+        string, logId: number, startLine?: number, endLine?: number)
       parameters:
         - id: scopeIdentifier
           type:
@@ -306,9 +309,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getLog(scopeIdentifier: string, hubName: string, planId:
-        string, logId: number, startLine?: number, endLine?: number)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string[]>'
@@ -321,6 +321,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getLogs(scopeIdentifier: string, hubName: string, planId:
+        string)
       parameters:
         - id: scopeIdentifier
           type:
@@ -336,9 +339,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getLogs(scopeIdentifier: string, hubName: string, planId:
-        string)
       return:
         type:
           - >-
@@ -352,6 +352,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getPlan(scopeIdentifier: string, hubName: string, planId:
+        string)
       parameters:
         - id: scopeIdentifier
           type:
@@ -367,9 +370,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getPlan(scopeIdentifier: string, hubName: string, planId:
-        string)
       return:
         type:
           - >-
@@ -385,6 +385,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getRecords(scopeIdentifier: string, hubName: string, planId:
+        string, timelineId: string, changeId?: number)
       parameters:
         - id: scopeIdentifier
           type:
@@ -409,9 +412,6 @@ items:
             - number
           description: ''
           optional: true
-      content: >-
-        function getRecords(scopeIdentifier: string, hubName: string, planId:
-        string, timelineId: string, changeId?: number)
       return:
         type:
           - >-
@@ -427,6 +427,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTimeline(scopeIdentifier: string, hubName: string, planId:
+        string, timelineId: string, changeId?: number, includeRecords?: boolean)
       parameters:
         - id: scopeIdentifier
           type:
@@ -456,9 +459,6 @@ items:
             - boolean
           description: ''
           optional: true
-      content: >-
-        function getTimeline(scopeIdentifier: string, hubName: string, planId:
-        string, timelineId: string, changeId?: number, includeRecords?: boolean)
       return:
         type:
           - >-
@@ -472,6 +472,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function getTimelines(scopeIdentifier: string, hubName: string, planId:
+        string)
       parameters:
         - id: scopeIdentifier
           type:
@@ -487,9 +490,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function getTimelines(scopeIdentifier: string, hubName: string, planId:
-        string)
       return:
         type:
           - >-
@@ -506,6 +506,10 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        function updateRecords(records:
+        VssJsonCollectionWrapperV<TimelineRecord[]>, scopeIdentifier: string,
+        hubName: string, planId: string, timelineId: string)
       parameters:
         - id: records
           type:
@@ -530,10 +534,6 @@ items:
           type:
             - string
           description: ''
-      content: >-
-        function updateRecords(records:
-        VssJsonCollectionWrapperV<TimelineRecord[]>, scopeIdentifier: string,
-        hubName: string, planId: string, timelineId: string)
       return:
         type:
           - >-

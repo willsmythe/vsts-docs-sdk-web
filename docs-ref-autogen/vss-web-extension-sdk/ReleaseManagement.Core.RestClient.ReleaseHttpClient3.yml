@@ -15,7 +15,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.ReleaseManagement.Core.RestClient.CommonMethods3To4
     source:
       path: rmo.d.ts
@@ -36,6 +36,7 @@ items:
       [Preview API] Returns throttled queue as per the task hub license of
       parallel releases
     syntax:
+      content: 'function getQueuedReleases(projectId?: string, releaseId?: number)'
       parameters:
         - id: projectId
           type:
@@ -47,7 +48,6 @@ items:
             - number
           description: ''
           optional: true
-      content: 'function getQueuedReleases(projectId?: string, releaseId?: number)'
       return:
         type:
           - >-
@@ -69,6 +69,15 @@ items:
       - typeScript
     summary: '[Preview API] Get Releases'
     syntax:
+      content: >-
+        function getReleases(project: string, definitionId?: number,
+        definitionEnvironmentId?: number, searchText?: string, createdBy?:
+        string, statusFilter?: ReleaseStatus, environmentStatusFilter?: number,
+        minCreatedTime?: Date, maxCreatedTime?: Date, queryOrder?:
+        ReleaseQueryOrder, top?: number, continuationToken?: number, expand?:
+        ReleaseExpands, artifactTypeId?: string, sourceId?: string,
+        artifactVersionId?: string, sourceBranchFilter?: string, isDeleted?:
+        boolean, tagFilter?: string[], propertyFilters?: string[])
       parameters:
         - id: project
           type:
@@ -185,15 +194,6 @@ items:
             - 'string[]'
           description: A comma-delimited list of extended properties to retrieve.
           optional: true
-      content: >-
-        function getReleases(project: string, definitionId?: number,
-        definitionEnvironmentId?: number, searchText?: string, createdBy?:
-        string, statusFilter?: ReleaseStatus, environmentStatusFilter?: number,
-        minCreatedTime?: Date, maxCreatedTime?: Date, queryOrder?:
-        ReleaseQueryOrder, top?: number, continuationToken?: number, expand?:
-        ReleaseExpands, artifactTypeId?: string, sourceId?: string,
-        artifactVersionId?: string, sourceBranchFilter?: string, isDeleted?:
-        boolean, tagFilter?: string[], propertyFilters?: string[])
       return:
         type:
           - >-
@@ -209,6 +209,9 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: >-
+        new ReleaseHttpClient3(rootRequestPath: string, options?:
+        IVssHttpClientOptions)
       parameters:
         - id: rootRequestPath
           type:
@@ -219,7 +222,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-      content: >-
-        new ReleaseHttpClient3(rootRequestPath: string, options?:
-        IVssHttpClientOptions)
     type: constructor

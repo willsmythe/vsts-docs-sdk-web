@@ -33,6 +33,9 @@ items:
       method to encapsulate a failed result for a widget loading operation
       (load, reload, openLightbox etc)
     syntax:
+      content: >-
+        static function Failure(message: string, isUserVisible?: boolean,
+        isRichText?: boolean)
       parameters:
         - id: message
           type:
@@ -55,9 +58,6 @@ items:
             allowed to set this to true. For any 3rd party widgets passing this
             value as true, it will be ignored.
           optional: true
-      content: >-
-        static function Failure(message: string, isUserVisible?: boolean,
-        isRichText?: boolean)
       return:
         type:
           - >-
@@ -73,6 +73,7 @@ items:
       method to encapsulate a successful result for a widget loading operation
       (load, reload, openLightbox etc)
     syntax:
+      content: 'static function Success(state?: string)'
       parameters:
         - id: state
           type:
@@ -81,7 +82,6 @@ items:
             any state information to be passed to the initiator of the loading
             call.
           optional: true
-      content: 'static function Success(state?: string)'
       return:
         type:
           - >-
@@ -97,8 +97,8 @@ items:
       method to encapsulate a result for a widget loading operation that results
       in the widget being in an unconfigured state.
     syntax:
-      parameters: []
       content: static function Unconfigured()
+      parameters: []
       return:
         type:
           - >-

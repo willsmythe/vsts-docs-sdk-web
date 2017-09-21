@@ -15,7 +15,7 @@ items:
     type: class
     summary: ''
     extends:
-      - >-
+      name: >-
         @vss-web-extension-sdk.VSS.Controls.Dialogs.ModalDialogO<@vss-web-extension-sdk.VSS.Controls.Dialogs.CopyContentDialogOptions>
     source:
       path: vss.d.ts
@@ -33,13 +33,13 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'new CopyContentDialog(options?: any)'
       parameters:
         - id: options
           type:
             - any
           description: ''
           optional: true
-      content: 'new CopyContentDialog(options?: any)'
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Dialogs.CopyContentDialog.enhancementTypeName
@@ -62,8 +62,8 @@ items:
       - typeScript
     summary: Initializes the dialog.
     syntax:
-      parameters: []
       content: function initialize()
+      parameters: []
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Dialogs.CopyContentDialog.initializeOptions
@@ -73,6 +73,7 @@ items:
       - typeScript
     summary: ''
     syntax:
+      content: 'function initializeOptions(options?: any)'
       parameters:
         - id: options
           type:
@@ -80,5 +81,4 @@ items:
           description: |+
 
           optional: true
-      content: 'function initializeOptions(options?: any)'
     type: method
