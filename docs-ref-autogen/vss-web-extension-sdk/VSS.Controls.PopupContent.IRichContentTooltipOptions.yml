@@ -19,7 +19,7 @@ items:
         @vss-web-extension-sdk.VSS.Controls.PopupContent.IPopupContentControlOptions
     source:
       path: vss.d.ts
-      startLine: 15609
+      startLine: 15608
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,7 @@ items:
     type: property
     summary: 'If true, adjust width of the tooltip to better fit content.'
     syntax:
+      content: boolean autoWidth
       return:
         type:
           - boolean
@@ -49,6 +50,7 @@ items:
     type: property
     summary: 'If explicitly set to false, show popup on click, not hover.'
     syntax:
+      content: boolean openCloseOnHover
       return:
         type:
           - boolean
@@ -64,6 +66,7 @@ items:
       If explicitly set to false, don't show the little arrow at the top of the
       tooltip pointing to its parent.
     syntax:
+      content: boolean popupTag
       return:
         type:
           - boolean

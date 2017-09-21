@@ -25,7 +25,7 @@ items:
     summary: Represents a downloadable package.
     source:
       path: tfs.d.ts
-      startLine: 6691
+      startLine: 6690
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -42,6 +42,7 @@ items:
     type: property
     summary: The date the package was created
     syntax:
+      content: Date createdOn
       return:
         type:
           - Date
@@ -55,6 +56,7 @@ items:
     type: property
     summary: A direct link to download the package.
     syntax:
+      content: string downloadUrl
       return:
         type:
           - string
@@ -68,6 +70,7 @@ items:
     type: property
     summary: 'The UI uses this to display instructions, i.e. "unzip MyAgent.zip"'
     syntax:
+      content: string filename
       return:
         type:
           - string
@@ -81,6 +84,7 @@ items:
     type: property
     summary: MD5 hash as a base64 string
     syntax:
+      content: string hashValue
       return:
         type:
           - string
@@ -94,6 +98,7 @@ items:
     type: property
     summary: A link to documentation
     syntax:
+      content: string infoUrl
       return:
         type:
           - string
@@ -107,6 +112,7 @@ items:
     type: property
     summary: 'The platform (win7, linux, etc.)'
     syntax:
+      content: string platform
       return:
         type:
           - string
@@ -119,6 +125,7 @@ items:
     type: property
     summary: The type of package (e.g. "agent")
     syntax:
+      content: string type
       return:
         type:
           - string
@@ -132,6 +139,9 @@ items:
     type: property
     summary: The package version.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.PackageVersion
+        version
       return:
         type:
           - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.PackageVersion'

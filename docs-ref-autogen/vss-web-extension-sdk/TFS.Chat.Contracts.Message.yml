@@ -16,7 +16,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 4090
+      startLine: 4089
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
     type: property
     summary: Message content
     syntax:
+      content: string content
       return:
         type:
           - string
@@ -44,6 +45,7 @@ items:
     type: property
     summary: Message Id
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -56,6 +58,7 @@ items:
     type: property
     summary: 'Message Type, currently only plain text is supported.'
     syntax:
+      content: MessageType messageType
       return:
         type:
           - MessageType
@@ -70,6 +73,7 @@ items:
       User who posted the message. May be null if message came from a system
       account
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef postedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -82,6 +86,7 @@ items:
     type: property
     summary: Id of the room in which message is posted
     syntax:
+      content: number postedRoomId
       return:
         type:
           - number
@@ -94,6 +99,7 @@ items:
     type: property
     summary: Message posted time
     syntax:
+      content: Date postedTime
       return:
         type:
           - Date

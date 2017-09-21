@@ -16,7 +16,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 1667
+      startLine: 1666
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number daysToKeepDeletedReleases
       return:
         type:
           - number
@@ -46,6 +47,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.EnvironmentRetentionPolicy
+        defaultEnvironmentRetentionPolicy
       return:
         type:
           - >-
@@ -60,6 +64,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.EnvironmentRetentionPolicy
+        maximumEnvironmentRetentionPolicy
       return:
         type:
           - >-

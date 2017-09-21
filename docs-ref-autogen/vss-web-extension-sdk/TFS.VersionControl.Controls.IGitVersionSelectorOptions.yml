@@ -23,7 +23,7 @@ items:
       control.
     source:
       path: tfs.d.ts
-      startLine: 16010
+      startLine: 16009
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -42,6 +42,7 @@ items:
       Allows returning the search string as the selected item even if it does
       not match any items in the list
     syntax:
+      content: boolean allowUnmatchedSelection
       return:
         type:
           - boolean
@@ -55,6 +56,7 @@ items:
     type: property
     summary: Hides the "Branches" tab
     syntax:
+      content: boolean disableBranches
       return:
         type:
           - boolean
@@ -70,6 +72,7 @@ items:
       Hides the "Mine" tab populated with branches created or favorited by the
       user, plus the default branch. Defaults false.
     syntax:
+      content: boolean disableMyBranches
       return:
         type:
           - boolean
@@ -83,6 +86,7 @@ items:
     type: property
     summary: Hides the "Tags" tab
     syntax:
+      content: boolean disableTags
       return:
         type:
           - boolean
@@ -96,6 +100,7 @@ items:
     type: property
     summary: Callback for the selected item changed
     syntax:
+      content: function onItemChanged
       return:
         type:
           - function

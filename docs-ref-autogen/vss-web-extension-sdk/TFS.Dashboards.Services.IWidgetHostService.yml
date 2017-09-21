@@ -14,7 +14,7 @@ items:
     summary: a service that manages widget host requests for action.
     source:
       path: tfs.d.ts
-      startLine: 5946
+      startLine: 5945
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -39,6 +39,7 @@ items:
       particular, new unsaved widgets in preview mode do not have an identity
       yet.
     syntax:
+      content: function getWidgetId
       return:
         type:
           - function
@@ -54,6 +55,7 @@ items:
       request the host to open the configuration experience for the widget.
       If the widget doesnt have configuration experience this is a no-op
     syntax:
+      content: function showConfiguration
       return:
         type:
           - function

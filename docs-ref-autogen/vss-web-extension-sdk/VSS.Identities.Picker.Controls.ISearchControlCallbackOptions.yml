@@ -21,7 +21,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 25570
+      startLine: 25569
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -41,6 +41,7 @@ items:
       control instead of the display name and sign-in address of the resolved
       identity
     syntax:
+      content: function getCustomTooltip
       return:
         type:
           - function
@@ -57,6 +58,7 @@ items:
       if supplied, shall be called after the control's default onInputBlur
       action has executed
     syntax:
+      content: function onInputBlur
       return:
         type:
           - function
@@ -73,6 +75,7 @@ items:
       action, if supplied, shall be called after the dropdown's default
       onItemSelect action has executed
     syntax:
+      content: function onItemSelect
       return:
         type:
           - function
@@ -89,6 +92,7 @@ items:
       supplied, shall be called before the dropdown's default onKeyPress action
       has executed to allow for overrides
     syntax:
+      content: function onKeyPress
       return:
         type:
           - function
@@ -105,6 +109,7 @@ items:
       otherwise have been displayed and rearranges or adds to them prior to
       returning the new list
     syntax:
+      content: function preDropdownRender
       return:
         type:
           - function

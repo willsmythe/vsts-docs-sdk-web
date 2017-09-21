@@ -12,7 +12,7 @@ items:
     summary: Maps a contribution to a licensing behavior
     source:
       path: vss.d.ts
-      startLine: 2478
+      startLine: 2477
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -28,6 +28,7 @@ items:
     type: property
     summary: How the inclusion of this contribution should change based on licensing
     syntax:
+      content: ContributionLicensingBehaviorType behavior
       return:
         type:
           - ContributionLicensingBehaviorType
@@ -42,6 +43,7 @@ items:
       Fully qualified contribution id which we want to define licensing behavior
       for
     syntax:
+      content: string id
       return:
         type:
           - string

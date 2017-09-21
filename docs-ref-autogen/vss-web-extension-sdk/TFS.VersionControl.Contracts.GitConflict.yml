@@ -33,7 +33,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 13757
+      startLine: 13756
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -49,6 +49,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number conflictId
       return:
         type:
           - number
@@ -62,6 +63,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string conflictPath
       return:
         type:
           - string
@@ -75,6 +77,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: GitConflictType conflictType
       return:
         type:
           - GitConflictType
@@ -88,6 +91,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef
+        mergeBaseCommit
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef'
@@ -100,6 +106,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitMergeOriginRef
+        mergeOrigin
       return:
         type:
           - >-
@@ -114,6 +123,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef
+        mergeSourceCommit
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef'
@@ -127,6 +139,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef
+        mergeTargetCommit
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef'
@@ -140,6 +155,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: GitResolutionError resolutionError
       return:
         type:
           - GitResolutionError
@@ -153,6 +169,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: GitResolutionStatus resolutionStatus
       return:
         type:
           - GitResolutionStatus
@@ -165,6 +182,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef resolvedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -178,6 +196,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date resolvedDate
       return:
         type:
           - Date
@@ -190,6 +209,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string url
       return:
         type:
           - string

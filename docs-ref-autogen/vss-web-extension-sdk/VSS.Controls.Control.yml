@@ -1,7 +1,7 @@
 ### YamlMime:UniversalReference
 items:
   - uid: vss-web-extension-sdk.VSS.Controls.Control
-    name: Control
+    name: Control<TOptions>
     fullName: Control
     children:
       - vss-web-extension-sdk.VSS.Controls.Control.constructor
@@ -24,7 +24,7 @@ items:
       - '@vss-web-extension-sdk.VSS.Controls.Enhancement<TOptions>'
     source:
       path: vss.d.ts
-      startLine: 9334
+      startLine: 9333
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -75,7 +75,7 @@ items:
           description: ''
           optional: true
       content: >-
-        function create(controlType: function, container: JQuery,
+        static function create(controlType: function, container: JQuery,
         controlOptions: TOptions, enhancementOptions?: EnhancementOptions)
       return:
         type:
@@ -126,8 +126,8 @@ items:
           description: ''
           optional: true
       content: >-
-        function createIn(type?: any, container?: any, options?: TOptions,
-        koCompatable?: boolean)
+        static function createIn(type?: any, container?: any, options?:
+        TOptions, koCompatable?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Control<any>'

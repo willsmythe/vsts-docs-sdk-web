@@ -34,7 +34,7 @@ items:
       manifest and the extension model
     source:
       path: vss.d.ts
-      startLine: 7783
+      startLine: 7782
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -51,6 +51,7 @@ items:
     type: property
     summary: Uri used as base for other relative uri's defined in extension
     syntax:
+      content: string baseUri
       return:
         type:
           - string
@@ -64,6 +65,9 @@ items:
     type: property
     summary: List of contributions made by this extension
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution[]
+        contributions
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution[]'
@@ -77,6 +81,9 @@ items:
     type: property
     summary: List of contribution types defined by this extension
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionType[]
+        contributionTypes
       return:
         type:
           - >-
@@ -91,6 +98,7 @@ items:
     type: property
     summary: List of explicit demands required by this extension
     syntax:
+      content: 'string[] demands'
       return:
         type:
           - 'string[]'
@@ -106,6 +114,9 @@ items:
       Collection of endpoints that get called when particular extension events
       occur
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionEventCallbackCollection
+        eventCallbacks
       return:
         type:
           - >-
@@ -122,6 +133,7 @@ items:
       Secondary location that can be used as base for other relative uri's
       defined in extension
     syntax:
+      content: string fallbackBaseUri
       return:
         type:
           - string
@@ -135,6 +147,7 @@ items:
     type: property
     summary: Language Culture Name set by the Gallery
     syntax:
+      content: string language
       return:
         type:
           - string
@@ -148,6 +161,9 @@ items:
     type: property
     summary: How this extension behaves with respect to licensing
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionLicensing
+        licensing
       return:
         type:
           - >-
@@ -162,6 +178,7 @@ items:
     type: property
     summary: Version of the extension manifest format/content
     syntax:
+      content: number manifestVersion
       return:
         type:
           - number
@@ -174,6 +191,7 @@ items:
     type: property
     summary: List of all oauth scopes required by this extension
     syntax:
+      content: 'string[] scopes'
       return:
         type:
           - 'string[]'
@@ -189,6 +207,7 @@ items:
       The ServiceInstanceType(Guid) of the VSTS service that must be available
       to an account in order for the extension to be installed
     syntax:
+      content: string serviceInstanceType
       return:
         type:
           - string

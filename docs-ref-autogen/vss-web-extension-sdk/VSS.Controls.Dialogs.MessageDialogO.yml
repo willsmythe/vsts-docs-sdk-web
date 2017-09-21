@@ -1,7 +1,7 @@
 ### YamlMime:UniversalReference
 items:
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.MessageDialogO
-    name: MessageDialogO
+    name: MessageDialogO<TOptions>
     fullName: MessageDialogO
     children:
       - vss-web-extension-sdk.VSS.Controls.Dialogs.MessageDialogO.buttons
@@ -20,7 +20,7 @@ items:
       - '@vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO<TOptions>'
     source:
       path: vss.d.ts
-      startLine: 10962
+      startLine: 10961
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,9 @@ items:
     type: property
     summary: Common message dialog buttons
     syntax:
+      content: >-
+        static @vss-web-extension-sdk.VSS.Controls.Dialogs.MessageDialogButtons
+        buttons
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Dialogs.MessageDialogButtons'
@@ -122,7 +125,7 @@ items:
           description: options affecting the dialog
           optional: true
       content: >-
-        function showMessageDialog(message: string, methodOptions?:
+        static function showMessageDialog(message: string, methodOptions?:
         IShowMessageDialogOptions)
       return:
         type:

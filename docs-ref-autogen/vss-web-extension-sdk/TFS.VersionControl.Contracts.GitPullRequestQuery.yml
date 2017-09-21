@@ -14,7 +14,7 @@ items:
     summary: A pull request query
     source:
       path: tfs.d.ts
-      startLine: 14342
+      startLine: 14341
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,9 @@ items:
     type: property
     summary: The query to perform
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestQueryInput[]
+        queries
       return:
         type:
           - >-
@@ -45,6 +48,7 @@ items:
     type: property
     summary: The results of the query
     syntax:
+      content: '[key: string]: function[] results'
       return:
         type:
           - '[key: string]: function[]'

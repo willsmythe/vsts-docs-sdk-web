@@ -15,7 +15,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 14922
+      startLine: 14921
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: SHA1 hash of git object
     syntax:
+      content: string objectId
       return:
         type:
           - string
@@ -43,6 +44,7 @@ items:
     type: property
     summary: Sum of sizes of all children
     syntax:
+      content: number size
       return:
         type:
           - number
@@ -55,6 +57,9 @@ items:
     type: property
     summary: Blobs and trees under this tree
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitTreeEntryRef[]
+        treeEntries
       return:
         type:
           - >-
@@ -68,6 +73,7 @@ items:
     type: property
     summary: Url to tree
     syntax:
+      content: string url
       return:
         type:
           - string

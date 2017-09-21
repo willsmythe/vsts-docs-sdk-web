@@ -48,7 +48,7 @@ items:
         @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
     source:
       path: vss.d.ts
-      startLine: 25259
+      startLine: 25258
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -67,6 +67,9 @@ items:
       Specify the base element, and the relative alignment of the element and
       base
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Identities.Picker.Controls.IControlAlignmentOptions
+        alignment
       return:
         type:
           - >-
@@ -81,6 +84,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string coreCssClass
       return:
         type:
           - string
@@ -99,6 +103,7 @@ items:
         dialogs as well, in order to work with Fabric's dialog model.
         If this is not specified, JQueryUI's default is to append the dialog element to the <body> element.
     syntax:
+      content: string dialogAppendTo
       return:
         type:
           - string
@@ -114,6 +119,9 @@ items:
       Event callback options (making sure the events from the correct instance
       of the dropdown are listened to)
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Identities.Picker.Controls.IIdentityPickerDropdownEventOptions
+        eventOptions
       return:
         type:
           - >-
@@ -130,6 +138,7 @@ items:
       An element that will receive focus when the contact card for an item in
       the dropdown is closed
     syntax:
+      content: JQuery focusElementOnContactCardClose
       return:
         type:
           - JQuery
@@ -143,6 +152,7 @@ items:
     type: property
     summary: whether to preload (e.g. the MRU identities) on control creation.
     syntax:
+      content: boolean loadOnCreate
       return:
         type:
           - boolean
@@ -158,6 +168,7 @@ items:
       DEPRECATED: the minimum length of the prefix to start searching the
       directories - in the absence of an MRU - default 3
     syntax:
+      content: number minimumPrefixSize
       return:
         type:
           - number
@@ -171,6 +182,7 @@ items:
     type: property
     summary: what action should execute when identity dropdown is hidden
     syntax:
+      content: function onHide
       return:
         type:
           - function
@@ -186,6 +198,7 @@ items:
       what action (usually in parent) should execute when an item in this
       dropdown is selected
     syntax:
+      content: function onItemSelect
       return:
         type:
           - function
@@ -199,6 +212,7 @@ items:
     type: property
     summary: restrict displayed identities in dropdown
     syntax:
+      content: number pageSize
       return:
         type:
           - number
@@ -215,6 +229,7 @@ items:
       otherwise have been displayed and rearranges or adds to them prior to
       returning the new list
     syntax:
+      content: function preDropdownRender
       return:
         type:
           - function
@@ -230,6 +245,7 @@ items:
       whether to display the contact card icon for each identity in the
       dropdown. Default false.
     syntax:
+      content: boolean showContactCard
       return:
         type:
           - boolean
@@ -245,6 +261,7 @@ items:
       whether to display the MRU with the search button or just search
       directories directly. Default false.
     syntax:
+      content: boolean showMru
       return:
         type:
           - boolean
@@ -260,6 +277,7 @@ items:
       the size of the control elements (Medium - most elements are 24px, Large -
       32px). Default: Large
     syntax:
+      content: IdentityPickerControlSize size
       return:
         type:
           - IdentityPickerControlSize
@@ -276,6 +294,7 @@ items:
       additional icons and
         text information suitable for small screens.
     syntax:
+      content: boolean smallScreenRender
       return:
         type:
           - boolean
@@ -293,6 +312,7 @@ items:
         For internal use only, this is specifically for the mobile work item form where we want to show the picker in a
         full screen view and the behavior may change over time.
     syntax:
+      content: boolean useRemainingSpace
       return:
         type:
           - boolean
@@ -308,6 +328,7 @@ items:
       the width of the dropdown control. Default is max(positioningElement
       width, 300px)
     syntax:
+      content: number width
       return:
         type:
           - number

@@ -18,7 +18,7 @@ items:
       - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcShelvesetRef'
     source:
       path: tfs.d.ts
-      startLine: 15361
+      startLine: 15360
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -34,6 +34,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChange[] changes'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChange[]'
@@ -46,6 +47,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.VersionControl.Contracts.CheckinNote[] notes'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.CheckinNote[]'
@@ -59,6 +61,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcPolicyOverrideInfo
+        policyOverride
       return:
         type:
           - >-
@@ -72,6 +77,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.AssociatedWorkItem[]
+        workItems
       return:
         type:
           - >-

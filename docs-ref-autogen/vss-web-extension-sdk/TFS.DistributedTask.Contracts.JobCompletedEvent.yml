@@ -18,7 +18,7 @@ items:
       - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobEvent'
     source:
       path: tfs.d.ts
-      startLine: 6615
+      startLine: 6614
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -35,6 +35,10 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        [key: string]:
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableValue
+        outputVariables
       return:
         type:
           - >-
@@ -50,6 +54,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number requestId
       return:
         type:
           - number
@@ -63,6 +68,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: TaskResult result
       return:
         type:
           - TaskResult

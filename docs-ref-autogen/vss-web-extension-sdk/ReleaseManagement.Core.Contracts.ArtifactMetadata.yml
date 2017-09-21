@@ -14,7 +14,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 242
+      startLine: 241
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: Sets alias of artifact.
     syntax:
+      content: string alias
       return:
         type:
           - string
@@ -46,6 +47,9 @@ items:
       Sets instance reference of artifact. e.g. for build artifact it is build
       number.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.BuildVersion
+        instanceReference
       return:
         type:
           - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.BuildVersion'

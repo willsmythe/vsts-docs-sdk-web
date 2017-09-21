@@ -21,7 +21,7 @@ items:
         isStringEntity and isStringEntityId are publicly supported.
     source:
       path: vss.d.ts
-      startLine: 25925
+      startLine: 25924
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -46,7 +46,9 @@ items:
             - string
           description: ''
           optional: true
-      content: 'function createStringEntity(displayName: string, imageUrl?: string)'
+      content: >-
+        static function createStringEntity(displayName: string, imageUrl?:
+        string)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity'
@@ -64,7 +66,7 @@ items:
           type:
             - string
           description: ''
-      content: 'function isStringEntityId(entityId: string)'
+      content: 'static function isStringEntityId(entityId: string)'
       return:
         type:
           - boolean
@@ -82,7 +84,7 @@ items:
           type:
             - string
           description: ''
-      content: 'function isStringPrefixedLocalId(localId: string)'
+      content: 'static function isStringPrefixedLocalId(localId: string)'
       return:
         type:
           - boolean
@@ -97,6 +99,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string STRING_ENTITY_TYPE
       return:
         type:
           - string

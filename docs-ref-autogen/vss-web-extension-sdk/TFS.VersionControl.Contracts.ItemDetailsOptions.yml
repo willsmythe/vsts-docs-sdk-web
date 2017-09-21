@@ -14,7 +14,7 @@ items:
     summary: Optional details to include when returning an item model
     source:
       path: tfs.d.ts
-      startLine: 15042
+      startLine: 15041
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: 'If true, include metadata about the file type'
     syntax:
+      content: boolean includeContentMetadata
       return:
         type:
           - boolean
@@ -46,6 +47,7 @@ items:
       Specifies whether to include children (OneLevel), all descendants (Full)
       or None for folder items
     syntax:
+      content: VersionControlRecursionType recursionLevel
       return:
         type:
           - VersionControlRecursionType

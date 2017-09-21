@@ -20,7 +20,7 @@ items:
     summary: A request for an extension (to be installed or have a license assigned)
     source:
       path: vss.d.ts
-      startLine: 19967
+      startLine: 19966
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
     type: property
     summary: THe unique name of the extensions
     syntax:
+      content: string extensionName
       return:
         type:
           - string
@@ -50,6 +51,9 @@ items:
     type: property
     summary: A list of each request for the extension
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionRequest[]
+        extensionRequests
       return:
         type:
           - >-
@@ -64,6 +68,7 @@ items:
     type: property
     summary: DisplayName of the publisher that owns the extension being published.
     syntax:
+      content: string publisherDisplayName
       return:
         type:
           - string
@@ -77,6 +82,7 @@ items:
     type: property
     summary: Represents the Publisher of the requested extension
     syntax:
+      content: string publisherName
       return:
         type:
           - string
@@ -90,6 +96,7 @@ items:
     type: property
     summary: The total number of requests for an extension
     syntax:
+      content: number requestCount
       return:
         type:
           - number

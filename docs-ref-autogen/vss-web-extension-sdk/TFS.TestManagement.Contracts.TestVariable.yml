@@ -18,7 +18,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 11495
+      startLine: 11494
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -35,6 +35,7 @@ items:
     type: property
     summary: Description of the test variable
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -47,6 +48,7 @@ items:
     type: property
     summary: Id of the test variable
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -59,6 +61,7 @@ items:
     type: property
     summary: Name of the test variable
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -71,6 +74,9 @@ items:
     type: property
     summary: Project to which the test variable belongs
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        project
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -83,6 +89,7 @@ items:
     type: property
     summary: Revision
     syntax:
+      content: number revision
       return:
         type:
           - number
@@ -95,6 +102,7 @@ items:
     type: property
     summary: Url of the test variable
     syntax:
+      content: string url
       return:
         type:
           - string
@@ -107,6 +115,7 @@ items:
     type: property
     summary: List of allowed values
     syntax:
+      content: 'string[] values'
       return:
         type:
           - 'string[]'

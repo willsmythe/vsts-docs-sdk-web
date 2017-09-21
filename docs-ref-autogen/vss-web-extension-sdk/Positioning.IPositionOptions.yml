@@ -33,7 +33,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 34085
+      startLine: 34084
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -52,6 +52,7 @@ items:
       flag to specify that markers should be used to horizontally align the
       elements rather than the elements themselves.
     syntax:
+      content: boolean alignToMarkerHorizontal
       return:
         type:
           - boolean
@@ -67,6 +68,7 @@ items:
       flag to specify that markers should be used to vertically align the
       elements rather than the elements themselves.
     syntax:
+      content: boolean alignToMarkerVertical
       return:
         type:
           - boolean
@@ -79,6 +81,7 @@ items:
     type: property
     summary: where to align the element against base element (horizontal-vertical)
     syntax:
+      content: string baseAlign
       return:
         type:
           - string
@@ -94,6 +97,7 @@ items:
       jQuery object inside the base element that should be aligned with the
       element
     syntax:
+      content: JQuery baseAlignmentMarker
       return:
         type:
           - JQuery
@@ -107,6 +111,7 @@ items:
     type: property
     summary: where to align the element (horizontal-vertical)
     syntax:
+      content: string elementAlign
       return:
         type:
           - string
@@ -120,6 +125,7 @@ items:
     type: property
     summary: jQuery object inside the element that should be aligned with the base
     syntax:
+      content: JQuery elementAlignmentMarker
       return:
         type:
           - JQuery
@@ -135,6 +141,7 @@ items:
       how much extra left offset (if any) should be given to the target element
       versus the reference element.
     syntax:
+      content: number leftOffsetPixels
       return:
         type:
           - number
@@ -147,6 +154,7 @@ items:
     type: property
     summary: behavior when the element overflows the window (horizontal-vertical)
     syntax:
+      content: string overflow
       return:
         type:
           - string
@@ -162,6 +170,7 @@ items:
       Indicates whether the scroll should by browser window or the specified
       marker or not.
     syntax:
+      content: boolean scrollByMarker
       return:
         type:
           - boolean
@@ -175,6 +184,7 @@ items:
     type: property
     summary: prevent setting z-index on the target element
     syntax:
+      content: boolean skipZIndexSetting
       return:
         type:
           - boolean
@@ -188,6 +198,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean supportScroll
       return:
         type:
           - boolean
@@ -203,6 +214,7 @@ items:
       how much extra top offset (if any) should be given to the target element
       versus the reference element.
     syntax:
+      content: number topOffsetPixels
       return:
         type:
           - number

@@ -32,7 +32,7 @@ items:
     summary: Provides helper functions for extensions-related types.
     source:
       path: vss.d.ts
-      startLine: 8988
+      startLine: 8987
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -53,7 +53,7 @@ items:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose extension is being requested
-      content: 'function getExtensionId(contribution: Contribution)'
+      content: 'static function getExtensionId(contribution: Contribution)'
       return:
         type:
           - string
@@ -72,7 +72,7 @@ items:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution to get the id of
-      content: 'function getFullContributionId(contribution: Contribution)'
+      content: 'static function getFullContributionId(contribution: Contribution)'
       return:
         type:
           - string
@@ -91,7 +91,7 @@ items:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose publisher is being requested
-      content: 'function getPublisherId(contribution: Contribution)'
+      content: 'static function getPublisherId(contribution: Contribution)'
       return:
         type:
           - string
@@ -115,7 +115,9 @@ items:
           description: |
             The property name which contains the content uri ("uri" by default)
           optional: true
-      content: 'function hasContent(contribution: Contribution, uriProperty?: string)'
+      content: >-
+        static function hasContent(contribution: Contribution, uriProperty?:
+        string)
       return:
         type:
           - boolean
@@ -136,7 +138,7 @@ items:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose properties to check
-      content: 'function hasInternalContent(contribution: Contribution)'
+      content: 'static function hasInternalContent(contribution: Contribution)'
       return:
         type:
           - boolean
@@ -160,7 +162,7 @@ items:
           description: |
             The full id of the contribution type to check for
       content: >-
-        function isContributionOfType(contribution: Contribution,
+        static function isContributionOfType(contribution: Contribution,
         contributionType: string)
       return:
         type:
@@ -180,7 +182,7 @@ items:
             - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
           description: |
             The contribution whose trust to check
-      content: 'function isContributionTrusted(contribution: Contribution)'
+      content: 'static function isContributionTrusted(contribution: Contribution)'
       return:
         type:
           - boolean
@@ -211,8 +213,8 @@ items:
           description: ''
           optional: true
       content: >-
-        function publishTraceData(contribution: Contribution, data?: string,
-        contributionId?: string)
+        static function publishTraceData(contribution: Contribution, data?:
+        string, contributionId?: string)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.ExtensionHelper.resolveTemplateString
@@ -232,7 +234,7 @@ items:
             - any
           description: ''
       content: >-
-        function resolveTemplateString(templateString: string,
+        static function resolveTemplateString(templateString: string,
         replacementObject: any)
       return:
         type:
@@ -264,8 +266,8 @@ items:
             - string
           description: ''
       content: >-
-        function resolveUriTemplate(templateString: string, replacementObject:
-        any, baseUri: string)
+        static function resolveUriTemplate(templateString: string,
+        replacementObject: any, baseUri: string)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
@@ -302,7 +304,7 @@ items:
           description: ''
           optional: true
       content: >-
-        function resolveUriTemplateProperty(contribution: Contribution,
+        static function resolveUriTemplateProperty(contribution: Contribution,
         replacementObject: any, propertyName?: string, baseUri?: string)
       return:
         type:

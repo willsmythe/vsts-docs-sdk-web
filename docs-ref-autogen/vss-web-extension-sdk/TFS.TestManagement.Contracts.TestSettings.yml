@@ -24,7 +24,7 @@ items:
       fetch test settings
     source:
       path: tfs.d.ts
-      startLine: 11427
+      startLine: 11426
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -40,6 +40,7 @@ items:
     type: property
     summary: Area path required to create test settings
     syntax:
+      content: string areaPath
       return:
         type:
           - string
@@ -53,6 +54,7 @@ items:
     type: property
     summary: Description of the test settings. Used in create test settings.
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -67,6 +69,7 @@ items:
       Indicates if the tests settings is public or private.Used in create test
       settings.
     syntax:
+      content: boolean isPublic
       return:
         type:
           - boolean
@@ -80,6 +83,7 @@ items:
     type: property
     summary: Xml string of machine roles. Used in create test settings.
     syntax:
+      content: string machineRoles
       return:
         type:
           - string
@@ -93,6 +97,7 @@ items:
     type: property
     summary: Test settings content.
     syntax:
+      content: string testSettingsContent
       return:
         type:
           - string
@@ -106,6 +111,7 @@ items:
     type: property
     summary: Test settings id.
     syntax:
+      content: number testSettingsId
       return:
         type:
           - number
@@ -119,6 +125,7 @@ items:
     type: property
     summary: Test settings name.
     syntax:
+      content: string testSettingsName
       return:
         type:
           - string

@@ -26,7 +26,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 13725
+      startLine: 13724
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -43,6 +43,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number aheadCount
       return:
         type:
           - number
@@ -56,6 +57,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean allChangesIncluded
       return:
         type:
           - boolean
@@ -69,6 +71,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string baseCommit
       return:
         type:
           - string
@@ -82,6 +85,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number behindCount
       return:
         type:
           - number
@@ -95,6 +99,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '[key: number]: number changeCounts'
       return:
         type:
           - '[key: number]: number'
@@ -107,6 +112,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange[] changes'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitChange[]'
@@ -120,6 +126,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string commonCommit
       return:
         type:
           - string
@@ -133,6 +140,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string targetCommit
       return:
         type:
           - string

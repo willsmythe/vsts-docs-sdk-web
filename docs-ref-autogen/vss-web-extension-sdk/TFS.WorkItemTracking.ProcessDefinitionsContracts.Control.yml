@@ -37,7 +37,7 @@ items:
     summary: Represent a control in the form.
     source:
       path: tfs.d.ts
-      startLine: 19327
+      startLine: 19326
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -54,6 +54,9 @@ items:
     type: property
     summary: Contribution for the control.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsContracts.WitContribution
+        contribution
       return:
         type:
           - >-
@@ -68,6 +71,7 @@ items:
     type: property
     summary: Type of the control.
     syntax:
+      content: string controlType
       return:
         type:
           - string
@@ -81,6 +85,7 @@ items:
     type: property
     summary: 'Height of the control, for html controls.'
     syntax:
+      content: number height
       return:
         type:
           - number
@@ -94,6 +99,7 @@ items:
     type: property
     summary: The id for the layout node.
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -109,6 +115,7 @@ items:
       A value indicating whether this layout node has been inherited from a
       parent layout.  This is expected to only be only set by the combiner.
     syntax:
+      content: boolean inherited
       return:
         type:
           - boolean
@@ -122,6 +129,7 @@ items:
     type: property
     summary: A value indicating if the layout node is contribution or not.
     syntax:
+      content: boolean isContribution
       return:
         type:
           - boolean
@@ -135,6 +143,7 @@ items:
     type: property
     summary: Label for the field
     syntax:
+      content: string label
       return:
         type:
           - string
@@ -148,6 +157,7 @@ items:
     type: property
     summary: Inner text of the control.
     syntax:
+      content: string metadata
       return:
         type:
           - string
@@ -161,6 +171,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number order
       return:
         type:
           - number
@@ -176,6 +187,7 @@ items:
       A value indicating whether this layout node has been overridden by a child
       layout.
     syntax:
+      content: boolean overridden
       return:
         type:
           - boolean
@@ -189,6 +201,7 @@ items:
     type: property
     summary: A value indicating if the control is readonly.
     syntax:
+      content: boolean readOnly
       return:
         type:
           - boolean
@@ -202,6 +215,7 @@ items:
     type: property
     summary: A value indicating if the control should be hidden or not.
     syntax:
+      content: boolean visible
       return:
         type:
           - boolean
@@ -215,6 +229,7 @@ items:
     type: property
     summary: Watermark text for the textbox.
     syntax:
+      content: string watermark
       return:
         type:
           - string

@@ -14,7 +14,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 7456
+      startLine: 7455
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,9 @@ items:
       is simply a meta task to call another task. This is useful for tasks that
       call utility tasks like powershell and commandline
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskReference
+        execTask
       return:
         type:
           - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskReference'
@@ -55,6 +58,7 @@ items:
       "powershelltask.tasks.automation.teamfoundation.microsoft.com", } node: {
       script: "powershellhost.js", }
     syntax:
+      content: '[key: string]: function platformInstructions'
       return:
         type:
           - '[key: string]: function'

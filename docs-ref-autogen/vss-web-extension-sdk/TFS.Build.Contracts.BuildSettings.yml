@@ -16,7 +16,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 898
+      startLine: 897
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number daysToKeepDeletedBuildsBeforeDestroy
       return:
         type:
           - number
@@ -46,6 +47,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Build.Contracts.RetentionPolicy
+        defaultRetentionPolicy
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.RetentionPolicy'
@@ -59,6 +63,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Build.Contracts.RetentionPolicy
+        maximumRetentionPolicy
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.RetentionPolicy'

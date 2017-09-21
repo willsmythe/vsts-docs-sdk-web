@@ -14,7 +14,7 @@ items:
     summary: Represents version information for a REST Api resource
     source:
       path: vss.d.ts
-      startLine: 35022
+      startLine: 35021
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
       the public sees and is used for a large group of services (e.g. the TFS
       1.0 API)
     syntax:
+      content: string apiVersion
       return:
         type:
           - string
@@ -45,6 +46,7 @@ items:
     type: property
     summary: Is the public API version in preview
     syntax:
+      content: boolean isPreview
       return:
         type:
           - boolean
@@ -65,6 +67,7 @@ items:
       will still work (requests will be sent to the older version) and
       new/upgraded clients will talk to the new version of the resource.
     syntax:
+      content: number resourceVersion
       return:
         type:
           - number

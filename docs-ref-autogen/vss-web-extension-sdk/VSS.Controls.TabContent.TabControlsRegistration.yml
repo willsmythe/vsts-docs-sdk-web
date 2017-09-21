@@ -24,7 +24,7 @@ items:
       tabControl to get tab group when group is not specified in the option.
     source:
       path: vss.d.ts
-      startLine: 17197
+      startLine: 17196
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -48,7 +48,7 @@ items:
           description: |
             for the targeted tab control
           optional: true
-      content: 'function clearRegistrations(tabControlId?: string)'
+      content: 'static function clearRegistrations(tabControlId?: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.TabContent.TabControlsRegistration.getRegisteredTabGroups
@@ -63,7 +63,7 @@ items:
           type:
             - string
           description: ''
-      content: 'function getRegisteredTabGroups(tagControlId: string)'
+      content: 'static function getRegisteredTabGroups(tagControlId: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.TabContent.TabControlsRegistration.registerTab
@@ -87,7 +87,7 @@ items:
           type:
             - '@vss-web-extension-sdk.VSS.Controls.TabContent.ITabRegistration<T>'
           description: a tab and group
-      content: 'function registerTab(registration: ITabRegistration<T>)'
+      content: 'static function registerTab(registration: ITabRegistration<T>)'
       return:
         type:
           - string
@@ -109,7 +109,9 @@ items:
               @vss-web-extension-sdk.VSS.Controls.TabContent.ITabGroupRegistration
           description: |
             The group that needs to be registered
-      content: 'function registerTabGroup(groupRegistration: ITabGroupRegistration)'
+      content: >-
+        static function registerTabGroup(groupRegistration:
+        ITabGroupRegistration)
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.TabContent.TabControlsRegistration.removeTab
@@ -129,7 +131,7 @@ items:
             - string
           description: |
             for tab
-      content: 'function removeTab(tabControlId: string, id: string)'
+      content: 'static function removeTab(tabControlId: string, id: string)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.TabContent.TabControlsRegistration.removeTabGroup
@@ -149,5 +151,5 @@ items:
             - string
           description: |
             for tab group
-      content: 'function removeTabGroup(tabControlId: string, groupId: string)'
+      content: 'static function removeTabGroup(tabControlId: string, groupId: string)'
     type: method

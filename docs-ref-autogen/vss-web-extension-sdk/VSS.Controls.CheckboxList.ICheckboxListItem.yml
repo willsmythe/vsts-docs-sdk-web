@@ -21,7 +21,7 @@ items:
       Not enforced - you may supply raw string items if preferred.
     source:
       path: vss.d.ts
-      startLine: 9498
+      startLine: 9497
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
     type: property
     summary: Whether the item is checked.
     syntax:
+      content: boolean checked
       return:
         type:
           - boolean
@@ -49,6 +50,7 @@ items:
     type: property
     summary: Custom display element to render instead of 'text'.
     syntax:
+      content: JQuery content
       return:
         type:
           - JQuery
@@ -61,6 +63,7 @@ items:
     type: property
     summary: Css class to be applied to this item.
     syntax:
+      content: string cssClass
       return:
         type:
           - string
@@ -73,6 +76,7 @@ items:
     type: property
     summary: The item's display text. Ignored if 'content' is supplied.
     syntax:
+      content: string text
       return:
         type:
           - string
@@ -85,6 +89,7 @@ items:
     type: property
     summary: The item's tooltip.
     syntax:
+      content: string title
       return:
         type:
           - string
@@ -97,6 +102,7 @@ items:
     type: property
     summary: The item's identifier or representative value.
     syntax:
+      content: any value
       return:
         type:
           - any

@@ -34,7 +34,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 12064
+      startLine: 12063
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -50,6 +50,7 @@ items:
     type: property
     summary: Determines whether sorting this column is enabled or not
     syntax:
+      content: boolean canMove
       return:
         type:
           - boolean
@@ -62,6 +63,7 @@ items:
     type: property
     summary: Determines whether moving this column is enabled or not
     syntax:
+      content: boolean canSortBy
       return:
         type:
           - boolean
@@ -74,6 +76,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: function comparer
       return:
         type:
           - function
@@ -86,6 +89,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: any fieldId
       return:
         type:
           - any
@@ -98,6 +102,7 @@ items:
     type: property
     summary: Determines whether column moving effects this column or not
     syntax:
+      content: boolean fixed
       return:
         type:
           - boolean
@@ -110,6 +115,7 @@ items:
     type: property
     summary: 'If the value of cell is Date, format is used (like ''mm/dd/yyyy'')'
     syntax:
+      content: string format
       return:
         type:
           - string
@@ -122,6 +128,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: function getCellContents
       return:
         type:
           - function
@@ -134,6 +141,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: function getColumnValue
       return:
         type:
           - function
@@ -146,6 +154,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: function getHeaderCellContents
       return:
         type:
           - function
@@ -158,6 +167,7 @@ items:
     type: property
     summary: Css class to be added to the header cell
     syntax:
+      content: string headerCss
       return:
         type:
           - string
@@ -170,6 +180,7 @@ items:
     type: property
     summary: Determines whether the column should be hidden or not
     syntax:
+      content: boolean hidden
       return:
         type:
           - boolean
@@ -182,6 +193,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number hrefIndex
       return:
         type:
           - number
@@ -194,6 +206,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean indent
       return:
         type:
           - boolean
@@ -206,6 +219,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number indentOffset
       return:
         type:
           - number
@@ -223,6 +237,7 @@ items:
       the data source is expected to be an object. Then object[index] is
       displayed in the column.
     syntax:
+      content: any index
       return:
         type:
           - any
@@ -235,6 +250,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isSearchable
       return:
         type:
           - boolean
@@ -247,6 +263,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number maxLength
       return:
         type:
           - number
@@ -259,6 +276,7 @@ items:
     type: property
     summary: Name of the column used for identification purposes
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -271,6 +289,7 @@ items:
     type: property
     summary: Specifies how ordering should be performed ("asc" or "desc")
     syntax:
+      content: string order
       return:
         type:
           - string
@@ -283,6 +302,7 @@ items:
     type: property
     summary: Css class to be added to the cells under this column
     syntax:
+      content: string rowCss
       return:
         type:
           - string
@@ -295,6 +315,7 @@ items:
     type: property
     summary: Display text of the column
     syntax:
+      content: string text
       return:
         type:
           - string
@@ -307,6 +328,7 @@ items:
     type: property
     summary: Tooltip text of the column
     syntax:
+      content: string tooltip
       return:
         type:
           - string
@@ -319,6 +341,7 @@ items:
     type: property
     summary: Width of the column in pixels
     syntax:
+      content: number width
       return:
         type:
           - number

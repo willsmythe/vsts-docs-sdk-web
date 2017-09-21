@@ -20,7 +20,7 @@ items:
       host
     source:
       path: rmo.d.ts
-      startLine: 2205
+      startLine: 2204
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -43,6 +43,7 @@ items:
       It is important to have atleast one call back, since that's how an
       extension can get information about the current release.
     syntax:
+      content: function onReleaseChanged
       return:
         type:
           - function
@@ -58,6 +59,7 @@ items:
       Optional, If needed, this callback will be called when this particular
       extension is selected/displayed
     syntax:
+      content: function onViewDisplayed
       return:
         type:
           - function
@@ -73,6 +75,7 @@ items:
       Optional, for a given tab id, which can be contribution id,
       the corresponding tab is selected if the tab is visible.
     syntax:
+      content: function selectTab
       return:
         type:
           - function

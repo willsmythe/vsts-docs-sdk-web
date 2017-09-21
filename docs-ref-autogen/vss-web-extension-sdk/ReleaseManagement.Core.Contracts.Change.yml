@@ -17,7 +17,7 @@ items:
     summary: Represents a change associated with a build.
     source:
       path: rmo.d.ts
-      startLine: 344
+      startLine: 343
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
     type: property
     summary: The author of the change.
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef author'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -45,6 +46,7 @@ items:
     type: property
     summary: 'The type of change. "commit", "changeset", etc.'
     syntax:
+      content: string changeType
       return:
         type:
           - string
@@ -57,6 +59,7 @@ items:
     type: property
     summary: The location of a user-friendly representation of the resource.
     syntax:
+      content: string displayUri
       return:
         type:
           - string
@@ -71,6 +74,7 @@ items:
       Something that identifies the change. For a commit, this would be the
       SHA1. For a TFVC changeset, this would be the changeset id.
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -83,6 +87,7 @@ items:
     type: property
     summary: The location of the full representation of the resource.
     syntax:
+      content: string location
       return:
         type:
           - string
@@ -97,6 +102,7 @@ items:
       A description of the change. This might be a commit message or changeset
       description.
     syntax:
+      content: string message
       return:
         type:
           - string
@@ -109,6 +115,7 @@ items:
     type: property
     summary: A timestamp for the change.
     syntax:
+      content: Date timestamp
       return:
         type:
           - Date

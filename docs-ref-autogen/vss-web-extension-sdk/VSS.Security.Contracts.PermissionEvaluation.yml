@@ -16,7 +16,7 @@ items:
     summary: Represents an evaluated permission.
     source:
       path: vss.d.ts
-      startLine: 31412
+      startLine: 31411
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
     type: property
     summary: Permission bit for this evaluated permission.
     syntax:
+      content: number permissions
       return:
         type:
           - number
@@ -46,6 +47,7 @@ items:
     type: property
     summary: Security namespace identifier for this evaluated permission.
     syntax:
+      content: string securityNamespaceId
       return:
         type:
           - string
@@ -58,6 +60,7 @@ items:
     type: property
     summary: Security namespace-specific token for this evaluated permission.
     syntax:
+      content: string token
       return:
         type:
           - string
@@ -70,6 +73,7 @@ items:
     type: property
     summary: Permission evaluation value.
     syntax:
+      content: boolean value
       return:
         type:
           - boolean

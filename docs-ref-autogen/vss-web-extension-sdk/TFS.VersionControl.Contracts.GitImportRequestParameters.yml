@@ -19,7 +19,7 @@ items:
     summary: Parameters for creating an import request
     source:
       path: tfs.d.ts
-      startLine: 14071
+      startLine: 14070
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,7 @@ items:
     type: property
     summary: Option to delete service endpoint when import is done
     syntax:
+      content: boolean deleteServiceEndpointAfterImportIsDone
       return:
         type:
           - boolean
@@ -49,6 +50,9 @@ items:
     type: property
     summary: Source for importing git repository
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitImportGitSource
+        gitSource
       return:
         type:
           - >-
@@ -63,6 +67,7 @@ items:
     type: property
     summary: Service Endpoint for connection to external endpoint
     syntax:
+      content: string serviceEndpointId
       return:
         type:
           - string
@@ -76,6 +81,9 @@ items:
     type: property
     summary: Source for importing tfvc repository
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitImportTfvcSource
+        tfvcSource
       return:
         type:
           - >-

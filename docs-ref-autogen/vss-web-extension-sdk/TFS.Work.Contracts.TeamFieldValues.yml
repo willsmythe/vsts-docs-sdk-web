@@ -15,7 +15,7 @@ items:
       - '@vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsDataContractBase'
     source:
       path: tfs.d.ts
-      startLine: 22197
+      startLine: 22196
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: The default team field value
     syntax:
+      content: string defaultValue
       return:
         type:
           - string
@@ -43,6 +44,7 @@ items:
     type: property
     summary: Shallow ref to the field being used as a team field
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Work.Contracts.FieldReference field'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.FieldReference'
@@ -55,6 +57,7 @@ items:
     type: property
     summary: Collection of all valid team field values
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Work.Contracts.TeamFieldValue[] values'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.TeamFieldValue[]'

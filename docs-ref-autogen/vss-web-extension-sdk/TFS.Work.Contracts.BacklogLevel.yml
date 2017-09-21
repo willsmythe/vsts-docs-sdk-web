@@ -15,7 +15,7 @@ items:
     summary: Contract representing a backlog level
     source:
       path: tfs.d.ts
-      startLine: 21608
+      startLine: 21607
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
     type: property
     summary: Reference name of the corresponding WIT category
     syntax:
+      content: string categoryReferenceName
       return:
         type:
           - string
@@ -44,6 +45,7 @@ items:
     type: property
     summary: Plural name for the backlog level
     syntax:
+      content: string pluralName
       return:
         type:
           - string
@@ -58,6 +60,7 @@ items:
       Collection of work item states that are included in the plan. The server
       will filter to only these work item types.
     syntax:
+      content: 'string[] workItemStates'
       return:
         type:
           - 'string[]'
@@ -70,6 +73,7 @@ items:
     type: property
     summary: Collection of valid workitem type names for the given backlog level
     syntax:
+      content: 'string[] workItemTypes'
       return:
         type:
           - 'string[]'

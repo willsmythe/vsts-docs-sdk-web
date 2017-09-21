@@ -30,7 +30,7 @@ items:
         @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPoolReference
     source:
       path: tfs.d.ts
-      startLine: 6997
+      startLine: 6996
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -47,6 +47,9 @@ items:
     type: property
     summary: Gets the administrators group for this agent pool.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+        administratorsGroup
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -62,6 +65,7 @@ items:
       Gets or sets a value indicating whether or not a queue should be
       automatically provisioned for each project collection or not.
     syntax:
+      content: boolean autoProvision
       return:
         type:
           - boolean
@@ -78,6 +82,7 @@ items:
       automatically added into the administrators group for the pool on
       creation.
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef createdBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -91,6 +96,7 @@ items:
     type: property
     summary: Gets the date/time of the pool creation.
     syntax:
+      content: Date createdOn
       return:
         type:
           - Date
@@ -104,6 +110,7 @@ items:
     type: property
     summary: Gets the scope identifier for groups/roles which are owned by this pool.
     syntax:
+      content: string groupScopeId
       return:
         type:
           - string
@@ -117,6 +124,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: any properties
       return:
         type:
           - any
@@ -132,6 +140,7 @@ items:
       Gets a value indicating whether or not roles have been provisioned for
       this pool.
     syntax:
+      content: boolean provisioned
       return:
         type:
           - boolean
@@ -145,6 +154,9 @@ items:
     type: property
     summary: Gets the service accounts group for this agent pool.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+        serviceAccountsGroup
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -157,6 +169,7 @@ items:
     type: property
     summary: Gets the current size of the pool.
     syntax:
+      content: number size
       return:
         type:
           - number

@@ -17,7 +17,7 @@ items:
     summary: Context for the limit message handler on why the upload limit was reached.
     source:
       path: vss.d.ts
-      startLine: 11433
+      startLine: 11432
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,7 @@ items:
       Number of files the user attempted to upload, if it was capped by
       maximumNumberOfFiles in the options.
     syntax:
+      content: number fileCount
       return:
         type:
           - number
@@ -49,6 +50,7 @@ items:
     type: property
     summary: 'Size of the file that was too large, in bytes.'
     syntax:
+      content: number fileSize
       return:
         type:
           - number
@@ -62,6 +64,7 @@ items:
     type: property
     summary: 'Total size of all files, if the size was too large, in bytes.'
     syntax:
+      content: number totalSize
       return:
         type:
           - number

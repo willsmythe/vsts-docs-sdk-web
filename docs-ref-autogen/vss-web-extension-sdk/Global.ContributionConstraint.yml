@@ -17,7 +17,7 @@ items:
       given contribution
     source:
       path: vss.d.ts
-      startLine: 1446
+      startLine: 1445
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -38,6 +38,7 @@ items:
       constraints are OR'd (only one group needs to evaluate to True for the
       contribution to be included).
     syntax:
+      content: number group
       return:
         type:
           - number
@@ -52,6 +53,7 @@ items:
       If true, negate the result of the filter (include the contribution if the
       applied filter returns false instead of true)
     syntax:
+      content: boolean inverse
       return:
         type:
           - boolean
@@ -64,6 +66,7 @@ items:
     type: property
     summary: Name of the IContributionFilter class
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -76,6 +79,7 @@ items:
     type: property
     summary: Properties that are fed to the contribution filter class
     syntax:
+      content: any properties
       return:
         type:
           - any
@@ -93,6 +97,7 @@ items:
       default behaviour will elimiate the contribution from the tree completely
       if the constraint is applied.
     syntax:
+      content: 'string[] relationships'
       return:
         type:
           - 'string[]'

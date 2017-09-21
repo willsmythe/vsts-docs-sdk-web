@@ -12,7 +12,7 @@ items:
     summary: Context passed to hubs-providers in calls to get hubs
     source:
       path: vss.d.ts
-      startLine: 1020
+      startLine: 1019
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -28,6 +28,7 @@ items:
     type: property
     summary: The contribution id of the owning control
     syntax:
+      content: string contributionId
       return:
         type:
           - string
@@ -42,6 +43,7 @@ items:
       Method that can be called when hubs change in order to update the owning
       control
     syntax:
+      content: Function refreshDelegate
       return:
         type:
           - Function

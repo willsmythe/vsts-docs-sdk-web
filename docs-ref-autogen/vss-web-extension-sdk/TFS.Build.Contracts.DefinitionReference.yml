@@ -22,7 +22,7 @@ items:
     summary: A reference to a definition.
     source:
       path: tfs.d.ts
-      startLine: 1088
+      startLine: 1087
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -38,6 +38,7 @@ items:
     type: property
     summary: The date the definition was created
     syntax:
+      content: Date createdDate
       return:
         type:
           - Date
@@ -50,6 +51,7 @@ items:
     type: property
     summary: Id of the resource
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -62,6 +64,7 @@ items:
     type: property
     summary: 'Name of the linked resource (definition name, controller name, etc.)'
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -74,6 +77,7 @@ items:
     type: property
     summary: The path this definitions belongs to
     syntax:
+      content: string path
       return:
         type:
           - string
@@ -86,6 +90,7 @@ items:
     type: property
     summary: The project.
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference project'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference'
@@ -98,6 +103,7 @@ items:
     type: property
     summary: If builds can be queued from this definition
     syntax:
+      content: DefinitionQueueStatus queueStatus
       return:
         type:
           - DefinitionQueueStatus
@@ -110,6 +116,7 @@ items:
     type: property
     summary: The definition revision number.
     syntax:
+      content: number revision
       return:
         type:
           - number
@@ -122,6 +129,7 @@ items:
     type: property
     summary: The type of the definition.
     syntax:
+      content: DefinitionType type
       return:
         type:
           - DefinitionType
@@ -134,6 +142,7 @@ items:
     type: property
     summary: The Uri of the definition
     syntax:
+      content: string uri
       return:
         type:
           - string
@@ -146,6 +155,7 @@ items:
     type: property
     summary: Full http link to the resource
     syntax:
+      content: string url
       return:
         type:
           - string

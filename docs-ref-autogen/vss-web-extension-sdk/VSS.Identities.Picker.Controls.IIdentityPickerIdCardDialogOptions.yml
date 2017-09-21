@@ -30,7 +30,7 @@ items:
         @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
     source:
       path: vss.d.ts
-      startLine: 25487
+      startLine: 25486
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -47,6 +47,7 @@ items:
     type: property
     summary: A base element which shall be used as reference for positioning the dialog
     syntax:
+      content: JQuery anchor
       return:
         type:
           - JQuery
@@ -62,6 +63,7 @@ items:
       An optional container of the anchor to be considered. Passing an iframe
       allows for positioning over an anchor in an other frame.
     syntax:
+      content: JQuery anchorContainer
       return:
         type:
           - JQuery
@@ -77,6 +79,7 @@ items:
       Defined by JQueryUI.DialogOptions -- optional JQuery selector string for
       element to append dialog to, instead of DOM root
     syntax:
+      content: string appendTo
       return:
         type:
           - string
@@ -92,6 +95,7 @@ items:
       An element that will receive focus when the contact card is closed. If
       unset, the focus will go to the previously active element
     syntax:
+      content: JQuery focusElementOnClose
       return:
         type:
           - JQuery
@@ -107,6 +111,7 @@ items:
       an identity to initialize with (and to avoid a call to the identity picker
       service API)
     syntax:
+      content: '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity identity'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity'
@@ -120,6 +125,7 @@ items:
     type: property
     summary: The left positioning offset of the dialog
     syntax:
+      content: number leftValue
       return:
         type:
           - number
@@ -133,6 +139,7 @@ items:
     type: property
     summary: The top positioning offset of the dialog
     syntax:
+      content: number topValue
       return:
         type:
           - number
@@ -149,6 +156,7 @@ items:
       IdCardDialog - signInAddress or entityId for users and entityId for other
       kinds of entities
     syntax:
+      content: string uniqueIdentifier
       return:
         type:
           - string

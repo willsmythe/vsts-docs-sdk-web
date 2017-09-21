@@ -27,7 +27,7 @@ items:
     summary: Information about a resource associated with a subscription.
     source:
       path: vss.d.ts
-      startLine: 4367
+      startLine: 4366
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -44,6 +44,7 @@ items:
     type: property
     summary: 'Quantity commited by the user, when resources is commitment based.'
     syntax:
+      content: number committedQuantity
       return:
         type:
           - number
@@ -57,6 +58,7 @@ items:
     type: property
     summary: A enumeration value indicating why the resource was disabled.
     syntax:
+      content: ResourceStatusReason disabledReason
       return:
         type:
           - ResourceStatusReason
@@ -70,6 +72,7 @@ items:
     type: property
     summary: Uri pointing to user action on a disabled resource. It is based on  value.
     syntax:
+      content: string disabledResourceActionLink
       return:
         type:
           - string
@@ -83,6 +86,7 @@ items:
     type: property
     summary: Quantity included for free.
     syntax:
+      content: number includedQuantity
       return:
         type:
           - number
@@ -99,6 +103,7 @@ items:
       non-azure subscriptions, disabled azure subscriptions or explicitly
       disabled by user
     syntax:
+      content: boolean isPaidBillingEnabled
       return:
         type:
           - boolean
@@ -114,6 +119,7 @@ items:
       Returns true if resource is can be used otherwise returns false. can be
       used to identify why resource is disabled.
     syntax:
+      content: boolean isUseable
       return:
         type:
           - boolean
@@ -130,6 +136,7 @@ items:
       for this resource. Any usage submitted over this number is automatically
       excluded from being sent to azure.
     syntax:
+      content: number maximumQuantity
       return:
         type:
           - number
@@ -142,6 +149,7 @@ items:
     type: property
     summary: Gets the name of this resource.
     syntax:
+      content: ResourceName name
       return:
         type:
           - ResourceName
@@ -157,6 +165,7 @@ items:
       Returns a Date of UTC kind indicating when the next reset of quantities is
       going to happen. On this day at UTC 2:00 AM is when the reset will occur.
     syntax:
+      content: Date resetDate
       return:
         type:
           - Date

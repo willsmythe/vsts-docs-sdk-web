@@ -16,7 +16,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 14187
+      startLine: 14186
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,9 @@ items:
     type: property
     summary: 'The list of commits referenced by Items, if they were requested.'
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef[]
+        commits
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef[]'
@@ -46,6 +49,9 @@ items:
     type: property
     summary: The last change of items.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitLastChangeItem[]
+        items
       return:
         type:
           - >-
@@ -62,6 +68,7 @@ items:
       The last explored time, in case the result is not comprehensive. Null
       otherwise.
     syntax:
+      content: Date lastExploredTime
       return:
         type:
           - Date

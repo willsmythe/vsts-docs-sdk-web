@@ -20,7 +20,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 6399
+      startLine: 6398
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent agent'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgent'
@@ -49,6 +50,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string eventType
       return:
         type:
           - string
@@ -61,6 +63,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPoolReference
+        pool
       return:
         type:
           - >-
@@ -75,6 +80,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number poolId
       return:
         type:
           - number
@@ -88,6 +94,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date timeStamp
       return:
         type:
           - Date

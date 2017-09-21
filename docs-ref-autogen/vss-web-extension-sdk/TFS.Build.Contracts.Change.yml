@@ -18,7 +18,7 @@ items:
     summary: Represents a change associated with a build.
     source:
       path: tfs.d.ts
-      startLine: 957
+      startLine: 956
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -34,6 +34,7 @@ items:
     type: property
     summary: The author of the change.
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef author'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -46,6 +47,7 @@ items:
     type: property
     summary: The location of a user-friendly representation of the resource.
     syntax:
+      content: string displayUri
       return:
         type:
           - string
@@ -60,6 +62,7 @@ items:
       Something that identifies the change. For a commit, this would be the
       SHA1. For a TFVC changeset, this would be the changeset id.
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -72,6 +75,7 @@ items:
     type: property
     summary: The location of the full representation of the resource.
     syntax:
+      content: string location
       return:
         type:
           - string
@@ -86,6 +90,7 @@ items:
       A description of the change. This might be a commit message or changeset
       description.
     syntax:
+      content: string message
       return:
         type:
           - string
@@ -98,6 +103,7 @@ items:
     type: property
     summary: Indicates whether the message was truncated
     syntax:
+      content: boolean messageTruncated
       return:
         type:
           - boolean
@@ -110,6 +116,7 @@ items:
     type: property
     summary: A timestamp for the change.
     syntax:
+      content: Date timestamp
       return:
         type:
           - Date
@@ -122,6 +129,7 @@ items:
     type: property
     summary: 'The type of change. "commit", "changeset", etc.'
     syntax:
+      content: string type
       return:
         type:
           - string

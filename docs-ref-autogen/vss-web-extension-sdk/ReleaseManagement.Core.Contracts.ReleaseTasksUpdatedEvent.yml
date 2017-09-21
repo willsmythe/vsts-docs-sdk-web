@@ -24,7 +24,7 @@ items:
         @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.RealtimeReleaseEvent
     source:
       path: rmo.d.ts
-      startLine: 1623
+      startLine: 1622
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -41,6 +41,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number environmentId
       return:
         type:
           - number
@@ -54,6 +55,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTask job'
       return:
         type:
           - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTask'
@@ -67,6 +69,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number releaseDeployPhaseId
       return:
         type:
           - number
@@ -80,6 +83,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number releaseStepId
       return:
         type:
           - number
@@ -93,6 +97,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTask[]
+        tasks
       return:
         type:
           - >-

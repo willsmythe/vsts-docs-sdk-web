@@ -14,7 +14,7 @@ items:
       - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference'
     source:
       path: tfs.d.ts
-      startLine: 4541
+      startLine: 4540
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
       Set of capabilities this project has (such as process template & version
       control).
     syntax:
+      content: '[key: string]: function capabilities'
       return:
         type:
           - '[key: string]: function'
@@ -44,6 +45,7 @@ items:
     type: property
     summary: The shallow ref to the default team.
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Core.Contracts.WebApiTeamRef defaultTeam'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Core.Contracts.WebApiTeamRef'

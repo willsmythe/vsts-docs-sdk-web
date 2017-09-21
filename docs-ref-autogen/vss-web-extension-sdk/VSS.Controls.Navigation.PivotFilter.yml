@@ -31,7 +31,7 @@ items:
         @vss-web-extension-sdk.VSS.Controls.Control<@vss-web-extension-sdk.VSS.Controls.Navigation.IPivotFilterOptions>
     source:
       path: vss.d.ts
-      startLine: 14737
+      startLine: 14736
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -55,7 +55,7 @@ items:
             - any
           description: Options of the behavior
           optional: true
-      content: 'function createBehavior(names: any[], options?: any)'
+      content: 'static function createBehavior(names: any[], options?: any)'
       return:
         type:
           - any
@@ -70,6 +70,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string enhancementTypeName
       return:
         type:
           - string
@@ -178,7 +179,7 @@ items:
             - any
           description: |
             Type of the registered behavior
-      content: 'function registerBehavior(behaviorType: any)'
+      content: 'static function registerBehavior(behaviorType: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.PivotFilter.setSelectedItem
     name: 'setSelectedItem(item: IPivotFilterItem, fireChange?: boolean)'

@@ -16,7 +16,7 @@ items:
       communication sent to an agent.
     source:
       path: tfs.d.ts
-      startLine: 7299
+      startLine: 7298
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,7 @@ items:
       If this value is true, the property should be decrypted using the RSA key
       exchanged with the server during registration.
     syntax:
+      content: boolean encrypted
       return:
         type:
           - boolean
@@ -49,6 +50,7 @@ items:
     type: property
     summary: Gets or sets the symmetric key value.
     syntax:
+      content: 'number[] value'
       return:
         type:
           - 'number[]'

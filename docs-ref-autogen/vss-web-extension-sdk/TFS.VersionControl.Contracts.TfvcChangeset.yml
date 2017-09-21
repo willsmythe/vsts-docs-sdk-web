@@ -27,7 +27,7 @@ items:
       - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetRef'
     source:
       path: tfs.d.ts
-      startLine: 15190
+      startLine: 15189
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -43,6 +43,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string accountId
       return:
         type:
           - string
@@ -55,6 +56,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChange[] changes'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChange[]'
@@ -68,6 +70,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.CheckinNote[]
+        checkinNotes
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.CheckinNote[]'
@@ -81,6 +86,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string collectionId
       return:
         type:
           - string
@@ -94,6 +100,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean hasMoreChanges
       return:
         type:
           - boolean
@@ -107,6 +114,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcPolicyOverrideInfo
+        policyOverride
       return:
         type:
           - >-
@@ -121,6 +131,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: 'string[] teamProjectIds'
       return:
         type:
           - 'string[]'
@@ -133,6 +144,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.AssociatedWorkItem[]
+        workItems
       return:
         type:
           - >-

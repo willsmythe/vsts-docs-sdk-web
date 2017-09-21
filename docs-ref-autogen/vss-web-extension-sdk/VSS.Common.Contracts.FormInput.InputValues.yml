@@ -24,7 +24,7 @@ items:
       input
     source:
       path: vss.d.ts
-      startLine: 5828
+      startLine: 5827
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -41,6 +41,7 @@ items:
     type: property
     summary: The default value to use for this input
     syntax:
+      content: string defaultValue
       return:
         type:
           - string
@@ -53,6 +54,9 @@ items:
     type: property
     summary: Errors encountered while computing dynamic values.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputValuesError
+        error
       return:
         type:
           - >-
@@ -66,6 +70,7 @@ items:
     type: property
     summary: The id of the input
     syntax:
+      content: string inputId
       return:
         type:
           - string
@@ -79,6 +84,7 @@ items:
     type: property
     summary: Should this input be disabled
     syntax:
+      content: boolean isDisabled
       return:
         type:
           - boolean
@@ -94,6 +100,7 @@ items:
       Should the value be restricted to one of the values in the PossibleValues
       (True) or are the values in PossibleValues just a suggestion (False)
     syntax:
+      content: boolean isLimitedToPossibleValues
       return:
         type:
           - boolean
@@ -107,6 +114,7 @@ items:
     type: property
     summary: Should this input be made read-only
     syntax:
+      content: boolean isReadOnly
       return:
         type:
           - boolean
@@ -120,6 +128,9 @@ items:
     type: property
     summary: Possible values that this input can take
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputValue[]
+        possibleValues
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputValue[]'

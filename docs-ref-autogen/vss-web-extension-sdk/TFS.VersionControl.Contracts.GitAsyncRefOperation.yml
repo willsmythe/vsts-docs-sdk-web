@@ -18,7 +18,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 13600
+      startLine: 13599
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -35,6 +35,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationDetail
+        detailedStatus
       return:
         type:
           - >-
@@ -49,6 +52,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitAsyncRefOperationParameters
+        parameters
       return:
         type:
           - >-
@@ -63,6 +69,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: GitAsyncOperationStatus status
       return:
         type:
           - GitAsyncOperationStatus
@@ -76,6 +83,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string url
       return:
         type:
           - string

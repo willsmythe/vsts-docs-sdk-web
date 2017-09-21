@@ -14,7 +14,7 @@ items:
     summary: Metadata about a plan definition that is stored in favorites service
     source:
       path: tfs.d.ts
-      startLine: 22080
+      startLine: 22079
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -30,6 +30,9 @@ items:
     type: property
     summary: Identity of the creator of the plan
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+        createdByIdentity
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -42,6 +45,7 @@ items:
     type: property
     summary: Description of plan
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -54,6 +58,7 @@ items:
     type: property
     summary: Last modified date of the plan
     syntax:
+      content: Date modifiedDate
       return:
         type:
           - Date
@@ -66,6 +71,7 @@ items:
     type: property
     summary: Bit flag indicating set of permissions a user has to the plan.
     syntax:
+      content: PlanUserPermissions userPermissions
       return:
         type:
           - PlanUserPermissions

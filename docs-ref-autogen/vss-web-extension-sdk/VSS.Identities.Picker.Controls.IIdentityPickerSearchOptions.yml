@@ -60,7 +60,7 @@ items:
         @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
     source:
       path: vss.d.ts
-      startLine: 25592
+      startLine: 25591
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -79,6 +79,7 @@ items:
       custom value for the aria-label attribute of the input element.
         Defaults to the placeholder value if not set (see option placeholderText for details)
     syntax:
+      content: string ariaLabel
       return:
         type:
           - string
@@ -92,6 +93,9 @@ items:
     type: property
     summary: Callbacks supported by the search control
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Identities.Picker.Controls.ISearchControlCallbackOptions
+        callbacks
       return:
         type:
           - >-
@@ -111,6 +115,7 @@ items:
         dialogs as well, in order to work with Fabric's dialog model.
         If this is not specified, JQueryUI's default is to append the dialog element to the <body> element.
     syntax:
+      content: string dialogAppendTo
       return:
         type:
           - string
@@ -126,6 +131,7 @@ items:
       the size of the dropdown control elements (Medium - most elements are
       24px, Large - 32px). Default: Large
     syntax:
+      content: IdentityPickerControlSize dropdownSize
       return:
         type:
           - IdentityPickerControlSize
@@ -141,6 +147,7 @@ items:
       the width of the dropdown control. Default is max(positioningElement
       width, 300px)
     syntax:
+      content: number dropdownWidth
       return:
         type:
           - number
@@ -154,6 +161,7 @@ items:
     type: property
     summary: a custom id for the input element
     syntax:
+      content: string elementId
       return:
         type:
           - string
@@ -170,6 +178,7 @@ items:
       (the place holder value).
         Defaults to false, which is to include.
     syntax:
+      content: boolean excludeAriaLabel
       return:
         type:
           - boolean
@@ -187,6 +196,7 @@ items:
         This is specifically for the mobile work item form where we want to show the picker in a full screen view
         and we do not want the dropdown to close.
     syntax:
+      content: boolean forceOpen
       return:
         type:
           - boolean
@@ -202,6 +212,7 @@ items:
       whether for a single-select control a click on the resolved item
       highlights the text (true) or opens the contact card (false - default)
     syntax:
+      content: boolean highlightResolved
       return:
         type:
           - boolean
@@ -220,6 +231,7 @@ items:
         alternatively the input can be a semi-colon separated sequence of unique identifiers (such as sign-in addresses or aliases).
         We also support the format "DisplayName <UniqueIdentifier>" (see the option showTemporaryDisplayName for details)
     syntax:
+      content: string items
       return:
         type:
           - string
@@ -233,6 +245,7 @@ items:
     type: property
     summary: whether to preload (e.g. the MRU identities) on control creation.
     syntax:
+      content: boolean loadOnCreate
       return:
         type:
           - boolean
@@ -248,6 +261,7 @@ items:
       DEPRECATED: the minimum length of the prefix to start searching the
       directories - in the absence of an MRU - default 3
     syntax:
+      content: number minimumPrefixSize
       return:
         type:
           - number
@@ -261,6 +275,7 @@ items:
     type: property
     summary: whether the search and dropdown controls should handle multiple identities
     syntax:
+      content: boolean multiIdentitySearch
       return:
         type:
           - boolean
@@ -274,6 +289,7 @@ items:
     type: property
     summary: restrict displayed identities in dropdown
     syntax:
+      content: number pageSize
       return:
         type:
           - number
@@ -289,6 +305,7 @@ items:
       custom value for the placeholder attribute of the input element.
         Defaults to "Search {identity type(s)}", where {identity type(s)} can be "users", "groups" or "users and groups".
     syntax:
+      content: string placeholderText
       return:
         type:
           - string
@@ -304,6 +321,7 @@ items:
       whether to display the contact card icon for each identity in the dropdown
       and for resolved identities. Default false.
     syntax:
+      content: boolean showContactCard
       return:
         type:
           - boolean
@@ -320,6 +338,7 @@ items:
       search directories directly.
         Default false.
     syntax:
+      content: boolean showMru
       return:
         type:
           - boolean
@@ -336,6 +355,7 @@ items:
       on click or not. Default false. Setting this will also enable the MRU on
       the dropdown.
     syntax:
+      content: boolean showMruTriangle
       return:
         type:
           - boolean
@@ -352,6 +372,7 @@ items:
       <UniqueIdentifier>",
         whether to show the DisplayName until the UniqueIdentifier gets resolved to an IEntity. Default false
     syntax:
+      content: boolean showTemporaryDisplayName
       return:
         type:
           - boolean
@@ -367,6 +388,7 @@ items:
       the size of the search control elements (Small - most elements are 16px in
       height, Medium - 24px, Large - 32px). Default: Medium
     syntax:
+      content: IdentityPickerControlSize size
       return:
         type:
           - IdentityPickerControlSize
@@ -383,6 +405,7 @@ items:
       additional icons and
         text information suitable for small screens.
     syntax:
+      content: boolean smallScreenRender
       return:
         type:
           - boolean
@@ -400,6 +423,7 @@ items:
         For internal use only, this is specifically for the mobile work item form where we want to show the picker in a
         full screen view and the behavior may change over time.
     syntax:
+      content: boolean useRemainingSpace
       return:
         type:
           - boolean
@@ -413,6 +437,9 @@ items:
     type: property
     summary: an IEntity to be displayed by default instead of the empty input element
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity
+        watermark
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity'

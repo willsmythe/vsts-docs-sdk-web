@@ -14,7 +14,7 @@ items:
     summary: An audit log entry for an extension
     source:
       path: vss.d.ts
-      startLine: 1833
+      startLine: 1832
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -30,6 +30,7 @@ items:
     type: property
     summary: Change that was made to extension
     syntax:
+      content: string auditAction
       return:
         type:
           - string
@@ -42,6 +43,7 @@ items:
     type: property
     summary: Date at which the change was made
     syntax:
+      content: Date auditDate
       return:
         type:
           - Date
@@ -54,6 +56,7 @@ items:
     type: property
     summary: Extra information about the change
     syntax:
+      content: string comment
       return:
         type:
           - string
@@ -66,6 +69,7 @@ items:
     type: property
     summary: Represents the user who made the change
     syntax:
+      content: any updatedBy
       return:
         type:
           - any

@@ -39,7 +39,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 10168
+      startLine: 10167
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -56,6 +56,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.CloneStatistics
+        cloneStatistics
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.CloneStatistics'
@@ -71,6 +74,7 @@ items:
       If the operation is complete, the DateTime of completion. If operation is
       not complete, this is DateTime.MaxValue
     syntax:
+      content: Date completionDate
       return:
         type:
           - Date
@@ -84,6 +88,7 @@ items:
     type: property
     summary: DateTime when the operation was started
     syntax:
+      content: Date creationDate
       return:
         type:
           - Date
@@ -97,6 +102,9 @@ items:
     type: property
     summary: Shallow reference of the destination
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        destinationObject
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -110,6 +118,9 @@ items:
     type: property
     summary: Shallow reference of the destination
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        destinationPlan
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -123,6 +134,9 @@ items:
     type: property
     summary: Shallow reference of the destination
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        destinationProject
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -138,6 +152,7 @@ items:
       If the operation has Failed, Message contains the reason for failure. Null
       otherwise.
     syntax:
+      content: string message
       return:
         type:
           - string
@@ -151,6 +166,7 @@ items:
     type: property
     summary: The ID of the operation
     syntax:
+      content: number opId
       return:
         type:
           - number
@@ -164,6 +180,7 @@ items:
     type: property
     summary: The type of the object generated as a result of the Clone operation
     syntax:
+      content: ResultObjectType resultObjectType
       return:
         type:
           - ResultObjectType
@@ -177,6 +194,9 @@ items:
     type: property
     summary: Shallow reference of the source
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        sourceObject
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -190,6 +210,9 @@ items:
     type: property
     summary: Shallow reference of the source
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        sourcePlan
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -203,6 +226,9 @@ items:
     type: property
     summary: Shallow reference of the source
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        sourceProject
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -218,6 +244,7 @@ items:
       Current state of the operation. When State reaches Suceeded or Failed, the
       operation is complete
     syntax:
+      content: CloneOperationState state
       return:
         type:
           - CloneOperationState
@@ -231,6 +258,7 @@ items:
     type: property
     summary: Url for geting the clone information
     syntax:
+      content: string url
       return:
         type:
           - string

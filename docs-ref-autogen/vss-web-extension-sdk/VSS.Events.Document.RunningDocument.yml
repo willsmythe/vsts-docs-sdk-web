@@ -16,7 +16,7 @@ items:
        A host can be tha browser, an IDE (e.g. Eclipse, Visual Studio)
     source:
       path: vss.d.ts
-      startLine: 19085
+      startLine: 19084
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -34,6 +34,7 @@ items:
       (Optional) Callback method called before a save operation is performed on
       the document service
     syntax:
+      content: function beginSave
       return:
         type:
           - function
@@ -49,6 +50,7 @@ items:
       (Optional) Callback method called to get the titles of the currently dirty
       items.
     syntax:
+      content: function getDirtyDocumentTitles
       return:
         type:
           - function

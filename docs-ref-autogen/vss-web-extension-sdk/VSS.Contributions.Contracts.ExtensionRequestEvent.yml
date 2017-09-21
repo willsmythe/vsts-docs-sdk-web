@@ -22,7 +22,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 7862
+      startLine: 7861
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -39,6 +39,9 @@ items:
     type: property
     summary: The extension which has been requested
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Gallery.Contracts.PublishedExtension
+        extension
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Gallery.Contracts.PublishedExtension'
@@ -52,6 +55,7 @@ items:
     type: property
     summary: Information about the host for which this extension is requested
     syntax:
+      content: '@vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionHost host'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionHost'
@@ -65,6 +69,7 @@ items:
     type: property
     summary: Name of the collection for which the extension was requested
     syntax:
+      content: string hostName
       return:
         type:
           - string
@@ -78,6 +83,9 @@ items:
     type: property
     summary: Gallery host url
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionRequestUrls
+        links
       return:
         type:
           - >-
@@ -92,6 +100,9 @@ items:
     type: property
     summary: The extension request object
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionRequest
+        request
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionRequest'
@@ -105,6 +116,7 @@ items:
     type: property
     summary: The type of update that was made
     syntax:
+      content: ExtensionRequestUpdateType updateType
       return:
         type:
           - ExtensionRequestUpdateType

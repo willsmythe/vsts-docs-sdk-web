@@ -48,7 +48,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 916
+      startLine: 915
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -65,6 +65,7 @@ items:
     type: property
     summary: Gets or sets the type of approval.
     syntax:
+      content: ApprovalType approvalType
       return:
         type:
           - ApprovalType
@@ -78,6 +79,7 @@ items:
     type: property
     summary: Gets the identity who approved.
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef approvedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -91,6 +93,7 @@ items:
     type: property
     summary: Gets or sets the identity who should approve.
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef approver'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -106,6 +109,7 @@ items:
       Gets or sets attempt which specifies as which deployment attempt it
       belongs.
     syntax:
+      content: number attempt
       return:
         type:
           - number
@@ -119,6 +123,7 @@ items:
     type: property
     summary: Gets or sets comments for approval.
     syntax:
+      content: string comments
       return:
         type:
           - string
@@ -132,6 +137,7 @@ items:
     type: property
     summary: Gets date on which it got created.
     syntax:
+      content: Date createdOn
       return:
         type:
           - Date
@@ -145,6 +151,9 @@ items:
     type: property
     summary: Gets history which specifies all approvals associated with this approval.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApprovalHistory[]
+        history
       return:
         type:
           - >-
@@ -158,6 +167,7 @@ items:
     type: property
     summary: Gets the unique identifier of this field.
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -171,6 +181,7 @@ items:
     type: property
     summary: Gets or sets as approval is automated or not.
     syntax:
+      content: boolean isAutomated
       return:
         type:
           - boolean
@@ -184,6 +195,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isNotificationOn
       return:
         type:
           - boolean
@@ -197,6 +209,7 @@ items:
     type: property
     summary: Gets date on which it got modified.
     syntax:
+      content: Date modifiedOn
       return:
         type:
           - Date
@@ -212,6 +225,7 @@ items:
       Gets or sets rank which specifies the order of the approval. e.g. Same
       rank denotes parallel approval.
     syntax:
+      content: number rank
       return:
         type:
           - number
@@ -227,6 +241,9 @@ items:
       Gets releaseReference which specifies the reference of the release to
       which this approval is associated.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseShallowReference
+        release
       return:
         type:
           - >-
@@ -243,6 +260,9 @@ items:
       Gets releaseDefinitionReference which specifies the reference of the
       release definition to which this approval is associated.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionShallowReference
+        releaseDefinition
       return:
         type:
           - >-
@@ -259,6 +279,9 @@ items:
       Gets releaseEnvironmentReference which specifies the reference of the
       release environment to which this approval is associated.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironmentShallowReference
+        releaseEnvironment
       return:
         type:
           - >-
@@ -273,6 +296,7 @@ items:
     type: property
     summary: Gets the revision number.
     syntax:
+      content: number revision
       return:
         type:
           - number
@@ -286,6 +310,7 @@ items:
     type: property
     summary: Gets or sets the status of the approval.
     syntax:
+      content: ApprovalStatus status
       return:
         type:
           - ApprovalStatus
@@ -299,6 +324,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number trialNumber
       return:
         type:
           - number
@@ -311,6 +337,7 @@ items:
     type: property
     summary: Gets url to access the approval.
     syntax:
+      content: string url
       return:
         type:
           - string

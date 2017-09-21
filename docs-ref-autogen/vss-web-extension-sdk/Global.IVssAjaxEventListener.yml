@@ -15,7 +15,7 @@ items:
       request
     source:
       path: vss.d.ts
-      startLine: 49
+      startLine: 48
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: Method invoked before a request is sent
     syntax:
+      content: function beforeRequest
       return:
         type:
           - function
@@ -45,6 +46,7 @@ items:
       Method invoked after a response has been received and its callback/promise
       has been invoked
     syntax:
+      content: function postResponseCallback
       return:
         type:
           - function
@@ -57,6 +59,7 @@ items:
     type: property
     summary: Method invoked when a response has been received
     syntax:
+      content: function responseReceived
       return:
         type:
           - function

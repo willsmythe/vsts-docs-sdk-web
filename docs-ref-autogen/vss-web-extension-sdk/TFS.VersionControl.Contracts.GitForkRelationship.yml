@@ -20,7 +20,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 13984
+      startLine: 13983
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,9 @@ items:
     type: property
     summary: Team Project Collection where this Fork resides
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectCollectionReference
+        collection
       return:
         type:
           - >-
@@ -51,6 +54,7 @@ items:
     type: property
     summary: Team Project where this Fork resides
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference project'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference'
@@ -64,6 +68,7 @@ items:
     type: property
     summary: Relationship of this fork to the current repository context
     syntax:
+      content: ForkRelationship relationship
       return:
         type:
           - ForkRelationship
@@ -77,6 +82,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string repositoryId
       return:
         type:
           - string
@@ -90,6 +96,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string repositoryName
       return:
         type:
           - string

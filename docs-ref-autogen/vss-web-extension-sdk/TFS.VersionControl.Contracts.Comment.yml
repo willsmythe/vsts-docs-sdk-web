@@ -23,7 +23,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 13366
+      startLine: 13365
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -39,6 +39,7 @@ items:
     type: property
     summary: The author of the pull request comment.
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef author'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -51,6 +52,7 @@ items:
     type: property
     summary: Determines what kind of comment when it was created.
     syntax:
+      content: CommentType commentType
       return:
         type:
           - CommentType
@@ -63,6 +65,7 @@ items:
     type: property
     summary: The comment's content.
     syntax:
+      content: string content
       return:
         type:
           - string
@@ -75,6 +78,7 @@ items:
     type: property
     summary: The pull request comment id. It always starts from 1.
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -87,6 +91,7 @@ items:
     type: property
     summary: Marks if this comment was soft-deleted.
     syntax:
+      content: boolean isDeleted
       return:
         type:
           - boolean
@@ -100,6 +105,7 @@ items:
     type: property
     summary: The date a comment content was last updated.
     syntax:
+      content: Date lastContentUpdatedDate
       return:
         type:
           - Date
@@ -112,6 +118,7 @@ items:
     type: property
     summary: The date a comment was last updated.
     syntax:
+      content: Date lastUpdatedDate
       return:
         type:
           - Date
@@ -126,6 +133,7 @@ items:
       The pull request comment id of the parent comment. This is used for
       replies
     syntax:
+      content: number parentCommentId
       return:
         type:
           - number
@@ -138,6 +146,7 @@ items:
     type: property
     summary: The date a comment was first published.
     syntax:
+      content: Date publishedDate
       return:
         type:
           - Date
@@ -150,6 +159,7 @@ items:
     type: property
     summary: A list of the users who've liked this comment.
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef[] usersLiked'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef[]'

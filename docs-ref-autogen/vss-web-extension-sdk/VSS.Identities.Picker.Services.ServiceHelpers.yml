@@ -62,7 +62,7 @@ items:
       identity picker controls and services and should not be used elsewhere.
     source:
       path: vss.d.ts
-      startLine: 26464
+      startLine: 26463
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -79,6 +79,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string ActiveDirectory
       return:
         type:
           - string
@@ -127,10 +128,11 @@ items:
           description: ''
           optional: true
       content: >-
-        function addScenarioProperties(service: VssService, scenarioProperties:
-        IDictionaryStringTo<any>, operationScope?: IOperationScope,
-        identityType?: IEntityType, options?: IIdentityServiceOptions,
-        extensionOptions?: IIdentityPickerExtensionOptions)
+        static function addScenarioProperties(service: VssService,
+        scenarioProperties: IDictionaryStringTo<any>, operationScope?:
+        IOperationScope, identityType?: IEntityType, options?:
+        IIdentityServiceOptions, extensionOptions?:
+        IIdentityPickerExtensionOptions)
       return:
         type:
           - '@vss-web-extension-sdk.IDictionaryStringTo<any>'
@@ -145,6 +147,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string AzureActiveDirectory
       return:
         type:
           - string
@@ -158,6 +161,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string DefaultRemoteGroupImage
       return:
         type:
           - string
@@ -171,6 +175,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string DefaultUserImage
       return:
         type:
           - string
@@ -184,6 +189,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string DefaultVsoGroupImage
       return:
         type:
           - string
@@ -197,6 +203,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string ExtensionData_CollectionScopeNameKey
       return:
         type:
           - string
@@ -210,6 +217,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string ExtensionData_ConstraintListKey
       return:
         type:
           - string
@@ -223,6 +231,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string ExtensionData_ExtensionIdKey
       return:
         type:
           - string
@@ -236,6 +245,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string ExtensionData_NoServiceIdentities
       return:
         type:
           - string
@@ -249,6 +259,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string ExtensionData_ProjectScopeNameKey
       return:
         type:
           - string
@@ -266,7 +277,7 @@ items:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.Services.IConnectionType
           description: ''
-      content: 'function getConnectionTypeList(connectionType: IConnectionType)'
+      content: 'static function getConnectionTypeList(connectionType: IConnectionType)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Services.ServiceHelpers.getDefaultIdentityImage
@@ -281,7 +292,7 @@ items:
           type:
             - '@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IEntity'
           description: ''
-      content: 'function getDefaultIdentityImage(identity: IEntity)'
+      content: 'static function getDefaultIdentityImage(identity: IEntity)'
       return:
         type:
           - string
@@ -299,7 +310,7 @@ items:
           type:
             - 'string[]'
           description: ''
-      content: 'function getDistinct(array: string[])'
+      content: 'static function getDistinct(array: string[])'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Services.ServiceHelpers.GetIdentities_Prefix_Separator
@@ -311,6 +322,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string GetIdentities_Prefix_Separator
       return:
         type:
           - string
@@ -327,7 +339,7 @@ items:
           type:
             - '@vss-web-extension-sdk.VSS.Identities.Picker.Services.IEntityType'
           description: ''
-      content: 'function getIdentityTypeList(identityType: IEntityType)'
+      content: 'static function getIdentityTypeList(identityType: IEntityType)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Services.ServiceHelpers.getOperationScopeList
@@ -346,7 +358,7 @@ items:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
           description: ''
-      content: 'function getOperationScopeList(operationScope: IOperationScope)'
+      content: 'static function getOperationScopeList(operationScope: IOperationScope)'
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Services.ServiceHelpers.getQueryTypeHint
@@ -362,7 +374,7 @@ items:
             - >-
               @vss-web-extension-sdk.VSS.Identities.Picker.Services.IQueryTypeHint
           description: ''
-      content: 'function getQueryTypeHint(queryTypeHint: IQueryTypeHint)'
+      content: 'static function getQueryTypeHint(queryTypeHint: IQueryTypeHint)'
       return:
         type:
           - string
@@ -377,6 +389,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string GroupEntity
       return:
         type:
           - string
@@ -390,6 +403,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string OptionsMaxResultsKey
       return:
         type:
           - string
@@ -403,6 +417,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string OptionsMinResultsKey
       return:
         type:
           - string
@@ -416,6 +431,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string SourceDirectory
       return:
         type:
           - string
@@ -429,6 +445,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string UserEntity
       return:
         type:
           - string
@@ -442,6 +459,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string VisualStudioDirectory
       return:
         type:
           - string
@@ -455,6 +473,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string WindowsMachineDirectory
       return:
         type:
           - string

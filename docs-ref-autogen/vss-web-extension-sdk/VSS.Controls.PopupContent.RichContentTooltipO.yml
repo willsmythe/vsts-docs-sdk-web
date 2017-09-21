@@ -1,7 +1,7 @@
 ### YamlMime:UniversalReference
 items:
   - uid: vss-web-extension-sdk.VSS.Controls.PopupContent.RichContentTooltipO
-    name: RichContentTooltipO
+    name: RichContentTooltipO<TOptions>
     fullName: RichContentTooltipO
     children:
       - vss-web-extension-sdk.VSS.Controls.PopupContent.RichContentTooltipO.add
@@ -21,7 +21,7 @@ items:
         @vss-web-extension-sdk.VSS.Controls.PopupContent.PopupContentControlO<TOptions>
     source:
       path: vss.d.ts
-      startLine: 15623
+      startLine: 15622
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -54,7 +54,7 @@ items:
 
           optional: true
       content: >-
-        function add(content: string, target: HTMLElement, options?:
+        static function add(content: string, target: HTMLElement, options?:
         IRichContentTooltipOptions)
       return:
         type:
@@ -91,8 +91,8 @@ items:
 
           optional: true
       content: >-
-        function addIfOverflow(content: string, target: HTMLElement, options?:
-        IRichContentTooltipOptions)
+        static function addIfOverflow(content: string, target: HTMLElement,
+        options?: IRichContentTooltipOptions)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.PopupContent.RichContentTooltip'

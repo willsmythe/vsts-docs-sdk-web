@@ -41,7 +41,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 11457
+      startLine: 11456
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -57,6 +57,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string areaUri
       return:
         type:
           - string
@@ -69,6 +70,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSuite[] children'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSuite[]'
@@ -82,6 +84,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference[]
+        defaultConfigurations
       return:
         type:
           - >-
@@ -95,6 +100,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -108,6 +114,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean inheritDefaultConfigurations
       return:
         type:
           - boolean
@@ -120,6 +127,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string lastError
       return:
         type:
           - string
@@ -133,6 +141,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date lastPopulatedDate
       return:
         type:
           - Date
@@ -145,6 +154,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef lastUpdatedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -158,6 +168,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date lastUpdatedDate
       return:
         type:
           - Date
@@ -170,6 +181,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -182,6 +194,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        parent
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -194,6 +209,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        plan
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -206,6 +224,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        project
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -218,6 +239,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string queryString
       return:
         type:
           - string
@@ -230,6 +252,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number requirementId
       return:
         type:
           - number
@@ -242,6 +265,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number revision
       return:
         type:
           - number
@@ -254,6 +278,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string state
       return:
         type:
           - string
@@ -266,6 +291,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference[]
+        suites
       return:
         type:
           - >-
@@ -279,6 +307,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string suiteType
       return:
         type:
           - string
@@ -291,6 +320,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number testCaseCount
       return:
         type:
           - number
@@ -303,6 +333,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string testCasesUrl
       return:
         type:
           - string
@@ -315,6 +346,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string text
       return:
         type:
           - string
@@ -327,6 +359,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string url
       return:
         type:
           - string

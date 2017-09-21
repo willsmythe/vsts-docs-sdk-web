@@ -19,7 +19,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 14867
+      startLine: 14866
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -38,6 +38,7 @@ items:
       SHA1 hash of the object in the base tree, if it exists. Will be null in
       case of adds.
     syntax:
+      content: string baseObjectId
       return:
         type:
           - string
@@ -51,6 +52,7 @@ items:
     type: property
     summary: Type of change that affected this entry.
     syntax:
+      content: VersionControlChangeType changeType
       return:
         type:
           - VersionControlChangeType
@@ -64,6 +66,7 @@ items:
     type: property
     summary: 'Object type of the tree entry. Blob, Tree or Commit("submodule")'
     syntax:
+      content: GitObjectType objectType
       return:
         type:
           - GitObjectType
@@ -76,6 +79,7 @@ items:
     type: property
     summary: Relative path in base and target trees.
     syntax:
+      content: string path
       return:
         type:
           - string
@@ -91,6 +95,7 @@ items:
       SHA1 hash of the object in the target tree, if it exists. Will be null in
       case of deletes.
     syntax:
+      content: string targetObjectId
       return:
         type:
           - string

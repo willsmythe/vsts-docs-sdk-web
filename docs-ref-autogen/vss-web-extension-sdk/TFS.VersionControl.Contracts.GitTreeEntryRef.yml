@@ -19,7 +19,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 14896
+      startLine: 14895
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,7 @@ items:
     type: property
     summary: Blob or tree
     syntax:
+      content: GitObjectType gitObjectType
       return:
         type:
           - GitObjectType
@@ -48,6 +49,7 @@ items:
     type: property
     summary: Mode represented as octal string
     syntax:
+      content: string mode
       return:
         type:
           - string
@@ -61,6 +63,7 @@ items:
     type: property
     summary: SHA1 hash of git object
     syntax:
+      content: string objectId
       return:
         type:
           - string
@@ -74,6 +77,7 @@ items:
     type: property
     summary: Path relative to parent tree object
     syntax:
+      content: string relativePath
       return:
         type:
           - string
@@ -86,6 +90,7 @@ items:
     type: property
     summary: Size of content
     syntax:
+      content: number size
       return:
         type:
           - number
@@ -98,6 +103,7 @@ items:
     type: property
     summary: url to retrieve tree or blob
     syntax:
+      content: string url
       return:
         type:
           - string

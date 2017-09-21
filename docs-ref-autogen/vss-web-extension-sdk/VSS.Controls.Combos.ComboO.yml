@@ -1,7 +1,7 @@
 ### YamlMime:UniversalReference
 items:
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboO
-    name: ComboO
+    name: ComboO<TOptions>
     fullName: ComboO
     children:
       - vss-web-extension-sdk.VSS.Controls.Combos.ComboO.attachBehavior
@@ -48,7 +48,7 @@ items:
       - '@vss-web-extension-sdk.VSS.Controls.Control<TOptions>'
     source:
       path: vss.d.ts
-      startLine: 9954
+      startLine: 9953
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -72,7 +72,7 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function attachBehavior(combo: any, options?: any)'
+      content: 'static function attachBehavior(combo: any, options?: any)'
       return:
         type:
           - any
@@ -106,6 +106,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string enhancementTypeName
       return:
         type:
           - string
@@ -319,6 +320,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string invalidAttribute
       return:
         type:
           - string
@@ -377,7 +379,7 @@ items:
           type:
             - any
           description: ''
-      content: 'function registerBehavior(behaviorMode: any, behaviorType: any)'
+      content: 'static function registerBehavior(behaviorMode: any, behaviorType: any)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboO.setEnabled
     name: 'setEnabled(value: boolean)'

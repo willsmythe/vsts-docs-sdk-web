@@ -19,7 +19,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 1642
+      startLine: 1641
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,7 @@ items:
     type: property
     summary: Sets comment for release.
     syntax:
+      content: string comment
       return:
         type:
           - string
@@ -49,6 +50,7 @@ items:
     type: property
     summary: Set 'true' to exclude the release from retention policies.
     syntax:
+      content: boolean keepForever
       return:
         type:
           - boolean
@@ -62,6 +64,7 @@ items:
     type: property
     summary: Sets list of manual environments.
     syntax:
+      content: 'string[] manualEnvironments'
       return:
         type:
           - 'string[]'
@@ -75,6 +78,7 @@ items:
     type: property
     summary: Sets status of the release.
     syntax:
+      content: ReleaseStatus status
       return:
         type:
           - ReleaseStatus

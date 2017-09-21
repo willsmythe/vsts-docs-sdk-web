@@ -14,7 +14,7 @@ items:
     summary: Container for licensing rights
     source:
       path: vss.d.ts
-      startLine: 27542
+      startLine: 27541
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -30,6 +30,7 @@ items:
     type: property
     summary: Rights data
     syntax:
+      content: '[key: string]: any attributes'
       return:
         type:
           - '[key: string]: any'
@@ -42,6 +43,7 @@ items:
     type: property
     summary: Rights expiration
     syntax:
+      content: Date expirationDate
       return:
         type:
           - Date
@@ -54,6 +56,7 @@ items:
     type: property
     summary: 'Name, uniquely identifying a usage right'
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -66,6 +69,7 @@ items:
     type: property
     summary: Version
     syntax:
+      content: string version
       return:
         type:
           - string

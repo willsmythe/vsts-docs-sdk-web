@@ -30,7 +30,7 @@ items:
       - '@vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputDescriptor'
     source:
       path: vss.d.ts
-      startLine: 11707
+      startLine: 11706
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -47,6 +47,7 @@ items:
     type: property
     summary: A list of functions to be called when this input is deleted.
     syntax:
+      content: 'function[] deleteCallbacks'
       return:
         type:
           - 'function[]'
@@ -62,6 +63,9 @@ items:
       A list of functions, all of which must return true for this input to be
       considered valid
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<boolean>[]
+        dependencies
       return:
         type:
           - >-
@@ -78,6 +82,7 @@ items:
       A list of functions to be called when the state of all dependencies of
       this input being satisfied changes.
     syntax:
+      content: 'function[] dependenciesSatisfiedCallbacks'
       return:
         type:
           - 'function[]'
@@ -93,6 +98,7 @@ items:
       Gets whether this input should be invisible until all of its dependencies
       are satisfied or not.
     syntax:
+      content: boolean hideUntilSatisfied
       return:
         type:
           - boolean
@@ -106,6 +112,7 @@ items:
     type: property
     summary: Gets whether this input is deletable.
     syntax:
+      content: boolean isDeletable
       return:
         type:
           - boolean
@@ -124,6 +131,7 @@ items:
       Odd name is due to the fact that the default should be to invalidate
       (based on FormInput_Contracts.InputDescriptor).
     syntax:
+      content: boolean noInvalidateOnDependencyChange
       return:
         type:
           - boolean
@@ -137,6 +145,7 @@ items:
     type: property
     summary: Gets whether or not to display the valid icon for this input.
     syntax:
+      content: boolean noValidIcon
       return:
         type:
           - boolean
@@ -150,6 +159,9 @@ items:
     type: property
     summary: Information to use to validate this input's value
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputValidation
+        validation
       return:
         type:
           - >-
@@ -164,6 +176,9 @@ items:
     type: property
     summary: A list of functions to be called when the value of this input is changed.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate<void>[]
+        valueChangedCallbacks
       return:
         type:
           - >-

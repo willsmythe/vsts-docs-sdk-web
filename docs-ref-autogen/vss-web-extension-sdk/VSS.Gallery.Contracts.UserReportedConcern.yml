@@ -17,7 +17,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 22902
+      startLine: 22901
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
     type: property
     summary: Category of the concern
     syntax:
+      content: ConcernCategory category
       return:
         type:
           - ConcernCategory
@@ -46,6 +47,7 @@ items:
     type: property
     summary: User comment associated with the report
     syntax:
+      content: string concernText
       return:
         type:
           - string
@@ -58,6 +60,7 @@ items:
     type: property
     summary: Id of the review which was reported
     syntax:
+      content: number reviewId
       return:
         type:
           - number
@@ -71,6 +74,7 @@ items:
     type: property
     summary: Date the report was submitted
     syntax:
+      content: Date submittedDate
       return:
         type:
           - Date
@@ -83,6 +87,7 @@ items:
     type: property
     summary: Id of the user who reported a review
     syntax:
+      content: string userId
       return:
         type:
           - string

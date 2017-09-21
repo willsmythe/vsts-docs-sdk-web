@@ -20,7 +20,7 @@ items:
     summary: REST Api Response
     source:
       path: vss.d.ts
-      startLine: 22534
+      startLine: 22533
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
     type: property
     summary: Gets or sets the operation details
     syntax:
+      content: any operationDetails
       return:
         type:
           - any
@@ -50,6 +51,7 @@ items:
     type: property
     summary: Gets or sets the operation id
     syntax:
+      content: string operationId
       return:
         type:
           - string
@@ -63,6 +65,7 @@ items:
     type: property
     summary: Gets or sets the completed status percentage
     syntax:
+      content: number percentageCompleted
       return:
         type:
           - number
@@ -76,6 +79,7 @@ items:
     type: property
     summary: Gets or sets the status
     syntax:
+      content: RestApiResponseStatus status
       return:
         type:
           - RestApiResponseStatus
@@ -89,6 +93,7 @@ items:
     type: property
     summary: Gets or sets the status message
     syntax:
+      content: string statusMessage
       return:
         type:
           - string

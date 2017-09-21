@@ -1,7 +1,7 @@
 ### YamlMime:UniversalReference
 items:
   - uid: vss-web-extension-sdk.VSS.Identities.Mru.Contracts.JsonPatchOperationData
-    name: JsonPatchOperationData
+    name: JsonPatchOperationData<T>
     fullName: JsonPatchOperationData
     children:
       - >-
@@ -24,7 +24,7 @@ items:
         Sps\Clients\Identity\ClientGeneratorConfigs\genclient.json
     source:
       path: vss.d.ts
-      startLine: 24868
+      startLine: 24867
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -41,6 +41,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string op
       return:
         type:
           - string
@@ -54,6 +55,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string path
       return:
         type:
           - string
@@ -67,6 +69,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: T value
       return:
         type:
           - T

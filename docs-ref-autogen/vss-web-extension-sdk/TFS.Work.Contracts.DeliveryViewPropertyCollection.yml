@@ -20,7 +20,7 @@ items:
       - '@vss-web-extension-sdk.TFS.Work.Contracts.PlanPropertyCollection'
     source:
       path: tfs.d.ts
-      startLine: 21898
+      startLine: 21897
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
     type: property
     summary: Card settings
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Work.Contracts.CardSettings cardSettings'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.CardSettings'
@@ -50,6 +51,7 @@ items:
     type: property
     summary: Field criteria
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Work.Contracts.FilterClause[] criteria'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.FilterClause[]'
@@ -63,6 +65,7 @@ items:
     type: property
     summary: Markers. Will be missing/null if there are no markers.
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Work.Contracts.Marker[] markers'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.Marker[]'
@@ -76,6 +79,9 @@ items:
     type: property
     summary: Team backlog mappings
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Work.Contracts.TeamBacklogMapping[]
+        teamBacklogMappings
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.TeamBacklogMapping[]'

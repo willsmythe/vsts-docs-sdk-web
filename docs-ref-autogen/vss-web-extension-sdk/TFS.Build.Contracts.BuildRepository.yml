@@ -20,7 +20,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 818
+      startLine: 817
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean checkoutSubmodules
       return:
         type:
           - boolean
@@ -51,6 +52,7 @@ items:
       Indicates whether to clean the target folder when getting code from the
       repository. This is a String so that it can reference variables.
     syntax:
+      content: string clean
       return:
         type:
           - string
@@ -63,6 +65,7 @@ items:
     type: property
     summary: Gets or sets the name of the default branch.
     syntax:
+      content: string defaultBranch
       return:
         type:
           - string
@@ -75,6 +78,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -87,6 +91,7 @@ items:
     type: property
     summary: Gets or sets the friendly name of the repository.
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -99,6 +104,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '[key: string]: string properties'
       return:
         type:
           - '[key: string]: string'
@@ -111,6 +117,7 @@ items:
     type: property
     summary: Gets or sets the root folder.
     syntax:
+      content: string rootFolder
       return:
         type:
           - string
@@ -123,6 +130,7 @@ items:
     type: property
     summary: Gets or sets the type of the repository.
     syntax:
+      content: string type
       return:
         type:
           - string
@@ -135,6 +143,7 @@ items:
     type: property
     summary: Gets or sets the url of the repository.
     syntax:
+      content: string url
       return:
         type:
           - string

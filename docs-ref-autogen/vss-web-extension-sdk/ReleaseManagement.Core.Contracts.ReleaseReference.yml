@@ -32,7 +32,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 1466
+      startLine: 1465
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -49,6 +49,9 @@ items:
     type: property
     summary: Gets list of artifacts.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Artifact[]
+        artifacts
       return:
         type:
           - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Artifact[]'
@@ -62,6 +65,7 @@ items:
     type: property
     summary: Gets the identity who created.
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef createdBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -75,6 +79,7 @@ items:
     type: property
     summary: Gets date on which it got created.
     syntax:
+      content: Date createdOn
       return:
         type:
           - Date
@@ -88,6 +93,7 @@ items:
     type: property
     summary: Gets description.
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -100,6 +106,7 @@ items:
     type: property
     summary: Gets the unique identifier of this field.
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -113,6 +120,7 @@ items:
     type: property
     summary: Gets the identity who modified.
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef modifiedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -126,6 +134,7 @@ items:
     type: property
     summary: Gets name of release.
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -139,6 +148,7 @@ items:
     type: property
     summary: Gets reason for release.
     syntax:
+      content: ReleaseReason reason
       return:
         type:
           - ReleaseReason
@@ -152,6 +162,9 @@ items:
     type: property
     summary: Gets release definition shallow reference.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionShallowReference
+        releaseDefinition
       return:
         type:
           - >-
@@ -166,6 +179,7 @@ items:
     type: property
     summary: Gets url to access the release.
     syntax:
+      content: string url
       return:
         type:
           - string
@@ -179,6 +193,7 @@ items:
     type: property
     summary: Gets web access url.
     syntax:
+      content: string webAccessUri
       return:
         type:
           - string

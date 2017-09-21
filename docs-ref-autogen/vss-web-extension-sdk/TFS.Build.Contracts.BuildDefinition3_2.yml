@@ -43,7 +43,7 @@ items:
       - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionReference'
     source:
       path: tfs.d.ts
-      startLine: 407
+      startLine: 406
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -59,6 +59,7 @@ items:
     type: property
     summary: Indicates whether badges are enabled for this definition
     syntax:
+      content: boolean badgeEnabled
       return:
         type:
           - boolean
@@ -71,6 +72,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionStep[] build'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionStep[]'
@@ -84,6 +86,7 @@ items:
     type: property
     summary: The build number format
     syntax:
+      content: string buildNumberFormat
       return:
         type:
           - string
@@ -96,6 +99,7 @@ items:
     type: property
     summary: The comment entered when saving the definition
     syntax:
+      content: string comment
       return:
         type:
           - string
@@ -108,6 +112,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: 'any[] demands'
       return:
         type:
           - 'any[]'
@@ -120,6 +125,7 @@ items:
     type: property
     summary: The description
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -132,6 +138,7 @@ items:
     type: property
     summary: The drop location for the definition
     syntax:
+      content: string dropLocation
       return:
         type:
           - string
@@ -147,6 +154,7 @@ items:
       Gets or sets the job authorization scope for builds which are queued
       against this definition
     syntax:
+      content: BuildAuthorizationScope jobAuthorizationScope
       return:
         type:
           - BuildAuthorizationScope
@@ -162,6 +170,7 @@ items:
       Gets or sets the job cancel timeout in minutes for builds which are
       cancelled by user for this definition
     syntax:
+      content: number jobCancelTimeoutInMinutes
       return:
         type:
           - number
@@ -177,6 +186,7 @@ items:
       Gets or sets the job execution timeout in minutes for builds which are
       queued against this definition
     syntax:
+      content: number jobTimeoutInMinutes
       return:
         type:
           - number
@@ -189,6 +199,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Build.Contracts.Build latestBuild'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.Build'
@@ -202,6 +213,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Build.Contracts.Build latestCompletedBuild'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.Build'
@@ -214,6 +226,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildOption[] options'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildOption[]'
@@ -227,6 +240,7 @@ items:
     type: property
     summary: Process Parameters
     syntax:
+      content: ProcessParameters processParameters
       return:
         type:
           - ProcessParameters
@@ -239,6 +253,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: any properties
       return:
         type:
           - any
@@ -251,6 +266,7 @@ items:
     type: property
     summary: The repository
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildRepository repository'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildRepository'
@@ -264,6 +280,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Build.Contracts.RetentionPolicy[]
+        retentionRules
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.RetentionPolicy[]'
@@ -276,6 +295,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: 'string[] tags'
       return:
         type:
           - 'string[]'
@@ -288,6 +308,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildTrigger[] triggers'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildTrigger[]'
@@ -300,6 +321,10 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        [key: string]:
+        @vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionVariable
+        variables
       return:
         type:
           - >-

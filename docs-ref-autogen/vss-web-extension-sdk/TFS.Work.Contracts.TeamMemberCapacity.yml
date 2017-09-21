@@ -15,7 +15,7 @@ items:
       - '@vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsDataContractBase'
     source:
       path: tfs.d.ts
-      startLine: 22225
+      startLine: 22224
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: Collection of capacities associated with the team member
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Work.Contracts.Activity[] activities'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.Activity[]'
@@ -43,6 +44,7 @@ items:
     type: property
     summary: The days off associated with the team member
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Work.Contracts.DateRange[] daysOff'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.DateRange[]'
@@ -55,6 +57,7 @@ items:
     type: property
     summary: Shallow Ref to the associated team member
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Work.Contracts.Member teamMember'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.Member'

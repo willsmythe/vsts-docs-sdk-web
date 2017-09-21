@@ -22,7 +22,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 7402
+      startLine: 7401
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -41,6 +41,7 @@ items:
       An ID that identifies a service connection to be used for authenticating
       endpoint requests.
     syntax:
+      content: string connectionId
       return:
         type:
           - string
@@ -60,6 +61,7 @@ items:
       for extracting nodes named 'ServiceName'.  endpoint.KeySelector =
       "jsonpath://ServiceName";
     syntax:
+      content: string keySelector
       return:
         type:
           - string
@@ -75,6 +77,7 @@ items:
       The scope as understood by Connected Services. Essentialy, a project-id
       for now.
     syntax:
+      content: string scope
       return:
         type:
           - string
@@ -93,6 +96,7 @@ items:
       following selector defines an XPath for extracting nodes named
       'ServiceName'.  endpoint.Selector = "xpath://ServiceName";
     syntax:
+      content: string selector
       return:
         type:
           - string
@@ -106,6 +110,7 @@ items:
     type: property
     summary: TaskId that this endpoint belongs to.
     syntax:
+      content: string taskId
       return:
         type:
           - string
@@ -119,6 +124,7 @@ items:
     type: property
     summary: URL to GET.
     syntax:
+      content: string url
       return:
         type:
           - string

@@ -25,7 +25,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 1746
+      startLine: 1745
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -41,6 +41,7 @@ items:
     type: property
     summary: Id of the current activity
     syntax:
+      content: string activityId
       return:
         type:
           - string
@@ -53,6 +54,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean allowStatsCollection
       return:
         type:
           - boolean
@@ -68,6 +70,7 @@ items:
       but the value can be overridden with a TFS-BUNDLING cookie or registry
       entry.
     syntax:
+      content: boolean bundlingEnabled
       return:
         type:
           - boolean
@@ -80,6 +83,7 @@ items:
     type: property
     summary: True if the CDN feature flag is enabled.
     syntax:
+      content: boolean cdnAvailable
       return:
         type:
           - boolean
@@ -94,6 +98,7 @@ items:
       True if the CDN feature flag is enabled and the user has not disabled CDN
       with a cookie.
     syntax:
+      content: boolean cdnEnabled
       return:
         type:
           - boolean
@@ -106,6 +111,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number clientLogLevel
       return:
         type:
           - number
@@ -118,6 +124,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean debugMode
       return:
         type:
           - boolean
@@ -130,6 +137,7 @@ items:
     type: property
     summary: Whether or not to diagnose the bundles.
     syntax:
+      content: boolean diagnoseBundles
       return:
         type:
           - boolean
@@ -142,6 +150,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean inExtensionFallbackMode
       return:
         type:
           - boolean
@@ -154,6 +163,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isDevFabric
       return:
         type:
           - boolean
@@ -166,6 +176,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string sessionId
       return:
         type:
           - string
@@ -178,6 +189,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean tracePointCollectionEnabled
       return:
         type:
           - boolean
@@ -190,6 +202,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string tracePointProfileEnd
       return:
         type:
           - string
@@ -202,6 +215,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string tracePointProfileStart
       return:
         type:
           - string
@@ -216,6 +230,7 @@ items:
       Denotes the version of the web platform consumed by this service. Of the
       form M###.
     syntax:
+      content: string webPlatformVersion
       return:
         type:
           - string

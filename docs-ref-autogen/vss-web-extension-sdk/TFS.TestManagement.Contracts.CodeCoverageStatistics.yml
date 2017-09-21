@@ -24,7 +24,7 @@ items:
       (modules, statements, blocks, etc.)
     source:
       path: tfs.d.ts
-      startLine: 10299
+      startLine: 10298
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -41,6 +41,7 @@ items:
     type: property
     summary: Covered units
     syntax:
+      content: number covered
       return:
         type:
           - number
@@ -54,6 +55,7 @@ items:
     type: property
     summary: Delta of coverage
     syntax:
+      content: number delta
       return:
         type:
           - number
@@ -67,6 +69,7 @@ items:
     type: property
     summary: Is delta valid
     syntax:
+      content: boolean isDeltaAvailable
       return:
         type:
           - boolean
@@ -80,6 +83,7 @@ items:
     type: property
     summary: 'Label of coverage data ("Blocks", "Statements", "Modules", etc.)'
     syntax:
+      content: string label
       return:
         type:
           - string
@@ -93,6 +97,7 @@ items:
     type: property
     summary: Position of label
     syntax:
+      content: number position
       return:
         type:
           - number
@@ -106,6 +111,7 @@ items:
     type: property
     summary: Total units
     syntax:
+      content: number total
       return:
         type:
           - number

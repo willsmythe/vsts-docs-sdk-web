@@ -15,7 +15,7 @@ items:
     summary: Represents a code change in a build.
     source:
       path: tfs.d.ts
-      startLine: 9837
+      startLine: 9836
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: Gets or sets the name of the assembly containing the change.
     syntax:
+      content: string assemblyName
       return:
         type:
           - string
@@ -43,6 +44,7 @@ items:
     type: property
     summary: Gets or sets the signature of the code that changed.
     syntax:
+      content: string codeSignature
       return:
         type:
           - string
@@ -55,6 +57,7 @@ items:
     type: property
     summary: Gets or sets the file name containing the code change.
     syntax:
+      content: string fileName
       return:
         type:
           - string
@@ -67,6 +70,7 @@ items:
     type: property
     summary: Gets or sets the name of the code that changed.
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -79,6 +83,7 @@ items:
     type: property
     summary: Gets or sets the signature type of the code that changed.
     syntax:
+      content: SignatureType signatureType
       return:
         type:
           - SignatureType

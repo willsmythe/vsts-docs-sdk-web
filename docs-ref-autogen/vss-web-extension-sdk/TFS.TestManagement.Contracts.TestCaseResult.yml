@@ -95,7 +95,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 10722
+      startLine: 10721
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -112,6 +112,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number afnStripId
       return:
         type:
           - number
@@ -124,6 +125,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        area
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -137,6 +141,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference[]
+        associatedBugs
       return:
         type:
           - >-
@@ -151,6 +158,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string automatedTestId
       return:
         type:
           - string
@@ -164,6 +172,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string automatedTestName
       return:
         type:
           - string
@@ -177,6 +186,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string automatedTestStorage
       return:
         type:
           - string
@@ -190,6 +200,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string automatedTestType
       return:
         type:
           - string
@@ -203,6 +214,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string automatedTestTypeId
       return:
         type:
           - string
@@ -215,6 +227,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        build
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -228,6 +243,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.BuildReference
+        buildReference
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.BuildReference'
@@ -240,6 +258,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string comment
       return:
         type:
           - string
@@ -253,6 +272,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date completedDate
       return:
         type:
           - Date
@@ -266,6 +286,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string computerName
       return:
         type:
           - string
@@ -279,6 +300,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        configuration
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -292,6 +316,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date createdDate
       return:
         type:
           - Date
@@ -305,6 +330,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.CustomTestField[]
+        customFields
       return:
         type:
           - >-
@@ -319,6 +347,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number durationInMs
       return:
         type:
           - number
@@ -332,6 +361,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string errorMessage
       return:
         type:
           - string
@@ -345,6 +375,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.FailingSince
+        failingSince
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.FailingSince'
@@ -358,6 +391,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string failureType
       return:
         type:
           - string
@@ -370,6 +404,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -383,6 +418,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.TestIterationDetailsModel[]
+        iterationDetails
       return:
         type:
           - >-
@@ -397,6 +435,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef lastUpdatedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -410,6 +449,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date lastUpdatedDate
       return:
         type:
           - Date
@@ -422,6 +462,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string outcome
       return:
         type:
           - string
@@ -434,6 +475,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef owner'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -446,6 +488,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number priority
       return:
         type:
           - number
@@ -458,6 +501,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        project
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -470,6 +516,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        release
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -483,6 +532,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ReleaseReference
+        releaseReference
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ReleaseReference'
@@ -496,6 +548,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number resetCount
       return:
         type:
           - number
@@ -509,6 +562,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string resolutionState
       return:
         type:
           - string
@@ -522,6 +576,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number resolutionStateId
       return:
         type:
           - number
@@ -534,6 +589,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number revision
       return:
         type:
           - number
@@ -546,6 +602,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef runBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -559,6 +616,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string stackTrace
       return:
         type:
           - string
@@ -572,6 +630,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date startedDate
       return:
         type:
           - Date
@@ -584,6 +643,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string state
       return:
         type:
           - string
@@ -596,6 +656,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        testCase
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -609,6 +672,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number testCaseReferenceId
       return:
         type:
           - number
@@ -622,6 +686,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string testCaseTitle
       return:
         type:
           - string
@@ -634,6 +699,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        testPlan
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -647,6 +715,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        testPoint
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -659,6 +730,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        testRun
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -672,6 +746,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        testSuite
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -684,6 +761,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string url
       return:
         type:
           - string

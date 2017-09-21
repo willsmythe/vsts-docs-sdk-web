@@ -1,7 +1,7 @@
 ### YamlMime:UniversalReference
 items:
   - uid: vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateControl
-    name: TemplateControl
+    name: TemplateControl<TViewModel>
     fullName: TemplateControl
     children:
       - vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateControl.applyBinding
@@ -22,7 +22,7 @@ items:
       - '@vss-web-extension-sdk.VSS.Controls.BaseControl'
     source:
       path: vss.d.ts
-      startLine: 3498
+      startLine: 3497
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -59,8 +59,8 @@ items:
               @vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateControlOptions
           description: Template options like templateHtml and templateId.
       content: >-
-        function applyBinding(controlType: any, element: JQuery, viewModel:
-        TViewModel, options: TemplateControlOptions)
+        static function applyBinding(controlType: any, element: JQuery,
+        viewModel: TViewModel, options: TemplateControlOptions)
       return:
         type:
           - TControl
@@ -105,8 +105,8 @@ items:
             - any
           description: Context used to generate view model.
       content: >-
-        function applyRegisteredBinding(templateId: string, element: JQuery,
-        viewModelContext: any)
+        static function applyRegisteredBinding(templateId: string, element:
+        JQuery, viewModelContext: any)
       return:
         type:
           - TControl
@@ -168,7 +168,7 @@ items:
           description: |
             Delegate to generate the viewmodel.
       content: >-
-        function registerBinding(templateId: string, controlType: any,
+        static function registerBinding(templateId: string, controlType: any,
         viewModelGenerator: function)
     type: method
   - uid: vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateControl.subscribe

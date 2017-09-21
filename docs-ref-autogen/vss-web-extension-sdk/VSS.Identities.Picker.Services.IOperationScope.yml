@@ -16,7 +16,7 @@ items:
     summary: Maps to static Directory in the DirectoryDiscoveryService
     source:
       path: vss.d.ts
-      startLine: 26417
+      startLine: 26416
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
     type: property
     summary: Search the Azure Active Directory
     syntax:
+      content: boolean AAD
       return:
         type:
           - boolean
@@ -44,6 +45,7 @@ items:
     type: property
     summary: Search Active Directory
     syntax:
+      content: boolean AD
       return:
         type:
           - boolean
@@ -56,6 +58,7 @@ items:
     type: property
     summary: Search IMS (Identity service)
     syntax:
+      content: boolean IMS
       return:
         type:
           - boolean
@@ -71,6 +74,7 @@ items:
       Search the applicable source directory - AAD tenant-level for AAD-backed
       accounts or IMS account-level for MSA accounts/on-premise TFS
     syntax:
+      content: boolean Source
       return:
         type:
           - boolean
@@ -83,6 +87,7 @@ items:
     type: property
     summary: Search Windows Machine Directory
     syntax:
+      content: boolean WMD
       return:
         type:
           - boolean

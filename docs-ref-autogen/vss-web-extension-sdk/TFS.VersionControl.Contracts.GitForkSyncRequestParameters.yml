@@ -15,7 +15,7 @@ items:
     summary: Parameters for creating a fork request
     source:
       path: tfs.d.ts
-      startLine: 14011
+      startLine: 14010
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GlobalGitRepositoryKey
+        source
       return:
         type:
           - >-
@@ -48,6 +51,9 @@ items:
       If supplied, the set of ref mappings to use when performing a "sync" or
       create If missing, all refs will be synchronized
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.SourceToTargetRef[]
+        sourceToTargetRefs
       return:
         type:
           - >-

@@ -20,7 +20,7 @@ items:
       - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
     source:
       path: tfs.d.ts
-      startLine: 15013
+      startLine: 15012
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isRequired
       return:
         type:
           - boolean
@@ -50,6 +51,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string reviewerUrl
       return:
         type:
           - string
@@ -63,6 +65,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number vote
       return:
         type:
           - number
@@ -76,6 +79,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.IdentityRefWithVote[]
+        votedFor
       return:
         type:
           - >-

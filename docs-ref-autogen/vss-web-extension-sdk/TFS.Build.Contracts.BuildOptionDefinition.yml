@@ -19,7 +19,7 @@ items:
         @vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionDefinitionReference
     source:
       path: tfs.d.ts
-      startLine: 644
+      startLine: 643
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -48,6 +49,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionGroupDefinition[]
+        groups
       return:
         type:
           - >-
@@ -61,6 +65,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Build.Contracts.BuildOptionInputDefinition[]
+        inputs
       return:
         type:
           - >-
@@ -74,6 +81,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -86,6 +94,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number ordinal
       return:
         type:
           - number

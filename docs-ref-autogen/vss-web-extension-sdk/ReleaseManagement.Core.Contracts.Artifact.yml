@@ -17,7 +17,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 195
+      startLine: 194
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
     type: property
     summary: Gets or sets alias.
     syntax:
+      content: string alias
       return:
         type:
           - string
@@ -48,6 +49,10 @@ items:
       Gets or sets definition reference. e.g.
       {"project":{"id":"fed755ea-49c5-4399-acea-fd5b5aa90a6c","name":"myProject"},"definition":{"id":"1","name":"mybuildDefinition"},"connection":{"id":"1","name":"myConnection"}}
     syntax:
+      content: >-
+        [key: string]:
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ArtifactSourceReference
+        definitionReference
       return:
         type:
           - >-
@@ -62,6 +67,7 @@ items:
     type: property
     summary: Gets or sets as artifact is primary or not.
     syntax:
+      content: boolean isPrimary
       return:
         type:
           - boolean
@@ -74,6 +80,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string sourceId
       return:
         type:
           - string
@@ -89,6 +96,7 @@ items:
       'Nuget', 'Team Build (external)', 'ExternalTFSBuild', 'Git', 'TFVC',
       'ExternalTfsXamlBuild'.
     syntax:
+      content: string type
       return:
         type:
           - string

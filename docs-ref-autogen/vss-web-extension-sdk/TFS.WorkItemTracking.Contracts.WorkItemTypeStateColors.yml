@@ -15,7 +15,7 @@ items:
     summary: State colors for a work item type
     source:
       path: tfs.d.ts
-      startLine: 18587
+      startLine: 18586
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,9 @@ items:
     type: property
     summary: Work item type state colors
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemStateColor[]
+        stateColors
       return:
         type:
           - >-
@@ -46,6 +49,7 @@ items:
     type: property
     summary: Work item type name
     syntax:
+      content: string workItemTypeName
       return:
         type:
           - string

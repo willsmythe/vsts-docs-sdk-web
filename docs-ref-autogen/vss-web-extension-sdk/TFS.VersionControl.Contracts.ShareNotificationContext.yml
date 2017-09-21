@@ -15,7 +15,7 @@ items:
     summary: Context used while sharing a pull request.
     source:
       path: tfs.d.ts
-      startLine: 15103
+      startLine: 15102
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
     type: property
     summary: Optional user note or message.
     syntax:
+      content: string message
       return:
         type:
           - string
@@ -45,6 +46,7 @@ items:
     type: property
     summary: Identities of users who will receive a share notification.
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef[] receivers'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef[]'

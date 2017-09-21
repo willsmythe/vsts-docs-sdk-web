@@ -1,7 +1,7 @@
 ### YamlMime:UniversalReference
 items:
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.ChangeList
-    name: ChangeList
+    name: ChangeList<T>
     fullName: ChangeList
     children:
       - >-
@@ -27,7 +27,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 13289
+      startLine: 13288
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -44,6 +44,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean allChangesIncluded
       return:
         type:
           - boolean
@@ -56,6 +57,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '[key: number]: number changeCounts'
       return:
         type:
           - '[key: number]: number'
@@ -68,6 +70,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.VersionControl.Contracts.Change<T>[] changes'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.Change<T>[]'
@@ -80,6 +83,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string comment
       return:
         type:
           - string
@@ -93,6 +97,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean commentTruncated
       return:
         type:
           - boolean
@@ -105,6 +110,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date creationDate
       return:
         type:
           - Date
@@ -117,6 +123,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.VersionControl.Contracts.CheckinNote[] notes'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.CheckinNote[]'
@@ -129,6 +136,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string owner
       return:
         type:
           - string
@@ -142,6 +150,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string ownerDisplayName
       return:
         type:
           - string
@@ -154,6 +163,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string ownerId
       return:
         type:
           - string
@@ -166,6 +176,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date sortDate
       return:
         type:
           - Date
@@ -178,6 +189,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string version
       return:
         type:
           - string

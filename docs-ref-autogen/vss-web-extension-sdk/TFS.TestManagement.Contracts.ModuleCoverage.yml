@@ -23,7 +23,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 10432
+      startLine: 10431
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -40,6 +40,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number blockCount
       return:
         type:
           - number
@@ -53,6 +54,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: 'number[] blockData'
       return:
         type:
           - 'number[]'
@@ -66,6 +68,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.FunctionCoverage[]
+        functions
       return:
         type:
           - >-
@@ -79,6 +84,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -92,6 +98,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string signature
       return:
         type:
           - string
@@ -105,6 +112,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number signatureAge
       return:
         type:
           - number
@@ -118,6 +126,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.CoverageStatistics
+        statistics
       return:
         type:
           - >-

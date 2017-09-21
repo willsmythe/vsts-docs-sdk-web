@@ -28,7 +28,7 @@ items:
       - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
     source:
       path: vss.d.ts
-      startLine: 11527
+      startLine: 11526
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -45,6 +45,7 @@ items:
     type: property
     summary: Hide or show corresponding clause section
     syntax:
+      content: boolean enableGrouping
       return:
         type:
           - boolean
@@ -58,6 +59,7 @@ items:
     type: property
     summary: Enable add or remove clause behavior
     syntax:
+      content: boolean enableRowAddRemove
       return:
         type:
           - boolean
@@ -71,6 +73,7 @@ items:
     type: property
     summary: All field and operators control should not allow edit
     syntax:
+      content: boolean hasFixedFields
       return:
         type:
           - boolean
@@ -84,6 +87,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean hideLogicalOperator
       return:
         type:
           - boolean
@@ -97,6 +101,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean hideOperatorHeader
       return:
         type:
           - boolean
@@ -112,6 +117,7 @@ items:
       Add clause behavior will prepend instead of append. Used with
       enableRowAddRemove
     syntax:
+      content: boolean prependAddRow
       return:
         type:
           - boolean
@@ -125,6 +131,7 @@ items:
     type: property
     summary: 'Add blur propogation to field, operator, and value controls'
     syntax:
+      content: boolean propogateControlBlur
       return:
         type:
           - boolean
@@ -137,6 +144,7 @@ items:
     type: property
     summary: All controls will be in read only mode
     syntax:
+      content: boolean readOnly
       return:
         type:
           - boolean

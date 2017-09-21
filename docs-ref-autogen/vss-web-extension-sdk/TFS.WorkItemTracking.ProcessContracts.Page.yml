@@ -27,7 +27,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 19013
+      startLine: 19012
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -44,6 +44,9 @@ items:
     type: property
     summary: Contribution for the page.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessContracts.WitContribution
+        contribution
       return:
         type:
           - >-
@@ -57,6 +60,7 @@ items:
     type: property
     summary: The id for the layout node.
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -71,6 +75,7 @@ items:
       A value indicating whether this layout node has been inherited from a
       parent layout.  This is expected to only be only set by the combiner.
     syntax:
+      content: boolean inherited
       return:
         type:
           - boolean
@@ -84,6 +89,7 @@ items:
     type: property
     summary: A value indicating if the layout node is contribution are not.
     syntax:
+      content: boolean isContribution
       return:
         type:
           - boolean
@@ -96,6 +102,7 @@ items:
     type: property
     summary: The label for the page.
     syntax:
+      content: string label
       return:
         type:
           - string
@@ -110,6 +117,7 @@ items:
       A value indicating whether any user operations are permitted on this page
       and the contents of this page
     syntax:
+      content: boolean locked
       return:
         type:
           - boolean
@@ -122,6 +130,7 @@ items:
     type: property
     summary: Order in which the page should appear in the layout.
     syntax:
+      content: number order
       return:
         type:
           - number
@@ -137,6 +146,7 @@ items:
       A value indicating whether this layout node has been overridden by a child
       layout.
     syntax:
+      content: boolean overridden
       return:
         type:
           - boolean
@@ -149,6 +159,7 @@ items:
     type: property
     summary: The icon for the page.
     syntax:
+      content: PageType pageType
       return:
         type:
           - PageType
@@ -161,6 +172,9 @@ items:
     type: property
     summary: The sections of the page.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessContracts.Section[]
+        sections
       return:
         type:
           - >-
@@ -174,6 +188,7 @@ items:
     type: property
     summary: A value indicating if the page should be hidden or not.
     syntax:
+      content: boolean visible
       return:
         type:
           - boolean

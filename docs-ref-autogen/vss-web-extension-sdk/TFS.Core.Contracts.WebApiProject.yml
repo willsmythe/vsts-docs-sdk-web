@@ -15,7 +15,7 @@ items:
       - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference'
     source:
       path: tfs.d.ts
-      startLine: 4700
+      startLine: 4699
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: Set of capabilities this project has
     syntax:
+      content: '[key: string]: function capabilities'
       return:
         type:
           - '[key: string]: function'
@@ -43,6 +44,9 @@ items:
     type: property
     summary: Reference to collection which contains this project
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Core.Contracts.WebApiProjectCollectionRef
+        collection
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Core.Contracts.WebApiProjectCollectionRef'
@@ -55,6 +59,7 @@ items:
     type: property
     summary: Default team for this project
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Core.Contracts.WebApiTeamRef defaultTeam'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Core.Contracts.WebApiTeamRef'

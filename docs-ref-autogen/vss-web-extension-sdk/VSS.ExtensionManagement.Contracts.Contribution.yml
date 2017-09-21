@@ -23,7 +23,7 @@ items:
         @vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ContributionBase
     source:
       path: vss.d.ts
-      startLine: 19454
+      startLine: 19453
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -42,6 +42,9 @@ items:
       List of constraints (filters) that should be applied to the availability
       of this contribution
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ContributionConstraint[]
+        constraints
       return:
         type:
           - >-
@@ -58,6 +61,7 @@ items:
       Includes is a set of contributions that should have this contribution
       included in their targets list.
     syntax:
+      content: 'string[] includes'
       return:
         type:
           - 'string[]'
@@ -71,6 +75,7 @@ items:
     type: property
     summary: Properties/attributes of this contribution
     syntax:
+      content: any properties
       return:
         type:
           - any
@@ -86,6 +91,7 @@ items:
       The ids of the contribution(s) that this contribution targets. (parent
       contributions)
     syntax:
+      content: 'string[] targets'
       return:
         type:
           - 'string[]'
@@ -98,6 +104,7 @@ items:
     type: property
     summary: Id of the Contribution Type
     syntax:
+      content: string type
       return:
         type:
           - string

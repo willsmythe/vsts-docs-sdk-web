@@ -57,7 +57,7 @@ items:
         @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTrackingResource
     source:
       path: tfs.d.ts
-      startLine: 18248
+      startLine: 18247
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -74,6 +74,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem[]
+        children
       return:
         type:
           - >-
@@ -88,6 +91,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemQueryClause
+        clauses
       return:
         type:
           - >-
@@ -102,6 +108,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemFieldReference[]
+        columns
       return:
         type:
           - >-
@@ -116,6 +125,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference
+        createdBy
       return:
         type:
           - >-
@@ -130,6 +142,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date createdDate
       return:
         type:
           - Date
@@ -143,6 +156,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: LinkQueryMode filterOptions
       return:
         type:
           - LinkQueryMode
@@ -156,6 +170,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean hasChildren
       return:
         type:
           - boolean
@@ -168,6 +183,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -181,6 +197,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isDeleted
       return:
         type:
           - boolean
@@ -194,6 +211,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isFolder
       return:
         type:
           - boolean
@@ -207,6 +225,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isInvalidSyntax
       return:
         type:
           - boolean
@@ -220,6 +239,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isPublic
       return:
         type:
           - boolean
@@ -233,6 +253,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference
+        lastModifiedBy
       return:
         type:
           - >-
@@ -247,6 +270,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date lastModifiedDate
       return:
         type:
           - Date
@@ -260,6 +284,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemQueryClause
+        linkClauses
       return:
         type:
           - >-
@@ -274,6 +301,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -287,6 +315,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string path
       return:
         type:
           - string
@@ -300,6 +329,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: QueryType queryType
       return:
         type:
           - QueryType
@@ -313,6 +343,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemQuerySortColumn[]
+        sortColumns
       return:
         type:
           - >-
@@ -327,6 +360,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemQueryClause
+        sourceClauses
       return:
         type:
           - >-
@@ -341,6 +377,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemQueryClause
+        targetClauses
       return:
         type:
           - >-
@@ -355,6 +394,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string wiql
       return:
         type:
           - string

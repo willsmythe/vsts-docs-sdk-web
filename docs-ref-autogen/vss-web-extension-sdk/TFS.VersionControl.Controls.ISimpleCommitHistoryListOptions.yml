@@ -21,7 +21,7 @@ items:
     summary: Configuration options when creating CommitHistoryList extension control.
     source:
       path: tfs.d.ts
-      startLine: 15953
+      startLine: 15952
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -38,6 +38,9 @@ items:
     type: property
     summary: List of commit objects to be rendered
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef[]
+        commits
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef[]'
@@ -51,6 +54,7 @@ items:
     type: property
     summary: Callback to fetch more items
     syntax:
+      content: function fetchMoreItems
       return:
         type:
           - function
@@ -64,6 +68,7 @@ items:
     type: property
     summary: Displays header above the list
     syntax:
+      content: boolean isHeaderVisible
       return:
         type:
           - boolean
@@ -77,6 +82,7 @@ items:
     type: property
     summary: Indicates more results available or not
     syntax:
+      content: boolean moreResultsAvailable
       return:
         type:
           - boolean
@@ -90,6 +96,7 @@ items:
     type: property
     summary: Callback to be invoked when the scenario is completed
     syntax:
+      content: function onScenarioComplete
       return:
         type:
           - function

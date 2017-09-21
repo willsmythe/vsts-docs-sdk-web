@@ -32,7 +32,7 @@ items:
       come from current IVssServiceHost.
     source:
       path: vss.d.ts
-      startLine: 6438
+      startLine: 6437
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -51,6 +51,7 @@ items:
       there are two areas "Admin" and "Api". They can be specified in the URL as
       _admin and _api respectively.
     syntax:
+      content: string area
       return:
         type:
           - string
@@ -66,6 +67,7 @@ items:
       Command name for the current request's route. Used in telemetry and
       reporting.
     syntax:
+      content: string commandName
       return:
         type:
           - string
@@ -79,6 +81,7 @@ items:
     type: property
     summary: Current action route value
     syntax:
+      content: string currentAction
       return:
         type:
           - string
@@ -92,6 +95,7 @@ items:
     type: property
     summary: Current controller route value
     syntax:
+      content: string currentController
       return:
         type:
           - string
@@ -107,6 +111,7 @@ items:
       Current parameters route value (the path after the controller and action
       in the url)
     syntax:
+      content: string currentParameters
       return:
         type:
           - string
@@ -120,6 +125,7 @@ items:
     type: property
     summary: The id of the matched route
     syntax:
+      content: string routeId
       return:
         type:
           - string
@@ -133,6 +139,7 @@ items:
     type: property
     summary: The template for the matched route
     syntax:
+      content: string routeTemplate
       return:
         type:
           - string
@@ -146,6 +153,7 @@ items:
     type: property
     summary: The set of route values for this request
     syntax:
+      content: '[key: string]: string routeValues'
       return:
         type:
           - '[key: string]: string'
@@ -164,6 +172,7 @@ items:
       http://server:port/collection/project/_admin/_controller/action sets also
       sets the area property to Admin.
     syntax:
+      content: NavigationContextLevels topMostLevel
       return:
         type:
           - NavigationContextLevels

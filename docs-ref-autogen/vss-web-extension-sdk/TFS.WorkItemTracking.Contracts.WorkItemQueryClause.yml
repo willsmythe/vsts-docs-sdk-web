@@ -24,7 +24,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 18463
+      startLine: 18462
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -41,6 +41,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemQueryClause[]
+        clauses
       return:
         type:
           - >-
@@ -55,6 +58,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemFieldReference
+        field
       return:
         type:
           - >-
@@ -69,6 +75,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemFieldReference
+        fieldValue
       return:
         type:
           - >-
@@ -83,6 +92,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isFieldValue
       return:
         type:
           - boolean
@@ -96,6 +106,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: LogicalOperation logicalOperator
       return:
         type:
           - LogicalOperation
@@ -109,6 +120,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemFieldOperation
+        operator
       return:
         type:
           - >-
@@ -123,6 +137,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string value
       return:
         type:
           - string

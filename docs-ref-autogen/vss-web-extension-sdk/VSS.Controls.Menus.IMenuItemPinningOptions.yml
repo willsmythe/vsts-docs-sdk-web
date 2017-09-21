@@ -30,7 +30,7 @@ items:
       See also IMenuPinningOptions
     source:
       path: vss.d.ts
-      startLine: 13675
+      startLine: 13674
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -46,6 +46,7 @@ items:
     type: property
     summary: Unique identifier for a group of pinnable menu items.
     syntax:
+      content: string groupId
       return:
         type:
           - string
@@ -58,6 +59,7 @@ items:
     type: property
     summary: Set to true to hide the pin button.
     syntax:
+      content: boolean hidePin
       return:
         type:
           - boolean
@@ -71,6 +73,7 @@ items:
     type: property
     summary: Set to true if the item is pinnable.
     syntax:
+      content: boolean isPinnable
       return:
         type:
           - boolean
@@ -83,6 +86,7 @@ items:
     type: property
     summary: Whether or not the menu item is pinned.
     syntax:
+      content: boolean isPinned
       return:
         type:
           - boolean
@@ -99,6 +103,7 @@ items:
 
       setting on parent menu.
     syntax:
+      content: boolean neverHide
       return:
         type:
           - boolean
@@ -115,6 +120,7 @@ items:
       menuItem is the MenuItem that was clicked.
       siblingMenuItem is the matching MenuItem from the other Menu.
     syntax:
+      content: function onPinnedChanged
       return:
         type:
           - function

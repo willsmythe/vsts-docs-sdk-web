@@ -25,7 +25,7 @@ items:
         @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTrackingResourceReference
     source:
       path: tfs.d.ts
-      startLine: 18606
+      startLine: 18605
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -41,6 +41,10 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        [key: string]:
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemFieldUpdate
+        fields
       return:
         type:
           - >-
@@ -55,6 +59,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -68,6 +73,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemRelationUpdates
+        relations
       return:
         type:
           - >-
@@ -81,6 +89,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number rev
       return:
         type:
           - number
@@ -94,6 +103,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.IdentityReference
+        revisedBy
       return:
         type:
           - >-
@@ -108,6 +120,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date revisedDate
       return:
         type:
           - Date
@@ -121,6 +134,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number workItemId
       return:
         type:
           - number

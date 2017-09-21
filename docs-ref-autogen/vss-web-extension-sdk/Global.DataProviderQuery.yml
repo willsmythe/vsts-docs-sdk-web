@@ -12,7 +12,7 @@ items:
     summary: A query that can be issued for data provider data
     source:
       path: vss.d.ts
-      startLine: 1710
+      startLine: 1709
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -28,6 +28,7 @@ items:
     type: property
     summary: Contextual information to pass to the data providers
     syntax:
+      content: '@vss-web-extension-sdk.DataProviderContext context'
       return:
         type:
           - '@vss-web-extension-sdk.DataProviderContext'
@@ -40,6 +41,7 @@ items:
     type: property
     summary: The contribution ids of the data providers to resolve
     syntax:
+      content: 'string[] contributionIds'
       return:
         type:
           - 'string[]'

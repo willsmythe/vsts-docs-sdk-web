@@ -1,7 +1,7 @@
 ### YamlMime:UniversalReference
 items:
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement
-    name: Enhancement
+    name: Enhancement<TOptions>
     fullName: Enhancement
     children:
       - vss-web-extension-sdk.VSS.Controls.Enhancement.cancelDelayedFunction
@@ -38,7 +38,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 9140
+      startLine: 9139
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -157,7 +157,7 @@ items:
           description: ''
           optional: true
       content: >-
-        function enhance(type: function, element: Enhancement, options?:
+        static function enhance(type: function, element: Enhancement, options?:
         function, enhancementOptions?: EnhancementOptions)
       return:
         type:
@@ -195,6 +195,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string ENHANCEMENTS_DATA_KEY
       return:
         type:
           - string
@@ -208,6 +209,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string ENHANCEMENT_OPTIONPREFIX_KEY
       return:
         type:
           - string
@@ -220,6 +222,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string ENHANCEMENT_OPTIONS_KEY
       return:
         type:
           - string
@@ -247,8 +250,8 @@ items:
           description: ''
           optional: true
       content: >-
-        function ensureEnhancement(type?: any, context?: any, errorCallback?:
-        any)
+        static function ensureEnhancement(type?: any, context?: any,
+        errorCallback?: any)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Enhancement<any>'
@@ -277,8 +280,8 @@ items:
           description: ''
           optional: true
       content: >-
-        function ensureEnhancements(type?: any, context?: any, errorCallback?:
-        any)
+        static function ensureEnhancements(type?: any, context?: any,
+        errorCallback?: any)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.getElement
     name: getElement()
@@ -310,7 +313,7 @@ items:
             - any
           description: |+
 
-      content: 'function getEnhancementOptions(type: any, element: any)'
+      content: 'static function getEnhancementOptions(type: any, element: any)'
       return:
         type:
           - any
@@ -346,7 +349,7 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function getInstance(type?: any, element?: any)'
+      content: 'static function getInstance(type?: any, element?: any)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Enhancement<any>'
@@ -369,7 +372,7 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function getInstanceO(type?: any, element?: any)'
+      content: 'static function getInstanceO(type?: any, element?: any)'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Enhancement<TOptions>'
@@ -386,7 +389,7 @@ items:
           type:
             - any
           description: ''
-      content: 'function getOptionPrefix(type: any)'
+      content: 'static function getOptionPrefix(type: any)'
       return:
         type:
           - string
@@ -430,7 +433,7 @@ items:
             - any
           description: ''
           optional: true
-      content: 'function getTypeName(type?: any)'
+      content: 'static function getTypeName(type?: any)'
       return:
         type:
           - string
@@ -483,6 +486,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string optionsPrefix
       return:
         type:
           - string
@@ -524,7 +528,7 @@ items:
           description: ''
           optional: true
       content: >-
-        function registerEnhancement(type?: function, selector?: string,
+        static function registerEnhancement(type?: function, selector?: string,
         options?: TOptions, errorCallback?: IErrorCallback, enhancementOptions?:
         EnhancementOptions)
     type: method
@@ -560,7 +564,7 @@ items:
           description: ''
           optional: true
       content: >-
-        function registerJQueryWidget(type?: any, widgetName?: any,
+        static function registerJQueryWidget(type?: any, widgetName?: any,
         widgetOptions?: TOptions, enhancementOptions?: EnhancementOptions)
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement.setEnhancementOptions

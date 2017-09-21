@@ -15,7 +15,7 @@ items:
     summary: AMD javascript module loader configuration
     source:
       path: vss.d.ts
-      startLine: 2496
+      startLine: 2495
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string baseUrl
       return:
         type:
           - string
@@ -43,6 +44,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '[key: string]: @vss-web-extension-sdk.ContributionPath contributionPaths'
       return:
         type:
           - '[key: string]: @vss-web-extension-sdk.ContributionPath'
@@ -55,6 +57,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '[key: string]: string paths'
       return:
         type:
           - '[key: string]: string'
@@ -67,6 +70,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '[key: string]: @vss-web-extension-sdk.ModuleLoaderShimConfiguration shim'
       return:
         type:
           - '[key: string]: @vss-web-extension-sdk.ModuleLoaderShimConfiguration'
@@ -81,6 +85,7 @@ items:
       The maximum amount of time (in seconds) the AMD loader will wait for
       scripts to load.
     syntax:
+      content: number waitSeconds
       return:
         type:
           - number

@@ -24,7 +24,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 14687
+      startLine: 14686
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -41,6 +41,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string defaultBranch
       return:
         type:
           - string
@@ -56,6 +57,9 @@ items:
       If set, options for creating this repo as a fork of another one. If unset,
       this repo is unrelated to any existing forks.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitForkSyncRequestParameters
+        forkOptions
       return:
         type:
           - >-
@@ -72,6 +76,9 @@ items:
       Only set when querying repositories. If set, the "parent" fork of this
       repository.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GlobalGitRepositoryKey
+        forkParent
       return:
         type:
           - >-
@@ -85,6 +92,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -97,6 +105,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -109,6 +118,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference project'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference'
@@ -121,6 +131,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string remoteUrl
       return:
         type:
           - string
@@ -133,6 +144,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string url
       return:
         type:
           - string
@@ -146,6 +158,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: 'string[] validRemoteUrls'
       return:
         type:
           - 'string[]'

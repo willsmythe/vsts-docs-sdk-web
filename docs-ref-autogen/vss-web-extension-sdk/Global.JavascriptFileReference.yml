@@ -15,7 +15,7 @@ items:
     summary: Reference to a javascript file to include on a page
     source:
       path: vss.d.ts
-      startLine: 2445
+      startLine: 2444
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
       Condition to check in the case that Url lives on a CDN. The fallback
       script will be included if this check fails.
     syntax:
+      content: string fallbackCondition
       return:
         type:
           - string
@@ -45,6 +46,7 @@ items:
     type: property
     summary: Fallback url to use in case Url lives on a CDN
     syntax:
+      content: string fallbackUrl
       return:
         type:
           - string
@@ -57,6 +59,7 @@ items:
     type: property
     summary: 'Id of the reference (JQuery, JQueryUI, MicrosoftAjax, etc.)'
     syntax:
+      content: string identifier
       return:
         type:
           - string
@@ -71,6 +74,7 @@ items:
       Is this a core javascript file that needs to be included in all child
       extension frames
     syntax:
+      content: boolean isCoreModule
       return:
         type:
           - boolean
@@ -83,6 +87,7 @@ items:
     type: property
     summary: Url of the javascript reference
     syntax:
+      content: string url
       return:
         type:
           - string

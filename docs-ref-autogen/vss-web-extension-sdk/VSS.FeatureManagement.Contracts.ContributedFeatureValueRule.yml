@@ -15,7 +15,7 @@ items:
     summary: A rule for dynamically getting the enabled/disabled state of a feature
     source:
       path: vss.d.ts
-      startLine: 20692
+      startLine: 20691
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
     type: property
     summary: Name of the IContributedFeatureValuePlugin to run
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -45,6 +46,7 @@ items:
     type: property
     summary: Properties to feed to the IContributedFeatureValuePlugin
     syntax:
+      content: '[key: string]: any properties'
       return:
         type:
           - '[key: string]: any'

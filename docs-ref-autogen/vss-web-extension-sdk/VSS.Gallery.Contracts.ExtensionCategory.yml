@@ -20,7 +20,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 21624
+      startLine: 21623
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
     type: property
     summary: The name of the products with which this category is associated to.
     syntax:
+      content: 'string[] associatedProducts'
       return:
         type:
           - 'string[]'
@@ -49,6 +50,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number categoryId
       return:
         type:
           - number
@@ -61,6 +63,7 @@ items:
     type: property
     summary: This is the internal name for a category
     syntax:
+      content: string categoryName
       return:
         type:
           - string
@@ -75,6 +78,7 @@ items:
       This parameter is obsolete. Refer to LanguageTitles for langauge specific
       titles
     syntax:
+      content: string language
       return:
         type:
           - string
@@ -88,6 +92,9 @@ items:
     type: property
     summary: The list of all the titles of this category in various languages
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Gallery.Contracts.CategoryLanguageTitle[]
+        languageTitles
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Gallery.Contracts.CategoryLanguageTitle[]'
@@ -103,6 +110,7 @@ items:
       This is the internal name of the parent if this is associated with a
       parent
     syntax:
+      content: string parentCategoryName
       return:
         type:
           - string

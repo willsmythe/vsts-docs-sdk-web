@@ -22,7 +22,7 @@ items:
     summary: Data contract for the plan definition
     source:
       path: tfs.d.ts
-      startLine: 22027
+      startLine: 22026
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -40,6 +40,9 @@ items:
       Identity that created this plan. Defaults to null for records before
       upgrading to ScaledAgileViewComponent4.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+        createdByIdentity
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -52,6 +55,7 @@ items:
     type: property
     summary: Date when the plan was created
     syntax:
+      content: Date createdDate
       return:
         type:
           - Date
@@ -64,6 +68,7 @@ items:
     type: property
     summary: Description of the plan
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -76,6 +81,7 @@ items:
     type: property
     summary: Id of the plan
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -90,6 +96,9 @@ items:
       Identity that last modified this plan. Defaults to null for records before
       upgrading to ScaledAgileViewComponent4.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+        modifiedByIdentity
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -104,6 +113,7 @@ items:
       Date when the plan was last modified. Default to CreatedDate when the plan
       is first created.
     syntax:
+      content: Date modifiedDate
       return:
         type:
           - Date
@@ -116,6 +126,7 @@ items:
     type: property
     summary: Name of the plan
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -131,6 +142,7 @@ items:
       dependent on the type of the plan. For example, DeliveryTimelineView, it
       would be of type DeliveryViewPropertyCollection.
     syntax:
+      content: any properties
       return:
         type:
           - any
@@ -145,6 +157,7 @@ items:
       Revision of the plan. Used to safeguard users from overwriting each
       other's changes.
     syntax:
+      content: number revision
       return:
         type:
           - number
@@ -157,6 +170,7 @@ items:
     type: property
     summary: Type of the plan
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Work.Contracts.PlanType type'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.PlanType'
@@ -169,6 +183,7 @@ items:
     type: property
     summary: The resource url to locate the plan via rest api
     syntax:
+      content: string url
       return:
         type:
           - string
@@ -181,6 +196,7 @@ items:
     type: property
     summary: Bit flag indicating set of permissions a user has to the plan.
     syntax:
+      content: PlanUserPermissions userPermissions
       return:
         type:
           - PlanUserPermissions

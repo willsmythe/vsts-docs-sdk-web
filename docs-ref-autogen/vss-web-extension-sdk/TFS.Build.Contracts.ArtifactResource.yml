@@ -15,7 +15,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 50
+      startLine: 49
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
       The type-specific resource data. For example, "#/10002/5/drop",
       "$/drops/5", "\\myshare\myfolder\mydrops\5"
     syntax:
+      content: string data
       return:
         type:
           - string
@@ -47,6 +48,7 @@ items:
       Link to the resource. This might include things like query parameters to
       download as a zip file
     syntax:
+      content: string downloadUrl
       return:
         type:
           - string
@@ -59,6 +61,7 @@ items:
     type: property
     summary: Properties of Artifact Resource
     syntax:
+      content: '[key: string]: string properties'
       return:
         type:
           - '[key: string]: string'
@@ -73,6 +76,7 @@ items:
       The type of the resource: File container, version control folder, UNC
       path, etc.
     syntax:
+      content: string type
       return:
         type:
           - string
@@ -85,6 +89,7 @@ items:
     type: property
     summary: Link to the resource
     syntax:
+      content: string url
       return:
         type:
           - string

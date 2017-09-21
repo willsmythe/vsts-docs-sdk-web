@@ -20,7 +20,7 @@ items:
     summary: Process Configurations for the project
     source:
       path: tfs.d.ts
-      startLine: 22148
+      startLine: 22147
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,9 @@ items:
     type: property
     summary: Details about bug work items
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Work.Contracts.CategoryConfiguration
+        bugWorkItems
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.CategoryConfiguration'
@@ -49,6 +52,9 @@ items:
     type: property
     summary: Details about portfolio backlogs
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Work.Contracts.CategoryConfiguration[]
+        portfolioBacklogs
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.CategoryConfiguration[]'
@@ -62,6 +68,9 @@ items:
     type: property
     summary: Details of requirement backlog
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Work.Contracts.CategoryConfiguration
+        requirementBacklog
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.CategoryConfiguration'
@@ -74,6 +83,9 @@ items:
     type: property
     summary: Details of task backlog
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Work.Contracts.CategoryConfiguration
+        taskBacklog
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.CategoryConfiguration'
@@ -86,6 +98,10 @@ items:
     type: property
     summary: Type fields for the process configuration
     syntax:
+      content: >-
+        [key: string]:
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemFieldReference
+        typeFields
       return:
         type:
           - >-
@@ -100,6 +116,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string url
       return:
         type:
           - string

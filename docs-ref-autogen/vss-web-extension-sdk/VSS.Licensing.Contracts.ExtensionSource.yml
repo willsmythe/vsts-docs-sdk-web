@@ -16,7 +16,7 @@ items:
     summary: 'Model for assigning an extension to users, used for the Web API'
     source:
       path: vss.d.ts
-      startLine: 27525
+      startLine: 27524
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
     type: property
     summary: Assignment Source
     syntax:
+      content: AssignmentSource assignmentSource
       return:
         type:
           - AssignmentSource
@@ -46,6 +47,7 @@ items:
     type: property
     summary: extension Identifier
     syntax:
+      content: string extensionGalleryId
       return:
         type:
           - string
@@ -59,6 +61,7 @@ items:
     type: property
     summary: 'The licensing source of the extension. Account, Msdn, ect.'
     syntax:
+      content: LicensingSource licensingSource
       return:
         type:
           - LicensingSource

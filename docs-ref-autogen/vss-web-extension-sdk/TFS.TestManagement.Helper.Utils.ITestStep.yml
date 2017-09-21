@@ -25,7 +25,7 @@ items:
       - '@vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestAction'
     source:
       path: tfs.d.ts
-      startLine: 11738
+      startLine: 11737
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -42,6 +42,9 @@ items:
     type: property
     summary: array of attachments for test step
     syntax:
+      content: >-
+        Array<@vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStepAttachment>
+        attachments
       return:
         type:
           - >-
@@ -81,6 +84,7 @@ items:
     type: property
     summary: description for teststep
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -151,6 +155,7 @@ items:
       steptype use class TestStepType which is having static members
       "ActionStep" or "ValidateStep"
     syntax:
+      content: string stepType
       return:
         type:
           - string

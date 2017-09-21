@@ -14,7 +14,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 18077
+      startLine: 18076
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: 'True, when length of WorkItemDetails is same as the limit'
     syntax:
+      content: boolean querySizeLimitExceeded
       return:
         type:
           - boolean
@@ -44,6 +45,9 @@ items:
     type: property
     summary: WorkItem Details
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.AccountWorkWorkItemModel[]
+        workItemDetails
       return:
         type:
           - >-

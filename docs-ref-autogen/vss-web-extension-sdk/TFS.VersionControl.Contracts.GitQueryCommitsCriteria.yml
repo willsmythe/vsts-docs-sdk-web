@@ -42,7 +42,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 14453
+      startLine: 14452
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -59,6 +59,7 @@ items:
     type: property
     summary: Number of entries to skip
     syntax:
+      content: number $skip
       return:
         type:
           - number
@@ -72,6 +73,7 @@ items:
     type: property
     summary: Maximum number of entries to retrieve
     syntax:
+      content: number $top
       return:
         type:
           - number
@@ -85,6 +87,7 @@ items:
     type: property
     summary: Alias or display name of the author
     syntax:
+      content: string author
       return:
         type:
           - string
@@ -98,6 +101,9 @@ items:
     type: property
     summary: 'If provided, the earliest commit in the graph to search'
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
+        compareVersion
       return:
         type:
           - >-
@@ -112,6 +118,7 @@ items:
     type: property
     summary: 'If true, don''t include delete history entries'
     syntax:
+      content: boolean excludeDeletes
       return:
         type:
           - boolean
@@ -125,6 +132,7 @@ items:
     type: property
     summary: 'If provided, a lower bound for filtering commits alphabetically'
     syntax:
+      content: string fromCommitId
       return:
         type:
           - string
@@ -138,6 +146,7 @@ items:
     type: property
     summary: 'If provided, only include history entries created after this date (string)'
     syntax:
+      content: string fromDate
       return:
         type:
           - string
@@ -153,6 +162,7 @@ items:
       What Git history mode should be used. This only applies to the search
       criteria when Ids = null.
     syntax:
+      content: GitHistoryMode historyMode
       return:
         type:
           - GitHistoryMode
@@ -168,6 +178,7 @@ items:
       If provided, specifies the exact commit ids of the commits to fetch. May
       not be combined with other parameters.
     syntax:
+      content: 'string[] ids'
       return:
         type:
           - 'string[]'
@@ -181,6 +192,7 @@ items:
     type: property
     summary: Whether to include the _links field on the shallow references
     syntax:
+      content: boolean includeLinks
       return:
         type:
           - boolean
@@ -194,6 +206,7 @@ items:
     type: property
     summary: Whether to include linked work items
     syntax:
+      content: boolean includeWorkItems
       return:
         type:
           - boolean
@@ -207,6 +220,7 @@ items:
     type: property
     summary: Path of item to search under
     syntax:
+      content: string itemPath
       return:
         type:
           - string
@@ -220,6 +234,9 @@ items:
     type: property
     summary: 'If provided, identifies the commit or branch to search'
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitVersionDescriptor
+        itemVersion
       return:
         type:
           - >-
@@ -234,6 +251,7 @@ items:
     type: property
     summary: 'If provided, an upper bound for filtering commits alphabetically'
     syntax:
+      content: string toCommitId
       return:
         type:
           - string
@@ -249,6 +267,7 @@ items:
       If provided, only include history entries created before this date
       (string)
     syntax:
+      content: string toDate
       return:
         type:
           - string
@@ -262,6 +281,7 @@ items:
     type: property
     summary: Alias or display name of the committer
     syntax:
+      content: string user
       return:
         type:
           - string

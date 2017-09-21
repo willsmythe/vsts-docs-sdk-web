@@ -49,7 +49,7 @@ items:
       Widgets.
     source:
       path: tfs.d.ts
-      startLine: 5306
+      startLine: 5305
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -65,6 +65,9 @@ items:
     type: property
     summary: Sizes supported by the Widget.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetSize[]
+        allowedSizes
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetSize[]'
@@ -81,6 +84,7 @@ items:
       to function. Widgets requiring the analytics service are hidden from the
       catalog if the Analytics Service is not available.
     syntax:
+      content: boolean analyticsServiceRequired
       return:
         type:
           - boolean
@@ -94,6 +98,7 @@ items:
     type: property
     summary: Resource for an icon in the widget catalog.
     syntax:
+      content: string catalogIconUrl
       return:
         type:
           - string
@@ -109,6 +114,7 @@ items:
       Opt-in URL string pointing at widget information. Defaults to extension
       marketplace URL if omitted
     syntax:
+      content: string catalogInfoUrl
       return:
         type:
           - string
@@ -124,6 +130,7 @@ items:
       The id of the underlying contribution defining the supplied Widget custom
       configuration UI. Null if custom configuration UI is not available.
     syntax:
+      content: string configurationContributionId
       return:
         type:
           - string
@@ -140,6 +147,7 @@ items:
       Widget custom configuration UI. Null if custom configuration UI is not
       available.
     syntax:
+      content: string configurationContributionRelativeId
       return:
         type:
           - string
@@ -155,6 +163,7 @@ items:
       Indicates if the widget requires configuration before being added to
       dashboard.
     syntax:
+      content: boolean configurationRequired
       return:
         type:
           - boolean
@@ -167,6 +176,7 @@ items:
     type: property
     summary: Uri for the WidgetFactory to get the widget
     syntax:
+      content: string contentUri
       return:
         type:
           - string
@@ -180,6 +190,7 @@ items:
     type: property
     summary: The id of the underlying contribution defining the supplied Widget.
     syntax:
+      content: string contributionId
       return:
         type:
           - string
@@ -193,6 +204,7 @@ items:
     type: property
     summary: Optional default settings to be copied into widget settings
     syntax:
+      content: string defaultSettings
       return:
         type:
           - string
@@ -205,6 +217,7 @@ items:
     type: property
     summary: Summary information describing the widget.
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -220,6 +233,7 @@ items:
       for: - persistence (Allow) - Requests (Tag as disabled, and provide
       context)
     syntax:
+      content: boolean isEnabled
       return:
         type:
           - boolean
@@ -236,6 +250,7 @@ items:
       configuration. Widgets ignoring the name should set it to false in the
       manifest.
     syntax:
+      content: boolean isNameConfigurable
       return:
         type:
           - boolean
@@ -251,6 +266,7 @@ items:
       Opt-out boolean indicating if the widget is hidden from the catalog.  For
       V1, only "pull" model widgets can be provided from the catalog.
     syntax:
+      content: boolean isVisibleFromCatalog
       return:
         type:
           - boolean
@@ -264,6 +280,9 @@ items:
     type: property
     summary: Opt-in lightbox properties
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Dashboards.Contracts.LightboxOptions
+        lightboxOptions
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.LightboxOptions'
@@ -277,6 +296,7 @@ items:
     type: property
     summary: Resource for a loading placeholder image on dashboard
     syntax:
+      content: string loadingImageUrl
       return:
         type:
           - string
@@ -291,6 +311,7 @@ items:
       User facing name of the widget type. Each widget must use a unique value
       here.
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -304,6 +325,7 @@ items:
     type: property
     summary: Publisher Name of this kind of widget.
     syntax:
+      content: string publisherName
       return:
         type:
           - string
@@ -319,6 +341,7 @@ items:
       Data contract required for the widget to function and to work in its
       container.
     syntax:
+      content: 'WidgetScope[] supportedScopes'
       return:
         type:
           - 'WidgetScope[]'
@@ -331,6 +354,7 @@ items:
     type: property
     summary: Contribution target IDs
     syntax:
+      content: 'string[] targets'
       return:
         type:
           - 'string[]'
@@ -343,6 +367,7 @@ items:
     type: property
     summary: Dev-facing id of this kind of widget.
     syntax:
+      content: string typeId
       return:
         type:
           - string

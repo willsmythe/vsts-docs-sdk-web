@@ -31,7 +31,7 @@ items:
     summary: Represents Work Item Recent Activity
     source:
       path: tfs.d.ts
-      startLine: 18090
+      startLine: 18089
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -48,6 +48,7 @@ items:
     type: property
     summary: Date of the last Activity by the user
     syntax:
+      content: Date activityDate
       return:
         type:
           - Date
@@ -61,6 +62,7 @@ items:
     type: property
     summary: Type of the activity
     syntax:
+      content: WorkItemRecentActivityType activityType
       return:
         type:
           - WorkItemRecentActivityType
@@ -74,6 +76,7 @@ items:
     type: property
     summary: Assigned To
     syntax:
+      content: string assignedTo
       return:
         type:
           - string
@@ -87,6 +90,7 @@ items:
     type: property
     summary: Last changed date of the work item
     syntax:
+      content: Date changedDate
       return:
         type:
           - Date
@@ -100,6 +104,7 @@ items:
     type: property
     summary: Work Item Id
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -113,6 +118,7 @@ items:
     type: property
     summary: TeamFoundationId of the user this activity belongs to
     syntax:
+      content: string identityId
       return:
         type:
           - string
@@ -126,6 +132,7 @@ items:
     type: property
     summary: State of the work item
     syntax:
+      content: string state
       return:
         type:
           - string
@@ -139,6 +146,7 @@ items:
     type: property
     summary: Team project the work item belongs to
     syntax:
+      content: string teamProject
       return:
         type:
           - string
@@ -152,6 +160,7 @@ items:
     type: property
     summary: Title of the work item
     syntax:
+      content: string title
       return:
         type:
           - string
@@ -165,6 +174,7 @@ items:
     type: property
     summary: Type of Work Item
     syntax:
+      content: string workItemType
       return:
         type:
           - string

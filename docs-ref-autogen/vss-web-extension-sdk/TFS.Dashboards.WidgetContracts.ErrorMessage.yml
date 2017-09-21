@@ -18,7 +18,7 @@ items:
       will be made available to widget authors)
     source:
       path: tfs.d.ts
-      startLine: 6008
+      startLine: 6007
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
       indicates whether its a rich text or not (that it can have renderable html
       content).
     syntax:
+      content: boolean isRichText
       return:
         type:
           - boolean
@@ -52,6 +53,7 @@ items:
       indicates whether this message can be displayed to the user or not. If not
       a general platform message is shown.
     syntax:
+      content: boolean isUserVisible
       return:
         type:
           - boolean
@@ -64,6 +66,7 @@ items:
     type: property
     summary: message representing the error.
     syntax:
+      content: string message
       return:
         type:
           - string

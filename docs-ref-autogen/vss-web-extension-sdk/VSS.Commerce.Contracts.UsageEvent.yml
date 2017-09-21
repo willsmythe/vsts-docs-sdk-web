@@ -28,7 +28,7 @@ items:
       reported by TFS services.
     source:
       path: vss.d.ts
-      startLine: 4909
+      startLine: 4908
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -46,6 +46,7 @@ items:
       Gets or sets account id of the event. Note: This is for backward compat
       with BI.
     syntax:
+      content: string accountId
       return:
         type:
           - string
@@ -58,6 +59,7 @@ items:
     type: property
     summary: Account name associated with the usage event
     syntax:
+      content: string accountName
       return:
         type:
           - string
@@ -70,6 +72,7 @@ items:
     type: property
     summary: User GUID associated with the usage event
     syntax:
+      content: string associatedUser
       return:
         type:
           - string
@@ -82,6 +85,7 @@ items:
     type: property
     summary: Timestamp when this billing event is billable
     syntax:
+      content: Date billableDate
       return:
         type:
           - Date
@@ -94,6 +98,7 @@ items:
     type: property
     summary: Unique event identifier
     syntax:
+      content: string eventId
       return:
         type:
           - string
@@ -106,6 +111,7 @@ items:
     type: property
     summary: Recieving Timestamp of the billing event by metering service
     syntax:
+      content: Date eventTimestamp
       return:
         type:
           - Date
@@ -118,6 +124,7 @@ items:
     type: property
     summary: Gets or sets the event unique identifier.
     syntax:
+      content: string eventUniqueId
       return:
         type:
           - string
@@ -130,6 +137,7 @@ items:
     type: property
     summary: Meter Id.
     syntax:
+      content: string meterName
       return:
         type:
           - string
@@ -142,6 +150,7 @@ items:
     type: property
     summary: Partition id of the account
     syntax:
+      content: number partitionId
       return:
         type:
           - number
@@ -154,6 +163,7 @@ items:
     type: property
     summary: Quantity of the usage event
     syntax:
+      content: number quantity
       return:
         type:
           - number
@@ -167,6 +177,7 @@ items:
     type: property
     summary: Gets or sets the billing mode for the resource involved in the usage
     syntax:
+      content: ResourceBillingMode resourceBillingMode
       return:
         type:
           - ResourceBillingMode
@@ -179,6 +190,7 @@ items:
     type: property
     summary: Service context GUID associated with the usage event
     syntax:
+      content: string serviceIdentity
       return:
         type:
           - string
@@ -192,6 +204,7 @@ items:
     type: property
     summary: Gets or sets subscription anniversary day of the subscription
     syntax:
+      content: number subscriptionAnniversaryDay
       return:
         type:
           - number
@@ -204,6 +217,7 @@ items:
     type: property
     summary: Gets or sets subscription guid of the associated account of the event
     syntax:
+      content: string subscriptionId
       return:
         type:
           - string

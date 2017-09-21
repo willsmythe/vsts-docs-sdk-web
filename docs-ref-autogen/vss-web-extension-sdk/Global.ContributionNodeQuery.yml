@@ -13,7 +13,7 @@ items:
     summary: A query that can be issued for contribution nodes
     source:
       path: vss.d.ts
-      startLine: 1490
+      startLine: 1489
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -29,6 +29,7 @@ items:
     type: property
     summary: The contribution ids of the nodes to find.
     syntax:
+      content: 'string[] contributionIds'
       return:
         type:
           - 'string[]'
@@ -43,6 +44,7 @@ items:
       Indicator if contribution provider details should be included in the
       result.
     syntax:
+      content: boolean includeProviderDetails
       return:
         type:
           - boolean
@@ -55,6 +57,7 @@ items:
     type: property
     summary: Query options tpo be used when fetching ContributionNodes
     syntax:
+      content: any queryOptions
       return:
         type:
           - any

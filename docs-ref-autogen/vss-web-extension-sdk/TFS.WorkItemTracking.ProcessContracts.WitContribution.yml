@@ -19,7 +19,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 19118
+      startLine: 19117
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,7 @@ items:
     type: property
     summary: The id for the contribution.
     syntax:
+      content: string contributionId
       return:
         type:
           - string
@@ -49,6 +50,7 @@ items:
     type: property
     summary: The height for the contribution.
     syntax:
+      content: number height
       return:
         type:
           - number
@@ -62,6 +64,7 @@ items:
     type: property
     summary: A dictionary holding key value pairs for contribution inputs.
     syntax:
+      content: '[key: string]: any inputs'
       return:
         type:
           - '[key: string]: any'
@@ -75,6 +78,7 @@ items:
     type: property
     summary: A value indicating if the contribution should be show on deleted workItem.
     syntax:
+      content: boolean showOnDeletedWorkItem
       return:
         type:
           - boolean

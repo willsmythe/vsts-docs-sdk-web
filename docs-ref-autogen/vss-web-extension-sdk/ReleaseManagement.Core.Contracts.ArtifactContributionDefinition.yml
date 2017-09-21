@@ -31,7 +31,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 216
+      startLine: 215
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -48,6 +48,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string artifactType
       return:
         type:
           - string
@@ -61,6 +62,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '[key: string]: string artifactTypeStreamMapping'
       return:
         type:
           - '[key: string]: string'
@@ -74,6 +76,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '[key: string]: string browsableArtifactTypeMapping'
       return:
         type:
           - '[key: string]: string'
@@ -87,6 +90,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DataSourceBinding[]
+        dataSourceBindings
       return:
         type:
           - >-
@@ -101,6 +107,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string displayName
       return:
         type:
           - string
@@ -114,6 +121,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string downloadTaskId
       return:
         type:
           - string
@@ -127,6 +135,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string endpointTypeId
       return:
         type:
           - string
@@ -140,6 +149,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Common.Contracts.FormInput.InputDescriptor[]
+        inputDescriptors
       return:
         type:
           - >-
@@ -154,6 +166,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -167,6 +180,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string uniqueSourceIdentifier
       return:
         type:
           - string

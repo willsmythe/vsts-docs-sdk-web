@@ -29,7 +29,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 22355
+      startLine: 22354
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -45,6 +45,7 @@ items:
     type: property
     summary: Backlog matching the mapped backlog associated with this team.
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Work.Contracts.BacklogLevel backlog'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.BacklogLevel'
@@ -58,6 +59,7 @@ items:
     type: property
     summary: The field reference names of the work item data
     syntax:
+      content: 'string[] fieldReferenceNames'
       return:
         type:
           - 'string[]'
@@ -70,6 +72,7 @@ items:
     type: property
     summary: The id of the team
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -87,6 +90,7 @@ items:
       items are queried and, if there are items in the queried range, there will
       be data.
     syntax:
+      content: boolean isExpanded
       return:
         type:
           - boolean
@@ -99,6 +103,9 @@ items:
     type: property
     summary: 'The iteration data, including the work items, in the queried date range.'
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Work.Contracts.TimelineTeamIteration[]
+        iterations
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.TimelineTeamIteration[]'
@@ -111,6 +118,7 @@ items:
     type: property
     summary: The name of the team
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -123,6 +131,7 @@ items:
     type: property
     summary: The order by field name of this team
     syntax:
+      content: string orderByField
       return:
         type:
           - string
@@ -138,6 +147,7 @@ items:
       The field reference names of the partially paged work items, such as ID,
       WorkItemType
     syntax:
+      content: 'string[] partiallyPagedFieldReferenceNames'
       return:
         type:
           - 'string[]'
@@ -150,6 +160,7 @@ items:
     type: property
     summary: The project id the team belongs team
     syntax:
+      content: string projectId
       return:
         type:
           - string
@@ -162,6 +173,7 @@ items:
     type: property
     summary: Status for this team.
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Work.Contracts.TimelineTeamStatus status'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.TimelineTeamStatus'
@@ -175,6 +187,7 @@ items:
     type: property
     summary: The team field default value
     syntax:
+      content: string teamFieldDefaultValue
       return:
         type:
           - string
@@ -187,6 +200,7 @@ items:
     type: property
     summary: The team field name of this team
     syntax:
+      content: string teamFieldName
       return:
         type:
           - string
@@ -199,6 +213,9 @@ items:
     type: property
     summary: The team field values
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Work.Contracts.TeamFieldValue[]
+        teamFieldValues
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.TeamFieldValue[]'
@@ -212,6 +229,9 @@ items:
     type: property
     summary: Colors for the work item types.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Work.Contracts.WorkItemColor[]
+        workItemTypeColors
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.WorkItemColor[]'

@@ -24,7 +24,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 7525
+      startLine: 7524
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -41,6 +41,7 @@ items:
     type: property
     summary: 'Gets or sets as ''true'' to run the task always, ''false'' otherwise.'
     syntax:
+      content: boolean alwaysRun
       return:
         type:
           - boolean
@@ -54,6 +55,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string condition
       return:
         type:
           - string
@@ -67,6 +69,7 @@ items:
     type: property
     summary: 'Gets or sets as ''true'' to continue on error, ''false'' otherwise.'
     syntax:
+      content: boolean continueOnError
       return:
         type:
           - boolean
@@ -80,6 +83,7 @@ items:
     type: property
     summary: Gets or sets the display name.
     syntax:
+      content: string displayName
       return:
         type:
           - string
@@ -92,6 +96,7 @@ items:
     type: property
     summary: Gets or sets as task is enabled or not.
     syntax:
+      content: boolean enabled
       return:
         type:
           - boolean
@@ -104,6 +109,7 @@ items:
     type: property
     summary: Gets or sets dictionary of inputs.
     syntax:
+      content: '[key: string]: string inputs'
       return:
         type:
           - '[key: string]: string'
@@ -116,6 +122,9 @@ items:
     type: property
     summary: Gets or sets the reference of the task.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskDefinitionReference
+        task
       return:
         type:
           - >-
@@ -133,6 +142,7 @@ items:
       execute on agent before being cancelled by server. A zero value indicates
       an infinite timeout.
     syntax:
+      content: number timeoutInMinutes
       return:
         type:
           - number

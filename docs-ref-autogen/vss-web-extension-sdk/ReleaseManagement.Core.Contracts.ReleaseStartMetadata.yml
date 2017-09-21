@@ -25,7 +25,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 1568
+      startLine: 1567
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -42,6 +42,9 @@ items:
     type: property
     summary: Sets list of artifact to create a release.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ArtifactMetadata[]
+        artifacts
       return:
         type:
           - >-
@@ -56,6 +59,7 @@ items:
     type: property
     summary: Sets definition Id to create a release.
     syntax:
+      content: number definitionId
       return:
         type:
           - number
@@ -69,6 +73,7 @@ items:
     type: property
     summary: Sets description to create a release.
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -82,6 +87,7 @@ items:
     type: property
     summary: 'Sets ''true'' to create release in draft mode, ''false'' otherwise.'
     syntax:
+      content: boolean isDraft
       return:
         type:
           - boolean
@@ -95,6 +101,7 @@ items:
     type: property
     summary: Sets list of environments to manual as condition.
     syntax:
+      content: 'string[] manualEnvironments'
       return:
         type:
           - 'string[]'
@@ -108,6 +115,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: any properties
       return:
         type:
           - any
@@ -121,6 +129,7 @@ items:
     type: property
     summary: Sets reason to create a release.
     syntax:
+      content: ReleaseReason reason
       return:
         type:
           - ReleaseReason

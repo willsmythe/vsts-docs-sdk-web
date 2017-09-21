@@ -15,7 +15,7 @@ items:
     summary: Paths to server resources
     source:
       path: vss.d.ts
-      startLine: 1174
+      startLine: 1173
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: Relative path to the _content path of the web application
     syntax:
+      content: string resourcesPath
       return:
         type:
           - string
@@ -43,6 +44,7 @@ items:
     type: property
     summary: Relative path to the root of the web application
     syntax:
+      content: string rootPath
       return:
         type:
           - string
@@ -55,6 +57,7 @@ items:
     type: property
     summary: Static content version stamp
     syntax:
+      content: string staticContentVersion
       return:
         type:
           - string
@@ -67,6 +70,7 @@ items:
     type: property
     summary: Relative path to unversioned 3rd party static content
     syntax:
+      content: string staticRoot3rdParty
       return:
         type:
           - string
@@ -79,6 +83,7 @@ items:
     type: property
     summary: Relative path to versioned static content
     syntax:
+      content: string staticRootTfs
       return:
         type:
           - string

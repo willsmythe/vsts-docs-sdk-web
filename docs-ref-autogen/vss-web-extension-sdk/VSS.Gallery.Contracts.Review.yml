@@ -22,7 +22,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 22556
+      startLine: 22555
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -38,6 +38,7 @@ items:
     type: property
     summary: 'Admin Reply, if any, for this review'
     syntax:
+      content: '@vss-web-extension-sdk.VSS.Gallery.Contracts.ReviewReply adminReply'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Gallery.Contracts.ReviewReply'
@@ -50,6 +51,7 @@ items:
     type: property
     summary: Unique identifier of a review item
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -62,6 +64,7 @@ items:
     type: property
     summary: Flag for soft deletion
     syntax:
+      content: boolean isDeleted
       return:
         type:
           - boolean
@@ -74,6 +77,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isIgnored
       return:
         type:
           - boolean
@@ -86,6 +90,7 @@ items:
     type: property
     summary: Version of the product for which review was submitted
     syntax:
+      content: string productVersion
       return:
         type:
           - string
@@ -98,6 +103,7 @@ items:
     type: property
     summary: Rating procided by the user
     syntax:
+      content: number rating
       return:
         type:
           - number
@@ -110,6 +116,7 @@ items:
     type: property
     summary: 'Reply, if any, for this review'
     syntax:
+      content: '@vss-web-extension-sdk.VSS.Gallery.Contracts.ReviewReply reply'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Gallery.Contracts.ReviewReply'
@@ -122,6 +129,7 @@ items:
     type: property
     summary: Text description of the review
     syntax:
+      content: string text
       return:
         type:
           - string
@@ -134,6 +142,7 @@ items:
     type: property
     summary: Title of the review
     syntax:
+      content: string title
       return:
         type:
           - string
@@ -146,6 +155,7 @@ items:
     type: property
     summary: Time when the review was edited/updated
     syntax:
+      content: Date updatedDate
       return:
         type:
           - Date
@@ -158,6 +168,7 @@ items:
     type: property
     summary: Name of the user
     syntax:
+      content: string userDisplayName
       return:
         type:
           - string
@@ -170,6 +181,7 @@ items:
     type: property
     summary: Id of the user who submitted the review
     syntax:
+      content: string userId
       return:
         type:
           - string

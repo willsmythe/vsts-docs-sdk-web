@@ -15,7 +15,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 6730
+      startLine: 6729
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.MaskHint[] mask'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.MaskHint[]'
@@ -44,6 +45,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        [key: string]:
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobOption options
       return:
         type:
           - >-
@@ -59,6 +63,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '[key: string]: string variables'
       return:
         type:
           - '[key: string]: string'

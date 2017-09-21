@@ -20,7 +20,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 318
+      startLine: 317
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string condition
       return:
         type:
           - string
@@ -52,6 +53,7 @@ items:
       Gets or sets the job cancel timeout in minutes for deployment which are
       cancelled by user for this release environment
     syntax:
+      content: number jobCancelTimeoutInMinutes
       return:
         type:
           - number
@@ -65,6 +67,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '[key: string]: string overrideInputs'
       return:
         type:
           - '[key: string]: string'
@@ -78,6 +81,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean shareOutputVariables
       return:
         type:
           - boolean
@@ -93,6 +97,7 @@ items:
       Gets or sets the job execution timeout in minutes for deployment which are
       queued against this release environment
     syntax:
+      content: number timeoutInMinutes
       return:
         type:
           - number

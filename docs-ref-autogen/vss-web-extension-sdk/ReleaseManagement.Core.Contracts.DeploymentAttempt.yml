@@ -44,7 +44,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 466
+      startLine: 465
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -61,6 +61,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number attempt
       return:
         type:
           - number
@@ -74,6 +75,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number deploymentId
       return:
         type:
           - number
@@ -89,6 +91,7 @@ items:
       Error log to show any unexpected error that occurred during executing
       deploy step
     syntax:
+      content: string errorLog
       return:
         type:
           - string
@@ -104,6 +107,7 @@ items:
       The time at which the deployment started, and null if it has not been
       deployed yet
     syntax:
+      content: boolean hasStarted
       return:
         type:
           - boolean
@@ -117,6 +121,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -130,6 +135,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTask job'
       return:
         type:
           - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTask'
@@ -143,6 +149,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef lastModifiedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -156,6 +163,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date lastModifiedOn
       return:
         type:
           - Date
@@ -169,6 +177,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: DeploymentOperationStatus operationStatus
       return:
         type:
           - DeploymentOperationStatus
@@ -182,6 +191,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date queuedOn
       return:
         type:
           - Date
@@ -195,6 +205,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: DeploymentReason reason
       return:
         type:
           - DeploymentReason
@@ -208,6 +219,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDeployPhase[]
+        releaseDeployPhases
       return:
         type:
           - >-
@@ -222,6 +236,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef requestedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -235,6 +250,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef requestedFor'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -248,6 +264,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string runPlanId
       return:
         type:
           - string
@@ -261,6 +278,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: DeploymentStatus status
       return:
         type:
           - DeploymentStatus
@@ -274,6 +292,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTask[]
+        tasks
       return:
         type:
           - >-

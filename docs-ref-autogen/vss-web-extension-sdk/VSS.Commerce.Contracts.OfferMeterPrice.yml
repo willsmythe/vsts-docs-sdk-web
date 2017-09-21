@@ -17,7 +17,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 4603
+      startLine: 4602
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
     type: property
     summary: Currency code
     syntax:
+      content: string currencyCode
       return:
         type:
           - string
@@ -47,6 +48,7 @@ items:
       The meter Name which identifies the offer meter this plan is associated
       with
     syntax:
+      content: string meterName
       return:
         type:
           - string
@@ -61,6 +63,7 @@ items:
       The Name of the plan, which is usually in the format
       "{publisher}:{offer}:{plan}"
     syntax:
+      content: string planName
       return:
         type:
           - string
@@ -73,6 +76,7 @@ items:
     type: property
     summary: Plan Price
     syntax:
+      content: number price
       return:
         type:
           - number
@@ -85,6 +89,7 @@ items:
     type: property
     summary: Plan Quantity
     syntax:
+      content: number quantity
       return:
         type:
           - number
@@ -97,6 +102,7 @@ items:
     type: property
     summary: Region price is for
     syntax:
+      content: string region
       return:
         type:
           - string

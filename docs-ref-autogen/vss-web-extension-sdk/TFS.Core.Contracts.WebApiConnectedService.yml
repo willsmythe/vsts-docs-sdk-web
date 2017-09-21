@@ -23,7 +23,7 @@ items:
       - '@vss-web-extension-sdk.TFS.Core.Contracts.WebApiConnectedServiceRef'
     source:
       path: tfs.d.ts
-      startLine: 4646
+      startLine: 4645
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -40,6 +40,7 @@ items:
     type: property
     summary: The user who did the OAuth authentication to created this service
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef authenticatedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -53,6 +54,7 @@ items:
     type: property
     summary: Extra description on the service.
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -66,6 +68,7 @@ items:
     type: property
     summary: Friendly Name of service connection
     syntax:
+      content: string friendlyName
       return:
         type:
           - string
@@ -80,6 +83,7 @@ items:
       Id/Name of the connection service. For Ex: Subscription Id for Azure
       Connection
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -92,6 +96,7 @@ items:
     type: property
     summary: The kind of service.
     syntax:
+      content: string kind
       return:
         type:
           - string
@@ -104,6 +109,7 @@ items:
     type: property
     summary: The project associated with this service
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference project'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference'
@@ -118,6 +124,7 @@ items:
       Optional uri to connect directly to the service such as
       https://windows.azure.com
     syntax:
+      content: string serviceUri
       return:
         type:
           - string

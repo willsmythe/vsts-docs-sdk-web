@@ -22,7 +22,7 @@ items:
     summary: Configuration options when creating the GitHistoryList extension control.
     source:
       path: tfs.d.ts
-      startLine: 15979
+      startLine: 15978
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -39,6 +39,7 @@ items:
     type: property
     summary: From commit id for control to search history
     syntax:
+      content: string fromVersion
       return:
         type:
           - string
@@ -52,6 +53,7 @@ items:
     type: property
     summary: Displays header above the list
     syntax:
+      content: boolean isHeaderVisible
       return:
         type:
           - boolean
@@ -65,6 +67,7 @@ items:
     type: property
     summary: ItemPath for control to search history
     syntax:
+      content: string itemPath
       return:
         type:
           - string
@@ -78,6 +81,7 @@ items:
     type: property
     summary: Callback to be invoked when the scenario is completed
     syntax:
+      content: function onScenarioComplete
       return:
         type:
           - function
@@ -91,6 +95,7 @@ items:
     type: property
     summary: Optional repository Id for control to search history
     syntax:
+      content: string repositoryId
       return:
         type:
           - string
@@ -104,6 +109,7 @@ items:
     type: property
     summary: To commit id for control to search history
     syntax:
+      content: string toVersion
       return:
         type:
           - string

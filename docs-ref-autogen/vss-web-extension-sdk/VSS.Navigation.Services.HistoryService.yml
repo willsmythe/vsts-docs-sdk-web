@@ -38,7 +38,7 @@ items:
     summary: Local service to manage history and navigation state
     source:
       path: vss.d.ts
-      startLine: 28810
+      startLine: 28809
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -133,7 +133,7 @@ items:
             - string
           description: |
             The serialized navigation state string (hash or query string)
-      content: 'function deserializeState(state: string)'
+      content: 'static function deserializeState(state: string)'
       return:
         type:
           - '@vss-web-extension-sdk.IDictionaryStringTo<any>'
@@ -351,7 +351,7 @@ items:
             - '@vss-web-extension-sdk.IDictionaryStringTo<any>'
           description: |
             The navigation state dictionary to convert
-      content: 'function serializeState(state: IDictionaryStringTo<any>)'
+      content: 'static function serializeState(state: IDictionaryStringTo<any>)'
       return:
         type:
           - string

@@ -20,7 +20,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 7206
+      startLine: 7205
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -52,6 +53,7 @@ items:
       Gets or sets a value indicating whether or not this pool is managed by the
       service.
     syntax:
+      content: boolean isHosted
       return:
         type:
           - boolean
@@ -65,6 +67,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -78,6 +81,7 @@ items:
     type: property
     summary: Gets or sets the type of the pool
     syntax:
+      content: TaskAgentPoolType poolType
       return:
         type:
           - TaskAgentPoolType
@@ -91,6 +95,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string scope
       return:
         type:
           - string

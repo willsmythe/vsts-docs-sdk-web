@@ -14,7 +14,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 5200
+      startLine: 5199
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Dashboards.Contracts.DashboardGroupEntry[]
+        dashboardEntries
       return:
         type:
           - >-
@@ -44,6 +47,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: GroupMemberPermission permission
       return:
         type:
           - GroupMemberPermission
@@ -56,6 +60,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string url
       return:
         type:
           - string

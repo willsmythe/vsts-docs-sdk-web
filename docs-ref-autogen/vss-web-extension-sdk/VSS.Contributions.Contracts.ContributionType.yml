@@ -17,7 +17,7 @@ items:
       - '@vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionBase'
     source:
       path: vss.d.ts
-      startLine: 7482
+      startLine: 7481
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
       contribution of this type.  NOTE: Only TrustedPartners are allowed to
       specify indexed contribution types.
     syntax:
+      content: boolean indexed
       return:
         type:
           - boolean
@@ -49,6 +50,7 @@ items:
     type: property
     summary: Friendly name of the contribution/type
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -62,6 +64,10 @@ items:
     type: property
     summary: Describes the allowed properties for this contribution type
     syntax:
+      content: >-
+        [key: string]:
+        @vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionPropertyDescription
+        properties
       return:
         type:
           - >-

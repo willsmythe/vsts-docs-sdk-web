@@ -16,7 +16,7 @@ items:
       - '@vss-web-extension-sdk.VSS.Graph.Contracts.GraphSubject'
     source:
       path: vss.d.ts
-      startLine: 24170
+      startLine: 24169
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
     type: property
     summary: The Consistently Unique IDentifier of the subject
     syntax:
+      content: string cuid
       return:
         type:
           - string
@@ -47,6 +48,7 @@ items:
       (For MSA this is "Windows Live ID", for AD the name of the domain, for AAD
       the name of the directory, for Vsts groups the ScopeId, etc)
     syntax:
+      content: string domain
       return:
         type:
           - string
@@ -61,6 +63,7 @@ items:
       The email address of record for a given graph member. This may be
       different than the principal name.
     syntax:
+      content: string mailAddress
       return:
         type:
           - string
@@ -76,6 +79,7 @@ items:
       The source provider may change this field over time and it is not
       guaranteed to be immutable for the life of the graph member by Vsts.
     syntax:
+      content: string principalName
       return:
         type:
           - string

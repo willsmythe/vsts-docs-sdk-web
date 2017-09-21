@@ -36,7 +36,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 14315
+      startLine: 14314
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -53,6 +53,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef author'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -66,6 +67,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestChange[]
+        changeList
       return:
         type:
           - >-
@@ -80,6 +84,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef[]
+        commits
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef[]'
@@ -93,6 +100,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef
+        commonRefCommit
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef'
@@ -106,6 +116,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date createdDate
       return:
         type:
           - Date
@@ -119,6 +130,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -132,6 +144,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean hasMoreCommits
       return:
         type:
           - boolean
@@ -145,6 +158,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -158,6 +172,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPushRef push'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPushRef'
@@ -171,6 +186,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: IterationReason reason
       return:
         type:
           - IterationReason
@@ -184,6 +200,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef
+        sourceRefCommit
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef'
@@ -197,6 +216,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef
+        targetRefCommit
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef'
@@ -210,6 +232,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date updatedDate
       return:
         type:
           - Date

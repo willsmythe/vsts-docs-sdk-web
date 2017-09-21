@@ -20,7 +20,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 14137
+      startLine: 14136
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,7 @@ items:
     type: property
     summary: Path to item
     syntax:
+      content: string path
       return:
         type:
           - string
@@ -51,6 +52,7 @@ items:
       Specifies whether to include children (OneLevel), all descendants (Full),
       or None
     syntax:
+      content: VersionControlRecursionType recursionLevel
       return:
         type:
           - VersionControlRecursionType
@@ -64,6 +66,7 @@ items:
     type: property
     summary: Version string (interpretation based on VersionType defined in subclass
     syntax:
+      content: string version
       return:
         type:
           - string
@@ -77,6 +80,7 @@ items:
     type: property
     summary: Version modifiers (e.g. previous)
     syntax:
+      content: GitVersionOptions versionOptions
       return:
         type:
           - GitVersionOptions
@@ -90,6 +94,7 @@ items:
     type: property
     summary: 'How to interpret version (branch,tag,commit)'
     syntax:
+      content: GitVersionType versionType
       return:
         type:
           - GitVersionType

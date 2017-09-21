@@ -14,7 +14,7 @@ items:
     summary: The Team Context for an operation.
     source:
       path: tfs.d.ts
-      startLine: 4520
+      startLine: 4519
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -30,6 +30,7 @@ items:
     type: property
     summary: The team project Id or name.  Ignored if ProjectId is set.
     syntax:
+      content: string project
       return:
         type:
           - string
@@ -42,6 +43,7 @@ items:
     type: property
     summary: The Team Project ID.  Required if Project is not set.
     syntax:
+      content: string projectId
       return:
         type:
           - string
@@ -54,6 +56,7 @@ items:
     type: property
     summary: The Team Id or name.  Ignored if TeamId is set.
     syntax:
+      content: string team
       return:
         type:
           - string
@@ -66,6 +69,7 @@ items:
     type: property
     summary: The Team Id
     syntax:
+      content: string teamId
       return:
         type:
           - string

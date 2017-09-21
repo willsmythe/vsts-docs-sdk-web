@@ -13,7 +13,7 @@ items:
     summary: Describes split timing within scenarios
     source:
       path: vss.d.ts
-      startLine: 29583
+      startLine: 29582
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -29,6 +29,7 @@ items:
     type: property
     summary: 'Deprecated: Elapsed time for split timing.'
     syntax:
+      content: number elapsedTime
       return:
         type:
           - number
@@ -41,6 +42,7 @@ items:
     type: property
     summary: Name of split timing
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -53,6 +55,7 @@ items:
     type: property
     summary: Time relative to scenario start
     syntax:
+      content: number timestamp
       return:
         type:
           - number

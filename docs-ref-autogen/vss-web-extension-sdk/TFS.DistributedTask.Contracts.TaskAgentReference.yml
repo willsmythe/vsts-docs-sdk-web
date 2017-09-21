@@ -20,7 +20,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 7249
+      startLine: 7248
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -39,6 +39,7 @@ items:
       Gets or sets a value indicating whether or not this agent should be
       enabled for job execution.
     syntax:
+      content: boolean enabled
       return:
         type:
           - boolean
@@ -51,6 +52,7 @@ items:
     type: property
     summary: Gets the identifier of the agent.
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -64,6 +66,7 @@ items:
     type: property
     summary: Gets the name of the agent.
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -77,6 +80,7 @@ items:
     type: property
     summary: Gets the current connectivity status of the agent.
     syntax:
+      content: TaskAgentStatus status
       return:
         type:
           - TaskAgentStatus
@@ -90,6 +94,7 @@ items:
     type: property
     summary: Gets the version of the agent.
     syntax:
+      content: string version
       return:
         type:
           - string

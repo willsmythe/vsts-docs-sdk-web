@@ -26,7 +26,7 @@ items:
     summary: Represent a group in the form that holds controls in it.
     source:
       path: tfs.d.ts
-      startLine: 18971
+      startLine: 18970
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -43,6 +43,9 @@ items:
     type: property
     summary: Contribution for the group.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessContracts.WitContribution
+        contribution
       return:
         type:
           - >-
@@ -56,6 +59,9 @@ items:
     type: property
     summary: Controls to be put in the group.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessContracts.Control[]
+        controls
       return:
         type:
           - >-
@@ -69,6 +75,7 @@ items:
     type: property
     summary: The height for the contribution.
     syntax:
+      content: number height
       return:
         type:
           - number
@@ -81,6 +88,7 @@ items:
     type: property
     summary: The id for the layout node.
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -96,6 +104,7 @@ items:
       A value indicating whether this layout node has been inherited from a
       parent layout.  This is expected to only be only set by the combiner.
     syntax:
+      content: boolean inherited
       return:
         type:
           - boolean
@@ -109,6 +118,7 @@ items:
     type: property
     summary: A value indicating if the layout node is contribution are not.
     syntax:
+      content: boolean isContribution
       return:
         type:
           - boolean
@@ -121,6 +131,7 @@ items:
     type: property
     summary: Label for the group.
     syntax:
+      content: string label
       return:
         type:
           - string
@@ -133,6 +144,7 @@ items:
     type: property
     summary: Order in which the group should appear in the section.
     syntax:
+      content: number order
       return:
         type:
           - number
@@ -148,6 +160,7 @@ items:
       A value indicating whether this layout node has been overridden by a child
       layout.
     syntax:
+      content: boolean overridden
       return:
         type:
           - boolean
@@ -160,6 +173,7 @@ items:
     type: property
     summary: A value indicating if the group should be hidden or not.
     syntax:
+      content: boolean visible
       return:
         type:
           - boolean

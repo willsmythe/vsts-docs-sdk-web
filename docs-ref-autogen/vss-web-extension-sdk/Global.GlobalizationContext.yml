@@ -15,7 +15,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 2234
+      startLine: 2233
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string culture
       return:
         type:
           - string
@@ -47,6 +48,7 @@ items:
       (?theme=[themename]) or in the user's profile. However, the default theme
       set in the profile is not considered to be an explicitly-set theme.
     syntax:
+      content: string explicitTheme
       return:
         type:
           - string
@@ -59,6 +61,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string theme
       return:
         type:
           - string
@@ -71,6 +74,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string timeZoneId
       return:
         type:
           - string
@@ -83,6 +87,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number timezoneOffset
       return:
         type:
           - number

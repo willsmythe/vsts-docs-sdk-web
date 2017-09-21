@@ -22,7 +22,7 @@ items:
     summary: 'Card settings, such as fields and rules'
     source:
       path: tfs.d.ts
-      startLine: 21780
+      startLine: 21779
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -43,6 +43,7 @@ items:
       fields. Currently unused. Should be used with User Story 691539: Card
       setting: additional fields
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Work.Contracts.FieldInfo[] additionalFields'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.FieldInfo[]'
@@ -56,6 +57,7 @@ items:
     type: property
     summary: Display format for the assigned to field
     syntax:
+      content: IdentityDisplayFormat assignedToDisplayFormat
       return:
         type:
           - IdentityDisplayFormat
@@ -68,6 +70,7 @@ items:
     type: property
     summary: A collection of field information of rendered core fields on cards.
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Work.Contracts.FieldInfo[] coreFields'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.FieldInfo[]'
@@ -82,6 +85,7 @@ items:
       Flag indicating whether to show assigned to field on cards. When true,
       AssignedToDisplayFormat will determine how the field will be displayed
     syntax:
+      content: boolean showAssignedTo
       return:
         type:
           - boolean
@@ -94,6 +98,7 @@ items:
     type: property
     summary: Flag indicating whether to show empty fields on cards
     syntax:
+      content: boolean showEmptyFields
       return:
         type:
           - boolean
@@ -106,6 +111,7 @@ items:
     type: property
     summary: Flag indicating whether to show ID on cards
     syntax:
+      content: boolean showId
       return:
         type:
           - boolean
@@ -118,6 +124,7 @@ items:
     type: property
     summary: Flag indicating whether to show state field on cards
     syntax:
+      content: boolean showState
       return:
         type:
           - boolean
@@ -130,6 +137,7 @@ items:
     type: property
     summary: Flag indicating whether to show tags on cards
     syntax:
+      content: boolean showTags
       return:
         type:
           - boolean

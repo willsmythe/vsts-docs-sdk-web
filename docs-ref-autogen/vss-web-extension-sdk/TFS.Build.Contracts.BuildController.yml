@@ -18,7 +18,7 @@ items:
       - '@vss-web-extension-sdk.TFS.Build.Contracts.XamlBuildControllerReference'
     source:
       path: tfs.d.ts
-      startLine: 319
+      startLine: 318
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -34,6 +34,7 @@ items:
     type: property
     summary: The date the controller was created.
     syntax:
+      content: Date createdDate
       return:
         type:
           - Date
@@ -46,6 +47,7 @@ items:
     type: property
     summary: The description of the controller.
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -58,6 +60,7 @@ items:
     type: property
     summary: Indicates whether the controller is enabled.
     syntax:
+      content: boolean enabled
       return:
         type:
           - boolean
@@ -70,6 +73,7 @@ items:
     type: property
     summary: The status of the controller.
     syntax:
+      content: ControllerStatus status
       return:
         type:
           - ControllerStatus
@@ -82,6 +86,7 @@ items:
     type: property
     summary: The date the controller was last updated.
     syntax:
+      content: Date updatedDate
       return:
         type:
           - Date
@@ -94,6 +99,7 @@ items:
     type: property
     summary: The controller's URI.
     syntax:
+      content: string uri
       return:
         type:
           - string

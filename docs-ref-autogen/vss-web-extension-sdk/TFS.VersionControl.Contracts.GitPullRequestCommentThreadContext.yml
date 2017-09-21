@@ -17,7 +17,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 14293
+      startLine: 14292
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -38,6 +38,7 @@ items:
       with iteration support. Otherwise, it's not required for 'legacy' pull
       requests.
     syntax:
+      content: number changeTrackingId
       return:
         type:
           - number
@@ -53,6 +54,9 @@ items:
       Specify comparing iteration Ids when a comment thread is added while
       comparing 2 iterations.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.CommentIterationContext
+        iterationContext
       return:
         type:
           - >-
@@ -70,6 +74,9 @@ items:
       when the thread is returned, then the thread has been tracked from its
       original location using the given criteria.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.CommentTrackingCriteria
+        trackingCriteria
       return:
         type:
           - >-

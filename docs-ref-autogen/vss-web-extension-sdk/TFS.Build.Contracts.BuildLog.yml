@@ -15,7 +15,7 @@ items:
       - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildLogReference'
     source:
       path: tfs.d.ts
-      startLine: 588
+      startLine: 587
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: The date the log was created.
     syntax:
+      content: Date createdOn
       return:
         type:
           - Date
@@ -43,6 +44,7 @@ items:
     type: property
     summary: The date the log was last changed.
     syntax:
+      content: Date lastChangedOn
       return:
         type:
           - Date
@@ -55,6 +57,7 @@ items:
     type: property
     summary: The number of lines in the log.
     syntax:
+      content: number lineCount
       return:
         type:
           - number

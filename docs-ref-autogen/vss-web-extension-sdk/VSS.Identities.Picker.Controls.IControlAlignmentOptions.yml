@@ -17,7 +17,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 25240
+      startLine: 25239
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
       (horizontal-vertical). See UI.Positioning for details. Default is
       "left-bottom"
     syntax:
+      content: string baseAlign
       return:
         type:
           - string
@@ -53,6 +54,7 @@ items:
       (horizontal-vertical). See UI.Positioning for details. Default is
       "left-top"
     syntax:
+      content: string elementAlign
       return:
         type:
           - string
@@ -69,6 +71,7 @@ items:
       determining the alignment and width of the dropdown control.
         Refer to the width, elementAlign, and baseAlign options. Default is the container
     syntax:
+      content: JQuery positioningElement
       return:
         type:
           - JQuery

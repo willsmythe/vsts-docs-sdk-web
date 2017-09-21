@@ -18,7 +18,7 @@ items:
     summary: All widgets implement this interface
     source:
       path: tfs.d.ts
-      startLine: 6055
+      startLine: 6054
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
       The framework calls this method to determine if the widget should be
       disabled for users with stakeholder license
     syntax:
+      content: function disableWidgetForStakeholders
       return:
         type:
           - function
@@ -54,6 +55,7 @@ items:
        @returns object wrapped in a promise that encapsulates the success of this operation.
                when this calls are completed and the experience is done loading.
     syntax:
+      content: function lightbox
       return:
         type:
           - function
@@ -66,6 +68,7 @@ items:
     type: property
     summary: Listen to message from host
     syntax:
+      content: function listen
       return:
         type:
           - function
@@ -85,6 +88,7 @@ items:
        @returns object wrapped in a promise that encapsulates the success of this operation.
                when this calls are completed and the experience is done loading.
     syntax:
+      content: function load
       return:
         type:
           - function
@@ -100,6 +104,7 @@ items:
       Widgets manage any operations that are not necessary for initial load but
       are required for the full widget experience.
     syntax:
+      content: function onDashboardLoaded
       return:
         type:
           - function
@@ -118,6 +123,7 @@ items:
        @returns object wrapped in a promise that encapsulates the success of this operation.
                when this calls are completed and the experience is done loading.
     syntax:
+      content: function preload
       return:
         type:
           - function

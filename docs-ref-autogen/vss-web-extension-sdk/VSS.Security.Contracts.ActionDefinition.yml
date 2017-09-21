@@ -16,7 +16,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 31391
+      startLine: 31390
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
     type: property
     summary: The bit mask integer for this action. Must be a power of 2.
     syntax:
+      content: number bit
       return:
         type:
           - number
@@ -44,6 +45,7 @@ items:
     type: property
     summary: The localized display name for this action.
     syntax:
+      content: string displayName
       return:
         type:
           - string
@@ -56,6 +58,7 @@ items:
     type: property
     summary: The non-localized name for this action.
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -70,6 +73,7 @@ items:
       The namespace that this action belongs to.  This will only be used for
       reading from the database.
     syntax:
+      content: string namespaceId
       return:
         type:
           - string

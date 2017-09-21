@@ -21,7 +21,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 21548
+      startLine: 21547
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
     type: property
     summary: Average rating on the day for extension
     syntax:
+      content: number averageRating
       return:
         type:
           - number
@@ -51,6 +52,7 @@ items:
       Number of times the extension was bought in hosted scenario (applies only
       to VSTS extensions)
     syntax:
+      content: number buyCount
       return:
         type:
           - number
@@ -65,6 +67,7 @@ items:
       Number of times the extension was bought in connected scenario (applies
       only to VSTS extensions)
     syntax:
+      content: number connectedBuyCount
       return:
         type:
           - number
@@ -80,6 +83,7 @@ items:
       Number of times the extension was installed in connected scenario (applies
       only to VSTS extensions)
     syntax:
+      content: number connectedInstallCount
       return:
         type:
           - number
@@ -92,6 +96,7 @@ items:
     type: property
     summary: Number of times the extension was installed
     syntax:
+      content: number installCount
       return:
         type:
           - number
@@ -106,6 +111,7 @@ items:
       Number of times the extension was installed as a trial (applies only to
       VSTS extensions)
     syntax:
+      content: number tryCount
       return:
         type:
           - number
@@ -120,6 +126,7 @@ items:
       Number of times the extension was uninstalled (applies only to VSTS
       extensions)
     syntax:
+      content: number uninstallCount
       return:
         type:
           - number
@@ -134,6 +141,7 @@ items:
       Number of times the extension was downloaded (applies to VSTS extensions
       and VSCode marketplace click installs)
     syntax:
+      content: number webDownloadCount
       return:
         type:
           - number
@@ -146,6 +154,7 @@ items:
     type: property
     summary: Number of detail page views
     syntax:
+      content: number webPageViews
       return:
         type:
           - number

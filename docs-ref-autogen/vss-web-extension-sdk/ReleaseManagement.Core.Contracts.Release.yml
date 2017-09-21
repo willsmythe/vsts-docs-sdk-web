@@ -46,7 +46,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 811
+      startLine: 810
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -62,6 +62,9 @@ items:
     type: property
     summary: Gets or sets the list of artifacts.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Artifact[]
+        artifacts
       return:
         type:
           - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Artifact[]'
@@ -74,6 +77,7 @@ items:
     type: property
     summary: Gets or sets comment.
     syntax:
+      content: string comment
       return:
         type:
           - string
@@ -86,6 +90,7 @@ items:
     type: property
     summary: Gets or sets the identity who created.
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef createdBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -98,6 +103,7 @@ items:
     type: property
     summary: Gets date on which it got created.
     syntax:
+      content: Date createdOn
       return:
         type:
           - Date
@@ -111,6 +117,7 @@ items:
     type: property
     summary: Gets revision number of definition snapshot.
     syntax:
+      content: number definitionSnapshotRevision
       return:
         type:
           - number
@@ -123,6 +130,7 @@ items:
     type: property
     summary: Gets or sets description of release.
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -136,6 +144,9 @@ items:
     type: property
     summary: Gets or sets the list of environments.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment[]
+        environments
       return:
         type:
           - >-
@@ -149,6 +160,7 @@ items:
     type: property
     summary: Gets the unique identifier of this field.
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -161,6 +173,7 @@ items:
     type: property
     summary: Whether to exclude the release from retention policies.
     syntax:
+      content: boolean keepForever
       return:
         type:
           - boolean
@@ -174,6 +187,7 @@ items:
     type: property
     summary: Gets logs container url.
     syntax:
+      content: string logsContainerUrl
       return:
         type:
           - string
@@ -186,6 +200,7 @@ items:
     type: property
     summary: Gets or sets the identity who modified.
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef modifiedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -198,6 +213,7 @@ items:
     type: property
     summary: Gets date on which it got modified.
     syntax:
+      content: Date modifiedOn
       return:
         type:
           - Date
@@ -210,6 +226,7 @@ items:
     type: property
     summary: Gets or sets name.
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -222,6 +239,7 @@ items:
     type: property
     summary: Gets or sets pool name.
     syntax:
+      content: string poolName
       return:
         type:
           - string
@@ -235,6 +253,9 @@ items:
     type: property
     summary: Gets or sets project reference.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ProjectReference
+        projectReference
       return:
         type:
           - >-
@@ -248,6 +269,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: any properties
       return:
         type:
           - any
@@ -260,6 +282,7 @@ items:
     type: property
     summary: Gets reason of release.
     syntax:
+      content: ReleaseReason reason
       return:
         type:
           - ReleaseReason
@@ -275,6 +298,9 @@ items:
       Gets releaseDefinitionReference which specifies the reference of the
       release definition to which this release is associated.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionShallowReference
+        releaseDefinition
       return:
         type:
           - >-
@@ -289,6 +315,7 @@ items:
     type: property
     summary: Gets release name format.
     syntax:
+      content: string releaseNameFormat
       return:
         type:
           - string
@@ -301,6 +328,7 @@ items:
     type: property
     summary: Gets or sets status.
     syntax:
+      content: ReleaseStatus status
       return:
         type:
           - ReleaseStatus
@@ -313,6 +341,7 @@ items:
     type: property
     summary: Gets or sets list of tags.
     syntax:
+      content: 'string[] tags'
       return:
         type:
           - 'string[]'
@@ -325,6 +354,7 @@ items:
     type: property
     summary: Gets url to access the release.
     syntax:
+      content: string url
       return:
         type:
           - string
@@ -338,6 +368,9 @@ items:
     type: property
     summary: Gets or sets the list of variable groups.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.VariableGroup[]
+        variableGroups
       return:
         type:
           - >-
@@ -351,6 +384,10 @@ items:
     type: property
     summary: Gets or sets the dictionary of variables.
     syntax:
+      content: >-
+        [key: string]:
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ConfigurationVariableValue
+        variables
       return:
         type:
           - >-

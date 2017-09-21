@@ -54,7 +54,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 1029
+      startLine: 1028
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -71,6 +71,9 @@ items:
     type: property
     summary: Gets or sets the list of artifacts.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Artifact[]
+        artifacts
       return:
         type:
           - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Artifact[]'
@@ -84,6 +87,7 @@ items:
     type: property
     summary: Gets or sets comment.
     syntax:
+      content: string comment
       return:
         type:
           - string
@@ -97,6 +101,7 @@ items:
     type: property
     summary: Gets or sets the identity who created.
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef createdBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -110,6 +115,7 @@ items:
     type: property
     summary: Gets date on which it got created.
     syntax:
+      content: Date createdOn
       return:
         type:
           - Date
@@ -123,6 +129,7 @@ items:
     type: property
     summary: Gets or sets the description.
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -136,6 +143,9 @@ items:
     type: property
     summary: Gets or sets the list of environments.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironment[]
+        environments
       return:
         type:
           - >-
@@ -150,6 +160,7 @@ items:
     type: property
     summary: Gets the unique identifier of this field.
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -163,6 +174,9 @@ items:
     type: property
     summary: Gets the reference of last release.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseReference
+        lastRelease
       return:
         type:
           - >-
@@ -177,6 +191,7 @@ items:
     type: property
     summary: Gets or sets the identity who modified.
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef modifiedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -190,6 +205,7 @@ items:
     type: property
     summary: Gets date on which it got modified.
     syntax:
+      content: Date modifiedOn
       return:
         type:
           - Date
@@ -203,6 +219,7 @@ items:
     type: property
     summary: Gets or sets the name.
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -216,6 +233,7 @@ items:
     type: property
     summary: Gets or sets the path.
     syntax:
+      content: string path
       return:
         type:
           - string
@@ -229,6 +247,7 @@ items:
     type: property
     summary: Gets or sets properties.
     syntax:
+      content: any properties
       return:
         type:
           - any
@@ -242,6 +261,7 @@ items:
     type: property
     summary: Gets or sets the release name format.
     syntax:
+      content: string releaseNameFormat
       return:
         type:
           - string
@@ -255,6 +275,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.RetentionPolicy
+        retentionPolicy
       return:
         type:
           - >-
@@ -269,6 +292,7 @@ items:
     type: property
     summary: Gets the revision number.
     syntax:
+      content: number revision
       return:
         type:
           - number
@@ -282,6 +306,7 @@ items:
     type: property
     summary: Gets or sets source of release definition.
     syntax:
+      content: ReleaseDefinitionSource source
       return:
         type:
           - ReleaseDefinitionSource
@@ -295,6 +320,7 @@ items:
     type: property
     summary: Gets or sets list of tags.
     syntax:
+      content: 'string[] tags'
       return:
         type:
           - 'string[]'
@@ -308,6 +334,9 @@ items:
     type: property
     summary: Gets or sets the list of triggers.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTriggerBase[]
+        triggers
       return:
         type:
           - >-
@@ -322,6 +351,7 @@ items:
     type: property
     summary: Gets url to access the release definition.
     syntax:
+      content: string url
       return:
         type:
           - string
@@ -335,6 +365,7 @@ items:
     type: property
     summary: Gets or sets the list of variable groups.
     syntax:
+      content: 'number[] variableGroups'
       return:
         type:
           - 'number[]'
@@ -348,6 +379,10 @@ items:
     type: property
     summary: Gets or sets the dictionary of variables.
     syntax:
+      content: >-
+        [key: string]:
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ConfigurationVariableValue
+        variables
       return:
         type:
           - >-

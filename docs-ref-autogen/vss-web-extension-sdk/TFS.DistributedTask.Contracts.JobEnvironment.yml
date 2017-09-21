@@ -21,7 +21,7 @@ items:
     summary: Represents the context of variables and vectors for a job request.
     source:
       path: tfs.d.ts
-      startLine: 6625
+      startLine: 6624
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -38,6 +38,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.ServiceEndpoint[]
+        endpoints
       return:
         type:
           - >-
@@ -51,6 +54,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.MaskHint[] mask'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.MaskHint[]'
@@ -63,6 +67,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        [key: string]:
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.JobOption options
       return:
         type:
           - >-
@@ -78,6 +85,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.SecureFile[]
+        secureFiles
       return:
         type:
           - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.SecureFile[]'
@@ -93,6 +103,9 @@ items:
       Gets or sets the endpoint used for communicating back to the calling
       service.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.ServiceEndpoint
+        systemConnection
       return:
         type:
           - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.ServiceEndpoint'
@@ -106,6 +119,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '[key: string]: string variables'
       return:
         type:
           - '[key: string]: string'

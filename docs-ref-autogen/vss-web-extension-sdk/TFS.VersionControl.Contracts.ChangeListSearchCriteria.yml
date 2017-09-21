@@ -37,7 +37,7 @@ items:
     summary: Criteria used in a search for change lists
     source:
       path: tfs.d.ts
-      startLine: 13308
+      startLine: 13307
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -54,6 +54,7 @@ items:
     type: property
     summary: 'If provided, a version descriptor to compare against base'
     syntax:
+      content: string compareVersion
       return:
         type:
           - string
@@ -67,6 +68,7 @@ items:
     type: property
     summary: 'If true, don''t include delete history entries'
     syntax:
+      content: boolean excludeDeletes
       return:
         type:
           - boolean
@@ -80,6 +82,7 @@ items:
     type: property
     summary: Whether or not to follow renames for the given item being queried
     syntax:
+      content: boolean followRenames
       return:
         type:
           - boolean
@@ -93,6 +96,7 @@ items:
     type: property
     summary: 'If provided, only include history entries created after this date (string)'
     syntax:
+      content: string fromDate
       return:
         type:
           - string
@@ -106,6 +110,7 @@ items:
     type: property
     summary: 'If provided, a version descriptor for the earliest change list to include'
     syntax:
+      content: string fromVersion
       return:
         type:
           - string
@@ -121,6 +126,7 @@ items:
       Path of item to search under. If the itemPaths memebr is used then it will
       take precedence over this.
     syntax:
+      content: string itemPath
       return:
         type:
           - string
@@ -136,6 +142,7 @@ items:
       List of item paths to search under. If this member is used then itemPath
       will be ignored.
     syntax:
+      content: 'string[] itemPaths'
       return:
         type:
           - 'string[]'
@@ -149,6 +156,7 @@ items:
     type: property
     summary: Version of the items to search
     syntax:
+      content: string itemVersion
       return:
         type:
           - string
@@ -162,6 +170,7 @@ items:
     type: property
     summary: Number of results to skip (used when clicking more...)
     syntax:
+      content: number skip
       return:
         type:
           - number
@@ -177,6 +186,7 @@ items:
       If provided, only include history entries created before this date
       (string)
     syntax:
+      content: string toDate
       return:
         type:
           - string
@@ -190,6 +200,7 @@ items:
     type: property
     summary: 'If provided, the maximum number of history entries to return'
     syntax:
+      content: number top
       return:
         type:
           - number
@@ -203,6 +214,7 @@ items:
     type: property
     summary: 'If provided, a version descriptor for the latest change list to include'
     syntax:
+      content: string toVersion
       return:
         type:
           - string
@@ -216,6 +228,7 @@ items:
     type: property
     summary: Alias or display name of user who made the changes
     syntax:
+      content: string user
       return:
         type:
           - string

@@ -15,7 +15,7 @@ items:
       the wiki.
     source:
       path: tfs.d.ts
-      startLine: 17824
+      startLine: 17823
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: The head commit associated with the git repository backing up the wiki.
     syntax:
+      content: string headCommit
       return:
         type:
           - string
@@ -45,6 +46,7 @@ items:
       The ID of the wiki which is same as the ID of the Git repository that it
       is backed by.
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -57,6 +59,9 @@ items:
     type: property
     summary: The git repository that backs up the wiki.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository
+        repository
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository'

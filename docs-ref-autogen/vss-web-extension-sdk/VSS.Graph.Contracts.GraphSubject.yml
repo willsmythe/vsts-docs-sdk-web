@@ -16,7 +16,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 24296
+      startLine: 24295
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -35,6 +35,7 @@ items:
       system is running. This field will uniquely identify the same graph
       subject across both Accounts and Organizations.
     syntax:
+      content: string descriptor
       return:
         type:
           - string
@@ -49,6 +50,7 @@ items:
       This is the non-unique display name of the graph subject. To change this
       field, you must alter its value in the source provider.
     syntax:
+      content: string displayName
       return:
         type:
           - string
@@ -61,6 +63,7 @@ items:
     type: property
     summary: 'The type of source provider for the origin identifier (ex:AD, AAD, MSA)'
     syntax:
+      content: string origin
       return:
         type:
           - string
@@ -77,6 +80,7 @@ items:
       change for a user because the user is not backed by a different provider
       and has a different unique id in the new provider.
     syntax:
+      content: string originId
       return:
         type:
           - string
@@ -91,6 +95,7 @@ items:
       This field identifies the type of the graph subject (ex: Group, Scope,
       User).
     syntax:
+      content: string subjectKind
       return:
         type:
           - string
@@ -103,6 +108,7 @@ items:
     type: property
     summary: This url is the full route to the source resource of this graph subject.
     syntax:
+      content: string url
       return:
         type:
           - string

@@ -16,7 +16,7 @@ items:
     summary: Represents a definition run information.
     source:
       path: tfs.d.ts
-      startLine: 9862
+      startLine: 9861
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
     type: property
     summary: Gets or sets the signature of the code that changed.
     syntax:
+      content: number baseLineDefinitionRunId
       return:
         type:
           - number
@@ -46,6 +47,7 @@ items:
     type: property
     summary: Gets or sets the name of the assembly containing the change.
     syntax:
+      content: number definitionRunId
       return:
         type:
           - number
@@ -59,6 +61,7 @@ items:
     type: property
     summary: Gets or sets the name of the code that changed.
     syntax:
+      content: DefinitionType definitionType
       return:
         type:
           - DefinitionType

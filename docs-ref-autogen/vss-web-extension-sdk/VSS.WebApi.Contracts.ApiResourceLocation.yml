@@ -24,7 +24,7 @@ items:
     summary: Information about the location of a REST API resource
     source:
       path: vss.d.ts
-      startLine: 34985
+      startLine: 34984
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -40,6 +40,7 @@ items:
     type: property
     summary: Area name for this resource
     syntax:
+      content: string area
       return:
         type:
           - string
@@ -52,6 +53,7 @@ items:
     type: property
     summary: Unique Identifier for this location
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -66,6 +68,7 @@ items:
       Maximum api version that this resource supports (current server version
       for this resource)
     syntax:
+      content: string maxVersion
       return:
         type:
           - string
@@ -78,6 +81,7 @@ items:
     type: property
     summary: Minimum api version that this resource supports
     syntax:
+      content: string minVersion
       return:
         type:
           - string
@@ -93,6 +97,7 @@ items:
       The latest version of this resource location that is in "Release"
       (non-preview) mode
     syntax:
+      content: string releasedVersion
       return:
         type:
           - string
@@ -106,6 +111,7 @@ items:
     type: property
     summary: Resource name
     syntax:
+      content: string resourceName
       return:
         type:
           - string
@@ -119,6 +125,7 @@ items:
     type: property
     summary: The current resource version supported by this resource location
     syntax:
+      content: number resourceVersion
       return:
         type:
           - number
@@ -132,6 +139,7 @@ items:
     type: property
     summary: This location's route template (templated relative path)
     syntax:
+      content: string routeTemplate
       return:
         type:
           - string

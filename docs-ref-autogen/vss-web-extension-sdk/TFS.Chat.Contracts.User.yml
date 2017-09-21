@@ -15,7 +15,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 4181
+      startLine: 4180
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: A value indicating whether the user is online or not.
     syntax:
+      content: boolean isOnline
       return:
         type:
           - boolean
@@ -43,6 +44,7 @@ items:
     type: property
     summary: Time when user joined the room
     syntax:
+      content: Date joinedDate
       return:
         type:
           - Date
@@ -55,6 +57,7 @@ items:
     type: property
     summary: Last activity time
     syntax:
+      content: Date lastActivity
       return:
         type:
           - Date
@@ -67,6 +70,7 @@ items:
     type: property
     summary: Id of the Room
     syntax:
+      content: number roomId
       return:
         type:
           - number
@@ -79,6 +83,7 @@ items:
     type: property
     summary: The shallow reference for the user
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef user'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'

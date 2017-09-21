@@ -16,7 +16,7 @@ items:
     summary: Mapping for a workspace
     source:
       path: tfs.d.ts
-      startLine: 1647
+      startLine: 1646
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
     type: property
     summary: Uri of the associated definition
     syntax:
+      content: string definitionUri
       return:
         type:
           - string
@@ -44,6 +45,7 @@ items:
     type: property
     summary: Depth of this mapping
     syntax:
+      content: number depth
       return:
         type:
           - number
@@ -56,6 +58,7 @@ items:
     type: property
     summary: local location of the definition
     syntax:
+      content: string localItem
       return:
         type:
           - string
@@ -68,6 +71,7 @@ items:
     type: property
     summary: type of workspace mapping
     syntax:
+      content: WorkspaceMappingType mappingType
       return:
         type:
           - WorkspaceMappingType
@@ -80,6 +84,7 @@ items:
     type: property
     summary: Server location of the definition
     syntax:
+      content: string serverItem
       return:
         type:
           - string
@@ -92,6 +97,7 @@ items:
     type: property
     summary: Id of the workspace
     syntax:
+      content: number workspaceId
       return:
         type:
           - number

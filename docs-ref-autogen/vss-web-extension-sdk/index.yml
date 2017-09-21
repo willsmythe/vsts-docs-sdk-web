@@ -4413,7 +4413,7 @@ references:
   - uid: vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.ErrorMessage
     name: ErrorMessage
   - uid: vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.EventArgs
-    name: EventArgs
+    name: EventArgs<T>
   - uid: vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IConfigurableWidget
     name: IConfigurableWidget
   - uid: vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidget
@@ -5331,11 +5331,11 @@ references:
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.Attachment
     name: Attachment
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.Change
-    name: Change
+    name: Change<T>
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.ChangeCountDictionary
     name: ChangeCountDictionary
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.ChangeList
-    name: ChangeList
+    name: ChangeList<T>
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Contracts.ChangeListSearchCriteria
     name: ChangeListSearchCriteria
@@ -5573,7 +5573,7 @@ references:
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.GlobalGitRepositoryKey
     name: GlobalGitRepositoryKey
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.HistoryEntry
-    name: HistoryEntry
+    name: HistoryEntry<T>
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.IdentityRefWithVote
     name: IdentityRefWithVote
   - uid: >-
@@ -5740,7 +5740,7 @@ references:
   - uid: vss-web-extension-sdk.TFS.Wiki.Contracts.WikiAttachmentChange
     name: WikiAttachmentChange
   - uid: vss-web-extension-sdk.TFS.Wiki.Contracts.WikiChange
-    name: WikiChange
+    name: WikiChange<T>
   - uid: vss-web-extension-sdk.TFS.Wiki.Contracts.WikiPage
     name: WikiPage
   - uid: vss-web-extension-sdk.TFS.Wiki.Contracts.WikiPageChange
@@ -6012,7 +6012,7 @@ references:
       vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.ReportingWorkItemRevisionsFilter
     name: ReportingWorkItemRevisionsFilter
   - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.StreamedBatch
-    name: StreamedBatch
+    name: StreamedBatch<T>
   - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.Wiql
     name: Wiql
   - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkArtifactLink
@@ -6467,7 +6467,7 @@ references:
   - uid: vss-web-extension-sdk.VSS.Accounts.RestClient.CommonMethods3_2To4
     name: CommonMethods3_2To4
   - uid: vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateControl
-    name: TemplateControl
+    name: TemplateControl<TViewModel>
   - uid: vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateViewModel
     name: TemplateViewModel
   - uid: vss-web-extension-sdk.VSS.Adapters.Knockout.ITemplateControl
@@ -6984,9 +6984,9 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.BaseDataSource
     name: BaseDataSource
   - uid: vss-web-extension-sdk.VSS.Controls.Control
-    name: Control
+    name: Control<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Enhancement
-    name: Enhancement
+    name: Enhancement<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.AriaAttributes
     name: AriaAttributes
   - uid: vss-web-extension-sdk.VSS.Controls.EnhancementOptions
@@ -6996,7 +6996,7 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.CheckboxList.CheckboxList
     name: CheckboxList
   - uid: vss-web-extension-sdk.VSS.Controls.CheckboxList.CheckboxListO
-    name: CheckboxListO
+    name: CheckboxListO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.CheckboxList.ICheckboxListItem
     name: ICheckboxListItem
   - uid: vss-web-extension-sdk.VSS.Controls.CheckboxList.ICheckboxListOptions
@@ -7022,7 +7022,7 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboMultiValueDropPopup
     name: ComboMultiValueDropPopup
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.ComboO
-    name: ComboO
+    name: ComboO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.DatePanel
     name: DatePanel
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.DatePicker
@@ -7040,21 +7040,21 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.ConfirmationDialog
     name: ConfirmationDialog
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.ConfirmationDialogO
-    name: ConfirmationDialogO
+    name: ConfirmationDialogO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.CopyContentDialog
     name: CopyContentDialog
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.Dialog
     name: Dialog
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.DialogO
-    name: DialogO
+    name: DialogO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.MessageDialog
     name: MessageDialog
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.MessageDialogO
-    name: MessageDialogO
+    name: MessageDialogO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.ModalDialog
     name: ModalDialog
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.ModalDialogO
-    name: ModalDialogO
+    name: ModalDialogO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.CopyContentDialogOptions
     name: CopyContentDialogOptions
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IConfirmationDialogOptions
@@ -7114,7 +7114,7 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.Filters.FilterControl
     name: FilterControl
   - uid: vss-web-extension-sdk.VSS.Controls.Filters.FilterControlO
-    name: FilterControlO
+    name: FilterControlO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Filters.IFilter
     name: IFilter
   - uid: vss-web-extension-sdk.VSS.Controls.Filters.IFilterClause
@@ -7140,7 +7140,7 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputGroup
     name: InputGroup
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModelDelegate
-    name: InputViewModelDelegate
+    name: InputViewModelDelegate<T>
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.Validation
     name: Validation
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.Grid
@@ -7150,7 +7150,7 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridHierarchySource
     name: GridHierarchySource
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridO
-    name: GridO
+    name: GridO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter
     name: GridSearchAdapter
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.HtmlTableFormatter
@@ -7182,15 +7182,15 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.ITableFormatter
     name: ITableFormatter
   - uid: vss-web-extension-sdk.VSS.Controls.Header.ContributableHeader
-    name: ContributableHeader
+    name: ContributableHeader<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Header.Header
-    name: Header
+    name: Header<TModel>
   - uid: vss-web-extension-sdk.VSS.Controls.Header.ContributableHeaderOptions
     name: ContributableHeaderOptions
   - uid: vss-web-extension-sdk.VSS.Controls.Histogram.Histogram
     name: Histogram
   - uid: vss-web-extension-sdk.VSS.Controls.Histogram.HistogramO
-    name: HistogramO
+    name: HistogramO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Histogram.HistogramBarData
     name: HistogramBarData
   - uid: vss-web-extension-sdk.VSS.Controls.Histogram.IHistogramOptions
@@ -7212,23 +7212,23 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuSelectionMode
     name: MenuSelectionMode
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Menu
-    name: Menu
+    name: Menu<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuBar
     name: MenuBar
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuBarO
-    name: MenuBarO
+    name: MenuBarO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuBase
-    name: MenuBase
+    name: MenuBase<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuContributionProvider
     name: MenuContributionProvider
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuItem
     name: MenuItem
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuOwner
-    name: MenuOwner
+    name: MenuOwner<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.PopupMenu
     name: PopupMenu
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.PopupMenuO
-    name: PopupMenuO
+    name: PopupMenuO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.Toolbar
     name: Toolbar
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.ICommand
@@ -7286,11 +7286,11 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.Notifications.InformationAreaControl
     name: InformationAreaControl
   - uid: vss-web-extension-sdk.VSS.Controls.Notifications.InformationAreaControlO
-    name: InformationAreaControlO
+    name: InformationAreaControlO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Notifications.MessageAreaControl
     name: MessageAreaControl
   - uid: vss-web-extension-sdk.VSS.Controls.Notifications.MessageAreaControlO
-    name: MessageAreaControlO
+    name: MessageAreaControlO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Notifications.ToastNotification
     name: ToastNotification
   - uid: >-
@@ -7302,7 +7302,7 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.Panels.AjaxPanel
     name: AjaxPanel
   - uid: vss-web-extension-sdk.VSS.Controls.Panels.AjaxPanelO
-    name: AjaxPanelO
+    name: AjaxPanelO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Panels.CollapsiblePanel
     name: CollapsiblePanel
   - uid: vss-web-extension-sdk.VSS.Controls.Panels.IAjaxPanelOptions
@@ -7312,11 +7312,11 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.PopupContent.PopupContentControl
     name: PopupContentControl
   - uid: vss-web-extension-sdk.VSS.Controls.PopupContent.PopupContentControlO
-    name: PopupContentControlO
+    name: PopupContentControlO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.PopupContent.RichContentTooltip
     name: RichContentTooltip
   - uid: vss-web-extension-sdk.VSS.Controls.PopupContent.RichContentTooltipO
-    name: RichContentTooltipO
+    name: RichContentTooltipO<TOptions>
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.PopupContent.IPopupContentControlOptions
     name: IPopupContentControlOptions
@@ -7359,7 +7359,7 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.Splitter
     name: Splitter
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO
-    name: SplitterO
+    name: SplitterO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.ISplitterOptions
     name: ISplitterOptions
   - uid: vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitingState
@@ -7369,11 +7369,11 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.StatusIndicator.StatusIndicator
     name: StatusIndicator
   - uid: vss-web-extension-sdk.VSS.Controls.StatusIndicator.StatusIndicatorO
-    name: StatusIndicatorO
+    name: StatusIndicatorO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControl
     name: WaitControl
   - uid: vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO
-    name: WaitControlO
+    name: WaitControlO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.StatusIndicator.IStatusIndicatorOptions
     name: IStatusIndicatorOptions
   - uid: vss-web-extension-sdk.VSS.Controls.StatusIndicator.IWaitControlOptions
@@ -7395,7 +7395,7 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.TabContent.TabbedDialog
     name: TabbedDialog
   - uid: vss-web-extension-sdk.VSS.Controls.TabContent.ITab
-    name: ITab
+    name: ITab<T>
   - uid: vss-web-extension-sdk.VSS.Controls.TabContent.ITabContent
     name: ITabContent
   - uid: vss-web-extension-sdk.VSS.Controls.TabContent.ITabControlOption
@@ -7407,7 +7407,7 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.TabContent.ITabPageOption
     name: ITabPageOption
   - uid: vss-web-extension-sdk.VSS.Controls.TabContent.ITabRegistration
-    name: ITabRegistration
+    name: ITabRegistration<T>
   - uid: vss-web-extension-sdk.VSS.Controls.TabContent.ITabbedDialogButton
     name: ITabbedDialogButton
   - uid: vss-web-extension-sdk.VSS.Controls.TabContent.TabbedDialogOptions
@@ -7429,25 +7429,25 @@ references:
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeView
     name: TreeView
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeViewO
-    name: TreeViewO
+    name: TreeViewO<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.ITreeOptions
     name: ITreeOptions
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.BaseValidator
-    name: BaseValidator
+    name: BaseValidator<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.CustomValidator
-    name: CustomValidator
+    name: CustomValidator<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.DateValidator
-    name: DateValidator
+    name: DateValidator<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.IntegerRangeValidator
-    name: IntegerRangeValidator
+    name: IntegerRangeValidator<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.MaxLengthValidator
-    name: MaxLengthValidator
+    name: MaxLengthValidator<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.RangeValidator
-    name: RangeValidator
+    name: RangeValidator<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.RegexValidator
-    name: RegexValidator
+    name: RegexValidator<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.RequiredValidator
-    name: RequiredValidator
+    name: RequiredValidator<TOptions>
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.ValidationSummary
     name: ValidationSummary
   - uid: vss-web-extension-sdk.VSS.Controls.Validation.BaseValidatorOptions
@@ -7583,11 +7583,11 @@ references:
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.CommandEventArgs
     name: CommandEventArgs
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.Event
-    name: Event
+    name: Event<TSender>
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.EventHandlerList
-    name: EventHandlerList
+    name: EventHandlerList<TSender>
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.NamedEventCollection
-    name: NamedEventCollection
+    name: NamedEventCollection<TSender>
   - uid: vss-web-extension-sdk.VSS.Events.Page.IPageEvent
     name: IPageEvent
   - uid: vss-web-extension-sdk.VSS.Events.Page.IPageEventCallback
@@ -7835,21 +7835,21 @@ references:
   - uid: vss-web-extension-sdk.VSS.FileContainer.Services.FileContainerPathInfo
     name: FileContainerPathInfo
   - uid: vss-web-extension-sdk.VSS.Flux.Action.Action
-    name: Action
+    name: Action<T>
   - uid: vss-web-extension-sdk.VSS.Flux.Component.Component
-    name: Component
+    name: Component<TProps>
   - uid: vss-web-extension-sdk.VSS.Flux.Component.Props
     name: Props
   - uid: vss-web-extension-sdk.VSS.Flux.Component.State
     name: State
   - uid: vss-web-extension-sdk.VSS.Flux.PlatformComponent.Component
-    name: Component
+    name: Component<TControl>
   - uid: vss-web-extension-sdk.VSS.Flux.PlatformComponent.Props
-    name: Props
+    name: Props<TOptions>
   - uid: vss-web-extension-sdk.VSS.Flux.PlatformComponent.State
     name: State
   - uid: vss-web-extension-sdk.VSS.Flux.Store.DefaultStore
-    name: DefaultStore
+    name: DefaultStore<T>
   - uid: vss-web-extension-sdk.VSS.Flux.Store.RemoteStore
     name: RemoteStore
   - uid: vss-web-extension-sdk.VSS.Flux.Store.Store
@@ -8165,7 +8165,7 @@ references:
   - uid: vss-web-extension-sdk.VSS.Identities.Contracts.TenantInfo
     name: TenantInfo
   - uid: vss-web-extension-sdk.VSS.Identities.Mru.Contracts.JsonPatchOperationData
-    name: JsonPatchOperationData
+    name: JsonPatchOperationData<T>
   - uid: vss-web-extension-sdk.VSS.Identities.Mru.Contracts.MruIdentitiesUpdateData
     name: MruIdentitiesUpdateData
   - uid: vss-web-extension-sdk.VSS.Identities.Mru.RestClient.CommonMethods2To4
@@ -8196,28 +8196,28 @@ references:
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.CacheableTypes
     name: CacheableTypes
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.HashCache
-    name: HashCache
+    name: HashCache<V>
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.RequestCache
-    name: RequestCache
+    name: RequestCache<T>
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.TwoLayerCache
-    name: TwoLayerCache
+    name: TwoLayerCache<V>
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.ICache
-    name: ICache
+    name: ICache<V>
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.ICacheConfiguration
     name: ICacheConfiguration
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Cache.IIdentityPickerCacheException
     name: IIdentityPickerCacheException
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.IRequestCache
-    name: IRequestCache
+    name: IRequestCache<T>
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Cache.IRequestCacheConfiguration
     name: IRequestCacheConfiguration
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCache
-    name: ITwoLayerCache
+    name: ITwoLayerCache<V>
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Cache.ITwoLayerCacheConfiguration
-    name: ITwoLayerCacheConfiguration
+    name: ITwoLayerCacheConfiguration<V>
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Common.CommonHelpers
     name: CommonHelpers
   - uid: vss-web-extension-sdk.VSS.Identities.Picker.Common.FilterByScope
@@ -8784,19 +8784,19 @@ references:
   - uid: vss-web-extension-sdk.VSS.Profile.Contracts.ProfileAttribute
     name: ProfileAttribute
   - uid: vss-web-extension-sdk.VSS.Profile.Contracts.ProfileAttributeBase
-    name: ProfileAttributeBase
+    name: ProfileAttributeBase<T>
   - uid: vss-web-extension-sdk.VSS.Profile.Contracts.ProfileRegion
     name: ProfileRegion
   - uid: vss-web-extension-sdk.VSS.Profile.Contracts.ProfileRegions
     name: ProfileRegions
   - uid: vss-web-extension-sdk.VSS.Profile.Metrics.BaseMetricsEvent
-    name: BaseMetricsEvent
+    name: BaseMetricsEvent<T>
   - uid: vss-web-extension-sdk.VSS.Profile.Metrics.InstantMetricsEvent
     name: InstantMetricsEvent
   - uid: vss-web-extension-sdk.VSS.Profile.Metrics.IntervalMetricsEvent
     name: IntervalMetricsEvent
   - uid: vss-web-extension-sdk.VSS.Profile.Metrics.MeteredAsyncAction
-    name: MeteredAsyncAction
+    name: MeteredAsyncAction<T>
   - uid: vss-web-extension-sdk.VSS.Profile.Metrics.NullIntervalMetricsEvent
     name: NullIntervalMetricsEvent
   - uid: vss-web-extension-sdk.VSS.Profile.Metrics.NullMetricsEvent
@@ -8855,25 +8855,25 @@ references:
   - uid: vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService
     name: HostNavigationService
   - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStore
-    name: IndexedSearchStore
+    name: IndexedSearchStore<T>
   - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStrategy
-    name: IndexedSearchStrategy
+    name: IndexedSearchStrategy<T>
   - uid: vss-web-extension-sdk.VSS.Search.InvertedIndexStore
-    name: InvertedIndexStore
+    name: InvertedIndexStore<T>
   - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter
-    name: SearchAdapter
+    name: SearchAdapter<T>
   - uid: vss-web-extension-sdk.VSS.Search.SearchCore
-    name: SearchCore
+    name: SearchCore<T>
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy
-    name: SearchStrategy
+    name: SearchStrategy<T>
   - uid: vss-web-extension-sdk.VSS.Search.SearchableObject
-    name: SearchableObject
+    name: SearchableObject<T>
   - uid: vss-web-extension-sdk.VSS.Search.TrieStore
-    name: TrieStore
+    name: TrieStore<T>
   - uid: vss-web-extension-sdk.VSS.Search.ISearchStrategyOptions
-    name: ISearchStrategyOptions
+    name: ISearchStrategyOptions<T>
   - uid: vss-web-extension-sdk.VSS.Search.IndexedSearchStoreOptions
-    name: IndexedSearchStoreOptions
+    name: IndexedSearchStoreOptions<T>
   - uid: vss-web-extension-sdk.VSS.Security.Contracts.AccessControlEntry
     name: AccessControlEntry
   - uid: vss-web-extension-sdk.VSS.Security.Contracts.AccessControlList
@@ -9071,7 +9071,7 @@ references:
   - uid: vss-web-extension-sdk.VSS.Utils.Accessibility.ProgressAnnouncerOptions
     name: ProgressAnnouncerOptions
   - uid: vss-web-extension-sdk.VSS.Utils.Array.StableSorter
-    name: StableSorter
+    name: StableSorter<T>
   - uid: vss-web-extension-sdk.VSS.Utils.Clipboard.IClipboardOptions
     name: IClipboardOptions
   - uid: vss-web-extension-sdk.VSS.Utils.Core.ThrottledDelegateOptions
@@ -9189,7 +9189,7 @@ references:
   - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperBase
     name: VssJsonCollectionWrapperBase
   - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.VssJsonCollectionWrapperV
-    name: VssJsonCollectionWrapperV
+    name: VssJsonCollectionWrapperV<T>
   - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.VssNotificationEvent
     name: VssNotificationEvent
   - uid: vss-web-extension-sdk.VSS.WebApi.Contracts.WrappedException
@@ -9207,7 +9207,7 @@ references:
   - uid: vss-web-extension-sdk.XDM.XDMObjectRegistry
     name: XDMObjectRegistry
   - uid: vss-web-extension-sdk.XDM.IDeferred
-    name: IDeferred
+    name: IDeferred<T>
   - uid: vss-web-extension-sdk.XDM.ISerializationSettings
     name: ISerializationSettings
   - uid: vss-web-extension-sdk.ContextHostType
@@ -9359,11 +9359,11 @@ references:
   - uid: vss-web-extension-sdk.HubsContext
     name: HubsContext
   - uid: vss-web-extension-sdk.IArgsFunctionR
-    name: IArgsFunctionR
+    name: IArgsFunctionR<TResult>
   - uid: vss-web-extension-sdk.IAuthTokenManager
-    name: IAuthTokenManager
+    name: IAuthTokenManager<TToken>
   - uid: vss-web-extension-sdk.IComparer
-    name: IComparer
+    name: IComparer<T>
   - uid: vss-web-extension-sdk.IContributedHub
     name: IContributedHub
   - uid: vss-web-extension-sdk.IContributedMenuItem
@@ -9375,9 +9375,9 @@ references:
   - uid: vss-web-extension-sdk.IDefaultGetServiceContext
     name: IDefaultGetServiceContext
   - uid: vss-web-extension-sdk.IDictionaryNumberTo
-    name: IDictionaryNumberTo
+    name: IDictionaryNumberTo<T>
   - uid: vss-web-extension-sdk.IDictionaryStringTo
-    name: IDictionaryStringTo
+    name: IDictionaryStringTo<T>
   - uid: vss-web-extension-sdk.IDisposable
     name: IDisposable
   - uid: vss-web-extension-sdk.IDocumentOptions
@@ -9401,11 +9401,11 @@ references:
   - uid: vss-web-extension-sdk.IExternalDialog
     name: IExternalDialog
   - uid: vss-web-extension-sdk.IFunctionPPPR
-    name: IFunctionPPPR
+    name: IFunctionPPPR<TParam1>
   - uid: vss-web-extension-sdk.IFunctionPPR
-    name: IFunctionPPR
+    name: IFunctionPPR<TParam1>
   - uid: vss-web-extension-sdk.IFunctionPR
-    name: IFunctionPR
+    name: IFunctionPR<TParam>
   - uid: vss-web-extension-sdk.IHostDialogOptions
     name: IHostDialogOptions
   - uid: vss-web-extension-sdk.IHostDialogService
@@ -9421,7 +9421,7 @@ references:
   - uid: vss-web-extension-sdk.IHubsProviderContext
     name: IHubsProviderContext
   - uid: vss-web-extension-sdk.IKeyValuePair
-    name: IKeyValuePair
+    name: IKeyValuePair<TKey>
   - uid: vss-web-extension-sdk.IMessageDialogButton
     name: IMessageDialogButton
   - uid: vss-web-extension-sdk.IMessageDialogResult
@@ -9429,7 +9429,7 @@ references:
   - uid: vss-web-extension-sdk.IOpenMessageDialogOptions
     name: IOpenMessageDialogOptions
   - uid: vss-web-extension-sdk.IPromise
-    name: IPromise
+    name: IPromise<T>
   - uid: vss-web-extension-sdk.IResultCallback
     name: IResultCallback
   - uid: vss-web-extension-sdk.ISandboxedStorage

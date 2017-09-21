@@ -21,7 +21,7 @@ items:
       targeted at "ms.vss-build-web.build-results-view" and the host
     source:
       path: tfs.d.ts
-      startLine: 2111
+      startLine: 2110
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -44,6 +44,7 @@ items:
       It is important to have atleast one call back, since that's how an
       extension can get information about the current build.
     syntax:
+      content: function onBuildChanged
       return:
         type:
           - function
@@ -59,6 +60,7 @@ items:
       Optional, If needed, this callback will be called when this particular
       extension is selected/displayed
     syntax:
+      content: function onViewDisplayed
       return:
         type:
           - function
@@ -76,6 +78,7 @@ items:
 
       the corresponding tab is selected if the tab is visible.
     syntax:
+      content: function selectTab
       return:
         type:
           - function
@@ -92,6 +95,7 @@ items:
       sections. fullyQualifiedSectionId is of the format -
       publisher.extensionId.sectionId
     syntax:
+      content: function setSectionVisibility
       return:
         type:
           - function

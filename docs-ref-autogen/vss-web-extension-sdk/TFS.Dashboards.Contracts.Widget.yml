@@ -32,7 +32,7 @@ items:
     summary: Widget data
     source:
       path: tfs.d.ts
-      startLine: 5268
+      startLine: 5267
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -50,6 +50,9 @@ items:
       Refers to the allowed sizes for the widget. This gets populated when user
       wants to configure the widget
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetSize[]
+        allowedSizes
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetSize[]'
@@ -64,6 +67,7 @@ items:
       Refers to unique identifier of a feature artifact. Used for
       pinning+unpinning a specific artifact.
     syntax:
+      content: string artifactId
       return:
         type:
           - string
@@ -77,6 +81,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string configurationContributionId
       return:
         type:
           - string
@@ -90,6 +95,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string configurationContributionRelativeId
       return:
         type:
           - string
@@ -102,6 +108,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string contentUri
       return:
         type:
           - string
@@ -116,6 +123,7 @@ items:
       The id of the underlying contribution defining the supplied Widget
       Configuration.
     syntax:
+      content: string contributionId
       return:
         type:
           - string
@@ -130,6 +138,7 @@ items:
       Optional partial dashboard content, to support exchanging dashboard-level
       version ETag for widget-level APIs
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Dashboards.Contracts.Dashboard dashboard'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.Dashboard'
@@ -142,6 +151,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string eTag
       return:
         type:
           - string
@@ -154,6 +164,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -166,6 +177,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isEnabled
       return:
         type:
           - boolean
@@ -178,6 +190,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isNameConfigurable
       return:
         type:
           - boolean
@@ -190,6 +203,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Dashboards.Contracts.LightboxOptions
+        lightboxOptions
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.LightboxOptions'
@@ -202,6 +218,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string loadingImageUrl
       return:
         type:
           - string
@@ -214,6 +231,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -226,6 +244,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetPosition position'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetPosition'
@@ -238,6 +257,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string settings
       return:
         type:
           - string
@@ -250,6 +270,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Dashboards.Contracts.SemanticVersion
+        settingsVersion
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.SemanticVersion'
@@ -262,6 +285,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetSize size'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Dashboards.Contracts.WidgetSize'
@@ -274,6 +298,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string typeId
       return:
         type:
           - string
@@ -286,6 +311,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string url
       return:
         type:
           - string

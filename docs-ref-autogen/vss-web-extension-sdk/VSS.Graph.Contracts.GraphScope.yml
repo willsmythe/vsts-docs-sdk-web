@@ -19,7 +19,7 @@ items:
       - '@vss-web-extension-sdk.VSS.Graph.Contracts.GraphSubject'
     source:
       path: vss.d.ts
-      startLine: 24242
+      startLine: 24241
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -39,6 +39,7 @@ items:
       scope. Only members of this group can change the contents of this scope or
       assign other users permissions to access this scope.
     syntax:
+      content: string administratorDescriptor
       return:
         type:
           - string
@@ -51,6 +52,7 @@ items:
     type: property
     summary: 'When true, this scope is also a securing host for one or more scopes.'
     syntax:
+      content: boolean isGlobal
       return:
         type:
           - boolean
@@ -65,6 +67,7 @@ items:
       The subject descriptor for the closest account or organization in the
       ancestor tree of this scope.
     syntax:
+      content: string parentDescriptor
       return:
         type:
           - string
@@ -77,6 +80,7 @@ items:
     type: property
     summary: The type of this scope. Typically ServiceHost or TeamProject.
     syntax:
+      content: GroupScopeType scopeType
       return:
         type:
           - GroupScopeType
@@ -92,6 +96,7 @@ items:
       The subject descriptor for the containing organization in the ancestor
       tree of this scope.
     syntax:
+      content: string securingHostDescriptor
       return:
         type:
           - string

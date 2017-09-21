@@ -19,7 +19,7 @@ items:
       - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitResolution'
     source:
       path: tfs.d.ts
-      startLine: 14746
+      startLine: 14745
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: GitResolutionMergeType mergeType
       return:
         type:
           - GitResolutionMergeType
@@ -49,6 +50,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitBlobRef
+        userMergedBlob
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitBlobRef'
@@ -62,6 +66,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: 'number[] userMergedContent'
       return:
         type:
           - 'number[]'

@@ -51,7 +51,7 @@ items:
     summary: Data representation of a build
     source:
       path: tfs.d.ts
-      startLine: 83
+      startLine: 82
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -67,6 +67,7 @@ items:
     type: property
     summary: Build number/name of the build
     syntax:
+      content: string buildNumber
       return:
         type:
           - string
@@ -79,6 +80,7 @@ items:
     type: property
     summary: Build number revision
     syntax:
+      content: number buildNumberRevision
       return:
         type:
           - number
@@ -93,6 +95,7 @@ items:
       The build controller. This should only be set if the definition type is
       Xaml.
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildController controller'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildController'
@@ -105,6 +108,9 @@ items:
     type: property
     summary: The definition associated with the build
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Build.Contracts.DefinitionReference
+        definition
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.DefinitionReference'
@@ -117,6 +123,7 @@ items:
     type: property
     summary: Indicates whether the build has been deleted.
     syntax:
+      content: boolean deleted
       return:
         type:
           - boolean
@@ -129,6 +136,7 @@ items:
     type: property
     summary: Process or person that deleted the build
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef deletedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -141,6 +149,7 @@ items:
     type: property
     summary: Date the build was deleted
     syntax:
+      content: Date deletedDate
       return:
         type:
           - Date
@@ -153,6 +162,7 @@ items:
     type: property
     summary: Description of how the build was deleted
     syntax:
+      content: string deletedReason
       return:
         type:
           - string
@@ -165,6 +175,7 @@ items:
     type: property
     summary: Demands
     syntax:
+      content: 'any[] demands'
       return:
         type:
           - 'any[]'
@@ -177,6 +188,7 @@ items:
     type: property
     summary: Time that the build was completed
     syntax:
+      content: Date finishTime
       return:
         type:
           - Date
@@ -189,6 +201,7 @@ items:
     type: property
     summary: Id of the build
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -201,6 +214,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean keepForever
       return:
         type:
           - boolean
@@ -213,6 +227,7 @@ items:
     type: property
     summary: Process or person that last changed the build
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef lastChangedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -225,6 +240,7 @@ items:
     type: property
     summary: Date the build was last changed
     syntax:
+      content: Date lastChangedDate
       return:
         type:
           - Date
@@ -237,6 +253,7 @@ items:
     type: property
     summary: Log location of the build
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildLogReference logs'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildLogReference'
@@ -249,6 +266,9 @@ items:
     type: property
     summary: Orchestration plan for the build
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Build.Contracts.TaskOrchestrationPlanReference
+        orchestrationPlan
       return:
         type:
           - >-
@@ -262,6 +282,7 @@ items:
     type: property
     summary: Parameters for the build
     syntax:
+      content: string parameters
       return:
         type:
           - string
@@ -274,6 +295,9 @@ items:
     type: property
     summary: 'Orchestration plans associated with the build (build, cleanup)'
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Build.Contracts.TaskOrchestrationPlanReference[]
+        plans
       return:
         type:
           - >-
@@ -287,6 +311,7 @@ items:
     type: property
     summary: The build's priority
     syntax:
+      content: QueuePriority priority
       return:
         type:
           - QueuePriority
@@ -299,6 +324,7 @@ items:
     type: property
     summary: The team project
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference project'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference'
@@ -311,6 +337,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: any properties
       return:
         type:
           - any
@@ -323,6 +350,7 @@ items:
     type: property
     summary: 'Quality of the xaml build (good, bad, etc.)'
     syntax:
+      content: string quality
       return:
         type:
           - string
@@ -335,6 +363,7 @@ items:
     type: property
     summary: The queue. This should only be set if the definition type is Build.
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue queue'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue'
@@ -347,6 +376,7 @@ items:
     type: property
     summary: Queue option of the build.
     syntax:
+      content: QueueOptions queueOptions
       return:
         type:
           - QueueOptions
@@ -359,6 +389,7 @@ items:
     type: property
     summary: The current position of the build in the queue
     syntax:
+      content: number queuePosition
       return:
         type:
           - number
@@ -371,6 +402,7 @@ items:
     type: property
     summary: Time that the build was queued
     syntax:
+      content: Date queueTime
       return:
         type:
           - Date
@@ -383,6 +415,7 @@ items:
     type: property
     summary: Reason that the build was created
     syntax:
+      content: BuildReason reason
       return:
         type:
           - BuildReason
@@ -395,6 +428,7 @@ items:
     type: property
     summary: The repository
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildRepository repository'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildRepository'
@@ -407,6 +441,7 @@ items:
     type: property
     summary: The identity that queued the build
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef requestedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -419,6 +454,7 @@ items:
     type: property
     summary: The identity on whose behalf the build was queued
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef requestedFor'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -431,6 +467,7 @@ items:
     type: property
     summary: The build result
     syntax:
+      content: BuildResult result
       return:
         type:
           - BuildResult
@@ -443,6 +480,7 @@ items:
     type: property
     summary: Specifies if Build should be retained by Release
     syntax:
+      content: boolean retainedByRelease
       return:
         type:
           - boolean
@@ -455,6 +493,7 @@ items:
     type: property
     summary: Source branch
     syntax:
+      content: string sourceBranch
       return:
         type:
           - string
@@ -467,6 +506,7 @@ items:
     type: property
     summary: Source version
     syntax:
+      content: string sourceVersion
       return:
         type:
           - string
@@ -479,6 +519,7 @@ items:
     type: property
     summary: Time that the build was started
     syntax:
+      content: Date startTime
       return:
         type:
           - Date
@@ -491,6 +532,7 @@ items:
     type: property
     summary: Status of the build
     syntax:
+      content: BuildStatus status
       return:
         type:
           - BuildStatus
@@ -503,6 +545,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: 'string[] tags'
       return:
         type:
           - 'string[]'
@@ -515,6 +558,7 @@ items:
     type: property
     summary: Sourceprovider-specific information about what triggered the build
     syntax:
+      content: '[key: string]: string triggerInfo'
       return:
         type:
           - '[key: string]: string'
@@ -527,6 +571,7 @@ items:
     type: property
     summary: Uri of the build
     syntax:
+      content: string uri
       return:
         type:
           - string
@@ -539,6 +584,7 @@ items:
     type: property
     summary: REST url of the build
     syntax:
+      content: string url
       return:
         type:
           - string
@@ -551,6 +597,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Build.Contracts.BuildRequestValidationResult[]
+        validationResults
       return:
         type:
           - >-

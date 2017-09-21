@@ -1,7 +1,7 @@
 ### YamlMime:UniversalReference
 items:
   - uid: vss-web-extension-sdk.VSS.Controls.TabContent.ITabRegistration
-    name: ITabRegistration
+    name: ITabRegistration<T>
     fullName: ITabRegistration
     children:
       - vss-web-extension-sdk.VSS.Controls.TabContent.ITabRegistration.groupId
@@ -18,7 +18,7 @@ items:
     summary: The interface for user to register a tab to a tab control
     source:
       path: vss.d.ts
-      startLine: 16858
+      startLine: 16857
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -34,6 +34,7 @@ items:
     type: property
     summary: The registered group id that uniquely identify a group
     syntax:
+      content: string groupId
       return:
         type:
           - string
@@ -48,6 +49,7 @@ items:
       The registered tab id that uniquely identify a tab. When it is not
       defined, a GUID will be generated to be the id.
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -60,6 +62,7 @@ items:
     type: property
     summary: The order of the tab that shows within the tab group.
     syntax:
+      content: number order
       return:
         type:
           - number
@@ -72,6 +75,7 @@ items:
     type: property
     summary: Retrieves the ITabContent instance for the content tab
     syntax:
+      content: function tabContent
       return:
         type:
           - function
@@ -87,6 +91,7 @@ items:
       The option object of the tab content.  When it is not defined, an empty
       object will be created.
     syntax:
+      content: T tabContentOptions
       return:
         type:
           - T
@@ -101,6 +106,7 @@ items:
       The tab title that displays on the tab control. When it is not defined, it
       will append to the existing tabs in the tab group.
     syntax:
+      content: string title
       return:
         type:
           - string

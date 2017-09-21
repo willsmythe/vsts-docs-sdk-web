@@ -15,7 +15,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 21352
+      startLine: 21351
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
     type: property
     summary: State of the the AcquisitionOperation for the current user
     syntax:
+      content: AcquisitionOperationState operationState
       return:
         type:
           - AcquisitionOperationState
@@ -45,6 +46,7 @@ items:
     type: property
     summary: 'AcquisitionOperationType: install, request, buy, etc...'
     syntax:
+      content: AcquisitionOperationType operationType
       return:
         type:
           - AcquisitionOperationType
@@ -59,6 +61,7 @@ items:
       Optional reason to justify current state. Typically used with Disallow
       state.
     syntax:
+      content: string reason
       return:
         type:
           - string

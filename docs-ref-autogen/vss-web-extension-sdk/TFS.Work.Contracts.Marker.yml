@@ -13,7 +13,7 @@ items:
     summary: Client serialization contract for Delivery Timeline Markers.
     source:
       path: tfs.d.ts
-      startLine: 21998
+      startLine: 21997
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -29,6 +29,7 @@ items:
     type: property
     summary: Color associated with the marker.
     syntax:
+      content: string color
       return:
         type:
           - string
@@ -41,6 +42,7 @@ items:
     type: property
     summary: Where the marker should be displayed on the timeline.
     syntax:
+      content: Date date
       return:
         type:
           - Date
@@ -53,6 +55,7 @@ items:
     type: property
     summary: Label/title for the marker.
     syntax:
+      content: string label
       return:
         type:
           - string

@@ -15,7 +15,7 @@ items:
     summary: Interface for the Json response message
     source:
       path: tfs.d.ts
-      startLine: 18003
+      startLine: 18002
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
     type: property
     summary: The number of response objects batched together.
     syntax:
+      content: number count
       return:
         type:
           - number
@@ -45,6 +46,9 @@ items:
     type: property
     summary: Collection of the responses.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.JsonHttpResponse[]
+        value
       return:
         type:
           - >-

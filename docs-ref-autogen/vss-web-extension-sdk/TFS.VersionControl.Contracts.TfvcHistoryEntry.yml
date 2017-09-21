@@ -17,7 +17,7 @@ items:
         @vss-web-extension-sdk.TFS.VersionControl.Contracts.HistoryEntry<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcItem>
     source:
       path: tfs.d.ts
-      startLine: 15259
+      startLine: 15258
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,7 @@ items:
       The encoding of the item at this point in history (only relevant for File
       history, not folders)
     syntax:
+      content: number encoding
       return:
         type:
           - number
@@ -50,6 +51,7 @@ items:
       The file id of the item at this point in history (only relevant for File
       history, not folders)
     syntax:
+      content: number fileId
       return:
         type:
           - number

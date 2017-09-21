@@ -19,7 +19,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 20407
+      startLine: 20406
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string helpUrl
       return:
         type:
           - string
@@ -49,6 +50,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -62,6 +64,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string promoteJobId
       return:
         type:
           - string
@@ -75,6 +78,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessTemplateContracts.ValidationIssue[]
+        validationResults
       return:
         type:
           - >-

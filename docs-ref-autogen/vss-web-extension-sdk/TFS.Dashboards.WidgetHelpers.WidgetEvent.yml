@@ -19,7 +19,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 6245
+      startLine: 6244
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -38,7 +38,7 @@ items:
           type:
             - T
           description: ''
-      content: 'function Args(payload: T)'
+      content: 'static function Args(payload: T)'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.EventArgs<T>'
@@ -55,6 +55,7 @@ items:
       Configuration has changed. When this event is notified, the preview is
       updated and Save button is enabled.
     syntax:
+      content: static string ConfigurationChange
       return:
         type:
           - string
@@ -68,6 +69,7 @@ items:
     type: property
     summary: Widget configuration general settings changed
     syntax:
+      content: static string GeneralSettingsChanged
       return:
         type:
           - string
@@ -81,6 +83,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string LightboxOptions
       return:
         type:
           - string
@@ -96,6 +99,7 @@ items:
       Lightbox finished resizing. When this event is notified, the lightbox is
       done resizing.
     syntax:
+      content: static string LightboxResized
       return:
         type:
           - string

@@ -17,7 +17,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 11138
+      startLine: 11137
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -34,6 +34,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: any groupByValue
       return:
         type:
           - any
@@ -47,6 +48,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.TestCaseResult[]
+        results
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.TestCaseResult[]'
@@ -60,6 +64,10 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        [key: number]:
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.AggregatedResultsByOutcome
+        resultsCountByOutcome
       return:
         type:
           - >-

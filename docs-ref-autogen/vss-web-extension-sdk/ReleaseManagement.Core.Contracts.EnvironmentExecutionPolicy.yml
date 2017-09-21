@@ -18,7 +18,7 @@ items:
       when the policies mentioned are satisfied.
     source:
       path: rmo.d.ts
-      startLine: 618
+      startLine: 617
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
       This policy decides, how many environments would be with Environment
       Runner.
     syntax:
+      content: number concurrencyCount
       return:
         type:
           - number
@@ -53,6 +54,7 @@ items:
       environment entries till Environment Runner is free [as per it's policy]
       to take another environment for running.
     syntax:
+      content: number queueDepthCount
       return:
         type:
           - number

@@ -29,7 +29,7 @@ items:
         @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTrackingResource
     source:
       path: tfs.d.ts
-      startLine: 18424
+      startLine: 18423
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -46,6 +46,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -59,6 +60,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isIdentity
       return:
         type:
           - boolean
@@ -72,6 +74,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isPicklist
       return:
         type:
           - boolean
@@ -85,6 +88,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isPicklistSuggested
       return:
         type:
           - boolean
@@ -97,6 +101,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -110,6 +115,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean readOnly
       return:
         type:
           - boolean
@@ -123,6 +129,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string referenceName
       return:
         type:
           - string
@@ -136,6 +143,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemFieldOperation[]
+        supportedOperations
       return:
         type:
           - >-
@@ -149,6 +159,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: FieldType type
       return:
         type:
           - FieldType

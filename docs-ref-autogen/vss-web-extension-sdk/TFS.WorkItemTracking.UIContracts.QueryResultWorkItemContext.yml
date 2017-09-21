@@ -17,7 +17,7 @@ items:
     summary: A query result in the WIT UI
     source:
       path: tfs.d.ts
-      startLine: 21540
+      startLine: 21539
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -34,6 +34,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: 'string[] columns'
       return:
         type:
           - 'string[]'
@@ -47,6 +48,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.QueryHierarchyItem
+        query
       return:
         type:
           - >-
@@ -61,6 +65,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: 'any[] rows'
       return:
         type:
           - 'any[]'

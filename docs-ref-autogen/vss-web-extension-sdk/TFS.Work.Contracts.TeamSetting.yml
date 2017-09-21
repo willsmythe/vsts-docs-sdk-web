@@ -19,7 +19,7 @@ items:
       - '@vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsDataContractBase'
     source:
       path: tfs.d.ts
-      startLine: 22242
+      startLine: 22241
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -35,6 +35,9 @@ items:
     type: property
     summary: Backlog Iteration
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration
+        backlogIteration
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration'
@@ -47,6 +50,7 @@ items:
     type: property
     summary: Information about categories that are visible on the backlog.
     syntax:
+      content: '[key: string]: boolean backlogVisibilities'
       return:
         type:
           - '[key: string]: boolean'
@@ -59,6 +63,7 @@ items:
     type: property
     summary: 'BugsBehavior (Off, AsTasks, AsRequirements, ...)'
     syntax:
+      content: BugsBehavior bugsBehavior
       return:
         type:
           - BugsBehavior
@@ -73,6 +78,9 @@ items:
       Default Iteration, the iteration used when creating a new work item on the
       queries page.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration
+        defaultIteration
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.TeamSettingsIteration'
@@ -85,6 +93,7 @@ items:
     type: property
     summary: Default Iteration macro (if any)
     syntax:
+      content: string defaultIterationMacro
       return:
         type:
           - string
@@ -97,6 +106,7 @@ items:
     type: property
     summary: Days that the team is working
     syntax:
+      content: 'DayOfWeek[] workingDays'
       return:
         type:
           - 'DayOfWeek[]'

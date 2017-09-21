@@ -26,7 +26,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 3156
+      startLine: 3155
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -42,6 +42,7 @@ items:
     type: property
     summary: Identifier for an Account
     syntax:
+      content: string accountId
       return:
         type:
           - string
@@ -54,6 +55,7 @@ items:
     type: property
     summary: Name for an account
     syntax:
+      content: string accountName
       return:
         type:
           - string
@@ -66,6 +68,7 @@ items:
     type: property
     summary: Owner of account
     syntax:
+      content: string accountOwner
       return:
         type:
           - string
@@ -78,6 +81,7 @@ items:
     type: property
     summary: Current account status
     syntax:
+      content: AccountStatus accountStatus
       return:
         type:
           - AccountStatus
@@ -90,6 +94,7 @@ items:
     type: property
     summary: 'Type of account: Personal, Organization'
     syntax:
+      content: AccountType accountType
       return:
         type:
           - AccountType
@@ -102,6 +107,7 @@ items:
     type: property
     summary: Uri for an account
     syntax:
+      content: string accountUri
       return:
         type:
           - string
@@ -114,6 +120,7 @@ items:
     type: property
     summary: Who created the account
     syntax:
+      content: string createdBy
       return:
         type:
           - string
@@ -126,6 +133,7 @@ items:
     type: property
     summary: Date account was created
     syntax:
+      content: Date createdDate
       return:
         type:
           - Date
@@ -138,6 +146,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean hasMoved
       return:
         type:
           - boolean
@@ -150,6 +159,7 @@ items:
     type: property
     summary: Identity of last person to update the account
     syntax:
+      content: string lastUpdatedBy
       return:
         type:
           - string
@@ -162,6 +172,7 @@ items:
     type: property
     summary: Date account was last updated
     syntax:
+      content: Date lastUpdatedDate
       return:
         type:
           - Date
@@ -174,6 +185,7 @@ items:
     type: property
     summary: Namespace for an account
     syntax:
+      content: string namespaceId
       return:
         type:
           - string
@@ -186,6 +198,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string newCollectionId
       return:
         type:
           - string
@@ -198,6 +211,7 @@ items:
     type: property
     summary: Organization that created the account
     syntax:
+      content: string organizationName
       return:
         type:
           - string
@@ -210,6 +224,7 @@ items:
     type: property
     summary: Extended properties
     syntax:
+      content: any properties
       return:
         type:
           - any
@@ -222,6 +237,7 @@ items:
     type: property
     summary: Reason for current status
     syntax:
+      content: string statusReason
       return:
         type:
           - string

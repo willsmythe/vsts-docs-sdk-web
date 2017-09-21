@@ -70,7 +70,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 14243
+      startLine: 14242
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -87,6 +87,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string artifactId
       return:
         type:
           - string
@@ -100,6 +101,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+        autoCompleteSetBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -112,6 +116,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef closedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -125,6 +130,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date closedDate
       return:
         type:
           - Date
@@ -138,6 +144,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number codeReviewId
       return:
         type:
           - number
@@ -150,6 +157,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef[]
+        commits
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef[]'
@@ -163,6 +173,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestCompletionOptions
+        completionOptions
       return:
         type:
           - >-
@@ -177,6 +190,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date completionQueueTime
       return:
         type:
           - Date
@@ -190,6 +204,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef createdBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -203,6 +218,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date creationDate
       return:
         type:
           - Date
@@ -216,6 +232,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -229,6 +246,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitForkRef
+        forkSource
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitForkRef'
@@ -241,6 +261,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Core.Contracts.WebApiTagDefinition[] labels'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Core.Contracts.WebApiTagDefinition[]'
@@ -254,6 +275,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef
+        lastMergeCommit
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef'
@@ -267,6 +291,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef
+        lastMergeSourceCommit
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef'
@@ -280,6 +307,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef
+        lastMergeTargetCommit
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef'
@@ -293,6 +323,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string mergeFailureMessage
       return:
         type:
           - string
@@ -306,6 +337,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: PullRequestMergeFailureType mergeFailureType
       return:
         type:
           - PullRequestMergeFailureType
@@ -318,6 +350,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string mergeId
       return:
         type:
           - string
@@ -331,6 +364,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequestMergeOptions
+        mergeOptions
       return:
         type:
           - >-
@@ -345,6 +381,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: PullRequestAsyncStatus mergeStatus
       return:
         type:
           - PullRequestAsyncStatus
@@ -358,6 +395,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number pullRequestId
       return:
         type:
           - number
@@ -371,6 +409,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string remoteUrl
       return:
         type:
           - string
@@ -384,6 +423,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository
+        repository
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository'
@@ -397,6 +439,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.IdentityRefWithVote[]
+        reviewers
       return:
         type:
           - >-
@@ -411,6 +456,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string sourceRefName
       return:
         type:
           - string
@@ -423,6 +469,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: PullRequestStatus status
       return:
         type:
           - PullRequestStatus
@@ -436,6 +483,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean supportsIterations
       return:
         type:
           - boolean
@@ -449,6 +497,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string targetRefName
       return:
         type:
           - string
@@ -461,6 +510,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string title
       return:
         type:
           - string
@@ -473,6 +523,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string url
       return:
         type:
           - string
@@ -486,6 +537,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.ResourceRef[] workItemRefs'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.ResourceRef[]'

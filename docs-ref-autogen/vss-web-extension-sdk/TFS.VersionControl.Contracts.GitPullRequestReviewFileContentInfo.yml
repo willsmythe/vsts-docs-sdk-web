@@ -15,7 +15,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 14384
+      startLine: 14383
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
     type: property
     summary: The file change path.
     syntax:
+      content: string path
       return:
         type:
           - string
@@ -48,6 +49,7 @@ items:
       the client by using SHA1 hash function. Ensure that uploaded file has same
       encoding as in source control.
     syntax:
+      content: string sHA1Hash
       return:
         type:
           - string

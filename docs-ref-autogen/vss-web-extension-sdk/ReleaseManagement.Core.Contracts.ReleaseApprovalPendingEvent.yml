@@ -39,7 +39,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 996
+      startLine: 995
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -56,6 +56,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval
+        approval
       return:
         type:
           - >-
@@ -70,6 +73,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ApprovalOptions
+        approvalOptions
       return:
         type:
           - >-
@@ -84,6 +90,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval[]
+        completedApprovals
       return:
         type:
           - >-
@@ -98,6 +107,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string definitionName
       return:
         type:
           - string
@@ -111,6 +121,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment
+        deployment
       return:
         type:
           - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment'
@@ -124,6 +137,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number environmentId
       return:
         type:
           - number
@@ -137,6 +151,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string environmentName
       return:
         type:
           - string
@@ -150,6 +165,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment[]
+        environments
       return:
         type:
           - >-
@@ -164,6 +182,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isMultipleRankApproval
       return:
         type:
           - boolean
@@ -177,6 +196,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval[]
+        pendingApprovals
       return:
         type:
           - >-
@@ -191,6 +213,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string releaseCreator
       return:
         type:
           - string
@@ -204,6 +227,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string releaseName
       return:
         type:
           - string
@@ -217,6 +241,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string title
       return:
         type:
           - string
@@ -230,6 +255,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string webAccessUri
       return:
         type:
           - string

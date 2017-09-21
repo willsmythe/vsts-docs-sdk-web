@@ -20,7 +20,7 @@ items:
     summary: Represents a shallow reference to a TeamProject.
     source:
       path: tfs.d.ts
-      startLine: 4596
+      startLine: 4595
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,7 @@ items:
     type: property
     summary: Project abbreviation.
     syntax:
+      content: string abbreviation
       return:
         type:
           - string
@@ -48,6 +49,7 @@ items:
     type: property
     summary: The project's description (if any).
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -60,6 +62,7 @@ items:
     type: property
     summary: Project identifier.
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -72,6 +75,7 @@ items:
     type: property
     summary: Project name.
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -84,6 +88,7 @@ items:
     type: property
     summary: Project revision.
     syntax:
+      content: number revision
       return:
         type:
           - number
@@ -96,6 +101,7 @@ items:
     type: property
     summary: Project state.
     syntax:
+      content: any state
       return:
         type:
           - any
@@ -108,6 +114,7 @@ items:
     type: property
     summary: Url to the full version of the object.
     syntax:
+      content: string url
       return:
         type:
           - string
@@ -120,6 +127,7 @@ items:
     type: property
     summary: Project visibility.
     syntax:
+      content: ProjectVisibility visibility
       return:
         type:
           - ProjectVisibility

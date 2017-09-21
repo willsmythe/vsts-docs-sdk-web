@@ -17,7 +17,7 @@ items:
     summary: Data representation of an information node associated with a build
     source:
       path: tfs.d.ts
-      startLine: 1298
+      startLine: 1297
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
     type: property
     summary: Fields of the information node
     syntax:
+      content: '[key: string]: string fields'
       return:
         type:
           - '[key: string]: string'
@@ -45,6 +46,7 @@ items:
     type: property
     summary: Process or person that last modified this node
     syntax:
+      content: string lastModifiedBy
       return:
         type:
           - string
@@ -57,6 +59,7 @@ items:
     type: property
     summary: Date this node was last modified
     syntax:
+      content: Date lastModifiedDate
       return:
         type:
           - Date
@@ -69,6 +72,7 @@ items:
     type: property
     summary: Node Id of this information node
     syntax:
+      content: number nodeId
       return:
         type:
           - number
@@ -81,6 +85,7 @@ items:
     type: property
     summary: Id of parent node (xml tree)
     syntax:
+      content: number parentId
       return:
         type:
           - number
@@ -93,6 +98,7 @@ items:
     type: property
     summary: The type of the information node
     syntax:
+      content: string type
       return:
         type:
           - string

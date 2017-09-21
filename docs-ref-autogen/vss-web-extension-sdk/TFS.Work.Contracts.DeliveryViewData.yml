@@ -18,7 +18,7 @@ items:
       - '@vss-web-extension-sdk.TFS.Work.Contracts.PlanViewData'
     source:
       path: tfs.d.ts
-      startLine: 21871
+      startLine: 21870
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -35,6 +35,7 @@ items:
     type: property
     summary: Work item child id to parenet id map
     syntax:
+      content: '[key: number]: number childIdToParentIdMap'
       return:
         type:
           - '[key: number]: number'
@@ -47,6 +48,9 @@ items:
     type: property
     summary: Filter criteria status of the timeline
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Work.Contracts.TimelineCriteriaStatus
+        criteriaStatus
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.TimelineCriteriaStatus'
@@ -59,6 +63,7 @@ items:
     type: property
     summary: The end date of the delivery view data
     syntax:
+      content: Date endDate
       return:
         type:
           - Date
@@ -71,6 +76,7 @@ items:
     type: property
     summary: The start date for the delivery view data
     syntax:
+      content: Date startDate
       return:
         type:
           - Date
@@ -83,6 +89,7 @@ items:
     type: property
     summary: All the team data
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Work.Contracts.TimelineTeamData[] teams'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.TimelineTeamData[]'

@@ -1,7 +1,7 @@
 ### YamlMime:UniversalReference
 items:
   - uid: vss-web-extension-sdk.TFS.VersionControl.Contracts.HistoryEntry
-    name: HistoryEntry
+    name: HistoryEntry<T>
     fullName: HistoryEntry
     children:
       - >-
@@ -16,7 +16,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 14999
+      startLine: 14998
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,9 @@ items:
     type: property
     summary: The Change list (changeset/commit/shelveset) for this point in history
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.ChangeList<T>
+        changeList
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.ChangeList<T>'
@@ -47,6 +50,7 @@ items:
       The change made to the item from this change list (only relevant for File
       history, not folders)
     syntax:
+      content: VersionControlChangeType itemChangeType
       return:
         type:
           - VersionControlChangeType
@@ -61,6 +65,7 @@ items:
       The path of the item at this point in history (only relevant for File
       history, not folders)
     syntax:
+      content: string serverItem
       return:
         type:
           - string

@@ -31,7 +31,7 @@ items:
     summary: Represents an endpoint which may be used by an orchestration job.
     source:
       path: tfs.d.ts
-      startLine: 6797
+      startLine: 6796
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -48,6 +48,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
+        administratorsGroup
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -61,6 +64,9 @@ items:
     type: property
     summary: Gets or sets the authorization data for talking to the endpoint.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.EndpointAuthorization
+        authorization
       return:
         type:
           - >-
@@ -77,6 +83,7 @@ items:
       The Gets or sets Identity reference for the user who created the Service
       endpoint
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef createdBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -89,6 +96,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '[key: string]: string data'
       return:
         type:
           - '[key: string]: string'
@@ -102,6 +110,7 @@ items:
     type: property
     summary: Gets or Sets description of endpoint
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -115,6 +124,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string groupScopeId
       return:
         type:
           - string
@@ -127,6 +137,7 @@ items:
     type: property
     summary: Gets or sets the identifier of this endpoint.
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -140,6 +151,7 @@ items:
     type: property
     summary: EndPoint state indictor
     syntax:
+      content: boolean isReady
       return:
         type:
           - boolean
@@ -152,6 +164,7 @@ items:
     type: property
     summary: Gets or sets the friendly name of the endpoint.
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -165,6 +178,7 @@ items:
     type: property
     summary: Error message during creation/deletion of endpoint
     syntax:
+      content: any operationStatus
       return:
         type:
           - any
@@ -178,6 +192,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef readersGroup'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -190,6 +205,7 @@ items:
     type: property
     summary: Gets or sets the type of the endpoint.
     syntax:
+      content: string type
       return:
         type:
           - string
@@ -202,6 +218,7 @@ items:
     type: property
     summary: Gets or sets the url of the endpoint.
     syntax:
+      content: string url
       return:
         type:
           - string

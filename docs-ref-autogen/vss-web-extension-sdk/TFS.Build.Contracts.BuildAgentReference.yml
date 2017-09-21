@@ -13,7 +13,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 257
+      startLine: 256
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -29,6 +29,7 @@ items:
     type: property
     summary: Id of the resource
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -41,6 +42,7 @@ items:
     type: property
     summary: 'Name of the linked resource (definition name, controller name, etc.)'
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -53,6 +55,7 @@ items:
     type: property
     summary: Full http link to the resource
     syntax:
+      content: string url
       return:
         type:
           - string

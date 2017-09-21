@@ -21,7 +21,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 32575
+      startLine: 32574
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -42,6 +42,7 @@ items:
 
       milliseconds).
     syntax:
+      content: number announceEndDelay
       return:
         type:
           - number
@@ -55,6 +56,7 @@ items:
     type: property
     summary: The message to announce to the user at the end of the operation.
     syntax:
+      content: string announceEndMessage
       return:
         type:
           - string
@@ -72,6 +74,7 @@ items:
 
       milliseconds).
     syntax:
+      content: number announceStartDelay
       return:
         type:
           - number
@@ -85,6 +88,7 @@ items:
     type: property
     summary: The message to announce to the user at the start of the operation.
     syntax:
+      content: string announceStartMessage
       return:
         type:
           - string
@@ -100,6 +104,7 @@ items:
       Function that the ProgressAnnouncer can call to get the number of
       currently active operations.
     syntax:
+      content: function getActiveCount
       return:
         type:
           - function

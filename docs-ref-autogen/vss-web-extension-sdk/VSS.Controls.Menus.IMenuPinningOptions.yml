@@ -36,7 +36,7 @@ items:
       See also IMenuItemPinningOptions.
     source:
       path: vss.d.ts
-      startLine: 13711
+      startLine: 13710
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -52,6 +52,7 @@ items:
     type: property
     summary: 'If true, close this menu when an item is pinned/unpinned.'
     syntax:
+      content: boolean closeOnPin
       return:
         type:
           - boolean
@@ -64,6 +65,7 @@ items:
     type: property
     summary: Unique identifier for a group of pinnable menu items.
     syntax:
+      content: string groupId
       return:
         type:
           - string
@@ -77,6 +79,7 @@ items:
     type: property
     summary: Set on the target menu to hide the source menu when all items are pinned.
     syntax:
+      content: boolean hideEmptySourceMenu
       return:
         type:
           - boolean
@@ -90,6 +93,7 @@ items:
     type: property
     summary: Set to true to hide pinned items in this item's submenu.
     syntax:
+      content: boolean hidePinnedItems
       return:
         type:
           - boolean
@@ -103,6 +107,7 @@ items:
     type: property
     summary: Set to true to hide unpinned items in this item's submenu.
     syntax:
+      content: boolean hideUnpinnedItems
       return:
         type:
           - boolean
@@ -118,6 +123,7 @@ items:
       Set to true if this item's submenu is where all pinnable items are shown.
       The pinning target should be the parent menu of this item.
     syntax:
+      content: boolean isPinningSource
       return:
         type:
           - boolean
@@ -133,6 +139,7 @@ items:
       Set to true if this item's submenu is the target pinned items are pinned
       to. The pinning source should be a submenu of this item's submenu.
     syntax:
+      content: boolean isPinningTarget
       return:
         type:
           - boolean
@@ -147,6 +154,7 @@ items:
       Set to true on the pinning target if newly-pinned items should be moved to
       be after every other pinnable item with the same group id.
     syntax:
+      content: boolean pinItemsToEnd
       return:
         type:
           - boolean

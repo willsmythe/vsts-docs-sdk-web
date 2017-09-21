@@ -13,7 +13,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 1692
+      startLine: 1691
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -29,6 +29,7 @@ items:
     type: property
     summary: The type of the exception that was thrown.
     syntax:
+      content: string exceptionType
       return:
         type:
           - string
@@ -41,6 +42,7 @@ items:
     type: property
     summary: Message that is associated with the exception.
     syntax:
+      content: string message
       return:
         type:
           - string
@@ -53,6 +55,7 @@ items:
     type: property
     summary: The StackTrace from the exception turned into a string.
     syntax:
+      content: string stackTrace
       return:
         type:
           - string

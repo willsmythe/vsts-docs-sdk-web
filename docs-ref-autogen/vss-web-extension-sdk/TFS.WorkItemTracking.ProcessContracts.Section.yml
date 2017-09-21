@@ -15,7 +15,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 19101
+      startLine: 19100
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.WorkItemTracking.ProcessContracts.Group[]
+        groups
       return:
         type:
           - '@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessContracts.Group[]'
@@ -43,6 +46,7 @@ items:
     type: property
     summary: The id for the layout node.
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -58,6 +62,7 @@ items:
       A value indicating whether this layout node has been overridden by a child
       layout.
     syntax:
+      content: boolean overridden
       return:
         type:
           - boolean

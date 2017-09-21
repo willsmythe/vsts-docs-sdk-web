@@ -17,7 +17,7 @@ items:
     summary: A request for an extension (to be installed or have a license assigned)
     source:
       path: vss.d.ts
-      startLine: 2051
+      startLine: 2050
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
     type: property
     summary: Required message supplied if the request is rejected
     syntax:
+      content: string rejectMessage
       return:
         type:
           - string
@@ -45,6 +46,7 @@ items:
     type: property
     summary: Date at which the request was made
     syntax:
+      content: Date requestDate
       return:
         type:
           - Date
@@ -57,6 +59,7 @@ items:
     type: property
     summary: Represents the user who made the request
     syntax:
+      content: any requestedBy
       return:
         type:
           - any
@@ -69,6 +72,7 @@ items:
     type: property
     summary: Optional message supplied by the requester justifying the request
     syntax:
+      content: string requestMessage
       return:
         type:
           - string
@@ -81,6 +85,7 @@ items:
     type: property
     summary: Represents the state of the request
     syntax:
+      content: ExtensionRequestState requestState
       return:
         type:
           - ExtensionRequestState
@@ -93,6 +98,7 @@ items:
     type: property
     summary: Date at which the request was resolved
     syntax:
+      content: Date resolveDate
       return:
         type:
           - Date
@@ -105,6 +111,7 @@ items:
     type: property
     summary: Represents the user who resolved the request
     syntax:
+      content: any resolvedBy
       return:
         type:
           - any

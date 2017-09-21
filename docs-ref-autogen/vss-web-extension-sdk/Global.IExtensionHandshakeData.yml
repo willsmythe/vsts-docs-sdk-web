@@ -13,7 +13,7 @@ items:
     summary: Data passed to the host from an extension frame via the initial handshake
     source:
       path: vss.d.ts
-      startLine: 405
+      startLine: 404
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -34,6 +34,7 @@ items:
       which shares the same URI of the contribution that originally caused this
       extension frame to be loaded.
     syntax:
+      content: function extensionReusedCallback
       return:
         type:
           - function
@@ -48,6 +49,7 @@ items:
       If true, consider the extension loaded upon completion of the initial
       handshake.
     syntax:
+      content: boolean notifyLoadSucceeded
       return:
         type:
           - boolean
@@ -60,6 +62,7 @@ items:
     type: property
     summary: The version of the VSS.SDK javascript file being used by the extension
     syntax:
+      content: number vssSDKVersion
       return:
         type:
           - number

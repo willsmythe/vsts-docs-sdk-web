@@ -15,7 +15,7 @@ items:
       form major.minor.patch.
     source:
       path: tfs.d.ts
-      startLine: 5251
+      startLine: 5250
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: Major version when you make incompatible API changes
     syntax:
+      content: number major
       return:
         type:
           - number
@@ -43,6 +44,7 @@ items:
     type: property
     summary: Minor version when you add functionality in a backwards-compatible manner
     syntax:
+      content: number minor
       return:
         type:
           - number
@@ -55,6 +57,7 @@ items:
     type: property
     summary: Patch version when you make backwards-compatible bug fixes
     syntax:
+      content: number patch
       return:
         type:
           - number

@@ -15,7 +15,7 @@ items:
       button in the configuration pane
     source:
       path: tfs.d.ts
-      startLine: 6173
+      startLine: 6172
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,9 @@ items:
     type: property
     summary: The custom settings to save
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.CustomSettings
+        customSettings
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.CustomSettings'
@@ -46,6 +49,7 @@ items:
       Indicates validity of the customSettings. If false, then user will be
       shown a generic error message and settings will not be saved.
     syntax:
+      content: boolean isValid
       return:
         type:
           - boolean

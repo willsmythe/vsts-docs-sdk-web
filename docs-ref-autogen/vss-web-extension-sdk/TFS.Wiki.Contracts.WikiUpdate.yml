@@ -17,7 +17,7 @@ items:
       of this update.
     source:
       path: tfs.d.ts
-      startLine: 17841
+      startLine: 17840
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -35,6 +35,9 @@ items:
       Git push object associated with this wiki update object. This is populated
       only in the response of the wiki updates POST API.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPush
+        associatedGitPush
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPush'
@@ -49,6 +52,9 @@ items:
       List of attachment change objects that is to be associated with this
       update.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Wiki.Contracts.WikiAttachmentChange[]
+        attachmentChanges
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Wiki.Contracts.WikiAttachmentChange[]'
@@ -61,6 +67,7 @@ items:
     type: property
     summary: Comment to be associated with this update.
     syntax:
+      content: string comment
       return:
         type:
           - string
@@ -73,6 +80,7 @@ items:
     type: property
     summary: Headcommit of the of the repository.
     syntax:
+      content: string headCommit
       return:
         type:
           - string
@@ -85,6 +93,7 @@ items:
     type: property
     summary: Page change object associated with this update.
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Wiki.Contracts.WikiPageChange pageChange'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Wiki.Contracts.WikiPageChange'

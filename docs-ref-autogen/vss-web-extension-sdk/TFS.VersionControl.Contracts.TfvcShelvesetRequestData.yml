@@ -25,7 +25,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 15380
+      startLine: 15379
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -44,6 +44,7 @@ items:
       Whether to include policyOverride and notes Only applies when requesting a
       single deep shelveset
     syntax:
+      content: boolean includeDetails
       return:
         type:
           - boolean
@@ -60,6 +61,7 @@ items:
       apply when requesting a single deep shelveset object. Links will always be
       included in the deep shelveset.
     syntax:
+      content: boolean includeLinks
       return:
         type:
           - boolean
@@ -73,6 +75,7 @@ items:
     type: property
     summary: Whether to include workItems
     syntax:
+      content: boolean includeWorkItems
       return:
         type:
           - boolean
@@ -86,6 +89,7 @@ items:
     type: property
     summary: Max number of changes to include
     syntax:
+      content: number maxChangeCount
       return:
         type:
           - number
@@ -99,6 +103,7 @@ items:
     type: property
     summary: Max length of comment
     syntax:
+      content: number maxCommentLength
       return:
         type:
           - number
@@ -112,6 +117,7 @@ items:
     type: property
     summary: Shelveset's name
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -125,6 +131,7 @@ items:
     type: property
     summary: Owner's ID. Could be a name or a guid.
     syntax:
+      content: string owner
       return:
         type:
           - string

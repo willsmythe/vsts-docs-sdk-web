@@ -27,7 +27,7 @@ items:
         Vssf\Client\WebApi\HttpClients\ClientGeneratorConfigs\genclient.json
     source:
       path: vss.d.ts
-      startLine: 29110
+      startLine: 29109
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -44,6 +44,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: any effectiveValue
       return:
         type:
           - any
@@ -56,6 +57,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean enforce
       return:
         type:
           - boolean
@@ -69,6 +71,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isValueUndefined
       return:
         type:
           - boolean
@@ -81,6 +84,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -93,6 +97,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.OrganizationPolicy.Contracts.Policy
+        parentPolicy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.OrganizationPolicy.Contracts.Policy'
@@ -105,6 +112,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: any value
       return:
         type:
           - any

@@ -21,7 +21,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 7146
+      startLine: 7145
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -38,6 +38,7 @@ items:
     type: property
     summary: Days for a build (flags enum for days of the week)
     syntax:
+      content: TaskAgentPoolMaintenanceScheduleDays daysToBuild
       return:
         type:
           - TaskAgentPoolMaintenanceScheduleDays
@@ -51,6 +52,7 @@ items:
     type: property
     summary: The Job Id of the Scheduled job that will queue the pool maintenance job.
     syntax:
+      content: string scheduleJobId
       return:
         type:
           - string
@@ -64,6 +66,7 @@ items:
     type: property
     summary: Local timezone hour to start
     syntax:
+      content: number startHours
       return:
         type:
           - number
@@ -77,6 +80,7 @@ items:
     type: property
     summary: Local timezone minute to start
     syntax:
+      content: number startMinutes
       return:
         type:
           - number
@@ -92,6 +96,7 @@ items:
       Time zone of the build schedule (string representation of the time zone
       id)
     syntax:
+      content: string timeZoneId
       return:
         type:
           - string

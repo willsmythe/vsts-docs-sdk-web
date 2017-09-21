@@ -16,7 +16,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 10674
+      startLine: 10673
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
     type: property
     summary: Id of child suite in a suite
     syntax:
+      content: number childSuiteId
       return:
         type:
           - number
@@ -46,6 +47,7 @@ items:
     type: property
     summary: Updated sequence number for the test case or child suite in the suite
     syntax:
+      content: number sequenceNumber
       return:
         type:
           - number
@@ -59,6 +61,7 @@ items:
     type: property
     summary: Id of a test case in a suite
     syntax:
+      content: number testCaseId
       return:
         type:
           - number

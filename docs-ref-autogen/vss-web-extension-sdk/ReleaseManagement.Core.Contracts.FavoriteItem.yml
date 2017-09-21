@@ -14,7 +14,7 @@ items:
     summary: Class to represent favorite entry
     source:
       path: rmo.d.ts
-      startLine: 658
+      startLine: 657
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -30,6 +30,7 @@ items:
     type: property
     summary: Application specific data for the entry
     syntax:
+      content: string data
       return:
         type:
           - string
@@ -42,6 +43,7 @@ items:
     type: property
     summary: Unique Id of the the entry
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -54,6 +56,7 @@ items:
     type: property
     summary: Display text for favorite entry
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -68,6 +71,7 @@ items:
       Application specific favorite entry type. Empty or Null represents that
       Favorite item is a Folder
     syntax:
+      content: string type
       return:
         type:
           - string

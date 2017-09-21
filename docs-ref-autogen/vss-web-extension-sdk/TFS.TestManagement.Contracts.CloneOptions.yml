@@ -22,7 +22,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 10229
+      startLine: 10228
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -39,6 +39,7 @@ items:
     type: property
     summary: If set to true requirements will be cloned
     syntax:
+      content: boolean cloneRequirements
       return:
         type:
           - boolean
@@ -52,6 +53,7 @@ items:
     type: property
     summary: copy all suites from a source plan
     syntax:
+      content: boolean copyAllSuites
       return:
         type:
           - boolean
@@ -65,6 +67,7 @@ items:
     type: property
     summary: copy ancestor hieracrchy
     syntax:
+      content: boolean copyAncestorHierarchy
       return:
         type:
           - boolean
@@ -78,6 +81,7 @@ items:
     type: property
     summary: Name of the workitem type of the clone
     syntax:
+      content: string destinationWorkItemType
       return:
         type:
           - string
@@ -91,6 +95,7 @@ items:
     type: property
     summary: Key value pairs where the key value is overridden by the value.
     syntax:
+      content: '[key: string]: string overrideParameters'
       return:
         type:
           - '[key: string]: string'
@@ -106,6 +111,7 @@ items:
       Comment on the link that will link the new clone  test case to the
       original Set null for no comment
     syntax:
+      content: string relatedLinkComment
       return:
         type:
           - string

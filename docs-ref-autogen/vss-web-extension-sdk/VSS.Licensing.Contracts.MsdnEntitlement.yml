@@ -32,7 +32,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 27579
+      startLine: 27578
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -49,6 +49,7 @@ items:
     type: property
     summary: Entilement id assigned to Entitlement in Benefits Database.
     syntax:
+      content: string entitlementCode
       return:
         type:
           - string
@@ -62,6 +63,7 @@ items:
     type: property
     summary: 'Entitlement Name e.g. Downloads, Chat.'
     syntax:
+      content: string entitlementName
       return:
         type:
           - string
@@ -75,6 +77,7 @@ items:
     type: property
     summary: 'Type of Entitlement e.g. Downloads, Chat.'
     syntax:
+      content: string entitlementType
       return:
         type:
           - string
@@ -87,6 +90,7 @@ items:
     type: property
     summary: Entitlement activation status
     syntax:
+      content: boolean isActivated
       return:
         type:
           - boolean
@@ -100,6 +104,7 @@ items:
     type: property
     summary: Entitlement availability
     syntax:
+      content: boolean isEntitlementAvailable
       return:
         type:
           - boolean
@@ -115,6 +120,7 @@ items:
       Write MSDN Channel into CRCT
       (Retail,MPN,VL,BizSpark,DreamSpark,MCT,FTE,Technet,WebsiteSpark,Other)
     syntax:
+      content: string subscriptionChannel
       return:
         type:
           - string
@@ -128,6 +134,7 @@ items:
     type: property
     summary: Subscription Expiration Date.
     syntax:
+      content: Date subscriptionExpirationDate
       return:
         type:
           - Date
@@ -143,6 +150,7 @@ items:
       Subscription id which identifies the subscription itself. This is the
       Benefit Detail Guid from BMS.
     syntax:
+      content: string subscriptionId
       return:
         type:
           - string
@@ -156,6 +164,7 @@ items:
     type: property
     summary: Identifier of the subscription or benefit level.
     syntax:
+      content: string subscriptionLevelCode
       return:
         type:
           - string
@@ -169,6 +178,7 @@ items:
     type: property
     summary: Name of subscription level.
     syntax:
+      content: string subscriptionLevelName
       return:
         type:
           - string
@@ -182,6 +192,7 @@ items:
     type: property
     summary: 'Subscription Status Code (ACT, PND, INA ...).'
     syntax:
+      content: string subscriptionStatus
       return:
         type:
           - string

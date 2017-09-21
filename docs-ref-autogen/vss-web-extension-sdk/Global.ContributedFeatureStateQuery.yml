@@ -15,7 +15,7 @@ items:
       ids
     source:
       path: vss.d.ts
-      startLine: 1313
+      startLine: 1312
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -31,6 +31,7 @@ items:
     type: property
     summary: The list of feature ids to query
     syntax:
+      content: 'string[] featureIds'
       return:
         type:
           - 'string[]'
@@ -45,6 +46,9 @@ items:
       The query result containing the current feature states for each of the
       queried feature ids
     syntax:
+      content: >-
+        [key: string]: @vss-web-extension-sdk.ContributedFeatureState
+        featureStates
       return:
         type:
           - '[key: string]: @vss-web-extension-sdk.ContributedFeatureState'
@@ -59,6 +63,7 @@ items:
       A dictionary of scope values (project name, etc.) to use in the query (if
       querying across scopes)
     syntax:
+      content: '[key: string]: string scopeValues'
       return:
         type:
           - '[key: string]: string'

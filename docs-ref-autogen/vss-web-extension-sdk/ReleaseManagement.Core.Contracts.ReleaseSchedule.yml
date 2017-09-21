@@ -20,7 +20,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 1525
+      startLine: 1524
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
     type: property
     summary: Days of the week to release
     syntax:
+      content: ScheduleDays daysToRelease
       return:
         type:
           - ScheduleDays
@@ -50,6 +51,7 @@ items:
     type: property
     summary: Team Foundation Job Definition Job Id
     syntax:
+      content: string jobId
       return:
         type:
           - string
@@ -63,6 +65,7 @@ items:
     type: property
     summary: Local time zone hour to start
     syntax:
+      content: number startHours
       return:
         type:
           - number
@@ -76,6 +79,7 @@ items:
     type: property
     summary: Local time zone minute to start
     syntax:
+      content: number startMinutes
       return:
         type:
           - number
@@ -89,6 +93,7 @@ items:
     type: property
     summary: 'Time zone Id of release schedule, such as ''UTC'''
     syntax:
+      content: string timeZoneId
       return:
         type:
           - string

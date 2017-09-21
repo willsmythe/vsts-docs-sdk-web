@@ -18,7 +18,7 @@ items:
       authentication flows.
     source:
       path: tfs.d.ts
-      startLine: 6931
+      startLine: 6930
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
       Gets or sets the endpoint used to obtain access tokens from the configured
       token service.
     syntax:
+      content: string authorizationUrl
       return:
         type:
           - string
@@ -50,6 +51,7 @@ items:
     type: property
     summary: Gets or sets the client identifier for this agent.
     syntax:
+      content: string clientId
       return:
         type:
           - string
@@ -63,6 +65,9 @@ items:
     type: property
     summary: Gets or sets the public key used to verify the identity of this agent.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentPublicKey
+        publicKey
       return:
         type:
           - >-

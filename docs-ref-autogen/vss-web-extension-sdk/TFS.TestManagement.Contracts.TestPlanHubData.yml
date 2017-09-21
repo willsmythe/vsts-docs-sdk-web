@@ -20,7 +20,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 11014
+      startLine: 11013
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number selectedSuiteId
       return:
         type:
           - number
@@ -50,6 +51,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.TestManagement.Contracts.TestPlan testPlan'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.TestPlan'
@@ -63,6 +65,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.TestPoint[]
+        testPoints
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.TestPoint[]'
@@ -76,6 +81,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSuite[]
+        testSuites
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.TestSuite[]'
@@ -89,6 +97,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number totalTestPoints
       return:
         type:
           - number

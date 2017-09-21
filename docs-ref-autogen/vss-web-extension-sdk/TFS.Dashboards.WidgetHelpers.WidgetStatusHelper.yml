@@ -16,7 +16,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 6209
+      startLine: 6208
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -56,8 +56,8 @@ items:
             value as true, it will be ignored.
           optional: true
       content: >-
-        function Failure(message: string, isUserVisible?: boolean, isRichText?:
-        boolean)
+        static function Failure(message: string, isUserVisible?: boolean,
+        isRichText?: boolean)
       return:
         type:
           - >-
@@ -81,7 +81,7 @@ items:
             any state information to be passed to the initiator of the loading
             call.
           optional: true
-      content: 'function Success(state?: string)'
+      content: 'static function Success(state?: string)'
       return:
         type:
           - >-
@@ -98,7 +98,7 @@ items:
       in the widget being in an unconfigured state.
     syntax:
       parameters: []
-      content: function Unconfigured()
+      content: static function Unconfigured()
       return:
         type:
           - >-

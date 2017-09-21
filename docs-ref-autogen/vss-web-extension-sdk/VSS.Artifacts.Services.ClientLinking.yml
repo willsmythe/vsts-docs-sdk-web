@@ -21,7 +21,7 @@ items:
       - '@vss-web-extension-sdk.VSS.Service.VssService'
     source:
       path: vss.d.ts
-      startLine: 3705
+      startLine: 3704
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -85,7 +85,7 @@ items:
           type:
             - string
           description: ''
-      content: 'function getArtifactResolver(toolName: string)'
+      content: 'static function getArtifactResolver(toolName: string)'
       return:
         type:
           - any
@@ -100,6 +100,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string MODE_TRANSLATEURL
       return:
         type:
           - string
@@ -120,5 +121,7 @@ items:
           type:
             - any
           description: ''
-      content: 'function registerArtifactResolver(toolName: string, resolver: any)'
+      content: >-
+        static function registerArtifactResolver(toolName: string, resolver:
+        any)
     type: method

@@ -25,7 +25,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 21566
+      startLine: 21565
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -42,6 +42,7 @@ items:
     type: property
     summary: Behavior/type field mapping
     syntax:
+      content: '@vss-web-extension-sdk.TFS.Work.Contracts.BacklogFields backlogFields'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.BacklogFields'
@@ -54,6 +55,7 @@ items:
     type: property
     summary: Bugs behavior
     syntax:
+      content: BugsBehavior bugsBehavior
       return:
         type:
           - BugsBehavior
@@ -67,6 +69,7 @@ items:
     type: property
     summary: Hidden Backlog
     syntax:
+      content: 'string[] hiddenBacklogs'
       return:
         type:
           - 'string[]'
@@ -80,6 +83,9 @@ items:
     type: property
     summary: Portfolio backlog descriptors
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Work.Contracts.BacklogLevelConfiguration[]
+        portfolioBacklogs
       return:
         type:
           - >-
@@ -94,6 +100,9 @@ items:
     type: property
     summary: Requirement backlog
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Work.Contracts.BacklogLevelConfiguration
+        requirementBacklog
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.BacklogLevelConfiguration'
@@ -106,6 +115,9 @@ items:
     type: property
     summary: Task backlog
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Work.Contracts.BacklogLevelConfiguration
+        taskBacklog
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.BacklogLevelConfiguration'
@@ -118,6 +130,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string url
       return:
         type:
           - string
@@ -131,6 +144,9 @@ items:
     type: property
     summary: Mapped states for work item types
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.Work.Contracts.WorkItemTypeStateInfo[]
+        workItemTypeMappedStates
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.WorkItemTypeStateInfo[]'

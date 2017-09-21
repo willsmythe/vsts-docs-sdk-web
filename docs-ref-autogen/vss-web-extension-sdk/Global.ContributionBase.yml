@@ -13,7 +13,7 @@ items:
     summary: Base class shared by contributions and contribution types
     source:
       path: vss.d.ts
-      startLine: 1428
+      startLine: 1427
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -29,6 +29,7 @@ items:
     type: property
     summary: Description of the contribution/type
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -41,6 +42,7 @@ items:
     type: property
     summary: Fully qualified identifier of the contribution/type
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -58,6 +60,7 @@ items:
       can reference this. "ms.vss-web" - Means only the "vss-web" extension from
       the "ms" publisher can reference this.
     syntax:
+      content: 'string[] visibleTo'
       return:
         type:
           - 'string[]'

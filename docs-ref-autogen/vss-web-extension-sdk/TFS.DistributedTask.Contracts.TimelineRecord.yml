@@ -51,7 +51,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 7731
+      startLine: 7730
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -68,6 +68,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number changeId
       return:
         type:
           - number
@@ -81,6 +82,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string currentOperation
       return:
         type:
           - string
@@ -93,6 +95,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TimelineReference
+        details
       return:
         type:
           - >-
@@ -107,6 +112,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number errorCount
       return:
         type:
           - number
@@ -120,6 +126,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date finishTime
       return:
         type:
           - Date
@@ -132,6 +139,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string id
       return:
         type:
           - string
@@ -144,6 +152,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.Issue[] issues'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.Issue[]'
@@ -157,6 +166,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date lastModified
       return:
         type:
           - Date
@@ -170,6 +180,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string location
       return:
         type:
           - string
@@ -182,6 +193,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskLogReference
+        log
       return:
         type:
           - >-
@@ -195,6 +209,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -207,6 +222,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number order
       return:
         type:
           - number
@@ -220,6 +236,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string parentId
       return:
         type:
           - string
@@ -233,6 +250,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number percentComplete
       return:
         type:
           - number
@@ -245,6 +263,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string refName
       return:
         type:
           - string
@@ -257,6 +276,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: TaskResult result
       return:
         type:
           - TaskResult
@@ -270,6 +290,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string resultCode
       return:
         type:
           - string
@@ -283,6 +304,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date startTime
       return:
         type:
           - Date
@@ -295,6 +317,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: TimelineRecordState state
       return:
         type:
           - TimelineRecordState
@@ -307,6 +330,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskReference task'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskReference'
@@ -319,6 +343,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string type
       return:
         type:
           - string
@@ -332,6 +357,10 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        [key: string]:
+        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableValue
+        variables
       return:
         type:
           - >-
@@ -347,6 +376,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number warningCount
       return:
         type:
           - number
@@ -360,6 +390,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string workerName
       return:
         type:
           - string

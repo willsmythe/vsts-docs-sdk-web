@@ -18,7 +18,7 @@ items:
     summary: Widget authors implement this interface for their configuration.
     source:
       path: tfs.d.ts
-      startLine: 6110
+      startLine: 6109
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -35,6 +35,7 @@ items:
     type: property
     summary: Listen to message from host
     syntax:
+      content: function listen
       return:
         type:
           - function
@@ -54,6 +55,7 @@ items:
        @returns object wrapped in a promise that encapsulates the success of this operation.
                 If load fails, returns error message via WidgetStatusHelper.Failure(errorMessage).
     syntax:
+      content: function load
       return:
         type:
           - function
@@ -78,6 +80,7 @@ items:
       WidgetHelpers.WidgetConfigurationSave.Invalid() to notify the host to stop
       save.
     syntax:
+      content: function onSave
       return:
         type:
           - function
@@ -93,6 +96,7 @@ items:
       (Optional) Called by the host when the configuration is ready to be saved
       (when the user clicks the save button on the configuration panel)
     syntax:
+      content: function onSaveComplete
       return:
         type:
           - function

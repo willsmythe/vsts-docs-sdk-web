@@ -62,7 +62,7 @@ items:
       on the Log level
     source:
       path: vss.d.ts
-      startLine: 18725
+      startLine: 18724
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -91,7 +91,7 @@ items:
           description: |
             (Optional) The message to display. The default is an empty string
           optional: true
-      content: 'function assert(condition: boolean, message?: string)'
+      content: 'static function assert(condition: boolean, message?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertIsArray
     name: 'assertIsArray(value: any, message?: string, requireNotEmpty?: boolean)'
@@ -118,8 +118,8 @@ items:
             empty.
           optional: true
       content: >-
-        function assertIsArray(value: any, message?: string, requireNotEmpty?:
-        boolean)
+        static function assertIsArray(value: any, message?: string,
+        requireNotEmpty?: boolean)
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertIsBool
     name: 'assertIsBool(value: boolean, message?: string)'
@@ -139,7 +139,7 @@ items:
           description: |
             (Optional) The message to display. The default is an empty string
           optional: true
-      content: 'function assertIsBool(value: boolean, message?: string)'
+      content: 'static function assertIsBool(value: boolean, message?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertIsDate
     name: 'assertIsDate(value: any, message?: string)'
@@ -159,7 +159,7 @@ items:
           description: |
             (Optional) The message to display. The default is an empty string
           optional: true
-      content: 'function assertIsDate(value: any, message?: string)'
+      content: 'static function assertIsDate(value: any, message?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertIsFunction
     name: 'assertIsFunction(value: any, message?: string)'
@@ -179,7 +179,7 @@ items:
           description: |
             (Optional) The message to display. The default is an empty string
           optional: true
-      content: 'function assertIsFunction(value: any, message?: string)'
+      content: 'static function assertIsFunction(value: any, message?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertIsInteger
     name: 'assertIsInteger(value: number, message?: string)'
@@ -199,7 +199,7 @@ items:
           description: |
             (Optional) The message to display. The default is an empty string
           optional: true
-      content: 'function assertIsInteger(value: number, message?: string)'
+      content: 'static function assertIsInteger(value: number, message?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertIsJQueryObject
     name: 'assertIsJQueryObject(value: any, message?: string)'
@@ -219,7 +219,7 @@ items:
           description: |
             (Optional) The message to display. The default is an empty string
           optional: true
-      content: 'function assertIsJQueryObject(value: any, message?: string)'
+      content: 'static function assertIsJQueryObject(value: any, message?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertIsNotNull
     name: 'assertIsNotNull(value: any, message?: string)'
@@ -239,7 +239,7 @@ items:
           description: |
             (Optional) The message to display. The default is an empty string
           optional: true
-      content: 'function assertIsNotNull(value: any, message?: string)'
+      content: 'static function assertIsNotNull(value: any, message?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertIsNotUndefined
     name: 'assertIsNotUndefined(value: any, message?: string)'
@@ -259,7 +259,7 @@ items:
           description: |
             (Optional) The message to display. The default is an empty string
           optional: true
-      content: 'function assertIsNotUndefined(value: any, message?: string)'
+      content: 'static function assertIsNotUndefined(value: any, message?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertIsNumber
     name: 'assertIsNumber(value: number, message?: string)'
@@ -279,7 +279,7 @@ items:
           description: |
             (Optional) The message to display. The default is an empty string
           optional: true
-      content: 'function assertIsNumber(value: number, message?: string)'
+      content: 'static function assertIsNumber(value: number, message?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertIsObject
     name: 'assertIsObject(value: any, message?: string)'
@@ -299,7 +299,7 @@ items:
           description: |
             (Optional) The message to display. The default is an empty string
           optional: true
-      content: 'function assertIsObject(value: any, message?: string)'
+      content: 'static function assertIsObject(value: any, message?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertIsString
     name: 'assertIsString(value: string, message?: string)'
@@ -319,7 +319,7 @@ items:
           description: |
             (Optional) The message to display. The default is an empty string
           optional: true
-      content: 'function assertIsString(value: string, message?: string)'
+      content: 'static function assertIsString(value: string, message?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertIsStringNotEmpty
     name: 'assertIsStringNotEmpty(value: string, message?: string)'
@@ -339,7 +339,7 @@ items:
           description: |
             (Optional) The message to display. The default is an empty string
           optional: true
-      content: 'function assertIsStringNotEmpty(value: string, message?: string)'
+      content: 'static function assertIsStringNotEmpty(value: string, message?: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertIsType
     name: 'assertIsType(value: any, type: any, message: string, optional?: boolean)'
@@ -374,8 +374,8 @@ items:
             Flag to determine whether null and undefined are accepted as values.
           optional: true
       content: >-
-        function assertIsType(value: any, type: any, message: string, optional?:
-        boolean)
+        static function assertIsType(value: any, type: any, message: string,
+        optional?: boolean)
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertParamIsArray
     name: >-
@@ -404,7 +404,7 @@ items:
             empty.
           optional: true
       content: >-
-        function assertParamIsArray(value: any, paramName?: string,
+        static function assertParamIsArray(value: any, paramName?: string,
         requireNotEmpty?: boolean)
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertParamIsBool
@@ -424,7 +424,7 @@ items:
             - string
           description: |
             Name of the parameter that this value is associated with.
-      content: 'function assertParamIsBool(value: boolean, paramName: string)'
+      content: 'static function assertParamIsBool(value: boolean, paramName: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertParamIsDate
     name: 'assertParamIsDate(value: any, paramName: string)'
@@ -443,7 +443,7 @@ items:
             - string
           description: |
             Name of the parameter that this value is associated with.
-      content: 'function assertParamIsDate(value: any, paramName: string)'
+      content: 'static function assertParamIsDate(value: any, paramName: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertParamIsFunction
     name: 'assertParamIsFunction(value: any, paramName: string)'
@@ -462,7 +462,7 @@ items:
             - string
           description: |
             Name of the parameter that this value is associated with.
-      content: 'function assertParamIsFunction(value: any, paramName: string)'
+      content: 'static function assertParamIsFunction(value: any, paramName: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertParamIsInteger
     name: 'assertParamIsInteger(value: number, paramName: string)'
@@ -481,7 +481,7 @@ items:
             - string
           description: |
             Name of the parameter that this value is associated with.
-      content: 'function assertParamIsInteger(value: number, paramName: string)'
+      content: 'static function assertParamIsInteger(value: number, paramName: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertParamIsJQueryObject
     name: 'assertParamIsJQueryObject(value: any, paramName: string)'
@@ -500,7 +500,7 @@ items:
             - string
           description: |
             Name of the parameter that this value is associated with.
-      content: 'function assertParamIsJQueryObject(value: any, paramName: string)'
+      content: 'static function assertParamIsJQueryObject(value: any, paramName: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertParamIsNotNull
     name: 'assertParamIsNotNull(value: any, paramName: string)'
@@ -519,7 +519,7 @@ items:
             - string
           description: |
             Name of the parameter that this value is associated with.
-      content: 'function assertParamIsNotNull(value: any, paramName: string)'
+      content: 'static function assertParamIsNotNull(value: any, paramName: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertParamIsNotUndefined
     name: 'assertParamIsNotUndefined(value: any, paramName: string)'
@@ -538,7 +538,7 @@ items:
             - string
           description: |
             Name of the parameter that this value is associated with.
-      content: 'function assertParamIsNotUndefined(value: any, paramName: string)'
+      content: 'static function assertParamIsNotUndefined(value: any, paramName: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertParamIsNumber
     name: 'assertParamIsNumber(value: number, paramName: string)'
@@ -557,7 +557,7 @@ items:
             - string
           description: |
             Name of the parameter that this value is associated with.
-      content: 'function assertParamIsNumber(value: number, paramName: string)'
+      content: 'static function assertParamIsNumber(value: number, paramName: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertParamIsObject
     name: 'assertParamIsObject(value: any, paramName: string, optional?: boolean)'
@@ -582,8 +582,8 @@ items:
             If true then the assert will accept falsy values
           optional: true
       content: >-
-        function assertParamIsObject(value: any, paramName: string, optional?:
-        boolean)
+        static function assertParamIsObject(value: any, paramName: string,
+        optional?: boolean)
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertParamIsString
     name: 'assertParamIsString(value: string, paramName: string)'
@@ -602,7 +602,7 @@ items:
             - string
           description: |
             Name of the parameter that this value is associated with.
-      content: 'function assertParamIsString(value: string, paramName: string)'
+      content: 'static function assertParamIsString(value: string, paramName: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertParamIsStringNotEmpty
     name: 'assertParamIsStringNotEmpty(value: string, paramName: string)'
@@ -621,7 +621,9 @@ items:
             - string
           description: |
             Name of the parameter that this value is associated with.
-      content: 'function assertParamIsStringNotEmpty(value: string, paramName: string)'
+      content: >-
+        static function assertParamIsStringNotEmpty(value: string, paramName:
+        string)
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.assertParamIsType
     name: >-
@@ -658,8 +660,8 @@ items:
             Flag to determine whether null and undefined are accepted as values.
           optional: true
       content: >-
-        function assertParamIsType(value: any, type: any, paramName: string,
-        optional?: boolean)
+        static function assertParamIsType(value: any, type: any, paramName:
+        string, optional?: boolean)
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.fail
     name: 'fail(message: string)'
@@ -676,7 +678,7 @@ items:
             - string
           description: |
             Message to display in the debugger's output window
-      content: 'function fail(message: string)'
+      content: 'static function fail(message: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.getTypeName
     name: 'getTypeName(type: any)'
@@ -692,7 +694,7 @@ items:
           description: >-
             The string value (from the typeof operator) or a constructor
             function.
-      content: 'function getTypeName(type: any)'
+      content: 'static function getTypeName(type: any)'
       return:
         type:
           - string
@@ -709,7 +711,7 @@ items:
           type:
             - string
           description: ''
-      content: 'function logInfo(message: string)'
+      content: 'static function logInfo(message: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.logVerbose
     name: 'logVerbose(message: string)'
@@ -723,7 +725,7 @@ items:
           type:
             - string
           description: ''
-      content: 'function logVerbose(message: string)'
+      content: 'static function logVerbose(message: string)'
     type: method
   - uid: vss-web-extension-sdk.VSS.Diag.Debug.setDisplayCallers
     name: 'setDisplayCallers(showCallers: boolean)'
@@ -738,5 +740,5 @@ items:
             - boolean
           description: |
             If true, display callers in the stack of assert failures.
-      content: 'function setDisplayCallers(showCallers: boolean)'
+      content: 'static function setDisplayCallers(showCallers: boolean)'
     type: method

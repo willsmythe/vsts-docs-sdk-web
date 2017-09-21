@@ -1,7 +1,7 @@
 ### YamlMime:UniversalReference
 items:
   - uid: vss-web-extension-sdk.VSS.Controls.Menus.MenuBarO
-    name: MenuBarO
+    name: MenuBarO<TOptions>
     fullName: MenuBarO
     children:
       - vss-web-extension-sdk.VSS.Controls.Menus.MenuBarO.enhancementTypeName
@@ -23,7 +23,7 @@ items:
       - '@vss-web-extension-sdk.VSS.Controls.Menus.MenuOwner<TOptions>'
     source:
       path: vss.d.ts
-      startLine: 14446
+      startLine: 14445
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -39,6 +39,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: static string enhancementTypeName
       return:
         type:
           - string
@@ -183,7 +184,7 @@ items:
           type:
             - string
           description: Selector to match the element.
-      content: 'function tryActivate(selector: string)'
+      content: 'static function tryActivate(selector: string)'
       return:
         type:
           - boolean
@@ -202,7 +203,7 @@ items:
           type:
             - string
           description: Selector to match the element.
-      content: 'function tryShowSubMenu(selector: string)'
+      content: 'static function tryShowSubMenu(selector: string)'
       return:
         type:
           - boolean

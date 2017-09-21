@@ -16,7 +16,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 13352
+      startLine: 13351
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
     type: property
     summary: Action to invoke for this shortcut
     syntax:
+      content: KeyboardAction action
       return:
         type:
           - KeyboardAction
@@ -44,6 +45,7 @@ items:
     type: property
     summary: Shortcut combinations that map to this action
     syntax:
+      content: 'string[] combos'
       return:
         type:
           - 'string[]'
@@ -57,6 +59,7 @@ items:
     type: property
     summary: Shortcut combinations to display on the help dialog
     syntax:
+      content: 'string[] combosToDisplay'
       return:
         type:
           - 'string[]'
@@ -69,6 +72,7 @@ items:
     type: property
     summary: Description of this shortcut
     syntax:
+      content: string description
       return:
         type:
           - string

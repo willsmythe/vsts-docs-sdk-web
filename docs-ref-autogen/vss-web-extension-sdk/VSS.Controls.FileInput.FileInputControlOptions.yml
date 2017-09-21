@@ -32,7 +32,7 @@ items:
     summary: Options for the file input control.
     source:
       path: vss.d.ts
-      startLine: 11381
+      startLine: 11380
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -49,6 +49,7 @@ items:
     type: property
     summary: 'Specifies the allowed file extensions. For example: [ "zip", "exe" ]'
     syntax:
+      content: 'string[] allowedFileExtensions'
       return:
         type:
           - 'string[]'
@@ -62,6 +63,7 @@ items:
     type: property
     summary: 'Accessibility: aria-describedby for ''Browse'' button'
     syntax:
+      content: string browseButtonAriaDescribedBy
       return:
         type:
           - string
@@ -75,6 +77,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean detectEncoding
       return:
         type:
           - boolean
@@ -88,6 +91,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean fileNamesCaseSensitive
       return:
         type:
           - boolean
@@ -101,6 +105,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: FileList initialFiles
       return:
         type:
           - FileList
@@ -116,6 +121,7 @@ items:
       Callback executed whenever a user bumps into the limit of the file upload
       control.
     syntax:
+      content: function limitMessageFormatter
       return:
         type:
           - function
@@ -129,6 +135,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number maximumNumberOfFiles
       return:
         type:
           - number
@@ -142,6 +149,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number maximumSingleFileSize
       return:
         type:
           - number
@@ -155,6 +163,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number maximumTotalFileSize
       return:
         type:
           - number
@@ -168,6 +177,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: FileInputControlContentType resultContentType
       return:
         type:
           - FileInputControlContentType
@@ -181,6 +191,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: function updateHandler
       return:
         type:
           - function

@@ -18,7 +18,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 14159
+      startLine: 14158
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -35,6 +35,7 @@ items:
     type: property
     summary: Whether to include metadata for all items
     syntax:
+      content: boolean includeContentMetadata
       return:
         type:
           - boolean
@@ -48,6 +49,7 @@ items:
     type: property
     summary: Whether to include the _links field on the shallow references
     syntax:
+      content: boolean includeLinks
       return:
         type:
           - boolean
@@ -61,6 +63,9 @@ items:
     type: property
     summary: 'Collection of items to fetch, including path, version, and recursion level'
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitItemDescriptor[]
+        itemDescriptors
       return:
         type:
           - >-
@@ -75,6 +80,7 @@ items:
     type: property
     summary: Whether to include shallow ref to commit that last changed each item
     syntax:
+      content: boolean latestProcessedChange
       return:
         type:
           - boolean

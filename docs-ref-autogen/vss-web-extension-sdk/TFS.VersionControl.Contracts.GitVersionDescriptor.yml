@@ -16,7 +16,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 14946
+      startLine: 14945
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
     type: property
     summary: 'Version string identifier (name of tag/branch, SHA1 of commit)'
     syntax:
+      content: string version
       return:
         type:
           - string
@@ -46,6 +47,7 @@ items:
     type: property
     summary: Version options - Specify additional modifiers to version (e.g Previous)
     syntax:
+      content: GitVersionOptions versionOptions
       return:
         type:
           - GitVersionOptions
@@ -59,6 +61,7 @@ items:
     type: property
     summary: 'Version type (branch, tag, or commit). Determines how Id is interpreted'
     syntax:
+      content: GitVersionType versionType
       return:
         type:
           - GitVersionType

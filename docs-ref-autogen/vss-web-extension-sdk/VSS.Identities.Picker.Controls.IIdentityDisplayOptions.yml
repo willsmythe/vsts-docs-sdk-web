@@ -26,7 +26,7 @@ items:
         @vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions
     source:
       path: vss.d.ts
-      startLine: 25861
+      startLine: 25860
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -48,6 +48,7 @@ items:
         dialogs as well, in order to work with Fabric's dialog model.
         If this is not specified, JQueryUI's default is to append the dialog element to the <body> element.
     syntax:
+      content: string dialogAppendTo
       return:
         type:
           - string
@@ -61,6 +62,7 @@ items:
     type: property
     summary: Determines what is shown in the control
     syntax:
+      content: EDisplayControlType displayType
       return:
         type:
           - EDisplayControlType
@@ -74,6 +76,7 @@ items:
     type: property
     summary: the string to be shown before the IEntity gets resolved
     syntax:
+      content: string friendlyDisplayName
       return:
         type:
           - string
@@ -90,6 +93,7 @@ items:
       its identifiers (such as entityId, localId etc.) have to be valid;
         alternatively the input can be a unique identifier (such as a sign-in address or alias)
     syntax:
+      content: string item
       return:
         type:
           - string
@@ -105,6 +109,7 @@ items:
       the size of the control elements (Small - most elements are 16px in
       height, Medium - 24px, Large - 32px). Default: Medium
     syntax:
+      content: IdentityPickerControlSize size
       return:
         type:
           - IdentityPickerControlSize
@@ -118,6 +123,7 @@ items:
     type: property
     summary: 'Turn off the hover effect. Default: false'
     syntax:
+      content: boolean turnOffHover
       return:
         type:
           - boolean

@@ -20,7 +20,7 @@ items:
       - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.ItemModel'
     source:
       path: tfs.d.ts
-      startLine: 15269
+      startLine: 15268
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date changeDate
       return:
         type:
           - Date
@@ -48,6 +49,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number deletionId
       return:
         type:
           - number
@@ -60,6 +62,7 @@ items:
     type: property
     summary: 'MD5 hash as a base 64 string, applies to files only.'
     syntax:
+      content: string hashValue
       return:
         type:
           - string
@@ -72,6 +75,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isBranch
       return:
         type:
           - boolean
@@ -85,6 +89,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean isPendingChange
       return:
         type:
           - boolean
@@ -97,6 +102,7 @@ items:
     type: property
     summary: 'The size of the file, if applicable.'
     syntax:
+      content: number size
       return:
         type:
           - number
@@ -109,6 +115,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number version
       return:
         type:
           - number

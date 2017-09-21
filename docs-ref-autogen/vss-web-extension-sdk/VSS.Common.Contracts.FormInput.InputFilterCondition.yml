@@ -18,7 +18,7 @@ items:
     summary: An expression which can be applied to filter a list of subscription inputs
     source:
       path: vss.d.ts
-      startLine: 5738
+      startLine: 5737
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -35,6 +35,7 @@ items:
     type: property
     summary: Whether or not to do a case sensitive match
     syntax:
+      content: boolean caseSensitive
       return:
         type:
           - boolean
@@ -48,6 +49,7 @@ items:
     type: property
     summary: The Id of the input to filter on
     syntax:
+      content: string inputId
       return:
         type:
           - string
@@ -61,6 +63,7 @@ items:
     type: property
     summary: The "expected" input value to compare with the actual input value
     syntax:
+      content: string inputValue
       return:
         type:
           - string
@@ -74,6 +77,7 @@ items:
     type: property
     summary: The operator applied between the expected and actual input value
     syntax:
+      content: InputFilterOperator operator
       return:
         type:
           - InputFilterOperator

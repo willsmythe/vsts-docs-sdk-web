@@ -37,7 +37,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 1398
+      startLine: 1397
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -54,6 +54,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string createdByName
       return:
         type:
           - string
@@ -67,6 +68,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number definitionId
       return:
         type:
           - number
@@ -80,6 +82,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string definitionName
       return:
         type:
           - string
@@ -93,6 +96,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment
+        environment
       return:
         type:
           - >-
@@ -107,6 +113,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number environmentId
       return:
         type:
           - number
@@ -120,6 +127,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string projectName
       return:
         type:
           - string
@@ -133,6 +141,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: DeploymentReason reason
       return:
         type:
           - DeploymentReason
@@ -146,6 +155,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef releaseCreatedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -159,6 +169,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string releaseLogsUri
       return:
         type:
           - string
@@ -172,6 +183,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string releaseName
       return:
         type:
           - string
@@ -185,6 +197,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string status
       return:
         type:
           - string
@@ -198,6 +211,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string title
       return:
         type:
           - string
@@ -211,6 +225,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string webAccessUri
       return:
         type:
           - string

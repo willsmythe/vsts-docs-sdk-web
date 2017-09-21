@@ -28,7 +28,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 11276
+      startLine: 11275
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -44,6 +44,9 @@ items:
     type: property
     summary: Area path of the test session
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        area
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -56,6 +59,7 @@ items:
     type: property
     summary: Comments in the test session
     syntax:
+      content: string comment
       return:
         type:
           - string
@@ -68,6 +72,7 @@ items:
     type: property
     summary: Duration of the session
     syntax:
+      content: Date endDate
       return:
         type:
           - Date
@@ -80,6 +85,7 @@ items:
     type: property
     summary: Id of the test session
     syntax:
+      content: number id
       return:
         type:
           - number
@@ -93,6 +99,7 @@ items:
     type: property
     summary: Last Updated By  Reference
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef lastUpdatedBy'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -106,6 +113,7 @@ items:
     type: property
     summary: Last updated date
     syntax:
+      content: Date lastUpdatedDate
       return:
         type:
           - Date
@@ -118,6 +126,7 @@ items:
     type: property
     summary: Owner of the test session
     syntax:
+      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef owner'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -130,6 +139,9 @@ items:
     type: property
     summary: Project to which the test session belongs
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
+        project
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -142,6 +154,9 @@ items:
     type: property
     summary: Generic store for test session data
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.PropertyBag
+        propertyBag
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.PropertyBag'
@@ -154,6 +169,7 @@ items:
     type: property
     summary: Revision of the test session
     syntax:
+      content: number revision
       return:
         type:
           - number
@@ -166,6 +182,7 @@ items:
     type: property
     summary: Source of the test session
     syntax:
+      content: TestSessionSource source
       return:
         type:
           - TestSessionSource
@@ -178,6 +195,7 @@ items:
     type: property
     summary: Start date
     syntax:
+      content: Date startDate
       return:
         type:
           - Date
@@ -190,6 +208,7 @@ items:
     type: property
     summary: State of the test session
     syntax:
+      content: TestSessionState state
       return:
         type:
           - TestSessionState
@@ -202,6 +221,7 @@ items:
     type: property
     summary: Title of the test session
     syntax:
+      content: string title
       return:
         type:
           - string
@@ -214,6 +234,7 @@ items:
     type: property
     summary: Url of Test Session Resource
     syntax:
+      content: string url
       return:
         type:
           - string

@@ -22,7 +22,7 @@ items:
       error/warning handling.
     source:
       path: vss.d.ts
-      startLine: 8377
+      startLine: 8376
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -43,6 +43,7 @@ items:
 
       If unspecified, the default timeout period is used.
     syntax:
+      content: number maxHandshakeDurationMs
       return:
         type:
           - number
@@ -58,6 +59,7 @@ items:
       The resize options for the host. By default both height and width and be
       resized but this can be changed to only allow one direction of resizing
     syntax:
+      content: ResizeOptions resizeOptions
       return:
         type:
           - ResizeOptions
@@ -73,6 +75,7 @@ items:
       Show the error indicator for the extension. Defaults to true if
       unspecified.
     syntax:
+      content: boolean showErrorIndicator
       return:
         type:
           - boolean
@@ -88,6 +91,7 @@ items:
       Show the loading indicator for the extension. Defaults to true if
       unspecified.
     syntax:
+      content: boolean showLoadingIndicator
       return:
         type:
           - boolean
@@ -105,6 +109,7 @@ items:
 
       If unspecified, The default timeout period is used.
     syntax:
+      content: number slowWarningDurationMs
       return:
         type:
           - number

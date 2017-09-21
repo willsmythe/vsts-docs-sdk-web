@@ -27,7 +27,7 @@ items:
     summary: Criteria used in a search for change lists
     source:
       path: tfs.d.ts
-      startLine: 15213
+      startLine: 15212
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -44,6 +44,7 @@ items:
     type: property
     summary: Alias or display name of user who made the changes
     syntax:
+      content: string author
       return:
         type:
           - string
@@ -57,6 +58,7 @@ items:
     type: property
     summary: Whether or not to follow renames for the given item being queried
     syntax:
+      content: boolean followRenames
       return:
         type:
           - boolean
@@ -72,6 +74,7 @@ items:
       If provided, only include changesets created after this date (string)
       Think of a better name for this.
     syntax:
+      content: string fromDate
       return:
         type:
           - string
@@ -85,6 +88,7 @@ items:
     type: property
     summary: 'If provided, only include changesets after this changesetID'
     syntax:
+      content: number fromId
       return:
         type:
           - number
@@ -98,6 +102,7 @@ items:
     type: property
     summary: Whether to include the _links field on the shallow references
     syntax:
+      content: boolean includeLinks
       return:
         type:
           - boolean
@@ -111,6 +116,7 @@ items:
     type: property
     summary: Path of item to search under
     syntax:
+      content: string itemPath
       return:
         type:
           - string
@@ -126,6 +132,7 @@ items:
       If provided, only include changesets created before this date (string)
       Think of a better name for this.
     syntax:
+      content: string toDate
       return:
         type:
           - string
@@ -139,6 +146,7 @@ items:
     type: property
     summary: 'If provided, a version descriptor for the latest change list to include'
     syntax:
+      content: number toId
       return:
         type:
           - number

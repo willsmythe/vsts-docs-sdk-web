@@ -15,7 +15,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 6106
+      startLine: 6105
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number attributes
       return:
         type:
           - number
@@ -45,6 +46,10 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        [key: string]:
+        @vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedHubGroupCollection
+        hubGroupCollections
       return:
         type:
           - >-
@@ -59,6 +64,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string id
       return:
         type:
           - string

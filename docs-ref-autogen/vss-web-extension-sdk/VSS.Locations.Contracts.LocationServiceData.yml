@@ -28,7 +28,7 @@ items:
       over the web service.
     source:
       path: vss.d.ts
-      startLine: 28237
+      startLine: 28236
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -45,6 +45,9 @@ items:
     type: property
     summary: Data about the access mappings contained by this location service.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Locations.Contracts.AccessMapping[]
+        accessMappings
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Locations.Contracts.AccessMapping[]'
@@ -58,6 +61,7 @@ items:
     type: property
     summary: Data that the location service holds.
     syntax:
+      content: boolean clientCacheFresh
       return:
         type:
           - boolean
@@ -71,6 +75,7 @@ items:
     type: property
     summary: The time to live on the location service cache.
     syntax:
+      content: number clientCacheTimeToLive
       return:
         type:
           - number
@@ -84,6 +89,7 @@ items:
     type: property
     summary: The default access mapping moniker for the server.
     syntax:
+      content: string defaultAccessMappingMoniker
       return:
         type:
           - string
@@ -99,6 +105,7 @@ items:
       The obsolete id for the last change that took place on the server (use
       LastChangeId64).
     syntax:
+      content: number lastChangeId
       return:
         type:
           - number
@@ -114,6 +121,7 @@ items:
       The non-truncated 64-bit id for the last change that took place on the
       server.
     syntax:
+      content: number lastChangeId64
       return:
         type:
           - number
@@ -127,6 +135,9 @@ items:
     type: property
     summary: Data about the service definitions contained by this location service.
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Locations.Contracts.ServiceDefinition[]
+        serviceDefinitions
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Locations.Contracts.ServiceDefinition[]'
@@ -142,6 +153,7 @@ items:
       The identifier of the deployment which is hosting this location data (e.g.
       SPS, TFS, ELS, Napa, etc.)
     syntax:
+      content: string serviceOwner
       return:
         type:
           - string

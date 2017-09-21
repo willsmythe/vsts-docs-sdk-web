@@ -17,7 +17,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 34294
+      startLine: 34293
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -39,6 +39,7 @@ items:
       The options object passed to this function will have titleTarget and
       titleText set to the correct values to use.
     syntax:
+      content: function addTooltipDelegate
       return:
         type:
           - function
@@ -53,6 +54,7 @@ items:
       element that generates the mouseenter, mouseleave, focus, and blur events
       we should listen for
     syntax:
+      content: HTMLElement eventSource
       return:
         type:
           - HTMLElement
@@ -66,6 +68,7 @@ items:
     type: property
     summary: Function that removes the tooltip on mouseleave or blur
     syntax:
+      content: function removeTooltipDelegate
       return:
         type:
           - function
@@ -81,6 +84,7 @@ items:
       used to populate the tooltip, only need specify if different than element
       argument passed in to tooltipIfOverflow()
     syntax:
+      content: HTMLElement titleTarget
       return:
         type:
           - HTMLElement
@@ -95,6 +99,7 @@ items:
       titleText text to set the title to, otherwise use the titleTarget's
       .text() or .val()
     syntax:
+      content: string titleText
       return:
         type:
           - string

@@ -19,7 +19,7 @@ items:
       AccessControlEntries with a security token and its inheritance settings.
     source:
       path: vss.d.ts
-      startLine: 31348
+      startLine: 31347
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -36,6 +36,10 @@ items:
     type: property
     summary: Storage of permissions keyed on the identity the permission is for.
     syntax:
+      content: >-
+        [key: string]:
+        @vss-web-extension-sdk.VSS.Security.Contracts.AccessControlEntry
+        acesDictionary
       return:
         type:
           - >-
@@ -51,6 +55,7 @@ items:
     type: property
     summary: True if this ACL holds ACEs that have extended information.
     syntax:
+      content: boolean includeExtendedInfo
       return:
         type:
           - boolean
@@ -64,6 +69,7 @@ items:
     type: property
     summary: True if the given token inherits permissions from parents.
     syntax:
+      content: boolean inheritPermissions
       return:
         type:
           - boolean
@@ -76,6 +82,7 @@ items:
     type: property
     summary: The token that this AccessControlList is for.
     syntax:
+      content: string token
       return:
         type:
           - string

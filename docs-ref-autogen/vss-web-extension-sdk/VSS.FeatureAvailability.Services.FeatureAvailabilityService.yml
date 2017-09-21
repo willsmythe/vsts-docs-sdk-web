@@ -21,7 +21,7 @@ items:
       - '@vss-web-extension-sdk.VSS.Service.VssService'
     source:
       path: vss.d.ts
-      startLine: 20545
+      startLine: 20544
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -95,7 +95,9 @@ items:
           description: |
             Value to return if the feature is not present in page context data.
           optional: true
-      content: 'function isFeatureEnabled(featureName: string, defaultValue?: boolean)'
+      content: >-
+        static function isFeatureEnabled(featureName: string, defaultValue?:
+        boolean)
       return:
         type:
           - boolean

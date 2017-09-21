@@ -22,7 +22,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 10532
+      startLine: 10531
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -39,6 +39,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string automatedTestName
       return:
         type:
           - string
@@ -51,6 +52,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string branch
       return:
         type:
           - string
@@ -63,6 +65,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string groupBy
       return:
         type:
           - string
@@ -76,6 +79,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: Date maxCompleteDate
       return:
         type:
           - Date
@@ -89,6 +93,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number resultsCount
       return:
         type:
           - number
@@ -102,6 +107,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.TestResultsContext
+        testResultsContext
       return:
         type:
           - >-
@@ -115,6 +123,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: number trendDays
       return:
         type:
           - number

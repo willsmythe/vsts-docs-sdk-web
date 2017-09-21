@@ -16,7 +16,7 @@ items:
       - '@vss-web-extension-sdk.TFS.Build.Contracts.VariableGroupReference'
     source:
       path: tfs.d.ts
-      startLine: 1633
+      startLine: 1632
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -44,6 +45,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -56,6 +58,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string type
       return:
         type:
           - string
@@ -68,6 +71,10 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        [key: string]:
+        @vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionVariable
+        variables
       return:
         type:
           - >-

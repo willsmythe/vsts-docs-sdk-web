@@ -45,7 +45,7 @@ items:
     summary: Represents an item in a container.
     source:
       path: vss.d.ts
-      startLine: 20964
+      startLine: 20963
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -62,6 +62,7 @@ items:
     type: property
     summary: Container Id.
     syntax:
+      content: number containerId
       return:
         type:
           - number
@@ -75,6 +76,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: 'number[] contentId'
       return:
         type:
           - 'number[]'
@@ -88,6 +90,7 @@ items:
     type: property
     summary: Download Url for the content of this item.
     syntax:
+      content: string contentLocation
       return:
         type:
           - string
@@ -101,6 +104,7 @@ items:
     type: property
     summary: Creator.
     syntax:
+      content: string createdBy
       return:
         type:
           - string
@@ -114,6 +118,7 @@ items:
     type: property
     summary: Creation date.
     syntax:
+      content: Date dateCreated
       return:
         type:
           - Date
@@ -127,6 +132,7 @@ items:
     type: property
     summary: Last modified date.
     syntax:
+      content: Date dateLastModified
       return:
         type:
           - Date
@@ -140,6 +146,7 @@ items:
     type: property
     summary: Encoding of the file. Zero if not a file.
     syntax:
+      content: number fileEncoding
       return:
         type:
           - number
@@ -153,6 +160,7 @@ items:
     type: property
     summary: Hash value of the file. Null if not a file.
     syntax:
+      content: 'number[] fileHash'
       return:
         type:
           - 'number[]'
@@ -165,6 +173,7 @@ items:
     type: property
     summary: Id of the file content.
     syntax:
+      content: number fileId
       return:
         type:
           - number
@@ -178,6 +187,7 @@ items:
     type: property
     summary: Length of the file. Zero if not of a file.
     syntax:
+      content: number fileLength
       return:
         type:
           - number
@@ -191,6 +201,7 @@ items:
     type: property
     summary: Type of the file. Zero if not a file.
     syntax:
+      content: number fileType
       return:
         type:
           - number
@@ -204,6 +215,7 @@ items:
     type: property
     summary: Location of the item resource.
     syntax:
+      content: string itemLocation
       return:
         type:
           - string
@@ -217,6 +229,7 @@ items:
     type: property
     summary: 'Type of the item: Folder, File or String.'
     syntax:
+      content: ContainerItemType itemType
       return:
         type:
           - ContainerItemType
@@ -230,6 +243,7 @@ items:
     type: property
     summary: Modifier.
     syntax:
+      content: string lastModifiedBy
       return:
         type:
           - string
@@ -242,6 +256,7 @@ items:
     type: property
     summary: Unique path that identifies the item.
     syntax:
+      content: string path
       return:
         type:
           - string
@@ -255,6 +270,7 @@ items:
     type: property
     summary: Project Id.
     syntax:
+      content: string scopeIdentifier
       return:
         type:
           - string
@@ -267,6 +283,7 @@ items:
     type: property
     summary: 'Status of the item: Created or Pending Upload.'
     syntax:
+      content: ContainerItemStatus status
       return:
         type:
           - ContainerItemStatus
@@ -279,6 +296,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string ticket
       return:
         type:
           - string

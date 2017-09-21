@@ -14,7 +14,7 @@ items:
     summary: Represents a single collection for extension data documents
     source:
       path: vss.d.ts
-      startLine: 1860
+      startLine: 1859
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -30,6 +30,7 @@ items:
     type: property
     summary: The name of the collection
     syntax:
+      content: string collectionName
       return:
         type:
           - string
@@ -42,6 +43,7 @@ items:
     type: property
     summary: A list of documents belonging to the collection
     syntax:
+      content: 'any[] documents'
       return:
         type:
           - 'any[]'
@@ -54,6 +56,7 @@ items:
     type: property
     summary: 'The type of the collection''s scope, such as Default or User'
     syntax:
+      content: string scopeType
       return:
         type:
           - string
@@ -66,6 +69,7 @@ items:
     type: property
     summary: 'The value of the collection''s scope, such as Current or Me'
     syntax:
+      content: string scopeValue
       return:
         type:
           - string

@@ -21,7 +21,7 @@ items:
     summary: ''
     source:
       path: rmo.d.ts
-      startLine: 502
+      startLine: 501
       remote:
         path: typings\rmo.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -38,6 +38,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string comment
       return:
         type:
           - string
@@ -51,6 +52,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: '[key: string]: any data'
       return:
         type:
           - '[key: string]: any'
@@ -64,6 +66,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment
+        deployment
       return:
         type:
           - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Deployment'
@@ -77,6 +82,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment
+        environment
       return:
         type:
           - >-
@@ -91,6 +99,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ProjectReference
+        project
       return:
         type:
           - >-

@@ -24,7 +24,7 @@ items:
     summary: ''
     source:
       path: vss.d.ts
-      startLine: 13370
+      startLine: 13369
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -41,6 +41,7 @@ items:
     type: property
     summary: Action which gets called when shortcut is pressed
     syntax:
+      content: KeyboardAction action
       return:
         type:
           - KeyboardAction
@@ -56,6 +57,7 @@ items:
       Defaults to false. Use true in the rare case that you want the last key of
       the chord to propagate to the focused element
     syntax:
+      content: boolean allowPropagation
       return:
         type:
           - boolean
@@ -69,6 +71,7 @@ items:
     type: property
     summary: Description of the shortcut
     syntax:
+      content: string description
       return:
         type:
           - string
@@ -82,6 +85,7 @@ items:
     type: property
     summary: The Dom Element to bind the shortcut to
     syntax:
+      content: Element element
       return:
         type:
           - Element
@@ -97,6 +101,7 @@ items:
       List combos which you want to be always active even if the user has focus
       on an input box
     syntax:
+      content: 'string[] globalCombos'
       return:
         type:
           - 'string[]'
@@ -112,6 +117,7 @@ items:
       Defaults to false. Pass in True if you would like the shortcut to be
       hidden from the help dialog
     syntax:
+      content: boolean hideFromHelpDialog
       return:
         type:
           - boolean
@@ -129,6 +135,7 @@ items:
 
       if this is an in memory navigation you don't have mixed shortcut state
     syntax:
+      content: boolean isPageNavigationShortcut
       return:
         type:
           - boolean

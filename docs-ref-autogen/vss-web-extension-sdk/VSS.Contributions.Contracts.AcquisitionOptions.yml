@@ -20,7 +20,7 @@ items:
       target.
     source:
       path: vss.d.ts
-      startLine: 7218
+      startLine: 7217
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -37,6 +37,9 @@ items:
     type: property
     summary: Default Operation for the ItemId in this target
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Contributions.Contracts.AcquisitionOperation
+        defaultOperation
       return:
         type:
           - >-
@@ -51,6 +54,7 @@ items:
     type: property
     summary: The item id that this options refer to
     syntax:
+      content: string itemId
       return:
         type:
           - string
@@ -64,6 +68,9 @@ items:
     type: property
     summary: Operations allowed for the ItemId in this target
     syntax:
+      content: >-
+        @vss-web-extension-sdk.VSS.Contributions.Contracts.AcquisitionOperation[]
+        operations
       return:
         type:
           - >-
@@ -78,6 +85,7 @@ items:
     type: property
     summary: The target that this options refer to
     syntax:
+      content: string target
       return:
         type:
           - string

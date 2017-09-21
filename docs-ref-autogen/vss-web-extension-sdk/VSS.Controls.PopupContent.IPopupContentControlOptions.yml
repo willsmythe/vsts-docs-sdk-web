@@ -51,7 +51,7 @@ items:
       - '@vss-web-extension-sdk.VSS.Controls.EnhancementOptions'
     source:
       path: vss.d.ts
-      startLine: 15446
+      startLine: 15445
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -68,6 +68,7 @@ items:
     type: property
     summary: where to align the element against base element (horizontal-vertical)
     syntax:
+      content: string baseAlign
       return:
         type:
           - string
@@ -81,6 +82,7 @@ items:
     type: property
     summary: where to align the element (horizontal-vertical)
     syntax:
+      content: string elementAlign
       return:
         type:
           - string
@@ -94,6 +96,7 @@ items:
     type: property
     summary: HTML content to display. Use text property for plain text instead of this.
     syntax:
+      content: JQuery html
       return:
         type:
           - JQuery
@@ -109,6 +112,7 @@ items:
       how much extra left offset (if any) should be given to the target element
       versus the reference element.
     syntax:
+      content: number leftOffsetPixels
       return:
         type:
           - number
@@ -122,6 +126,7 @@ items:
     type: property
     summary: Put the tooltip in this container. (doesn't have to be a menu)
     syntax:
+      content: JQuery menuContainer
       return:
         type:
           - JQuery
@@ -137,6 +142,7 @@ items:
       When a mouseover event is received, call this function. If it returns
       false, ignore the event.
     syntax:
+      content: function mouseEventFilter
       return:
         type:
           - function
@@ -150,6 +156,7 @@ items:
     type: property
     summary: 'if set, use this instead of leftOffsetPixels when shown on mouse over'
     syntax:
+      content: number mouseLeftOffsetPixels
       return:
         type:
           - number
@@ -163,6 +170,7 @@ items:
     type: property
     summary: 'if set, use this instead of topOffsetPixels when shown on mouse over'
     syntax:
+      content: number mouseTopOffsetPixels
       return:
         type:
           - number
@@ -178,6 +186,7 @@ items:
       Only show the popup when this element's content overflows its visible
       area.
     syntax:
+      content: HTMLElement onlyShowWhenOverflows
       return:
         type:
           - HTMLElement
@@ -195,6 +204,7 @@ items:
 
       popup will instead be shown on hover or focus of the drop element.
     syntax:
+      content: boolean openCloseOnHover
       return:
         type:
           - boolean
@@ -210,6 +220,7 @@ items:
       The number of milliseconds to wait before displaying the tooltip on hover
       or focus.
     syntax:
+      content: number openDelay
       return:
         type:
           - number
@@ -223,6 +234,7 @@ items:
     type: property
     summary: behavior when the element overflows the window (horizontal-vertical)
     syntax:
+      content: string overflow
       return:
         type:
           - string
@@ -236,6 +248,7 @@ items:
     type: property
     summary: 'If true, set the aria-describedby attribute on the parent.'
     syntax:
+      content: boolean setAriaDescribedBy
       return:
         type:
           - boolean
@@ -251,6 +264,7 @@ items:
       If openCloseOnHover is true, popup will be shown on focus as well as hover
       unlesss this is set to false.
     syntax:
+      content: boolean showOnFocus
       return:
         type:
           - boolean
@@ -264,6 +278,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: boolean supportScroll
       return:
         type:
           - boolean
@@ -277,6 +292,7 @@ items:
     type: property
     summary: Text to display. HTML content will be escaped.
     syntax:
+      content: string text
       return:
         type:
           - string
@@ -292,6 +308,7 @@ items:
       how much extra top offset (if any) should be given to the target element
       versus the reference element.
     syntax:
+      content: number topOffsetPixels
       return:
         type:
           - number
@@ -307,6 +324,7 @@ items:
       If false, position the popup on hover based on the drop element’s
       location, not the mouse position
     syntax:
+      content: boolean useMousePosition
       return:
         type:
           - boolean
@@ -322,6 +340,7 @@ items:
       Whether the hover target must be _$dropElement strictly, if false then
       children that are inside of the _$dropElement will cause tooltipping
     syntax:
+      content: boolean useStrictTarget
       return:
         type:
           - boolean

@@ -35,7 +35,7 @@ items:
       interacting with Azure
     source:
       path: vss.d.ts
-      startLine: 4006
+      startLine: 4005
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -52,6 +52,7 @@ items:
     type: property
     summary: Determines whether or not this plan is visible to all users
     syntax:
+      content: boolean isPublic
       return:
         type:
           - boolean
@@ -65,6 +66,7 @@ items:
     type: property
     summary: The meter id which identifies the offer meter this plan is associated with
     syntax:
+      content: number meterId
       return:
         type:
           - number
@@ -78,6 +80,7 @@ items:
     type: property
     summary: The offer / product name as defined by the publisher in Azure
     syntax:
+      content: string offerId
       return:
         type:
           - string
@@ -91,6 +94,7 @@ items:
     type: property
     summary: The offer / product name as defined by the publisher in Azure
     syntax:
+      content: string offerName
       return:
         type:
           - string
@@ -106,6 +110,7 @@ items:
       The id of the plan, which is usually in the format
       "{publisher}:{offer}:{plan}"
     syntax:
+      content: string planId
       return:
         type:
           - string
@@ -119,6 +124,7 @@ items:
     type: property
     summary: The plan name as defined by the publisher in Azure
     syntax:
+      content: string planName
       return:
         type:
           - string
@@ -132,6 +138,7 @@ items:
     type: property
     summary: The version string which optionally identifies the version of the plan
     syntax:
+      content: string planVersion
       return:
         type:
           - string
@@ -145,6 +152,7 @@ items:
     type: property
     summary: The publisher of the plan as defined by the publisher in Azure
     syntax:
+      content: string publisher
       return:
         type:
           - string
@@ -158,6 +166,7 @@ items:
     type: property
     summary: get/set publisher name
     syntax:
+      content: string publisherName
       return:
         type:
           - string
@@ -171,6 +180,7 @@ items:
     type: property
     summary: The number of users associated with the plan as defined in Azure
     syntax:
+      content: number quantity
       return:
         type:
           - number

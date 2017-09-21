@@ -16,7 +16,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 1457
+      startLine: 1456
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -32,6 +32,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: 'string[] branchFilters'
       return:
         type:
           - 'string[]'
@@ -44,6 +45,7 @@ items:
     type: property
     summary: Days for a build (flags enum for days of the week)
     syntax:
+      content: ScheduleDays daysToBuild
       return:
         type:
           - ScheduleDays
@@ -62,6 +64,7 @@ items:
       filled in when a definition is added or updated.  The UI does not provide
       it or use it.
     syntax:
+      content: string scheduleJobId
       return:
         type:
           - string
@@ -74,6 +77,7 @@ items:
     type: property
     summary: Local timezone hour to start
     syntax:
+      content: number startHours
       return:
         type:
           - number
@@ -86,6 +90,7 @@ items:
     type: property
     summary: Local timezone minute to start
     syntax:
+      content: number startMinutes
       return:
         type:
           - number
@@ -100,6 +105,7 @@ items:
       Time zone of the build schedule (string representation of the time zone
       id)
     syntax:
+      content: string timeZoneId
       return:
         type:
           - string

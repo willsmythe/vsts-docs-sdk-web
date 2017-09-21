@@ -17,7 +17,7 @@ items:
       collection, deployment)
     source:
       path: vss.d.ts
-      startLine: 2775
+      startLine: 2774
       remote:
         path: typings\vss.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -33,6 +33,7 @@ items:
     type: property
     summary: 'Type of host (deployment, account, collection)'
     syntax:
+      content: any hostType
       return:
         type:
           - any
@@ -45,6 +46,7 @@ items:
     type: property
     summary: 'Unique id of the host (collection id, account id, etc.)'
     syntax:
+      content: string instanceId
       return:
         type:
           - string
@@ -57,6 +59,7 @@ items:
     type: property
     summary: 'Name of the host (collection name, account name, etc.)'
     syntax:
+      content: string name
       return:
         type:
           - string
@@ -71,6 +74,7 @@ items:
       Path of the service host, relative to the root virtual directory (e.g.
       DefaultCollection)
     syntax:
+      content: string relVDir
       return:
         type:
           - string
@@ -85,6 +89,7 @@ items:
       Path of the service host relative to the web application root (e.g.
       /tfs/DefaultCollection)
     syntax:
+      content: string vDir
       return:
         type:
           - string

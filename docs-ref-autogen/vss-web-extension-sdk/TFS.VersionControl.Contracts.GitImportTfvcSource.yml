@@ -18,7 +18,7 @@ items:
       control
     source:
       path: tfs.d.ts
-      startLine: 14101
+      startLine: 14100
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -35,6 +35,7 @@ items:
     type: property
     summary: 'Set true to import History, false otherwise'
     syntax:
+      content: boolean importHistory
       return:
         type:
           - boolean
@@ -48,6 +49,7 @@ items:
     type: property
     summary: Get history for last n days (max allowed value is 180 days)
     syntax:
+      content: number importHistoryDurationInDays
       return:
         type:
           - number
@@ -63,6 +65,7 @@ items:
       Path which we want to import (this can be copied from Path Control in
       Explorer)
     syntax:
+      content: string path
       return:
         type:
           - string

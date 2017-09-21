@@ -18,7 +18,7 @@ items:
     summary: ''
     source:
       path: tfs.d.ts
-      startLine: 10152
+      startLine: 10151
       remote:
         path: typings\tfs.d.ts
         repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
@@ -35,6 +35,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string codeCoverageFileUrl
       return:
         type:
           - string
@@ -48,6 +49,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.BuildConfiguration
+        configuration
       return:
         type:
           - >-
@@ -61,6 +65,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string lastError
       return:
         type:
           - string
@@ -73,6 +78,9 @@ items:
     type: property
     summary: ''
     syntax:
+      content: >-
+        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ModuleCoverage[]
+        modules
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ModuleCoverage[]'
@@ -85,6 +93,7 @@ items:
     type: property
     summary: ''
     syntax:
+      content: string state
       return:
         type:
           - string
