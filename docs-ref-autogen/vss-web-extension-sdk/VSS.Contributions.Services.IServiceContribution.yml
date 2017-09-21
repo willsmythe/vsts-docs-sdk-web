@@ -25,7 +25,7 @@ items:
     module: VSS/Contributions/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.IServiceContribution.getInstance
-    name: 'getInstance(objectId?: string, context?: any)'
+    name: 'getInstance<T>(objectId?: string, context?: any)'
     children: []
     langs:
       - typeScript
@@ -45,7 +45,7 @@ items:
           description: |
             Optional context to use when getting the object.
           optional: true
-      content: 'function getInstance(objectId?: string, context?: any)'
+      content: 'function getInstance<T>(objectId?: string, context?: any)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<T>'

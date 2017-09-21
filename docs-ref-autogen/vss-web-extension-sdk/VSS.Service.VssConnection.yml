@@ -125,7 +125,7 @@ items:
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getHttpClient
     name: >-
-      getHttpClient(httpClientType: function, serviceInstanceId?: string,
+      getHttpClient<T>(httpClientType: function, serviceInstanceId?: string,
       authTokenManager?: IAuthTokenManager<any>, clientOptions?:
       IVssHttpClientOptions)
     children: []
@@ -154,7 +154,7 @@ items:
           description: ''
           optional: true
       content: >-
-        function getHttpClient(httpClientType: function, serviceInstanceId?:
+        function getHttpClient<T>(httpClientType: function, serviceInstanceId?:
         string, authTokenManager?: IAuthTokenManager<any>, clientOptions?:
         IVssHttpClientOptions)
       return:
@@ -162,7 +162,7 @@ items:
           - T
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getService
-    name: 'getService(serviceType: function, useCached?: boolean)'
+    name: 'getService<T>(serviceType: function, useCached?: boolean)'
     children: []
     langs:
       - typeScript
@@ -178,7 +178,7 @@ items:
             - boolean
           description: ''
           optional: true
-      content: 'function getService(serviceType: function, useCached?: boolean)'
+      content: 'function getService<T>(serviceType: function, useCached?: boolean)'
       return:
         type:
           - T

@@ -107,7 +107,7 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getCachedPageData
     name: >-
-      getCachedPageData(cachedDataProviderContributionId: string,
+      getCachedPageData<T>(cachedDataProviderContributionId: string,
       primaryDataProviderContributionId?: string, refreshCache?: boolean,
       contractMetadata?: ContractMetadata, reloadCallback?: IResultCallback)
     children: []
@@ -151,7 +151,7 @@ items:
           description: ''
           optional: true
       content: >-
-        function getCachedPageData(cachedDataProviderContributionId: string,
+        function getCachedPageData<T>(cachedDataProviderContributionId: string,
         primaryDataProviderContributionId?: string, refreshCache?: boolean,
         contractMetadata?: ContractMetadata, reloadCallback?: IResultCallback)
       return:
@@ -160,7 +160,9 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageData
-    name: 'getPageData(contributionId: string, contractMetadata?: ContractMetadata)'
+    name: >-
+      getPageData<T>(contributionId: string, contractMetadata?:
+      ContractMetadata)
     children: []
     langs:
       - typeScript
@@ -178,7 +180,7 @@ items:
             Optional contract metadata to use to deserialize the object
           optional: true
       content: >-
-        function getPageData(contributionId: string, contractMetadata?:
+        function getPageData<T>(contributionId: string, contractMetadata?:
         ContractMetadata)
       return:
         type:
@@ -187,7 +189,7 @@ items:
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageDataByDataType
     name: >-
-      getPageDataByDataType(dataType: string, contractMetadata?:
+      getPageDataByDataType<T>(dataType: string, contractMetadata?:
       ContractMetadata)
     children: []
     langs:
@@ -211,7 +213,7 @@ items:
             values.
           optional: true
       content: >-
-        function getPageDataByDataType(dataType: string, contractMetadata?:
+        function getPageDataByDataType<T>(dataType: string, contractMetadata?:
         ContractMetadata)
       return:
         type:

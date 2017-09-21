@@ -24,7 +24,7 @@ items:
     package: vss-web-extension-sdk
     module: Global
   - uid: vss-web-extension-sdk.IPromise.then
-    name: 'then(onFulfill: function, onReject?: function)'
+    name: 'then<U>(onFulfill: function, onReject?: function)'
     children: []
     langs:
       - typeScript
@@ -43,7 +43,7 @@ items:
             - function
           description: ''
           optional: true
-      content: 'function then(onFulfill: function, onReject?: function)'
+      content: 'function then<U>(onFulfill: function, onReject?: function)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<U>'

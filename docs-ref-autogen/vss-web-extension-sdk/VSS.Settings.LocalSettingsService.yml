@@ -36,7 +36,7 @@ items:
       content: 'new LocalSettingsService(webContext?: WebContext)'
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Settings.LocalSettingsService.read
-    name: 'read(key: string, defaultValue?: T, scope?: LocalSettingsScope)'
+    name: 'read<T>(key: string, defaultValue?: T, scope?: LocalSettingsScope)'
     children: []
     langs:
       - typeScript
@@ -61,7 +61,9 @@ items:
             Scope for the setting to apply to. This will determine the prefix to
             use at the beginning of the setting key.
           optional: true
-      content: 'function read(key: string, defaultValue?: T, scope?: LocalSettingsScope)'
+      content: >-
+        function read<T>(key: string, defaultValue?: T, scope?:
+        LocalSettingsScope)
       return:
         type:
           - T

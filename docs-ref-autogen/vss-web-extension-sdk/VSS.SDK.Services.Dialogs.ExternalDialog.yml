@@ -28,7 +28,7 @@ items:
     module: VSS/SDK/Services/Dialogs
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Dialogs.ExternalDialog.getContributionInstance
-    name: 'getContributionInstance(instanceId: string, contextData?: any)'
+    name: 'getContributionInstance<T>(instanceId: string, contextData?: any)'
     children: []
     langs:
       - typeScript
@@ -46,7 +46,9 @@ items:
             Optional data to pass to the extension for it to use when creating
             the instance
           optional: true
-      content: 'function getContributionInstance(instanceId: string, contextData?: any)'
+      content: >-
+        function getContributionInstance<T>(instanceId: string, contextData?:
+        any)
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<T>'

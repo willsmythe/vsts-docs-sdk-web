@@ -30,9 +30,23 @@ items:
     package: vss-web-extension-sdk
     module: VSS/Adapters/Knockout
   - uid: vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateControl.applyBinding
+    name: 'applyBinding(element: JQuery)'
+    children: []
+    langs:
+      - typeScript
+    summary: See interface.
+    syntax:
+      parameters:
+        - id: element
+          type:
+            - JQuery
+          description: ''
+      content: 'function applyBinding(element: JQuery)'
+    type: method
+  - uid: vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateControl.applyBinding
     name: >-
-      applyBinding(controlType: any, element: JQuery, viewModel: TViewModel,
-      options: TemplateControlOptions)
+      applyBinding<TControl>(controlType: any, element: JQuery, viewModel:
+      TViewModel, options: TemplateControlOptions)
     children: []
     langs:
       - typeScript
@@ -59,30 +73,16 @@ items:
               @vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateControlOptions
           description: Template options like templateHtml and templateId.
       content: >-
-        static function applyBinding(controlType: any, element: JQuery,
-        viewModel: TViewModel, options: TemplateControlOptions)
+        static function applyBinding<TControl>(controlType: any, element:
+        JQuery, viewModel: TViewModel, options: TemplateControlOptions)
       return:
         type:
           - TControl
     type: method
-  - uid: vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateControl.applyBinding
-    name: 'applyBinding(element: JQuery)'
-    children: []
-    langs:
-      - typeScript
-    summary: See interface.
-    syntax:
-      parameters:
-        - id: element
-          type:
-            - JQuery
-          description: ''
-      content: 'function applyBinding(element: JQuery)'
-    type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateControl.applyRegisteredBinding
     name: >-
-      applyRegisteredBinding(templateId: string, element: JQuery,
+      applyRegisteredBinding<TControl>(templateId: string, element: JQuery,
       viewModelContext: any)
     children: []
     langs:
@@ -105,8 +105,8 @@ items:
             - any
           description: Context used to generate view model.
       content: >-
-        static function applyRegisteredBinding(templateId: string, element:
-        JQuery, viewModelContext: any)
+        static function applyRegisteredBinding<TControl>(templateId: string,
+        element: JQuery, viewModelContext: any)
       return:
         type:
           - TControl

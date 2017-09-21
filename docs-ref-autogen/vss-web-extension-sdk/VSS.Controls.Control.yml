@@ -49,8 +49,8 @@ items:
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Controls.Control.create
     name: >-
-      create(controlType: function, container: JQuery, controlOptions: TOptions,
-      enhancementOptions?: EnhancementOptions)
+      create<TControl>(controlType: function, container: JQuery, controlOptions:
+      TOptions, enhancementOptions?: EnhancementOptions)
     children: []
     langs:
       - typeScript
@@ -75,8 +75,9 @@ items:
           description: ''
           optional: true
       content: >-
-        static function create(controlType: function, container: JQuery,
-        controlOptions: TOptions, enhancementOptions?: EnhancementOptions)
+        static function create<TControl>(controlType: function, container:
+        JQuery, controlOptions: TOptions, enhancementOptions?:
+        EnhancementOptions)
       return:
         type:
           - TControl
@@ -97,8 +98,8 @@ items:
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Control.createIn
     name: >-
-      createIn(type?: any, container?: any, options?: TOptions, koCompatable?:
-      boolean)
+      createIn<TOptions>(type?: any, container?: any, options?: TOptions,
+      koCompatable?: boolean)
     children: []
     langs:
       - typeScript
@@ -126,8 +127,8 @@ items:
           description: ''
           optional: true
       content: >-
-        static function createIn(type?: any, container?: any, options?:
-        TOptions, koCompatable?: boolean)
+        static function createIn<TOptions>(type?: any, container?: any,
+        options?: TOptions, koCompatable?: boolean)
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.Control<any>'

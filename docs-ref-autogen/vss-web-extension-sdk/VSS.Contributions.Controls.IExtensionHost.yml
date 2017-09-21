@@ -50,7 +50,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Controls.IExtensionHost.getRegisteredInstance
-    name: 'getRegisteredInstance(instanceId: string, contextData?: any)'
+    name: 'getRegisteredInstance<T>(instanceId: string, contextData?: any)'
     children: []
     langs:
       - typeScript
@@ -68,7 +68,7 @@ items:
             Optional data to pass to the extension for it to use when creating
             the instance
           optional: true
-      content: 'function getRegisteredInstance(instanceId: string, contextData?: any)'
+      content: 'function getRegisteredInstance<T>(instanceId: string, contextData?: any)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<T>'

@@ -250,7 +250,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.getValue
-    name: 'getValue(key: string, documentOptions?: IDocumentOptions)'
+    name: 'getValue<T>(key: string, documentOptions?: IDocumentOptions)'
     children: []
     langs:
       - typeScript
@@ -268,7 +268,7 @@ items:
             The scope in which the value is stored - default value is
             account-wide
           optional: true
-      content: 'function getValue(key: string, documentOptions?: IDocumentOptions)'
+      content: 'function getValue<T>(key: string, documentOptions?: IDocumentOptions)'
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<T>'
@@ -380,7 +380,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.ExtensionData.ExtensionDataService.setValue
-    name: 'setValue(key: string, value: T, documentOptions?: IDocumentOptions)'
+    name: 'setValue<T>(key: string, value: T, documentOptions?: IDocumentOptions)'
     children: []
     langs:
       - typeScript
@@ -403,7 +403,7 @@ items:
             account-wide
           optional: true
       content: >-
-        function setValue(key: string, value: T, documentOptions?:
+        function setValue<T>(key: string, value: T, documentOptions?:
         IDocumentOptions)
       return:
         type:
