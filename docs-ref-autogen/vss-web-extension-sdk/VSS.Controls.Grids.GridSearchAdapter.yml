@@ -30,15 +30,15 @@ items:
     package: vss-web-extension-sdk
     module: VSS/Controls/Grids
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.addMoreItems
-    name: 'addMoreItems(addItemsCallback: Function, searchCallback: function)'
+    name: 'addMoreItems(addItemsCallback: Function, searchCallback: () => any)'
     children: []
     langs:
       - typeScript
     summary: Adds additional items to the search strategy
     syntax:
       content: >-
-        function addMoreItems(addItemsCallback: Function, searchCallback:
-        function)
+        function addMoreItems(addItemsCallback: Function, searchCallback: () =>
+        any)
       parameters:
         - id: addItemsCallback
           type:
@@ -46,7 +46,7 @@ items:
           description: The function which adds items to the search strategy.
         - id: searchCallback
           type:
-            - function
+            - () => any
           description: |
             The function which searches the newly updated strategy.
     type: method

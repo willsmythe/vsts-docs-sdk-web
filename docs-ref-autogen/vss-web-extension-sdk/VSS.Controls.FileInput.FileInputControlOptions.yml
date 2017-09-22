@@ -121,10 +121,14 @@ items:
       Callback executed whenever a user bumps into the limit of the file upload
       control.
     syntax:
-      content: function limitMessageFormatter
+      content: >-
+        (currentMessage: string, limitEvent: FileInputControlLimitEventData) =>
+        string limitMessageFormatter
       return:
         type:
-          - function
+          - >-
+            (currentMessage: string, limitEvent: FileInputControlLimitEventData)
+            => string
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FileInput.FileInputControlOptions.maximumNumberOfFiles
     name: maximumNumberOfFiles
@@ -191,7 +195,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function updateHandler
+      content: '(updateEvent: FileInputControlUpdateEventData) => void updateHandler'
       return:
         type:
-          - function
+          - '(updateEvent: FileInputControlUpdateEventData) => void'

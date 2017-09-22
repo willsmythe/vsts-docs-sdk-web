@@ -52,10 +52,10 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function generateContributionLink
+      content: '(contributionId: string) => string generateContributionLink'
       return:
         type:
-          - function
+          - '(contributionId: string) => string'
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.IPivotViewOptions.getContributionContext
     name: getContributionContext
@@ -66,10 +66,10 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function getContributionContext
+      content: () => any getContributionContext
       return:
         type:
-          - function
+          - () => any
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Navigation.IPivotViewOptions.getEnabledState
     name: getEnabledState
@@ -80,10 +80,10 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function getEnabledState
+      content: '(contributionId: string) => boolean getEnabledState'
       return:
         type:
-          - function
+          - '(contributionId: string) => boolean'
   - uid: vss-web-extension-sdk.VSS.Controls.Navigation.IPivotViewOptions.items
     name: items
     fullName: items

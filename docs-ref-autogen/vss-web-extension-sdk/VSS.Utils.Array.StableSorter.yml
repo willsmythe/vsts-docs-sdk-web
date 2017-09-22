@@ -39,16 +39,16 @@ items:
           optional: true
     type: method
   - uid: vss-web-extension-sdk.VSS.Utils.Array.StableSorter.constructor
-    name: 'StableSorter(cmpFunc: function)'
+    name: 'StableSorter(cmpFunc: (a: T, b: T) => number)'
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
-      content: 'new StableSorter(cmpFunc: function)'
+      content: 'new StableSorter(cmpFunc: (a: T, b: T) => number)'
       parameters:
         - id: cmpFunc
           type:
-            - function
+            - '(a: T, b: T) => number'
           description: ''
     type: constructor

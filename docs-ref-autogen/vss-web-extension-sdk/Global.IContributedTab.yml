@@ -34,10 +34,10 @@ items:
     type: property
     summary: Determines if this tab should be disabled
     syntax:
-      content: function isDisabled
+      content: '(context?: any) => boolean isDisabled'
       return:
         type:
-          - function
+          - '(context?: any) => boolean'
   - uid: vss-web-extension-sdk.IContributedTab.isInvisible
     name: isInvisible
     fullName: isInvisible
@@ -47,10 +47,10 @@ items:
     type: property
     summary: Determines if this tab should be displayed
     syntax:
-      content: function isInvisible
+      content: '(context?: any) => boolean isInvisible'
       return:
         type:
-          - function
+          - '(context?: any) => boolean'
   - uid: vss-web-extension-sdk.IContributedTab.itemKey
     name: itemKey
     fullName: itemKey
@@ -62,10 +62,10 @@ items:
       Returns a unique string used to identify this tab. May be ignored from
       non-trusted extensions.
     syntax:
-      content: function itemKey
+      content: '(context?: any) => string itemKey'
       return:
         type:
-          - function
+          - '(context?: any) => string'
   - uid: vss-web-extension-sdk.IContributedTab.name
     name: name
     fullName: name
@@ -116,10 +116,10 @@ items:
       Function that is invoked when there is a new context available for the
       extension.
     syntax:
-      content: function updateContext
+      content: '(context: any) => void updateContext'
       return:
         type:
-          - function
+          - '(context: any) => void'
   - uid: vss-web-extension-sdk.IContributedTab.uri
     name: uri
     fullName: uri

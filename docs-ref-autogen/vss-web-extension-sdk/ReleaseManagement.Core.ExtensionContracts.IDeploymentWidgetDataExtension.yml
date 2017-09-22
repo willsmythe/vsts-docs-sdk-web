@@ -40,7 +40,9 @@ items:
       The extension will be calling updateContributionData as and when it has
       finished fetching results for one of the batches.
     syntax:
-      content: function triggerFetchingContributionData
+      content: >-
+        (releaseEnvironments: function[]) => void
+        triggerFetchingContributionData
       return:
         type:
-          - function
+          - '(releaseEnvironments: function[]) => void'

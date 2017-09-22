@@ -32,7 +32,9 @@ items:
       Optional, for a given tab id, which is essentially contribution id,
       the corresponding tab is selected if the tab is visible.
     syntax:
-      content: function selectTab
+      content: >-
+        (tabId: string, additionalUrlParams?: [key: string]: string) => void
+        selectTab
       return:
         type:
-          - function
+          - '(tabId: string, additionalUrlParams?: [key: string]: string) => void'

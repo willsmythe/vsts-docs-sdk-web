@@ -23,7 +23,7 @@ items:
     package: vss-web-extension-sdk
     module: VSS/Adapters/Knockout
   - uid: vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateViewModel.computed
-    name: 'computed(func: function)'
+    name: 'computed(func: () => any)'
     children: []
     langs:
       - typeScript
@@ -31,11 +31,11 @@ items:
       Proxy for a knockout computed to keep track of it to ensure that when the
       control is disposed, computed is also disposed.
     syntax:
-      content: 'function computed(func: function)'
+      content: 'function computed(func: () => any)'
       parameters:
         - id: func
           type:
-            - function
+            - () => any
           description: ''
       return:
         type:
@@ -52,7 +52,9 @@ items:
       parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Adapters.Knockout.TemplateViewModel.subscribe
-    name: 'subscribe(subscribable: KnockoutSubscribable<any>, callback: function)'
+    name: >-
+      subscribe(subscribable: KnockoutSubscribable<any>, callback: (newValue:
+      any) => void)
     children: []
     langs:
       - typeScript
@@ -62,7 +64,7 @@ items:
     syntax:
       content: >-
         function subscribe(subscribable: KnockoutSubscribable<any>, callback:
-        function)
+        (newValue: any) => void)
       parameters:
         - id: subscribable
           type:
@@ -70,7 +72,7 @@ items:
           description: ''
         - id: callback
           type:
-            - function
+            - '(newValue: any) => void'
           description: ''
       return:
         type:

@@ -60,10 +60,10 @@ items:
       which shares the same URI of the contribution that originally caused this
       extension frame to be loaded.
     syntax:
-      content: function extensionReusedCallback
+      content: '(contribution: Contribution) => void extensionReusedCallback'
       return:
         type:
-          - function
+          - '(contribution: Contribution) => void'
   - uid: vss-web-extension-sdk.IExtensionInitializationOptions.moduleLoaderConfig
     name: moduleLoaderConfig
     fullName: moduleLoaderConfig

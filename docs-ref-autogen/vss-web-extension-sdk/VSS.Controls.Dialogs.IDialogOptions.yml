@@ -112,10 +112,10 @@ items:
     type: property
     summary: Delegate to be executed when the dialog is closed.
     syntax:
-      content: function close
+      content: '(eventArgs: any) => any close'
       return:
         type:
-          - function
+          - '(eventArgs: any) => any'
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.closeText
     name: closeText
     fullName: closeText
@@ -306,10 +306,10 @@ items:
       Delegate to be executed when the dialog is initialized completely
       (including sizing and positioning).
     syntax:
-      content: function initialize
+      content: () => void initialize
       return:
         type:
-          - function
+          - () => void
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.maxHeight
     name: maxHeight
     fullName: maxHeight
@@ -401,10 +401,10 @@ items:
     type: property
     summary: Delegate to be executed when the dialog is opened.
     syntax:
-      content: function open
+      content: '(eventArgs: any) => any open'
       return:
         type:
-          - function
+          - '(eventArgs: any) => any'
   - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.IDialogOptions.position
     name: position
     fullName: position

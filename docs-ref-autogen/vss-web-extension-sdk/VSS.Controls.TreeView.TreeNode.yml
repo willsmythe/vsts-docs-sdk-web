@@ -219,13 +219,17 @@ items:
         type:
           - boolean
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.TreeNode.findNode
-    name: 'findNode(path: string, sepChar?: string, comparer?: function)'
+    name: >-
+      findNode(path: string, sepChar?: string, comparer?: (a: string, b: string)
+      => number)
     children: []
     langs:
       - typeScript
     summary: Finds a node using the given path
     syntax:
-      content: 'function findNode(path: string, sepChar?: string, comparer?: function)'
+      content: >-
+        function findNode(path: string, sepChar?: string, comparer?: (a: string,
+        b: string) => number)
       parameters:
         - id: path
           type:
@@ -238,7 +242,7 @@ items:
           optional: true
         - id: comparer
           type:
-            - function
+            - '(a: string, b: string) => number'
           description: >
             Comparer used to compare nodes in the path, if not given default
             will be used

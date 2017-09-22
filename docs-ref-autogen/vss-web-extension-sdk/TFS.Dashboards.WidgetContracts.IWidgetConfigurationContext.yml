@@ -34,7 +34,9 @@ items:
       The widget configuration calls this method when it wants to notify any of
       the WidgetEvents to the host
     syntax:
-      content: function notify
+      content: >-
+        (event: string, eventArgs: EventArgs<T>) => IPromise<NotifyResult>
+        notify
       return:
         type:
-          - function
+          - '(event: string, eventArgs: EventArgs<T>) => IPromise<NotifyResult>'

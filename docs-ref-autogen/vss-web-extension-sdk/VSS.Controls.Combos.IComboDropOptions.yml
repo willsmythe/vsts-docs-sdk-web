@@ -75,10 +75,10 @@ items:
     type: property
     summary: DEPRECATED - Alternate renderer for a drop popup item
     syntax:
-      content: function createItem
+      content: '(index: any) => JQuery createItem'
       return:
         type:
-          - function
+          - '(index: any) => JQuery'
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboDropOptions.dataSource
     name: dataSource
     fullName: dataSource
@@ -133,10 +133,10 @@ items:
       Render a drop popup item, return value will be appended to drop popup li
       item
     syntax:
-      content: function getItemContents
+      content: '(item: string) => any getItemContents'
       return:
         type:
-          - function
+          - '(item: string) => any'
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboDropOptions.host
     name: host
     fullName: host
@@ -159,10 +159,14 @@ items:
     type: property
     summary: Delegate for on click event
     syntax:
-      content: function itemClick
+      content: >-
+        (e?: JQueryEventObject, itemIndex?: number, $target?: JQuery, $li?:
+        JQuery) => void itemClick
       return:
         type:
-          - function
+          - >-
+            (e?: JQueryEventObject, itemIndex?: number, $target?: JQuery, $li?:
+            JQuery) => void
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboDropOptions.itemCss
     name: itemCss
     fullName: itemCss
@@ -215,10 +219,10 @@ items:
       selectedIndex - selected index of drop popup
       accept - When set to true user has clicked and selected an item
     syntax:
-      content: function selectionChange
+      content: '(selectedIndex: number, accept: any) => void selectionChange'
       return:
         type:
-          - function
+          - '(selectedIndex: number, accept: any) => void'
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Combos.IComboDropOptions.setTitleOnlyOnOverflow
     name: setTitleOnlyOnOverflow

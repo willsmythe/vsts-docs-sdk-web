@@ -35,10 +35,10 @@ items:
     type: property
     summary: Listen to message from host
     syntax:
-      content: function listen
+      content: '(event: string, eventArgs: EventArgs<T>) => void listen'
       return:
         type:
-          - function
+          - '(event: string, eventArgs: EventArgs<T>) => void'
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidgetConfiguration.load
     name: load
@@ -55,10 +55,14 @@ items:
        @returns object wrapped in a promise that encapsulates the success of this operation.
                 If load fails, returns error message via WidgetStatusHelper.Failure(errorMessage).
     syntax:
-      content: function load
+      content: >-
+        (widgetSettings: WidgetSettings, widgetConfigurationContext:
+        IWidgetConfigurationContext) => IPromise<WidgetStatus> load
       return:
         type:
-          - function
+          - >-
+            (widgetSettings: WidgetSettings, widgetConfigurationContext:
+            IWidgetConfigurationContext) => IPromise<WidgetStatus>
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidgetConfiguration.onSave
     name: onSave
@@ -80,10 +84,10 @@ items:
       WidgetHelpers.WidgetConfigurationSave.Invalid() to notify the host to stop
       save.
     syntax:
-      content: function onSave
+      content: () => IPromise<SaveStatus> onSave
       return:
         type:
-          - function
+          - () => IPromise<SaveStatus>
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidgetConfiguration.onSaveComplete
     name: onSaveComplete
@@ -96,7 +100,7 @@ items:
       (Optional) Called by the host when the configuration is ready to be saved
       (when the user clicks the save button on the configuration panel)
     syntax:
-      content: function onSaveComplete
+      content: () => void onSaveComplete
       return:
         type:
-          - function
+          - () => void

@@ -440,7 +440,7 @@ items:
           description: minimum number of pixels the fixed side will fill.
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.setOnToggle
-    name: 'setOnToggle(handler: function)'
+    name: 'setOnToggle(handler: (isExpanded: boolean) => void)'
     children: []
     langs:
       - typeScript
@@ -448,11 +448,11 @@ items:
       set the handler on toggle - this should only be used when Splitter control
       was automatically enhanced, otherwise specify in options
     syntax:
-      content: 'function setOnToggle(handler: function)'
+      content: 'function setOnToggle(handler: (isExpanded: boolean) => void)'
       parameters:
         - id: handler
           type:
-            - function
+            - '(isExpanded: boolean) => void'
           description: ''
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.Splitter.SplitterO.split

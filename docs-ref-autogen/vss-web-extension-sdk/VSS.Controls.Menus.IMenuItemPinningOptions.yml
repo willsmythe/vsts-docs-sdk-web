@@ -120,7 +120,11 @@ items:
       menuItem is the MenuItem that was clicked.
       siblingMenuItem is the matching MenuItem from the other Menu.
     syntax:
-      content: function onPinnedChanged
+      content: >-
+        (menuItem: MenuItem, pinned: boolean, siblingMenuItem?: MenuItem) =>
+        void onPinnedChanged
       return:
         type:
-          - function
+          - >-
+            (menuItem: MenuItem, pinned: boolean, siblingMenuItem?: MenuItem) =>
+            void

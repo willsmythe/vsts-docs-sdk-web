@@ -32,7 +32,9 @@ items:
       The extension will be calling this as and when it has finished fetching
       results for one of the batches.
     syntax:
-      content: function updateContributionData
+      content: >-
+        (overlayData: IDeploymentWidgetOverlayData[]) => void
+        updateContributionData
       return:
         type:
-          - function
+          - '(overlayData: IDeploymentWidgetOverlayData[]) => void'

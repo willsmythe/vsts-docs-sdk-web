@@ -64,7 +64,7 @@ items:
       MenuContributionProvider(menu: Menu<MenuOptions>, webContext: WebContext,
       contributionIds: string[], contributionType: string,
       contributionQueryOptions: ContributionQueryOptions, getMenuActionContext:
-      function, options: MenuContributionProviderOptions)
+      () => any, options: MenuContributionProviderOptions)
     children: []
     langs:
       - typeScript
@@ -74,7 +74,7 @@ items:
         new MenuContributionProvider(menu: Menu<MenuOptions>, webContext:
         WebContext, contributionIds: string[], contributionType: string,
         contributionQueryOptions: ContributionQueryOptions,
-        getMenuActionContext: function, options:
+        getMenuActionContext: () => any, options:
         MenuContributionProviderOptions)
       parameters:
         - id: menu
@@ -100,7 +100,7 @@ items:
           description: ''
         - id: getMenuActionContext
           type:
-            - function
+            - () => any
           description: ''
         - id: options
           type:

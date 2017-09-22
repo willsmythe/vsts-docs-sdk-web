@@ -93,23 +93,23 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.Services.IWorkItemFormService.beginSaveWorkItem
-    name: 'beginSaveWorkItem(successCallback: function, errorCallback: function)'
+    name: 'beginSaveWorkItem(successCallback: () => void, errorCallback: () => void)'
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
       content: >-
-        function beginSaveWorkItem(successCallback: function, errorCallback:
-        function)
+        function beginSaveWorkItem(successCallback: () => void, errorCallback:
+        () => void)
       parameters:
         - id: successCallback
           type:
-            - function
+            - () => void
           description: ''
         - id: errorCallback
           type:
-            - function
+            - () => void
           description: ''
       return:
         type:

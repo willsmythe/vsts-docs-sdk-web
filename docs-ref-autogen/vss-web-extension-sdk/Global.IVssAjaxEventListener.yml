@@ -31,10 +31,14 @@ items:
     type: property
     summary: Method invoked before a request is sent
     syntax:
-      content: function beforeRequest
+      content: >-
+        (requestId: number, requestUrl: string, ajaxOptions: JQueryAjaxSettings,
+        vssRequestOptions: IVssAjaxOptions) => void beforeRequest
       return:
         type:
-          - function
+          - >-
+            (requestId: number, requestUrl: string, ajaxOptions:
+            JQueryAjaxSettings, vssRequestOptions: IVssAjaxOptions) => void
   - uid: vss-web-extension-sdk.IVssAjaxEventListener.postResponseCallback
     name: postResponseCallback
     fullName: postResponseCallback
@@ -46,10 +50,14 @@ items:
       Method invoked after a response has been received and its callback/promise
       has been invoked
     syntax:
-      content: function postResponseCallback
+      content: >-
+        (requestId: number, data: any, textStatus: string, jqXHR: JQueryXHR,
+        vssRequestOptions: IVssAjaxOptions) => void postResponseCallback
       return:
         type:
-          - function
+          - >-
+            (requestId: number, data: any, textStatus: string, jqXHR: JQueryXHR,
+            vssRequestOptions: IVssAjaxOptions) => void
   - uid: vss-web-extension-sdk.IVssAjaxEventListener.responseReceived
     name: responseReceived
     fullName: responseReceived
@@ -59,7 +67,11 @@ items:
     type: property
     summary: Method invoked when a response has been received
     syntax:
-      content: function responseReceived
+      content: >-
+        (requestId: number, data: any, textStatus: string, jqXHR: JQueryXHR,
+        vssRequestOptions: IVssAjaxOptions) => void responseReceived
       return:
         type:
-          - function
+          - >-
+            (requestId: number, data: any, textStatus: string, jqXHR: JQueryXHR,
+            vssRequestOptions: IVssAjaxOptions) => void

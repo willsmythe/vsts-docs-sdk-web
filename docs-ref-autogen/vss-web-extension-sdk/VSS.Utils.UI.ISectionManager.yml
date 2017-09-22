@@ -29,10 +29,10 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function identifySections
+      content: () => void identifySections
       return:
         type:
-          - function
+          - () => void
   - uid: vss-web-extension-sdk.VSS.Utils.UI.ISectionManager.nextSection
     name: nextSection
     fullName: nextSection
@@ -42,10 +42,10 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function nextSection
+      content: () => boolean nextSection
       return:
         type:
-          - function
+          - () => boolean
   - uid: vss-web-extension-sdk.VSS.Utils.UI.ISectionManager.previousSection
     name: previousSection
     fullName: previousSection
@@ -55,7 +55,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function previousSection
+      content: () => boolean previousSection
       return:
         type:
-          - function
+          - () => boolean

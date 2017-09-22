@@ -147,10 +147,10 @@ items:
     type: property
     summary: Callback that will be called when a folder is toggled
     syntax:
-      content: function onItemToggle
+      content: '(node: TreeNode) => void onItemToggle'
       return:
         type:
-          - function
+          - '(node: TreeNode) => void'
   - uid: vss-web-extension-sdk.VSS.Controls.TreeView.ITreeOptions.onRenderIcon
     name: onRenderIcon
     fullName: onRenderIcon
@@ -160,10 +160,10 @@ items:
     type: property
     summary: 'Optional custom icon render, overriding node''s icon'
     syntax:
-      content: function onRenderIcon
+      content: '(node: TreeNode) => Element onRenderIcon'
       return:
         type:
-          - function
+          - '(node: TreeNode) => Element'
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.TreeView.ITreeOptions.setTitleOnlyOnOverflow
     name: setTitleOnlyOnOverflow

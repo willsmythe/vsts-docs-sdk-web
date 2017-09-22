@@ -42,10 +42,10 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function reject
+      content: '(reason: any) => void reject'
       return:
         type:
-          - function
+          - '(reason: any) => void'
   - uid: vss-web-extension-sdk.XDM.IDeferred.resolve
     name: resolve
     fullName: resolve
@@ -55,7 +55,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function resolve
+      content: '(result: T) => void resolve'
       return:
         type:
-          - function
+          - '(result: T) => void'

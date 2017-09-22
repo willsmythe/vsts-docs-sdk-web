@@ -45,13 +45,15 @@ items:
           description: ''
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Diag.Measurement.start
-    name: 'start(label: string, callback: function)'
+    name: 'start(label: string, callback: (measurement: Measurement) => void)'
     children: []
     langs:
       - typeScript
     summary: Begin new measurement
     syntax:
-      content: 'static function start(label: string, callback: function)'
+      content: >-
+        static function start(label: string, callback: (measurement:
+        Measurement) => void)
       parameters:
         - id: label
           type:
@@ -59,7 +61,7 @@ items:
           description: Name of the measurement
         - id: callback
           type:
-            - function
+            - '(measurement: Measurement) => void'
           description: |
             Callback to end measurement
     type: method

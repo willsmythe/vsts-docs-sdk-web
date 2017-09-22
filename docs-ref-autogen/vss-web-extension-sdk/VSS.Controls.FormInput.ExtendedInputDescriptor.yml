@@ -47,10 +47,10 @@ items:
     type: property
     summary: A list of functions to be called when this input is deleted.
     syntax:
-      content: 'function[] deleteCallbacks'
+      content: '() => void[] deleteCallbacks'
       return:
         type:
-          - 'function[]'
+          - '() => void[]'
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.dependencies
     name: dependencies
@@ -82,10 +82,10 @@ items:
       A list of functions to be called when the state of all dependencies of
       this input being satisfied changes.
     syntax:
-      content: 'function[] dependenciesSatisfiedCallbacks'
+      content: '(satisfied: boolean) => void[] dependenciesSatisfiedCallbacks'
       return:
         type:
-          - 'function[]'
+          - '(satisfied: boolean) => void[]'
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.ExtendedInputDescriptor.hideUntilSatisfied
     name: hideUntilSatisfied

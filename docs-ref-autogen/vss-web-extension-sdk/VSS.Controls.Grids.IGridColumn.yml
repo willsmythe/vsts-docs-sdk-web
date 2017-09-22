@@ -76,10 +76,12 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function comparer
+      content: >-
+        (column: IGridColumn, order: number, rowA: any, rowB: any) => number
+        comparer
       return:
         type:
-          - function
+          - '(column: IGridColumn, order: number, rowA: any, rowB: any) => number'
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.IGridColumn.fieldId
     name: fieldId
     fullName: fieldId
@@ -128,10 +130,16 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function getCellContents
+      content: >-
+        (rowInfo: any, dataIndex: number, expandedState: number, level: number,
+        column: any, indentIndex: number, columnOrder: number) => void
+        getCellContents
       return:
         type:
-          - function
+          - >-
+            (rowInfo: any, dataIndex: number, expandedState: number, level:
+            number, column: any, indentIndex: number, columnOrder: number) =>
+            void
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.IGridColumn.getColumnValue
     name: getColumnValue
     fullName: getColumnValue
@@ -141,10 +149,14 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function getColumnValue
+      content: >-
+        (dataIndex: number, columnIndex: number, columnOrder?: number) => any
+        getColumnValue
       return:
         type:
-          - function
+          - >-
+            (dataIndex: number, columnIndex: number, columnOrder?: number) =>
+            any
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.IGridColumn.getHeaderCellContents
     name: getHeaderCellContents
     fullName: getHeaderCellContents
@@ -154,10 +166,10 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function getHeaderCellContents
+      content: '(IGridColumn: any) => JQuery getHeaderCellContents'
       return:
         type:
-          - function
+          - '(IGridColumn: any) => JQuery'
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.IGridColumn.headerCss
     name: headerCss
     fullName: headerCss

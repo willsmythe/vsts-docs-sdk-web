@@ -44,10 +44,10 @@ items:
       It is important to have atleast one call back, since that's how an
       extension can get information about the current build.
     syntax:
-      content: function onBuildChanged
+      content: '(handler: (build: Build) => void) => void onBuildChanged'
       return:
         type:
-          - function
+          - '(handler: (build: Build) => void) => void'
   - uid: >-
       vss-web-extension-sdk.TFS.Build.ExtensionContracts.IBuildResultsViewExtensionConfig.onViewDisplayed
     name: onViewDisplayed
@@ -60,10 +60,10 @@ items:
       Optional, If needed, this callback will be called when this particular
       extension is selected/displayed
     syntax:
-      content: function onViewDisplayed
+      content: '(onDisplayedCallBack: () => void) => void onViewDisplayed'
       return:
         type:
-          - function
+          - '(onDisplayedCallBack: () => void) => void'
   - uid: >-
       vss-web-extension-sdk.TFS.Build.ExtensionContracts.IBuildResultsViewExtensionConfig.selectTab
     name: selectTab
@@ -78,10 +78,10 @@ items:
 
       the corresponding tab is selected if the tab is visible.
     syntax:
-      content: function selectTab
+      content: '(fullyQualifiedTabId: string) => void selectTab'
       return:
         type:
-          - function
+          - '(fullyQualifiedTabId: string) => void'
   - uid: >-
       vss-web-extension-sdk.TFS.Build.ExtensionContracts.IBuildResultsViewExtensionConfig.setSectionVisibility
     name: setSectionVisibility
@@ -95,7 +95,9 @@ items:
       sections. fullyQualifiedSectionId is of the format -
       publisher.extensionId.sectionId
     syntax:
-      content: function setSectionVisibility
+      content: >-
+        (fullyQualifiedSectionId: string, value: boolean) => void
+        setSectionVisibility
       return:
         type:
-          - function
+          - '(fullyQualifiedSectionId: string, value: boolean) => void'

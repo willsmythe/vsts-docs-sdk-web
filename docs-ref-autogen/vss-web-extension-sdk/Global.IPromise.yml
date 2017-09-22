@@ -27,7 +27,9 @@ items:
     package: vss-web-extension-sdk
     module: Global
   - uid: vss-web-extension-sdk.IPromise.then
-    name: 'then<U>(onFulfill: function, onReject?: function)'
+    name: >-
+      then<U>(onFulfill: (value: T) => IPromise, onReject?: (reason: any) =>
+      IPromise)
     children: []
     langs:
       - typeScript
@@ -36,15 +38,17 @@ items:
       nothing and a reject delegate which returns a promise or nothing. Then
       returns a new promise.
     syntax:
-      content: 'function then<U>(onFulfill: function, onReject?: function)'
+      content: >-
+        function then<U>(onFulfill: (value: T) => IPromise, onReject?: (reason:
+        any) => IPromise)
       parameters:
         - id: onFulfill
           type:
-            - function
+            - '(value: T) => IPromise'
           description: ''
         - id: onReject
           type:
-            - function
+            - '(reason: any) => IPromise'
           description: ''
           optional: true
       return:
@@ -52,7 +56,9 @@ items:
           - '@vss-web-extension-sdk.IPromise<U>'
     type: method
   - uid: vss-web-extension-sdk.IPromise.then_1
-    name: 'then<U>(onFulfill: function, onReject?: function)'
+    name: >-
+      then<U>(onFulfill: (value: T) => IPromise, onReject?: (reason: any) =>
+      IPromise)
     children: []
     langs:
       - typeScript
@@ -61,15 +67,17 @@ items:
       nothing and a reject delegate which returns a promise or nothing. Then
       returns a new promise.
     syntax:
-      content: 'function then<U>(onFulfill: function, onReject?: function)'
+      content: >-
+        function then<U>(onFulfill: (value: T) => IPromise, onReject?: (reason:
+        any) => IPromise)
       parameters:
         - id: onFulfill
           type:
-            - function
+            - '(value: T) => IPromise'
           description: ''
         - id: onReject
           type:
-            - function
+            - '(reason: any) => IPromise'
           description: ''
           optional: true
       return:
@@ -77,7 +85,9 @@ items:
           - '@vss-web-extension-sdk.IPromise<U>'
     type: method
   - uid: vss-web-extension-sdk.IPromise.then_2
-    name: 'then<U>(onFulfill: function, onReject?: function)'
+    name: >-
+      then<U>(onFulfill: (value: T) => IPromise, onReject?: (reason: any) =>
+      IPromise)
     children: []
     langs:
       - typeScript
@@ -86,15 +96,17 @@ items:
       nothing and a reject delegate which returns a promise or nothing. Then
       returns a new promise.
     syntax:
-      content: 'function then<U>(onFulfill: function, onReject?: function)'
+      content: >-
+        function then<U>(onFulfill: (value: T) => IPromise, onReject?: (reason:
+        any) => IPromise)
       parameters:
         - id: onFulfill
           type:
-            - function
+            - '(value: T) => IPromise'
           description: ''
         - id: onReject
           type:
-            - function
+            - '(reason: any) => IPromise'
           description: ''
           optional: true
       return:
@@ -102,7 +114,9 @@ items:
           - '@vss-web-extension-sdk.IPromise<U>'
     type: method
   - uid: vss-web-extension-sdk.IPromise.then_3
-    name: 'then<U>(onFulfill: function, onReject?: function)'
+    name: >-
+      then<U>(onFulfill: (value: T) => IPromise, onReject?: (reason: any) =>
+      IPromise)
     children: []
     langs:
       - typeScript
@@ -111,15 +125,17 @@ items:
       nothing and a reject delegate which returns a promise or nothing. Then
       returns a new promise.
     syntax:
-      content: 'function then<U>(onFulfill: function, onReject?: function)'
+      content: >-
+        function then<U>(onFulfill: (value: T) => IPromise, onReject?: (reason:
+        any) => IPromise)
       parameters:
         - id: onFulfill
           type:
-            - function
+            - '(value: T) => IPromise'
           description: ''
         - id: onReject
           type:
-            - function
+            - '(reason: any) => IPromise'
           description: ''
           optional: true
       return:

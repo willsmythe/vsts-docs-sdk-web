@@ -152,10 +152,10 @@ items:
     type: property
     summary: 'Optional: Toggle handler called when expand state changes'
     syntax:
-      content: function onToggle
+      content: '(isExpanded: boolean) => void onToggle'
       return:
         type:
-          - function
+          - '(isExpanded: boolean) => void'
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Splitter.ISplitterOptions.toggleButtonCollapsedTooltip
     name: toggleButtonCollapsedTooltip

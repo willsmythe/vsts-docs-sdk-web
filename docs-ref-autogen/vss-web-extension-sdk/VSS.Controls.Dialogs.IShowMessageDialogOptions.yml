@@ -50,10 +50,10 @@ items:
       can be used to get a value from UI in the dialog before it is removed from
       the DOM.
     syntax:
-      content: function beforeClose
+      content: '(button: IMessageDialogButton) => void beforeClose'
       return:
         type:
-          - function
+          - '(button: IMessageDialogButton) => void'
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Dialogs.IShowMessageDialogOptions.buttons
     name: buttons

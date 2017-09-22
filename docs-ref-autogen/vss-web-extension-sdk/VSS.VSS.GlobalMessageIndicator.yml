@@ -34,7 +34,7 @@ items:
       vss-web-extension-sdk.VSS.VSS.GlobalMessageIndicator.updateGlobalMessageIfEmpty
     name: >-
       updateGlobalMessageIfEmpty(message: string, messageLevel?: string,
-      customIcon?: string, onDismiss?: function, position?:
+      customIcon?: string, onDismiss?: () => void, position?:
       GlobalMessagePosition)
     children: []
     langs:
@@ -43,7 +43,7 @@ items:
     syntax:
       content: >-
         function updateGlobalMessageIfEmpty(message: string, messageLevel?:
-        string, customIcon?: string, onDismiss?: function, position?:
+        string, customIcon?: string, onDismiss?: () => void, position?:
         GlobalMessagePosition)
       parameters:
         - id: message
@@ -62,7 +62,7 @@ items:
           optional: true
         - id: onDismiss
           type:
-            - function
+            - () => void
           description: ''
           optional: true
         - id: position

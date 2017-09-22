@@ -142,10 +142,10 @@ items:
       When a mouseover event is received, call this function. If it returns
       false, ignore the event.
     syntax:
-      content: function mouseEventFilter
+      content: '(e: JQueryEventObject) => boolean mouseEventFilter'
       return:
         type:
-          - function
+          - '(e: JQueryEventObject) => boolean'
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.PopupContent.IPopupContentControlOptions.mouseLeftOffsetPixels
     name: mouseLeftOffsetPixels

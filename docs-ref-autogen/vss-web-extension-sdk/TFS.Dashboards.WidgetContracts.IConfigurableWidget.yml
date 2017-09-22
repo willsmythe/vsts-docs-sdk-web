@@ -35,7 +35,7 @@ items:
        @param {WidgetSettings} the latest widget settings as available from the configuration view for the widget.
        @returns object wrapped in a promise that encapsulates the success of this operation.
     syntax:
-      content: function reload
+      content: '(newWidgetSettings: WidgetSettings) => IPromise<WidgetStatus> reload'
       return:
         type:
-          - function
+          - '(newWidgetSettings: WidgetSettings) => IPromise<WidgetStatus>'

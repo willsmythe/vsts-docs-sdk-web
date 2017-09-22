@@ -84,10 +84,14 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function register
+      content: >-
+        (callback: IResultCallback, errorCallback: IErrorCallback, data: any) =>
+        number register
       return:
         type:
-          - function
+          - >-
+            (callback: IResultCallback, errorCallback: IErrorCallback, data:
+            any) => number
   - uid: vss-web-extension-sdk.VSS.VSS.IQueueCallbacksResult.unregister
     name: unregister
     fullName: unregister
@@ -97,7 +101,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function unregister
+      content: '(cookie: number) => void unregister'
       return:
         type:
-          - function
+          - '(cookie: number) => void'

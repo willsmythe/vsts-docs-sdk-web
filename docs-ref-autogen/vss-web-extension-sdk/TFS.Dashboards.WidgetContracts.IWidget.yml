@@ -37,10 +37,12 @@ items:
       The framework calls this method to determine if the widget should be
       disabled for users with stakeholder license
     syntax:
-      content: function disableWidgetForStakeholders
+      content: >-
+        (widgetSettings: WidgetSettings) => IPromise<boolean>
+        disableWidgetForStakeholders
       return:
         type:
-          - function
+          - '(widgetSettings: WidgetSettings) => IPromise<boolean>'
   - uid: vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidget.lightbox
     name: lightbox
     fullName: lightbox
@@ -55,10 +57,14 @@ items:
        @returns object wrapped in a promise that encapsulates the success of this operation.
                when this calls are completed and the experience is done loading.
     syntax:
-      content: function lightbox
+      content: >-
+        (widgetSettings: WidgetSettings, lightboxSize: Size) =>
+        IPromise<WidgetStatus> lightbox
       return:
         type:
-          - function
+          - >-
+            (widgetSettings: WidgetSettings, lightboxSize: Size) =>
+            IPromise<WidgetStatus>
   - uid: vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidget.listen
     name: listen
     fullName: listen
@@ -68,10 +74,10 @@ items:
     type: property
     summary: Listen to message from host
     syntax:
-      content: function listen
+      content: '(event: string, eventArgs: EventArgs<T>) => void listen'
       return:
         type:
-          - function
+          - '(event: string, eventArgs: EventArgs<T>) => void'
   - uid: vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidget.load
     name: load
     fullName: load
@@ -88,10 +94,10 @@ items:
        @returns object wrapped in a promise that encapsulates the success of this operation.
                when this calls are completed and the experience is done loading.
     syntax:
-      content: function load
+      content: '(widgetSettings: WidgetSettings) => IPromise<WidgetStatus> load'
       return:
         type:
-          - function
+          - '(widgetSettings: WidgetSettings) => IPromise<WidgetStatus>'
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidget.onDashboardLoaded
     name: onDashboardLoaded
@@ -104,10 +110,10 @@ items:
       Widgets manage any operations that are not necessary for initial load but
       are required for the full widget experience.
     syntax:
-      content: function onDashboardLoaded
+      content: () => void onDashboardLoaded
       return:
         type:
-          - function
+          - () => void
   - uid: vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidget.preload
     name: preload
     fullName: preload
@@ -123,7 +129,7 @@ items:
        @returns object wrapped in a promise that encapsulates the success of this operation.
                when this calls are completed and the experience is done loading.
     syntax:
-      content: function preload
+      content: '(widgetSettings: WidgetSettings) => IPromise<WidgetStatus> preload'
       return:
         type:
-          - function
+          - '(widgetSettings: WidgetSettings) => IPromise<WidgetStatus>'

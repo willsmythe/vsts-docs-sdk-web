@@ -43,10 +43,10 @@ items:
       It is important to have atleast one call back, since that's how an
       extension can get information about the current release.
     syntax:
-      content: function onReleaseChanged
+      content: '(handler: (release: Release) => void) => void onReleaseChanged'
       return:
         type:
-          - function
+          - '(handler: (release: Release) => void) => void'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.ExtensionContracts.IReleaseViewExtensionConfig.onViewDisplayed
     name: onViewDisplayed
@@ -59,10 +59,10 @@ items:
       Optional, If needed, this callback will be called when this particular
       extension is selected/displayed
     syntax:
-      content: function onViewDisplayed
+      content: '(onDisplayedCallBack: () => void) => void onViewDisplayed'
       return:
         type:
-          - function
+          - '(onDisplayedCallBack: () => void) => void'
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.ExtensionContracts.IReleaseViewExtensionConfig.selectTab
     name: selectTab
@@ -75,7 +75,7 @@ items:
       Optional, for a given tab id, which can be contribution id,
       the corresponding tab is selected if the tab is visible.
     syntax:
-      content: function selectTab
+      content: '(tabId: string) => void selectTab'
       return:
         type:
-          - function
+          - '(tabId: string) => void'

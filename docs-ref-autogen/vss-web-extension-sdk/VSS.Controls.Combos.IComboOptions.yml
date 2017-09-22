@@ -106,10 +106,10 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function blur
+      content: '(e: JQueryEventObject) => any blur'
       return:
         type:
-          - function
+          - '(e: JQueryEventObject) => any'
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.change
     name: change
     fullName: change
@@ -119,10 +119,10 @@ items:
     type: property
     summary: Called when the text of the combo changes.
     syntax:
-      content: function change
+      content: () => any change
       return:
         type:
-          - function
+          - () => any
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.compareInputToItem
     name: compareInputToItem
     fullName: compareInputToItem
@@ -142,10 +142,12 @@ items:
       Parameter matchPartial determines if the input text is to be compared with
       full or part of the item text
     syntax:
-      content: function compareInputToItem
+      content: >-
+        (item: any, textInput: string, matchPartial?: boolean) => number
+        compareInputToItem
       return:
         type:
-          - function
+          - '(item: any, textInput: string, matchPartial?: boolean) => number'
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.cssClass
     name: cssClass
     fullName: cssClass
@@ -212,10 +214,10 @@ items:
       Called when the drop popup hides.
       Return true to close drop popup.
     syntax:
-      content: function dropHide
+      content: '(dropPopup: BaseComboDropPopup) => boolean dropHide'
       return:
         type:
-          - function
+          - '(dropPopup: BaseComboDropPopup) => boolean'
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.dropOptions
     name: dropOptions
     fullName: dropOptions
@@ -292,10 +294,10 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function focus
+      content: '(e: JQueryEventObject) => any focus'
       return:
         type:
-          - function
+          - '(e: JQueryEventObject) => any'
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.getItemText
     name: getItemText
     fullName: getItemText
@@ -305,10 +307,10 @@ items:
     type: property
     summary: Override getItemText from datasource in combos
     syntax:
-      content: function getItemText
+      content: '(item: any) => string getItemText'
       return:
         type:
-          - function
+          - '(item: any) => string'
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.iconCss
     name: iconCss
     fullName: iconCss
@@ -346,10 +348,10 @@ items:
       Called when selected item changes. Argument is the index of the selected
       item.
     syntax:
-      content: function indexChanged
+      content: '(index: number) => void indexChanged'
       return:
         type:
-          - function
+          - '(index: number) => void'
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.inputCss
     name: inputCss
     fullName: inputCss
@@ -440,10 +442,10 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function onKeyDown
+      content: '(e: JQueryEventObject) => any onKeyDown'
       return:
         type:
-          - function
+          - '(e: JQueryEventObject) => any'
   - uid: vss-web-extension-sdk.VSS.Controls.Combos.IComboOptions.placeholderText
     name: placeholderText
     fullName: placeholderText

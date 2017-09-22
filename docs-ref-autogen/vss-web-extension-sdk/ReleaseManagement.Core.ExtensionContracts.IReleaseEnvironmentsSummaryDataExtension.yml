@@ -32,7 +32,9 @@ items:
       Required if reacting to the current release. RM will call this function
       whenever it paints environments summary section for a given release.
     syntax:
-      content: function onReleaseChanged
+      content: >-
+        (release: Release) => IPromise<[key: number]: IContributionHtmlData>
+        onReleaseChanged
       return:
         type:
-          - function
+          - '(release: Release) => IPromise<[key: number]: IContributionHtmlData>'

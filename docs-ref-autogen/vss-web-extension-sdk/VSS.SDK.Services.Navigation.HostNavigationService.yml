@@ -147,17 +147,17 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.onHashChanged
-    name: 'onHashChanged(callback: function)'
+    name: 'onHashChanged(callback: (hash: string) => void)'
     children: []
     langs:
       - typeScript
     summary: Add a callback to be invoked each time the hash navigation has changed
     syntax:
-      content: 'function onHashChanged(callback: function)'
+      content: 'function onHashChanged(callback: (hash: string) => void)'
       parameters:
         - id: callback
           type:
-            - function
+            - '(hash: string) => void'
           description: |
             Method invoked on each navigation hash change
     type: method

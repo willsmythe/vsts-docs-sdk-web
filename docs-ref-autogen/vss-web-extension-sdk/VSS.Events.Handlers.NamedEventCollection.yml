@@ -44,7 +44,7 @@ items:
       vss-web-extension-sdk.VSS.Events.Handlers.NamedEventCollection.invokeHandlers
     name: >-
       invokeHandlers(eventName: string, sender?: TSender, eventArgs?:
-      TEventArgs, handlerResultFilter?: function)
+      TEventArgs, handlerResultFilter?: (result: any) => boolean)
     children: []
     langs:
       - typeScript
@@ -52,7 +52,7 @@ items:
     syntax:
       content: >-
         function invokeHandlers(eventName: string, sender?: TSender, eventArgs?:
-        TEventArgs, handlerResultFilter?: function)
+        TEventArgs, handlerResultFilter?: (result: any) => boolean)
       parameters:
         - id: eventName
           type:
@@ -70,7 +70,7 @@ items:
           optional: true
         - id: handlerResultFilter
           type:
-            - function
+            - '(result: any) => boolean'
           description: >
             Optional callback method to be able to break out of the handler
             invocation loop based on the return value of a handler. The filter

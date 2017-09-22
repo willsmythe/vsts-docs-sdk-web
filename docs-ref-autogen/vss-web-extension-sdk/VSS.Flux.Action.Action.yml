@@ -21,17 +21,17 @@ items:
     package: vss-web-extension-sdk
     module: VSS/Flux/Action
   - uid: vss-web-extension-sdk.VSS.Flux.Action.Action.addListener
-    name: 'addListener(listener: function, context?: any)'
+    name: 'addListener(listener: (payload: T) => void, context?: any)'
     children: []
     langs:
       - typeScript
     summary: Add listener to the action
     syntax:
-      content: 'function addListener(listener: function, context?: any)'
+      content: 'function addListener(listener: (payload: T) => void, context?: any)'
       parameters:
         - id: listener
           type:
-            - function
+            - '(payload: T) => void'
           description: Listener to add
         - id: context
           type:
@@ -54,17 +54,17 @@ items:
           description: ''
     type: method
   - uid: vss-web-extension-sdk.VSS.Flux.Action.Action.removeListener
-    name: 'removeListener(listener: function)'
+    name: 'removeListener(listener: (payload: T) => void)'
     children: []
     langs:
       - typeScript
     summary: Remove listener from the action
     syntax:
-      content: 'function removeListener(listener: function)'
+      content: 'function removeListener(listener: (payload: T) => void)'
       parameters:
         - id: listener
           type:
-            - function
+            - '(payload: T) => void'
           description: |
             Listener to remove
     type: method

@@ -54,10 +54,10 @@ items:
     type: property
     summary: Callback to fetch more items
     syntax:
-      content: function fetchMoreItems
+      content: () => void fetchMoreItems
       return:
         type:
-          - function
+          - () => void
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.Controls.ISimpleCommitHistoryListOptions.isHeaderVisible
     name: isHeaderVisible
@@ -96,7 +96,7 @@ items:
     type: property
     summary: Callback to be invoked when the scenario is completed
     syntax:
-      content: function onScenarioComplete
+      content: () => void onScenarioComplete
       return:
         type:
-          - function
+          - () => void

@@ -68,10 +68,10 @@ items:
               Null scope means no filtering will take place on entities, whereas empty scope means no entities would be returned.
               So an empty FilterByScope will result in no search being issued.
     syntax:
-      content: function getFilterByScope
+      content: () => FilterByScope getFilterByScope
       return:
         type:
-          - function
+          - () => FilterByScope
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Services.IIdentityServiceOptions.httpClient
     name: httpClient

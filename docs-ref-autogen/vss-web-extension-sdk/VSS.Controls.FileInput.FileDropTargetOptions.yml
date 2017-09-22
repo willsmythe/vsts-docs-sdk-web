@@ -35,10 +35,10 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function dragEnterCallback
+      content: '(e: JQueryEventObject) => boolean dragEnterCallback'
       return:
         type:
-          - function
+          - '(e: JQueryEventObject) => boolean'
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FileInput.FileDropTargetOptions.dragLeaveCallback
     name: dragLeaveCallback
@@ -49,10 +49,10 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function dragLeaveCallback
+      content: '(e: JQueryEventObject) => boolean dragLeaveCallback'
       return:
         type:
-          - function
+          - '(e: JQueryEventObject) => boolean'
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FileInput.FileDropTargetOptions.dragOverCssClass
     name: dragOverCssClass
@@ -77,7 +77,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function filesDroppedCallback
+      content: '(fileList: FileList) => any filesDroppedCallback'
       return:
         type:
-          - function
+          - '(fileList: FileList) => any'

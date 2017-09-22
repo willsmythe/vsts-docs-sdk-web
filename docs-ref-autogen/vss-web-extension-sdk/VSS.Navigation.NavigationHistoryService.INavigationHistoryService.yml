@@ -180,7 +180,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.NavigationHistoryService.INavigationHistoryService.subscribe
-    name: 'subscribe(listener: function)'
+    name: 'subscribe(listener: (event: INavigationPopStateEvent) => void)'
     children: []
     langs:
       - typeScript
@@ -190,11 +190,11 @@ items:
 
       has occurred to a push-state entry that this service is managing.
     syntax:
-      content: 'function subscribe(listener: function)'
+      content: 'function subscribe(listener: (event: INavigationPopStateEvent) => void)'
       parameters:
         - id: listener
           type:
-            - function
+            - '(event: INavigationPopStateEvent) => void'
           description: |
             Method invoked when a forward or back navigation has occurred.
       return:
@@ -203,17 +203,19 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.NavigationHistoryService.INavigationHistoryService.unsubscribe
-    name: 'unsubscribe(listener: function)'
+    name: 'unsubscribe(listener: (event: INavigationPopStateEvent) => void)'
     children: []
     langs:
       - typeScript
     summary: Remove a pop-state listener.
     syntax:
-      content: 'function unsubscribe(listener: function)'
+      content: >-
+        function unsubscribe(listener: (event: INavigationPopStateEvent) =>
+        void)
       parameters:
         - id: listener
           type:
-            - function
+            - '(event: INavigationPopStateEvent) => void'
           description: |
             Listener to remove.
       return:

@@ -39,10 +39,12 @@ items:
       The options object passed to this function will have titleTarget and
       titleText set to the correct values to use.
     syntax:
-      content: function addTooltipDelegate
+      content: >-
+        (e: MouseEvent, options: ITooltipIfOverflowOptions) => void
+        addTooltipDelegate
       return:
         type:
-          - function
+          - '(e: MouseEvent, options: ITooltipIfOverflowOptions) => void'
   - uid: vss-web-extension-sdk.VSS.Utils.UI.ITooltipIfOverflowOptions.eventSource
     name: eventSource
     fullName: eventSource
@@ -68,10 +70,12 @@ items:
     type: property
     summary: Function that removes the tooltip on mouseleave or blur
     syntax:
-      content: function removeTooltipDelegate
+      content: >-
+        (e: MouseEvent, options: ITooltipIfOverflowOptions) => void
+        removeTooltipDelegate
       return:
         type:
-          - function
+          - '(e: MouseEvent, options: ITooltipIfOverflowOptions) => void'
   - uid: vss-web-extension-sdk.VSS.Utils.UI.ITooltipIfOverflowOptions.titleTarget
     name: titleTarget
     fullName: titleTarget

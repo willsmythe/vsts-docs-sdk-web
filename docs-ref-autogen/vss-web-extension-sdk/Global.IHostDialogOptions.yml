@@ -105,10 +105,10 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function getDialogResult
+      content: () => any getDialogResult
       return:
         type:
-          - function
+          - () => any
   - uid: vss-web-extension-sdk.IHostDialogOptions.height
     name: height
     fullName: height
@@ -144,10 +144,10 @@ items:
     type: property
     summary: ''
     syntax:
-      content: function okCallback
+      content: '(result: any) => void okCallback'
       return:
         type:
-          - function
+          - '(result: any) => void'
   - uid: vss-web-extension-sdk.IHostDialogOptions.okText
     name: okText
     fullName: okText
