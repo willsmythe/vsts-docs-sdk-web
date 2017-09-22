@@ -29,9 +29,7 @@ items:
     module: ReleaseManagement/Core/RestClient
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.RestClient.ReleaseHttpClient2_3.getRelease
-    name: >-
-      getRelease(project: string, releaseId: number, includeAllApprovals?:
-      boolean, propertyFilters?: string[])
+    name: getRelease
     children: []
     langs:
       - typeScript
@@ -66,15 +64,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.RestClient.ReleaseHttpClient2_3.getReleases
-    name: >-
-      getReleases(project: string, definitionId?: number,
-      definitionEnvironmentId?: number, searchText?: string, createdBy?: string,
-      statusFilter?: ReleaseStatus, environmentStatusFilter?: number,
-      minCreatedTime?: Date, maxCreatedTime?: Date, queryOrder?:
-      ReleaseQueryOrder, top?: number, continuationToken?: number, expand?:
-      ReleaseExpands, artifactTypeId?: string, sourceId?: string,
-      artifactVersionId?: string, sourceBranchFilter?: string, isDeleted?:
-      boolean, tagFilter?: string[], propertyFilters?: string[])
+    name: getReleases
     children: []
     langs:
       - typeScript
@@ -212,9 +202,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.RestClient.ReleaseHttpClient2_3.constructor
-    name: >-
-      ReleaseHttpClient2_3(rootRequestPath: string, options?:
-      IVssHttpClientOptions)
+    name: ReleaseHttpClient2_3
     children: []
     langs:
       - typeScript

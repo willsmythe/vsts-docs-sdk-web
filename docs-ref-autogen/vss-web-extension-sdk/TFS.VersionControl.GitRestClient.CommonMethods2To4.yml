@@ -111,9 +111,7 @@ items:
     module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.constructor
-    name: >-
-      CommonMethods2To4(rootRequestPath: string, options?:
-      IVssHttpClientOptions)
+    name: CommonMethods2To4
     children: []
     langs:
       - typeScript
@@ -135,10 +133,7 @@ items:
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.createPullRequest
-    name: >-
-      createPullRequest(gitPullRequestToCreate: GitPullRequest, repositoryId:
-      string, project?: string, linkBranchWorkItems?: boolean,
-      linkCommitWorkItems?: boolean, supportsIterations?: boolean)
+    name: createPullRequest
     children: []
     langs:
       - typeScript
@@ -184,9 +179,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.createPullRequestReviewer
-    name: >-
-      createPullRequestReviewer(reviewer: IdentityRefWithVote, repositoryId:
-      string, pullRequestId: number, reviewerId: string, project?: string)
+    name: createPullRequestReviewer
     children: []
     langs:
       - typeScript
@@ -226,9 +219,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.createPullRequestReviewers
-    name: >-
-      createPullRequestReviewers(reviewers: IdentityRef[], repositoryId: string,
-      pullRequestId: number, project?: string)
+    name: createPullRequestReviewers
     children: []
     langs:
       - typeScript
@@ -262,7 +253,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.createPush
-    name: 'createPush(push: GitPush, repositoryId: string, project?: string)'
+    name: createPush
     children: []
     langs:
       - typeScript
@@ -294,7 +285,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.createRepository
-    name: 'createRepository(gitRepositoryToCreate: GitRepository, project?: string)'
+    name: createRepository
     children: []
     langs:
       - typeScript
@@ -320,9 +311,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.deletePullRequestReviewer
-    name: >-
-      deletePullRequestReviewer(repositoryId: string, pullRequestId: number,
-      reviewerId: string, project?: string)
+    name: deletePullRequestReviewer
     children: []
     langs:
       - typeScript
@@ -355,7 +344,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.deleteRepository
-    name: 'deleteRepository(repositoryId: string, project?: string)'
+    name: deleteRepository
     children: []
     langs:
       - typeScript
@@ -378,9 +367,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getBlob
-    name: >-
-      getBlob(repositoryId: string, sha1: string, project?: string, download?:
-      boolean, fileName?: string)
+    name: getBlob
     children: []
     langs:
       - typeScript
@@ -420,9 +407,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getBlobContent
-    name: >-
-      getBlobContent(repositoryId: string, sha1: string, project?: string,
-      download?: boolean, fileName?: string)
+    name: getBlobContent
     children: []
     langs:
       - typeScript
@@ -461,9 +446,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getBlobsZip
-    name: >-
-      getBlobsZip(blobIds: string[], repositoryId: string, project?: string,
-      filename?: string)
+    name: getBlobsZip
     children: []
     langs:
       - typeScript
@@ -497,9 +480,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getBlobZip
-    name: >-
-      getBlobZip(repositoryId: string, sha1: string, project?: string,
-      download?: boolean, fileName?: string)
+    name: getBlobZip
     children: []
     langs:
       - typeScript
@@ -538,9 +519,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getBranch
-    name: >-
-      getBranch(repositoryId: string, name: string, project?: string,
-      baseVersionDescriptor?: GitVersionDescriptor)
+    name: getBranch
     children: []
     langs:
       - typeScript
@@ -576,9 +555,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getBranches
-    name: >-
-      getBranches(repositoryId: string, project?: string,
-      baseVersionDescriptor?: GitVersionDescriptor)
+    name: getBranches
     children: []
     langs:
       - typeScript
@@ -610,9 +587,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getBranchStatsBatch
-    name: >-
-      getBranchStatsBatch(searchCriteria: GitQueryBranchStatsCriteria,
-      repositoryId: string, project?: string)
+    name: getBranchStatsBatch
     children: []
     langs:
       - typeScript
@@ -643,9 +618,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getChanges
-    name: >-
-      getChanges(commitId: string, repositoryId: string, project?: string, top?:
-      number, skip?: number)
+    name: getChanges
     children: []
     langs:
       - typeScript
@@ -687,9 +660,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getCommit
-    name: >-
-      getCommit(commitId: string, repositoryId: string, project?: string,
-      changeCount?: number)
+    name: getCommit
     children: []
     langs:
       - typeScript
@@ -726,11 +697,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getCommitDiffs
-    name: >-
-      getCommitDiffs(repositoryId: string, project?: string, diffCommonCommit?:
-      boolean, top?: number, skip?: number, baseVersionDescriptor?:
-      GitBaseVersionDescriptor, targetVersionDescriptor?:
-      GitTargetVersionDescriptor)
+    name: getCommitDiffs
     children: []
     langs:
       - typeScript
@@ -785,9 +752,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getCommits
-    name: >-
-      getCommits(repositoryId: string, searchCriteria: GitQueryCommitsCriteria,
-      project?: string, skip?: number, top?: number)
+    name: getCommits
     children: []
     langs:
       - typeScript
@@ -830,10 +795,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getCommitsBatch
-    name: >-
-      getCommitsBatch(searchCriteria: GitQueryCommitsCriteria, repositoryId:
-      string, project?: string, skip?: number, top?: number, includeStatuses?:
-      boolean)
+    name: getCommitsBatch
     children: []
     langs:
       - typeScript
@@ -882,11 +844,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getItem
-    name: >-
-      getItem(repositoryId: string, path: string, project?: string, scopePath?:
-      string, recursionLevel?: VersionControlRecursionType,
-      includeContentMetadata?: boolean, latestProcessedChange?: boolean,
-      download?: boolean, versionDescriptor?: GitVersionDescriptor)
+    name: getItem
     children: []
     langs:
       - typeScript
@@ -953,11 +911,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getItemContent
-    name: >-
-      getItemContent(repositoryId: string, path: string, project?: string,
-      scopePath?: string, recursionLevel?: VersionControlRecursionType,
-      includeContentMetadata?: boolean, latestProcessedChange?: boolean,
-      download?: boolean, versionDescriptor?: GitVersionDescriptor)
+    name: getItemContent
     children: []
     langs:
       - typeScript
@@ -1024,11 +978,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getItems
-    name: >-
-      getItems(repositoryId: string, project?: string, scopePath?: string,
-      recursionLevel?: VersionControlRecursionType, includeContentMetadata?:
-      boolean, latestProcessedChange?: boolean, download?: boolean,
-      includeLinks?: boolean, versionDescriptor?: GitVersionDescriptor)
+    name: getItems
     children: []
     langs:
       - typeScript
@@ -1097,9 +1047,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getItemsBatch
-    name: >-
-      getItemsBatch(requestData: GitItemRequestData, repositoryId: string,
-      project?: string)
+    name: getItemsBatch
     children: []
     langs:
       - typeScript
@@ -1132,11 +1080,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getItemText
-    name: >-
-      getItemText(repositoryId: string, path: string, project?: string,
-      scopePath?: string, recursionLevel?: VersionControlRecursionType,
-      includeContentMetadata?: boolean, latestProcessedChange?: boolean,
-      download?: boolean, versionDescriptor?: GitVersionDescriptor)
+    name: getItemText
     children: []
     langs:
       - typeScript
@@ -1203,11 +1147,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getItemZip
-    name: >-
-      getItemZip(repositoryId: string, path: string, project?: string,
-      scopePath?: string, recursionLevel?: VersionControlRecursionType,
-      includeContentMetadata?: boolean, latestProcessedChange?: boolean,
-      download?: boolean, versionDescriptor?: GitVersionDescriptor)
+    name: getItemZip
     children: []
     langs:
       - typeScript
@@ -1274,10 +1214,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPullRequest
-    name: >-
-      getPullRequest(repositoryId: string, pullRequestId: number, project?:
-      string, maxCommentLength?: number, skip?: number, top?: number,
-      includeCommits?: boolean, includeWorkItemRefs?: boolean)
+    name: getPullRequest
     children: []
     langs:
       - typeScript
@@ -1333,9 +1270,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPullRequestReviewer
-    name: >-
-      getPullRequestReviewer(repositoryId: string, pullRequestId: number,
-      reviewerId: string, project?: string)
+    name: getPullRequestReviewer
     children: []
     langs:
       - typeScript
@@ -1369,9 +1304,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPullRequestReviewers
-    name: >-
-      getPullRequestReviewers(repositoryId: string, pullRequestId: number,
-      project?: string)
+    name: getPullRequestReviewers
     children: []
     langs:
       - typeScript
@@ -1401,10 +1334,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPullRequests
-    name: >-
-      getPullRequests(repositoryId: string, searchCriteria:
-      GitPullRequestSearchCriteria, project?: string, maxCommentLength?: number,
-      skip?: number, top?: number)
+    name: getPullRequests
     children: []
     langs:
       - typeScript
@@ -1451,10 +1381,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPullRequestsByProject
-    name: >-
-      getPullRequestsByProject(project: string, searchCriteria:
-      GitPullRequestSearchCriteria, maxCommentLength?: number, skip?: number,
-      top?: number)
+    name: getPullRequestsByProject
     children: []
     langs:
       - typeScript
@@ -1496,9 +1423,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPullRequestWorkItems
-    name: >-
-      getPullRequestWorkItems(repositoryId: string, pullRequestId: number,
-      project?: string)
+    name: getPullRequestWorkItems
     children: []
     langs:
       - typeScript
@@ -1528,9 +1453,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPush
-    name: >-
-      getPush(repositoryId: string, pushId: number, project?: string,
-      includeCommits?: number, includeRefUpdates?: boolean)
+    name: getPush
     children: []
     langs:
       - typeScript
@@ -1572,9 +1495,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPushCommits
-    name: >-
-      getPushCommits(repositoryId: string, pushId: number, project?: string,
-      top?: number, skip?: number, includeLinks?: boolean)
+    name: getPushCommits
     children: []
     langs:
       - typeScript
@@ -1621,9 +1542,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPushes
-    name: >-
-      getPushes(repositoryId: string, project?: string, skip?: number, top?:
-      number, searchCriteria?: GitPushSearchCriteria)
+    name: getPushes
     children: []
     langs:
       - typeScript
@@ -1667,10 +1586,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getRefs
-    name: >-
-      getRefs(repositoryId: string, project?: string, filter?: string,
-      includeLinks?: boolean, includeStatuses?: boolean, includeMyBranches?:
-      boolean, latestStatusesOnly?: boolean, peelTags?: boolean)
+    name: getRefs
     children: []
     langs:
       - typeScript
@@ -1739,9 +1655,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getRepositories
-    name: >-
-      getRepositories(project?: string, includeLinks?: boolean, includeAllUrls?:
-      boolean)
+    name: getRepositories
     children: []
     langs:
       - typeScript
@@ -1773,7 +1687,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getRepository
-    name: 'getRepository(repositoryId: string, project?: string)'
+    name: getRepository
     children: []
     langs:
       - typeScript
@@ -1797,9 +1711,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getTree
-    name: >-
-      getTree(repositoryId: string, sha1: string, project?: string, projectId?:
-      string, recursive?: boolean, fileName?: string)
+    name: getTree
     children: []
     langs:
       - typeScript
@@ -1844,9 +1756,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getTreeZip
-    name: >-
-      getTreeZip(repositoryId: string, sha1: string, project?: string,
-      projectId?: string, recursive?: boolean, fileName?: string)
+    name: getTreeZip
     children: []
     langs:
       - typeScript
@@ -1904,9 +1814,7 @@ items:
           - string
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.updatePullRequest
-    name: >-
-      updatePullRequest(gitPullRequestToUpdate: GitPullRequest, repositoryId:
-      string, pullRequestId: number, project?: string)
+    name: updatePullRequest
     children: []
     langs:
       - typeScript
@@ -1940,9 +1848,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.updateRef
-    name: >-
-      updateRef(newRefInfo: GitRefUpdate, repositoryId: string, filter: string,
-      project?: string, projectId?: string)
+    name: updateRef
     children: []
     langs:
       - typeScript
@@ -1981,9 +1887,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.updateRefs
-    name: >-
-      updateRefs(refUpdates: GitRefUpdate[], repositoryId: string, project?:
-      string, projectId?: string)
+    name: updateRefs
     children: []
     langs:
       - typeScript
@@ -2020,9 +1924,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.updateRepository
-    name: >-
-      updateRepository(newRepositoryInfo: GitRepository, repositoryId: string,
-      project?: string)
+    name: updateRepository
     children: []
     langs:
       - typeScript

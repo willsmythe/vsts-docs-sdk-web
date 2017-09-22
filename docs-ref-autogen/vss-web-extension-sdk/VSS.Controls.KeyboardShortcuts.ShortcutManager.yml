@@ -41,7 +41,7 @@ items:
     module: VSS/Controls/KeyboardShortcuts
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.ShortcutManager.getGlobalCombos
-    name: getGlobalCombos()
+    name: getGlobalCombos
     children: []
     langs:
       - typeScript
@@ -52,7 +52,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.ShortcutManager.getInstance
-    name: getInstance()
+    name: getInstance
     children: []
     langs:
       - typeScript
@@ -67,7 +67,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.ShortcutManager.getShortcutGroups
-    name: getShortcutGroups()
+    name: getShortcutGroups
     children: []
     langs:
       - typeScript
@@ -78,9 +78,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.ShortcutManager.registerShortcut
-    name: >-
-      registerShortcut(group: string, combo: string, description: string,
-      action: KeyboardAction, allowPropagation?: boolean)
+    name: registerShortcut
     children: []
     langs:
       - typeScript
@@ -118,17 +116,15 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.ShortcutManager.registerShortcut_1
-    name: >-
-      registerShortcut(group: string, combo: string, description: string,
-      action: KeyboardAction, allowPropagation?: boolean)
+    name: registerShortcut
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
       content: >-
-        function registerShortcut(group: string, combo: string, description:
-        string, action: KeyboardAction, allowPropagation?: boolean)
+        function registerShortcut(group: string, combo: string, options:
+        IShortcutOptions)
       parameters:
         - id: group
           type:
@@ -138,19 +134,11 @@ items:
           type:
             - string
           description: ''
-        - id: description
+        - id: options
           type:
-            - string
+            - >-
+              @vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutOptions
           description: ''
-        - id: action
-          type:
-            - KeyboardAction
-          description: ''
-        - id: allowPropagation
-          type:
-            - boolean
-          description: ''
-          optional: true
       return:
         type:
           - >-
@@ -158,9 +146,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.ShortcutManager.registerShortcuts
-    name: >-
-      registerShortcuts(group: string, combos: string[], description: string,
-      action: KeyboardAction, allowPropagation?: boolean)
+    name: registerShortcuts
     children: []
     langs:
       - typeScript
@@ -198,17 +184,15 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.ShortcutManager.registerShortcuts_1
-    name: >-
-      registerShortcuts(group: string, combos: string[], description: string,
-      action: KeyboardAction, allowPropagation?: boolean)
+    name: registerShortcuts
     children: []
     langs:
       - typeScript
     summary: ''
     syntax:
       content: >-
-        function registerShortcuts(group: string, combos: string[], description:
-        string, action: KeyboardAction, allowPropagation?: boolean)
+        function registerShortcuts(group: string, combos: string[], options:
+        IShortcutOptions)
       parameters:
         - id: group
           type:
@@ -218,19 +202,11 @@ items:
           type:
             - 'string[]'
           description: ''
-        - id: description
+        - id: options
           type:
-            - string
+            - >-
+              @vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutOptions
           description: ''
-        - id: action
-          type:
-            - KeyboardAction
-          description: ''
-        - id: allowPropagation
-          type:
-            - boolean
-          description: ''
-          optional: true
       return:
         type:
           - >-
@@ -238,7 +214,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.ShortcutManager.removeShortcutGroup
-    name: 'removeShortcutGroup(group: string)'
+    name: removeShortcutGroup
     children: []
     langs:
       - typeScript
@@ -253,7 +229,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.ShortcutManager.constructor
-    name: ShortcutManager()
+    name: ShortcutManager
     children: []
     langs:
       - typeScript
@@ -264,7 +240,7 @@ items:
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.ShortcutManager.showShortcutDialog
-    name: showShortcutDialog()
+    name: showShortcutDialog
     children: []
     langs:
       - typeScript
@@ -275,7 +251,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.ShortcutManager.unRegisterShortcut
-    name: 'unRegisterShortcut(group: string, combo: string)'
+    name: unRegisterShortcut
     children: []
     langs:
       - typeScript

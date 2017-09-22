@@ -27,7 +27,7 @@ items:
     package: vss-web-extension-sdk
     module: XDM
   - uid: vss-web-extension-sdk.XDM.XDMChannel.error
-    name: 'error(data: any, errorObj: any)'
+    name: error
     children: []
     langs:
       - typeScript
@@ -45,7 +45,7 @@ items:
           description: ''
     type: method
   - uid: vss-web-extension-sdk.XDM.XDMChannel.getObjectRegistry
-    name: getObjectRegistry()
+    name: getObjectRegistry
     children: []
     langs:
       - typeScript
@@ -61,7 +61,7 @@ items:
           - '@vss-web-extension-sdk.IXDMObjectRegistry'
     type: method
   - uid: vss-web-extension-sdk.XDM.XDMChannel.getRemoteObjectProxy
-    name: 'getRemoteObjectProxy<T>(instanceId: string, contextData?: Object)'
+    name: getRemoteObjectProxy
     children: []
     langs:
       - typeScript
@@ -89,10 +89,7 @@ items:
           - '@vss-web-extension-sdk.IPromise<T>'
     type: method
   - uid: vss-web-extension-sdk.XDM.XDMChannel.invokeRemoteMethod
-    name: >-
-      invokeRemoteMethod<T>(methodName: string, instanceId: string, params?:
-      any[], instanceContextData?: Object, serializationSettings?:
-      ISerializationSettings)
+    name: invokeRemoteMethod
     children: []
     langs:
       - typeScript
@@ -136,7 +133,7 @@ items:
           - '@vss-web-extension-sdk.IPromise<T>'
     type: method
   - uid: vss-web-extension-sdk.XDM.XDMChannel.onMessage
-    name: 'onMessage(data: any, origin: string)'
+    name: onMessage
     children: []
     langs:
       - typeScript
@@ -159,7 +156,7 @@ items:
           - boolean
     type: method
   - uid: vss-web-extension-sdk.XDM.XDMChannel.owns
-    name: 'owns(source: Window, origin: string, data: any)'
+    name: owns
     children: []
     langs:
       - typeScript
@@ -184,7 +181,7 @@ items:
           - boolean
     type: method
   - uid: vss-web-extension-sdk.XDM.XDMChannel.constructor
-    name: 'XDMChannel(postToWindow: Window, targetOrigin?: string)'
+    name: XDMChannel
     children: []
     langs:
       - typeScript

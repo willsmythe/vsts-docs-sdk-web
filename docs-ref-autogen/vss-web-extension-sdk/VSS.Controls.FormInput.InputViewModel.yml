@@ -73,7 +73,7 @@ items:
     module: VSS/Controls/FormInput
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addDeleteCallback
-    name: 'addDeleteCallback(callback: () => void, addToFront?: boolean)'
+    name: addDeleteCallback
     children: []
     langs:
       - typeScript
@@ -93,9 +93,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addDependenciesSatisfiedCallback
-    name: >-
-      addDependenciesSatisfiedCallback(callback: (satisfied: boolean) => void,
-      addToFront?: boolean)
+    name: addDependenciesSatisfiedCallback
     children: []
     langs:
       - typeScript
@@ -116,9 +114,7 @@ items:
           optional: true
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addDependency
-    name: >-
-      addDependency(dependency: InputViewModelDelegate<boolean>, addToFront?:
-      boolean)
+    name: addDependency
     children: []
     langs:
       - typeScript
@@ -141,7 +137,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addValidityFollower
-    name: 'addValidityFollower(follower: InputViewModel, addToFront?: boolean)'
+    name: addValidityFollower
     children: []
     langs:
       - typeScript
@@ -163,9 +159,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.addValueChangedCallback
-    name: >-
-      addValueChangedCallback(callback: InputViewModelDelegate<void>,
-      addToFront?: boolean)
+    name: addValueChangedCallback
     children: []
     langs:
       - typeScript
@@ -188,7 +182,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.checkDependenciesSatisfied
-    name: checkDependenciesSatisfied()
+    name: checkDependenciesSatisfied
     children: []
     langs:
       - typeScript
@@ -202,7 +196,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.deleteViewModel
-    name: deleteViewModel()
+    name: deleteViewModel
     children: []
     langs:
       - typeScript
@@ -212,7 +206,7 @@ items:
       parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.dependsOn
-    name: 'dependsOn(inputValueId: string)'
+    name: dependsOn
     children: []
     langs:
       - typeScript
@@ -230,7 +224,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getDependenciesSatisfied
-    name: getDependenciesSatisfied()
+    name: getDependenciesSatisfied
     children: []
     langs:
       - typeScript
@@ -243,7 +237,7 @@ items:
           - boolean
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getId
-    name: getId()
+    name: getId
     children: []
     langs:
       - typeScript
@@ -257,7 +251,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getInputDescriptor
-    name: getInputDescriptor()
+    name: getInputDescriptor
     children: []
     langs:
       - typeScript
@@ -272,7 +266,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getPossibleValueAtIndex
-    name: 'getPossibleValueAtIndex(index: number)'
+    name: getPossibleValueAtIndex
     children: []
     langs:
       - typeScript
@@ -290,7 +284,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getSelectedIndex
-    name: getSelectedIndex()
+    name: getSelectedIndex
     children: []
     langs:
       - typeScript
@@ -304,7 +298,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getValidationMessage
-    name: getValidationMessage()
+    name: getValidationMessage
     children: []
     langs:
       - typeScript
@@ -317,7 +311,7 @@ items:
           - string
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.getValue
-    name: getValue()
+    name: getValue
     children: []
     langs:
       - typeScript
@@ -331,7 +325,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.inputDependenciesSatisfied
-    name: 'inputDependenciesSatisfied(satisfied: boolean)'
+    name: inputDependenciesSatisfied
     children: []
     langs:
       - typeScript
@@ -348,14 +342,7 @@ items:
           - boolean
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.constructor
-    name: >-
-      InputViewModel(inputDescriptor: InputDescriptor, inputValue: any,
-      inputValidChangedCallback: InputViewModelDelegate<void>, blurCallback:
-      InputViewModelDelegate<void>, valueChangedCallbacks:
-      InputViewModelDelegate<void>[], valuesChangedCallback:
-      InputViewModelDelegate<void>, dependencies?:
-      InputViewModelDelegate<boolean>[], dependenciesSatisfiedCallbacks?:
-      (satisfied: boolean) => void[], deleteCallbacks?: () => void[])
+    name: InputViewModel
     children: []
     langs:
       - typeScript
@@ -418,7 +405,7 @@ items:
     type: constructor
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.invalidateOnDependencyChange
-    name: invalidateOnDependencyChange()
+    name: invalidateOnDependencyChange
     children: []
     langs:
       - typeScript
@@ -432,7 +419,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.invalidateValues
-    name: invalidateValues()
+    name: invalidateValues
     children: []
     langs:
       - typeScript
@@ -442,7 +429,7 @@ items:
       parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isDirty
-    name: isDirty()
+    name: isDirty
     children: []
     langs:
       - typeScript
@@ -455,7 +442,7 @@ items:
           - boolean
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isDropList
-    name: isDropList()
+    name: isDropList
     children: []
     langs:
       - typeScript
@@ -468,7 +455,7 @@ items:
           - boolean
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isEmpty
-    name: isEmpty()
+    name: isEmpty
     children: []
     langs:
       - typeScript
@@ -481,7 +468,7 @@ items:
           - boolean
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isRequired
-    name: isRequired()
+    name: isRequired
     children: []
     langs:
       - typeScript
@@ -494,7 +481,7 @@ items:
           - boolean
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.isValid
-    name: isValid()
+    name: isValid
     children: []
     langs:
       - typeScript
@@ -507,7 +494,7 @@ items:
           - boolean
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.onBlur
-    name: onBlur()
+    name: onBlur
     children: []
     langs:
       - typeScript
@@ -517,7 +504,7 @@ items:
       parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.refresh
-    name: refresh()
+    name: refresh
     children: []
     langs:
       - typeScript
@@ -528,7 +515,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.removeValidityFollower
-    name: 'removeValidityFollower(follower: InputViewModel)'
+    name: removeValidityFollower
     children: []
     langs:
       - typeScript
@@ -543,7 +530,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.removeValueChangedCallback
-    name: 'removeValueChangedCallback(callback: InputViewModelDelegate<void>)'
+    name: removeValueChangedCallback
     children: []
     langs:
       - typeScript
@@ -564,7 +551,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.setSelectedIndex
-    name: 'setSelectedIndex(index: number)'
+    name: setSelectedIndex
     children: []
     langs:
       - typeScript
@@ -579,7 +566,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.setValidityDelegate
-    name: 'setValidityDelegate(validityDelegate: InputViewModel)'
+    name: setValidityDelegate
     children: []
     langs:
       - typeScript
@@ -593,7 +580,7 @@ items:
           description: ''
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.setValue
-    name: 'setValue(value: any)'
+    name: setValue
     children: []
     langs:
       - typeScript
@@ -608,7 +595,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.suppressValidityChangeNotifications
-    name: 'suppressValidityChangeNotifications(suppress: boolean)'
+    name: suppressValidityChangeNotifications
     children: []
     langs:
       - typeScript
@@ -622,7 +609,7 @@ items:
           description: ''
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.updateValues
-    name: 'updateValues(values: InputValues)'
+    name: updateValues
     children: []
     langs:
       - typeScript
@@ -636,7 +623,7 @@ items:
           description: ''
     type: method
   - uid: vss-web-extension-sdk.VSS.Controls.FormInput.InputViewModel.validate
-    name: validate()
+    name: validate
     children: []
     langs:
       - typeScript

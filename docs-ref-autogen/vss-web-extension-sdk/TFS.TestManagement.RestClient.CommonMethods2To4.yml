@@ -165,7 +165,7 @@ items:
     module: TFS/TestManagement/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.addCustomFields
-    name: 'addCustomFields(newFields: CustomTestFieldDefinition[], project: string)'
+    name: addCustomFields
     children: []
     langs:
       - typeScript
@@ -191,9 +191,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.addTestCasesToSuite
-    name: >-
-      addTestCasesToSuite(project: string, planId: number, suiteId: number,
-      testCaseIds: string)
+    name: addTestCasesToSuite
     children: []
     langs:
       - typeScript
@@ -226,9 +224,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.cloneTestPlan
-    name: >-
-      cloneTestPlan(cloneRequestBody: TestPlanCloneRequest, project: string,
-      planId: number)
+    name: cloneTestPlan
     children: []
     langs:
       - typeScript
@@ -258,9 +254,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.cloneTestSuite
-    name: >-
-      cloneTestSuite(cloneRequestBody: TestSuiteCloneRequest, project: string,
-      planId: number, sourceSuiteId: number)
+    name: cloneTestSuite
     children: []
     langs:
       - typeScript
@@ -294,9 +288,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.constructor
-    name: >-
-      CommonMethods2To4(rootRequestPath: string, options?:
-      IVssHttpClientOptions)
+    name: CommonMethods2To4
     children: []
     langs:
       - typeScript
@@ -318,9 +310,7 @@ items:
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.createTestConfiguration
-    name: >-
-      createTestConfiguration(testConfiguration: TestConfiguration, project:
-      string)
+    name: createTestConfiguration
     children: []
     langs:
       - typeScript
@@ -346,7 +336,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.createTestPlan
-    name: 'createTestPlan(testPlan: PlanUpdateModel, project: string)'
+    name: createTestPlan
     children: []
     langs:
       - typeScript
@@ -370,10 +360,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.createTestResultAttachment
-    name: >-
-      createTestResultAttachment(attachmentRequestModel:
-      TestAttachmentRequestModel, project: string, runId: number,
-      testCaseResultId: number)
+    name: createTestResultAttachment
     children: []
     langs:
       - typeScript
@@ -408,7 +395,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.createTestRun
-    name: 'createTestRun(testRun: RunCreateModel, project: string)'
+    name: createTestRun
     children: []
     langs:
       - typeScript
@@ -431,9 +418,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.createTestRunAttachment
-    name: >-
-      createTestRunAttachment(attachmentRequestModel:
-      TestAttachmentRequestModel, project: string, runId: number)
+    name: createTestRunAttachment
     children: []
     langs:
       - typeScript
@@ -463,7 +448,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.createTestSession
-    name: 'createTestSession(testSession: TestSession, teamContext: TeamContext)'
+    name: createTestSession
     children: []
     langs:
       - typeScript
@@ -488,7 +473,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.createTestSettings
-    name: 'createTestSettings(testSettings: TestSettings, project: string)'
+    name: createTestSettings
     children: []
     langs:
       - typeScript
@@ -510,9 +495,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.createTestSuite
-    name: >-
-      createTestSuite(testSuite: SuiteCreateModel, project: string, planId:
-      number, suiteId: number)
+    name: createTestSuite
     children: []
     langs:
       - typeScript
@@ -546,7 +529,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.createTestVariable
-    name: 'createTestVariable(testVariable: TestVariable, project: string)'
+    name: createTestVariable
     children: []
     langs:
       - typeScript
@@ -569,7 +552,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.deleteSharedParameter
-    name: 'deleteSharedParameter(project: string, sharedParameterId: number)'
+    name: deleteSharedParameter
     children: []
     langs:
       - typeScript
@@ -593,7 +576,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.deleteSharedStep
-    name: 'deleteSharedStep(project: string, sharedStepId: number)'
+    name: deleteSharedStep
     children: []
     langs:
       - typeScript
@@ -615,7 +598,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.deleteTestConfiguration
-    name: 'deleteTestConfiguration(project: string, testConfigurationId: number)'
+    name: deleteTestConfiguration
     children: []
     langs:
       - typeScript
@@ -639,7 +622,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.deleteTestPlan
-    name: 'deleteTestPlan(project: string, planId: number)'
+    name: deleteTestPlan
     children: []
     langs:
       - typeScript
@@ -661,7 +644,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.deleteTestRun
-    name: 'deleteTestRun(project: string, runId: number)'
+    name: deleteTestRun
     children: []
     langs:
       - typeScript
@@ -683,7 +666,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.deleteTestSettings
-    name: 'deleteTestSettings(project: string, testSettingsId: number)'
+    name: deleteTestSettings
     children: []
     langs:
       - typeScript
@@ -705,7 +688,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.deleteTestSuite
-    name: 'deleteTestSuite(project: string, planId: number, suiteId: number)'
+    name: deleteTestSuite
     children: []
     langs:
       - typeScript
@@ -733,7 +716,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.deleteTestVariable
-    name: 'deleteTestVariable(project: string, testVariableId: number)'
+    name: deleteTestVariable
     children: []
     langs:
       - typeScript
@@ -755,9 +738,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getActionResults
-    name: >-
-      getActionResults(project: string, runId: number, testCaseResultId: number,
-      iterationId: number, actionPath?: string)
+    name: getActionResults
     children: []
     langs:
       - typeScript
@@ -795,9 +776,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getBugsLinkedToTestResult
-    name: >-
-      getBugsLinkedToTestResult(project: string, runId: number,
-      testCaseResultId: number)
+    name: getBugsLinkedToTestResult
     children: []
     langs:
       - typeScript
@@ -826,7 +805,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getBuildCodeCoverage
-    name: 'getBuildCodeCoverage(project: string, buildId: number, flags: number)'
+    name: getBuildCodeCoverage
     children: []
     langs:
       - typeScript
@@ -855,9 +834,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getCloneInformation
-    name: >-
-      getCloneInformation(project: string, cloneOperationId: number,
-      includeDetails?: boolean)
+    name: getCloneInformation
     children: []
     langs:
       - typeScript
@@ -887,9 +864,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getCodeCoverageSummary
-    name: >-
-      getCodeCoverageSummary(project: string, buildId: number, deltaBuildId?:
-      number)
+    name: getCodeCoverageSummary
     children: []
     langs:
       - typeScript
@@ -919,7 +894,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getPlanById
-    name: 'getPlanById(project: string, planId: number)'
+    name: getPlanById
     children: []
     langs:
       - typeScript
@@ -942,9 +917,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getPlans
-    name: >-
-      getPlans(project: string, owner?: string, skip?: number, top?: number,
-      includePlanDetails?: boolean, filterActivePlans?: boolean)
+    name: getPlans
     children: []
     langs:
       - typeScript
@@ -990,9 +963,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getPoint
-    name: >-
-      getPoint(project: string, planId: number, suiteId: number, pointIds:
-      number, witFields?: string)
+    name: getPoint
     children: []
     langs:
       - typeScript
@@ -1030,10 +1001,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getPoints
-    name: >-
-      getPoints(project: string, planId: number, suiteId: number, witFields?:
-      string, configurationId?: string, testCaseId?: string, testPointIds?:
-      string, includePointDetails?: boolean, skip?: number, top?: number)
+    name: getPoints
     children: []
     langs:
       - typeScript
@@ -1099,9 +1067,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getPointsByQuery
-    name: >-
-      getPointsByQuery(query: TestPointsQuery, project: string, skip?: number,
-      top?: number)
+    name: getPointsByQuery
     children: []
     langs:
       - typeScript
@@ -1137,9 +1103,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getResultParameters
-    name: >-
-      getResultParameters(project: string, runId: number, testCaseResultId:
-      number, iterationId: number, paramName?: string)
+    name: getResultParameters
     children: []
     langs:
       - typeScript
@@ -1177,7 +1141,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getResultRetentionSettings
-    name: 'getResultRetentionSettings(project: string)'
+    name: getResultRetentionSettings
     children: []
     langs:
       - typeScript
@@ -1196,7 +1160,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getSuiteEntries
-    name: 'getSuiteEntries(project: string, suiteId: number)'
+    name: getSuiteEntries
     children: []
     langs:
       - typeScript
@@ -1219,7 +1183,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getSuitesByTestCaseId
-    name: 'getSuitesByTestCaseId(testCaseId: number)'
+    name: getSuitesByTestCaseId
     children: []
     langs:
       - typeScript
@@ -1238,9 +1202,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestCaseById
-    name: >-
-      getTestCaseById(project: string, planId: number, suiteId: number,
-      testCaseIds: number)
+    name: getTestCaseById
     children: []
     langs:
       - typeScript
@@ -1273,7 +1235,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestCases
-    name: 'getTestCases(project: string, planId: number, suiteId: number)'
+    name: getTestCases
     children: []
     langs:
       - typeScript
@@ -1300,7 +1262,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestConfigurationById
-    name: 'getTestConfigurationById(project: string, testConfigurationId: number)'
+    name: getTestConfigurationById
     children: []
     langs:
       - typeScript
@@ -1325,9 +1287,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestConfigurations
-    name: >-
-      getTestConfigurations(project: string, skip?: number, top?: number,
-      continuationToken?: string, includeAllProperties?: boolean)
+    name: getTestConfigurations
     children: []
     langs:
       - typeScript
@@ -1368,9 +1328,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestIteration
-    name: >-
-      getTestIteration(project: string, runId: number, testCaseResultId: number,
-      iterationId: number, includeActionResults?: boolean)
+    name: getTestIteration
     children: []
     langs:
       - typeScript
@@ -1409,9 +1367,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestIterations
-    name: >-
-      getTestIterations(project: string, runId: number, testCaseResultId:
-      number, includeActionResults?: boolean)
+    name: getTestIterations
     children: []
     langs:
       - typeScript
@@ -1445,9 +1401,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestResultAttachmentContent
-    name: >-
-      getTestResultAttachmentContent(project: string, runId: number,
-      testCaseResultId: number, attachmentId: number)
+    name: getTestResultAttachmentContent
     children: []
     langs:
       - typeScript
@@ -1479,9 +1433,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestResultAttachmentZip
-    name: >-
-      getTestResultAttachmentZip(project: string, runId: number,
-      testCaseResultId: number, attachmentId: number)
+    name: getTestResultAttachmentZip
     children: []
     langs:
       - typeScript
@@ -1513,9 +1465,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestResultById
-    name: >-
-      getTestResultById(project: string, runId: number, testCaseResultId:
-      number, detailsToInclude?: ResultDetails)
+    name: getTestResultById
     children: []
     langs:
       - typeScript
@@ -1549,9 +1499,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestRunAttachmentContent
-    name: >-
-      getTestRunAttachmentContent(project: string, runId: number, attachmentId:
-      number)
+    name: getTestRunAttachmentContent
     children: []
     langs:
       - typeScript
@@ -1579,9 +1527,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestRunAttachmentZip
-    name: >-
-      getTestRunAttachmentZip(project: string, runId: number, attachmentId:
-      number)
+    name: getTestRunAttachmentZip
     children: []
     langs:
       - typeScript
@@ -1609,7 +1555,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestRunById
-    name: 'getTestRunById(project: string, runId: number)'
+    name: getTestRunById
     children: []
     langs:
       - typeScript
@@ -1632,7 +1578,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestRunCodeCoverage
-    name: 'getTestRunCodeCoverage(project: string, runId: number, flags: number)'
+    name: getTestRunCodeCoverage
     children: []
     langs:
       - typeScript
@@ -1661,7 +1607,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestRunLogs
-    name: 'getTestRunLogs(project: string, runId: number)'
+    name: getTestRunLogs
     children: []
     langs:
       - typeScript
@@ -1684,10 +1630,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestRuns
-    name: >-
-      getTestRuns(project: string, buildUri?: string, owner?: string, tmiRunId?:
-      string, planId?: number, includeRunDetails?: boolean, automated?: boolean,
-      skip?: number, top?: number)
+    name: getTestRuns
     children: []
     langs:
       - typeScript
@@ -1749,7 +1692,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestRunStatistics
-    name: 'getTestRunStatistics(project: string, runId: number)'
+    name: getTestRunStatistics
     children: []
     langs:
       - typeScript
@@ -1772,10 +1715,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestSessions
-    name: >-
-      getTestSessions(teamContext: TeamContext, period?: number, allSessions?:
-      boolean, includeAllProperties?: boolean, source?: TestSessionSource,
-      includeOnlyCompletedSessions?: boolean)
+    name: getTestSessions
     children: []
     langs:
       - typeScript
@@ -1822,7 +1762,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestSettingsById
-    name: 'getTestSettingsById(project: string, testSettingsId: number)'
+    name: getTestSettingsById
     children: []
     langs:
       - typeScript
@@ -1845,9 +1785,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestSuiteById
-    name: >-
-      getTestSuiteById(project: string, planId: number, suiteId: number,
-      includeChildSuites?: boolean)
+    name: getTestSuiteById
     children: []
     langs:
       - typeScript
@@ -1881,9 +1819,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestSuitesForPlan
-    name: >-
-      getTestSuitesForPlan(project: string, planId: number, includeSuites?:
-      boolean, skip?: number, top?: number, asTreeView?: boolean)
+    name: getTestSuitesForPlan
     children: []
     langs:
       - typeScript
@@ -1929,7 +1865,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestVariableById
-    name: 'getTestVariableById(project: string, testVariableId: number)'
+    name: getTestVariableById
     children: []
     langs:
       - typeScript
@@ -1952,7 +1888,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.getTestVariables
-    name: 'getTestVariables(project: string, skip?: number, top?: number)'
+    name: getTestVariables
     children: []
     langs:
       - typeScript
@@ -1981,7 +1917,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.queryCustomFields
-    name: 'queryCustomFields(project: string, scopeFilter: CustomTestFieldScope)'
+    name: queryCustomFields
     children: []
     langs:
       - typeScript
@@ -2006,13 +1942,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.queryTestRuns
-    name: >-
-      queryTestRuns(project: string, state: TestRunState, minCompletedDate?:
-      Date, maxCompletedDate?: Date, planId?: number, IsAutomated?: boolean,
-      publishContext?: TestRunPublishContext, buildId?: number, buildDefId?:
-      number, branchName?: string, releaseId?: number, releaseDefId?: number,
-      releaseEnvId?: number, releaseEnvDefId?: number, runTitle?: string, skip?:
-      number, top?: number)
+    name: queryTestRuns
     children: []
     langs:
       - typeScript
@@ -2116,9 +2046,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.removeTestCasesFromSuiteUrl
-    name: >-
-      removeTestCasesFromSuiteUrl(project: string, planId: number, suiteId:
-      number, testCaseIds: string)
+    name: removeTestCasesFromSuiteUrl
     children: []
     langs:
       - typeScript
@@ -2150,9 +2078,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.reorderSuiteEntries
-    name: >-
-      reorderSuiteEntries(suiteEntries: SuiteEntryUpdateModel[], project:
-      string, suiteId: number)
+    name: reorderSuiteEntries
     children: []
     langs:
       - typeScript
@@ -2196,9 +2122,7 @@ items:
           - string
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.updateCodeCoverageSummary
-    name: >-
-      updateCodeCoverageSummary(coverageData: CodeCoverageData, project: string,
-      buildId: number)
+    name: updateCodeCoverageSummary
     children: []
     langs:
       - typeScript
@@ -2230,9 +2154,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.updateResultRetentionSettings
-    name: >-
-      updateResultRetentionSettings(retentionSettings: ResultRetentionSettings,
-      project: string)
+    name: updateResultRetentionSettings
     children: []
     langs:
       - typeScript
@@ -2258,9 +2180,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.updateTestConfiguration
-    name: >-
-      updateTestConfiguration(testConfiguration: TestConfiguration, project:
-      string, testConfigurationId: number)
+    name: updateTestConfiguration
     children: []
     langs:
       - typeScript
@@ -2290,9 +2210,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.updateTestPlan
-    name: >-
-      updateTestPlan(planUpdateModel: PlanUpdateModel, project: string, planId:
-      number)
+    name: updateTestPlan
     children: []
     langs:
       - typeScript
@@ -2322,9 +2240,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.updateTestPoints
-    name: >-
-      updateTestPoints(pointUpdateModel: PointUpdateModel, project: string,
-      planId: number, suiteId: number, pointIds: string)
+    name: updateTestPoints
     children: []
     langs:
       - typeScript
@@ -2362,9 +2278,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.updateTestRun
-    name: >-
-      updateTestRun(runUpdateModel: RunUpdateModel, project: string, runId:
-      number)
+    name: updateTestRun
     children: []
     langs:
       - typeScript
@@ -2393,7 +2307,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.updateTestSession
-    name: 'updateTestSession(testSession: TestSession, teamContext: TeamContext)'
+    name: updateTestSession
     children: []
     langs:
       - typeScript
@@ -2418,9 +2332,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.updateTestSuite
-    name: >-
-      updateTestSuite(suiteUpdateModel: SuiteUpdateModel, project: string,
-      planId: number, suiteId: number)
+    name: updateTestSuite
     children: []
     langs:
       - typeScript
@@ -2454,9 +2366,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.RestClient.CommonMethods2To4.updateTestVariable
-    name: >-
-      updateTestVariable(testVariable: TestVariable, project: string,
-      testVariableId: number)
+    name: updateTestVariable
     children: []
     langs:
       - typeScript

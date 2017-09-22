@@ -59,9 +59,7 @@ items:
     package: vss-web-extension-sdk
     module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.constructor
-    name: >-
-      CommonMethods3To4(rootRequestPath: string, options?:
-      IVssHttpClientOptions)
+    name: CommonMethods3To4
     children: []
     langs:
       - typeScript
@@ -82,7 +80,7 @@ items:
           optional: true
     type: constructor
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.createFolder
-    name: 'createFolder(folder: Folder, project: string, path: string)'
+    name: createFolder
     children: []
     langs:
       - typeScript
@@ -108,7 +106,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Folder>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.deleteBuild
-    name: 'deleteBuild(buildId: number, project?: string)'
+    name: deleteBuild
     children: []
     langs:
       - typeScript
@@ -130,7 +128,7 @@ items:
           - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.deleteFolder
-    name: 'deleteFolder(project: string, path: string)'
+    name: deleteFolder
     children: []
     langs:
       - typeScript
@@ -153,7 +151,7 @@ items:
           - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getArtifact
-    name: 'getArtifact(buildId: number, artifactName: string, project?: string)'
+    name: getArtifact
     children: []
     langs:
       - typeScript
@@ -183,9 +181,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getArtifactContentZip
-    name: >-
-      getArtifactContentZip(buildId: number, artifactName: string, project?:
-      string)
+    name: getArtifactContentZip
     children: []
     langs:
       - typeScript
@@ -213,7 +209,7 @@ items:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getArtifacts
-    name: 'getArtifacts(buildId: number, project?: string)'
+    name: getArtifacts
     children: []
     langs:
       - typeScript
@@ -236,7 +232,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildArtifact[]>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getBuild
-    name: 'getBuild(buildId: number, project?: string, propertyFilters?: string)'
+    name: getBuild
     children: []
     langs:
       - typeScript
@@ -267,9 +263,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getBuildChanges
-    name: >-
-      getBuildChanges(project: string, buildId: number, continuationToken?:
-      string, top?: number, includeSourceChange?: boolean)
+    name: getBuildChanges
     children: []
     langs:
       - typeScript
@@ -308,9 +302,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Change[]>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getBuildLog
-    name: >-
-      getBuildLog(project: string, buildId: number, logId: number, startLine?:
-      number, endLine?: number)
+    name: getBuildLog
     children: []
     langs:
       - typeScript
@@ -348,9 +340,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getBuildLogLines
-    name: >-
-      getBuildLogLines(project: string, buildId: number, logId: number,
-      startLine?: number, endLine?: number)
+    name: getBuildLogLines
     children: []
     langs:
       - typeScript
@@ -387,7 +377,7 @@ items:
           - '@vss-web-extension-sdk.IPromise<string[]>'
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getBuildLogs
-    name: 'getBuildLogs(project: string, buildId: number)'
+    name: getBuildLogs
     children: []
     langs:
       - typeScript
@@ -410,7 +400,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getBuildLogsZip
-    name: 'getBuildLogsZip(project: string, buildId: number)'
+    name: getBuildLogsZip
     children: []
     langs:
       - typeScript
@@ -432,7 +422,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getBuildReport
-    name: 'getBuildReport(project: string, buildId: number, type?: string)'
+    name: getBuildReport
     children: []
     langs:
       - typeScript
@@ -460,7 +450,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getBuildReportHtmlContent
-    name: 'getBuildReportHtmlContent(project: string, buildId: number, type?: string)'
+    name: getBuildReportHtmlContent
     children: []
     langs:
       - typeScript
@@ -488,15 +478,7 @@ items:
           - '@vss-web-extension-sdk.IPromise<any>'
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getBuilds
-    name: >-
-      getBuilds(project?: string, definitions?: number[], queues?: number[],
-      buildNumber?: string, minFinishTime?: Date, maxFinishTime?: Date,
-      requestedFor?: string, reasonFilter?: BuildReason, statusFilter?:
-      BuildStatus, resultFilter?: BuildResult, tagFilters?: string[],
-      properties?: string[], top?: number, continuationToken?: string,
-      maxBuildsPerDefinition?: number, deletedFilter?: QueryDeletedOption,
-      queryOrder?: BuildQueryOrder, branchName?: string, buildIds?: number[],
-      repositoryId?: string, repositoryType?: string)
+    name: getBuilds
     children: []
     langs:
       - typeScript
@@ -624,7 +606,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getBuildWorkItemsRefs
-    name: 'getBuildWorkItemsRefs(project: string, buildId: number, top?: number)'
+    name: getBuildWorkItemsRefs
     children: []
     langs:
       - typeScript
@@ -654,9 +636,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getBuildWorkItemsRefsFromCommits
-    name: >-
-      getBuildWorkItemsRefsFromCommits(commitIds: string[], project: string,
-      buildId: number, top?: number)
+    name: getBuildWorkItemsRefsFromCommits
     children: []
     langs:
       - typeScript
@@ -692,13 +672,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getDefinitions
-    name: >-
-      getDefinitions(project?: string, name?: string, repositoryId?: string,
-      repositoryType?: string, queryOrder?: DefinitionQueryOrder, top?: number,
-      continuationToken?: string, minMetricsTime?: Date, definitionIds?:
-      number[], path?: string, builtAfter?: Date, notBuiltAfter?: Date,
-      includeAllProperties?: boolean, includeLatestBuilds?: boolean,
-      taskIdFilter?: string)
+    name: getDefinitions
     children: []
     langs:
       - typeScript
@@ -793,7 +767,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionReference[]>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.getFolders
-    name: 'getFolders(project: string, path?: string, queryOrder?: FolderQueryOrder)'
+    name: getFolders
     children: []
     langs:
       - typeScript
@@ -823,9 +797,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Folder[]>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.queueBuild
-    name: >-
-      queueBuild(build: Build, project?: string, ignoreWarnings?: boolean,
-      checkInTicket?: string)
+    name: queueBuild
     children: []
     langs:
       - typeScript
@@ -860,7 +832,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Build>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.updateBuild
-    name: 'updateBuild(build: Build, buildId: number, project?: string)'
+    name: updateBuild
     children: []
     langs:
       - typeScript
@@ -887,7 +859,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Build>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.updateBuilds
-    name: 'updateBuilds(builds: Build[], project?: string)'
+    name: updateBuilds
     children: []
     langs:
       - typeScript
@@ -910,7 +882,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Build[]>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods3To4.updateFolder
-    name: 'updateFolder(folder: Folder, project: string, path: string)'
+    name: updateFolder
     children: []
     langs:
       - typeScript

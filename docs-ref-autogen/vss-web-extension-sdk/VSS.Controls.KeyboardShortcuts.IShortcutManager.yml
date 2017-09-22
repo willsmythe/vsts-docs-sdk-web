@@ -35,7 +35,7 @@ items:
     module: VSS/Controls/KeyboardShortcuts
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.getShortcutGroups
-    name: getShortcutGroups()
+    name: getShortcutGroups
     children: []
     langs:
       - typeScript
@@ -46,9 +46,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.registerShortcut
-    name: >-
-      registerShortcut(group: string, combo: string, description: string,
-      action: KeyboardAction, allowPropagation?: boolean)
+    name: registerShortcut
     children: []
     langs:
       - typeScript
@@ -88,17 +86,15 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.registerShortcut_1
-    name: >-
-      registerShortcut(group: string, combo: string, description: string,
-      action: KeyboardAction, allowPropagation?: boolean)
+    name: registerShortcut
     children: []
     langs:
       - typeScript
     summary: Register a shortcut
     syntax:
       content: >-
-        function registerShortcut(group: string, combo: string, description:
-        string, action: KeyboardAction, allowPropagation?: boolean)
+        function registerShortcut(group: string, combo: string, options:
+        IShortcutOptions)
       parameters:
         - id: group
           type:
@@ -108,21 +104,12 @@ items:
           type:
             - string
           description: Keyboard combination.
-        - id: description
+        - id: options
           type:
-            - string
-          description: Description of the shortcut
-        - id: action
-          type:
-            - KeyboardAction
-          description: Action which gets called when shortcut is pressed
-        - id: allowPropagation
-          type:
-            - boolean
-          description: >
-            Defaults to false. Use true in the rare case that you want the last
-            key of the chord to propagate to the focused element
-          optional: true
+            - >-
+              @vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutOptions
+          description: |
+            The options to configure this shortcut with
       return:
         type:
           - >-
@@ -130,9 +117,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.registerShortcuts
-    name: >-
-      registerShortcuts(group: string, combos: string[], description: string,
-      action: KeyboardAction, allowPropagation?: boolean)
+    name: registerShortcuts
     children: []
     langs:
       - typeScript
@@ -172,17 +157,15 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.registerShortcuts_1
-    name: >-
-      registerShortcuts(group: string, combos: string[], description: string,
-      action: KeyboardAction, allowPropagation?: boolean)
+    name: registerShortcuts
     children: []
     langs:
       - typeScript
     summary: Register a group of shortcuts
     syntax:
       content: >-
-        function registerShortcuts(group: string, combos: string[], description:
-        string, action: KeyboardAction, allowPropagation?: boolean)
+        function registerShortcuts(group: string, combos: string[], options:
+        IShortcutOptions)
       parameters:
         - id: group
           type:
@@ -192,21 +175,12 @@ items:
           type:
             - 'string[]'
           description: Keyboard combinations that all map to same action.
-        - id: description
+        - id: options
           type:
-            - string
-          description: Description of the shortcut
-        - id: action
-          type:
-            - KeyboardAction
-          description: Action which gets called when shortcut is pressed
-        - id: allowPropagation
-          type:
-            - boolean
-          description: >
-            Defaults to false. Use true in the rare case that you want the last
-            key of the chord to propagate to the focused element
-          optional: true
+            - >-
+              @vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutOptions
+          description: |
+            The options to configure this shortcut with
       return:
         type:
           - >-
@@ -214,7 +188,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.removeShortcutGroup
-    name: 'removeShortcutGroup(group: string)'
+    name: removeShortcutGroup
     children: []
     langs:
       - typeScript
@@ -243,7 +217,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.showShortcutDialog
-    name: showShortcutDialog()
+    name: showShortcutDialog
     children: []
     langs:
       - typeScript
@@ -254,7 +228,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.KeyboardShortcuts.IShortcutManager.unRegisterShortcut
-    name: 'unRegisterShortcut(group: string, combo: string)'
+    name: unRegisterShortcut
     children: []
     langs:
       - typeScript

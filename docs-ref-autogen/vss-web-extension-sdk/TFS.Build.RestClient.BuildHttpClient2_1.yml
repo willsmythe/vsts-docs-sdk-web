@@ -70,9 +70,7 @@ items:
     package: vss-web-extension-sdk
     module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.constructor
-    name: >-
-      BuildHttpClient2_1(rootRequestPath: string, options?:
-      IVssHttpClientOptions)
+    name: BuildHttpClient2_1
     children: []
     langs:
       - typeScript
@@ -94,9 +92,7 @@ items:
     type: constructor
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.createDefinition
-    name: >-
-      createDefinition(definition: BuildDefinition3_2, project?: string,
-      definitionToCloneId?: number, definitionToCloneRevision?: number)
+    name: createDefinition
     children: []
     langs:
       - typeScript
@@ -132,7 +128,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition3_2>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.createQueue
-    name: 'createQueue(queue: AgentPoolQueue)'
+    name: createQueue
     children: []
     langs:
       - typeScript
@@ -150,7 +146,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.deleteBuild
-    name: 'deleteBuild(buildId: number, project?: string, type?: DefinitionType)'
+    name: deleteBuild
     children: []
     langs:
       - typeScript
@@ -179,7 +175,7 @@ items:
           - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.deleteQueue
-    name: 'deleteQueue(id: number)'
+    name: deleteQueue
     children: []
     langs:
       - typeScript
@@ -197,7 +193,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getAgentPoolQueue
-    name: 'getAgentPoolQueue(controllerId: number)'
+    name: getAgentPoolQueue
     children: []
     langs:
       - typeScript
@@ -215,9 +211,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getArtifact
-    name: >-
-      getArtifact(buildId: number, artifactName: string, project?: string,
-      definitionType?: DefinitionType)
+    name: getArtifact
     children: []
     langs:
       - typeScript
@@ -252,9 +246,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getArtifactContentZip
-    name: >-
-      getArtifactContentZip(buildId: number, artifactName: string, project?:
-      string, definitionType?: DefinitionType)
+    name: getArtifactContentZip
     children: []
     langs:
       - typeScript
@@ -287,9 +279,7 @@ items:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getArtifacts
-    name: >-
-      getArtifacts(buildId: number, project?: string, definitionType?:
-      DefinitionType)
+    name: getArtifacts
     children: []
     langs:
       - typeScript
@@ -319,9 +309,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildArtifact[]>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuild
-    name: >-
-      getBuild(buildId: number, project?: string, propertyFilters?: string,
-      type?: DefinitionType)
+    name: getBuild
     children: []
     langs:
       - typeScript
@@ -357,10 +345,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuildChanges
-    name: >-
-      getBuildChanges(project: string, buildId: number, continuationToken?:
-      string, top?: number, includeSourceChange?: boolean, type?:
-      DefinitionType)
+    name: getBuildChanges
     children: []
     langs:
       - typeScript
@@ -406,7 +391,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuildDeployments
-    name: 'getBuildDeployments(project: string, buildId: number)'
+    name: getBuildDeployments
     children: []
     langs:
       - typeScript
@@ -428,9 +413,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Deployment[]>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuildLog
-    name: >-
-      getBuildLog(project: string, buildId: number, logId: number, startLine?:
-      number, endLine?: number, type?: DefinitionType)
+    name: getBuildLog
     children: []
     langs:
       - typeScript
@@ -472,7 +455,7 @@ items:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuildLogs
-    name: 'getBuildLogs(project: string, buildId: number, type?: DefinitionType)'
+    name: getBuildLogs
     children: []
     langs:
       - typeScript
@@ -502,7 +485,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuildLogsZip
-    name: 'getBuildLogsZip(project: string, buildId: number, type?: DefinitionType)'
+    name: getBuildLogsZip
     children: []
     langs:
       - typeScript
@@ -530,15 +513,7 @@ items:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuilds
-    name: >-
-      getBuilds(project?: string, definitions?: number[], queues?: number[],
-      buildNumber?: string, minFinishTime?: Date, maxFinishTime?: Date,
-      requestedFor?: string, reasonFilter?: BuildReason, statusFilter?:
-      BuildStatus, resultFilter?: BuildResult, tagFilters?: string[],
-      properties?: string[], type?: DefinitionType, top?: number,
-      continuationToken?: string, maxBuildsPerDefinition?: number,
-      deletedFilter?: QueryDeletedOption, queryOrder?: BuildQueryOrder,
-      branchName?: string)
+    name: getBuilds
     children: []
     langs:
       - typeScript
@@ -656,9 +631,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuildWorkItemsRefs
-    name: >-
-      getBuildWorkItemsRefs(project: string, buildId: number, top?: number,
-      type?: DefinitionType)
+    name: getBuildWorkItemsRefs
     children: []
     langs:
       - typeScript
@@ -693,9 +666,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuildWorkItemsRefsFromCommits
-    name: >-
-      getBuildWorkItemsRefsFromCommits(commitIds: string[], project: string,
-      buildId: number, top?: number, type?: DefinitionType)
+    name: getBuildWorkItemsRefsFromCommits
     children: []
     langs:
       - typeScript
@@ -736,9 +707,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getDefinition
-    name: >-
-      getDefinition(definitionId: number, project?: string, revision?: number,
-      propertyFilters?: string[], type?: DefinitionType)
+    name: getDefinition
     children: []
     langs:
       - typeScript
@@ -779,10 +748,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getDefinitions
-    name: >-
-      getDefinitions(project?: string, name?: string, type?: DefinitionType,
-      repositoryId?: string, repositoryType?: string, queryOrder?:
-      DefinitionQueryOrder, top?: number)
+    name: getDefinitions
     children: []
     langs:
       - typeScript
@@ -834,7 +800,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.DefinitionReference[]>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getQueues
-    name: 'getQueues(name?: string)'
+    name: getQueues
     children: []
     langs:
       - typeScript
@@ -853,7 +819,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue[]>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getTemplate
-    name: 'getTemplate(project: string, templateId: string)'
+    name: getTemplate
     children: []
     langs:
       - typeScript
@@ -875,7 +841,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionTemplate3_2>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getTemplates
-    name: 'getTemplates(project: string)'
+    name: getTemplates
     children: []
     langs:
       - typeScript
@@ -893,9 +859,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionTemplate3_2[]>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.queueBuild
-    name: >-
-      queueBuild(build: Build, project?: string, ignoreWarnings?: boolean,
-      checkInTicket?: string, type?: DefinitionType)
+    name: queueBuild
     children: []
     langs:
       - typeScript
@@ -935,9 +899,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Build>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.saveTemplate
-    name: >-
-      saveTemplate(template: BuildDefinitionTemplate3_2, project: string,
-      templateId: string)
+    name: saveTemplate
     children: []
     langs:
       - typeScript
@@ -966,9 +928,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionTemplate3_2>
     type: method
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.updateBuild
-    name: >-
-      updateBuild(build: Build, buildId: number, project?: string, type?:
-      DefinitionType)
+    name: updateBuild
     children: []
     langs:
       - typeScript
@@ -1003,10 +963,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.updateDefinition
-    name: >-
-      updateDefinition(definition: BuildDefinition3_2, definitionId: number,
-      project?: string, secretsSourceDefinitionId?: number,
-      secretsSourceDefinitionRevision?: number)
+    name: updateDefinition
     children: []
     langs:
       - typeScript

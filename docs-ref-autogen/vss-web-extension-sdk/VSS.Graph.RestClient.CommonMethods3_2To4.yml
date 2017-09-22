@@ -57,7 +57,7 @@ items:
     module: VSS/Graph/RestClient
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.addMembership
-    name: 'addMembership(subjectDescriptor: string, containerDescriptor: string)'
+    name: addMembership
     children: []
     langs:
       - typeScript
@@ -86,9 +86,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.checkMembershipExistence
-    name: >-
-      checkMembershipExistence(subjectDescriptor: string, containerDescriptor:
-      string)
+    name: checkMembershipExistence
     children: []
     langs:
       - typeScript
@@ -113,9 +111,7 @@ items:
           - '@vss-web-extension-sdk.IPromise<boolean>'
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.constructor
-    name: >-
-      CommonMethods3_2To4(rootRequestPath: string, options?:
-      IVssHttpClientOptions)
+    name: CommonMethods3_2To4
     children: []
     langs:
       - typeScript
@@ -136,9 +132,7 @@ items:
           optional: true
     type: constructor
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.createGroup
-    name: >-
-      createGroup(creationContext: GraphGroupCreationContext, scopeDescriptor?:
-      string, groupDescriptors?: SubjectDescriptor[])
+    name: createGroup
     children: []
     langs:
       - typeScript
@@ -184,9 +178,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphGroup>
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.createUser
-    name: >-
-      createUser(creationContext: GraphUserCreationContext, groupDescriptors?:
-      SubjectDescriptor[])
+    name: createUser
     children: []
     langs:
       - typeScript
@@ -230,7 +222,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphUser>
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.deleteGroup
-    name: 'deleteGroup(groupDescriptor: string)'
+    name: deleteGroup
     children: []
     langs:
       - typeScript
@@ -250,7 +242,7 @@ items:
           - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.deleteUser
-    name: 'deleteUser(userDescriptor: string)'
+    name: deleteUser
     children: []
     langs:
       - typeScript
@@ -272,9 +264,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.findGroupsBySearchFactor
-    name: >-
-      findGroupsBySearchFactor(searchFactor: GraphMemberSearchFactor,
-      searchValue?: string, forceDomainQualification?: boolean)
+    name: findGroupsBySearchFactor
     children: []
     langs:
       - typeScript
@@ -312,9 +302,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.findUsersBySearchFactor
-    name: >-
-      findUsersBySearchFactor(searchFactor: GraphMemberSearchFactor,
-      searchValue?: string, forceDomainQualification?: boolean)
+    name: findUsersBySearchFactor
     children: []
     langs:
       - typeScript
@@ -351,7 +339,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphUser[]>
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getGroup
-    name: 'getGroup(groupDescriptor: string)'
+    name: getGroup
     children: []
     langs:
       - typeScript
@@ -372,9 +360,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphGroup>
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getGroups
-    name: >-
-      getGroups(scopeDescriptor?: string, subjectTypes?: string[],
-      continuationToken?: string)
+    name: getGroups
     children: []
     langs:
       - typeScript
@@ -420,7 +406,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getMembership
-    name: 'getMembership(subjectDescriptor: string, containerDescriptor: string)'
+    name: getMembership
     children: []
     langs:
       - typeScript
@@ -447,9 +433,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getMemberships
-    name: >-
-      getMemberships(subjectDescriptor: string, direction?:
-      GraphTraversalDirection, depth?: number)
+    name: getMemberships
     children: []
     langs:
       - typeScript
@@ -488,7 +472,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getMembershipState
-    name: 'getMembershipState(subjectDescriptor: string)'
+    name: getMembershipState
     children: []
     langs:
       - typeScript
@@ -507,7 +491,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getStorageKey
-    name: 'getStorageKey(descriptor: string)'
+    name: getStorageKey
     children: []
     langs:
       - typeScript
@@ -525,7 +509,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphStorageKeyResult>
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getUser
-    name: 'getUser(userDescriptor: string)'
+    name: getUser
     children: []
     langs:
       - typeScript
@@ -543,7 +527,7 @@ items:
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Graph.Contracts.GraphUser>
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.getUsers
-    name: 'getUsers(subjectTypes?: string[], continuationToken?: string)'
+    name: getUsers
     children: []
     langs:
       - typeScript
@@ -580,7 +564,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.lookupSubjects
-    name: 'lookupSubjects(subjectLookup: GraphSubjectLookup)'
+    name: lookupSubjects
     children: []
     langs:
       - typeScript
@@ -598,7 +582,7 @@ items:
     type: method
   - uid: >-
       vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.removeMembership
-    name: 'removeMembership(subjectDescriptor: string, containerDescriptor: string)'
+    name: removeMembership
     children: []
     langs:
       - typeScript
@@ -623,7 +607,7 @@ items:
           - '@vss-web-extension-sdk.IPromise<void>'
     type: method
   - uid: vss-web-extension-sdk.VSS.Graph.RestClient.CommonMethods3_2To4.updateGroup
-    name: 'updateGroup(groupDescriptor: string, patchDocument: JsonPatchDocument)'
+    name: updateGroup
     children: []
     langs:
       - typeScript

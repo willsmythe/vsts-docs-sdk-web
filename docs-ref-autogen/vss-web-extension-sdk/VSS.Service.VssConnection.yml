@@ -27,9 +27,7 @@ items:
     package: vss-web-extension-sdk
     module: VSS/Service
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.beginGetServiceUrl
-    name: >-
-      beginGetServiceUrl(serviceInstanceId: string, hostType?: ContextHostType,
-      faultInMissingHost?: boolean)
+    name: beginGetServiceUrl
     children: []
     langs:
       - typeScript
@@ -60,7 +58,7 @@ items:
           - '@vss-web-extension-sdk.IPromise<string>'
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getConnection
-    name: 'getConnection(webContext?: WebContext, hostType?: ContextHostType)'
+    name: getConnection
     children: []
     langs:
       - typeScript
@@ -86,7 +84,7 @@ items:
           - '@vss-web-extension-sdk.VSS.Service.VssConnection'
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getHostContext
-    name: getHostContext()
+    name: getHostContext
     children: []
     langs:
       - typeScript
@@ -99,7 +97,7 @@ items:
           - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.HostContext'
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getHostType
-    name: getHostType()
+    name: getHostType
     children: []
     langs:
       - typeScript
@@ -109,7 +107,7 @@ items:
       parameters: []
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getHostUrl
-    name: getHostUrl()
+    name: getHostUrl
     children: []
     langs:
       - typeScript
@@ -124,10 +122,7 @@ items:
           - string
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getHttpClient
-    name: >-
-      getHttpClient<T>(httpClientType: function, serviceInstanceId?: string,
-      authTokenManager?: IAuthTokenManager<any>, clientOptions?:
-      IVssHttpClientOptions)
+    name: getHttpClient
     children: []
     langs:
       - typeScript
@@ -162,7 +157,7 @@ items:
           - T
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getService
-    name: 'getService<T>(serviceType: function, useCached?: boolean)'
+    name: getService
     children: []
     langs:
       - typeScript
@@ -184,7 +179,7 @@ items:
           - T
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getWebContext
-    name: getWebContext()
+    name: getWebContext
     children: []
     langs:
       - typeScript
@@ -197,7 +192,7 @@ items:
           - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
     type: method
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.constructor
-    name: 'VssConnection(webContext: WebContext, hostType?: ContextHostType)'
+    name: VssConnection
     children: []
     langs:
       - typeScript
