@@ -89,9 +89,7 @@ items:
     type: property
     summary: Gets list of conditions.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseCondition[]
-        conditions
+      content: 'ReleaseCondition[] conditions'
       return:
         type:
           - >-
@@ -148,9 +146,7 @@ items:
     type: property
     summary: Gets list of deploy phases snapshot.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeployPhase[]
-        deployPhasesSnapshot
+      content: 'DeployPhase[] deployPhasesSnapshot'
       return:
         type:
           - >-
@@ -165,9 +161,7 @@ items:
     type: property
     summary: Gets deploy steps.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.DeploymentAttempt[]
-        deploySteps
+      content: 'DeploymentAttempt[] deploySteps'
       return:
         type:
           - >-
@@ -182,9 +176,7 @@ items:
     type: property
     summary: Gets environment options.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.EnvironmentOptions
-        environmentOptions
+      content: EnvironmentOptions environmentOptions
       return:
         type:
           - >-
@@ -255,7 +247,7 @@ items:
     type: property
     summary: Gets the identity who is owner for release environment.
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef owner'
+      content: IdentityRef owner
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -269,9 +261,7 @@ items:
     type: property
     summary: Gets list of post deploy approvals snapshot.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionApprovals
-        postApprovalsSnapshot
+      content: ReleaseDefinitionApprovals postApprovalsSnapshot
       return:
         type:
           - >-
@@ -286,9 +276,7 @@ items:
     type: property
     summary: Gets list of post deploy approvals.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval[]
-        postDeployApprovals
+      content: 'ReleaseApproval[] postDeployApprovals'
       return:
         type:
           - >-
@@ -303,9 +291,7 @@ items:
     type: property
     summary: Gets list of pre deploy approvals snapshot.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionApprovals
-        preApprovalsSnapshot
+      content: ReleaseDefinitionApprovals preApprovalsSnapshot
       return:
         type:
           - >-
@@ -320,9 +306,7 @@ items:
     type: property
     summary: Gets list of pre deploy approvals.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseApproval[]
-        preDeployApprovals
+      content: 'ReleaseApproval[] preDeployApprovals'
       return:
         type:
           - >-
@@ -381,9 +365,7 @@ items:
       Gets release reference which specifies the reference of the release to
       which this release environment is associated.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseShallowReference
-        release
+      content: ReleaseShallowReference release
       return:
         type:
           - >-
@@ -398,7 +380,7 @@ items:
     type: property
     summary: Gets the identity who created release.
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef releaseCreatedBy'
+      content: IdentityRef releaseCreatedBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -414,9 +396,7 @@ items:
       Gets releaseDefinitionReference which specifies the reference of the
       release definition to which this release environment is associated.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionShallowReference
-        releaseDefinition
+      content: ReleaseDefinitionShallowReference releaseDefinition
       return:
         type:
           - >-
@@ -473,9 +453,7 @@ items:
     type: property
     summary: Gets list of schedules.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseSchedule[]
-        schedules
+      content: 'ReleaseSchedule[] schedules'
       return:
         type:
           - >-
@@ -532,10 +510,7 @@ items:
     type: property
     summary: Gets the dictionary of variables.
     syntax:
-      content: >-
-        [key: string]:
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ConfigurationVariableValue
-        variables
+      content: '[key: string]: ConfigurationVariableValue variables'
       return:
         type:
           - >-
@@ -551,9 +526,7 @@ items:
     type: property
     summary: Gets list of workflow tasks.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.WorkflowTask[]
-        workflowTasks
+      content: 'WorkflowTask[] workflowTasks'
       return:
         type:
           - >-

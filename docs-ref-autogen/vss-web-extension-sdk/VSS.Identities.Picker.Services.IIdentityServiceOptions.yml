@@ -44,9 +44,7 @@ items:
       Details about the control's current environment that might help an
       IEntityOperationsExtension in modifying requests.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.Identities.Picker.Services.IExtensionData
-        extensionData
+      content: IExtensionData extensionData
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Identities.Picker.Services.IExtensionData'
@@ -84,9 +82,7 @@ items:
       The httpClient that should be used instead of the
       CommonIdentityPickerHttpClient
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.Identities.Picker.RestClient.AbstractIdentityPickerHttpClient
-        httpClient
+      content: AbstractIdentityPickerHttpClient httpClient
       return:
         type:
           - >-
@@ -101,9 +97,7 @@ items:
     type: property
     summary: type of identities - one or more of User or Group
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.Identities.Picker.Services.IEntityType
-        identityType
+      content: IEntityType identityType
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Identities.Picker.Services.IEntityType'
@@ -145,9 +139,7 @@ items:
     type: property
     summary: 'scope - one or more of AAD, IMS, Source, AD, WMD'
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.Identities.Picker.Services.IOperationScope
-        operationScope
+      content: IOperationScope operationScope
       return:
         type:
           - >-

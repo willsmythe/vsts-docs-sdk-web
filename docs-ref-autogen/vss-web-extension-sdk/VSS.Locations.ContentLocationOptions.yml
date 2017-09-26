@@ -45,7 +45,7 @@ items:
     type: property
     summary: Query parameters to add to the url
     syntax:
-      content: '@vss-web-extension-sdk.IDictionaryStringTo<string> queryParams'
+      content: IDictionaryStringTo<string> queryParams
       return:
         type:
           - '@vss-web-extension-sdk.IDictionaryStringTo<string>'
@@ -87,9 +87,7 @@ items:
     type: property
     summary: Specific web context to use when generating the url
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext
-        webContext
+      content: WebContext webContext
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'

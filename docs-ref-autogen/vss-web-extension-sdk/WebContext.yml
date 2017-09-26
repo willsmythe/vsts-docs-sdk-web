@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.WebContext
+    name: WebContext
+    fullName: WebContext
+    children:
+      - vss-web-extension-sdk.WebContext.account
+      - vss-web-extension-sdk.WebContext.collection
+      - vss-web-extension-sdk.WebContext.host
+      - vss-web-extension-sdk.WebContext.project
+      - vss-web-extension-sdk.WebContext.team
+      - vss-web-extension-sdk.WebContext.user
+    langs:
+      - typeScript
+    type: interface
+    summary: Context information for all web access requests
+    source:
+      path: vss.d.ts
+      startLine: 2828
+      remote:
+        path: typings\vss.d.ts
+        repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
+        branch: master
+    package: vss-web-extension-sdk
+    module: Global
+  - uid: vss-web-extension-sdk.WebContext.account
+    name: account
+    fullName: account
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: HostContext account
+      return:
+        type:
+          - '@vss-web-extension-sdk.HostContext'
+  - uid: vss-web-extension-sdk.WebContext.collection
+    name: collection
+    fullName: collection
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Information about the Collection used in the current request (may be null)
+    syntax:
+      content: HostContext collection
+      return:
+        type:
+          - '@vss-web-extension-sdk.HostContext'
+  - uid: vss-web-extension-sdk.WebContext.host
+    name: host
+    fullName: host
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Information about the current request context's host
+    syntax:
+      content: ExtendedHostContext host
+      return:
+        type:
+          - '@vss-web-extension-sdk.ExtendedHostContext'
+  - uid: vss-web-extension-sdk.WebContext.project
+    name: project
+    fullName: project
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Information about the project used in the current request (may be null)
+    syntax:
+      content: ContextIdentifier project
+      return:
+        type:
+          - '@vss-web-extension-sdk.ContextIdentifier'
+  - uid: vss-web-extension-sdk.WebContext.team
+    name: team
+    fullName: team
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Information about the team used in the current request (may be null)
+    syntax:
+      content: TeamContext team
+      return:
+        type:
+          - '@vss-web-extension-sdk.TeamContext'
+  - uid: vss-web-extension-sdk.WebContext.user
+    name: user
+    fullName: user
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Information about the current user
+    syntax:
+      content: UserContext user
+      return:
+        type:
+          - '@vss-web-extension-sdk.UserContext'

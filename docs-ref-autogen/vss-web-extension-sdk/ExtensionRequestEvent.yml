@@ -1,0 +1,103 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.ExtensionRequestEvent
+    name: ExtensionRequestEvent
+    fullName: ExtensionRequestEvent
+    children:
+      - vss-web-extension-sdk.ExtensionRequestEvent.extension
+      - vss-web-extension-sdk.ExtensionRequestEvent.host
+      - vss-web-extension-sdk.ExtensionRequestEvent.hostName
+      - vss-web-extension-sdk.ExtensionRequestEvent.links
+      - vss-web-extension-sdk.ExtensionRequestEvent.request
+      - vss-web-extension-sdk.ExtensionRequestEvent.updateType
+    langs:
+      - typeScript
+    type: interface
+    summary: ''
+    source:
+      path: vss.d.ts
+      startLine: 2081
+      remote:
+        path: typings\vss.d.ts
+        repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
+        branch: master
+    package: vss-web-extension-sdk
+    module: Global
+  - uid: vss-web-extension-sdk.ExtensionRequestEvent.extension
+    name: extension
+    fullName: extension
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The extension which has been requested
+    syntax:
+      content: any extension
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.ExtensionRequestEvent.host
+    name: host
+    fullName: host
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Information about the host for which this extension is requested
+    syntax:
+      content: ExtensionHost host
+      return:
+        type:
+          - '@vss-web-extension-sdk.ExtensionHost'
+  - uid: vss-web-extension-sdk.ExtensionRequestEvent.hostName
+    name: hostName
+    fullName: hostName
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Name of the collection for which the extension was requested
+    syntax:
+      content: string hostName
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtensionRequestEvent.links
+    name: links
+    fullName: links
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Gallery host url
+    syntax:
+      content: ExtensionRequestUrls links
+      return:
+        type:
+          - '@vss-web-extension-sdk.ExtensionRequestUrls'
+  - uid: vss-web-extension-sdk.ExtensionRequestEvent.request
+    name: request
+    fullName: request
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The extension request object
+    syntax:
+      content: ExtensionRequest request
+      return:
+        type:
+          - '@vss-web-extension-sdk.ExtensionRequest'
+  - uid: vss-web-extension-sdk.ExtensionRequestEvent.updateType
+    name: updateType
+    fullName: updateType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The type of update that was made
+    syntax:
+      content: ExtensionRequestUpdateType updateType
+      return:
+        type:
+          - ExtensionRequestUpdateType

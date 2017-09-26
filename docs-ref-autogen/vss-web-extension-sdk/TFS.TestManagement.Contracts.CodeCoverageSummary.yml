@@ -35,9 +35,7 @@ items:
     type: property
     summary: Uri of build for which data is retrieved/published
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
-        build
+      content: ShallowReference build
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'
@@ -51,9 +49,7 @@ items:
     type: property
     summary: List of coverage data and details for the build
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.TestManagement.Contracts.CodeCoverageData[]
-        coverageData
+      content: 'CodeCoverageData[] coverageData'
       return:
         type:
           - >-
@@ -68,9 +64,7 @@ items:
     type: property
     summary: Uri of build against which difference in coverage is computed
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference
-        deltaBuild
+      content: ShallowReference deltaBuild
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Contracts.ShallowReference'

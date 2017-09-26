@@ -44,7 +44,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef createdBy'
+      content: IdentityRef createdBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -99,7 +99,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef modifiedBy'
+      content: IdentityRef modifiedBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -140,9 +140,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableGroupProviderData
-        providerData
+      content: VariableGroupProviderData providerData
       return:
         type:
           - >-
@@ -170,10 +168,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: >-
-        [key: string]:
-        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.VariableValue
-        variables
+      content: '[key: string]: VariableValue variables'
       return:
         type:
           - >-

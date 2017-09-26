@@ -41,9 +41,7 @@ items:
     type: property
     summary: List of fields to include in Add Panel
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemFieldReference[]
-        addPanelFields
+      content: 'WorkItemFieldReference[] addPanelFields'
       return:
         type:
           - >-
@@ -71,7 +69,7 @@ items:
     type: property
     summary: Default list of columns for the backlog
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Work.Contracts.BacklogColumn[] columnFields'
+      content: 'BacklogColumn[] columnFields'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.BacklogColumn[]'
@@ -85,9 +83,7 @@ items:
     type: property
     summary: Defaulst Work Item Type for the backlog
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeReference
-        defaultWorkItemType
+      content: WorkItemTypeReference defaultWorkItemType
       return:
         type:
           - >-
@@ -159,9 +155,7 @@ items:
       Work Item types participating in this backlog as known by the
       project/Process, can be overridden by team settings for bugs
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemTypeReference[]
-        workItemTypes
+      content: 'WorkItemTypeReference[] workItemTypes'
       return:
         type:
           - >-

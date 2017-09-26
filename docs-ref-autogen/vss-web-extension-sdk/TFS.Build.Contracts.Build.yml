@@ -95,7 +95,7 @@ items:
       The build controller. This should only be set if the definition type is
       Xaml.
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildController controller'
+      content: BuildController controller
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildController'
@@ -108,9 +108,7 @@ items:
     type: property
     summary: The definition associated with the build
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.Build.Contracts.DefinitionReference
-        definition
+      content: DefinitionReference definition
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.DefinitionReference'
@@ -136,7 +134,7 @@ items:
     type: property
     summary: Process or person that deleted the build
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef deletedBy'
+      content: IdentityRef deletedBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -227,7 +225,7 @@ items:
     type: property
     summary: Process or person that last changed the build
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef lastChangedBy'
+      content: IdentityRef lastChangedBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -253,7 +251,7 @@ items:
     type: property
     summary: Log location of the build
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildLogReference logs'
+      content: BuildLogReference logs
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildLogReference'
@@ -266,9 +264,7 @@ items:
     type: property
     summary: Orchestration plan for the build
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.Build.Contracts.TaskOrchestrationPlanReference
-        orchestrationPlan
+      content: TaskOrchestrationPlanReference orchestrationPlan
       return:
         type:
           - >-
@@ -295,9 +291,7 @@ items:
     type: property
     summary: 'Orchestration plans associated with the build (build, cleanup)'
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.Build.Contracts.TaskOrchestrationPlanReference[]
-        plans
+      content: 'TaskOrchestrationPlanReference[] plans'
       return:
         type:
           - >-
@@ -324,7 +318,7 @@ items:
     type: property
     summary: The team project
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference project'
+      content: TeamProjectReference project
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference'
@@ -363,7 +357,7 @@ items:
     type: property
     summary: The queue. This should only be set if the definition type is Build.
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue queue'
+      content: AgentPoolQueue queue
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue'
@@ -428,7 +422,7 @@ items:
     type: property
     summary: The repository
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildRepository repository'
+      content: BuildRepository repository
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildRepository'
@@ -441,7 +435,7 @@ items:
     type: property
     summary: The identity that queued the build
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef requestedBy'
+      content: IdentityRef requestedBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -454,7 +448,7 @@ items:
     type: property
     summary: The identity on whose behalf the build was queued
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef requestedFor'
+      content: IdentityRef requestedFor
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -597,9 +591,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.Build.Contracts.BuildRequestValidationResult[]
-        validationResults
+      content: 'BuildRequestValidationResult[] validationResults'
       return:
         type:
           - >-

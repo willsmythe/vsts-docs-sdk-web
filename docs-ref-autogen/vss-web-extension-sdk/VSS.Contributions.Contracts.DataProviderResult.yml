@@ -40,10 +40,7 @@ items:
       were defined as client providers, or as remote providers that failed and
       may be retried by the client.
     syntax:
-      content: >-
-        [key: string]:
-        @vss-web-extension-sdk.VSS.Contributions.Contracts.ClientDataProviderQuery
-        clientProviders
+      content: '[key: string]: ClientDataProviderQuery clientProviders'
       return:
         type:
           - >-
@@ -72,10 +69,7 @@ items:
     type: property
     summary: Set of exceptions that occurred resolving the data providers.
     syntax:
-      content: >-
-        [key: string]:
-        @vss-web-extension-sdk.VSS.Contributions.Contracts.DataProviderExceptionDetails
-        exceptions
+      content: '[key: string]: DataProviderExceptionDetails exceptions'
       return:
         type:
           - >-
@@ -91,9 +85,7 @@ items:
     type: property
     summary: List of data providers resolved in the data-provider query
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.Contributions.Contracts.ResolvedDataProvider[]
-        resolvedProviders
+      content: 'ResolvedDataProvider[] resolvedProviders'
       return:
         type:
           - >-

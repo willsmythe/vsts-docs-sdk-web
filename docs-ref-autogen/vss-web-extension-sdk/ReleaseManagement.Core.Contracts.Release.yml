@@ -62,9 +62,7 @@ items:
     type: property
     summary: Gets or sets the list of artifacts.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Artifact[]
-        artifacts
+      content: 'Artifact[] artifacts'
       return:
         type:
           - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Artifact[]'
@@ -90,7 +88,7 @@ items:
     type: property
     summary: Gets or sets the identity who created.
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef createdBy'
+      content: IdentityRef createdBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -144,9 +142,7 @@ items:
     type: property
     summary: Gets or sets the list of environments.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseEnvironment[]
-        environments
+      content: 'ReleaseEnvironment[] environments'
       return:
         type:
           - >-
@@ -200,7 +196,7 @@ items:
     type: property
     summary: Gets or sets the identity who modified.
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef modifiedBy'
+      content: IdentityRef modifiedBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -253,9 +249,7 @@ items:
     type: property
     summary: Gets or sets project reference.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ProjectReference
-        projectReference
+      content: ProjectReference projectReference
       return:
         type:
           - >-
@@ -298,9 +292,7 @@ items:
       Gets releaseDefinitionReference which specifies the reference of the
       release definition to which this release is associated.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionShallowReference
-        releaseDefinition
+      content: ReleaseDefinitionShallowReference releaseDefinition
       return:
         type:
           - >-
@@ -368,9 +360,7 @@ items:
     type: property
     summary: Gets or sets the list of variable groups.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.VariableGroup[]
-        variableGroups
+      content: 'VariableGroup[] variableGroups'
       return:
         type:
           - >-
@@ -384,10 +374,7 @@ items:
     type: property
     summary: Gets or sets the dictionary of variables.
     syntax:
-      content: >-
-        [key: string]:
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ConfigurationVariableValue
-        variables
+      content: '[key: string]: ConfigurationVariableValue variables'
       return:
         type:
           - >-

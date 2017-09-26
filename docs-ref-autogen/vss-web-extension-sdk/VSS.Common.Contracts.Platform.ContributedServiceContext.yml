@@ -46,9 +46,7 @@ items:
     type: property
     summary: Dynamic bundles to include from this service
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.Common.Contracts.Platform.DynamicBundlesCollection
-        bundles
+      content: DynamicBundlesCollection bundles
       return:
         type:
           - >-
@@ -83,9 +81,7 @@ items:
       Feature flag states to include by default in page data (avoids AJAX
       lookup)
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.Common.Contracts.Platform.FeatureAvailabilityContext
-        featureAvailability
+      content: FeatureAvailabilityContext featureAvailability
       return:
         type:
           - >-
@@ -104,9 +100,7 @@ items:
       config, each root area path must be explicitly defined here rather than
       relying on basePath as a catch-all.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.Common.Contracts.Platform.ModuleLoaderConfiguration
-        moduleLoaderConfig
+      content: ModuleLoaderConfiguration moduleLoaderConfig
       return:
         type:
           - >-
@@ -121,9 +115,7 @@ items:
     type: property
     summary: Paths to resources on this service
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContextPaths
-        paths
+      content: ConfigurationContextPaths paths
       return:
         type:
           - >-
@@ -138,9 +130,7 @@ items:
     type: property
     summary: Lookup of urls for different services (at different host levels)
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.Common.Contracts.Platform.ServiceLocations
-        serviceLocations
+      content: ServiceLocations serviceLocations
       return:
         type:
           - >-

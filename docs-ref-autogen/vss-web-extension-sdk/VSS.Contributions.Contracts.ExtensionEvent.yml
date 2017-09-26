@@ -36,9 +36,7 @@ items:
     type: property
     summary: The extension which has been updated
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.Gallery.Contracts.PublishedExtension
-        extension
+      content: PublishedExtension extension
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Gallery.Contracts.PublishedExtension'
@@ -65,7 +63,7 @@ items:
     type: property
     summary: Name of the collection for which the extension was requested
     syntax:
-      content: '@vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionHost host'
+      content: ExtensionHost host
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionHost'
@@ -78,9 +76,7 @@ items:
     type: property
     summary: Gallery host url
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.Contributions.Contracts.ExtensionEventUrls
-        links
+      content: ExtensionEventUrls links
       return:
         type:
           - >-
@@ -95,7 +91,7 @@ items:
     type: property
     summary: Represents the user who initiated the update
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef modifiedBy'
+      content: IdentityRef modifiedBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'

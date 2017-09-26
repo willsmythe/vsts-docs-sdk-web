@@ -1,0 +1,123 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IExtensionInitializationOptions
+    name: IExtensionInitializationOptions
+    fullName: IExtensionInitializationOptions
+    children:
+      - >-
+        vss-web-extension-sdk.IExtensionInitializationOptions.explicitNotifyLoaded
+      - >-
+        vss-web-extension-sdk.IExtensionInitializationOptions.extensionReusedCallback
+      - vss-web-extension-sdk.IExtensionInitializationOptions.moduleLoaderConfig
+      - vss-web-extension-sdk.IExtensionInitializationOptions.usePlatformScripts
+      - vss-web-extension-sdk.IExtensionInitializationOptions.usePlatformStyles
+    langs:
+      - typeScript
+    type: interface
+    summary: Options for the extension's initialization method
+    source:
+      path: vss.d.ts
+      startLine: 322
+      remote:
+        path: typings\vss.d.ts
+        repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
+        branch: master
+    package: vss-web-extension-sdk
+    module: Global
+  - uid: vss-web-extension-sdk.IExtensionInitializationOptions.explicitNotifyLoaded
+    name: explicitNotifyLoaded
+    fullName: explicitNotifyLoaded
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Set to true if the extension will explicitly call notifyLoadSucceeded or
+      notifyLoadFailed
+
+      itself to indicate that the extension is done loading (stops UI loading
+      indicator in the host).
+
+      If false (the default) the extension is considered ready as soon as init
+      is called.
+    syntax:
+      content: boolean explicitNotifyLoaded
+      return:
+        type:
+          - boolean
+  - uid: >-
+      vss-web-extension-sdk.IExtensionInitializationOptions.extensionReusedCallback
+    name: extensionReusedCallback
+    fullName: extensionReusedCallback
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Optional callback method that gets invoked when this extension frame is
+      reused by another contribution
+
+      which shares the same URI of the contribution that originally caused this
+      extension frame to be loaded.
+    syntax:
+      content: '(contribution: Contribution) => void extensionReusedCallback'
+      return:
+        type:
+          - '(contribution: Contribution) => void'
+  - uid: vss-web-extension-sdk.IExtensionInitializationOptions.moduleLoaderConfig
+    name: moduleLoaderConfig
+    fullName: moduleLoaderConfig
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Extension-specific AMD module loader configuration. This configuration
+      will be merged with the VSTS-specific configuration.
+    syntax:
+      content: ModuleLoaderConfiguration moduleLoaderConfig
+      return:
+        type:
+          - '@vss-web-extension-sdk.ModuleLoaderConfiguration'
+  - uid: vss-web-extension-sdk.IExtensionInitializationOptions.usePlatformScripts
+    name: usePlatformScripts
+    fullName: usePlatformScripts
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Set to true if the extension is going to consume any VSS script libraries.
+
+      For example, controls, REST clients, services, etc.
+
+      This pulls in the script loader and configuration data from the host frame
+      so that
+
+      'require' statements can be used to load VSTS modules. A call to
+      VSS.require will
+
+      effectively turn this option on, even if not specified in the VSS.init
+      handshake.
+    syntax:
+      content: boolean usePlatformScripts
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.IExtensionInitializationOptions.usePlatformStyles
+    name: usePlatformStyles
+    fullName: usePlatformStyles
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Set to true if the extension desires to use VSS platform CSS styles. If
+      not explicitly set,
+
+      the default value is the value of 'usePlatformScripts'.
+    syntax:
+      content: boolean usePlatformStyles
+      return:
+        type:
+          - boolean

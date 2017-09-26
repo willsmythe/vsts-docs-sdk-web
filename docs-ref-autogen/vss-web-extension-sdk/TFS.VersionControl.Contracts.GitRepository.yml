@@ -57,9 +57,7 @@ items:
       If set, options for creating this repo as a fork of another one. If unset,
       this repo is unrelated to any existing forks.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitForkSyncRequestParameters
-        forkOptions
+      content: GitForkSyncRequestParameters forkOptions
       return:
         type:
           - >-
@@ -76,9 +74,7 @@ items:
       Only set when querying repositories. If set, the "parent" fork of this
       repository.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GlobalGitRepositoryKey
-        forkParent
+      content: GlobalGitRepositoryKey forkParent
       return:
         type:
           - >-
@@ -118,7 +114,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference project'
+      content: TeamProjectReference project
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Core.Contracts.TeamProjectReference'

@@ -71,9 +71,7 @@ items:
     type: property
     summary: Gets or sets the list of artifacts.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Artifact[]
-        artifacts
+      content: 'Artifact[] artifacts'
       return:
         type:
           - '@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Artifact[]'
@@ -101,7 +99,7 @@ items:
     type: property
     summary: Gets or sets the identity who created.
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef createdBy'
+      content: IdentityRef createdBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -143,9 +141,7 @@ items:
     type: property
     summary: Gets or sets the list of environments.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseDefinitionEnvironment[]
-        environments
+      content: 'ReleaseDefinitionEnvironment[] environments'
       return:
         type:
           - >-
@@ -174,9 +170,7 @@ items:
     type: property
     summary: Gets the reference of last release.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseReference
-        lastRelease
+      content: ReleaseReference lastRelease
       return:
         type:
           - >-
@@ -191,7 +185,7 @@ items:
     type: property
     summary: Gets or sets the identity who modified.
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef modifiedBy'
+      content: IdentityRef modifiedBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -275,9 +269,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.RetentionPolicy
-        retentionPolicy
+      content: RetentionPolicy retentionPolicy
       return:
         type:
           - >-
@@ -334,9 +326,7 @@ items:
     type: property
     summary: Gets or sets the list of triggers.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ReleaseTriggerBase[]
-        triggers
+      content: 'ReleaseTriggerBase[] triggers'
       return:
         type:
           - >-
@@ -379,10 +369,7 @@ items:
     type: property
     summary: Gets or sets the dictionary of variables.
     syntax:
-      content: >-
-        [key: string]:
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.ConfigurationVariableValue
-        variables
+      content: '[key: string]: ConfigurationVariableValue variables'
       return:
         type:
           - >-

@@ -47,9 +47,7 @@ items:
     type: property
     summary: Gets the administrators group for this agent pool.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
-        administratorsGroup
+      content: IdentityRef administratorsGroup
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -82,7 +80,7 @@ items:
       automatically added into the administrators group for the pool on
       creation.
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef createdBy'
+      content: IdentityRef createdBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -154,9 +152,7 @@ items:
     type: property
     summary: Gets the service accounts group for this agent pool.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
-        serviceAccountsGroup
+      content: IdentityRef serviceAccountsGroup
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'

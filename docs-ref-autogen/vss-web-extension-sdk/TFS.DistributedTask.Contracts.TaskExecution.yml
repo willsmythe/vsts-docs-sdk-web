@@ -33,9 +33,7 @@ items:
       is simply a meta task to call another task. This is useful for tasks that
       call utility tasks like powershell and commandline
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskReference
-        execTask
+      content: TaskReference execTask
       return:
         type:
           - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskReference'

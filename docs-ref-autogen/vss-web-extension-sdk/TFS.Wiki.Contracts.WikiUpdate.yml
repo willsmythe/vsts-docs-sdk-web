@@ -35,9 +35,7 @@ items:
       Git push object associated with this wiki update object. This is populated
       only in the response of the wiki updates POST API.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPush
-        associatedGitPush
+      content: GitPush associatedGitPush
       return:
         type:
           - '@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPush'
@@ -52,9 +50,7 @@ items:
       List of attachment change objects that is to be associated with this
       update.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.Wiki.Contracts.WikiAttachmentChange[]
-        attachmentChanges
+      content: 'WikiAttachmentChange[] attachmentChanges'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Wiki.Contracts.WikiAttachmentChange[]'
@@ -93,7 +89,7 @@ items:
     type: property
     summary: Page change object associated with this update.
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Wiki.Contracts.WikiPageChange pageChange'
+      content: WikiPageChange pageChange
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Wiki.Contracts.WikiPageChange'

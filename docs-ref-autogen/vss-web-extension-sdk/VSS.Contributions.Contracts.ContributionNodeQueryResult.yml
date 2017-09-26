@@ -34,10 +34,7 @@ items:
     type: property
     summary: Map of contribution ids to corresponding node.
     syntax:
-      content: >-
-        [key: string]:
-        @vss-web-extension-sdk.VSS.Contributions.Contracts.SerializedContributionNode
-        nodes
+      content: '[key: string]: SerializedContributionNode nodes'
       return:
         type:
           - >-
@@ -53,10 +50,7 @@ items:
     type: property
     summary: Map of provder ids to the corresponding provider details object.
     syntax:
-      content: >-
-        [key: string]:
-        @vss-web-extension-sdk.VSS.Contributions.Contracts.ContributionProviderDetails
-        providerDetails
+      content: '[key: string]: ContributionProviderDetails providerDetails'
       return:
         type:
           - >-

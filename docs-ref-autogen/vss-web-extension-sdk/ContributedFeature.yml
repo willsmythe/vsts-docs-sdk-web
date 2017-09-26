@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.ContributedFeature
+    name: ContributedFeature
+    fullName: ContributedFeature
+    children:
+      - vss-web-extension-sdk.ContributedFeature.defaultState
+      - vss-web-extension-sdk.ContributedFeature.defaultValueRules
+      - vss-web-extension-sdk.ContributedFeature.description
+      - vss-web-extension-sdk.ContributedFeature.id
+      - vss-web-extension-sdk.ContributedFeature.name
+      - vss-web-extension-sdk.ContributedFeature.overrideRules
+      - vss-web-extension-sdk.ContributedFeature.scopes
+    langs:
+      - typeScript
+    type: interface
+    summary: A feature that can be enabled or disabled
+    source:
+      path: vss.d.ts
+      startLine: 1224
+      remote:
+        path: typings\vss.d.ts
+        repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
+        branch: master
+    package: vss-web-extension-sdk
+    module: Global
+  - uid: vss-web-extension-sdk.ContributedFeature.defaultState
+    name: defaultState
+    fullName: defaultState
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'If true, the feature is enabled unless overridden at some scope'
+    syntax:
+      content: boolean defaultState
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ContributedFeature.defaultValueRules
+    name: defaultValueRules
+    fullName: defaultValueRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Rules for setting the default value if not specified by any setting/scope.
+      Evaluated in order until a rule returns an Enabled or Disabled state (not
+      Undefined)
+    syntax:
+      content: 'ContributedFeatureValueRule[] defaultValueRules'
+      return:
+        type:
+          - '@vss-web-extension-sdk.ContributedFeatureValueRule[]'
+  - uid: vss-web-extension-sdk.ContributedFeature.description
+    name: description
+    fullName: description
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The description of the feature
+    syntax:
+      content: string description
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ContributedFeature.id
+    name: id
+    fullName: id
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The full contribution id of the feature
+    syntax:
+      content: string id
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ContributedFeature.name
+    name: name
+    fullName: name
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The friendly name of the feature
+    syntax:
+      content: string name
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ContributedFeature.overrideRules
+    name: overrideRules
+    fullName: overrideRules
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Rules for overriding a feature value. These rules are run before explicit
+      user/host state values are checked. They are evaluated in order until a
+      rule returns an Enabled or Disabled state (not Undefined)
+    syntax:
+      content: 'ContributedFeatureValueRule[] overrideRules'
+      return:
+        type:
+          - '@vss-web-extension-sdk.ContributedFeatureValueRule[]'
+  - uid: vss-web-extension-sdk.ContributedFeature.scopes
+    name: scopes
+    fullName: scopes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The scopes/levels at which settings can set the enabled/disabled state of
+      this feature
+    syntax:
+      content: 'ContributedFeatureSettingScope[] scopes'
+      return:
+        type:
+          - '@vss-web-extension-sdk.ContributedFeatureSettingScope[]'

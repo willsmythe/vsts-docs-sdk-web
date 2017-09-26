@@ -1,0 +1,49 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.ContributionNodeQueryResult
+    name: ContributionNodeQueryResult
+    fullName: ContributionNodeQueryResult
+    children:
+      - vss-web-extension-sdk.ContributionNodeQueryResult.nodes
+      - vss-web-extension-sdk.ContributionNodeQueryResult.providerDetails
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Result of a contribution node query.  Wraps the resulting contribution
+      nodes and provider details.
+    source:
+      path: vss.d.ts
+      startLine: 1507
+      remote:
+        path: typings\vss.d.ts
+        repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
+        branch: master
+    package: vss-web-extension-sdk
+    module: Global
+  - uid: vss-web-extension-sdk.ContributionNodeQueryResult.nodes
+    name: nodes
+    fullName: nodes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Map of contribution ids to corresponding node.
+    syntax:
+      content: '[key: string]: SerializedContributionNode nodes'
+      return:
+        type:
+          - '[key: string]: @vss-web-extension-sdk.SerializedContributionNode'
+  - uid: vss-web-extension-sdk.ContributionNodeQueryResult.providerDetails
+    name: providerDetails
+    fullName: providerDetails
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Map of provder ids to the corresponding provider details object.
+    syntax:
+      content: '[key: string]: ContributionProviderDetails providerDetails'
+      return:
+        type:
+          - '[key: string]: @vss-web-extension-sdk.ContributionProviderDetails'

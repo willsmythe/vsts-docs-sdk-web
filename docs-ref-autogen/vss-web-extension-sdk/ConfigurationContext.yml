@@ -1,0 +1,93 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.ConfigurationContext
+    name: ConfigurationContext
+    fullName: ConfigurationContext
+    children:
+      - vss-web-extension-sdk.ConfigurationContext.api
+      - vss-web-extension-sdk.ConfigurationContext.clientHost
+      - vss-web-extension-sdk.ConfigurationContext.isHosted
+      - vss-web-extension-sdk.ConfigurationContext.mailSettings
+      - vss-web-extension-sdk.ConfigurationContext.paths
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Web Access configuration data. This information is used to process
+      requests on the server.  This data is also placed in a json island on each
+      page in order for JavaScript to know key configuration data required to
+      things like construct proper urls
+    source:
+      path: vss.d.ts
+      startLine: 1132
+      remote:
+        path: typings\vss.d.ts
+        repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
+        branch: master
+    package: vss-web-extension-sdk
+    module: Global
+  - uid: vss-web-extension-sdk.ConfigurationContext.api
+    name: api
+    fullName: api
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: MVC api configuration
+    syntax:
+      content: ConfigurationContextApis api
+      return:
+        type:
+          - '@vss-web-extension-sdk.ConfigurationContextApis'
+  - uid: vss-web-extension-sdk.ConfigurationContext.clientHost
+    name: clientHost
+    fullName: clientHost
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Optional name of the client (e.g. TEE) hosting the page
+    syntax:
+      content: string clientHost
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ConfigurationContext.isHosted
+    name: isHosted
+    fullName: isHosted
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: ''
+    syntax:
+      content: boolean isHosted
+      return:
+        type:
+          - boolean
+  - uid: vss-web-extension-sdk.ConfigurationContext.mailSettings
+    name: mailSettings
+    fullName: mailSettings
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Current mail settings for TFS
+    syntax:
+      content: TfsMailSettings mailSettings
+      return:
+        type:
+          - '@vss-web-extension-sdk.TfsMailSettings'
+  - uid: vss-web-extension-sdk.ConfigurationContext.paths
+    name: paths
+    fullName: paths
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Server resource paths
+    syntax:
+      content: ConfigurationContextPaths paths
+      return:
+        type:
+          - '@vss-web-extension-sdk.ConfigurationContextPaths'

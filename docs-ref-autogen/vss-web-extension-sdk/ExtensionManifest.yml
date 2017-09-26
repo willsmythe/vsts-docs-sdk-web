@@ -1,0 +1,181 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.ExtensionManifest
+    name: ExtensionManifest
+    fullName: ExtensionManifest
+    children:
+      - vss-web-extension-sdk.ExtensionManifest.baseUri
+      - vss-web-extension-sdk.ExtensionManifest.contributions
+      - vss-web-extension-sdk.ExtensionManifest.contributionTypes
+      - vss-web-extension-sdk.ExtensionManifest.demands
+      - vss-web-extension-sdk.ExtensionManifest.eventCallbacks
+      - vss-web-extension-sdk.ExtensionManifest.fallbackBaseUri
+      - vss-web-extension-sdk.ExtensionManifest.language
+      - vss-web-extension-sdk.ExtensionManifest.licensing
+      - vss-web-extension-sdk.ExtensionManifest.manifestVersion
+      - vss-web-extension-sdk.ExtensionManifest.scopes
+      - vss-web-extension-sdk.ExtensionManifest.serviceInstanceType
+    langs:
+      - typeScript
+    type: interface
+    summary: >-
+      Base class for extension properties which are shared by the extension
+      manifest and the extension model
+    source:
+      path: vss.d.ts
+      startLine: 2000
+      remote:
+        path: typings\vss.d.ts
+        repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
+        branch: master
+    package: vss-web-extension-sdk
+    module: Global
+  - uid: vss-web-extension-sdk.ExtensionManifest.baseUri
+    name: baseUri
+    fullName: baseUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Uri used as base for other relative uri's defined in extension
+    syntax:
+      content: string baseUri
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtensionManifest.contributions
+    name: contributions
+    fullName: contributions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of contributions made by this extension
+    syntax:
+      content: 'Contribution[] contributions'
+      return:
+        type:
+          - '@vss-web-extension-sdk.Contribution[]'
+  - uid: vss-web-extension-sdk.ExtensionManifest.contributionTypes
+    name: contributionTypes
+    fullName: contributionTypes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of contribution types defined by this extension
+    syntax:
+      content: 'ContributionType[] contributionTypes'
+      return:
+        type:
+          - '@vss-web-extension-sdk.ContributionType[]'
+  - uid: vss-web-extension-sdk.ExtensionManifest.demands
+    name: demands
+    fullName: demands
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of explicit demands required by this extension
+    syntax:
+      content: 'string[] demands'
+      return:
+        type:
+          - 'string[]'
+  - uid: vss-web-extension-sdk.ExtensionManifest.eventCallbacks
+    name: eventCallbacks
+    fullName: eventCallbacks
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Collection of endpoints that get called when particular extension events
+      occur
+    syntax:
+      content: ExtensionEventCallbackCollection eventCallbacks
+      return:
+        type:
+          - '@vss-web-extension-sdk.ExtensionEventCallbackCollection'
+  - uid: vss-web-extension-sdk.ExtensionManifest.fallbackBaseUri
+    name: fallbackBaseUri
+    fullName: fallbackBaseUri
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      Secondary location that can be used as base for other relative uri's
+      defined in extension
+    syntax:
+      content: string fallbackBaseUri
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtensionManifest.language
+    name: language
+    fullName: language
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Language Culture Name set by the Gallery
+    syntax:
+      content: string language
+      return:
+        type:
+          - string
+  - uid: vss-web-extension-sdk.ExtensionManifest.licensing
+    name: licensing
+    fullName: licensing
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: How this extension behaves with respect to licensing
+    syntax:
+      content: ExtensionLicensing licensing
+      return:
+        type:
+          - '@vss-web-extension-sdk.ExtensionLicensing'
+  - uid: vss-web-extension-sdk.ExtensionManifest.manifestVersion
+    name: manifestVersion
+    fullName: manifestVersion
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: Version of the extension manifest format/content
+    syntax:
+      content: any manifestVersion
+      return:
+        type:
+          - any
+  - uid: vss-web-extension-sdk.ExtensionManifest.scopes
+    name: scopes
+    fullName: scopes
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: List of all oauth scopes required by this extension
+    syntax:
+      content: 'string[] scopes'
+      return:
+        type:
+          - 'string[]'
+  - uid: vss-web-extension-sdk.ExtensionManifest.serviceInstanceType
+    name: serviceInstanceType
+    fullName: serviceInstanceType
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: >-
+      The ServiceInstanceType(Guid) of the VSTS service that must be available
+      to an account in order for the extension to be installed
+    syntax:
+      content: string serviceInstanceType
+      return:
+        type:
+          - string

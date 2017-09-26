@@ -182,7 +182,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.Build latestBuild'
+      content: Build latestBuild
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.Build'
@@ -196,7 +196,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.Build latestCompletedBuild'
+      content: Build latestCompletedBuild
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.Build'
@@ -209,7 +209,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildOption[] options'
+      content: 'BuildOption[] options'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildOption[]'
@@ -222,7 +222,7 @@ items:
     type: property
     summary: The build process.
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildProcess process'
+      content: BuildProcess process
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildProcess'
@@ -262,7 +262,7 @@ items:
     type: property
     summary: The repository
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildRepository repository'
+      content: BuildRepository repository
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildRepository'
@@ -275,9 +275,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.Build.Contracts.RetentionPolicy[]
-        retentionRules
+      content: 'RetentionPolicy[] retentionRules'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.RetentionPolicy[]'
@@ -303,7 +301,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildTrigger[] triggers'
+      content: 'BuildTrigger[] triggers'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildTrigger[]'
@@ -316,9 +314,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.Build.Contracts.VariableGroup[]
-        variableGroups
+      content: 'VariableGroup[] variableGroups'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.VariableGroup[]'
@@ -331,10 +327,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: >-
-        [key: string]:
-        @vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionVariable
-        variables
+      content: '[key: string]: BuildDefinitionVariable variables'
       return:
         type:
           - >-

@@ -38,7 +38,7 @@ items:
     type: property
     summary: The author of the definition.
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef authoredBy'
+      content: IdentityRef authoredBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -51,7 +51,7 @@ items:
     type: property
     summary: 'If this is a draft definition, it might have a parent'
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.DefinitionReference draftOf'
+      content: DefinitionReference draftOf
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.DefinitionReference'
@@ -64,7 +64,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildMetric[] metrics'
+      content: 'BuildMetric[] metrics'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildMetric[]'
@@ -90,7 +90,7 @@ items:
     type: property
     summary: The default queue which should be used for requests.
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue queue'
+      content: AgentPoolQueue queue
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue'

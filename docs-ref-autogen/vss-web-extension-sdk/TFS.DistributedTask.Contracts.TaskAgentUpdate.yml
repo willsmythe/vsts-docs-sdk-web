@@ -52,9 +52,7 @@ items:
     type: property
     summary: The reason of this agent update
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.TaskAgentUpdateReason
-        reason
+      content: TaskAgentUpdateReason reason
       return:
         type:
           - >-
@@ -69,7 +67,7 @@ items:
     type: property
     summary: The identity that request the agent update
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef requestedBy'
+      content: IdentityRef requestedBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -97,9 +95,7 @@ items:
     type: property
     summary: Gets or sets the source agent version of the agent update
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.PackageVersion
-        sourceVersion
+      content: PackageVersion sourceVersion
       return:
         type:
           - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.PackageVersion'
@@ -113,9 +109,7 @@ items:
     type: property
     summary: Gets or sets the target agent version of the agent update
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.DistributedTask.Contracts.PackageVersion
-        targetVersion
+      content: PackageVersion targetVersion
       return:
         type:
           - '@vss-web-extension-sdk.TFS.DistributedTask.Contracts.PackageVersion'

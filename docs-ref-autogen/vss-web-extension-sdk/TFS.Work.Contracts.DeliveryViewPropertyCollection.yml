@@ -37,7 +37,7 @@ items:
     type: property
     summary: Card settings
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Work.Contracts.CardSettings cardSettings'
+      content: CardSettings cardSettings
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.CardSettings'
@@ -51,7 +51,7 @@ items:
     type: property
     summary: Field criteria
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Work.Contracts.FilterClause[] criteria'
+      content: 'FilterClause[] criteria'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.FilterClause[]'
@@ -65,7 +65,7 @@ items:
     type: property
     summary: Markers. Will be missing/null if there are no markers.
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Work.Contracts.Marker[] markers'
+      content: 'Marker[] markers'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.Marker[]'
@@ -79,9 +79,7 @@ items:
     type: property
     summary: Team backlog mappings
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.Work.Contracts.TeamBacklogMapping[]
-        teamBacklogMappings
+      content: 'TeamBacklogMapping[] teamBacklogMappings'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.TeamBacklogMapping[]'

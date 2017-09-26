@@ -80,7 +80,7 @@ items:
     type: property
     summary: This is the set of files available from the extension.
     syntax:
-      content: '@vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionFile[] files'
+      content: 'ExtensionFile[] files'
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Gallery.Contracts.ExtensionFile[]'
@@ -108,9 +108,7 @@ items:
     type: property
     summary: Information about this particular installation of the extension
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.InstalledExtensionState
-        installState
+      content: InstalledExtensionState installState
       return:
         type:
           - >-

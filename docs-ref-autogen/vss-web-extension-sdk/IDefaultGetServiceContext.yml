@@ -1,0 +1,65 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.IDefaultGetServiceContext
+    name: IDefaultGetServiceContext
+    fullName: IDefaultGetServiceContext
+    children:
+      - vss-web-extension-sdk.IDefaultGetServiceContext.extensionContext
+      - >-
+        vss-web-extension-sdk.IDefaultGetServiceContext.hostManagementServiceOptions
+      - vss-web-extension-sdk.IDefaultGetServiceContext.webContext
+    langs:
+      - typeScript
+    type: interface
+    summary: Context passed to GetServiceInstance
+    source:
+      path: vss.d.ts
+      startLine: 458
+      remote:
+        path: typings\vss.d.ts
+        repo: 'https://github.com/Microsoft/vss-web-extension-sdk.git'
+        branch: master
+    package: vss-web-extension-sdk
+    module: Global
+  - uid: vss-web-extension-sdk.IDefaultGetServiceContext.extensionContext
+    name: extensionContext
+    fullName: extensionContext
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: 'The extension context, i.e. publisher id, extension id, etc.'
+    syntax:
+      content: IExtensionContext extensionContext
+      return:
+        type:
+          - '@vss-web-extension-sdk.IExtensionContext'
+  - uid: >-
+      vss-web-extension-sdk.IDefaultGetServiceContext.hostManagementServiceOptions
+    name: hostManagementServiceOptions
+    fullName: hostManagementServiceOptions
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: |-
+      Options that were passed to the host management service,
+      contains the registered VSS auth application id
+    syntax:
+      content: IHostManagementServiceOptions hostManagementServiceOptions
+      return:
+        type:
+          - '@vss-web-extension-sdk.IHostManagementServiceOptions'
+  - uid: vss-web-extension-sdk.IDefaultGetServiceContext.webContext
+    name: webContext
+    fullName: webContext
+    children: []
+    langs:
+      - typeScript
+    type: property
+    summary: The web context to be used in the get service call
+    syntax:
+      content: WebContext webContext
+      return:
+        type:
+          - '@vss-web-extension-sdk.WebContext'

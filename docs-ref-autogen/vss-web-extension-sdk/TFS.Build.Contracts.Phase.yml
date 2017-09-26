@@ -49,7 +49,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.Dependency[] dependencies'
+      content: 'Dependency[] dependencies'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.Dependency[]'
@@ -120,7 +120,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionStep[] steps'
+      content: 'BuildDefinitionStep[] steps'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionStep[]'
@@ -133,7 +133,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Build.Contracts.PhaseTarget target'
+      content: PhaseTarget target
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Build.Contracts.PhaseTarget'
@@ -146,10 +146,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: >-
-        [key: string]:
-        @vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionVariable
-        variables
+      content: '[key: string]: BuildDefinitionVariable variables'
       return:
         type:
           - >-

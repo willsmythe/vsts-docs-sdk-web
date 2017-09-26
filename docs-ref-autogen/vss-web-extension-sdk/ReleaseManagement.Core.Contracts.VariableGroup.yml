@@ -46,7 +46,7 @@ items:
     type: property
     summary: Gets or sets the identity who created.
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef createdBy'
+      content: IdentityRef createdBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -101,7 +101,7 @@ items:
     type: property
     summary: Gets or sets the identity who modified.
     syntax:
-      content: '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef modifiedBy'
+      content: IdentityRef modifiedBy
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -142,9 +142,7 @@ items:
     type: property
     summary: Gets or sets provider data.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.VariableGroupProviderData
-        providerData
+      content: VariableGroupProviderData providerData
       return:
         type:
           - >-
@@ -172,10 +170,7 @@ items:
     type: property
     summary: ''
     syntax:
-      content: >-
-        [key: string]:
-        @vss-web-extension-sdk.ReleaseManagement.Core.Contracts.VariableValue
-        variables
+      content: '[key: string]: VariableValue variables'
       return:
         type:
           - >-

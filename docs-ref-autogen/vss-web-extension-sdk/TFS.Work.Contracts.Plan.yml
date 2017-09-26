@@ -40,9 +40,7 @@ items:
       Identity that created this plan. Defaults to null for records before
       upgrading to ScaledAgileViewComponent4.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
-        createdByIdentity
+      content: IdentityRef createdByIdentity
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -96,9 +94,7 @@ items:
       Identity that last modified this plan. Defaults to null for records before
       upgrading to ScaledAgileViewComponent4.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef
-        modifiedByIdentity
+      content: IdentityRef modifiedByIdentity
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.IdentityRef'
@@ -170,7 +166,7 @@ items:
     type: property
     summary: Type of the plan
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Work.Contracts.PlanType type'
+      content: PlanType type
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.PlanType'

@@ -46,9 +46,7 @@ items:
       Optional.  Defines an endpoint that gets called via a POST reqeust to
       notify that an extension disable has occurred.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionEventCallback
-        postDisable
+      content: ExtensionEventCallback postDisable
       return:
         type:
           - >-
@@ -65,9 +63,7 @@ items:
       Optional.  Defines an endpoint that gets called via a POST reqeust to
       notify that an extension enable has occurred.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionEventCallback
-        postEnable
+      content: ExtensionEventCallback postEnable
       return:
         type:
           - >-
@@ -84,9 +80,7 @@ items:
       Optional.  Defines an endpoint that gets called via a POST reqeust to
       notify that an extension install has completed.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionEventCallback
-        postInstall
+      content: ExtensionEventCallback postInstall
       return:
         type:
           - >-
@@ -103,9 +97,7 @@ items:
       Optional.  Defines an endpoint that gets called via a POST reqeust to
       notify that an extension uninstall has occurred.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionEventCallback
-        postUninstall
+      content: ExtensionEventCallback postUninstall
       return:
         type:
           - >-
@@ -122,9 +114,7 @@ items:
       Optional.  Defines an endpoint that gets called via a POST reqeust to
       notify that an extension update has occurred.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionEventCallback
-        postUpdate
+      content: ExtensionEventCallback postUpdate
       return:
         type:
           - >-
@@ -142,9 +132,7 @@ items:
       notify that an extension install is about to occur.  Response indicates
       whether to proceed or abort.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionEventCallback
-        preInstall
+      content: ExtensionEventCallback preInstall
       return:
         type:
           - >-
@@ -162,9 +150,7 @@ items:
       OPTIONS request to determine the particular version of the extension to be
       used
     syntax:
-      content: >-
-        @vss-web-extension-sdk.VSS.ExtensionManagement.Contracts.ExtensionEventCallback
-        versionCheck
+      content: ExtensionEventCallback versionCheck
       return:
         type:
           - >-

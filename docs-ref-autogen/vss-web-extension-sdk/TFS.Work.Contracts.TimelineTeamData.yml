@@ -45,7 +45,7 @@ items:
     type: property
     summary: Backlog matching the mapped backlog associated with this team.
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Work.Contracts.BacklogLevel backlog'
+      content: BacklogLevel backlog
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.BacklogLevel'
@@ -103,9 +103,7 @@ items:
     type: property
     summary: 'The iteration data, including the work items, in the queried date range.'
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.Work.Contracts.TimelineTeamIteration[]
-        iterations
+      content: 'TimelineTeamIteration[] iterations'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.TimelineTeamIteration[]'
@@ -173,7 +171,7 @@ items:
     type: property
     summary: Status for this team.
     syntax:
-      content: '@vss-web-extension-sdk.TFS.Work.Contracts.TimelineTeamStatus status'
+      content: TimelineTeamStatus status
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.TimelineTeamStatus'
@@ -213,9 +211,7 @@ items:
     type: property
     summary: The team field values
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.Work.Contracts.TeamFieldValue[]
-        teamFieldValues
+      content: 'TeamFieldValue[] teamFieldValues'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.TeamFieldValue[]'
@@ -229,9 +225,7 @@ items:
     type: property
     summary: Colors for the work item types.
     syntax:
-      content: >-
-        @vss-web-extension-sdk.TFS.Work.Contracts.WorkItemColor[]
-        workItemTypeColors
+      content: 'WorkItemColor[] workItemTypeColors'
       return:
         type:
           - '@vss-web-extension-sdk.TFS.Work.Contracts.WorkItemColor[]'
