@@ -1,0 +1,243 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Service.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Service
+    children:
+      - vss-web-extension-sdk.VSS.Service.getApplicationClient
+      - vss-web-extension-sdk.VSS.Service.getApplicationService
+      - vss-web-extension-sdk.VSS.Service.getClient
+      - vss-web-extension-sdk.VSS.Service.getCollectionClient
+      - vss-web-extension-sdk.VSS.Service.getCollectionService
+      - vss-web-extension-sdk.VSS.Service.getLocalService
+      - vss-web-extension-sdk.VSS.Service.getService
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Service.getApplicationClient
+    name: getApplicationClient
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get an organization-level (Organization) HTTP client
+    syntax:
+      content: >-
+        function getApplicationClient<T>(httpClientType: function, webContext?:
+        WebContext, serviceInstanceId?: string, authTokenManager?:
+        IAuthTokenManager<any>, options?: IVssHttpClientOptions)
+      parameters:
+        - id: httpClientType
+          type:
+            - function
+          description: Type of http client to get
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: optional web context to use for the connection
+          optional: true
+        - id: serviceInstanceId
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: authTokenManager
+          type:
+            - '@vss-web-extension-sdk.IAuthTokenManager<any>'
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - T
+    module: VSS/Service
+  - uid: vss-web-extension-sdk.VSS.Service.getApplicationService
+    name: getApplicationService
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get an application-level (Account) service
+    syntax:
+      content: >-
+        function getApplicationService<T>(serviceType: function, webContext?:
+        WebContext)
+      parameters:
+        - id: serviceType
+          type:
+            - function
+          description: Type of service to get
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: optional web context to use for the connection
+          optional: true
+      return:
+        type:
+          - T
+    module: VSS/Service
+  - uid: vss-web-extension-sdk.VSS.Service.getClient
+    name: getClient
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get an http client for the web context's default host type
+    syntax:
+      content: >-
+        function getClient<T>(httpClientType: function, webContext?: WebContext,
+        serviceInstanceId?: string, authTokenManager?: IAuthTokenManager<any>,
+        options?: IVssHttpClientOptions)
+      parameters:
+        - id: httpClientType
+          type:
+            - function
+          description: ''
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: optional web context to use for the connection
+          optional: true
+        - id: serviceInstanceId
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: authTokenManager
+          type:
+            - '@vss-web-extension-sdk.IAuthTokenManager<any>'
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - T
+    module: VSS/Service
+  - uid: vss-web-extension-sdk.VSS.Service.getCollectionClient
+    name: getCollectionClient
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get a collection-level HTTP client
+    syntax:
+      content: >-
+        function getCollectionClient<T>(httpClientType: function, webContext?:
+        WebContext, serviceInstanceId?: string, authTokenManager?:
+        IAuthTokenManager<any>, options?: IVssHttpClientOptions)
+      parameters:
+        - id: httpClientType
+          type:
+            - function
+          description: Type of http client to get
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: optional web context to use for the connection
+          optional: true
+        - id: serviceInstanceId
+          type:
+            - string
+          description: ''
+          optional: true
+        - id: authTokenManager
+          type:
+            - '@vss-web-extension-sdk.IAuthTokenManager<any>'
+          description: ''
+          optional: true
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - T
+    module: VSS/Service
+  - uid: vss-web-extension-sdk.VSS.Service.getCollectionService
+    name: getCollectionService
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get a collection-level service
+    syntax:
+      content: >-
+        function getCollectionService<T>(serviceType: function, webContext?:
+        WebContext)
+      parameters:
+        - id: serviceType
+          type:
+            - function
+          description: Type of service to get
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: optional web context to use for the connection
+          optional: true
+      return:
+        type:
+          - T
+    module: VSS/Service
+  - uid: vss-web-extension-sdk.VSS.Service.getLocalService
+    name: getLocalService
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get a local service.
+    syntax:
+      content: >-
+        function getLocalService<T>(serviceType: function, useCached?: boolean,
+        webContext?: WebContext)
+      parameters:
+        - id: serviceType
+          type:
+            - function
+          description: Type of the local service to get.
+        - id: useCached
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: optional web context.
+          optional: true
+      return:
+        type:
+          - T
+    module: VSS/Service
+  - uid: vss-web-extension-sdk.VSS.Service.getService
+    name: getService
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get a service for the web context's default host type
+    syntax:
+      content: 'function getService<T>(serviceType: function, webContext?: WebContext)'
+      parameters:
+        - id: serviceType
+          type:
+            - function
+          description: Type of service to get
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: optional web context to use for the connection
+          optional: true
+      return:
+        type:
+          - T
+    module: VSS/Service

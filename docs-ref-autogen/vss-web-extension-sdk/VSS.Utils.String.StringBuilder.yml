@@ -24,6 +24,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Utils.String.StringBuilder.append
     name: append
     children: []
+    type: method
     langs:
       - typeScript
     summary: Appends the specified text to the end of the string buffer.
@@ -35,20 +36,22 @@ items:
             - string
           description: |
             The text to append.
-    type: method
+    module: VSS/Utils/String
   - uid: vss-web-extension-sdk.VSS.Utils.String.StringBuilder.appendNewLine
     name: appendNewLine
     children: []
+    type: method
     langs:
       - typeScript
     summary: Appends a new-line to the current text buffer.
     syntax:
       content: function appendNewLine()
       parameters: []
-    type: method
+    module: VSS/Utils/String
   - uid: vss-web-extension-sdk.VSS.Utils.String.StringBuilder.constructor
     name: StringBuilder
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: >-
@@ -63,10 +66,11 @@ items:
           description: |
             The initial text for the builder
           optional: true
-    type: constructor
+    module: VSS/Utils/String
   - uid: vss-web-extension-sdk.VSS.Utils.String.StringBuilder.toString
     name: toString
     children: []
+    type: method
     langs:
       - typeScript
     summary: Concatenates all text in the string buffer into a single string value.
@@ -76,4 +80,4 @@ items:
       return:
         type:
           - string
-    type: method
+    module: VSS/Utils/String

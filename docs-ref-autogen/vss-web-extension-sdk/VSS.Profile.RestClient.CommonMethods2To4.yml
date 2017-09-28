@@ -36,6 +36,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Profile.RestClient.CommonMethods2To4.constructor
     name: CommonMethods2To4
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -53,11 +54,12 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-    type: constructor
+    module: VSS/Profile/RestClient
   - uid: >-
       vss-web-extension-sdk.VSS.Profile.RestClient.CommonMethods2To4.createProfile
     name: createProfile
     children: []
+    type: method
     langs:
       - typeScript
     summary: Create profile
@@ -79,11 +81,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Profile.Contracts.Profile>
-    type: method
+    module: VSS/Profile/RestClient
   - uid: >-
       vss-web-extension-sdk.VSS.Profile.RestClient.CommonMethods2To4.getGeoRegion
     name: getGeoRegion
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -102,10 +105,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Profile.Contracts.GeoRegion>
-    type: method
+    module: VSS/Profile/RestClient
   - uid: vss-web-extension-sdk.VSS.Profile.RestClient.CommonMethods2To4.getProfile
     name: getProfile
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -148,10 +152,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Profile.Contracts.Profile>
-    type: method
+    module: VSS/Profile/RestClient
   - uid: vss-web-extension-sdk.VSS.Profile.RestClient.CommonMethods2To4.getRegions
     name: getRegions
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -164,7 +169,7 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Profile.Contracts.ProfileRegions>
-    type: method
+    module: VSS/Profile/RestClient
   - uid: >-
       vss-web-extension-sdk.VSS.Profile.RestClient.CommonMethods2To4.serviceInstanceId
     name: serviceInstanceId
@@ -179,10 +184,12 @@ items:
       return:
         type:
           - string
+    module: VSS/Profile/RestClient
   - uid: >-
       vss-web-extension-sdk.VSS.Profile.RestClient.CommonMethods2To4.updateProfile
     name: updateProfile
     children: []
+    type: method
     langs:
       - typeScript
     summary: Update profile
@@ -200,4 +207,4 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
-    type: method
+    module: VSS/Profile/RestClient

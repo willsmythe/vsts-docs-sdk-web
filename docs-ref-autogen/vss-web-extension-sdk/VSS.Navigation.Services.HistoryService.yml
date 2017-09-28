@@ -53,6 +53,7 @@ items:
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.addHistoryPoint
     name: addHistoryPoint
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -97,11 +98,12 @@ items:
             If true, the supplied data just modify the existing/current state.
             If false, they replace all existing key/value pairs.
           optional: true
-    type: method
+    module: VSS/Navigation/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.attachNavigate_1
     name: attachNavigate
     children: []
+    type: method
     langs:
       - typeScript
     summary: Attach a new navigate handler
@@ -127,11 +129,12 @@ items:
             If true, immediately invoke the handler if the current state is
             appropriate (has the matching action value)
           optional: true
-    type: method
+    module: VSS/Navigation/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.attachNavigate
     name: attachNavigate
     children: []
+    type: method
     langs:
       - typeScript
     summary: Attach a new navigate handler
@@ -150,11 +153,12 @@ items:
           description: |
             If true, immediately invoke the handler
           optional: true
-    type: method
+    module: VSS/Navigation/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.deserializeState
     name: deserializeState
     children: []
+    type: method
     langs:
       - typeScript
     summary: Deserialize a navigation state string into a navigation data lookup.
@@ -169,11 +173,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IDictionaryStringTo<any>'
-    type: method
+    module: VSS/Navigation/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.detachNavigate
     name: detachNavigate
     children: []
+    type: method
     langs:
       - typeScript
     summary: Remove a navigate handler
@@ -185,11 +190,12 @@ items:
             - '@vss-web-extension-sdk.IFunctionPPR<any>'
           description: |
             The global navigate handler method to remove
-    type: method
+    module: VSS/Navigation/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.detachNavigate_1
     name: detachNavigate
     children: []
+    type: method
     langs:
       - typeScript
     summary: Remove a navigate handler
@@ -207,11 +213,12 @@ items:
             The method called whenever a navigation event occurs with the
             matching action value
           optional: true
-    type: method
+    module: VSS/Navigation/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.getCurrentFragment
     name: getCurrentFragment
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the serialized version of the current navigation state.
@@ -221,11 +228,12 @@ items:
       return:
         type:
           - string
-    type: method
+    module: VSS/Navigation/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.getCurrentHashString
     name: getCurrentHashString
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the current url's hash string
@@ -235,11 +243,12 @@ items:
       return:
         type:
           - string
-    type: method
+    module: VSS/Navigation/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.getCurrentQueryString
     name: getCurrentQueryString
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the current url's query string
@@ -249,11 +258,12 @@ items:
       return:
         type:
           - string
-    type: method
+    module: VSS/Navigation/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.getCurrentState
     name: getCurrentState
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -265,11 +275,12 @@ items:
       return:
         type:
           - any
-    type: method
+    module: VSS/Navigation/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.getFragmentActionLink
     name: getFragmentActionLink
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -292,20 +303,22 @@ items:
       return:
         type:
           - string
-    type: method
+    module: VSS/Navigation/Services
   - uid: vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.constructor
     name: HistoryService
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
     syntax:
       content: new HistoryService()
       parameters: []
-    type: constructor
+    module: VSS/Navigation/Services
   - uid: vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.pushState
     name: pushState
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -319,11 +332,12 @@ items:
             - string
           description: |
             Url to update the browser's address bar to
-    type: method
+    module: VSS/Navigation/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.replaceHistoryPoint
     name: replaceHistoryPoint
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -369,10 +383,11 @@ items:
             If true, the supplied data just modify the existing/current state.
             If false, they replace all existing key/value pairs.
           optional: true
-    type: method
+    module: VSS/Navigation/Services
   - uid: vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.replaceState
     name: replaceState
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -386,11 +401,12 @@ items:
             - string
           description: |
             Url to update the browser's address bar to
-    type: method
+    module: VSS/Navigation/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.serializeState
     name: serializeState
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -407,11 +423,12 @@ items:
       return:
         type:
           - string
-    type: method
+    module: VSS/Navigation/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Navigation.Services.HistoryService.updateHistoryEntry
     name: updateHistoryEntry
     children: []
+    type: method
     langs:
       - typeScript
     summary: Update the current history entry
@@ -461,4 +478,4 @@ items:
             If true, don't trigger any of the attached navigate event handlers
             due to this update.
           optional: true
-    type: method
+    module: VSS/Navigation/Services

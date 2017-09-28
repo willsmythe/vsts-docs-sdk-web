@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Compatibility.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Compatibility
+    children:
+      - vss-web-extension-sdk.VSS.Compatibility.deprecated
+      - vss-web-extension-sdk.VSS.Compatibility.moved
+      - vss-web-extension-sdk.VSS.Compatibility.removed
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Compatibility.deprecated
+    name: deprecated
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deprecated(name: string, version: string)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: ''
+        - id: version
+          type:
+            - string
+          description: ''
+    module: VSS/Compatibility
+  - uid: vss-web-extension-sdk.VSS.Compatibility.moved
+    name: moved
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function moved(name: string, fromPath: string, toPath: string,
+        description?: any)
+      parameters:
+        - id: name
+          type:
+            - string
+          description: ''
+        - id: fromPath
+          type:
+            - string
+          description: ''
+        - id: toPath
+          type:
+            - string
+          description: ''
+        - id: description
+          type:
+            - any
+          description: ''
+          optional: true
+    module: VSS/Compatibility
+  - uid: vss-web-extension-sdk.VSS.Compatibility.removed
+    name: removed
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function removed(name: string, internalUsage?: boolean)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: ''
+        - id: internalUsage
+          type:
+            - boolean
+          description: ''
+          optional: true
+    module: VSS/Compatibility

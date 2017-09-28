@@ -1,0 +1,640 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Utils.String.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Utils/String
+    children:
+      - vss-web-extension-sdk.VSS.Utils.String.base64Encode
+      - vss-web-extension-sdk.VSS.Utils.String.caseInsensitiveContains
+      - vss-web-extension-sdk.VSS.Utils.String.containsControlChars
+      - vss-web-extension-sdk.VSS.Utils.String.containsMismatchedSurrogateChars
+      - vss-web-extension-sdk.VSS.Utils.String.dateToString
+      - vss-web-extension-sdk.VSS.Utils.String.decodeHtmlSpecialChars
+      - vss-web-extension-sdk.VSS.Utils.String.defaultComparer
+      - vss-web-extension-sdk.VSS.Utils.String.endsWith
+      - vss-web-extension-sdk.VSS.Utils.String.equals
+      - vss-web-extension-sdk.VSS.Utils.String.format
+      - vss-web-extension-sdk.VSS.Utils.String.generateUID
+      - vss-web-extension-sdk.VSS.Utils.String.htmlDecode
+      - vss-web-extension-sdk.VSS.Utils.String.htmlEncode
+      - vss-web-extension-sdk.VSS.Utils.String.htmlEncodeJavascriptAttribute
+      - vss-web-extension-sdk.VSS.Utils.String.ignoreCaseComparer
+      - vss-web-extension-sdk.VSS.Utils.String.isEmptyGuid
+      - vss-web-extension-sdk.VSS.Utils.String.isGuid
+      - vss-web-extension-sdk.VSS.Utils.String.localeComparer
+      - vss-web-extension-sdk.VSS.Utils.String.localeFormat
+      - vss-web-extension-sdk.VSS.Utils.String.localeIgnoreCaseComparer
+      - vss-web-extension-sdk.VSS.Utils.String.nl2br
+      - vss-web-extension-sdk.VSS.Utils.String.numberToString
+      - vss-web-extension-sdk.VSS.Utils.String.parseDateString
+      - vss-web-extension-sdk.VSS.Utils.String.singleSplit
+      - vss-web-extension-sdk.VSS.Utils.String.startsWith
+      - vss-web-extension-sdk.VSS.Utils.String.toSentenceCase
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Utils.String.base64Encode
+    name: base64Encode
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Base64 encodes the string. Uses the native version if available.
+       @param s The string that should be encoded.
+       @return The string in base64 encoding.
+    syntax:
+      content: 'function base64Encode(s: string)'
+      parameters:
+        - id: s
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - string
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.caseInsensitiveContains
+    name: caseInsensitiveContains
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function caseInsensitiveContains(str: string, subStr: string)'
+      parameters:
+        - id: str
+          type:
+            - string
+          description: ''
+        - id: subStr
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.containsControlChars
+    name: containsControlChars
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function containsControlChars(str: string)'
+      parameters:
+        - id: str
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.containsMismatchedSurrogateChars
+    name: containsMismatchedSurrogateChars
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function containsMismatchedSurrogateChars(str: string)'
+      parameters:
+        - id: str
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.dateToString
+    name: dateToString
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function dateToString(value: Date, useLocale?: boolean, format?: string)'
+      parameters:
+        - id: value
+          type:
+            - Date
+          description: ''
+        - id: useLocale
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: format
+          type:
+            - string
+          description: ''
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.decodeHtmlSpecialChars
+    name: decodeHtmlSpecialChars
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: HTML Decodes the string.
+    syntax:
+      content: 'function decodeHtmlSpecialChars(str: string)'
+      parameters:
+        - id: str
+          type:
+            - string
+          description: The string to be decoded
+      return:
+        type:
+          - string
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.defaultComparer
+    name: defaultComparer
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function defaultComparer(a: string, b: string)'
+      parameters:
+        - id: a
+          type:
+            - string
+          description: ''
+        - id: b
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - number
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.endsWith
+    name: endsWith
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function endsWith(str: string, suffix: string, comparer?:
+        IComparer<string>)
+      parameters:
+        - id: str
+          type:
+            - string
+          description: ''
+        - id: suffix
+          type:
+            - string
+          description: ''
+        - id: comparer
+          type:
+            - '@vss-web-extension-sdk.IComparer<string>'
+          description: ''
+          optional: true
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.equals
+    name: equals
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Compares 2 strings for equality.
+    syntax:
+      content: 'function equals(a: string, b: string, ignoreCase?: boolean)'
+      parameters:
+        - id: a
+          type:
+            - string
+          description: First string to compare
+        - id: b
+          type:
+            - string
+          description: Second string to compare
+        - id: ignoreCase
+          type:
+            - boolean
+          description: |
+            If true, do a case-insensitive comparison.
+          optional: true
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.format
+    name: format
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function format(format: string, args: any[])'
+      parameters:
+        - id: format
+          type:
+            - string
+          description: ''
+        - id: args
+          type:
+            - 'any[]'
+          description: ''
+      return:
+        type:
+          - string
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.generateUID
+    name: generateUID
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: 'Returns a new, pseudo-random uid'
+    syntax:
+      content: function generateUID()
+      parameters: []
+      return:
+        type:
+          - string
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.htmlDecode
+    name: htmlDecode
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: HTML Decodes the string.
+    syntax:
+      content: 'function htmlDecode(str: string)'
+      parameters:
+        - id: str
+          type:
+            - string
+          description: The string to be decoded
+      return:
+        type:
+          - string
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.htmlEncode
+    name: htmlEncode
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      HTML Encodes the string. Use this method to help prevent cross site
+      scripting attacks
+          by cleaning text which may contain HTML elements before the string is display in a web page.
+    syntax:
+      content: 'function htmlEncode(str: string)'
+      parameters:
+        - id: str
+          type:
+            - string
+          description: The string to be encoded
+      return:
+        type:
+          - string
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.htmlEncodeJavascriptAttribute
+    name: htmlEncodeJavascriptAttribute
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      HTML Encodes the string. Use this method to help prevent cross site
+      scripting attacks
+          by cleaning text which may contain HTML elements before the string is display in a web page.
+          Does not encode single quotes.
+    syntax:
+      content: 'function htmlEncodeJavascriptAttribute(str: string)'
+      parameters:
+        - id: str
+          type:
+            - string
+          description: The string to be encoded
+      return:
+        type:
+          - string
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.ignoreCaseComparer
+    name: ignoreCaseComparer
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function ignoreCaseComparer(a: string, b: string)'
+      parameters:
+        - id: a
+          type:
+            - string
+          description: ''
+        - id: b
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - number
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.isEmptyGuid
+    name: isEmptyGuid
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function isEmptyGuid(str: string)'
+      parameters:
+        - id: str
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.isGuid
+    name: isGuid
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function isGuid(str: string)'
+      parameters:
+        - id: str
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.localeComparer
+    name: localeComparer
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function localeComparer(a: string, b: string)'
+      parameters:
+        - id: a
+          type:
+            - string
+          description: ''
+        - id: b
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - number
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.localeFormat
+    name: localeFormat
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function localeFormat(format: string, args: any[])'
+      parameters:
+        - id: format
+          type:
+            - string
+          description: ''
+        - id: args
+          type:
+            - 'any[]'
+          description: ''
+      return:
+        type:
+          - string
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.localeIgnoreCaseComparer
+    name: localeIgnoreCaseComparer
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function localeIgnoreCaseComparer(a: string, b: string)'
+      parameters:
+        - id: a
+          type:
+            - string
+          description: ''
+        - id: b
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - number
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.nl2br
+    name: nl2br
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: "HTML encodes the string and replaces newlines with HTML break tags.\n\t\tUse this method to maintain line breaks when displaying strings."
+    syntax:
+      content: 'function nl2br(str: string)'
+      parameters:
+        - id: str
+          type:
+            - string
+          description: The string to be encoded.
+      return:
+        type:
+          - string
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.numberToString
+    name: numberToString
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function numberToString(value: number, useLocale?: boolean, format?:
+        string)
+      parameters:
+        - id: value
+          type:
+            - number
+          description: ''
+        - id: useLocale
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: format
+          type:
+            - string
+          description: ''
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.parseDateString
+    name: parseDateString
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function parseDateString(value: string, cultureInfo?: ICultureInfo,
+        formats?: string[])
+      parameters:
+        - id: value
+          type:
+            - string
+          description: ''
+        - id: cultureInfo
+          type:
+            - '@vss-web-extension-sdk.VSS.Utils.Culture.ICultureInfo'
+          description: ''
+          optional: true
+        - id: formats
+          type:
+            - 'string[]'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Date
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.singleSplit
+    name: singleSplit
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Split a string into 2 parts by finding the first (or optionally, last)
+      match of a given separator.
+
+      This is close to the C# String.Split API using 2 as the "count". In
+      javascript, supplying the count ignores everything
+
+      in the string after that number of segments. For example calling "a b
+      c".split(" ", 2) returns ["a", "b"] where in C#
+
+      this would return ["a", "b c"]. This method works like the C# version
+      where singleSplit("a b c", " ") will return
+
+      { part1: "a", part2: "b c"}.
+    syntax:
+      content: >-
+        function singleSplit(value: string, separator: string, ignoreCase?:
+        boolean, lastMatch?: boolean)
+      parameters:
+        - id: value
+          type:
+            - string
+          description: The string to split
+        - id: separator
+          type:
+            - string
+          description: The separator string to split on
+        - id: ignoreCase
+          type:
+            - boolean
+          description: Optional parameter to ignore case of the separator
+          optional: true
+        - id: lastMatch
+          type:
+            - boolean
+          description: >
+            If true, search in the reverse direction (find the last instance of
+            the separator). By default, the first instance of the separator is
+            used.
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Utils.String.ISingleSplitResult'
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.startsWith
+    name: startsWith
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function startsWith(str: string, prefix: string, comparer?:
+        IComparer<string>)
+      parameters:
+        - id: str
+          type:
+            - string
+          description: ''
+        - id: prefix
+          type:
+            - string
+          description: ''
+        - id: comparer
+          type:
+            - '@vss-web-extension-sdk.IComparer<string>'
+          description: ''
+          optional: true
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/String
+  - uid: vss-web-extension-sdk.VSS.Utils.String.toSentenceCase
+    name: toSentenceCase
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      returns a string with the first letter as UpperCase and the rest lower
+      case
+        Assumes the string is trimmed (no leading white-space) and starts with a valid character
+        if the first char is not an alphabet, no char will be made upper case
+    syntax:
+      content: 'function toSentenceCase(str: string)'
+      parameters:
+        - id: str
+          type:
+            - string
+          description: The string to be converted.</param>
+      return:
+        type:
+          - string
+    module: VSS/Utils/String

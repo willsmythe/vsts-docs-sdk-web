@@ -1,0 +1,365 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Context.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Context
+    children:
+      - vss-web-extension-sdk.VSS.Context.addCssModulePrefixMapping
+      - vss-web-extension-sdk.VSS.Context.addFeatureAvailability
+      - vss-web-extension-sdk.VSS.Context.addServiceLocations
+      - vss-web-extension-sdk.VSS.Context.getActiveTheme
+      - vss-web-extension-sdk.VSS.Context.getContributedServiceRootUrl
+      - vss-web-extension-sdk.VSS.Context.getContributionPathsForService
+      - vss-web-extension-sdk.VSS.Context.getCssModuleUrl
+      - vss-web-extension-sdk.VSS.Context.getDefaultWebContext
+      - vss-web-extension-sdk.VSS.Context.getHubsContext
+      - vss-web-extension-sdk.VSS.Context.getPageContext
+      - vss-web-extension-sdk.VSS.Context.getPathsForService
+      - vss-web-extension-sdk.VSS.Context.getScriptModuleOwner
+      - vss-web-extension-sdk.VSS.Context.getStaticContentVersionsByService
+      - vss-web-extension-sdk.VSS.Context.isAutoHighContrastMode
+      - vss-web-extension-sdk.VSS.Context.isExtensionFrame
+      - vss-web-extension-sdk.VSS.Context.isHighContrastMode
+      - vss-web-extension-sdk.VSS.Context.parseWebContext
+      - vss-web-extension-sdk.VSS.Context.processContributedServiceContext
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Context.addCssModulePrefixMapping
+    name: addCssModulePrefixMapping
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Add CSS module mappings to be used by the CSS loader.
+    syntax:
+      content: 'function addCssModulePrefixMapping(modulePrefix: string, url: string)'
+      parameters:
+        - id: modulePrefix
+          type:
+            - string
+          description: CSS module prefix to map
+        - id: url
+          type:
+            - string
+          description: >
+            The base static root url used for CSS files for the service that
+            owns that prefix
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.addFeatureAvailability
+    name: addFeatureAvailability
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Add feature availability data to the current page context
+    syntax:
+      content: >-
+        function addFeatureAvailability(featureAvailability:
+        FeatureAvailabilityContext)
+      parameters:
+        - id: featureAvailability
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Common.Contracts.Platform.FeatureAvailabilityContext
+          description: >
+            Feature availability data to merge-in to the current page context's
+            feature data
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.addServiceLocations
+    name: addServiceLocations
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Add to the current page context's list of cached service locations
+    syntax:
+      content: 'function addServiceLocations(serviceLocations: ServiceLocations)'
+      parameters:
+        - id: serviceLocations
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Common.Contracts.Platform.ServiceLocations
+          description: >
+            Service location data to merge into to the current page context's
+            data
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.getActiveTheme
+    name: getActiveTheme
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Because we (try to) automatically detect high contrast mode, the actual
+      theme we're using
+
+      doesn't always match the theme in pageContext.globalization.theme.
+    syntax:
+      content: function getActiveTheme()
+      parameters: []
+      return:
+        type:
+          - string
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.getContributedServiceRootUrl
+    name: getContributedServiceRootUrl
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Get the root url for the specified service if the service has contributed
+      to
+
+      the page's configuration context
+    syntax:
+      content: 'function getContributedServiceRootUrl(serviceInstanceTypeId: string)'
+      parameters:
+        - id: serviceInstanceTypeId
+          type:
+            - string
+          description: |
+            The id of the service instance type
+      return:
+        type:
+          - string
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.getContributionPathsForService
+    name: getContributionPathsForService
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Get a lookup of service id to contribution paths that come from that
+      service
+    syntax:
+      content: 'function getContributionPathsForService(serviceInstanceTypeId: string)'
+      parameters:
+        - id: serviceInstanceTypeId
+          type:
+            - string
+          description: ''
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.getCssModuleUrl
+    name: getCssModuleUrl
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Get the url for the given CSS module (e.g.
+      VSS/LoaderPlugins/Css!Prefix:ModulePath)
+    syntax:
+      content: >-
+        function getCssModuleUrl(modulePrefix: string, cssModulePath: string,
+        theme?: string)
+      parameters:
+        - id: modulePrefix
+          type:
+            - string
+          description: CSS module prefix
+        - id: cssModulePath
+          type:
+            - string
+          description: CSS module name
+        - id: theme
+          type:
+            - string
+          description: >-
+            The CSS theme (e.g. Default or HighContrast to use, defaults to the
+            current theme if omitted)
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.getDefaultWebContext
+    name: getDefaultWebContext
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get the default web context for the current page.
+    syntax:
+      content: function getDefaultWebContext()
+      parameters: []
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.getHubsContext
+    name: getHubsContext
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get the hub context information from the current page
+    syntax:
+      content: function getHubsContext()
+      parameters: []
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.HubsContext'
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.getPageContext
+    name: getPageContext
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get the global page context for the current page.
+    syntax:
+      content: function getPageContext()
+      parameters: []
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.PageContext'
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.getPathsForService
+    name: getPathsForService
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get web access paths for the given service
+    syntax:
+      content: 'function getPathsForService(serviceInstanceTypeId: string)'
+      parameters:
+        - id: serviceInstanceTypeId
+          type:
+            - string
+          description: |
+            The id of the service instance type
+      return:
+        type:
+          - >-
+            @vss-web-extension-sdk.VSS.Common.Contracts.Platform.ConfigurationContextPaths
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.getScriptModuleOwner
+    name: getScriptModuleOwner
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |
+      Get the service instace type id of the service that owns the
+      given script module.
+      Returns undefined if the owner is not known.
+      Returns empty string for TFS-owned scripts on-prem.
+    syntax:
+      content: 'function getScriptModuleOwner(module: string)'
+      parameters:
+        - id: module
+          type:
+            - string
+          description: |
+            The script module to check (e.g. "VSS/Context")
+      return:
+        type:
+          - string
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.getStaticContentVersionsByService
+    name: getStaticContentVersionsByService
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Get the static content versions for each service currently known by the
+      client.
+    syntax:
+      content: function getStaticContentVersionsByService()
+      parameters: []
+      return:
+        type:
+          - '@vss-web-extension-sdk.IDictionaryStringTo<string>'
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.isAutoHighContrastMode
+    name: isAutoHighContrastMode
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: For IE and Edge we can automatically detect HC mode.
+    syntax:
+      content: function isAutoHighContrastMode()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.isExtensionFrame
+    name: isExtensionFrame
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Is the current window/frame an extension iframe (not the parent frame and
+      has the VSS.SDK loaded)
+    syntax:
+      content: function isExtensionFrame()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.isHighContrastMode
+    name: isHighContrastMode
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function isHighContrastMode()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.parseWebContext
+    name: parseWebContext
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Parse out the web context information found in JSON island data in the
+      given element.
+    syntax:
+      content: 'function parseWebContext($element: JQuery)'
+      parameters:
+        - id: $element
+          type:
+            - JQuery
+          description: ''
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+    module: VSS/Context
+  - uid: vss-web-extension-sdk.VSS.Context.processContributedServiceContext
+    name: processContributedServiceContext
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Process the contributed configuration from a particular service
+    syntax:
+      content: >-
+        function processContributedServiceContext(context:
+        ContributedServiceContext)
+      parameters:
+        - id: context
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Common.Contracts.Platform.ContributedServiceContext
+          description: |
+            The contributed service context to evaluate
+      return:
+        type:
+          - '@vss-web-extension-sdk.IPromise<any>'
+    module: VSS/Context

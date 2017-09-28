@@ -1,0 +1,152 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Utils.File.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Utils/File
+    children:
+      - vss-web-extension-sdk.VSS.Utils.File.combinePaths
+      - vss-web-extension-sdk.VSS.Utils.File.ensureTrailingSeparator
+      - vss-web-extension-sdk.VSS.Utils.File.getDirectoryName
+      - vss-web-extension-sdk.VSS.Utils.File.getFileName
+      - vss-web-extension-sdk.VSS.Utils.File.getPathParts
+      - vss-web-extension-sdk.VSS.Utils.File.tryDetectFileEncoding
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Utils.File.combinePaths
+    name: combinePaths
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Combine 2 path segments using the given separator ("/" is the default)
+    syntax:
+      content: >-
+        function combinePaths(path1: string, path2: string, pathSeparator?:
+        string)
+      parameters:
+        - id: path1
+          type:
+            - string
+          description: First path segment
+        - id: path2
+          type:
+            - string
+          description: Second path segment
+        - id: pathSeparator
+          type:
+            - string
+          description: Optional path separator ("/" is the default)
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Utils/File
+  - uid: vss-web-extension-sdk.VSS.Utils.File.ensureTrailingSeparator
+    name: ensureTrailingSeparator
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Ensure that the given path ends with a separator. If not, add the
+      separator to the end.
+    syntax:
+      content: 'function ensureTrailingSeparator(path: string, pathSeparator?: string)'
+      parameters:
+        - id: path
+          type:
+            - string
+          description: Path to verify
+        - id: pathSeparator
+          type:
+            - string
+          description: Optional path separator ("/" is the default)
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Utils/File
+  - uid: vss-web-extension-sdk.VSS.Utils.File.getDirectoryName
+    name: getDirectoryName
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Gets the directory part of the specified path.
+    syntax:
+      content: 'function getDirectoryName(path: string, pathSeparator?: string)'
+      parameters:
+        - id: path
+          type:
+            - string
+          description: Path to extract directory name.
+        - id: pathSeparator
+          type:
+            - string
+          description: Path separator (default '/').
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Utils/File
+  - uid: vss-web-extension-sdk.VSS.Utils.File.getFileName
+    name: getFileName
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Gets the filename part of the specified path.
+    syntax:
+      content: 'function getFileName(path: string, pathSeparator?: string)'
+      parameters:
+        - id: path
+          type:
+            - string
+          description: Path to extract file name.
+        - id: pathSeparator
+          type:
+            - string
+          description: Path separator (default '/').
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Utils/File
+  - uid: vss-web-extension-sdk.VSS.Utils.File.getPathParts
+    name: getPathParts
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get parts of a path.
+    syntax:
+      content: 'function getPathParts(path: string, pathSeparator?: string)'
+      parameters:
+        - id: path
+          type:
+            - string
+          description: Path to extract parts.
+        - id: pathSeparator
+          type:
+            - string
+          description: |
+            Path separator (default '/').
+          optional: true
+    module: VSS/Utils/File
+  - uid: vss-web-extension-sdk.VSS.Utils.File.tryDetectFileEncoding
+    name: tryDetectFileEncoding
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function tryDetectFileEncoding(base64Content: string)'
+      parameters:
+        - id: base64Content
+          type:
+            - string
+          description: ''
+    module: VSS/Utils/File

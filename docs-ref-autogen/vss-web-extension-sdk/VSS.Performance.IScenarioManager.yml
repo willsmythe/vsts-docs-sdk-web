@@ -34,6 +34,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioManager.abortScenario
     name: abortScenario
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -52,10 +53,11 @@ items:
             - string
           description: |
             Name of scenario.
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioManager.addAjaxCallStart
     name: addAjaxCallStart
     children: []
+    type: method
     langs:
       - typeScript
     summary: Add information about ajax call to all currently active scenarios
@@ -65,11 +67,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Performance.IEndAjaxCallTiming'
-    type: method
+    module: VSS/Performance
   - uid: >-
       vss-web-extension-sdk.VSS.Performance.IScenarioManager.addScenarioCompletedListener
     name: addScenarioCompletedListener
     children: []
+    type: method
     langs:
       - typeScript
     summary: Add an event listener for scenario-complete events
@@ -83,10 +86,11 @@ items:
             - '@vss-web-extension-sdk.VSS.Performance.IPerfScenarioEventCallback'
           description: |
             Method invoked when a perf scenario has been marked as completed
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioManager.endScenario
     name: endScenario
     children: []
+    type: method
     langs:
       - typeScript
     summary: End scenario if it's currently active
@@ -102,21 +106,23 @@ items:
             - string
           description: |
             Name of scenario.
-    type: method
+    module: VSS/Performance
   - uid: >-
       vss-web-extension-sdk.VSS.Performance.IScenarioManager.getAllCompletedScenarios
     name: getAllCompletedScenarios
     children: []
+    type: method
     langs:
       - typeScript
     summary: Get all completed scenarios
     syntax:
       content: function getAllCompletedScenarios()
       parameters: []
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioManager.getScenarios
     name: getScenarios
     children: []
+    type: method
     langs:
       - typeScript
     summary: Get active scenarios with given area/name
@@ -132,11 +138,12 @@ items:
             - string
           description: |
             Name of scenario.
-    type: method
+    module: VSS/Performance
   - uid: >-
       vss-web-extension-sdk.VSS.Performance.IScenarioManager.recordPageLoadScenario
     name: recordPageLoadScenario
     children: []
+    type: method
     langs:
       - typeScript
     summary: Record a page load scenario.
@@ -162,10 +169,11 @@ items:
       return:
         type:
           - any
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioManager.split
     name: split
     children: []
+    type: method
     langs:
       - typeScript
     summary: Insert split timing for all currently active scenarios
@@ -177,10 +185,11 @@ items:
             - string
           description: |
             Name of split timing
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioManager.startScenario
     name: startScenario
     children: []
+    type: method
     langs:
       - typeScript
     summary: Start new scenario
@@ -214,11 +223,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor'
-    type: method
+    module: VSS/Performance
   - uid: >-
       vss-web-extension-sdk.VSS.Performance.IScenarioManager.startScenarioFromNavigation
     name: startScenarioFromNavigation
     children: []
+    type: method
     langs:
       - typeScript
     summary: Start new scenario beginning at the browser's navigationStart event
@@ -245,4 +255,4 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor'
-    type: method
+    module: VSS/Performance

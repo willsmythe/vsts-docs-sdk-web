@@ -37,6 +37,7 @@ items:
       vss-web-extension-sdk.VSS.Identities.Picker.Services.IdentityService.getIdentities
     name: getIdentities
     children: []
+    type: method
     langs:
       - typeScript
     summary: Get all users with specific properties starting with the prefix.
@@ -82,11 +83,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IDictionaryStringTo<@vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.QueryTokenResultModel>>
-    type: method
+    module: VSS/Identities/Picker/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Services.IdentityService.getIdentityConnections
     name: getIdentityConnections
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -138,11 +140,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Identities.Picker.RestClient.IdentitiesGetConnectionsResponseModel>
-    type: method
+    module: VSS/Identities/Picker/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Services.IdentityService.getIdentityImages
     name: getIdentityImages
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -169,18 +172,19 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IDictionaryStringTo<@vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.IDictionaryStringTo<string>>>
-    type: method
+    module: VSS/Identities/Picker/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Services.IdentityService.constructor
     name: IdentityService
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
     syntax:
       content: new IdentityService()
       parameters: []
-    type: constructor
+    module: VSS/Identities/Picker/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Services.IdentityService.MAX_RESULTS
     name: MAX_RESULTS
@@ -195,6 +199,7 @@ items:
       return:
         type:
           - number
+    module: VSS/Identities/Picker/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Identities.Picker.Services.IdentityService.MIN_RESULTS
     name: MIN_RESULTS
@@ -209,3 +214,4 @@ items:
       return:
         type:
           - number
+    module: VSS/Identities/Picker/Services

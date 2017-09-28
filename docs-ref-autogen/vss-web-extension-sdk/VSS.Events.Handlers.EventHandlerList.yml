@@ -26,6 +26,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.EventHandlerList.constructor
     name: EventHandlerList
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: Creates a new event handler list
@@ -38,20 +39,22 @@ items:
           description: |
             Optional initial list of handlers
           optional: true
-    type: constructor
+    module: VSS/Events/Handlers
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.EventHandlerList.getHandlers
     name: getHandlers
     children: []
+    type: method
     langs:
       - typeScript
     summary: Get the underlying list of handlers
     syntax:
       content: function getHandlers()
       parameters: []
-    type: method
+    module: VSS/Events/Handlers
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.EventHandlerList.invokeHandlers
     name: invokeHandlers
     children: []
+    type: method
     langs:
       - typeScript
     summary: Invoke the subscribed event handlers
@@ -78,10 +81,11 @@ items:
             invocation loop based on the return value of a handler. The filter
             should return true to break out of the loop.
           optional: true
-    type: method
+    module: VSS/Events/Handlers
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.EventHandlerList.subscribe
     name: subscribe
     children: []
+    type: method
     langs:
       - typeScript
     summary: Adds an event handler to the list
@@ -93,10 +97,11 @@ items:
             - '@vss-web-extension-sdk.IFunctionPPR<TSender>'
           description: |
             Event handler method to register
-    type: method
+    module: VSS/Events/Handlers
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.EventHandlerList.unsubscribe
     name: unsubscribe
     children: []
+    type: method
     langs:
       - typeScript
     summary: Removes an event handler from the list
@@ -108,4 +113,4 @@ items:
             - '@vss-web-extension-sdk.IFunctionPPR<TSender>'
           description: |
             Event handler method to remove
-    type: method
+    module: VSS/Events/Handlers

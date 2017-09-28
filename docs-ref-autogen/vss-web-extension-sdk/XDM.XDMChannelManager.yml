@@ -24,6 +24,7 @@ items:
   - uid: vss-web-extension-sdk.XDM.XDMChannelManager.addChannel
     name: addChannel
     children: []
+    type: method
     langs:
       - typeScript
     summary: Add an XDM channel for the given target window/iframe
@@ -43,10 +44,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IXDMChannel'
-    type: method
+    module: XDM
   - uid: vss-web-extension-sdk.XDM.XDMChannelManager.get
     name: get
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -56,10 +58,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.XDM.XDMChannelManager'
-    type: method
+    module: XDM
   - uid: vss-web-extension-sdk.XDM.XDMChannelManager.removeChannel
     name: removeChannel
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -70,14 +73,15 @@ items:
           type:
             - '@vss-web-extension-sdk.IXDMChannel'
           description: ''
-    type: method
+    module: XDM
   - uid: vss-web-extension-sdk.XDM.XDMChannelManager.constructor
     name: XDMChannelManager
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
     syntax:
       content: new XDMChannelManager()
       parameters: []
-    type: constructor
+    module: XDM

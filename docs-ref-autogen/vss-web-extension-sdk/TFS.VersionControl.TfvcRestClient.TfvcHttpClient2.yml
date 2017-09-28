@@ -32,6 +32,7 @@ items:
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.TfvcHttpClient2.getChangesets
     name: getChangesets
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve Tfvc changesets
@@ -97,11 +98,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.TfvcChangesetRef[]>
-    type: method
+    module: TFS/VersionControl/TfvcRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.TfvcHttpClient2.getProjectInfo
     name: getProjectInfo
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -123,11 +125,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.VersionControlProjectInfo>
-    type: method
+    module: TFS/VersionControl/TfvcRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.TfvcHttpClient2.getProjectInfos
     name: getProjectInfos
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -145,11 +148,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.VersionControlProjectInfo[]>
-    type: method
+    module: TFS/VersionControl/TfvcRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.TfvcHttpClient2.constructor
     name: TfvcHttpClient2
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -167,4 +171,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-    type: constructor
+    module: TFS/VersionControl/TfvcRestClient

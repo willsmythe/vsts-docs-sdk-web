@@ -28,16 +28,18 @@ items:
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.clearStrategyStore
     name: clearStrategyStore
     children: []
+    type: method
     langs:
       - typeScript
     summary: Clears the items stored in the strategy.
     syntax:
       content: function clearStrategyStore()
       parameters: []
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.dataExists
     name: dataExists
     children: []
+    type: method
     langs:
       - typeScript
     summary: Checks whether data exists in the search strategy
@@ -47,10 +49,11 @@ items:
       return:
         type:
           - boolean
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.getIndexedItemsCount
     name: getIndexedItemsCount
     children: []
+    type: method
     langs:
       - typeScript
     summary: Return the total count of item indexed.
@@ -60,10 +63,11 @@ items:
       return:
         type:
           - number
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.getIndexTotalSize
     name: getIndexTotalSize
     children: []
+    type: method
     langs:
       - typeScript
     summary: Return the total size of the indexed store.
@@ -73,10 +77,11 @@ items:
       return:
         type:
           - number
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.getTerms
     name: getTerms
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -94,10 +99,11 @@ items:
             - string
           description: The string or regex delimiter to use to split up the search terms
           optional: true
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.processItems
     name: processItems
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -111,10 +117,11 @@ items:
             - '@vss-web-extension-sdk.VSS.Search.SearchableObject<T>[]'
           description: |
             SearchableObjects to add
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.search
     name: search
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -127,10 +134,11 @@ items:
           type:
             - string
           description: The query to search for
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchStrategy.constructor
     name: SearchStrategy
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: >-
@@ -144,4 +152,4 @@ items:
             - '@vss-web-extension-sdk.VSS.Search.ISearchStrategyOptions<T>'
           description: ''
           optional: true
-    type: constructor
+    module: VSS/Search

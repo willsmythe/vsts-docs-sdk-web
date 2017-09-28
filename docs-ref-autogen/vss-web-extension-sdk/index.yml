@@ -3274,9 +3274,9 @@ items:
       - vss-web-extension-sdk.VSS.Utils.String.StringBuilder
       - vss-web-extension-sdk.VSS.Utils.String.ISingleSplitResult
       - vss-web-extension-sdk.VSS.Utils.Tree.IFilterResult
-      - vss-web-extension-sdk.VSS.Utils.UI.Positioning.VerticalScrollBehavior
-      - vss-web-extension-sdk.VSS.Utils.UI.Positioning.ILocation
-      - vss-web-extension-sdk.VSS.Utils.UI.Positioning.IPositionOptions
+      - vss-web-extension-sdk.VSS.Utils.UI.VerticalScrollBehavior
+      - vss-web-extension-sdk.VSS.Utils.UI.ILocation
+      - vss-web-extension-sdk.VSS.Utils.UI.IPositionOptions
       - vss-web-extension-sdk.VSS.Utils.UI.KeyCode
       - vss-web-extension-sdk.VSS.Utils.UI.IBrowserInformation
       - vss-web-extension-sdk.VSS.Utils.UI.IFilterGroup
@@ -3484,6 +3484,104 @@ items:
       - vss-web-extension-sdk.WebContext
       - vss-web-extension-sdk.WebPageDataProviderPageSource
       - vss-web-extension-sdk.Window
+      - vss-web-extension-sdk.ReleaseManagement.Core.RestClient.Global
+      - vss-web-extension-sdk.TFS.Build.RestClient.Global
+      - vss-web-extension-sdk.TFS.Chat.RestClient.Global
+      - vss-web-extension-sdk.TFS.Core.RestClient.Global
+      - vss-web-extension-sdk.TFS.Dashboards.RestClient.Global
+      - vss-web-extension-sdk.TFS.Dashboards.Services.Global
+      - vss-web-extension-sdk.TFS.Dashboards.WidgetHelpers.Global
+      - vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.Global
+      - vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.Global
+      - vss-web-extension-sdk.TFS.ProjectAnalysis.RestClient.Global
+      - vss-web-extension-sdk.TFS.TestImpact.RestClient.Global
+      - vss-web-extension-sdk.TFS.TestManagement.RestClient.Global
+      - vss-web-extension-sdk.TFS.VersionControl.Controls.Global
+      - vss-web-extension-sdk.TFS.VersionControl.GitRestClient.Global
+      - vss-web-extension-sdk.TFS.VersionControl.Services.Global
+      - vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.Global
+      - vss-web-extension-sdk.TFS.Wiki.WikiRestClient.Global
+      - vss-web-extension-sdk.TFS.Work.RestClient.Global
+      - vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.Global
+      - >-
+        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.Global
+      - vss-web-extension-sdk.TFS.WorkItemTracking.ProcessRestClient.Global
+      - >-
+        vss-web-extension-sdk.TFS.WorkItemTracking.ProcessTemplateRestClient.Global
+      - vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.Global
+      - vss-web-extension-sdk.TFS.WorkItemTracking.Services.Global
+      - vss-web-extension-sdk.VSS.Accounts.RestClient.Global
+      - vss-web-extension-sdk.VSS.Ajax.Global
+      - vss-web-extension-sdk.VSS.Authentication.Services.Global
+      - vss-web-extension-sdk.VSS.Bundling.Global
+      - vss-web-extension-sdk.VSS.Commerce.RestClient.Global
+      - vss-web-extension-sdk.VSS.Compatibility.Global
+      - vss-web-extension-sdk.VSS.Context.Global
+      - vss-web-extension-sdk.VSS.Contributions.Controls.Global
+      - vss-web-extension-sdk.VSS.Contributions.LocalPageData.Global
+      - vss-web-extension-sdk.VSS.Contributions.RestClient.Global
+      - vss-web-extension-sdk.VSS.Controls.Global
+      - vss-web-extension-sdk.VSS.Controls.Combos.Global
+      - vss-web-extension-sdk.VSS.Controls.Dialogs.Global
+      - vss-web-extension-sdk.VSS.Controls.Menus.Global
+      - vss-web-extension-sdk.VSS.Controls.Navigation.Global
+      - vss-web-extension-sdk.VSS.Controls.TreeView.Global
+      - vss-web-extension-sdk.VSS.Controls.Validation.Global
+      - vss-web-extension-sdk.VSS.DelegatedAuthorization.RestClient.Global
+      - vss-web-extension-sdk.VSS.Diag.Global
+      - vss-web-extension-sdk.VSS.Error.Global
+      - vss-web-extension-sdk.VSS.Events.Action.Global
+      - vss-web-extension-sdk.VSS.Events.Document.Global
+      - vss-web-extension-sdk.VSS.Events.Page.Global
+      - vss-web-extension-sdk.VSS.Events.Services.Global
+      - vss-web-extension-sdk.VSS.ExtensionManagement.RestClient.Global
+      - vss-web-extension-sdk.VSS.FeatureAvailability.RestClient.Global
+      - vss-web-extension-sdk.VSS.FeatureManagement.RestClient.Global
+      - vss-web-extension-sdk.VSS.FileContainer.RestClient.Global
+      - vss-web-extension-sdk.VSS.Flux.AsyncLoadedComponent.Global
+      - vss-web-extension-sdk.VSS.Gallery.RestClient.Global
+      - vss-web-extension-sdk.VSS.Graph.RestClient.Global
+      - vss-web-extension-sdk.VSS.Identities.Mru.RestClient.Global
+      - vss-web-extension-sdk.VSS.Identities.RestClient.Global
+      - vss-web-extension-sdk.VSS.JoinOrganization.RestClient.Global
+      - vss-web-extension-sdk.VSS.Licensing.RestClient.Global
+      - vss-web-extension-sdk.VSS.LicensingRule.RestClient.Global
+      - vss-web-extension-sdk.VSS.Locations.Global
+      - vss-web-extension-sdk.VSS.Navigation.NavigationHistoryService.Global
+      - vss-web-extension-sdk.VSS.Navigation.Services.Global
+      - vss-web-extension-sdk.VSS.Operations.RestClient.Global
+      - vss-web-extension-sdk.VSS.Organization.RestClient.Global
+      - vss-web-extension-sdk.VSS.OrganizationPolicy.RestClient.Global
+      - vss-web-extension-sdk.VSS.Performance.Global
+      - vss-web-extension-sdk.VSS.Profile.Metrics.Global
+      - vss-web-extension-sdk.VSS.Profile.RestClient.Global
+      - vss-web-extension-sdk.VSS.Search.Global
+      - vss-web-extension-sdk.VSS.Security.RestClient.Global
+      - vss-web-extension-sdk.VSS.SecurityRoles.RestClient.Global
+      - vss-web-extension-sdk.VSS.Serialization.Global
+      - vss-web-extension-sdk.VSS.Service.Global
+      - vss-web-extension-sdk.VSS.Settings.RestClient.Global
+      - vss-web-extension-sdk.VSS.Telemetry.RestClient.Global
+      - vss-web-extension-sdk.VSS.Telemetry.Services.Global
+      - vss-web-extension-sdk.VSS.Token.RestClient.Global
+      - vss-web-extension-sdk.VSS.UserMapping.RestClient.Global
+      - vss-web-extension-sdk.VSS.Utils.Accessibility.Global
+      - vss-web-extension-sdk.VSS.Utils.Array.Global
+      - vss-web-extension-sdk.VSS.Utils.Clipboard.Global
+      - vss-web-extension-sdk.VSS.Utils.Core.Global
+      - vss-web-extension-sdk.VSS.Utils.Culture.Global
+      - vss-web-extension-sdk.VSS.Utils.Date.Global
+      - vss-web-extension-sdk.VSS.Utils.File.Global
+      - vss-web-extension-sdk.VSS.Utils.Html.Global
+      - vss-web-extension-sdk.VSS.Utils.Mobile.Global
+      - vss-web-extension-sdk.VSS.Utils.Number.Global
+      - vss-web-extension-sdk.VSS.Utils.String.Global
+      - vss-web-extension-sdk.VSS.Utils.Tree.Global
+      - vss-web-extension-sdk.VSS.Utils.UI.Global
+      - vss-web-extension-sdk.VSS.Utils.Url.Global
+      - vss-web-extension-sdk.VSS.VSS.Global
+      - vss-web-extension-sdk.VSS.Global
+      - vss-web-extension-sdk.XDM.Global
     type: package
     langs:
       - typeScript
@@ -9102,11 +9200,11 @@ references:
     name: ISingleSplitResult
   - uid: vss-web-extension-sdk.VSS.Utils.Tree.IFilterResult
     name: IFilterResult
-  - uid: vss-web-extension-sdk.VSS.Utils.UI.Positioning.VerticalScrollBehavior
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.VerticalScrollBehavior
     name: VerticalScrollBehavior
-  - uid: vss-web-extension-sdk.VSS.Utils.UI.Positioning.ILocation
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.ILocation
     name: ILocation
-  - uid: vss-web-extension-sdk.VSS.Utils.UI.Positioning.IPositionOptions
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.IPositionOptions
     name: IPositionOptions
   - uid: vss-web-extension-sdk.VSS.Utils.UI.KeyCode
     name: KeyCode
@@ -9522,3 +9620,197 @@ references:
     name: WebPageDataProviderPageSource
   - uid: vss-web-extension-sdk.Window
     name: Window
+  - uid: vss-web-extension-sdk.ReleaseManagement.Core.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.Build.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.Chat.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.Core.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.Dashboards.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.Dashboards.Services.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.Dashboards.WidgetHelpers.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.DistributedTask.TaskAgentRestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.DistributedTask.TaskRestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.ProjectAnalysis.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.TestImpact.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.TestManagement.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.VersionControl.Controls.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.VersionControl.GitRestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.VersionControl.Services.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.VersionControl.TfvcRestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.Wiki.WikiRestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.Work.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.WorkItemTracking.BatchRestClient.Global
+    name: Global
+  - uid: >-
+      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessDefinitionsRestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.WorkItemTracking.ProcessRestClient.Global
+    name: Global
+  - uid: >-
+      vss-web-extension-sdk.TFS.WorkItemTracking.ProcessTemplateRestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.TFS.WorkItemTracking.Services.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Accounts.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Ajax.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Authentication.Services.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Bundling.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Commerce.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Compatibility.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Context.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Contributions.Controls.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Contributions.LocalPageData.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Contributions.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Controls.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Controls.Combos.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Controls.Menus.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Controls.TreeView.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Controls.Validation.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.DelegatedAuthorization.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Diag.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Error.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Events.Action.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Events.Document.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Events.Page.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Events.Services.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.ExtensionManagement.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.FeatureAvailability.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.FeatureManagement.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.FileContainer.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Flux.AsyncLoadedComponent.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Gallery.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Graph.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Identities.Mru.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Identities.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.JoinOrganization.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Licensing.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.LicensingRule.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Locations.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Navigation.NavigationHistoryService.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Navigation.Services.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Operations.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Organization.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.OrganizationPolicy.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Performance.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Profile.Metrics.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Profile.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Search.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Security.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.SecurityRoles.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Serialization.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Service.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Settings.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Telemetry.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Telemetry.Services.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Token.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.UserMapping.RestClient.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Utils.Accessibility.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Utils.Array.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Utils.Clipboard.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Utils.Culture.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Utils.File.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Utils.Html.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Utils.Mobile.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Utils.Number.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Utils.String.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Utils.Tree.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Utils.Url.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.VSS.Global
+    name: Global
+  - uid: vss-web-extension-sdk.VSS.Global
+    name: Global
+  - uid: vss-web-extension-sdk.XDM.Global
+    name: Global

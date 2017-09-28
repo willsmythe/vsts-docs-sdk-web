@@ -43,13 +43,14 @@ items:
   - uid: vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.cancelWait
     name: cancelWait
     children: []
+    type: method
     langs:
       - typeScript
     summary: Cancels waiting by removing message box and overlay.
     syntax:
       content: function cancelWait()
       parameters: []
-    type: method
+    module: VSS/Controls/StatusIndicator
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.DefaultShowDelay
     name: DefaultShowDelay
@@ -64,20 +65,23 @@ items:
       return:
         type:
           - number
+    module: VSS/Controls/StatusIndicator
   - uid: vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.endWait
     name: endWait
     children: []
+    type: method
     langs:
       - typeScript
     summary: Ends waiting by removing message box and overlay.
     syntax:
       content: function endWait()
       parameters: []
-    type: method
+    module: VSS/Controls/StatusIndicator
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.getWaitMessageFormatString
     name: getWaitMessageFormatString
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -87,21 +91,23 @@ items:
       return:
         type:
           - string
-    type: method
+    module: VSS/Controls/StatusIndicator
   - uid: vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.initialize
     name: initialize
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
     syntax:
       content: function initialize()
       parameters: []
-    type: method
+    module: VSS/Controls/StatusIndicator
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.initializeOptions
     name: initializeOptions
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -112,11 +118,12 @@ items:
           type:
             - TOptions
           description: ''
-    type: method
+    module: VSS/Controls/StatusIndicator
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.isCancelled
     name: isCancelled
     children: []
+    type: method
     langs:
       - typeScript
     summary: Indicates whether the operation is cancelled or not.
@@ -126,7 +133,7 @@ items:
       return:
         type:
           - boolean
-    type: method
+    module: VSS/Controls/StatusIndicator
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.MinLifeTime
     name: MinLifeTime
@@ -141,9 +148,11 @@ items:
       return:
         type:
           - number
+    module: VSS/Controls/StatusIndicator
   - uid: vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.setMessage
     name: setMessage
     children: []
+    type: method
     langs:
       - typeScript
     summary: Sets a new message for the displayed message box.
@@ -154,10 +163,11 @@ items:
           type:
             - string
           description: Message to be displayed.
-    type: method
+    module: VSS/Controls/StatusIndicator
   - uid: vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.startWait
     name: startWait
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -171,11 +181,12 @@ items:
             - '@vss-web-extension-sdk.VSS.Utils.Core.Cancelable'
           description: ''
           optional: true
-    type: method
+    module: VSS/Controls/StatusIndicator
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControlO.constructor
     name: WaitControlO
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: Constructs a WaitControl object.
@@ -196,4 +207,4 @@ items:
                   cancelCallback: function() { // do something }            // optional and only effective when cancellable is true
               }
           optional: true
-    type: constructor
+    module: VSS/Controls/StatusIndicator

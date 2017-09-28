@@ -1,0 +1,475 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Utils/Core
+    children:
+      - vss-web-extension-sdk.VSS.Utils.Core.convertValueToDisplayString
+      - vss-web-extension-sdk.VSS.Utils.Core.curry
+      - vss-web-extension-sdk.VSS.Utils.Core.delay
+      - vss-web-extension-sdk.VSS.Utils.Core.delegate
+      - vss-web-extension-sdk.VSS.Utils.Core.deleteCookie
+      - vss-web-extension-sdk.VSS.Utils.Core.domToXml
+      - vss-web-extension-sdk.VSS.Utils.Core.equals
+      - vss-web-extension-sdk.VSS.Utils.Core.parseIntArray
+      - vss-web-extension-sdk.VSS.Utils.Core.parseJsonIsland
+      - vss-web-extension-sdk.VSS.Utils.Core.parseMSJSON
+      - vss-web-extension-sdk.VSS.Utils.Core.parseXml
+      - vss-web-extension-sdk.VSS.Utils.Core.poll
+      - vss-web-extension-sdk.VSS.Utils.Core.setCookie
+      - vss-web-extension-sdk.VSS.Utils.Core.stringifyMSJSON
+      - vss-web-extension-sdk.VSS.Utils.Core.throttledDelegate
+      - vss-web-extension-sdk.VSS.Utils.Core.tryParseMSJSON
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.convertValueToDisplayString
+    name: convertValueToDisplayString
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Converts the specified value to a display string.
+    syntax:
+      content: 'function convertValueToDisplayString(value: any, format?: string)'
+      parameters:
+        - id: value
+          type:
+            - any
+          description: The value to convert.
+        - id: format
+          type:
+            - string
+          description: |
+            The value to convert.
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Utils/Core
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.curry
+    name: curry
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |2
+          Curries a function with a set of arguments and returns the resulting function.
+          When eventually evaluated, the returned function will call the original function
+          with the current arguments prepended to the list of arguments.
+          var add3, result;
+          function add(x, y) {
+              return x + y;
+          }
+          add3 = add.curry(3);
+          results = add3(4); // result === 7
+
+          See http://en.wikipedia.org/wiki/Curry_function
+    syntax:
+      content: 'function curry(fn: Function, args: any[])'
+      parameters:
+        - id: fn
+          type:
+            - Function
+          description: ''
+        - id: args
+          type:
+            - 'any[]'
+          description: |+
+
+      return:
+        type:
+          - '@vss-web-extension-sdk.IArgsFunctionR<any>'
+    module: VSS/Utils/Core
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.delay
+    name: delay
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Executes the provided function after the specified amount of time
+    syntax:
+      content: >-
+        function delay(instance: any, ms: number, method: Function, data?:
+        any[])
+      parameters:
+        - id: instance
+          type:
+            - any
+          description: Context to use when calling the provided function
+        - id: ms
+          type:
+            - number
+          description: Delay in milliseconds to wait before executing the Function
+        - id: method
+          type:
+            - Function
+          description: Method to execute
+        - id: data
+          type:
+            - 'any[]'
+          description: Arguments to pass to the method
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction'
+    module: VSS/Utils/Core
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.delegate
+    name: delegate
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Wrap a function to ensure that a specific value of 'this' is passed to the
+      function when it is invoked (regardless of the caller).
+    syntax:
+      content: 'function delegate(instance: any, method: Function, data?: any)'
+      parameters:
+        - id: instance
+          type:
+            - any
+          description: >-
+            The object that will be set to the value of 'this' when the function
+            is invoked.
+        - id: method
+          type:
+            - Function
+          description: The function to wrap.
+        - id: data
+          type:
+            - any
+          description: >-
+            Arguments that will be appended to the arguments passed when the
+            delegate is invoked.
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.IArgsFunctionR<any>'
+    module: VSS/Utils/Core
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.deleteCookie
+    name: deleteCookie
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function deleteCookie(cookieName: string)'
+      parameters:
+        - id: cookieName
+          type:
+            - string
+          description: ''
+    module: VSS/Utils/Core
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.domToXml
+    name: domToXml
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function domToXml(xmlNode: any)'
+      parameters:
+        - id: xmlNode
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - string
+    module: VSS/Utils/Core
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.equals
+    name: equals
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Compare two objects value are deep equal, order matters in array
+      comparision.
+    syntax:
+      content: 'function equals(first: any, second: any)'
+      parameters:
+        - id: first
+          type:
+            - any
+          description: The first object
+        - id: second
+          type:
+            - any
+          description: The second object
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Core
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.parseIntArray
+    name: parseIntArray
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Splits a string that contains a list of comma-separated (signed) integer
+      values into an array
+    syntax:
+      content: 'function parseIntArray(stringRepresentation: string)'
+      parameters:
+        - id: stringRepresentation
+          type:
+            - string
+          description: String representation of comma-separated integer array
+    module: VSS/Utils/Core
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.parseJsonIsland
+    name: parseJsonIsland
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Parse data from a JSON Island into an object
+    syntax:
+      content: >-
+        function parseJsonIsland($context: JQuery, selectionFilter?: string,
+        remove?: boolean)
+      parameters:
+        - id: $context
+          type:
+            - JQuery
+          description: The context in which to search for the JSON data
+        - id: selectionFilter
+          type:
+            - string
+          description: >-
+            An optional selector that will filter the selection of JSON islands
+            found.
+          optional: true
+        - id: remove
+          type:
+            - boolean
+          description: .
+          optional: true
+      return:
+        type:
+          - any
+    module: VSS/Utils/Core
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.parseMSJSON
+    name: parseMSJSON
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >
+      Deserialize an "MSJSON" formatted string into the corresponding JSON
+      object. This converts a
+
+      string like "\\/Date(1448375104308)\\/" into the corresponding Date
+      object.
+
+      Throws if not a valid JSON string.
+    syntax:
+      content: 'function parseMSJSON(data: any, secure?: boolean)'
+      parameters:
+        - id: data
+          type:
+            - any
+          description: The JSON string to deserialize
+        - id: secure
+          type:
+            - boolean
+          description: |
+            Unused parameter
+          optional: true
+      return:
+        type:
+          - any
+    module: VSS/Utils/Core
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.parseXml
+    name: parseXml
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function parseXml(xml: string)'
+      parameters:
+        - id: xml
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - any
+    module: VSS/Utils/Core
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.poll
+    name: poll
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Executes the provided function after the specified amount of time
+    syntax:
+      content: >-
+        function poll(functionDelegate: (sucessCallback: IResultCallback,
+        errorCallback?: IErrorCallback) => void, delay: number, maxAttempt:
+        number, firstDelay?: number, shouldStopDelegate?: (result: any) =>
+        boolean, reachMaxAttemptCallback?: () => void)
+      parameters:
+        - id: functionDelegate
+          type:
+            - >-
+              (sucessCallback: IResultCallback, errorCallback?: IErrorCallback)
+              => void
+          description: Function to execute
+        - id: delay
+          type:
+            - number
+          description: Delay in milliseconds to wait before executing the Function
+        - id: maxAttempt
+          type:
+            - number
+          description: >-
+            The max number of attemp should try, if not specified, it will
+            continus polling
+        - id: firstDelay
+          type:
+            - number
+          description: >-
+            Delay in milliseconds to wait before executing the Function for the
+            first time (default 0)
+          optional: true
+        - id: shouldStopDelegate
+          type:
+            - '(result: any) => boolean'
+          description: Callback to determine whether to stop the poll or not
+          optional: true
+        - id: reachMaxAttemptCallback
+          type:
+            - () => void
+          description: |
+            Callback when max attempted is reached
+          optional: true
+    module: VSS/Utils/Core
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.setCookie
+    name: setCookie
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setCookie(cookieName: string, cookieValue: string)'
+      parameters:
+        - id: cookieName
+          type:
+            - string
+          description: ''
+        - id: cookieValue
+          type:
+            - string
+          description: ''
+    module: VSS/Utils/Core
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.stringifyMSJSON
+    name: stringifyMSJSON
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Serialize a JSON object into "MSJSON" format which has date objects
+      serialized in the
+
+      format: "\\/Date(1448375104308)\\/"
+    syntax:
+      content: 'function stringifyMSJSON(object: any)'
+      parameters:
+        - id: object
+          type:
+            - any
+          description: |
+            The JSON object to serialize
+      return:
+        type:
+          - string
+    module: VSS/Utils/Core
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.throttledDelegate
+    name: throttledDelegate
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Creates a delegate that is delayed for the specified interval when
+      invoked.
+
+      Subsequent calls to the returned delegate reset the timer. Using the
+      options
+
+      parameter, callers can determine if the invocation happens on the rising
+
+      edge (immediately when the delegate is called) or on the falling edge
+      (Default).
+    syntax:
+      content: >-
+        function throttledDelegate(instance: any, ms: number, method: Function,
+        data?: any[], options?: ThrottledDelegateOptions)
+      parameters:
+        - id: instance
+          type:
+            - any
+          description: Context to use when calling the provided function
+        - id: ms
+          type:
+            - number
+          description: Delay in milliseconds to wait before executing the Function
+        - id: method
+          type:
+            - Function
+          description: Method to execute
+        - id: data
+          type:
+            - 'any[]'
+          description: Arguments to pass to the method
+          optional: true
+        - id: options
+          type:
+            - ThrottledDelegateOptions
+          description: Specify the behavior of when the delegate gets invoked
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.IArgsFunctionR<any>'
+    module: VSS/Utils/Core
+  - uid: vss-web-extension-sdk.VSS.Utils.Core.tryParseMSJSON
+    name: tryParseMSJSON
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >
+      Deserialize an "MSJSON" formatted string into the corresponding JSON
+      object. This converts a
+
+      string like "\\/Date(1448375104308)\\/" into the corresponding Date
+      object.
+
+      Returns null if not a valid JSON string.
+    syntax:
+      content: 'function tryParseMSJSON(data: any, secure?: boolean)'
+      parameters:
+        - id: data
+          type:
+            - any
+          description: The JSON string to deserialize
+        - id: secure
+          type:
+            - boolean
+          description: |
+            Unused parameter
+          optional: true
+      return:
+        type:
+          - any
+    module: VSS/Utils/Core

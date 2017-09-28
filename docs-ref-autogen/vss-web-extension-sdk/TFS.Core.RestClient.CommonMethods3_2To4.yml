@@ -28,6 +28,7 @@ items:
   - uid: vss-web-extension-sdk.TFS.Core.RestClient.CommonMethods3_2To4.constructor
     name: CommonMethods3_2To4
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -45,11 +46,12 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-    type: constructor
+    module: TFS/Core/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Core.RestClient.CommonMethods3_2To4.getProjectProperties
     name: getProjectProperties
     children: []
+    type: method
     langs:
       - typeScript
     summary: '[Preview API] Get a collection of team project properties.'
@@ -72,11 +74,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Core.Contracts.ProjectProperty[]>
-    type: method
+    module: TFS/Core/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Core.RestClient.CommonMethods3_2To4.setProjectProperties
     name: setProjectProperties
     children: []
+    type: method
     langs:
       - typeScript
     summary: '[Preview API] Create, update, and delete team project properties.'
@@ -101,4 +104,4 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
-    type: method
+    module: TFS/Core/RestClient

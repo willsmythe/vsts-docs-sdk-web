@@ -26,6 +26,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Search.InvertedIndexStore.addToIndex
     name: addToIndex
     children: []
+    type: method
     langs:
       - typeScript
     summary: 'Adds an item to the index, under its token and its subparts.'
@@ -43,20 +44,22 @@ items:
       return:
         type:
           - boolean
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.InvertedIndexStore.clearStrategyStore
     name: clearStrategyStore
     children: []
+    type: method
     langs:
       - typeScript
     summary: Clears the items stored in the strategy.
     syntax:
       content: function clearStrategyStore()
       parameters: []
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.InvertedIndexStore.constructor
     name: InvertedIndexStore
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -68,10 +71,11 @@ items:
             - '@vss-web-extension-sdk.VSS.Search.IndexedSearchStoreOptions<T>'
           description: ''
           optional: true
-    type: constructor
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.InvertedIndexStore.search
     name: search
     children: []
+    type: method
     langs:
       - typeScript
     summary: Runs a query on the index.
@@ -82,4 +86,4 @@ items:
           type:
             - string
           description: The query to run.
-    type: method
+    module: VSS/Search

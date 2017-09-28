@@ -34,6 +34,7 @@ items:
   - uid: vss-web-extension-sdk.TFS.Wiki.WikiRestClient.WikiHttpClient4.createUpdate
     name: createUpdate
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -68,10 +69,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Wiki.Contracts.WikiUpdate>
-    type: method
+    module: TFS/Wiki/WikiRestClient
   - uid: vss-web-extension-sdk.TFS.Wiki.WikiRestClient.WikiHttpClient4.createWiki
     name: createWiki
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -97,10 +99,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Wiki.Contracts.WikiRepository>
-    type: method
+    module: TFS/Wiki/WikiRestClient
   - uid: vss-web-extension-sdk.TFS.Wiki.WikiRestClient.WikiHttpClient4.getPages
     name: getPages
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -142,10 +145,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Wiki.Contracts.WikiPage[]>
-    type: method
+    module: TFS/Wiki/WikiRestClient
   - uid: vss-web-extension-sdk.TFS.Wiki.WikiRestClient.WikiHttpClient4.getPageText
     name: getPageText
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -186,10 +190,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
-    type: method
+    module: TFS/Wiki/WikiRestClient
   - uid: vss-web-extension-sdk.TFS.Wiki.WikiRestClient.WikiHttpClient4.getPageZip
     name: getPageZip
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -230,10 +235,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
-    type: method
+    module: TFS/Wiki/WikiRestClient
   - uid: vss-web-extension-sdk.TFS.Wiki.WikiRestClient.WikiHttpClient4.getWikis
     name: getWikis
     children: []
+    type: method
     langs:
       - typeScript
     summary: '[Preview API] Retrieves wiki repositories in a project or collection.'
@@ -249,7 +255,7 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Wiki.Contracts.WikiRepository[]>
-    type: method
+    module: TFS/Wiki/WikiRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Wiki.WikiRestClient.WikiHttpClient4.serviceInstanceId
     name: serviceInstanceId
@@ -264,9 +270,11 @@ items:
       return:
         type:
           - string
+    module: TFS/Wiki/WikiRestClient
   - uid: vss-web-extension-sdk.TFS.Wiki.WikiRestClient.WikiHttpClient4.constructor
     name: WikiHttpClient4
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -284,4 +292,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-    type: constructor
+    module: TFS/Wiki/WikiRestClient

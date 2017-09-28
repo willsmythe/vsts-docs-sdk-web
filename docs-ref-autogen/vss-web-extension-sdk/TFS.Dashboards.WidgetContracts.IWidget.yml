@@ -43,6 +43,7 @@ items:
       return:
         type:
           - '(widgetSettings: WidgetSettings) => IPromise<boolean>'
+    module: TFS/Dashboards/WidgetContracts
   - uid: vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidget.lightbox
     name: lightbox
     fullName: lightbox
@@ -65,6 +66,7 @@ items:
           - >-
             (widgetSettings: WidgetSettings, lightboxSize: Size) =>
             IPromise<WidgetStatus>
+    module: TFS/Dashboards/WidgetContracts
   - uid: vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidget.listen
     name: listen
     fullName: listen
@@ -78,6 +80,7 @@ items:
       return:
         type:
           - '(event: string, eventArgs: EventArgs<T>) => void'
+    module: TFS/Dashboards/WidgetContracts
   - uid: vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidget.load
     name: load
     fullName: load
@@ -98,6 +101,7 @@ items:
       return:
         type:
           - '(widgetSettings: WidgetSettings) => IPromise<WidgetStatus>'
+    module: TFS/Dashboards/WidgetContracts
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidget.onDashboardLoaded
     name: onDashboardLoaded
@@ -114,6 +118,7 @@ items:
       return:
         type:
           - () => void
+    module: TFS/Dashboards/WidgetContracts
   - uid: vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidget.preload
     name: preload
     fullName: preload
@@ -133,3 +138,4 @@ items:
       return:
         type:
           - '(widgetSettings: WidgetSettings) => IPromise<WidgetStatus>'
+    module: TFS/Dashboards/WidgetContracts

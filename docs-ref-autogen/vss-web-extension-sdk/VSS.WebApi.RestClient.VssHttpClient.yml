@@ -37,6 +37,7 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IAuthTokenManager<any>'
+    module: VSS/WebApi/RestClient
   - uid: >-
       vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient.forceOptionsCallForAutoNegotiate
     name: forceOptionsCallForAutoNegotiate
@@ -51,9 +52,11 @@ items:
       return:
         type:
           - boolean
+    module: VSS/WebApi/RestClient
   - uid: vss-web-extension-sdk.VSS.WebApi.RestClient.VssHttpClient.constructor
     name: VssHttpClient
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -71,4 +74,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-    type: constructor
+    module: VSS/WebApi/RestClient

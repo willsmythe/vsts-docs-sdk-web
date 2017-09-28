@@ -1,0 +1,33 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Utils.Accessibility.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Utils/Accessibility
+    children:
+      - vss-web-extension-sdk.VSS.Utils.Accessibility.announce
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Utils.Accessibility.announce
+    name: announce
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Causes screen readers to read the given message.
+    syntax:
+      content: 'function announce(message: string, assertive?: boolean)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+        - id: assertive
+          type:
+            - boolean
+          description: >
+            if true, the screen reader will read the announcement immediately,
+            instead of waiting for "the next graceful opportunity"
+          optional: true
+    module: VSS/Utils/Accessibility

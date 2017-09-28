@@ -1,0 +1,244 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Utils.Url.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Utils/Url
+    children:
+      - vss-web-extension-sdk.VSS.Utils.Url.combineUrl
+      - vss-web-extension-sdk.VSS.Utils.Url.getQueryParameters
+      - vss-web-extension-sdk.VSS.Utils.Url.getTranslatorService
+      - vss-web-extension-sdk.VSS.Utils.Url.isAbsoluteUrl
+      - vss-web-extension-sdk.VSS.Utils.Url.isExternalUrl
+      - vss-web-extension-sdk.VSS.Utils.Url.isSafeProtocol
+      - vss-web-extension-sdk.VSS.Utils.Url.isSameOrigin
+      - vss-web-extension-sdk.VSS.Utils.Url.isUrlWithinConstraints
+      - vss-web-extension-sdk.VSS.Utils.Url.replaceRouteValues
+      - vss-web-extension-sdk.VSS.Utils.Url.replaceUrlParam
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Utils.Url.combineUrl
+    name: combineUrl
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Combines 2 url paths. If 'url' is an absolute url, then it is returned
+      without attempting to prepend baseUrl.
+    syntax:
+      content: 'function combineUrl(baseUrl: string, url: string)'
+      parameters:
+        - id: baseUrl
+          type:
+            - string
+          description: The root url that the resulting url should start with
+        - id: url
+          type:
+            - string
+          description: >
+            If a relative url, it is appended to baseUrl (with a "/" separator).
+            If absolute, it is returned as-is.
+      return:
+        type:
+          - string
+    module: VSS/Utils/Url
+  - uid: vss-web-extension-sdk.VSS.Utils.Url.getQueryParameters
+    name: getQueryParameters
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Extract query parameters as a dictionary
+    syntax:
+      content: 'function getQueryParameters(url: string)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - '@vss-web-extension-sdk.IDictionaryStringTo<string>'
+    module: VSS/Utils/Url
+  - uid: vss-web-extension-sdk.VSS.Utils.Url.getTranslatorService
+    name: getTranslatorService
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getTranslatorService()
+      parameters: []
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Utils.Url.UrlTranslatorService'
+    module: VSS/Utils/Url
+  - uid: vss-web-extension-sdk.VSS.Utils.Url.isAbsoluteUrl
+    name: isAbsoluteUrl
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Determines whether the specified URL is absolute or not.
+    syntax:
+      content: 'function isAbsoluteUrl(url: string)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: Url to check.
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Url
+  - uid: vss-web-extension-sdk.VSS.Utils.Url.isExternalUrl
+    name: isExternalUrl
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Checks if specified URL is an external URL to the current window.
+      If relative URL is provided - returns false.
+    syntax:
+      content: 'function isExternalUrl(url: string)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: |
+            Url to check
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Url
+  - uid: vss-web-extension-sdk.VSS.Utils.Url.isSafeProtocol
+    name: isSafeProtocol
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Check if specified URL is safe - i.e. part of an approved list of URL
+      schemes.
+    syntax:
+      content: 'function isSafeProtocol(url: string)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: Url to check.
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Url
+  - uid: vss-web-extension-sdk.VSS.Utils.Url.isSameOrigin
+    name: isSameOrigin
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: 'Do the given urls have the same origin (scheme, host and port)'
+    syntax:
+      content: 'function isSameOrigin(url1: string, url2: string)'
+      parameters:
+        - id: url1
+          type:
+            - string
+          description: First url to check
+        - id: url2
+          type:
+            - string
+          description: |
+            Second url to check
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Url
+  - uid: vss-web-extension-sdk.VSS.Utils.Url.isUrlWithinConstraints
+    name: isUrlWithinConstraints
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Verifies that the given url is within the constraints of 2000 characters.
+    syntax:
+      content: 'function isUrlWithinConstraints(url: string)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: The url to verify.
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Url
+  - uid: vss-web-extension-sdk.VSS.Utils.Url.replaceRouteValues
+    name: replaceRouteValues
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Take an MVC route template (like "/foo/{id}/{*params}") and replace the
+      templated parts with values from the given dictionary
+    syntax:
+      content: >-
+        function replaceRouteValues(routeTemplate: string, routeValues: [key:
+        string]: string, removeUsedRouteValues?: boolean)
+      parameters:
+        - id: routeTemplate
+          type:
+            - string
+          description: 'MVC route template (like "/foo/{id}/{*params}")'
+        - id: routeValues
+          type:
+            - '[key: string]: string'
+          description: Route value replacements
+        - id: removeUsedRouteValues
+          type:
+            - boolean
+          description: >
+            If true, remove values from the passed in routeValues dictionary
+            when they are used for replacement.
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Utils/Url
+  - uid: vss-web-extension-sdk.VSS.Utils.Url.replaceUrlParam
+    name: replaceUrlParam
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Return a new url that adds (if the given parameter name does not exist in
+      the url),
+
+      or replaces the value of given parameter name with the given parameter
+      value.
+    syntax:
+      content: >-
+        function replaceUrlParam(url: string, paramName: string, paramValue:
+        string)
+      parameters:
+        - id: url
+          type:
+            - string
+          description: The original url.
+        - id: paramName
+          type:
+            - string
+          description: The parameter name to replace in the url.
+        - id: paramValue
+          type:
+            - string
+          description: The parameter value to replace in the url.
+      return:
+        type:
+          - string
+    module: VSS/Utils/Url

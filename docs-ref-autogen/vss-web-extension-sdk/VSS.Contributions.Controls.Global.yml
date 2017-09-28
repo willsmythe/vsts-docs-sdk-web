@@ -1,0 +1,310 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Contributions.Controls.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Contributions/Controls
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Controls.createContributedControl
+      - vss-web-extension-sdk.VSS.Contributions.Controls.createExtensionHost
+      - >-
+        vss-web-extension-sdk.VSS.Contributions.Controls.createExtensionHostForContribution
+      - vss-web-extension-sdk.VSS.Contributions.Controls.getBackgroundHost
+      - vss-web-extension-sdk.VSS.Contributions.Controls.getBackgroundInstance
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Contributions.Controls.createContributedControl
+    name: createContributedControl
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Instantiate a contributed control through an internal or external
+      contribution host.
+    syntax:
+      content: >-
+        function createContributedControl<T>($container: JQuery, contribution:
+        Contribution, initialConfig?: any, webContext?: WebContext, instanceId?:
+        string, contributionHostBehavior?: IContributionHostBehavior)
+      parameters:
+        - id: $container
+          type:
+            - JQuery
+          description: The jQuery element to place the control in
+        - id: contribution
+          type:
+            - Contribution
+          description: >-
+            The contribution (or its id) which contains the details of the
+            contributed control
+        - id: initialConfig
+          type:
+            - any
+          description: Initial configuration/options to pass to the control
+          optional: true
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: >-
+            The web context to use when fetching contributions and resolving
+            uris
+          optional: true
+        - id: instanceId
+          type:
+            - string
+          description: Id of the registered object in the contribution's host
+          optional: true
+        - id: contributionHostBehavior
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Contributions.Controls.IContributionHostBehavior
+          description: >-
+            options for the host control to toggle behavior on progress
+            indication and error/warning handling.
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.IPromise<T>'
+    module: VSS/Contributions/Controls
+  - uid: vss-web-extension-sdk.VSS.Contributions.Controls.createExtensionHost
+    name: createExtensionHost
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Instantiate a contributed control through an internal or external
+      contribution host.
+    syntax:
+      content: >-
+        function createExtensionHost($container: JQuery, contribution:
+        Contribution, initialConfig?: any, webContext?: WebContext,
+        postContent?: any, uriReplacementProperties?: any, uriPropertyName?:
+        string, iframeFirstPartyContent?: boolean, contributionHostBehavior?:
+        IContributionHostBehavior)
+      parameters:
+        - id: $container
+          type:
+            - JQuery
+          description: The jQuery element to place the control in
+        - id: contribution
+          type:
+            - Contribution
+          description: ''
+        - id: initialConfig
+          type:
+            - any
+          description: Initial configuration/options to pass to the control
+          optional: true
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: >-
+            The web context to use when fetching contributions and resolving
+            uris
+          optional: true
+        - id: postContent
+          type:
+            - any
+          description: >-
+            Optional data to post to the contribution url (if not specified, a
+            GET is performed)
+          optional: true
+        - id: uriReplacementProperties
+          type:
+            - any
+          description: Replacement object to use when resolving the content uri
+          optional: true
+        - id: uriPropertyName
+          type:
+            - string
+          description: Name of the uri property to lookup in the contribution's properties
+          optional: true
+        - id: iframeFirstPartyContent
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: contributionHostBehavior
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Contributions.Controls.IContributionHostBehavior
+          description: >-
+            options for the host control to toggle behavior on progress
+            indication and error/warning handling.
+          optional: true
+      return:
+        type:
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Contributions.Controls.IExtensionHost>
+    module: VSS/Contributions/Controls
+  - uid: >-
+      vss-web-extension-sdk.VSS.Contributions.Controls.createExtensionHostForContribution
+    name: createExtensionHostForContribution
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Instantiate a contributed control through an internal or external
+      contribution host.
+    syntax:
+      content: >-
+        function createExtensionHostForContribution($container: JQuery, uri:
+        string, contribution: Contribution, initialConfig?: any, postContent?:
+        any, iframeFirstPartyContent?: boolean, contributionHostBehavior?:
+        IContributionHostBehavior, fallbackUri?: string)
+      parameters:
+        - id: $container
+          type:
+            - JQuery
+          description: The jQuery element to place the control in
+        - id: uri
+          type:
+            - string
+          description: The uri of the contribution content
+        - id: contribution
+          type:
+            - '@vss-web-extension-sdk.VSS.Contributions.Contracts.Contribution'
+          description: >-
+            The contribution which contains the details of the contributed
+            control
+        - id: initialConfig
+          type:
+            - any
+          description: Initial configuration/options to pass to the control
+          optional: true
+        - id: postContent
+          type:
+            - any
+          description: ''
+          optional: true
+        - id: iframeFirstPartyContent
+          type:
+            - boolean
+          description: ''
+          optional: true
+        - id: contributionHostBehavior
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Contributions.Controls.IContributionHostBehavior
+          description: >-
+            options for the host control to toggle behavior on progress
+            indication and error/warning handling.
+          optional: true
+        - id: fallbackUri
+          type:
+            - string
+          description: ''
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Contributions.Controls.IExtensionHost'
+    module: VSS/Contributions/Controls
+  - uid: vss-web-extension-sdk.VSS.Contributions.Controls.getBackgroundHost
+    name: getBackgroundHost
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Instantiate a contributed background host (no UI) through an internal or
+      external contribution host.
+    syntax:
+      content: >-
+        function getBackgroundHost(contribution: Contribution, webContext?:
+        WebContext, uriReplacementProperties?: any, uriPropertyName?: string)
+      parameters:
+        - id: contribution
+          type:
+            - Contribution
+          description: >-
+            The contribution (or full id of the contribution) which contains the
+            details of the contributed control
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: >-
+            The web context to use when fetching contributions and resolving
+            uris
+          optional: true
+        - id: uriReplacementProperties
+          type:
+            - any
+          description: Replacement object to use when resolving the content uri
+          optional: true
+        - id: uriPropertyName
+          type:
+            - string
+          description: Name of the uri property to lookup in the contribution's properties
+          optional: true
+      return:
+        type:
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Contributions.Controls.IExtensionHost>
+    module: VSS/Contributions/Controls
+  - uid: vss-web-extension-sdk.VSS.Contributions.Controls.getBackgroundInstance
+    name: getBackgroundInstance
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Instantiate a registered background/service instance (no UI) through an
+      internal or external contribution host.
+    syntax:
+      content: >-
+        function getBackgroundInstance<T>(contribution: Contribution,
+        instanceId: string, contextData?: any, webContext?: WebContext,
+        timeout?: number, timeoutMessage?: string, uriReplacementProperties?:
+        any, uriPropertyName?: string)
+      parameters:
+        - id: contribution
+          type:
+            - Contribution
+          description: >-
+            The contribution (or full id of the contribution) which contains the
+            details of the contributed control
+        - id: instanceId
+          type:
+            - string
+          description: Id of the registered object in the contribution's host
+        - id: contextData
+          type:
+            - any
+          description: Context data/options to pass to the registered object factory method
+          optional: true
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: >-
+            The web context to use when fetching contributions and resolving
+            uris
+          optional: true
+        - id: timeout
+          type:
+            - number
+          description: Timeout in milliseconds for the instance creation
+          optional: true
+        - id: timeoutMessage
+          type:
+            - string
+          description: Message to reject the promise with if the fetch times out
+          optional: true
+        - id: uriReplacementProperties
+          type:
+            - any
+          description: Replacement object to use when resolving the content uri
+          optional: true
+        - id: uriPropertyName
+          type:
+            - string
+          description: Name of the uri property to lookup in the contribution's properties
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.IPromise<T>'
+    module: VSS/Contributions/Controls

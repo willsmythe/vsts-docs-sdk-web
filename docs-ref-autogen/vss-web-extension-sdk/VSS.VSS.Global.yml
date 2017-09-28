@@ -1,0 +1,462 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.VSS.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/VSS
+    children:
+      - vss-web-extension-sdk.VSS.VSS.classExtend
+      - vss-web-extension-sdk.VSS.VSS.getErrorMessage_1
+      - vss-web-extension-sdk.VSS.VSS.getErrorMessage_2
+      - vss-web-extension-sdk.VSS.VSS.getErrorMessage
+      - vss-web-extension-sdk.VSS.VSS.getModuleBase
+      - vss-web-extension-sdk.VSS.VSS.getTypeName
+      - vss-web-extension-sdk.VSS.VSS.handleError
+      - vss-web-extension-sdk.VSS.VSS.hasUnloadRequest
+      - vss-web-extension-sdk.VSS.VSS.initClassPrototype
+      - vss-web-extension-sdk.VSS.VSS.modulePluginsLoaded
+      - vss-web-extension-sdk.VSS.VSS.queueCallbacks
+      - vss-web-extension-sdk.VSS.VSS.queuedRequestHasResult
+      - vss-web-extension-sdk.VSS.VSS.queueRequest
+      - vss-web-extension-sdk.VSS.VSS.requireModules
+      - vss-web-extension-sdk.VSS.VSS.tfsModuleLoaded
+      - vss-web-extension-sdk.VSS.VSS.using
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.VSS.classExtend
+    name: classExtend
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function classExtend(ctor: any, members: any)'
+      parameters:
+        - id: ctor
+          type:
+            - any
+          description: ''
+        - id: members
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - any
+    module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.getErrorMessage_1
+    name: getErrorMessage
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getErrorMessage(errorFunction: Function)'
+      parameters:
+        - id: errorFunction
+          type:
+            - Function
+          description: ''
+      return:
+        type:
+          - string
+    module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.getErrorMessage_2
+    name: getErrorMessage
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getErrorMessage(error: Error)'
+      parameters:
+        - id: error
+          type:
+            - Error
+          description: ''
+      return:
+        type:
+          - string
+    module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.getErrorMessage
+    name: getErrorMessage
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getErrorMessage(errorString: string)'
+      parameters:
+        - id: errorString
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - string
+    module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.getModuleBase
+    name: getModuleBase
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getModuleBase(moduleName: string)'
+      parameters:
+        - id: moduleName
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - string
+    module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.getTypeName
+    name: getTypeName
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getTypeName(type: any)'
+      parameters:
+        - id: type
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - string
+    module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.handleError
+    name: handleError
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function handleError(error: TfsError, callback?: IErrorCallback,
+        context?: any)
+      parameters:
+        - id: error
+          type:
+            - '@vss-web-extension-sdk.TfsError'
+          description: ''
+        - id: callback
+          type:
+            - '@vss-web-extension-sdk.IErrorCallback'
+          description: ''
+          optional: true
+        - id: context
+          type:
+            - any
+          description: |+
+
+          optional: true
+    module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.hasUnloadRequest
+    name: hasUnloadRequest
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function hasUnloadRequest()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.initClassPrototype
+    name: initClassPrototype
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function initClassPrototype(ctor: Function, members: any)'
+      parameters:
+        - id: ctor
+          type:
+            - Function
+          description: ''
+        - id: members
+          type:
+            - any
+          description: ''
+    module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.modulePluginsLoaded
+    name: modulePluginsLoaded
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Listen to the load complete of a module's all plugins.
+    syntax:
+      content: 'function modulePluginsLoaded(moduleName: string, callback: Function)'
+      parameters:
+        - id: moduleName
+          type:
+            - string
+          description: >-
+            Name of the module (Not the full name, instead the name specified in
+            VSS.tfsModuleLoaded).
+        - id: callback
+          type:
+            - Function
+          description: |
+            A function to execute when all the plugins of a module loaded.
+    module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.queueCallbacks
+    name: queueCallbacks
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function queueCallbacks(context: any, callback: IResultCallback,
+        errorCallback: IErrorCallback, data?: any)
+      parameters:
+        - id: context
+          type:
+            - any
+          description: ''
+        - id: callback
+          type:
+            - '@vss-web-extension-sdk.IResultCallback'
+          description: ''
+        - id: errorCallback
+          type:
+            - '@vss-web-extension-sdk.IErrorCallback'
+          description: ''
+        - id: data
+          type:
+            - any
+          description: |+
+
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.VSS.IQueueCallbacksResult'
+    module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.queuedRequestHasResult
+    name: queuedRequestHasResult
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Checks if a queued request has been completed.
+    syntax:
+      content: 'function queuedRequestHasResult(cachedResult: any)'
+      parameters:
+        - id: cachedResult
+          type:
+            - any
+          description: |
+            The property passed to queueRequest as target[propName]
+      return:
+        type:
+          - boolean
+    module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.queueRequest
+    name: queueRequest
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >
+      Queues a request for a piece of data.  Handles situations where the data
+      has already been
+
+      retrieved as well as when multiple requests are pending for the same
+      data.  When the data has
+
+      already been retrieved, the successCallback will be invoked immediately. 
+      When multiple
+
+      requests are pending for the same data, each of the callers will be
+      notified when the data
+
+      request has been completed (worker will only be invoked once).
+
+      Sample usage:  This will invoke the worker function using the current
+      object as the context.  The "_teamSettings"
+                     property of the current object will be checked for a value before invoking the worker.  If the value
+                     needs to be looked up, the worker will be invoked and it will make a request for the data.  If the
+                     request is completed successfully the data is passed to the succeeded callback.  If there is an error
+                     with the request the failed callback is invoked.
+
+          queueRequest(this, this, "_teamSettings", successCallback, errorCallback,
+              function (succeeded, failed) {
+                  Ajax.getMSJSON(url, null, function (teamSettings) {
+                      succeeded(teamSettings);
+                  }, failed);
+              });
+    syntax:
+      content: >-
+        function queueRequest(context: any, target: any, propName: string,
+        successCallback: IResultCallback, errorCallback: IErrorCallback, worker:
+        IResultCallback)
+      parameters:
+        - id: context
+          type:
+            - any
+          description: >-
+            The "this" that the worker and successCallback functions will be
+            invoked with.
+        - id: target
+          type:
+            - any
+          description: >
+
+            The object which the propName property should be checked on to see
+            if the request has already been performed.
+
+            If the property has a value (that is not a function), then the
+            success callback is invoked immediately with the properties value as
+            the result.
+
+            If the property does not have a value, the request is processed and
+            the result is stored in the property.
+        - id: propName
+          type:
+            - string
+          description: >-
+            Name of the property on the target to store the result in and check
+            to see if the request is needed.
+        - id: successCallback
+          type:
+            - '@vss-web-extension-sdk.IResultCallback'
+          description: >-
+            Function invoked when the request is completed.  The function should
+            take the "result" as its first parameter.
+        - id: errorCallback
+          type:
+            - '@vss-web-extension-sdk.IErrorCallback'
+          description: ''
+        - id: worker
+          type:
+            - '@vss-web-extension-sdk.IResultCallback'
+          description: >+
+
+            This is the which performs the work to retrieve the data.  The
+            function should have the following signature:
+                function worker(succeeded, failed)
+
+            The worker should invoke the "succeeded" function that it is
+            provided passing it the result.  If an error occurs the worker
+            should invoke the
+
+            "failed" function with the error.
+
+
+            NOTE: It is important to note that the "successCallback" is not the
+            same as the "succeeded" callback provided to the worker
+                  function.  It is important for the worker to invoke the callbacks it is provided with rather than the callbacks which are
+                  provided to the queueRequest method.  The same holds true for the failed callback provided to the worker function.
+
+    module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.requireModules
+    name: requireModules
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Issue a require statement for the specified modules and invoke the given
+      callback method once available.
+
+      This is a wrapper around the requireJS 'require' statement which ensures
+      that the missing modules are
+
+      pulled in via the minimum number of resource requests. Rather than taking
+      a callback, this method returns
+
+      a promise for the resolved modules (as an array).
+    syntax:
+      content: >-
+        function requireModules(moduleNames: string[], options?:
+        IModuleLoadOptions)
+      parameters:
+        - id: moduleNames
+          type:
+            - 'string[]'
+          description: |
+            An array of AMD modules to asynchronously require
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.VSS.VSS.IModuleLoadOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<any>
+    module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.tfsModuleLoaded
+    name: tfsModuleLoaded
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function tfsModuleLoaded(moduleName: string, moduleExports: any)'
+      parameters:
+        - id: moduleName
+          type:
+            - string
+          description: ''
+        - id: moduleExports
+          type:
+            - any
+          description: ''
+    module: VSS/VSS
+  - uid: vss-web-extension-sdk.VSS.VSS.using
+    name: using
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Issue a require statement for the specified modules and invoke the given
+      callback method once available.
+
+      This is a wrapper around the requireJS 'require' statement which ensures
+      that the missing modules are
+
+      pulled in via the minimum number of resource requests.
+    syntax:
+      content: >-
+        function using(moduleNames: string[], callback: Function,
+        errorCallback?: Function)
+      parameters:
+        - id: moduleNames
+          type:
+            - 'string[]'
+          description: An array of AMD modules to asynchronously require.
+        - id: callback
+          type:
+            - Function
+          description: Function to invoke when all the specified the modules are loaded.
+        - id: errorCallback
+          type:
+            - Function
+          description: >
+            Function to invoke if an error occurs during the load of the
+            modules.
+          optional: true
+    module: VSS/VSS

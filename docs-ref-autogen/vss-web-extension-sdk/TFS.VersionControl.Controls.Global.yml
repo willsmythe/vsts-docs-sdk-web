@@ -1,0 +1,147 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.TFS.VersionControl.Controls.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: TFS/VersionControl/Controls
+    children:
+      - vss-web-extension-sdk.TFS.VersionControl.Controls.create
+      - vss-web-extension-sdk.TFS.VersionControl.Controls.create
+      - vss-web-extension-sdk.TFS.VersionControl.Controls.create
+      - vss-web-extension-sdk.TFS.VersionControl.Controls.create
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.TFS.VersionControl.Controls.create
+    name: create
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Create an instance of the new history list control
+    syntax:
+      content: >-
+        function create($container: JQuery, options?: IGitHistoryListOptions,
+        webContext?: WebContext)
+      parameters:
+        - id: $container
+          type:
+            - JQuery
+          description: Container element to create the history list control in
+        - id: options
+          type:
+            - >-
+              @vss-web-extension-sdk.TFS.VersionControl.Controls.IGitHistoryListOptions
+          description: GitHistoryList control options
+          optional: true
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: |
+            Optional web context to scope the control to
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.IPromise<void>'
+    module: TFS/VersionControl/Controls
+  - uid: vss-web-extension-sdk.TFS.VersionControl.Controls.create
+    name: create
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Creates a new instance of an IGitVersionSelector for choosing from a
+      filtered list of available Git branches and tags.
+
+      setRepositoryId() must be called to fully initialize and fetch the
+      relevant branches and tags.
+    syntax:
+      content: >-
+        function create($container: JQuery, options?:
+        IGitVersionSelectorOptions, webContext?: WebContext)
+      parameters:
+        - id: $container
+          type:
+            - JQuery
+          description: ''
+        - id: options
+          type:
+            - >-
+              @vss-web-extension-sdk.TFS.VersionControl.Controls.IGitVersionSelectorOptions
+          description: ''
+          optional: true
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: ''
+          optional: true
+      return:
+        type:
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Controls.IGitVersionSelector>
+    module: TFS/VersionControl/Controls
+  - uid: vss-web-extension-sdk.TFS.VersionControl.Controls.create
+    name: create
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Create an instance of history list control
+    syntax:
+      content: >-
+        function create($container: JQuery, options?:
+        ISimpleCommitHistoryListOptions, webContext?: WebContext)
+      parameters:
+        - id: $container
+          type:
+            - JQuery
+          description: Container element to create the history list control in
+        - id: options
+          type:
+            - >-
+              @vss-web-extension-sdk.TFS.VersionControl.Controls.ISimpleCommitHistoryListOptions
+          description: SimpleCommitHistoryList control options
+          optional: true
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: |
+            Optional web context to scope the control to
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.IPromise<void>'
+    module: TFS/VersionControl/Controls
+  - uid: vss-web-extension-sdk.TFS.VersionControl.Controls.create
+    name: create
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Create an instance of the new history list control
+    syntax:
+      content: >-
+        function create($container: JQuery, options?: ITfvcHistoryListOptions,
+        webContext?: WebContext)
+      parameters:
+        - id: $container
+          type:
+            - JQuery
+          description: Container element to create the history list control in
+        - id: options
+          type:
+            - >-
+              @vss-web-extension-sdk.TFS.VersionControl.Controls.ITfvcHistoryListOptions
+          description: GitHistoryList control options
+          optional: true
+        - id: webContext
+          type:
+            - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
+          description: |
+            Optional web context to scope the control to
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.IPromise<void>'
+    module: TFS/VersionControl/Controls

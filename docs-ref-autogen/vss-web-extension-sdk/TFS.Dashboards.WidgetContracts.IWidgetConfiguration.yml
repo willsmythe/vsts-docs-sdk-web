@@ -39,6 +39,7 @@ items:
       return:
         type:
           - '(event: string, eventArgs: EventArgs<T>) => void'
+    module: TFS/Dashboards/WidgetContracts
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidgetConfiguration.load
     name: load
@@ -63,6 +64,7 @@ items:
           - >-
             (widgetSettings: WidgetSettings, widgetConfigurationContext:
             IWidgetConfigurationContext) => IPromise<WidgetStatus>
+    module: TFS/Dashboards/WidgetContracts
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidgetConfiguration.onSave
     name: onSave
@@ -88,6 +90,7 @@ items:
       return:
         type:
           - () => IPromise<SaveStatus>
+    module: TFS/Dashboards/WidgetContracts
   - uid: >-
       vss-web-extension-sdk.TFS.Dashboards.WidgetContracts.IWidgetConfiguration.onSaveComplete
     name: onSaveComplete
@@ -104,3 +107,4 @@ items:
       return:
         type:
           - () => void
+    module: TFS/Dashboards/WidgetContracts

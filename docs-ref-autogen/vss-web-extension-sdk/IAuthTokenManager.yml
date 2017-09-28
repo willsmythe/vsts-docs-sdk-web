@@ -24,6 +24,7 @@ items:
   - uid: vss-web-extension-sdk.IAuthTokenManager.getAuthorizationHeader
     name: getAuthorizationHeader
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the authorization header to use in a request from the given token
@@ -37,10 +38,11 @@ items:
       return:
         type:
           - string
-    type: method
+    module: Global
   - uid: vss-web-extension-sdk.IAuthTokenManager.getAuthToken
     name: getAuthToken
     children: []
+    type: method
     langs:
       - typeScript
     summary: Get the auth token to use for this request.
@@ -57,4 +59,4 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<TToken>'
-    type: method
+    module: Global

@@ -72,6 +72,7 @@ items:
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.constructor
     name: BuildHttpClient2_1
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -89,11 +90,12 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-    type: constructor
+    module: TFS/Build/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.createDefinition
     name: createDefinition
     children: []
+    type: method
     langs:
       - typeScript
     summary: Creates a new definition
@@ -126,10 +128,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition3_2>
-    type: method
+    module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.createQueue
     name: createQueue
     children: []
+    type: method
     langs:
       - typeScript
     summary: Creates a build queue
@@ -144,10 +147,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue>
-    type: method
+    module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.deleteBuild
     name: deleteBuild
     children: []
+    type: method
     langs:
       - typeScript
     summary: Deletes a build
@@ -173,10 +177,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
-    type: method
+    module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.deleteQueue
     name: deleteQueue
     children: []
+    type: method
     langs:
       - typeScript
     summary: Deletes a build queue
@@ -190,11 +195,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
-    type: method
+    module: TFS/Build/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getAgentPoolQueue
     name: getAgentPoolQueue
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets a queue
@@ -209,10 +215,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue>
-    type: method
+    module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getArtifact
     name: getArtifact
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets a specific artifact for a build
@@ -243,11 +250,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildArtifact>
-    type: method
+    module: TFS/Build/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getArtifactContentZip
     name: getArtifactContentZip
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets a specific artifact for a build
@@ -277,10 +285,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
-    type: method
+    module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getArtifacts
     name: getArtifacts
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets all artifacts for a build
@@ -307,10 +316,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildArtifact[]>
-    type: method
+    module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuild
     name: getBuild
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets a build
@@ -342,11 +352,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Build>
-    type: method
+    module: TFS/Build/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuildChanges
     name: getBuildChanges
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the changes associated with a build
@@ -388,11 +399,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Change[]>
-    type: method
+    module: TFS/Build/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuildDeployments
     name: getBuildDeployments
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the deployment information associated with a build
@@ -411,10 +423,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Deployment[]>
-    type: method
+    module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuildLog
     name: getBuildLog
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets a log
@@ -453,10 +466,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
-    type: method
+    module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuildLogs
     name: getBuildLogs
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets logs for a build
@@ -482,11 +496,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildLog[]>
-    type: method
+    module: TFS/Build/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuildLogsZip
     name: getBuildLogsZip
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets logs for a build
@@ -511,10 +526,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
-    type: method
+    module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuilds
     name: getBuilds
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets builds
@@ -628,11 +644,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Build[]>
-    type: method
+    module: TFS/Build/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuildWorkItemsRefs
     name: getBuildWorkItemsRefs
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the work item ids associated with a build
@@ -663,11 +680,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.WebApi.Contracts.ResourceRef[]>
-    type: method
+    module: TFS/Build/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getBuildWorkItemsRefsFromCommits
     name: getBuildWorkItemsRefsFromCommits
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the work item ids associated with build commits
@@ -704,11 +722,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.WebApi.Contracts.ResourceRef[]>
-    type: method
+    module: TFS/Build/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getDefinition
     name: getDefinition
     children: []
+    type: method
     langs:
       - typeScript
     summary: 'Gets a definition, optionally at a specific revision'
@@ -745,11 +764,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.DefinitionReference>
-    type: method
+    module: TFS/Build/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getDefinitions
     name: getDefinitions
     children: []
+    type: method
     langs:
       - typeScript
     summary: 'Gets definitions, optionally filtered by name'
@@ -798,10 +818,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.DefinitionReference[]>
-    type: method
+    module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getQueues
     name: getQueues
     children: []
+    type: method
     langs:
       - typeScript
     summary: 'Gets queues, optionally filtered by name'
@@ -817,10 +838,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.AgentPoolQueue[]>
-    type: method
+    module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getTemplate
     name: getTemplate
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets definition template filtered by id
@@ -839,10 +861,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionTemplate3_2>
-    type: method
+    module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.getTemplates
     name: getTemplates
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets definition templates
@@ -857,10 +880,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionTemplate3_2[]>
-    type: method
+    module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.queueBuild
     name: queueBuild
     children: []
+    type: method
     langs:
       - typeScript
     summary: Queues a build
@@ -897,10 +921,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Build>
-    type: method
+    module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.saveTemplate
     name: saveTemplate
     children: []
+    type: method
     langs:
       - typeScript
     summary: Saves a definition template
@@ -926,10 +951,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinitionTemplate3_2>
-    type: method
+    module: TFS/Build/RestClient
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.updateBuild
     name: updateBuild
     children: []
+    type: method
     langs:
       - typeScript
     summary: Updates a build
@@ -960,11 +986,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Build>
-    type: method
+    module: TFS/Build/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.BuildHttpClient2_1.updateDefinition
     name: updateDefinition
     children: []
+    type: method
     langs:
       - typeScript
     summary: Updates an existing definition
@@ -1001,4 +1028,4 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.BuildDefinition3_2>
-    type: method
+    module: TFS/Build/RestClient

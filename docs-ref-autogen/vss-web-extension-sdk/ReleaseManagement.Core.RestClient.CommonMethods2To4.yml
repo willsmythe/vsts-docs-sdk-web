@@ -29,6 +29,7 @@ items:
       vss-web-extension-sdk.ReleaseManagement.Core.RestClient.CommonMethods2To4.constructor
     name: CommonMethods2To4
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -46,11 +47,12 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-    type: constructor
+    module: ReleaseManagement/Core/RestClient
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.RestClient.CommonMethods2To4.getAgentArtifactDefinitions
     name: getAgentArtifactDefinitions
     children: []
+    type: method
     langs:
       - typeScript
     summary: '[Preview API] Returns the artifact details that automation agent requires'
@@ -69,7 +71,7 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.AgentArtifactDefinition[]>
-    type: method
+    module: ReleaseManagement/Core/RestClient
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.RestClient.CommonMethods2To4.serviceInstanceId
     name: serviceInstanceId
@@ -84,3 +86,4 @@ items:
       return:
         type:
           - string
+    module: ReleaseManagement/Core/RestClient

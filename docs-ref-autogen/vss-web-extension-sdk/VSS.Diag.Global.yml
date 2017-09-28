@@ -1,0 +1,317 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Diag.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Diag
+    children:
+      - vss-web-extension-sdk.VSS.Diag.addTracePointCollector
+      - vss-web-extension-sdk.VSS.Diag.getDebugMode
+      - vss-web-extension-sdk.VSS.Diag.listen
+      - vss-web-extension-sdk.VSS.Diag.log
+      - vss-web-extension-sdk.VSS.Diag.logError
+      - vss-web-extension-sdk.VSS.Diag.logInfo
+      - vss-web-extension-sdk.VSS.Diag.logTracePoint
+      - vss-web-extension-sdk.VSS.Diag.logVerbose
+      - vss-web-extension-sdk.VSS.Diag.logWarning
+      - vss-web-extension-sdk.VSS.Diag.measurePerformance
+      - vss-web-extension-sdk.VSS.Diag.profile
+      - vss-web-extension-sdk.VSS.Diag.profileEnd
+      - vss-web-extension-sdk.VSS.Diag.removeTracePointCollector
+      - vss-web-extension-sdk.VSS.Diag.setDebugMode
+      - vss-web-extension-sdk.VSS.Diag.setLogLevel
+      - vss-web-extension-sdk.VSS.Diag.timeStamp
+      - vss-web-extension-sdk.VSS.Diag.unlisten
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Diag.addTracePointCollector
+    name: addTracePointCollector
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Add a collector to handle trace points
+    syntax:
+      content: 'function addTracePointCollector(collector: Function)'
+      parameters:
+        - id: collector
+          type:
+            - Function
+          description: |
+            Method(tracePointName, data) called when trace points are logged.
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.getDebugMode
+    name: getDebugMode
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getDebugMode()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.listen
+    name: listen
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Add a listener to listen for logged messages
+    syntax:
+      content: 'function listen(callback: IResultCallback)'
+      parameters:
+        - id: callback
+          type:
+            - '@vss-web-extension-sdk.IResultCallback'
+          description: |
+            A callback method that gets called whenever something is logged
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.log
+    name: log
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Log a message to the debug output windows and all other trace listeners
+    syntax:
+      content: 'function log(level: number, message: string)'
+      parameters:
+        - id: level
+          type:
+            - number
+          description: A log verbosity value from VSS.Diag.logVerbosity
+        - id: message
+          type:
+            - string
+          description: |
+            Message to send to all trace listeners
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.logError
+    name: logError
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function logError(message: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.logInfo
+    name: logInfo
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function logInfo(message: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.logTracePoint
+    name: logTracePoint
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Logs a trace point which can be consumed by a trace point collector for
+      performance analysis.
+    syntax:
+      content: 'function logTracePoint(tracePointName: string, data?: any)'
+      parameters:
+        - id: tracePointName
+          type:
+            - string
+          description: Name of the trace point
+        - id: data
+          type:
+            - any
+          description: |
+            (Optional) Data corresponding to the event that occurred.
+          optional: true
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.logVerbose
+    name: logVerbose
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function logVerbose(message: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.logWarning
+    name: logWarning
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function logWarning(message: string)'
+      parameters:
+        - id: message
+          type:
+            - string
+          description: ''
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.measurePerformance
+    name: measurePerformance
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function measurePerformance(action: Function, message: string,
+        logLevel?: LogVerbosity)
+      parameters:
+        - id: action
+          type:
+            - Function
+          description: ''
+        - id: message
+          type:
+            - string
+          description: ''
+        - id: logLevel
+          type:
+            - LogVerbosity
+          description: ''
+          optional: true
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.profile
+    name: profile
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Updates the start/end trace points used when creating a profile.
+    syntax:
+      content: 'function profile(startTracePointName: string, endTracePointName: string)'
+      parameters:
+        - id: startTracePointName
+          type:
+            - string
+          description: The trace point to begin the profile.
+        - id: endTracePointName
+          type:
+            - string
+          description: |
+            The trace point that will ned the profile.
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.profileEnd
+    name: profileEnd
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Explicitly end the profile.
+    syntax:
+      content: function profileEnd()
+      parameters: []
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.removeTracePointCollector
+    name: removeTracePointCollector
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Remove a trace point collector
+    syntax:
+      content: 'function removeTracePointCollector(collector: Function)'
+      parameters:
+        - id: collector
+          type:
+            - Function
+          description: |
+            Collector to remove
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.setDebugMode
+    name: setDebugMode
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function setDebugMode(debugModeEnabled: boolean)'
+      parameters:
+        - id: debugModeEnabled
+          type:
+            - boolean
+          description: ''
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.setLogLevel
+    name: setLogLevel
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Sets the minimum level at which logged statements get captured and
+      reported to the browser console.
+    syntax:
+      content: 'function setLogLevel(level: number)'
+      parameters:
+        - id: level
+          type:
+            - number
+          description: |
+            Level which gets logged to the console
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.timeStamp
+    name: timeStamp
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function timeStamp(label: string, event: StampEvent)'
+      parameters:
+        - id: label
+          type:
+            - string
+          description: ''
+        - id: event
+          type:
+            - StampEvent
+          description: ''
+    module: VSS/Diag
+  - uid: vss-web-extension-sdk.VSS.Diag.unlisten
+    name: unlisten
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Remove a log message listener
+    syntax:
+      content: 'function unlisten(callback: IResultCallback)'
+      parameters:
+        - id: callback
+          type:
+            - '@vss-web-extension-sdk.IResultCallback'
+          description: |
+            Listener to remove
+    module: VSS/Diag

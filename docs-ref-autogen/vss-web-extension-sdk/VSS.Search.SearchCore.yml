@@ -25,6 +25,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Search.SearchCore.addItems
     name: addItems
     children: []
+    type: method
     langs:
       - typeScript
     summary: Add items to the search strategy
@@ -36,10 +37,11 @@ items:
             - '@vss-web-extension-sdk.VSS.Search.SearchableObject<T>[]'
           description: |
             Items to add
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchCore.beginSearch
     name: beginSearch
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -53,20 +55,22 @@ items:
             - string
           description: |
             Query to run search on
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchCore.clearStrategyStore
     name: clearStrategyStore
     children: []
+    type: method
     langs:
       - typeScript
     summary: Clears the stored items in the strategy
     syntax:
       content: function clearStrategyStore()
       parameters: []
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchCore.getStrategy
     name: getStrategy
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns the search strategy currently being used.
@@ -76,10 +80,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Search.SearchStrategy<T>'
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchCore.constructor
     name: SearchCore
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: >-
@@ -97,4 +102,4 @@ items:
             - '@vss-web-extension-sdk.VSS.Search.SearchAdapter<T>'
           description: |
             The search adapter to use.
-    type: constructor
+    module: VSS/Search

@@ -1,0 +1,182 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Utils.Number.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Utils/Number
+    children:
+      - vss-web-extension-sdk.VSS.Utils.Number.defaultComparer
+      - vss-web-extension-sdk.VSS.Utils.Number.formatAbbreviatedNumber
+      - vss-web-extension-sdk.VSS.Utils.Number.isPositiveNumber
+      - vss-web-extension-sdk.VSS.Utils.Number.localeFormat
+      - vss-web-extension-sdk.VSS.Utils.Number.parseInvariant
+      - vss-web-extension-sdk.VSS.Utils.Number.parseLocale
+      - vss-web-extension-sdk.VSS.Utils.Number.toDecimalLocaleString
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Utils.Number.defaultComparer
+    name: defaultComparer
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function defaultComparer(a: any, b: any)'
+      parameters:
+        - id: a
+          type:
+            - any
+          description: ''
+        - id: b
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - number
+    module: VSS/Utils/Number
+  - uid: vss-web-extension-sdk.VSS.Utils.Number.formatAbbreviatedNumber
+    name: formatAbbreviatedNumber
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Format a given number to the AbbreviatedShortForm with the given locale.
+
+      For example (US) 10,000 -> 10k ; 9,200 -> 9.2K (JA) 10,000 -> 1万 ; 9,200
+      -> 9.2千
+    syntax:
+      content: >-
+        function formatAbbreviatedNumber(count: number, cultureInfo?:
+        ICultureInfo)
+      parameters:
+        - id: count
+          type:
+            - number
+          description: the number to format with
+        - id: cultureInfo
+          type:
+            - '@vss-web-extension-sdk.VSS.Utils.Culture.ICultureInfo'
+          description: |
+            the cultureInfo, use user's default if not given.
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Utils/Number
+  - uid: vss-web-extension-sdk.VSS.Utils.Number.isPositiveNumber
+    name: isPositiveNumber
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function isPositiveNumber(value: any)'
+      parameters:
+        - id: value
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Number
+  - uid: vss-web-extension-sdk.VSS.Utils.Number.localeFormat
+    name: localeFormat
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function localeFormat(value: number, format: string)'
+      parameters:
+        - id: value
+          type:
+            - number
+          description: ''
+        - id: format
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - string
+    module: VSS/Utils/Number
+  - uid: vss-web-extension-sdk.VSS.Utils.Number.parseInvariant
+    name: parseInvariant
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function parseInvariant(value: string)'
+      parameters:
+        - id: value
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - number
+    module: VSS/Utils/Number
+  - uid: vss-web-extension-sdk.VSS.Utils.Number.parseLocale
+    name: parseLocale
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function parseLocale(value: string)'
+      parameters:
+        - id: value
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - number
+    module: VSS/Utils/Number
+  - uid: vss-web-extension-sdk.VSS.Utils.Number.toDecimalLocaleString
+    name: toDecimalLocaleString
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Converts this number to a string in the current culture's locale
+      without specifying a precision. So, for example, with Spanish culture,
+      (3) gets translated to "3", and (3.1416) becomes "3,1416". The jQuery's
+      localeFormat requires a precision (the default is "2" if not specified).
+      So 3.localeFormat("N") become "3,00".
+    syntax:
+      content: >-
+        function toDecimalLocaleString(num: number, includeGroupSeparators?:
+        boolean, cultureInfo?: ICultureInfo)
+      parameters:
+        - id: num
+          type:
+            - number
+          description: The Number to format
+        - id: includeGroupSeparators
+          type:
+            - boolean
+          description: |-
+            If true, use locale-specific
+            group separators (i.e. 3,000) in the output
+          optional: true
+        - id: cultureInfo
+          type:
+            - '@vss-web-extension-sdk.VSS.Utils.Culture.ICultureInfo'
+          description: Culture info (CurrentCulture if not specified)
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Utils/Number

@@ -1,0 +1,655 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Utils/Date
+    children:
+      - vss-web-extension-sdk.VSS.Utils.Date.addDays
+      - vss-web-extension-sdk.VSS.Utils.Date.addHours
+      - vss-web-extension-sdk.VSS.Utils.Date.adjustOffsetForTimes
+      - vss-web-extension-sdk.VSS.Utils.Date.ago
+      - vss-web-extension-sdk.VSS.Utils.Date.convertClientTimeToUserTimeZone
+      - vss-web-extension-sdk.VSS.Utils.Date.convertUserTimeToClientTimeZone
+      - vss-web-extension-sdk.VSS.Utils.Date.daysBetweenDates
+      - vss-web-extension-sdk.VSS.Utils.Date.defaultComparer
+      - vss-web-extension-sdk.VSS.Utils.Date.equals
+      - vss-web-extension-sdk.VSS.Utils.Date.format
+      - vss-web-extension-sdk.VSS.Utils.Date.friendly
+      - vss-web-extension-sdk.VSS.Utils.Date.getNowInUserTimeZone
+      - vss-web-extension-sdk.VSS.Utils.Date.getOffsetForDate
+      - vss-web-extension-sdk.VSS.Utils.Date.getTodayInUserTimeZone
+      - vss-web-extension-sdk.VSS.Utils.Date.isGivenDayInFuture
+      - vss-web-extension-sdk.VSS.Utils.Date.isGivenDayInPast
+      - vss-web-extension-sdk.VSS.Utils.Date.isGivenDayToday
+      - vss-web-extension-sdk.VSS.Utils.Date.isIsoDate
+      - vss-web-extension-sdk.VSS.Utils.Date.isMinDate
+      - vss-web-extension-sdk.VSS.Utils.Date.localeFormat
+      - vss-web-extension-sdk.VSS.Utils.Date.parseDateString
+      - vss-web-extension-sdk.VSS.Utils.Date.parseLocale
+      - vss-web-extension-sdk.VSS.Utils.Date.shiftToLocal
+      - vss-web-extension-sdk.VSS.Utils.Date.shiftToUTC
+      - vss-web-extension-sdk.VSS.Utils.Date.stripTimeFromDate
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.addDays
+    name: addDays
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Adds days to a given date
+    syntax:
+      content: 'function addDays(date: Date, days: number, adjustOffset?: boolean)'
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: The Date object to add to
+        - id: days
+          type:
+            - number
+          description: Number of days to add
+        - id: adjustOffset
+          type:
+            - boolean
+          description: >+
+            is true then the offset will be adjusted if the offset between the
+            date passed
+
+            and the date obtained after adding days is different.
+
+          optional: true
+      return:
+        type:
+          - Date
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.addHours
+    name: addHours
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Adds hours to a given date
+    syntax:
+      content: 'function addHours(date: Date, hours: number, adjustOffset?: boolean)'
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: The Date object to add to
+        - id: hours
+          type:
+            - number
+          description: Number of hours to add
+        - id: adjustOffset
+          type:
+            - boolean
+          description: >+
+            is true then the offset will be adjusted if the offset between the
+            date passed
+
+            and the date obtained after adding hours is different.
+
+          optional: true
+      return:
+        type:
+          - Date
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.adjustOffsetForTimes
+    name: adjustOffsetForTimes
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Adjusts the time zone offset by applying the time difference in the
+      offsets.
+    syntax:
+      content: >-
+        function adjustOffsetForTimes(oldDate: Date, newDate: Date,
+        applicationDate?: Date)
+      parameters:
+        - id: oldDate
+          type:
+            - Date
+          description: The Date object which was used before time zone changed.
+        - id: newDate
+          type:
+            - Date
+          description: |
+            The Date object which was used after time zone changed.
+        - id: applicationDate
+          type:
+            - Date
+          description: ''
+          optional: true
+      return:
+        type:
+          - Date
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.ago
+    name: ago
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Generate a string indicating how long ago the date is.
+    syntax:
+      content: 'function ago(date: Date, now?: Date)'
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: The Date object to format
+        - id: now
+          type:
+            - Date
+          description: ''
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.convertClientTimeToUserTimeZone
+    name: convertClientTimeToUserTimeZone
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Converts a time from the client (e.g. new Date()) to the user's preferred
+      timezone
+    syntax:
+      content: >-
+        function convertClientTimeToUserTimeZone(date: Date, adjustOffset?:
+        boolean)
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: The Date object to convert
+        - id: adjustOffset
+          type:
+            - boolean
+          description: |+
+
+                If true, consider the date portion when converting (get the timezone offset at that particular date).
+                False indicates to use the current (today's) timezone offset regardless of the date given.
+
+          optional: true
+      return:
+        type:
+          - Date
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.convertUserTimeToClientTimeZone
+    name: convertUserTimeToClientTimeZone
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Converts a time from the user's preferred timezone to the client (e.g. new
+      Date()) timezone
+    syntax:
+      content: >-
+        function convertUserTimeToClientTimeZone(date: Date, adjustOffset?:
+        boolean)
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: The Date object to convert
+        - id: adjustOffset
+          type:
+            - boolean
+          description: |+
+
+                If true, consider the date portion when converting (get the timezone offset at that particular date).
+                False indicates to use the current (today's) timezone offset regardless of the date given.
+
+          optional: true
+      return:
+        type:
+          - Date
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.daysBetweenDates
+    name: daysBetweenDates
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Returns the number of days between the two dates. Note that any time
+      component is ignored and the dates
+
+      can be supplied in any order
+    syntax:
+      content: >-
+        function daysBetweenDates(startDate: Date, endDate: Date, exclusive?:
+        boolean)
+      parameters:
+        - id: startDate
+          type:
+            - Date
+          description: The first date
+        - id: endDate
+          type:
+            - Date
+          description: The second date
+        - id: exclusive
+          type:
+            - boolean
+          description: >
+            If true then the result is exclusive of the second date
+            (Mon->Fri==4).
+
+            Otherwise the date includes the later date (Mon->Fri==5)
+          optional: true
+      return:
+        type:
+          - number
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.defaultComparer
+    name: defaultComparer
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >
+      Compares two date objects. Returns a number:
+         Less than 0 if date1 is earlier than date2
+         Zero if date1 is the same as date2
+         Greater than zero if date1 is later than date2
+      If an argument is not an instance of a Date then it is considered earlier
+      than
+
+      the other argument, or the same if the other argument is also not an
+      instance of
+
+      a Date
+    syntax:
+      content: 'function defaultComparer(date1: Date, date2: Date)'
+      parameters:
+        - id: date1
+          type:
+            - Date
+          description: Date object to compare
+        - id: date2
+          type:
+            - Date
+          description: Date object to compare
+      return:
+        type:
+          - number
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.equals
+    name: equals
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Compare two dates to see if they are equal - returning true if they are
+      equal.
+    syntax:
+      content: 'function equals(date1: Date, date2: Date)'
+      parameters:
+        - id: date1
+          type:
+            - Date
+          description: The first value to compare
+        - id: date2
+          type:
+            - Date
+          description: The second value to compare
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.format
+    name: format
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function format(date: Date, format?: string)'
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: The Date object to format
+        - id: format
+          type:
+            - string
+          description: Date string format
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.friendly
+    name: friendly
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Get a user friendly string for a date that indicates how long ago the date
+      was. e.g. "4 hours ago", "Tuesday", "7/4/2012".
+    syntax:
+      content: 'function friendly(date: Date, now?: Date)'
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: The Date object to format
+        - id: now
+          type:
+            - Date
+          description: ''
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.getNowInUserTimeZone
+    name: getNowInUserTimeZone
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get the equivalent of "Now" in the user's time zone.
+    syntax:
+      content: function getNowInUserTimeZone()
+      parameters: []
+      return:
+        type:
+          - Date
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.getOffsetForDate
+    name: getOffsetForDate
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Gets the offset of the date passed in.
+    syntax:
+      content: 'function getOffsetForDate(date: Date)'
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: The Date object for which the offset is required.
+      return:
+        type:
+          - number
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.getTodayInUserTimeZone
+    name: getTodayInUserTimeZone
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Get the equivalent of "Today" (date as of midnight) in the user's time
+      zone
+    syntax:
+      content: function getTodayInUserTimeZone()
+      parameters: []
+      return:
+        type:
+          - Date
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.isGivenDayInFuture
+    name: isGivenDayInFuture
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Checks whether given day is a day in future in user timezone
+    syntax:
+      content: 'function isGivenDayInFuture(date: Date)'
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: |
+            The Date object to check
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.isGivenDayInPast
+    name: isGivenDayInPast
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Checks whether given day is a day in past in user timezone
+    syntax:
+      content: 'function isGivenDayInPast(date: Date)'
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: |
+            The Date object to check
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.isGivenDayToday
+    name: isGivenDayToday
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Checks whether given day is today in user timezone
+    syntax:
+      content: 'function isGivenDayToday(date: Date)'
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: |
+            The Date object to check
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.isIsoDate
+    name: isIsoDate
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Checks whether the specified datestring is in ISO 8601 date format or not.
+    syntax:
+      content: 'function isIsoDate(dateString: string)'
+      parameters:
+        - id: dateString
+          type:
+            - string
+          description: |+
+
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.isMinDate
+    name: isMinDate
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Checks whether this date object corresponds to a min date or not
+    syntax:
+      content: 'function isMinDate(date: Date)'
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: ''
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.localeFormat
+    name: localeFormat
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function localeFormat(date: Date, format?: string, ignoreTimeZone?:
+        boolean)
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: The Date object to format
+        - id: format
+          type:
+            - string
+          description: Date string format
+          optional: true
+        - id: ignoreTimeZone
+          type:
+            - boolean
+          description: ''
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.parseDateString
+    name: parseDateString
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Parses the string into a date.
+    syntax:
+      content: >-
+        function parseDateString(dateString: string, parseFormat?: string,
+        ignoreTimeZone?: boolean)
+      parameters:
+        - id: dateString
+          type:
+            - string
+          description: Date string to parse.
+        - id: parseFormat
+          type:
+            - string
+          description: >-
+            Optional format string to use in parsing the date. May be null or
+            undefined
+          optional: true
+        - id: ignoreTimeZone
+          type:
+            - boolean
+          description: |
+
+                Optional value indicating to ignore the time zone set set in user preferences?
+                Should be set to true when a Date string should be parsed irrespective of the user's time zone (e.g. calendar control).
+          optional: true
+      return:
+        type:
+          - Date
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.parseLocale
+    name: parseLocale
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function parseLocale(value: string, formats?: function, ignoreTimeZone?:
+        boolean)
+      parameters:
+        - id: value
+          type:
+            - string
+          description: Date string
+        - id: formats
+          type:
+            - function
+          description: Date string formats
+          optional: true
+        - id: ignoreTimeZone
+          type:
+            - boolean
+          description: ''
+          optional: true
+      return:
+        type:
+          - Date
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.shiftToLocal
+    name: shiftToLocal
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Shifts the date to match the local date.  This is done by adding the
+      timezone offset to the date.
+    syntax:
+      content: 'function shiftToLocal(date: Date)'
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: The date to be converted.
+      return:
+        type:
+          - Date
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.shiftToUTC
+    name: shiftToUTC
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Shifts the date to match the UTC date.  This is done by removing the
+      timezone offset which is applied.
+    syntax:
+      content: 'function shiftToUTC(date: Date)'
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: The date to be converted.
+      return:
+        type:
+          - Date
+    module: VSS/Utils/Date
+  - uid: vss-web-extension-sdk.VSS.Utils.Date.stripTimeFromDate
+    name: stripTimeFromDate
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Strip the time from the given date (return a new date) such that the new
+      date is of 12:00:00 AM
+    syntax:
+      content: 'function stripTimeFromDate(date: Date)'
+      parameters:
+        - id: date
+          type:
+            - Date
+          description: ''
+      return:
+        type:
+          - Date
+    module: VSS/Utils/Date

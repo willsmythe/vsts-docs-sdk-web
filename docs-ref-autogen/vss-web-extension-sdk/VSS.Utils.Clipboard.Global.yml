@@ -1,0 +1,68 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Utils.Clipboard.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Utils/Clipboard
+    children:
+      - vss-web-extension-sdk.VSS.Utils.Clipboard.copyToClipboard
+      - vss-web-extension-sdk.VSS.Utils.Clipboard.supportsNativeCopy
+      - vss-web-extension-sdk.VSS.Utils.Clipboard.supportsNativeHtmlCopy
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Utils.Clipboard.copyToClipboard
+    name: copyToClipboard
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Copies the specified data to the clipboard in the TEXT format using a
+      progressively degrading experience.
+    syntax:
+      content: 'function copyToClipboard(data: string, options?: IClipboardOptions)'
+      parameters:
+        - id: data
+          type:
+            - string
+          description: |
+            The data to copy.
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.VSS.Utils.Clipboard.IClipboardOptions'
+          description: ''
+          optional: true
+    module: VSS/Utils/Clipboard
+  - uid: vss-web-extension-sdk.VSS.Utils.Clipboard.supportsNativeCopy
+    name: supportsNativeCopy
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Gets a boolean value indicating whether the current browser supports
+      native clipboard access.
+    syntax:
+      content: function supportsNativeCopy()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Clipboard
+  - uid: vss-web-extension-sdk.VSS.Utils.Clipboard.supportsNativeHtmlCopy
+    name: supportsNativeHtmlCopy
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Gets a boolean value indicating whether the current browser supports
+      native clipboard access for HTML content.
+    syntax:
+      content: function supportsNativeHtmlCopy()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Clipboard

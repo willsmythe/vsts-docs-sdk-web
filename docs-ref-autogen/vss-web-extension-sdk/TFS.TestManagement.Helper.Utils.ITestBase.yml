@@ -40,10 +40,12 @@ items:
         type:
           - >-
             Array<@vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestAction>
+    module: TFS/TestManagement/Helper/Utils
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.createTestStep
     name: createTestStep
     children: []
+    type: method
     langs:
       - typeScript
     summary: create a test step
@@ -53,11 +55,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestStep'
-    type: method
+    module: TFS/TestManagement/Helper/Utils
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.generateXmlFromActions
     name: generateXmlFromActions
     children: []
+    type: method
     langs:
       - typeScript
     summary: function to generate teststep xml for all actions
@@ -67,11 +70,12 @@ items:
       return:
         type:
           - string
-    type: method
+    module: TFS/TestManagement/Helper/Utils
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.loadActions
     name: loadActions
     children: []
+    type: method
     langs:
       - typeScript
     summary: it will initalize actions array for given input
@@ -87,11 +91,12 @@ items:
             - >-
               @vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestAttachmentLink[]
           description: ''
-    type: method
+    module: TFS/TestManagement/Helper/Utils
   - uid: >-
       vss-web-extension-sdk.TFS.TestManagement.Helper.Utils.ITestBase.saveActions
     name: saveActions
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -108,4 +113,4 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.VSS.WebApi.Contracts.JsonPatchDocument'
-    type: method
+    module: TFS/TestManagement/Helper/Utils

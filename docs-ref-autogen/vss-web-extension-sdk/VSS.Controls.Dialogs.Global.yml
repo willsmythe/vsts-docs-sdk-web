@@ -1,0 +1,90 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Controls/Dialogs
+    children:
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Dialogs.preventClickingDisabledButtons
+      - vss-web-extension-sdk.VSS.Controls.Dialogs.show
+      - vss-web-extension-sdk.VSS.Controls.Dialogs.showMessageDialog
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.preventClickingDisabledButtons
+    name: preventClickingDisabledButtons
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Prevents clicking diabled buttons which happens in Edge.
+      See Bug 380864: Inactive "OK" button is clickable on EDGE
+    syntax:
+      content: >-
+        function preventClickingDisabledButtons(dialogElement: JQuery, buttons:
+        any)
+      parameters:
+        - id: dialogElement
+          type:
+            - JQuery
+          description: ''
+        - id: buttons
+          type:
+            - any
+          description: ''
+    module: VSS/Controls/Dialogs
+  - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.show
+    name: show
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Shows the specified dialog type using specified options.
+    syntax:
+      content: 'function show<TDialog>(dialogType: function, options?: any)'
+      parameters:
+        - id: dialogType
+          type:
+            - function
+          description: Type of the dialog to show.
+        - id: options
+          type:
+            - any
+          description: Options of the dialog.
+          optional: true
+      return:
+        type:
+          - TDialog
+    module: VSS/Controls/Dialogs
+  - uid: vss-web-extension-sdk.VSS.Controls.Dialogs.showMessageDialog
+    name: showMessageDialog
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Show a MessageDialog.
+    syntax:
+      content: >-
+        function showMessageDialog(message: string, options?:
+        IShowMessageDialogOptions)
+      parameters:
+        - id: message
+          type:
+            - string
+          description: >-
+            the message to display in the dialog. If it's a string, the message
+            is displayed as plain text (no html). For HTML display, pass in a
+            jQuery object.
+        - id: options
+          type:
+            - >-
+              @vss-web-extension-sdk.VSS.Controls.Dialogs.IShowMessageDialogOptions
+          description: ''
+          optional: true
+      return:
+        type:
+          - >-
+            Promise<@vss-web-extension-sdk.VSS.Controls.Dialogs.IMessageDialogResult>
+    module: VSS/Controls/Dialogs

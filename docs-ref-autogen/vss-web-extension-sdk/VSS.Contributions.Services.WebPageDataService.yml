@@ -45,6 +45,7 @@ items:
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.addResolutionPlugin
     name: addResolutionPlugin
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -65,11 +66,12 @@ items:
               @vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataResolutionPlugin
           description: |
             Function called whenever data with the given key has been provided
-    type: method
+    module: VSS/Contributions/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.ensureDataProvidersResolved
     name: ensureDataProvidersResolved
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -99,11 +101,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
-    type: method
+    module: VSS/Contributions/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getCachedPageData
     name: getCachedPageData
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -150,11 +153,12 @@ items:
       return:
         type:
           - T
-    type: method
+    module: VSS/Contributions/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageData
     name: getPageData
     children: []
+    type: method
     langs:
       - typeScript
     summary: Get web page data that was contributed from the given contribution
@@ -176,11 +180,12 @@ items:
       return:
         type:
           - T
-    type: method
+    module: VSS/Contributions/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageDataByDataType
     name: getPageDataByDataType
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -207,11 +212,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IDictionaryStringTo<T>'
-    type: method
+    module: VSS/Contributions/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.getPageDataSource
     name: getPageDataSource
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -224,11 +230,12 @@ items:
           type:
             - string
           description: ''
-    type: method
+    module: VSS/Contributions/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.invalidateCachedProviderData
     name: invalidateCachedProviderData
     children: []
+    type: method
     langs:
       - typeScript
     summary: Invalidate any previously-cached data for the given data provider.
@@ -251,11 +258,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
-    type: method
+    module: VSS/Contributions/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.registerProviderData
     name: registerProviderData
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -284,11 +292,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<any>'
-    type: method
+    module: VSS/Contributions/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.reloadCachedProviderData
     name: reloadCachedProviderData
     children: []
+    type: method
     langs:
       - typeScript
     summary: Always reloads provider data by queuing up a new request
@@ -313,11 +322,12 @@ items:
             Additional properties to pass to the provider on reload as part of
             the context
           optional: true
-    type: method
+    module: VSS/Contributions/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.removePageData
     name: removePageData
     children: []
+    type: method
     langs:
       - typeScript
     summary: Removes web page data that was contributed from the given contribution
@@ -329,11 +339,12 @@ items:
             - string
           description: |
             The data provider key
-    type: method
+    module: VSS/Contributions/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Contributions.Services.WebPageDataService.removeResolutionPlugin
     name: removeResolutionPlugin
     children: []
+    type: method
     langs:
       - typeScript
     summary: Remove the plugin handler that gets called when data with the given key
@@ -345,4 +356,4 @@ items:
             - string
           description: |
             The data type property as set in the data provider's contribution
-    type: method
+    module: VSS/Contributions/Services

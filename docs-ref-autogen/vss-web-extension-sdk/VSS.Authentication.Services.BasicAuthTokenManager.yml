@@ -27,6 +27,7 @@ items:
       vss-web-extension-sdk.VSS.Authentication.Services.BasicAuthTokenManager.constructor
     name: BasicAuthTokenManager
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -41,11 +42,12 @@ items:
           type:
             - string
           description: ''
-    type: constructor
+    module: VSS/Authentication/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Authentication.Services.BasicAuthTokenManager.getAuthorizationHeader
     name: getAuthorizationHeader
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the authorization header to use in a request from the given token
@@ -59,11 +61,12 @@ items:
       return:
         type:
           - string
-    type: method
+    module: VSS/Authentication/Services
   - uid: >-
       vss-web-extension-sdk.VSS.Authentication.Services.BasicAuthTokenManager.getAuthToken
     name: getAuthToken
     children: []
+    type: method
     langs:
       - typeScript
     summary: Get the auth token to use for this request.
@@ -78,4 +81,4 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
-    type: method
+    module: VSS/Authentication/Services

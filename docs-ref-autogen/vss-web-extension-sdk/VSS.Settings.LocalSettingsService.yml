@@ -23,6 +23,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Settings.LocalSettingsService.constructor
     name: LocalSettingsService
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -34,10 +35,11 @@ items:
             - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
           description: ''
           optional: true
-    type: constructor
+    module: VSS/Settings
   - uid: vss-web-extension-sdk.VSS.Settings.LocalSettingsService.read
     name: read
     children: []
+    type: method
     langs:
       - typeScript
     summary: Read a setting from browser local storage.
@@ -67,10 +69,11 @@ items:
       return:
         type:
           - T
-    type: method
+    module: VSS/Settings
   - uid: vss-web-extension-sdk.VSS.Settings.LocalSettingsService.write
     name: write
     children: []
+    type: method
     langs:
       - typeScript
     summary: Write a settings value to browser local storage
@@ -94,4 +97,4 @@ items:
             Scope for the setting to apply to. This will determine the prefix to
             use at the beginning of the setting key.
           optional: true
-    type: method
+    module: VSS/Settings

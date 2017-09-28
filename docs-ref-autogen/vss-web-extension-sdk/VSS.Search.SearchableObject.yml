@@ -25,6 +25,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Search.SearchableObject.addTerm
     name: addTerm
     children: []
+    type: method
     langs:
       - typeScript
     summary: Add a term to the item
@@ -36,7 +37,7 @@ items:
             - string
           description: |
             The additional term
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchableObject.item
     name: item
     fullName: item
@@ -50,9 +51,11 @@ items:
       return:
         type:
           - T
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchableObject.constructor
     name: SearchableObject
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: Represents a single item to be placed in the index.
@@ -68,10 +71,11 @@ items:
             - 'string[]'
           description: |
             The terms associated to the item.
-    type: constructor
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchableObject.setTerms
     name: setTerms
     children: []
+    type: method
     langs:
       - typeScript
     summary: Set the terms for this item
@@ -83,7 +87,7 @@ items:
             - 'string[]'
           description: |
             The new terms
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchableObject.terms
     name: terms
     fullName: terms
@@ -97,3 +101,4 @@ items:
       return:
         type:
           - 'string[]'
+    module: VSS/Search

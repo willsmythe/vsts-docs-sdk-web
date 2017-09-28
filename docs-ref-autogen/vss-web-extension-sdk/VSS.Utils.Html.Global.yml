@@ -1,0 +1,160 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Utils.Html.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Utils/Html
+    children:
+      - vss-web-extension-sdk.VSS.Utils.Html.convertToPlainText
+      - vss-web-extension-sdk.VSS.Utils.Html.isEmpty
+      - vss-web-extension-sdk.VSS.Utils.Html.normalize
+      - vss-web-extension-sdk.VSS.Utils.Html.normalizeStripAttributes
+      - vss-web-extension-sdk.VSS.Utils.Html.removeFormatting
+      - vss-web-extension-sdk.VSS.Utils.Html.sanitize
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Utils.Html.convertToPlainText
+    name: convertToPlainText
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Removes all tags from the specified html and attempts keep newlines in the
+      proper places (best effort).
+    syntax:
+      content: 'function convertToPlainText(html: string)'
+      parameters:
+        - id: html
+          type:
+            - string
+          description: |
+            Html to convert to plain text.
+      return:
+        type:
+          - string
+    module: VSS/Utils/Html
+  - uid: vss-web-extension-sdk.VSS.Utils.Html.isEmpty
+    name: isEmpty
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Checks whether html is visually empty.
+
+      1. Not empty if content length is over the minimal threshold. See
+      ISEMPTY_MINIMAL_CONTENT_LENGTH.
+
+      2. If content length is less than the minimal threshold, we remove the
+      formatting before checking whether it matches any "empty" case.
+    syntax:
+      content: 'function isEmpty(value: string)'
+      parameters:
+        - id: value
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/Html
+  - uid: vss-web-extension-sdk.VSS.Utils.Html.normalize
+    name: normalize
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Normalizes the given html by removing the attributes like script and
+      fixing incomplete tags
+    syntax:
+      content: 'function normalize(html: string)'
+      parameters:
+        - id: html
+          type:
+            - string
+          description: Html to normalize
+      return:
+        type:
+          - string
+    module: VSS/Utils/Html
+  - uid: vss-web-extension-sdk.VSS.Utils.Html.normalizeStripAttributes
+    name: normalizeStripAttributes
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Normalizes the given html by removing the attributes like script and
+      fixing incomplete tags.
+
+      Also allows the caller to specify additional attributes to remove, like
+      'class'
+    syntax:
+      content: >-
+        function normalizeStripAttributes(html: string,
+        additionalInvalidAttributes: string[], additionalValidAttributes?:
+        string[], additionalInvalidStyles?: string[])
+      parameters:
+        - id: html
+          type:
+            - string
+          description: Html to normalize
+        - id: additionalInvalidAttributes
+          type:
+            - 'string[]'
+          description: Additional attributes to remove
+        - id: additionalValidAttributes
+          type:
+            - 'string[]'
+          description: Additional attributes to keep
+          optional: true
+        - id: additionalInvalidStyles
+          type:
+            - 'string[]'
+          description: Additional styles to remove
+          optional: true
+      return:
+        type:
+          - string
+    module: VSS/Utils/Html
+  - uid: vss-web-extension-sdk.VSS.Utils.Html.removeFormatting
+    name: removeFormatting
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function removeFormatting(html: string)'
+      parameters:
+        - id: html
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - string
+    module: VSS/Utils/Html
+  - uid: vss-web-extension-sdk.VSS.Utils.Html.sanitize
+    name: sanitize
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Sanitizes the given html by fixing incomplete tags and encoding unsafe
+      text
+    syntax:
+      content: 'function sanitize(html: string)'
+      parameters:
+        - id: html
+          type:
+            - string
+          description: Html to sanitize
+      return:
+        type:
+          - string
+    module: VSS/Utils/Html

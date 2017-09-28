@@ -27,16 +27,18 @@ items:
   - uid: vss-web-extension-sdk.VSS.Utils.Core.Cancelable.cancel
     name: cancel
     children: []
+    type: method
     langs:
       - typeScript
     summary: Cancel the operation.
     syntax:
       content: function cancel()
       parameters: []
-    type: method
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.Cancelable.constructor
     name: Cancelable
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: Manage cancellable operations.
@@ -49,7 +51,7 @@ items:
           description: |
             The context for the cancellable operation.
             The context is passed to actions when they are called.
-    type: constructor
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.Cancelable.canceled
     name: canceled
     fullName: canceled
@@ -63,6 +65,7 @@ items:
       return:
         type:
           - boolean
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.Cancelable.context
     name: context
     fullName: context
@@ -76,9 +79,11 @@ items:
       return:
         type:
           - any
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.Cancelable.perform
     name: perform
     children: []
+    type: method
     langs:
       - typeScript
     summary: Perform the action if not cancelled.
@@ -90,10 +95,11 @@ items:
             - Function
           description: |
             The action to call if the current operation has not been cancelled.
-    type: method
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.Cancelable.register
     name: register
     children: []
+    type: method
     langs:
       - typeScript
     summary: Register a callback to be called when the object is cancelled.
@@ -105,10 +111,11 @@ items:
             - Function
           description: |
             The callback function.
-    type: method
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.Cancelable.wrap
     name: wrap
     children: []
+    type: method
     langs:
       - typeScript
     summary: Wrap an action to make it cancellable.
@@ -122,4 +129,4 @@ items:
       return:
         type:
           - Function
-    type: method
+    module: VSS/Utils/Core

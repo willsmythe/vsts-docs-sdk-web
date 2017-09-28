@@ -33,6 +33,7 @@ items:
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.beginOperation
     name: beginOperation
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -46,33 +47,36 @@ items:
             - '@vss-web-extension-sdk.IResultCallback'
           description: |
             An operation that may take a long time to complete.
-    type: method
+    module: VSS/Controls/StatusIndicator
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.cancelOperation
     name: cancelOperation
     children: []
+    type: method
     langs:
       - typeScript
     summary: Cancels the current operation.
     syntax:
       content: function cancelOperation()
       parameters: []
-    type: method
+    module: VSS/Controls/StatusIndicator
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.endOperation
     name: endOperation
     children: []
+    type: method
     langs:
       - typeScript
     summary: Signals the completion of a long running operation.
     syntax:
       content: function endOperation()
       parameters: []
-    type: method
+    module: VSS/Controls/StatusIndicator
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.getWaitControl
     name: getWaitControl
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -82,11 +86,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Controls.StatusIndicator.WaitControl'
-    type: method
+    module: VSS/Controls/StatusIndicator
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.isCancelled
     name: isCancelled
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -98,11 +103,12 @@ items:
       return:
         type:
           - boolean
-    type: method
+    module: VSS/Controls/StatusIndicator
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.StatusIndicator.LongRunningOperation.constructor
     name: LongRunningOperation
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: >-
@@ -128,4 +134,4 @@ items:
                 cancellable           boolean     Boolean value indicating whether the operation may be cancelled while it is running.
 
           optional: true
-    type: constructor
+    module: VSS/Controls/StatusIndicator

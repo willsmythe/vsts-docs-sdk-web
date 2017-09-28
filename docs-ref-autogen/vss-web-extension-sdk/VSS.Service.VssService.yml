@@ -23,6 +23,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Service.VssService.getConnection
     name: getConnection
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the relative location for the service's connection
@@ -32,10 +33,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Service.VssConnection'
-    type: method
+    module: VSS/Service
   - uid: vss-web-extension-sdk.VSS.Service.VssService.getWebContext
     name: getWebContext
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -45,10 +47,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
-    type: method
+    module: VSS/Service
   - uid: vss-web-extension-sdk.VSS.Service.VssService.initializeConnection
     name: initializeConnection
     children: []
+    type: method
     langs:
       - typeScript
     summary: Sets the VssConnection to use for this service
@@ -60,4 +63,4 @@ items:
             - '@vss-web-extension-sdk.VSS.Service.VssConnection'
           description: |
             VssConnection used by this service
-    type: method
+    module: VSS/Service

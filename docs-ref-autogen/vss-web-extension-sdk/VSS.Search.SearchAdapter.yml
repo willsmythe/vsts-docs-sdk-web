@@ -27,6 +27,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.addMoreItems
     name: addMoreItems
     children: []
+    type: method
     langs:
       - typeScript
     summary: Adds additional items to the search strategy
@@ -44,30 +45,33 @@ items:
             - () => void
           description: |
             The function which searches the newly updated strategy.
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.createSearchableObjects
     name: createSearchableObjects
     children: []
+    type: method
     langs:
       - typeScript
     summary: Creates SearchableObjects for all available work items
     syntax:
       content: function createSearchableObjects()
       parameters: []
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.handleClear
     name: handleClear
     children: []
+    type: method
     langs:
       - typeScript
     summary: Handles the search results being cleared and the view resetting to normal.
     syntax:
       content: function handleClear()
       parameters: []
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.handleError
     name: handleError
     children: []
+    type: method
     langs:
       - typeScript
     summary: Handles an error being thrown in the search process.
@@ -79,10 +83,11 @@ items:
             - string
           description: |
             Specific error message if provided.
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.handleResults
     name: handleResults
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -106,10 +111,11 @@ items:
           description: |
             search query
           optional: true
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.isDataSetComplete
     name: isDataSetComplete
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns whether or not there is more data to be loaded.
@@ -119,10 +125,11 @@ items:
       return:
         type:
           - boolean
-    type: method
+    module: VSS/Search
   - uid: vss-web-extension-sdk.VSS.Search.SearchAdapter.constructor
     name: SearchAdapter
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: >-
@@ -131,4 +138,4 @@ items:
     syntax:
       content: new SearchAdapter()
       parameters: []
-    type: constructor
+    module: VSS/Search

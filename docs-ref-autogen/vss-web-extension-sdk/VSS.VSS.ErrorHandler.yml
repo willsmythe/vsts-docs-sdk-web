@@ -41,9 +41,11 @@ items:
       return:
         type:
           - JQuery
+    module: VSS/VSS
   - uid: vss-web-extension-sdk.VSS.VSS.ErrorHandler.attachErrorPublisher
     name: attachErrorPublisher
     children: []
+    type: method
     langs:
       - typeScript
     summary: Add error publisher to ErrorHander class
@@ -54,10 +56,11 @@ items:
           type:
             - '@vss-web-extension-sdk.VSS.VSS.errorPublisher'
           description: ''
-    type: method
+    module: VSS/VSS
   - uid: vss-web-extension-sdk.VSS.VSS.ErrorHandler.detachErrorPublisher
     name: detachErrorPublisher
     children: []
+    type: method
     langs:
       - typeScript
     summary: Remove error publisher to ErrorHander class
@@ -68,20 +71,22 @@ items:
           type:
             - '@vss-web-extension-sdk.VSS.VSS.errorPublisher'
           description: ''
-    type: method
+    module: VSS/VSS
   - uid: vss-web-extension-sdk.VSS.VSS.ErrorHandler.constructor
     name: ErrorHandler
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: Global error handler class which is attached to TFS
     syntax:
       content: new ErrorHandler()
       parameters: []
-    type: constructor
+    module: VSS/VSS
   - uid: vss-web-extension-sdk.VSS.VSS.ErrorHandler.exists
     name: exists
     children: []
+    type: method
     langs:
       - typeScript
     summary: (Internal function) Checks whether error container exists or not
@@ -91,17 +96,18 @@ items:
       return:
         type:
           - boolean
-    type: method
+    module: VSS/VSS
   - uid: vss-web-extension-sdk.VSS.VSS.ErrorHandler.hideError
     name: hideError
     children: []
+    type: method
     langs:
       - typeScript
     summary: (Internal function) Hides the error when clicked
     syntax:
       content: function hideError()
       parameters: []
-    type: method
+    module: VSS/VSS
   - uid: vss-web-extension-sdk.VSS.VSS.ErrorHandler.ignoreRejectedPromiseTag
     name: ignoreRejectedPromiseTag
     fullName: ignoreRejectedPromiseTag
@@ -115,19 +121,22 @@ items:
       return:
         type:
           - string
+    module: VSS/VSS
   - uid: vss-web-extension-sdk.VSS.VSS.ErrorHandler.initialize
     name: initialize
     children: []
+    type: method
     langs:
       - typeScript
     summary: (Internal function) Initializes error handler
     syntax:
       content: function initialize()
       parameters: []
-    type: method
+    module: VSS/VSS
   - uid: vss-web-extension-sdk.VSS.VSS.ErrorHandler.show
     name: show
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -140,10 +149,11 @@ items:
           type:
             - '@vss-web-extension-sdk.TfsError'
           description: ''
-    type: method
+    module: VSS/VSS
   - uid: vss-web-extension-sdk.VSS.VSS.ErrorHandler.showError
     name: showError
     children: []
+    type: method
     langs:
       - typeScript
     summary: (Internal function) Shows error in the container
@@ -166,7 +176,7 @@ items:
             - string
           description: ''
           optional: true
-    type: method
+    module: VSS/VSS
   - uid: vss-web-extension-sdk.VSS.VSS.ErrorHandler.visible
     name: visible
     fullName: visible
@@ -180,3 +190,4 @@ items:
       return:
         type:
           - boolean
+    module: VSS/VSS

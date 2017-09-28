@@ -22,6 +22,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.Event.getHandlers
     name: getHandlers
     children: []
+    type: method
     langs:
       - typeScript
     summary: The list of handlers for this event
@@ -31,10 +32,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Events.Handlers.EventHandlerList<TSender>'
-    type: method
+    module: VSS/Events/Handlers
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.Event.invokeHandlers
     name: invokeHandlers
     children: []
+    type: method
     langs:
       - typeScript
     summary: Invoke the handlers that have subscribed to this event
@@ -59,4 +61,4 @@ items:
             invocation loop based on the return value of a handler. The filter
             should return true to break out of the loop.
           optional: true
-    type: method
+    module: VSS/Events/Handlers

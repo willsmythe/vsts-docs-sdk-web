@@ -30,6 +30,7 @@ items:
       vss-web-extension-sdk.VSS.Events.Handlers.NamedEventCollection.hasSubscribers
     name: hasSubscribers
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns true if there is at least one subscriber in this event collection.
@@ -39,11 +40,12 @@ items:
       return:
         type:
           - boolean
-    type: method
+    module: VSS/Events/Handlers
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Handlers.NamedEventCollection.invokeHandlers
     name: invokeHandlers
     children: []
+    type: method
     langs:
       - typeScript
     summary: Invoke the handlers that have subscribed to this event
@@ -74,10 +76,11 @@ items:
             invocation loop based on the return value of a handler. The filter
             should return true to break out of the loop.
           optional: true
-    type: method
+    module: VSS/Events/Handlers
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.NamedEventCollection.subscribe
     name: subscribe
     children: []
+    type: method
     langs:
       - typeScript
     summary: Adds an event handler to the list of handlers for the given event
@@ -93,10 +96,11 @@ items:
             - '@vss-web-extension-sdk.IFunctionPPR<TSender>'
           description: |
             Event handler method to register
-    type: method
+    module: VSS/Events/Handlers
   - uid: vss-web-extension-sdk.VSS.Events.Handlers.NamedEventCollection.unsubscribe
     name: unsubscribe
     children: []
+    type: method
     langs:
       - typeScript
     summary: Removes an event handler from the list of handlers for the given event
@@ -112,15 +116,16 @@ items:
             - '@vss-web-extension-sdk.IFunctionPPR<TSender>'
           description: |
             Event handler method to remove
-    type: method
+    module: VSS/Events/Handlers
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Handlers.NamedEventCollection.unsubscribeAll
     name: unsubscribeAll
     children: []
+    type: method
     langs:
       - typeScript
     summary: Unsubscribes all event handlers
     syntax:
       content: function unsubscribeAll()
       parameters: []
-    type: method
+    module: VSS/Events/Handlers

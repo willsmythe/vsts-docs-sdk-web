@@ -41,16 +41,18 @@ items:
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.abort
     name: abort
     children: []
+    type: method
     langs:
       - typeScript
     summary: Aborts this scenario
     syntax:
       content: function abort()
       parameters: []
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.addAjaxCallStart
     name: addAjaxCallStart
     children: []
+    type: method
     langs:
       - typeScript
     summary: Add information about ajax call to scenario
@@ -60,10 +62,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Performance.IEndAjaxCallTiming'
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.addData
     name: addData
     children: []
+    type: method
     langs:
       - typeScript
     summary: Add additional data to the scenario.
@@ -75,10 +78,11 @@ items:
             - any
           description: |
             Property bag of additional data
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.addSplitTiming
     name: addSplitTiming
     children: []
+    type: method
     langs:
       - typeScript
     summary: Add split timing at current timestamp
@@ -98,10 +102,11 @@ items:
       return:
         type:
           - any
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.end
     name: end
     children: []
+    type: method
     langs:
       - typeScript
     summary: Ends this scenario
@@ -115,20 +120,22 @@ items:
             Optional Scenario End Time. IMPORTANT: Has to be obtained using
             getTimestamp
           optional: true
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.getAjaxCalls
     name: getAjaxCalls
     children: []
+    type: method
     langs:
       - typeScript
     summary: Return ajax call timings
     syntax:
       content: function getAjaxCalls()
       parameters: []
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.getCorrelationId
     name: getCorrelationId
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns scenario's correlation id
@@ -138,10 +145,11 @@ items:
       return:
         type:
           - string
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.getData
     name: getData
     children: []
+    type: method
     langs:
       - typeScript
     summary: Return the data associated with the scenario
@@ -151,10 +159,11 @@ items:
       return:
         type:
           - any
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.getDuration
     name: getDuration
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns scenario duration in ms
@@ -164,10 +173,11 @@ items:
       return:
         type:
           - number
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.getFeatureArea
     name: getFeatureArea
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns scenario area
@@ -177,10 +187,11 @@ items:
       return:
         type:
           - string
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.getName
     name: getName
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns scenario name
@@ -190,20 +201,22 @@ items:
       return:
         type:
           - string
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.getSplitTimings
     name: getSplitTimings
     children: []
+    type: method
     langs:
       - typeScript
     summary: Return split timings
     syntax:
       content: function getSplitTimings()
       parameters: []
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.getStartTime
     name: getStartTime
     children: []
+    type: method
     langs:
       - typeScript
     summary: Get the scenario start timestamp
@@ -213,10 +226,11 @@ items:
       return:
         type:
           - number
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.getTelemetry
     name: getTelemetry
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns telemetry data for scenario
@@ -226,10 +240,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Telemetry.Services.TelemetryEventData'
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.isActive
     name: isActive
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns a value indicating whether the scenario is active
@@ -239,11 +254,12 @@ items:
       return:
         type:
           - boolean
-    type: method
+    module: VSS/Performance
   - uid: >-
       vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.isPageInteractive
     name: isPageInteractive
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -255,14 +271,15 @@ items:
       return:
         type:
           - boolean
-    type: method
+    module: VSS/Performance
   - uid: vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor.log
     name: log
     children: []
+    type: method
     langs:
       - typeScript
     summary: Logs scenario data to the browser's console
     syntax:
       content: function log()
       parameters: []
-    type: method
+    module: VSS/Performance

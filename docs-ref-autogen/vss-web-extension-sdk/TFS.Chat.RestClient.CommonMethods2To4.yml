@@ -50,6 +50,7 @@ items:
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.constructor
     name: CommonMethods2To4
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -67,10 +68,11 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-    type: constructor
+    module: TFS/Chat/RestClient
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.createChatRoom
     name: createChatRoom
     children: []
+    type: method
     langs:
       - typeScript
     summary: Create a single chat room
@@ -85,10 +87,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Room>
-    type: method
+    module: TFS/Chat/RestClient
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.deleteChatRoom
     name: deleteChatRoom
     children: []
+    type: method
     langs:
       - typeScript
     summary: Delete a given chat room
@@ -102,10 +105,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
-    type: method
+    module: TFS/Chat/RestClient
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.deleteMessage
     name: deleteMessage
     children: []
+    type: method
     langs:
       - typeScript
     summary: Delete a given chat message
@@ -123,11 +127,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
-    type: method
+    module: TFS/Chat/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.getAllChatRoomMessages
     name: getAllChatRoomMessages
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve a listing of all chat messages in a given room
@@ -142,11 +147,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Message[]>
-    type: method
+    module: TFS/Chat/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.getAllChatRoomUsers
     name: getAllChatRoomUsers
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve a listing of all chat users
@@ -161,10 +167,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.User[]>
-    type: method
+    module: TFS/Chat/RestClient
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.getAllRooms
     name: getAllRooms
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve a listing of all chat rooms and the room information
@@ -175,11 +182,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Room[]>
-    type: method
+    module: TFS/Chat/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.getChatRoomById
     name: getChatRoomById
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve information on a single chat room
@@ -194,11 +202,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Room>
-    type: method
+    module: TFS/Chat/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.getChatRoomMessageById
     name: getChatRoomMessageById
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve information on a single chat message
@@ -217,11 +226,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Message>
-    type: method
+    module: TFS/Chat/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.getChatRoomUserById
     name: getChatRoomUserById
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve information on a single chat user
@@ -240,10 +250,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.User>
-    type: method
+    module: TFS/Chat/RestClient
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.joinRoom
     name: joinRoom
     children: []
+    type: method
     langs:
       - typeScript
     summary: Joins a user to a given room
@@ -265,10 +276,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
-    type: method
+    module: TFS/Chat/RestClient
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.leaveRoom
     name: leaveRoom
     children: []
+    type: method
     langs:
       - typeScript
     summary: Leaves a user from a given room
@@ -286,11 +298,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
-    type: method
+    module: TFS/Chat/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.sendMessageToRoom
     name: sendMessageToRoom
     children: []
+    type: method
     langs:
       - typeScript
     summary: Post message to a room
@@ -309,7 +322,7 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Message>
-    type: method
+    module: TFS/Chat/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.serviceInstanceId
     name: serviceInstanceId
@@ -324,10 +337,12 @@ items:
       return:
         type:
           - string
+    module: TFS/Chat/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.updateChatMessage
     name: updateChatMessage
     children: []
+    type: method
     langs:
       - typeScript
     summary: Update a given chat message
@@ -352,10 +367,11 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Message>
-    type: method
+    module: TFS/Chat/RestClient
   - uid: vss-web-extension-sdk.TFS.Chat.RestClient.CommonMethods2To4.updateChatRoom
     name: updateChatRoom
     children: []
+    type: method
     langs:
       - typeScript
     summary: Update information on a single chat room
@@ -374,4 +390,4 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Chat.Contracts.Room>
-    type: method
+    module: TFS/Chat/RestClient

@@ -1,0 +1,238 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Bundling.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Bundling
+    children:
+      - vss-web-extension-sdk.VSS.Bundling.compressPaths
+      - vss-web-extension-sdk.VSS.Bundling.getBundledCssContentSize
+      - vss-web-extension-sdk.VSS.Bundling.getBundledScriptContentSize
+      - vss-web-extension-sdk.VSS.Bundling.getBundleSize
+      - vss-web-extension-sdk.VSS.Bundling.getDynamicBundleRequestLocation
+      - vss-web-extension-sdk.VSS.Bundling.injectBundles
+      - vss-web-extension-sdk.VSS.Bundling.isDiagnosing
+      - vss-web-extension-sdk.VSS.Bundling.loadModules
+      - vss-web-extension-sdk.VSS.Bundling.markUrlForDiagnose
+      - vss-web-extension-sdk.VSS.Bundling.requireModules
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Bundling.compressPaths
+    name: compressPaths
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Compresses the specified paths by replacing recurring directory names with
+      '*' character.
+    syntax:
+      content: 'function compressPaths(paths: string[])'
+      parameters:
+        - id: paths
+          type:
+            - 'string[]'
+          description: List of files to compress.
+    module: VSS/Bundling
+  - uid: vss-web-extension-sdk.VSS.Bundling.getBundledCssContentSize
+    name: getBundledCssContentSize
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Gets the content length (in bytes) of all CSS bundles included on the page
+    syntax:
+      content: function getBundledCssContentSize()
+      parameters: []
+      return:
+        type:
+          - number
+    module: VSS/Bundling
+  - uid: vss-web-extension-sdk.VSS.Bundling.getBundledScriptContentSize
+    name: getBundledScriptContentSize
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Gets the content length (in bytes) of all Javascript bundles included on
+      the page
+    syntax:
+      content: function getBundledScriptContentSize()
+      parameters: []
+      return:
+        type:
+          - number
+    module: VSS/Bundling
+  - uid: vss-web-extension-sdk.VSS.Bundling.getBundleSize
+    name: getBundleSize
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get the size (in bytes) of a bundle given its url
+    syntax:
+      content: 'function getBundleSize(bundleUrl: string)'
+      parameters:
+        - id: bundleUrl
+          type:
+            - string
+          description: |
+            Url of the script or CSS bundle
+      return:
+        type:
+          - number
+    module: VSS/Bundling
+  - uid: vss-web-extension-sdk.VSS.Bundling.getDynamicBundleRequestLocation
+    name: getDynamicBundleRequestLocation
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function getDynamicBundleRequestLocation(scripts: string[],
+        serviceInstanceId: string, excludeOptions: DynamicModuleExcludeOptions)
+      parameters:
+        - id: scripts
+          type:
+            - 'string[]'
+          description: ''
+        - id: serviceInstanceId
+          type:
+            - string
+          description: ''
+        - id: excludeOptions
+          type:
+            - DynamicModuleExcludeOptions
+          description: ''
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Bundling.IDynamicBundleRequestLocation'
+    module: VSS/Bundling
+  - uid: vss-web-extension-sdk.VSS.Bundling.injectBundles
+    name: injectBundles
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Inject all the CSS and Scripts specified in the bundle collection into the
+      page
+    syntax:
+      content: >-
+        function injectBundles(bundles: DynamicBundlesCollection,
+        rootBundleUrl?: string)
+      parameters:
+        - id: bundles
+          type:
+            - '@vss-web-extension-sdk.DynamicBundlesCollection'
+          description: Collection of CSS and script bundles
+        - id: rootBundleUrl
+          type:
+            - string
+          description: |
+            Optional root url to prefix to all bundle paths.
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.IPromise<any>'
+    module: VSS/Bundling
+  - uid: vss-web-extension-sdk.VSS.Bundling.isDiagnosing
+    name: isDiagnosing
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function isDiagnosing()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Bundling
+  - uid: vss-web-extension-sdk.VSS.Bundling.loadModules
+    name: loadModules
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Issue a require statement for the specified modules and invoke the given
+      callback method once available.
+
+      This is a wrapper around the requireJS 'require' statement which ensures
+      that the missing modules are
+
+      pulled in via the minimum number of resource requests.
+    syntax:
+      content: >-
+        function loadModules(moduleNames: string[], options?:
+        IModuleLoadOptions)
+      parameters:
+        - id: moduleNames
+          type:
+            - 'string[]'
+          description: An array of AMD modules to asynchronously require
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.VSS.VSS.IModuleLoadOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<void>
+    module: VSS/Bundling
+  - uid: vss-web-extension-sdk.VSS.Bundling.markUrlForDiagnose
+    name: markUrlForDiagnose
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function markUrlForDiagnose(url: string)'
+      parameters:
+        - id: url
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - string
+    module: VSS/Bundling
+  - uid: vss-web-extension-sdk.VSS.Bundling.requireModules
+    name: requireModules
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Issue a require statement for the specified modules and invoke the given
+      callback method once available.
+
+      This is a wrapper around the requireJS 'require' statement which ensures
+      that the missing modules are
+
+      pulled in via the minimum number of resource requests.
+    syntax:
+      content: >-
+        function requireModules(moduleNames: string[], options?:
+        IModuleLoadOptions)
+      parameters:
+        - id: moduleNames
+          type:
+            - 'string[]'
+          description: An array of AMD modules to asynchronously require
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.VSS.VSS.IModuleLoadOptions'
+          description: ''
+          optional: true
+      return:
+        type:
+          - Promise<any>
+    module: VSS/Bundling

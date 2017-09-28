@@ -28,6 +28,7 @@ items:
   - uid: vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2_1To4.constructor
     name: CommonMethods2_1To4
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -45,11 +46,12 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-    type: constructor
+    module: TFS/Build/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2_1To4.getChangesBetweenBuilds
     name: getChangesBetweenBuilds
     children: []
+    type: method
     langs:
       - typeScript
     summary: '[Preview API] Gets the changes associated between given builds'
@@ -81,11 +83,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.Build.Contracts.Change[]>
-    type: method
+    module: TFS/Build/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.Build.RestClient.CommonMethods2_1To4.getWorkItemsBetweenBuilds
     name: getWorkItemsBetweenBuilds
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -117,4 +120,4 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.WebApi.Contracts.ResourceRef[]>
-    type: method
+    module: TFS/Build/RestClient

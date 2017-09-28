@@ -1,0 +1,233 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Controls/Navigation
+    children:
+      - vss-web-extension-sdk.VSS.Controls.Navigation.attachFullScreenCI
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Navigation.attachFullScreenUrlUpdateEvent
+      - vss-web-extension-sdk.VSS.Controls.Navigation.detachFullScreenCI
+      - >-
+        vss-web-extension-sdk.VSS.Controls.Navigation.detachFullScreenUrlUpdateEvent
+      - vss-web-extension-sdk.VSS.Controls.Navigation.getFullScreen
+      - vss-web-extension-sdk.VSS.Controls.Navigation.getFullScreenIcon
+      - vss-web-extension-sdk.VSS.Controls.Navigation.getFullScreenTooltip
+      - vss-web-extension-sdk.VSS.Controls.Navigation.getUrlData
+      - vss-web-extension-sdk.VSS.Controls.Navigation.initialize
+      - vss-web-extension-sdk.VSS.Controls.Navigation.setFullScreen
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.attachFullScreenCI
+    name: attachFullScreenCI
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Attaches a fullscreen customer intelligence change event handler.
+
+      This event handler will be triggered for publishing full screen customer
+      intelligence.
+    syntax:
+      content: 'function attachFullScreenCI(handler: IEventHandler)'
+      parameters:
+        - id: handler
+          type:
+            - '@vss-web-extension-sdk.IEventHandler'
+          description: |
+            Event handler callback.
+    module: VSS/Controls/Navigation
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Navigation.attachFullScreenUrlUpdateEvent
+    name: attachFullScreenUrlUpdateEvent
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Attaches a fullscreen customer intelligence change event handler.
+
+      This event handler will be triggered for publishing full screen customer
+      intelligence.
+    syntax:
+      content: 'function attachFullScreenUrlUpdateEvent(handler: IEventHandler)'
+      parameters:
+        - id: handler
+          type:
+            - '@vss-web-extension-sdk.IEventHandler'
+          description: |
+            Event handler callback.
+    module: VSS/Controls/Navigation
+  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.detachFullScreenCI
+    name: detachFullScreenCI
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Removes fullscreen customer intelligence change handler from the event
+      handler list.
+    syntax:
+      content: 'function detachFullScreenCI(handler: IEventHandler)'
+      parameters:
+        - id: handler
+          type:
+            - '@vss-web-extension-sdk.IEventHandler'
+          description: |
+            Event handler callback.
+    module: VSS/Controls/Navigation
+  - uid: >-
+      vss-web-extension-sdk.VSS.Controls.Navigation.detachFullScreenUrlUpdateEvent
+    name: detachFullScreenUrlUpdateEvent
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Removes fullscreen customer intelligence change handler from the event
+      handler list.
+    syntax:
+      content: 'function detachFullScreenUrlUpdateEvent(handler: IEventHandler)'
+      parameters:
+        - id: handler
+          type:
+            - '@vss-web-extension-sdk.IEventHandler'
+          description: |
+            Event handler callback.
+    module: VSS/Controls/Navigation
+  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.getFullScreen
+    name: getFullScreen
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Gets a value indicating whether full screen mode is active.
+    syntax:
+      content: function getFullScreen()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Controls/Navigation
+  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.getFullScreenIcon
+    name: getFullScreenIcon
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Gets full screen icon.
+    syntax:
+      content: function getFullScreenIcon()
+      parameters: []
+      return:
+        type:
+          - string
+    module: VSS/Controls/Navigation
+  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.getFullScreenTooltip
+    name: getFullScreenTooltip
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Gets full screen tooltip.
+    syntax:
+      content: function getFullScreenTooltip()
+      parameters: []
+      return:
+        type:
+          - string
+    module: VSS/Controls/Navigation
+  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.getUrlData
+    name: getUrlData
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get state object for the current full screen mode state.
+    syntax:
+      content: 'function getUrlData(value?: boolean)'
+      parameters:
+        - id: value
+          type:
+            - boolean
+          description: |
+            Optional value to set for fullscreen mode.
+            If undefined will use current setting.
+          optional: true
+      return:
+        type:
+          - any
+    module: VSS/Controls/Navigation
+  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.initialize
+    name: initialize
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Initialize the full screen helper. Sets up event handlers.
+    syntax:
+      content: 'function initialize(menuBar: MenuBar, options?: any)'
+      parameters:
+        - id: menuBar
+          type:
+            - '@vss-web-extension-sdk.VSS.Controls.Menus.MenuBar'
+          description: >
+            A toggle button for full screen mode will be added to the menu bar
+            (if it does not already exist).
+        - id: options
+          type:
+            - any
+          description: ''
+          optional: true
+    module: VSS/Controls/Navigation
+  - uid: vss-web-extension-sdk.VSS.Controls.Navigation.setFullScreen
+    name: setFullScreen
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Set full screen value. Update full screen view and button.
+      Update url with full screen tag if addHistoryPoint is true.
+    syntax:
+      content: >-
+        function setFullScreen(value: boolean, addHistoryPoint?: boolean,
+        showLeftLane?: boolean, suppressNavigate?: boolean,
+        replaceHistoryPoint?: boolean)
+      parameters:
+        - id: value
+          type:
+            - boolean
+          description: The full screen value to set to.
+        - id: addHistoryPoint
+          type:
+            - boolean
+          description: 'If true, update url with full screen tag.'
+          optional: true
+        - id: showLeftLane
+          type:
+            - boolean
+          description: >-
+            If true, the left tab in split panes will be shown during full
+            screen mode.
+          optional: true
+        - id: suppressNavigate
+          type:
+            - boolean
+          description: >-
+            If true, the setting of full screen will not cause a navigation
+            event, and instead will simply set to fullscreen without updating
+            navigation tabs, etc.
+          optional: true
+        - id: replaceHistoryPoint
+          type:
+            - boolean
+          description: >
+            If true, update the url with the full screen tag w/o adding to the
+            back history.  addHistoryPoint and replaceHistoryPoint are exclusive
+            operations.
+          optional: true
+    module: VSS/Controls/Navigation

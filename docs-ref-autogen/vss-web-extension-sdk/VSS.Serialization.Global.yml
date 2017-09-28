@@ -1,0 +1,125 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Serialization.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Serialization
+    children:
+      - vss-web-extension-sdk.VSS.Serialization.deserialize
+      - vss-web-extension-sdk.VSS.Serialization.deserializeJsonIsland
+      - vss-web-extension-sdk.VSS.Serialization.serialize
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Serialization.deserialize
+    name: deserialize
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Process a pure JSON object (e.g. that came from a REST call) and transform
+      it into a JS object
+
+      where date strings are converted to Date objects and enum values are
+      converted from strings into
+
+      their numerical value.
+    syntax:
+      content: >-
+        function deserialize(data: any, contractMetadata: ContractMetadata,
+        preserveOriginal?: boolean, unwrapWrappedCollections?: boolean)
+      parameters:
+        - id: data
+          type:
+            - any
+          description: The object to deserialize
+        - id: contractMetadata
+          type:
+            - '@vss-web-extension-sdk.VSS.Serialization.ContractMetadata'
+          description: The type info/metadata for the contract type being deserialize
+        - id: preserveOriginal
+          type:
+            - boolean
+          description: >-
+            If true, don't modify the original object. False modifies the
+            original object (the return value points to the data argument).
+          optional: true
+        - id: unwrapWrappedCollections
+          type:
+            - boolean
+          description: >
+            If true check for wrapped arrays (REST apis will not return arrays
+            directly as the root result but will instead wrap them in a {
+            values: [], count: 0 } object.
+          optional: true
+      return:
+        type:
+          - any
+    module: VSS/Serialization
+  - uid: vss-web-extension-sdk.VSS.Serialization.deserializeJsonIsland
+    name: deserializeJsonIsland
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Deserialize the JSON island data that is stored in the given element
+    syntax:
+      content: >-
+        function deserializeJsonIsland<T>($element: JQuery, contractMetadata:
+        ContractMetadata, removeElement?: boolean)
+      parameters:
+        - id: $element
+          type:
+            - JQuery
+          description: JQuery element containing the JSON to deserialize
+        - id: contractMetadata
+          type:
+            - '@vss-web-extension-sdk.VSS.Serialization.ContractMetadata'
+          description: The type info/metadata for the contract type being deserialize
+        - id: removeElement
+          type:
+            - boolean
+          description: >
+            If true remove the element from the DOM after deserializing the
+            content
+          optional: true
+      return:
+        type:
+          - T
+    module: VSS/Serialization
+  - uid: vss-web-extension-sdk.VSS.Serialization.serialize
+    name: serialize
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Process a contract in its raw form (e.g. date fields are Dates, and Enums
+      are numbers) and
+
+      return a pure JSON object that can be posted to REST endpoint.
+    syntax:
+      content: >-
+        function serialize(data: any, contractMetadata: ContractMetadata,
+        preserveOriginal?: boolean)
+      parameters:
+        - id: data
+          type:
+            - any
+          description: The object to serialize
+        - id: contractMetadata
+          type:
+            - '@vss-web-extension-sdk.VSS.Serialization.ContractMetadata'
+          description: The type info/metadata for the contract type being serialized
+        - id: preserveOriginal
+          type:
+            - boolean
+          description: >
+            If true, don't modify the original object. False modifies the
+            original object (the return value points to the data argument).
+          optional: true
+      return:
+        type:
+          - any
+    module: VSS/Serialization

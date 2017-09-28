@@ -42,6 +42,7 @@ items:
           - >-
             (successCallback: IResultCallback, errorCallback?: IErrorCallback)
             => void
+    module: VSS/Events/Document
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Document.RunningDocument.getDirtyDocumentTitles
     name: getDirtyDocumentTitles
@@ -58,9 +59,11 @@ items:
       return:
         type:
           - '(maxTitle?: number) => string[]'
+    module: VSS/Events/Document
   - uid: vss-web-extension-sdk.VSS.Events.Document.RunningDocument.isDirty
     name: isDirty
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -72,4 +75,4 @@ items:
       return:
         type:
           - boolean
-    type: method
+    module: VSS/Events/Document

@@ -1,0 +1,174 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Authentication.Services.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Authentication/Services
+    children:
+      - vss-web-extension-sdk.VSS.Authentication.Services.getAppToken
+      - vss-web-extension-sdk.VSS.Authentication.Services.getAuthTokenManager
+      - vss-web-extension-sdk.VSS.Authentication.Services.getBasicAuthHeader
+      - vss-web-extension-sdk.VSS.Authentication.Services.getBasicAuthValue
+      - vss-web-extension-sdk.VSS.Authentication.Services.getBearerAuthHeader
+      - vss-web-extension-sdk.VSS.Authentication.Services.getToken
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Authentication.Services.getAppToken
+    name: getAppToken
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Fetch an app token to use for the current user for the given application. 
+      This can be used to authenticate
+
+      with an external application.
+    syntax:
+      content: 'function getAppToken(appId: string, name?: string, force?: boolean)'
+      parameters:
+        - id: appId
+          type:
+            - string
+          description: Id of the application.
+        - id: name
+          type:
+            - string
+          description: Metadata info to identify the token.
+          optional: true
+        - id: force
+          type:
+            - boolean
+          description: Enables skipping cache and issue a brand new token.
+          optional: true
+      return:
+        type:
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Authentication.Contracts.WebSessionToken>
+    module: VSS/Authentication/Services
+  - uid: vss-web-extension-sdk.VSS.Authentication.Services.getAuthTokenManager
+    name: getAuthTokenManager
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Get an auth token manager - either the default manager or the manager for
+      a registered/named token
+    syntax:
+      content: 'function getAuthTokenManager(namedTokenId?: string)'
+      parameters:
+        - id: namedTokenId
+          type:
+            - string
+          description: ''
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.IAuthTokenManager<any>'
+    module: VSS/Authentication/Services
+  - uid: vss-web-extension-sdk.VSS.Authentication.Services.getBasicAuthHeader
+    name: getBasicAuthHeader
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Create the Authorization header value given the basic auth credentials
+    syntax:
+      content: 'function getBasicAuthHeader(user: string, password: string)'
+      parameters:
+        - id: user
+          type:
+            - string
+          description: The username portion of the credentials
+        - id: password
+          type:
+            - string
+          description: |
+            The password portion of the credentials
+      return:
+        type:
+          - string
+    module: VSS/Authentication/Services
+  - uid: vss-web-extension-sdk.VSS.Authentication.Services.getBasicAuthValue
+    name: getBasicAuthValue
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: 'Create base-64 encoded user:password value used for basic auth.'
+    syntax:
+      content: 'function getBasicAuthValue(user: string, password: string)'
+      parameters:
+        - id: user
+          type:
+            - string
+          description: The username portion of the credentials
+        - id: password
+          type:
+            - string
+          description: |
+            The password portion of the credentials
+      return:
+        type:
+          - string
+    module: VSS/Authentication/Services
+  - uid: vss-web-extension-sdk.VSS.Authentication.Services.getBearerAuthHeader
+    name: getBearerAuthHeader
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Create the Authorization header value given the bearer token
+    syntax:
+      content: 'function getBearerAuthHeader(token: string)'
+      parameters:
+        - id: token
+          type:
+            - string
+          description: |
+            bearer token
+      return:
+        type:
+          - string
+    module: VSS/Authentication/Services
+  - uid: vss-web-extension-sdk.VSS.Authentication.Services.getToken
+    name: getToken
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Fetch a session token to use for the current user for the given
+      application (or null/empty for an unscoped token).
+    syntax:
+      content: >-
+        function getToken(appId?: string, name?: string, force?: boolean,
+        scoped?: boolean)
+      parameters:
+        - id: appId
+          type:
+            - string
+          description: Id of the application.
+          optional: true
+        - id: name
+          type:
+            - string
+          description: Metadata info to identify the token.
+          optional: true
+        - id: force
+          type:
+            - boolean
+          description: Enables skipping cache and issue a brand new token.
+          optional: true
+        - id: scoped
+          type:
+            - boolean
+          description: ''
+          optional: true
+      return:
+        type:
+          - >-
+            @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.VSS.Authentication.Contracts.WebSessionToken>
+    module: VSS/Authentication/Services

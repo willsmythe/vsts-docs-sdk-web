@@ -47,6 +47,7 @@ items:
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.attachNavigate
     name: attachNavigate
     children: []
+    type: method
     langs:
       - typeScript
     summary: Attach a new navigate handler
@@ -74,11 +75,12 @@ items:
             If true, immediately invoke the handler if the current state is
             appropriate (has the matching action value)
           optional: true
-    type: method
+    module: VSS/SDK/Services/Navigation
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.detachNavigate
     name: detachNavigate
     children: []
+    type: method
     langs:
       - typeScript
     summary: Remove a navigate handler
@@ -96,11 +98,12 @@ items:
             The method called whenever a navigation event occurs with the
             matching action value
           optional: true
-    type: method
+    module: VSS/SDK/Services/Navigation
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.getCurrentState
     name: getCurrentState
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -112,11 +115,12 @@ items:
       return:
         type:
           - any
-    type: method
+    module: VSS/SDK/Services/Navigation
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.getHash
     name: getHash
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the current hash.
@@ -126,11 +130,12 @@ items:
       return:
         type:
           - Promise<string>
-    type: method
+    module: VSS/SDK/Services/Navigation
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.navigate
     name: navigate
     children: []
+    type: method
     langs:
       - typeScript
     summary: Navigate the parent page to the specified url
@@ -142,11 +147,12 @@ items:
             - string
           description: |
             Url to navigate to
-    type: method
+    module: VSS/SDK/Services/Navigation
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.onHashChanged
     name: onHashChanged
     children: []
+    type: method
     langs:
       - typeScript
     summary: Add a callback to be invoked each time the hash navigation has changed
@@ -158,11 +164,12 @@ items:
             - '(hash: string) => void'
           description: |
             Method invoked on each navigation hash change
-    type: method
+    module: VSS/SDK/Services/Navigation
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.openNewWindow
     name: openNewWindow
     children: []
+    type: method
     langs:
       - typeScript
     summary: Open a new window to the specified url
@@ -179,22 +186,24 @@ items:
           description: >
             Comma-separated list of features/specs sent as the 3rd parameter to
             window.open. For example: "height=400,width=400".
-    type: method
+    module: VSS/SDK/Services/Navigation
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.reload
     name: reload
     children: []
+    type: method
     langs:
       - typeScript
     summary: Reloads the parent frame
     syntax:
       content: function reload()
       parameters: []
-    type: method
+    module: VSS/SDK/Services/Navigation
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.replaceHash
     name: replaceHash
     children: []
+    type: method
     langs:
       - typeScript
     summary: Replace existing hash with the provided hash from the hosted content.
@@ -205,11 +214,12 @@ items:
           type:
             - string
           description: ''
-    type: method
+    module: VSS/SDK/Services/Navigation
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.setHash
     name: setHash
     children: []
+    type: method
     langs:
       - typeScript
     summary: Sets the provided hash from the hosted content.
@@ -220,11 +230,12 @@ items:
           type:
             - string
           description: ''
-    type: method
+    module: VSS/SDK/Services/Navigation
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.setWindowTitle
     name: setWindowTitle
     children: []
+    type: method
     langs:
       - typeScript
     summary: Update the host document's title (appears as the browser tab title).
@@ -236,11 +247,12 @@ items:
             - string
           description: |
             The new title of the window
-    type: method
+    module: VSS/SDK/Services/Navigation
   - uid: >-
       vss-web-extension-sdk.VSS.SDK.Services.Navigation.HostNavigationService.updateHistoryEntry
     name: updateHistoryEntry
     children: []
+    type: method
     langs:
       - typeScript
     summary: Update the current history entry
@@ -290,4 +302,4 @@ items:
             If true, don't trigger any of the attached navigate event handlers
             due to this update.
           optional: true
-    type: method
+    module: VSS/SDK/Services/Navigation

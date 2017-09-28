@@ -36,6 +36,7 @@ items:
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessTemplateRestClient.CommonMethods2_2To4.checkTemplateExistence
     name: checkTemplateExistence
     children: []
+    type: method
     langs:
       - typeScript
     summary: '[Preview API] Check if process template exists'
@@ -50,11 +51,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessTemplateContracts.CheckTemplateExistenceResult>
-    type: method
+    module: TFS/WorkItemTracking/ProcessTemplateRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessTemplateRestClient.CommonMethods2_2To4.constructor
     name: CommonMethods2_2To4
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -72,11 +74,12 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-    type: constructor
+    module: TFS/WorkItemTracking/ProcessTemplateRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessTemplateRestClient.CommonMethods2_2To4.exportProcessTemplate
     name: exportProcessTemplate
     children: []
+    type: method
     langs:
       - typeScript
     summary: '[Preview API] Returns requested process template'
@@ -90,11 +93,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
-    type: method
+    module: TFS/WorkItemTracking/ProcessTemplateRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessTemplateRestClient.CommonMethods2_2To4.importProcessTemplate
     name: importProcessTemplate
     children: []
+    type: method
     langs:
       - typeScript
     summary: '[Preview API]'
@@ -114,11 +118,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessTemplateContracts.ProcessImportResult>
-    type: method
+    module: TFS/WorkItemTracking/ProcessTemplateRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessTemplateRestClient.CommonMethods2_2To4.importProcessTemplateStatus
     name: importProcessTemplateStatus
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -135,7 +140,7 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.ProcessTemplateContracts.ProcessPromoteStatus>
-    type: method
+    module: TFS/WorkItemTracking/ProcessTemplateRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.ProcessTemplateRestClient.CommonMethods2_2To4.serviceInstanceId
     name: serviceInstanceId
@@ -150,3 +155,4 @@ items:
       return:
         type:
           - string
+    module: TFS/WorkItemTracking/ProcessTemplateRestClient

@@ -25,16 +25,18 @@ items:
   - uid: vss-web-extension-sdk.VSS.Events.Page.IPageEventService.clear
     name: clear
     children: []
+    type: method
     langs:
       - typeScript
     summary: Clears all the subscriptions.
     syntax:
       content: function clear()
       parameters: []
-    type: method
+    module: VSS/Events/Page
   - uid: vss-web-extension-sdk.VSS.Events.Page.IPageEventService.fire
     name: fire
     children: []
+    type: method
     langs:
       - typeScript
     summary: Fires a page event.
@@ -51,10 +53,11 @@ items:
           description: |
             Optional event arguments.
           optional: true
-    type: method
+    module: VSS/Events/Page
   - uid: vss-web-extension-sdk.VSS.Events.Page.IPageEventService.reset
     name: reset
     children: []
+    type: method
     langs:
       - typeScript
     summary: Resets the specified event like it is not fired yet.
@@ -65,10 +68,11 @@ items:
           type:
             - string
           description: ''
-    type: method
+    module: VSS/Events/Page
   - uid: vss-web-extension-sdk.VSS.Events.Page.IPageEventService.subscribe
     name: subscribe
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -86,10 +90,11 @@ items:
             - '@vss-web-extension-sdk.VSS.Events.Page.IPageEventCallback'
           description: |
             Callback to invoke when the event is fired.
-    type: method
+    module: VSS/Events/Page
   - uid: vss-web-extension-sdk.VSS.Events.Page.IPageEventService.unsubscribe
     name: unsubscribe
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -107,4 +112,4 @@ items:
             - '@vss-web-extension-sdk.VSS.Events.Page.IPageEventCallback'
           description: |
             Callback to invoke when the event is fired.
-    type: method
+    module: VSS/Events/Page

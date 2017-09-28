@@ -1,0 +1,82 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Ajax.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Ajax
+    children:
+      - vss-web-extension-sdk.VSS.Ajax.addGlobalListener
+      - vss-web-extension-sdk.VSS.Ajax.issueRequest
+      - vss-web-extension-sdk.VSS.Ajax.removeGlobalListener
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Ajax.addGlobalListener
+    name: addGlobalListener
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Add a listener that gets notified whenever requests from this client
+      begin/end/etc.
+    syntax:
+      content: 'function addGlobalListener(listener: IVssAjaxEventListener)'
+      parameters:
+        - id: listener
+          type:
+            - '@vss-web-extension-sdk.IVssAjaxEventListener'
+          description: |
+            HttpClient listener to add
+    module: VSS/Ajax
+  - uid: vss-web-extension-sdk.VSS.Ajax.issueRequest
+    name: issueRequest
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Issue an AJAX request. This is a wrapper around jquery's ajax method that
+      handles VSS authentication
+
+      and triggers events that can be listened to by other modules.
+    syntax:
+      content: >-
+        function issueRequest(requestUrl: string, ajaxOptions:
+        JQueryAjaxSettings, vssRequestOptions?: IVssAjaxOptions)
+      parameters:
+        - id: requestUrl
+          type:
+            - string
+          description: Url to send the request to
+        - id: ajaxOptions
+          type:
+            - JQueryAjaxSettings
+          description: jQuery.ajax options
+        - id: vssRequestOptions
+          type:
+            - '@vss-web-extension-sdk.IVssAjaxOptions'
+          description: VSS specific request options
+          optional: true
+      return:
+        type:
+          - '@vss-web-extension-sdk.IPromise<any>'
+    module: VSS/Ajax
+  - uid: vss-web-extension-sdk.VSS.Ajax.removeGlobalListener
+    name: removeGlobalListener
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Remove a listener that gets notified whenever requests from this client
+      begin/end/etc.
+    syntax:
+      content: 'function removeGlobalListener(listener: IVssAjaxEventListener)'
+      parameters:
+        - id: listener
+          type:
+            - '@vss-web-extension-sdk.IVssAjaxEventListener'
+          description: |
+            HttpClient listener to remove
+    module: VSS/Ajax

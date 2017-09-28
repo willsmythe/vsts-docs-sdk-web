@@ -1,0 +1,118 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Performance.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Performance
+    children:
+      - vss-web-extension-sdk.VSS.Performance.getDefaultNavigationEvents
+      - vss-web-extension-sdk.VSS.Performance.getNavigationStartTimestamp
+      - vss-web-extension-sdk.VSS.Performance.getResourceStats
+      - vss-web-extension-sdk.VSS.Performance.getResourceTimingEntries
+      - vss-web-extension-sdk.VSS.Performance.getScenarioManager
+      - vss-web-extension-sdk.VSS.Performance.getTimestamp
+      - vss-web-extension-sdk.VSS.Performance.getTimingEntriesByName
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Performance.getDefaultNavigationEvents
+    name: getDefaultNavigationEvents
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Return performance events to add to each scenario from the performance
+      API. Note: Will add measurements if not already added
+    syntax:
+      content: 'function getDefaultNavigationEvents(scenario?: IScenarioDescriptor)'
+      parameters:
+        - id: scenario
+          type:
+            - '@vss-web-extension-sdk.VSS.Performance.IScenarioDescriptor'
+          description: ''
+          optional: true
+    module: VSS/Performance
+  - uid: vss-web-extension-sdk.VSS.Performance.getNavigationStartTimestamp
+    name: getNavigationStartTimestamp
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: 'Returns navigation start timestamp, or 0 if browser doesn''t support it'
+    syntax:
+      content: function getNavigationStartTimestamp()
+      parameters: []
+      return:
+        type:
+          - number
+    module: VSS/Performance
+  - uid: vss-web-extension-sdk.VSS.Performance.getResourceStats
+    name: getResourceStats
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get statistics about the resources currently loaded on the page
+    syntax:
+      content: function getResourceStats()
+      parameters: []
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Performance.IResourceStats'
+    module: VSS/Performance
+  - uid: vss-web-extension-sdk.VSS.Performance.getResourceTimingEntries
+    name: getResourceTimingEntries
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get the performance timing entries with the specified name
+    syntax:
+      content: function getResourceTimingEntries()
+      parameters: []
+    module: VSS/Performance
+  - uid: vss-web-extension-sdk.VSS.Performance.getScenarioManager
+    name: getScenarioManager
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Gets scenario manager instance
+    syntax:
+      content: function getScenarioManager()
+      parameters: []
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Performance.IScenarioManager'
+    module: VSS/Performance
+  - uid: vss-web-extension-sdk.VSS.Performance.getTimestamp
+    name: getTimestamp
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getTimestamp()
+      parameters: []
+      return:
+        type:
+          - number
+    module: VSS/Performance
+  - uid: vss-web-extension-sdk.VSS.Performance.getTimingEntriesByName
+    name: getTimingEntriesByName
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get the performance timing entries with the specified name
+    syntax:
+      content: 'function getTimingEntriesByName(name: string)'
+      parameters:
+        - id: name
+          type:
+            - string
+          description: |
+            The name of the timing entries to get
+    module: VSS/Performance

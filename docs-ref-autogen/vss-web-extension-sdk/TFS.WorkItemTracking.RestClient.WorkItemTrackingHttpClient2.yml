@@ -36,6 +36,7 @@ items:
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2.getHistory
     name: getHistory
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns history of all revision for a given work item ID
@@ -60,11 +61,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemHistory[]>
-    type: method
+    module: TFS/WorkItemTracking/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2.getHistoryById
     name: getHistoryById
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns the history value of particular revision
@@ -83,11 +85,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.WorkItemHistory>
-    type: method
+    module: TFS/WorkItemTracking/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2.getReportingLinks
     name: getReportingLinks
     children: []
+    type: method
     langs:
       - typeScript
     summary: Get a batch of work item links
@@ -127,11 +130,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.ReportingWorkItemLinksBatch>
-    type: method
+    module: TFS/WorkItemTracking/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2.readReportingRevisionsGet
     name: readReportingRevisionsGet
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -194,11 +198,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.ReportingWorkItemRevisionsBatch>
-    type: method
+    module: TFS/WorkItemTracking/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2.readReportingRevisionsPost
     name: readReportingRevisionsPost
     children: []
+    type: method
     langs:
       - typeScript
     summary: Get a batch of work item revisions
@@ -239,11 +244,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.WorkItemTracking.Contracts.ReportingWorkItemRevisionsBatch>
-    type: method
+    module: TFS/WorkItemTracking/RestClient
   - uid: >-
       vss-web-extension-sdk.TFS.WorkItemTracking.RestClient.WorkItemTrackingHttpClient2.constructor
     name: WorkItemTrackingHttpClient2
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -261,4 +267,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-    type: constructor
+    module: TFS/WorkItemTracking/RestClient

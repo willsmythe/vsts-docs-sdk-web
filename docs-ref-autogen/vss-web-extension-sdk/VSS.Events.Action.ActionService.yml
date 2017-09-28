@@ -30,6 +30,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Events.Action.ActionService.constructor
     name: ActionService
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: >-
@@ -44,17 +45,18 @@ items:
     syntax:
       content: new ActionService()
       parameters: []
-    type: constructor
+    module: VSS/Events/Action
   - uid: vss-web-extension-sdk.VSS.Events.Action.ActionService.clearActionWorkers
     name: clearActionWorkers
     children: []
+    type: method
     langs:
       - typeScript
     summary: Clears all action workers
     syntax:
       content: function clearActionWorkers()
       parameters: []
-    type: method
+    module: VSS/Events/Action
   - uid: vss-web-extension-sdk.VSS.Events.Action.ActionService.MaxOrder
     name: MaxOrder
     fullName: MaxOrder
@@ -68,9 +70,11 @@ items:
       return:
         type:
           - any
+    module: VSS/Events/Action
   - uid: vss-web-extension-sdk.VSS.Events.Action.ActionService.performAction
     name: performAction
     children: []
+    type: method
     langs:
       - typeScript
     summary: Invoke the registered action workers for the an action
@@ -90,10 +94,11 @@ items:
       return:
         type:
           - any
-    type: method
+    module: VSS/Events/Action
   - uid: vss-web-extension-sdk.VSS.Events.Action.ActionService.registerActionWorker
     name: registerActionWorker
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -147,11 +152,12 @@ items:
             The order of the action (default:100).
                   Action workers are executed in increasing order. Order must be less than MaxOrder (inclusive)
           optional: true
-    type: method
+    module: VSS/Events/Action
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Action.ActionService.unregisterActionWorker
     name: unregisterActionWorker
     children: []
+    type: method
     langs:
       - typeScript
     summary: Un-Register a handler for an action.
@@ -169,11 +175,12 @@ items:
             - '@vss-web-extension-sdk.VSS.Events.Action.IActionWorker'
           description: |
             Function(actionArgs, next), The IActionWorker that was registered.
-    type: method
+    module: VSS/Events/Action
   - uid: >-
       vss-web-extension-sdk.VSS.Events.Action.ActionService.unregisterActionWorkers
     name: unregisterActionWorkers
     children: []
+    type: method
     langs:
       - typeScript
     summary: Un-Register all handlers for an action.
@@ -185,4 +192,4 @@ items:
             - string
           description: |
             The action to un-register
-    type: method
+    module: VSS/Events/Action

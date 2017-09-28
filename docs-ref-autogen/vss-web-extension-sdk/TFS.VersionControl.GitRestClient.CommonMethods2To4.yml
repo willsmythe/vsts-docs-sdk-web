@@ -113,6 +113,7 @@ items:
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.constructor
     name: CommonMethods2To4
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -130,11 +131,12 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-    type: constructor
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.createPullRequest
     name: createPullRequest
     children: []
+    type: method
     langs:
       - typeScript
     summary: Create a git pull request
@@ -176,11 +178,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequest>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.createPullRequestReviewer
     name: createPullRequestReviewer
     children: []
+    type: method
     langs:
       - typeScript
     summary: Adds a reviewer to a git pull request
@@ -216,11 +219,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.IdentityRefWithVote>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.createPullRequestReviewers
     name: createPullRequestReviewers
     children: []
+    type: method
     langs:
       - typeScript
     summary: Adds reviewers to a git pull request
@@ -250,11 +254,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.IdentityRefWithVote[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.createPush
     name: createPush
     children: []
+    type: method
     langs:
       - typeScript
     summary: Push changes to the repository.
@@ -282,11 +287,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPush>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.createRepository
     name: createRepository
     children: []
+    type: method
     langs:
       - typeScript
     summary: Create a git repository
@@ -308,11 +314,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.deletePullRequestReviewer
     name: deletePullRequestReviewer
     children: []
+    type: method
     langs:
       - typeScript
     summary: Removes a reviewer from a git pull request
@@ -341,11 +348,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.deleteRepository
     name: deleteRepository
     children: []
+    type: method
     langs:
       - typeScript
     summary: Delete a git repository
@@ -364,11 +372,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<void>'
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getBlob
     name: getBlob
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets a single blob.
@@ -404,11 +413,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitBlobRef>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getBlobContent
     name: getBlobContent
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets a single blob.
@@ -443,11 +453,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getBlobsZip
     name: getBlobsZip
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets one or more blobs in a zip file download.
@@ -477,11 +488,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getBlobZip
     name: getBlobZip
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets a single blob.
@@ -516,11 +528,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getBranch
     name: getBranch
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve statistics about a single branch.
@@ -552,11 +565,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitBranchStats>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getBranches
     name: getBranches
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve statistics about all branches within a repository.
@@ -584,11 +598,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitBranchStats[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getBranchStatsBatch
     name: getBranchStatsBatch
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve statistics for multiple commits
@@ -615,11 +630,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitBranchStats[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getChanges
     name: getChanges
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve changes for a particular commit.
@@ -657,11 +673,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitChanges>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getCommit
     name: getCommit
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve a particular commit.
@@ -694,11 +711,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommit>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getCommitDiffs
     name: getCommitDiffs
     children: []
+    type: method
     langs:
       - typeScript
     summary: Get differences in committed items between two commits.
@@ -749,11 +767,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitDiffs>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getCommits
     name: getCommits
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve git commits for a project
@@ -792,11 +811,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getCommitsBatch
     name: getCommitsBatch
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve git commits for a project
@@ -841,11 +861,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getItem
     name: getItem
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -908,11 +929,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitItem>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getItemContent
     name: getItemContent
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -975,11 +997,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getItems
     name: getItems
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -1044,11 +1067,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitItem[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getItemsBatch
     name: getItemsBatch
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -1077,11 +1101,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitItem[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getItemText
     name: getItemText
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -1144,11 +1169,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getItemZip
     name: getItemZip
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -1211,11 +1237,12 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPullRequest
     name: getPullRequest
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve a pull request
@@ -1267,11 +1294,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequest>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPullRequestReviewer
     name: getPullRequestReviewer
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve a reviewer from a pull request
@@ -1301,11 +1329,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.IdentityRefWithVote>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPullRequestReviewers
     name: getPullRequestReviewers
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve a pull request reviewers
@@ -1331,11 +1360,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.IdentityRefWithVote[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPullRequests
     name: getPullRequests
     children: []
+    type: method
     langs:
       - typeScript
     summary: Query for pull requests
@@ -1378,11 +1408,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequest[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPullRequestsByProject
     name: getPullRequestsByProject
     children: []
+    type: method
     langs:
       - typeScript
     summary: Query pull requests by project
@@ -1420,11 +1451,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequest[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPullRequestWorkItems
     name: getPullRequestWorkItems
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve a pull request work items
@@ -1450,11 +1482,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.AssociatedWorkItem[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPush
     name: getPush
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve a particular push.
@@ -1492,11 +1525,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPush>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPushCommits
     name: getPushCommits
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve a list of commits associated with a particular push.
@@ -1539,11 +1573,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitCommitRef[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getPushes
     name: getPushes
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieves pushes associated with the specified repository.
@@ -1583,11 +1618,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPush[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getRefs
     name: getRefs
     children: []
+    type: method
     langs:
       - typeScript
     summary: Queries the provided repository for its refs and returns them.
@@ -1652,11 +1688,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRef[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getRepositories
     name: getRepositories
     children: []
+    type: method
     langs:
       - typeScript
     summary: Retrieve git repositories.
@@ -1684,11 +1721,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getRepository
     name: getRepository
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -1708,11 +1746,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getTree
     name: getTree
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -1753,11 +1792,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitTreeRef>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.getTreeZip
     name: getTreeZip
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -1797,7 +1837,7 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<ArrayBuffer>'
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.serviceInstanceId
     name: serviceInstanceId
@@ -1812,10 +1852,12 @@ items:
       return:
         type:
           - string
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.updatePullRequest
     name: updatePullRequest
     children: []
+    type: method
     langs:
       - typeScript
     summary: Updates a pull request
@@ -1845,11 +1887,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitPullRequest>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.updateRef
     name: updateRef
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -1884,11 +1927,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRef>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.updateRefs
     name: updateRefs
     children: []
+    type: method
     langs:
       - typeScript
     summary: Creates or updates refs with the given information
@@ -1921,11 +1965,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRefUpdateResult[]>
-    type: method
+    module: TFS/VersionControl/GitRestClient
   - uid: >-
       vss-web-extension-sdk.TFS.VersionControl.GitRestClient.CommonMethods2To4.updateRepository
     name: updateRepository
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -1953,4 +1998,4 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.TFS.VersionControl.Contracts.GitRepository>
-    type: method
+    module: TFS/VersionControl/GitRestClient

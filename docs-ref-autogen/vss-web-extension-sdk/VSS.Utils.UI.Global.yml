@@ -1,0 +1,1043 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Utils/UI
+    children:
+      - vss-web-extension-sdk.VSS.Utils.UI.accessible
+      - vss-web-extension-sdk.VSS.Utils.UI.alignWidth
+      - vss-web-extension-sdk.VSS.Utils.UI.attachResize
+      - vss-web-extension-sdk.VSS.Utils.UI.buttonKeydownHandler
+      - vss-web-extension-sdk.VSS.Utils.UI.calculateTreePath
+      - vss-web-extension-sdk.VSS.Utils.UI.clearResizeHandlers
+      - vss-web-extension-sdk.VSS.Utils.UI.contentsOverflow
+      - vss-web-extension-sdk.VSS.Utils.UI.detachResize
+      - vss-web-extension-sdk.VSS.Utils.UI.domElem
+      - vss-web-extension-sdk.VSS.Utils.UI.enableElement
+      - vss-web-extension-sdk.VSS.Utils.UI.findTreeNode
+      - vss-web-extension-sdk.VSS.Utils.UI.getCustomData
+      - vss-web-extension-sdk.VSS.Utils.UI.getFocusRing
+      - vss-web-extension-sdk.VSS.Utils.UI.getFocusRingFocusHandler
+      - vss-web-extension-sdk.VSS.Utils.UI.getOverflowElement
+      - vss-web-extension-sdk.VSS.Utils.UI.getSelection
+      - vss-web-extension-sdk.VSS.Utils.UI.getVersion
+      - vss-web-extension-sdk.VSS.Utils.UI.getVerticalScrollContainer
+      - vss-web-extension-sdk.VSS.Utils.UI.getWheelDelta
+      - vss-web-extension-sdk.VSS.Utils.UI.hideFocusRing
+      - vss-web-extension-sdk.VSS.Utils.UI.htmlEncode
+      - vss-web-extension-sdk.VSS.Utils.UI.injectStylesheets
+      - vss-web-extension-sdk.VSS.Utils.UI.isChrome
+      - vss-web-extension-sdk.VSS.Utils.UI.isEdge
+      - vss-web-extension-sdk.VSS.Utils.UI.isExclusivelyCtrl
+      - vss-web-extension-sdk.VSS.Utils.UI.isFirefox
+      - vss-web-extension-sdk.VSS.Utils.UI.isIE
+      - vss-web-extension-sdk.VSS.Utils.UI.isIEVersion
+      - vss-web-extension-sdk.VSS.Utils.UI.isInDomTree
+      - vss-web-extension-sdk.VSS.Utils.UI.isIOS
+      - vss-web-extension-sdk.VSS.Utils.UI.isLessThanOrEqualToIE8
+      - vss-web-extension-sdk.VSS.Utils.UI.isLessThanOrEqualToIE9
+      - vss-web-extension-sdk.VSS.Utils.UI.isMacintosh
+      - vss-web-extension-sdk.VSS.Utils.UI.isModifierKey
+      - vss-web-extension-sdk.VSS.Utils.UI.isMozilla
+      - vss-web-extension-sdk.VSS.Utils.UI.isMsie
+      - vss-web-extension-sdk.VSS.Utils.UI.isSafari
+      - vss-web-extension-sdk.VSS.Utils.UI.isWindows
+      - vss-web-extension-sdk.VSS.Utils.UI.makeElementUnselectable
+      - vss-web-extension-sdk.VSS.Utils.UI.pasteHtmlAtCaret
+      - vss-web-extension-sdk.VSS.Utils.UI.position
+      - vss-web-extension-sdk.VSS.Utils.UI.positionAtLocation
+      - vss-web-extension-sdk.VSS.Utils.UI.scrollIntoViewVertical
+      - vss-web-extension-sdk.VSS.Utils.UI.selectInputText
+      - vss-web-extension-sdk.VSS.Utils.UI.tooltipIfOverflow
+      - vss-web-extension-sdk.VSS.Utils.UI.tryFocus
+      - vss-web-extension-sdk.VSS.Utils.UI.updateFilterGroupLevels
+      - vss-web-extension-sdk.VSS.Utils.UI.updateFilterGroups
+      - vss-web-extension-sdk.VSS.Utils.UI.walkTree
+      - vss-web-extension-sdk.VSS.Utils.UI.Watermark
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.accessible
+    name: accessible
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      When user presses space or enter on element, execute click handler and
+      then move keyboard
+
+      focus to the next visible and tabbable element on the page.
+    syntax:
+      content: 'function accessible(element: JQuery, handler?: Function)'
+      parameters:
+        - id: element
+          type:
+            - JQuery
+          description: ''
+        - id: handler
+          type:
+            - Function
+          description: |+
+
+          optional: true
+      return:
+        type:
+          - JQuery
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.alignWidth
+    name: alignWidth
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function alignWidth(element: any, baseWidth: any)'
+      parameters:
+        - id: element
+          type:
+            - any
+          description: ''
+        - id: baseWidth
+          type:
+            - any
+          description: ''
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.attachResize
+    name: attachResize
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function attachResize(element: any, handler: (e: JQueryEventObject,
+        args?: any) => void)
+      parameters:
+        - id: element
+          type:
+            - any
+          description: ''
+        - id: handler
+          type:
+            - '(e: JQueryEventObject, args?: any) => void'
+          description: ''
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.buttonKeydownHandler
+    name: buttonKeydownHandler
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Keydown handler that, when the user presses enter or spacebar, executes
+      the click event handler.
+    syntax:
+      content: 'function buttonKeydownHandler(e: JQueryEventObject)'
+      parameters:
+        - id: e
+          type:
+            - JQueryEventObject
+          description: |+
+
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.calculateTreePath
+    name: calculateTreePath
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function calculateTreePath(includeRoot: boolean, separator: string,
+        textField: string, rootField: string)
+      parameters:
+        - id: includeRoot
+          type:
+            - boolean
+          description: ''
+        - id: separator
+          type:
+            - string
+          description: ''
+        - id: textField
+          type:
+            - string
+          description: ''
+        - id: rootField
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - string
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.clearResizeHandlers
+    name: clearResizeHandlers
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function clearResizeHandlers()
+      parameters: []
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.contentsOverflow
+    name: contentsOverflow
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Returns true if the contents of the element overflow its visible bounds.
+    syntax:
+      content: 'function contentsOverflow(element: HTMLElement)'
+      parameters:
+        - id: element
+          type:
+            - HTMLElement
+          description: |+
+
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.detachResize
+    name: detachResize
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function detachResize(element: any)'
+      parameters:
+        - id: element
+          type:
+            - any
+          description: ''
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.domElem
+    name: domElem
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function domElem(tagName: string, className?: string)'
+      parameters:
+        - id: tagName
+          type:
+            - string
+          description: ''
+        - id: className
+          type:
+            - string
+          description: |+
+
+          optional: true
+      return:
+        type:
+          - HTMLElement
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.enableElement
+    name: enableElement
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function enableElement(element: Element, enable: boolean)'
+      parameters:
+        - id: element
+          type:
+            - Element
+          description: ''
+        - id: enable
+          type:
+            - boolean
+          description: |+
+
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.findTreeNode
+    name: findTreeNode
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function findTreeNode(path: string, separator: string, comparer:
+        IComparer<string>, textField: string)
+      parameters:
+        - id: path
+          type:
+            - string
+          description: ''
+        - id: separator
+          type:
+            - string
+          description: ''
+        - id: comparer
+          type:
+            - '@vss-web-extension-sdk.IComparer<string>'
+          description: ''
+        - id: textField
+          type:
+            - string
+          description: ''
+      return:
+        type:
+          - any
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.getCustomData
+    name: getCustomData
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getCustomData(element: any, key: any)'
+      parameters:
+        - id: element
+          type:
+            - any
+          description: ''
+        - id: key
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - any
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.getFocusRing
+    name: getFocusRing
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Gets the global focus ring element. Messing with this element could break
+      focus in other UI.
+    syntax:
+      content: function getFocusRing()
+      parameters: []
+      return:
+        type:
+          - HTMLElement
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.getFocusRingFocusHandler
+    name: getFocusRingFocusHandler
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Gets a handler that is intended to be executed on a focus event. This
+      handler
+
+      draws a box around the focused element if it is focused via the keyboard.
+    syntax:
+      content: >-
+        function getFocusRingFocusHandler(keyCodes?: number[], ringSize?:
+        number)
+      parameters:
+        - id: keyCodes
+          type:
+            - 'number[]'
+          description: List of keycodes that could lead to this focus event being called.
+          optional: true
+        - id: ringSize
+          type:
+            - number
+          description: |
+            Size of the ring to draw around the focused element.
+          optional: true
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.getOverflowElement
+    name: getOverflowElement
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Gets the overflow element using the specified element or its children and
+      grandchildren (optionally).
+    syntax:
+      content: 'function getOverflowElement(elem: HTMLElement, recursive?: boolean)'
+      parameters:
+        - id: elem
+          type:
+            - HTMLElement
+          description: DOM element to check the overflow.
+        - id: recursive
+          type:
+            - boolean
+          description: >
+            Determines whether to go deeper with children and grandchildren or
+            not.
+          optional: true
+      return:
+        type:
+          - HTMLElement
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.getSelection
+    name: getSelection
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getSelection()
+      parameters: []
+      return:
+        type:
+          - '@vss-web-extension-sdk.VSS.Utils.UI.SelectionRange'
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.getVersion
+    name: getVersion
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function getVersion()
+      parameters: []
+      return:
+        type:
+          - string
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.getVerticalScrollContainer
+    name: getVerticalScrollContainer
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Get the first parent of the given element that allows scrolling
+    syntax:
+      content: 'function getVerticalScrollContainer($element: JQuery)'
+      parameters:
+        - id: $element
+          type:
+            - JQuery
+          description: |
+            Element to scroll into view
+      return:
+        type:
+          - JQuery
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.getWheelDelta
+    name: getWheelDelta
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function getWheelDelta(e?: any)'
+      parameters:
+        - id: e
+          type:
+            - any
+          description: ''
+          optional: true
+      return:
+        type:
+          - number
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.hideFocusRing
+    name: hideFocusRing
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Hides the global focus ring. It can only be shown again with a focus event
+    syntax:
+      content: function hideFocusRing()
+      parameters: []
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.htmlEncode
+    name: htmlEncode
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function htmlEncode(input: any)'
+      parameters:
+        - id: input
+          type:
+            - any
+          description: ''
+      return:
+        type:
+          - any
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.injectStylesheets
+    name: injectStylesheets
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function injectStylesheets(cssReferenceUrls: string[], baseUrl?: string)'
+      parameters:
+        - id: cssReferenceUrls
+          type:
+            - 'string[]'
+          description: ''
+        - id: baseUrl
+          type:
+            - string
+          description: ''
+          optional: true
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isChrome
+    name: isChrome
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function isChrome()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isEdge
+    name: isEdge
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function isEdge()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isExclusivelyCtrl
+    name: isExclusivelyCtrl
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Check if only the ctrl key modifier was pressed.
+    syntax:
+      content: 'function isExclusivelyCtrl(e: JQueryKeyEventObject)'
+      parameters:
+        - id: e
+          type:
+            - JQueryKeyEventObject
+          description: |
+            The event object.
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isFirefox
+    name: isFirefox
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function isFirefox()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isIE
+    name: isIE
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Returns true if the browser is Internet Explorer
+    syntax:
+      content: function isIE()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isIEVersion
+    name: isIEVersion
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function isIEVersion(version: number)'
+      parameters:
+        - id: version
+          type:
+            - number
+          description: ''
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isInDomTree
+    name: isInDomTree
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Is the given element in the DOM hierarchy
+    syntax:
+      content: 'function isInDomTree(element: any)'
+      parameters:
+        - id: element
+          type:
+            - any
+          description: |
+            Element to check if it exists somewhere in the current document
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isIOS
+    name: isIOS
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function isIOS()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isLessThanOrEqualToIE8
+    name: isLessThanOrEqualToIE8
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function isLessThanOrEqualToIE8()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isLessThanOrEqualToIE9
+    name: isLessThanOrEqualToIE9
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function isLessThanOrEqualToIE9()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isMacintosh
+    name: isMacintosh
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function isMacintosh()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isModifierKey
+    name: isModifierKey
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Check if any modifier keys were pressed
+    syntax:
+      content: 'function isModifierKey(e: JQueryKeyEventObject)'
+      parameters:
+        - id: e
+          type:
+            - JQueryKeyEventObject
+          description: |
+            The event object.
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isMozilla
+    name: isMozilla
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function isMozilla()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isMsie
+    name: isMsie
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: Returns true if browser is Internet Explorer 10 or earlier.
+    syntax:
+      content: function isMsie()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isSafari
+    name: isSafari
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function isSafari()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.isWindows
+    name: isWindows
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: function isWindows()
+      parameters: []
+      return:
+        type:
+          - boolean
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.makeElementUnselectable
+    name: makeElementUnselectable
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function makeElementUnselectable(element: any)'
+      parameters:
+        - id: element
+          type:
+            - any
+          description: ''
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.pasteHtmlAtCaret
+    name: pasteHtmlAtCaret
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function pasteHtmlAtCaret(html: string, parentWindow?: Window)'
+      parameters:
+        - id: html
+          type:
+            - string
+          description: ''
+        - id: parentWindow
+          type:
+            - Window
+          description: ''
+          optional: true
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.position
+    name: position
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Positions the given element by taking the given base element
+      as a reference using the options provided
+    syntax:
+      content: >-
+        function position(element: any, baseElement: any, options?:
+        IPositionOptions)
+      parameters:
+        - id: element
+          type:
+            - any
+          description: Element to position
+        - id: baseElement
+          type:
+            - any
+          description: Reference element for positioning
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.VSS.Utils.UI.IPositionOptions'
+          description: |
+            Options for positioning
+          optional: true
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.positionAtLocation
+    name: positionAtLocation
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: 'Positions the given element at a location, making sure it fits on screen.'
+    syntax:
+      content: >-
+        function positionAtLocation(element: any, location: ILocation, options?:
+        IPositionOptions)
+      parameters:
+        - id: element
+          type:
+            - any
+          description: The element to position
+        - id: location
+          type:
+            - '@vss-web-extension-sdk.VSS.Utils.UI.ILocation'
+          description: The location to position the element at
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.VSS.Utils.UI.IPositionOptions'
+          description: |
+            Options for positioning
+          optional: true
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.scrollIntoViewVertical
+    name: scrollIntoViewVertical
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Sets the scroll (top) position of the $container element so that the
+      $element is visible.
+
+      This is a no-op if the element is already visible.
+    syntax:
+      content: >-
+        function scrollIntoViewVertical($element: JQuery, position?:
+        VerticalScrollBehavior, scrollIfAlreadyVisible?: boolean,
+        scrollAnimationDuration?: number)
+      parameters:
+        - id: $element
+          type:
+            - JQuery
+          description: Element to scroll into view
+        - id: position
+          type:
+            - VerticalScrollBehavior
+          description: >-
+            The destination position of the element after scrolling (top,
+            middle, bottom)
+          optional: true
+        - id: scrollIfAlreadyVisible
+          type:
+            - boolean
+          description: |
+
+               If true, perform the scroll even if the element is already in view
+          optional: true
+        - id: scrollAnimationDuration
+          type:
+            - number
+          description: |+
+
+               If true, scroll with animation using the given animation time
+
+          optional: true
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.selectInputText
+    name: selectInputText
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function selectInputText($input: JQuery, startPosition: number,
+        endPosition: number, focus: boolean)
+      parameters:
+        - id: $input
+          type:
+            - JQuery
+          description: ''
+        - id: startPosition
+          type:
+            - number
+          description: ''
+        - id: endPosition
+          type:
+            - number
+          description: ''
+        - id: focus
+          type:
+            - boolean
+          description: ''
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.tooltipIfOverflow
+    name: tooltipIfOverflow
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Show a tooltip on hover, only if the text of the element overflows the
+      visible area.
+    syntax:
+      content: >-
+        function tooltipIfOverflow(element: HTMLElement, options?:
+        ITooltipIfOverflowOptions)
+      parameters:
+        - id: element
+          type:
+            - HTMLElement
+          description: element with text-overflow set
+        - id: options
+          type:
+            - '@vss-web-extension-sdk.VSS.Utils.UI.ITooltipIfOverflowOptions'
+          description: |+
+
+
+          optional: true
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.tryFocus
+    name: tryFocus
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Best-effort attempt to set focus on the specified element. Exceptions will
+      be caught and logged to console.
+    syntax:
+      content: 'function tryFocus(element: any, delay?: number)'
+      parameters:
+        - id: element
+          type:
+            - any
+          description: Element to set focus on (DomElement or jQuery element)
+        - id: delay
+          type:
+            - number
+          description: |
+            Optional delay in ms before calling focus
+          optional: true
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.updateFilterGroupLevels
+    name: updateFilterGroupLevels
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function updateFilterGroupLevels(groups: IFilterGroup[])'
+      parameters:
+        - id: groups
+          type:
+            - '@vss-web-extension-sdk.VSS.Utils.UI.IFilterGroup[]'
+          description: ''
+      return:
+        type:
+          - number
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.updateFilterGroups
+    name: updateFilterGroups
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: >-
+        function updateFilterGroups(groups: IFilterGroup[], clauseNumber:
+        number, insert: boolean)
+      parameters:
+        - id: groups
+          type:
+            - '@vss-web-extension-sdk.VSS.Utils.UI.IFilterGroup[]'
+          description: ''
+        - id: clauseNumber
+          type:
+            - number
+          description: ''
+        - id: insert
+          type:
+            - boolean
+          description: ''
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.walkTree
+    name: walkTree
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function walkTree(f: IFunctionPPR<any>)'
+      parameters:
+        - id: f
+          type:
+            - '@vss-web-extension-sdk.IFunctionPPR<any>'
+          description: ''
+    module: VSS/Utils/UI
+  - uid: vss-web-extension-sdk.VSS.Utils.UI.Watermark
+    name: Watermark
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: ''
+    syntax:
+      content: 'function Watermark(element: JQuery, args: any[])'
+      parameters:
+        - id: element
+          type:
+            - JQuery
+          description: ''
+        - id: args
+          type:
+            - 'any[]'
+          description: ''
+      return:
+        type:
+          - JQuery
+    module: VSS/Utils/UI

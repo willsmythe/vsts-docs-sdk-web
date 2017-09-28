@@ -1,0 +1,70 @@
+### YamlMime:UniversalReference
+items:
+  - uid: vss-web-extension-sdk.VSS.Telemetry.Services.Global
+    package: vss-web-extension-sdk
+    name: Global
+    module: VSS/Telemetry/Services
+    children:
+      - vss-web-extension-sdk.VSS.Telemetry.Services.flush
+      - vss-web-extension-sdk.VSS.Telemetry.Services.getPublishedEvents
+      - vss-web-extension-sdk.VSS.Telemetry.Services.publishEvent
+    type: package
+    langs:
+      - typeScript
+  - uid: vss-web-extension-sdk.VSS.Telemetry.Services.flush
+    name: flush
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Flush queued event data to be sent to CustomerIntelligence service and App
+      Insights
+    syntax:
+      content: function flush()
+      parameters: []
+      return:
+        type:
+          - '@vss-web-extension-sdk.IPromise<void>'
+    module: VSS/Telemetry/Services
+  - uid: vss-web-extension-sdk.VSS.Telemetry.Services.getPublishedEvents
+    name: getPublishedEvents
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: |-
+      Gets all the events published to the service.
+      Intended to be used internally for analysing telemetry data.
+    syntax:
+      content: function getPublishedEvents()
+      parameters: []
+    module: VSS/Telemetry/Services
+  - uid: vss-web-extension-sdk.VSS.Telemetry.Services.publishEvent
+    name: publishEvent
+    children: []
+    type: function
+    langs:
+      - typeScript
+    summary: >-
+      Publish event data to the CustomerIntelligence service and App Insights.
+
+      (events are queued and sent in delayed batches unless immediate = true is
+      supplied)
+    syntax:
+      content: >-
+        function publishEvent(eventData: TelemetryEventData, immediate?:
+        boolean)
+      parameters:
+        - id: eventData
+          type:
+            - '@vss-web-extension-sdk.VSS.Telemetry.Services.TelemetryEventData'
+          description: telemetry event to publish
+        - id: immediate
+          type:
+            - boolean
+          description: >
+            If true, make ajax calls to publish the event immediately. Otherwise
+            queue the event and send in delayed batches.
+          optional: true
+    module: VSS/Telemetry/Services

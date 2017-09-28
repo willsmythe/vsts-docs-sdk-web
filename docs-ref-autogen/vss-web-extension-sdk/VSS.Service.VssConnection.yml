@@ -29,6 +29,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.beginGetServiceUrl
     name: beginGetServiceUrl
     children: []
+    type: method
     langs:
       - typeScript
     summary: Get the url for the given service
@@ -56,10 +57,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.IPromise<string>'
-    type: method
+    module: VSS/Service
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getConnection
     name: getConnection
     children: []
+    type: method
     langs:
       - typeScript
     summary: Get a (cached) VssConnection object of the given type
@@ -82,10 +84,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Service.VssConnection'
-    type: method
+    module: VSS/Service
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getHostContext
     name: getHostContext
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the host information that this service is scoped to
@@ -95,20 +98,22 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.HostContext'
-    type: method
+    module: VSS/Service
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getHostType
     name: getHostType
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets the host type that this service is scoped to
     syntax:
       content: function getHostType()
       parameters: []
-    type: method
+    module: VSS/Service
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getHostUrl
     name: getHostUrl
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -120,10 +125,11 @@ items:
       return:
         type:
           - string
-    type: method
+    module: VSS/Service
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getHttpClient
     name: getHttpClient
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns a new or a cached instance of an httpClient for the given type.
@@ -155,10 +161,11 @@ items:
       return:
         type:
           - T
-    type: method
+    module: VSS/Service
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getService
     name: getService
     children: []
+    type: method
     langs:
       - typeScript
     summary: Gets a (potentially-cached) service associated with this connection
@@ -177,10 +184,11 @@ items:
       return:
         type:
           - T
-    type: method
+    module: VSS/Service
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.getWebContext
     name: getWebContext
     children: []
+    type: method
     langs:
       - typeScript
     summary: ''
@@ -190,10 +198,11 @@ items:
       return:
         type:
           - '@vss-web-extension-sdk.VSS.Common.Contracts.Platform.WebContext'
-    type: method
+    module: VSS/Service
   - uid: vss-web-extension-sdk.VSS.Service.VssConnection.constructor
     name: VssConnection
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: Create a new connection object
@@ -210,4 +219,4 @@ items:
           description: |
             Host type to scope the connection to
           optional: true
-    type: constructor
+    module: VSS/Service

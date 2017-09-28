@@ -32,6 +32,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.addMoreItems
     name: addMoreItems
     children: []
+    type: method
     langs:
       - typeScript
     summary: Adds additional items to the search strategy
@@ -49,10 +50,11 @@ items:
             - () => any
           description: |
             The function which searches the newly updated strategy.
-    type: method
+    module: VSS/Controls/Grids
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.attachGrid
     name: attachGrid
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -67,41 +69,45 @@ items:
             - '@vss-web-extension-sdk.VSS.Controls.Grids.Grid'
           description: |
             The grid to get data from
-    type: method
+    module: VSS/Controls/Grids
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.createSearchableObjects
     name: createSearchableObjects
     children: []
+    type: method
     langs:
       - typeScript
     summary: Creates SearchableObjects for all available work items
     syntax:
       content: function createSearchableObjects()
       parameters: []
-    type: method
+    module: VSS/Controls/Grids
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.constructor
     name: GridSearchAdapter
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
     syntax:
       content: new GridSearchAdapter()
       parameters: []
-    type: constructor
+    module: VSS/Controls/Grids
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.handleClear
     name: handleClear
     children: []
+    type: method
     langs:
       - typeScript
     summary: Handles the search results being cleared and the view resetting to normal.
     syntax:
       content: function handleClear()
       parameters: []
-    type: method
+    module: VSS/Controls/Grids
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.handleError
     name: handleError
     children: []
+    type: method
     langs:
       - typeScript
     summary: Handles an error being thrown in the search process.
@@ -113,10 +119,11 @@ items:
             - string
           description: |
             Specific error message if provided.
-    type: method
+    module: VSS/Controls/Grids
   - uid: vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.handleResults
     name: handleResults
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -135,11 +142,12 @@ items:
             - boolean
           description: |
             Represents whether or not the search is finished
-    type: method
+    module: VSS/Controls/Grids
   - uid: >-
       vss-web-extension-sdk.VSS.Controls.Grids.GridSearchAdapter.isDataSetComplete
     name: isDataSetComplete
     children: []
+    type: method
     langs:
       - typeScript
     summary: Returns whether or not there is more data to be loaded.
@@ -149,4 +157,4 @@ items:
       return:
         type:
           - boolean
-    type: method
+    module: VSS/Controls/Grids

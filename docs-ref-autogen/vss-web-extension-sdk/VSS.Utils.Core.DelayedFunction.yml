@@ -33,6 +33,7 @@ items:
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.cancel
     name: cancel
     children: []
+    type: method
     langs:
       - typeScript
     summary: Cancels any pending operation (stops the timer).
@@ -44,10 +45,11 @@ items:
             - boolean
           description: ''
           optional: true
-    type: method
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.clearCooldown
     name: clearCooldown
     children: []
+    type: method
     langs:
       - typeScript
     summary: Clears the current cooldown
@@ -61,10 +63,11 @@ items:
             (boolean) true to ignore any invocation that is
                    scheduled to occur after the cooldown is finished.
           optional: true
-    type: method
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.constructor
     name: DelayedFunction
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: Creates an object that can be used to delay-execute the specified method.
@@ -95,41 +98,45 @@ items:
           description: |
             Arguments to pass to the method
           optional: true
-    type: constructor
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.extendCooldown
     name: extendCooldown
     children: []
+    type: method
     langs:
       - typeScript
     summary: 'Resets the cooldown back to [delay] ms.'
     syntax:
       content: function extendCooldown()
       parameters: []
-    type: method
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.invokeNow
     name: invokeNow
     children: []
+    type: method
     langs:
       - typeScript
     summary: Invokes the method immediately (canceling an existing timer).
     syntax:
       content: function invokeNow()
       parameters: []
-    type: method
+    module: VSS/Utils/Core
   - uid: >-
       vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.invokeOnCooldownComplete
     name: invokeOnCooldownComplete
     children: []
+    type: method
     langs:
       - typeScript
     summary: Schedule this delayed function to execute when the cooldown is complete.
     syntax:
       content: function invokeOnCooldownComplete()
       parameters: []
-    type: method
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.isCoolingDown
     name: isCoolingDown
     children: []
+    type: method
     langs:
       - typeScript
     summary: |-
@@ -141,10 +148,11 @@ items:
       return:
         type:
           - boolean
-    type: method
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.isPending
     name: isPending
     children: []
+    type: method
     langs:
       - typeScript
     summary: Is the timer currently running (operation in progress)
@@ -154,10 +162,11 @@ items:
       return:
         type:
           - boolean
-    type: method
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.reset
     name: reset
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -166,10 +175,11 @@ items:
     syntax:
       content: function reset()
       parameters: []
-    type: method
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.setDelay
     name: setDelay
     children: []
+    type: method
     langs:
       - typeScript
     summary: Modifies the length of the delay timer (for subsequent starts).
@@ -181,10 +191,11 @@ items:
             - number
           description: |
             Delay in milliseconds to wait before executing the Function
-    type: method
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.setMethod
     name: setMethod
     children: []
+    type: method
     langs:
       - typeScript
     summary: Modify the method being executed.
@@ -205,10 +216,11 @@ items:
           description: |
             (Optional) arguments to pass to the method
           optional: true
-    type: method
+    module: VSS/Utils/Core
   - uid: vss-web-extension-sdk.VSS.Utils.Core.DelayedFunction.start
     name: start
     children: []
+    type: method
     langs:
       - typeScript
     summary: >-
@@ -217,4 +229,4 @@ items:
     syntax:
       content: function start()
       parameters: []
-    type: method
+    module: VSS/Utils/Core

@@ -31,6 +31,7 @@ items:
       vss-web-extension-sdk.ReleaseManagement.Core.RestClient.ReleaseHttpClient2_2.getRelease
     name: getRelease
     children: []
+    type: method
     langs:
       - typeScript
     summary: '[Preview API] Get A Release'
@@ -61,11 +62,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release>
-    type: method
+    module: ReleaseManagement/Core/RestClient
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.RestClient.ReleaseHttpClient2_2.getReleases
     name: getReleases
     children: []
+    type: method
     langs:
       - typeScript
     summary: '[Preview API] Get a list of releases'
@@ -199,11 +201,12 @@ items:
         type:
           - >-
             @vss-web-extension-sdk.IPromise<@vss-web-extension-sdk.ReleaseManagement.Core.Contracts.Release[]>
-    type: method
+    module: ReleaseManagement/Core/RestClient
   - uid: >-
       vss-web-extension-sdk.ReleaseManagement.Core.RestClient.ReleaseHttpClient2_2.constructor
     name: ReleaseHttpClient2_2
     children: []
+    type: constructor
     langs:
       - typeScript
     summary: ''
@@ -221,4 +224,4 @@ items:
             - '@vss-web-extension-sdk.VSS.WebApi.RestClient.IVssHttpClientOptions'
           description: ''
           optional: true
-    type: constructor
+    module: ReleaseManagement/Core/RestClient
